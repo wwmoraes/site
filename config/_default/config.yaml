@@ -1,0 +1,41 @@
+baseURL: https://artero.dev
+title: William Artero
+theme: LoveIt
+outputs:
+  home:
+  - HTML
+  - AMP
+  - RSS
+  - JSON
+  page:
+  - HTML
+  - AMP
+  section:
+  - HTML
+  - RSS
+  taxonomy:
+  - HTML
+  - AMP
+  ## congo
+  term:
+  - HTML
+  - RSS
+  ## LoveIt
+  taxonomyTerm:
+  - HTML
+  - RSS
+
+author:
+  name: William Artero
+  image: profile.png
+  email: william@artero.dev
+
+pygmentsUseClasses: false
+pygmentsCodeFences: true
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+permalinks:
+  # posts: ":year/:month/:filename"
+  posts: "posts/:filename"

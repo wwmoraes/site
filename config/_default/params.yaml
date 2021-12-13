@@ -1,0 +1,293 @@
+description: |-
+  automating a way out of tasks since 2010
+version: 0.2.X
+defaultTheme: auto
+gitRepo: https://github.com/wwmoraes/site
+fingerprint: sha512
+keywords:
+- william
+- artero
+- blog
+- engineer
+images:
+- logo.png
+app:
+  title: Artero
+  noFavicon: false
+  manifest: /manifest.json
+  svgFavicon: /icons/logo.svg
+  # Android browser theme color
+  themeColor: "#2CBDFF"
+  # Safari mask icon color
+  iconColor: "#2CBDFF"
+  # Windows v8-10 tile color
+  tileColor: "#3D5A80"
+search:
+  enable: true
+  type: lunr
+  contentLength: 4000
+  placeholder: may I help you with something?
+  maxResultLength: 10
+  snippetLength: 30
+  highlightTag: em
+  absoluteURL: false
+header:
+  desktopMode: fixed
+  mobileMode: auto  # fixed|normal|auto
+  title:
+    logo: logo.png
+    name: ""
+    pre: ""
+    post: ""
+    typeit: false
+footer:
+  enable: true
+  custom: ""
+  hugo: true
+  copyright: true
+  author: false
+  since: 2021
+  license: >-
+    <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+
+section:
+  paginate: 20
+  dateFormat: 01-02
+  rss: 10
+list:
+  paginate: 20
+  dateFormat: 01-02
+  rss: 10
+home:
+  rss: 10
+  profile:
+    enable: true
+    gravatarEmail: ''
+    avatarURL: /profile.png
+    title: William Artero
+    subtitle: automating a way out of tasks since 2010
+    typeit: false
+    social: true
+    disclaimer: ''
+  posts:
+    enable: true
+    paginate: 5
+    defaultHiddenFromHomePage: false
+social:
+  GitHub: wwmoraes
+  Linkedin: wwmoraes
+  # Twitter: wwmoraes
+  # Instagram: wwmoraes
+  # Facebook: wwmoraes
+  # Telegram: wwmoraes
+  # Medium: ''
+  # Gitlab: ''
+  # Youtubelegacy: ''
+  # Youtubecustom: ''
+  # Youtubechannel: ''
+  # Tumblr: ''
+  # Quora: ''
+  Keybase: wwmoraes
+  # Pinterest: ''
+  # Reddit: ''
+  # Codepen: ''
+  # FreeCodeCamp: ''
+  # Bitbucket: ''
+  # Stackoverflow: ''
+  # Weibo: ''
+  # Odnoklassniki: ''
+  # VK: ''
+  # Flickr: ''
+  # Xing: ''
+  # Snapchat: ''
+  # Soundcloud: ''
+  # Spotify: ''
+  # Bandcamp: ''
+  # Paypal: ''
+  # Fivehundredpx: ''
+  # Mix: ''
+  # Goodreads: ''
+  # Lastfm: ''
+  # Foursquare: ''
+  # Hackernews: ''
+  # Kickstarter: ''
+  # Patreon: ''
+  Steam: wwmoraes
+  # Twitch: ''
+  # Strava: ''
+  # Skype: ''
+  # Whatsapp: ''
+  # Zhihu: ''
+  # Douban: ''
+  # Angellist: ''
+  # Slidershare: ''
+  # Jsfiddle: ''
+  # Deviantart: ''
+  # Behance: ''
+  # Dribbble: ''
+  # Wordpress: ''
+  # Vine: ''
+  # Googlescholar: ''
+  # Researchgate: ''
+  # Mastodon: ''
+  # Thingiverse: ''
+  # Devto: ''
+  # Gitea: ''
+  # XMPP: ''
+  # Matrix: ''
+  # Bilibili: ''
+  # Email: xxxx@xxxx.com
+  RSS: true
+page:
+  hiddenFromHomePage: false
+  hiddenFromSearch: false
+  twemoji: false
+  lightgallery: false
+  ruby: false
+  fraction: true
+  fontawesome: true
+  linkToMarkdown: true
+  rssFullText: false
+  toc:
+    enable: true
+    keepStatic: false
+    auto: true
+  math:
+    enable: true
+    blockLeftDelimiter: ''
+    blockRightDelimiter: ''
+    inlineLeftDelimiter: ''
+    inlineRightDelimiter: ''
+    copyTex: true
+    mhchem: true
+  code:
+    copy: true
+    maxShownLines: 80
+  mapbox:
+    accessToken: ''
+    lightStyle: 'mapbox://styles/mapbox/light-v9'
+    darkStyle: 'mapbox://styles/mapbox/dark-v9'
+    navigation: true
+    geolocate: true
+    scale: true
+    fullscreen: true
+  share:
+    enable: true
+    Twitter: true
+    Facebook: true
+    Linkedin: true
+    Whatsapp: false
+    Pinterest: true
+    Tumblr: true
+    HackerNews: true
+    Reddit: true
+    VK: false
+    Buffer: false
+    Xing: false
+    Line: false
+    Instapaper: true
+    Pocket: true
+    Digg: true
+    Stumbleupon: true
+    Flipboard: true
+    Weibo: false
+    Renren: false
+    Myspace: false
+    Blogger: true
+    Baidu: false
+    Odnoklassniki: false
+    Evernote: false
+    Skype: false
+    Trello: false
+    Mix: false
+  comment:
+    enable: true
+    disqus:
+      enable: false
+      shortname: ''
+    gitalk:
+      enable: false
+      owner: ''
+      repo: ''
+      clientId: ''
+      clientSecret: ''
+    valine:
+      enable: false
+      appId: ''
+      appKey: ''
+      placeholder: ''
+      avatar: mp
+      meta: ''
+      pageSize: 10
+      lang: ''
+      visitor: true
+      recordIP: true
+      highlight: true
+      enableQQ: false
+      serverURLs: ''
+      emoji: ''
+    facebook:
+      enable: false
+      width: 100%
+      numPosts: 10
+      appId: ''
+      languageCode: ''
+    telegram:
+      enable: false
+      siteID: ''
+      limit: 5
+      height: ''
+      color: ''
+      colorful: true
+      dislikes: false
+      outlined: false
+    commento:
+      enable: false
+    utterances:
+      enable: true
+      repo: wwmoraes/site
+      issueTerm: pathname
+      label: 💬 comments
+      lightTheme: github-light
+      darkTheme: github-dark
+  library:
+    css: {}
+    js: {}
+  seo:
+    images: []
+    publisher:
+      name: ''
+      logoUrl: ''
+typeit:
+  speed: 100
+  cursorSpeed: 1000
+  cursorChar: '|'
+  duration: -1
+verification:
+  google: ''
+  bing: ''
+  yandex: ''
+  pinterest: ''
+  baidu: ''
+seo:
+  image: ''
+  thumbnailUrl: ''
+analytics:
+  enable: false
+  google:
+    id: ''
+    anonymizeIP: true
+  fathom:
+    id: ''
+    server: ''
+cookieconsent:
+  enable: true
+  content:
+    message: 'This website uses Cookies to improve your experience.'
+    dismiss: 'Got it!'
+    link: 'Learn more'
+cdn:
+  data: ''
+compatibility:
+  polyfill: false
+  objectFit: false

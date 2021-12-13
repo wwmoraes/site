@@ -1,0 +1,4 @@
+article:
+  showEdit: true
+  editURL: https://github.com/wwmoraes/site/blob/staging/
+  editAppendPath: true

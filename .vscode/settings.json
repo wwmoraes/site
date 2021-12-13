@@ -1,0 +1,16 @@
+{
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  },
+  "html.format.templating": true,
+  "cSpell.words": [
+    "metaindex",
+    "metamethod",
+    "metamethods",
+    "metatable",
+    "Metatables",
+    "metavalue",
+    "newindex",
+    "userdata"
+  ]
+}
