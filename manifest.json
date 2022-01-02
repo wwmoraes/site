@@ -1,22 +1,22 @@
 {
   "background_color": "#343542",
-  "description": "William Artero's projects and thoughts derived from a NoOps engineer career focused on automating a way out of tasks since 2010",
+  "description": "Projects and thoughts from a NoOps engineer automating a way out of tasks since 2010",
   "display": "standalone",
   "icons": [
     {
       "sizes": "192x192",
-      "src": "/android-chrome-192x192.png",
+      "src": "/icons/android-chrome-192x192.png",
       "type": "image/png"
     },
     {
       "sizes": "512x512",
-      "src": "/android-chrome-512x512.png",
+      "src": "/icons/android-chrome-512x512.png",
       "type": "image/png"
     },
     {
       "purpose": "any maskable",
       "sizes": "1024x1024",
-      "src": "/maskable_icon.png",
+      "src": "/icons/maskable_icon.png",
       "type": "image/png"
     }
   ],
