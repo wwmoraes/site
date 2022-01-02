@@ -1,0 +1,21 @@
+graph TD;
+  waldoGetKey>waldo.key]
+  subgraph table
+    tableHasKey{{is key set?}}
+    tableHasMetatable{{is metatable set?}}
+    tableValue[/value/]
+    tableNil[/nil/]
+  end
+  output([return])
+
+  %% table entry point
+  waldoGetKey --> tableHasKey
+
+  %% table happy flow
+  tableHasKey -- yes --> tableValue
+  tableValue --> output
+
+  %% unhappy flow
+  tableHasKey -- no --> tableHasMetatable
+  tableHasMetatable -- no --> tableNil
+  tableNil --> output

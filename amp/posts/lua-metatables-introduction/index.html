@@ -1,0 +1,691 @@
+<!doctype html><html lang>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noodp">
+<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
+<title>Lua metatables introduction - William Artero</title><meta name=Description content="automating a way out of tasks since 2010">
+<meta name=application-name content="Artero">
+<meta name=apple-mobile-web-app-capable content="yes">
+<meta name=apple-mobile-web-app-status-bar-style content="black">
+<meta name=apple-mobile-web-app-title content="Artero">
+<meta name=mobile-web-app-capable content="yes">
+<meta name=msapplication-tap-highlight content="no">
+<meta name=format-detection content="telephone=no">
+<meta name=referrer content="strict-origin-when-cross-origin">
+<meta name=msapplication-TileImage content="/icons/mstile-144x144.png"><meta name=theme-color content="#2CBDFF"><meta name=msapplication-TileColor content="#3D5A80"><meta property="og:title" content="Lua metatables introduction">
+<meta property="og:description" content="If you ever used Lua, then you heard about its tables and the metatable feature.
+It is a mix of a powerful, simple and yet confusing mechanism for newcomers.
+Let&rsquo;s walk through how they work and some examples of how useful they can be.
+You can also find real use cases by checking my Hammerspoon spoons.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://artero.dev/amp/posts/lua-metatables-introduction/"><meta property="og:image" content="https://artero.dev/amp/posts/lua-metatables-introduction/featured-image.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-01-02T14:21:06+01:00">
+<meta property="article:modified_time" content="2022-01-02T14:21:06+01:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://artero.dev/amp/posts/lua-metatables-introduction/featured-image.png">
+<meta name=twitter:title content="Lua metatables introduction">
+<meta name=twitter:description content="If you ever used Lua, then you heard about its tables and the metatable feature.
+It is a mix of a powerful, simple and yet confusing mechanism for newcomers.
+Let&rsquo;s walk through how they work and some examples of how useful they can be.
+You can also find real use cases by checking my Hammerspoon spoons.">
+<link rel=icon href=/icons/logo.svg><link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
+<link rel=apple-touch-icon href=/icons/apple-touch-icon-180x180.png>
+<link rel=apple-touch-icon sizes=60x60 href=/icons/apple-touch-icon-60x60.png>
+<link rel=apple-touch-icon sizes=76x76 href=/icons/apple-touch-icon-76x76.png>
+<link rel=apple-touch-icon sizes=120x120 href=/icons/apple-touch-icon-120x120.png>
+<link rel=apple-touch-icon sizes=152x152 href=/icons/apple-touch-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon-180x180.png>
+<link rel=apple-touch-icon-precomposed href=/icons/apple-touch-icon-180x180-precomposed.png>
+<link rel=apple-touch-icon-precomposed sizes=60x60 href=/icons/apple-touch-icon-60x60-precomposed.png>
+<link rel=apple-touch-icon-precomposed sizes=76x76 href=/icons/apple-touch-icon-76x76-precomposed.png>
+<link rel=apple-touch-icon-precomposed sizes=120x120 href=/icons/apple-touch-icon-120x120-precomposed.png>
+<link rel=apple-touch-icon-precomposed sizes=152x152 href=/icons/apple-touch-icon-152x152-precomposed.png>
+<link rel=apple-touch-icon-precomposed sizes=180x180 href=/icons/apple-touch-icon-180x180-precomposed.png>
+<link rel="shortcut icon" type=image/x-icon href=/icons/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#2cbdff><link rel=manifest href=/manifest.json><link rel=canonical href=https://artero.dev/amp/posts/lua-metatables-introduction/><link rel=stylesheet href=/lib/normalize/normalize.min.8235a67a2521ef99fb1e455a5891b022af1653b4ede3cfffcac4e473beee88fbcc1a36bbb3cfdd75fd6df46732032f9d96e30adae9c88b769e1fbf7945cd27e0.css integrity="sha512-gjWmeiUh75n7HkVaWJGwIq8WU7Tt48//ysTkc77uiPvMGja7s8/ddf1t9GcyAy+dluMK2unIi3aeH795Rc0n4A=="><link rel=stylesheet href=/css/style.min.89b621a9bf174f6453c265bdcf5f2ffe8feb8bf3555ce4432c220058d367643a9e0aae3b0c211fc83b05a5bdc47d2ce47d74361d8a2becb6f76a7df35e3c3def.css integrity="sha512-ibYhqb8XT2RTwmW9z18v/o/ri/NVXORDLCIAWNNnZDqeCq47DCEfyDsFpb3EfSzkfXQ2HYor7Lb3an3zXjw97w=="><link rel=stylesheet href=/lib/fontawesome-free/all.min.2fb31670aec534f73036a9cb759abcea54c760b750a996b3e58700804fb97271a6970f094f4dd0076fa8c4bd74d14781e9197364b531086492e3ffbe98d65dc7.css integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="><link rel=stylesheet href=/lib/animate/animate.min.76826b0bfa1c53c546551c773bdf7cd7ed9a6149f77ee5955afa8b8b553eb40d8c595cecc3e3552aad4fac4345d3733e4d804ff763e7614957147d595b41692f.css integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lua metatables introduction","inLanguage":"","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/artero.dev\/amp\/posts\/lua-metatables-introduction\/"},"image":[{"@type":"ImageObject","url":"https:\/\/artero.dev\/amp\/posts\/lua-metatables-introduction\/featured-image.png","width":1200,"height":630}],"genre":"posts","keywords":"lua","wordcount":1318,"url":"https:\/\/artero.dev\/amp\/posts\/lua-metatables-introduction\/","datePublished":"2022-01-02T14:21:06+01:00","dateModified":"2022-01-02T14:21:06+01:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"William Artero"},"description":""}</script></head>
+<body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/amp/ title="William Artero"><img class="lazyload logo" src=/svg/loading.min.svg data-src=logo.png data-srcset="/logo.png, logo.png 1.5x, /logo.png 2x" data-sizes=auto alt=/logo.png title=/logo.png></a>
+</div>
+<div class=menu>
+<div class=menu-inner><span class="menu-item search" id=search-desktop>
+<input type=text placeholder="may I help you with something?" id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Search>
+<i class="fas fa-search fa-fw"></i>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clear>
+<i class="fas fa-times-circle fa-fw"></i>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<i class="fas fa-spinner fa-fw fa-spin"></i>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+</a>
+</div>
+</div>
+</div>
+</header><header class=mobile id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/amp/ title="William Artero"><img class="lazyload logo" src=/svg/loading.min.svg data-src=logo.png data-srcset="/logo.png, logo.png 1.5x, /logo.png 2x" data-sizes=auto alt=/logo.png title=/logo.png></a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder="may I help you with something?" id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Search>
+<i class="fas fa-search fa-fw"></i>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clear>
+<i class="fas fa-times-circle fa-fw"></i>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<i class="fas fa-spinner fa-fw fa-spin"></i>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+Cancel
+</a>
+</div><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+</a></div>
+</div>
+</header>
+<div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div>
+<main class=main>
+<div class=container><div class=toc id=toc-auto>
+<h2 class=toc-title>Contents</h2>
+<div class=toc-content id=toc-content-auto></div>
+</div><article class="page single"><h1 class="single-title animated fadeInDown">Lua metatables introduction</h1><h2 class=single-subtitle>what are they and how do they work?</h2><div class=post-meta>
+<div class=post-meta-line>&nbsp;<span class=post-category>seen on <a href=/categories/coding/amp/><i class="far fa-folder fa-fw"></i>coding</a></span></div>
+<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2022-01-02>2022-01-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1318 words&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
+</div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/amp/posts/lua-metatables-introduction/featured-image.png data-srcset="/amp/posts/lua-metatables-introduction/featured-image.png, /amp/posts/lua-metatables-introduction/featured-image.png 1.5x, /amp/posts/lua-metatables-introduction/featured-image.png 2x" data-sizes=auto alt=/amp/posts/lua-metatables-introduction/featured-image.png title=/amp/posts/lua-metatables-introduction/featured-image.png></div><div class="details toc" id=toc-static kept>
+<div class="details-summary toc-title">
+<span>Contents</span>
+<span><i class="details-icon fas fa-angle-right"></i></span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#definitions>Definitions</a>
+<ul>
+<li><a href=#metatables>Metatables</a></li>
+<li><a href=#metamethods>Metamethods</a></li>
+</ul>
+</li>
+<li><a href=#use-cases>Use cases</a>
+<ul>
+<li><a href=#default-values>Default values</a></li>
+<li><a href=#fallback-values>Fallback values</a></li>
+<li><a href=#queue>Queue</a></li>
+</ul>
+</li>
+<li><a href=#conclusion>Conclusion</a></li>
+</ul>
+</nav></div>
+</div><div class=content id=content><p>If you ever used Lua, then you heard about its tables and the metatable feature.
+It is a mix of a powerful, simple and yet confusing mechanism for newcomers.
+Let&rsquo;s walk through how they work and some examples of how useful they can be.
+You can also find real use cases by checking my <a href=https://github.com/wwmoraes/spoons target=_blank rel="noopener noreffer">Hammerspoon spoons</a>.</p>
+<h2 id=definitions>Definitions</h2>
+<p>Lua has, beyond its primitive types, only one object-like type called table.
+Tables are associative arrays that can have any other type as key (except nil)
+and value. The runtime even uses them to load packages. That means a call
+to <code>io["open"]()</code> works as the usual <code>io.open()</code>. Here&rsquo;s a sample of how to
+use tables:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=associative-array-1><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-1> 1</a>
+</span><span class=lnt id=associative-array-2><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-2> 2</a>
+</span><span class=lnt id=associative-array-3><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-3> 3</a>
+</span><span class=lnt id=associative-array-4><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-4> 4</a>
+</span><span class=lnt id=associative-array-5><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-5> 5</a>
+</span><span class=lnt id=associative-array-6><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-6> 6</a>
+</span><span class=lnt id=associative-array-7><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-7> 7</a>
+</span><span class=lnt id=associative-array-8><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-8> 8</a>
+</span><span class=lnt id=associative-array-9><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-9> 9</a>
+</span><span class=lnt id=associative-array-10><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-10>10</a>
+</span><span class=lnt id=associative-array-11><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-11>11</a>
+</span><span class=lnt id=associative-array-12><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-12>12</a>
+</span><span class=lnt id=associative-array-13><a style=outline:none;text-decoration:none;color:inherit href=#associative-array-13>13</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{}</span>
+
+<span class=n>waldo</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;foo&#34;</span>
+<span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=kc>true</span>
+
+<span class=kr>for</span> <span class=n>key</span><span class=p>,</span><span class=n>value</span> <span class=kr>in</span> <span class=n>pairs</span><span class=p>(</span><span class=n>waldo</span><span class=p>)</span> <span class=kr>do</span>
+  <span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%s: %s&#34;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>))</span>
+<span class=kr>end</span>
+<span class=c1>-- output</span>
+<span class=c1>-- 2: foo</span>
+<span class=c1>-- bar: true</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>You can also use them as conventional arrays:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=conventional-array-1><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-1> 1</a>
+</span><span class=lnt id=conventional-array-2><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-2> 2</a>
+</span><span class=lnt id=conventional-array-3><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-3> 3</a>
+</span><span class=lnt id=conventional-array-4><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-4> 4</a>
+</span><span class=lnt id=conventional-array-5><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-5> 5</a>
+</span><span class=lnt id=conventional-array-6><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-6> 6</a>
+</span><span class=lnt id=conventional-array-7><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-7> 7</a>
+</span><span class=lnt id=conventional-array-8><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-8> 8</a>
+</span><span class=lnt id=conventional-array-9><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-9> 9</a>
+</span><span class=lnt id=conventional-array-10><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-10>10</a>
+</span><span class=lnt id=conventional-array-11><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-11>11</a>
+</span><span class=lnt id=conventional-array-12><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-12>12</a>
+</span><span class=lnt id=conventional-array-13><a style=outline:none;text-decoration:none;color:inherit href=#conventional-array-13>13</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;qux&#34;</span><span class=p>,</span> <span class=s2>&#34;quz&#34;</span><span class=p>}</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span> <span class=c1>-- qux</span>
+
+<span class=kr>for</span> <span class=n>key</span><span class=p>,</span><span class=n>value</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>waldo</span><span class=p>)</span> <span class=kr>do</span>
+  <span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%s: %s&#34;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>))</span>
+<span class=kr>end</span>
+
+<span class=c1>-- output</span>
+<span class=c1>-- 1: qux</span>
+<span class=c1>-- 2: quz</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<div class="details admonition note open">
+<div class="details-summary admonition-title">
+<i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+</div>
+<div class=details-content>
+<div class=admonition-content>Lua arrays are 1-indexed. I.e. they start on index one instead of zero like some
+common programming languages.</div>
+</div>
+</div>
+<h3 id=metatables>Metatables</h3>
+<p>Metatables are tables assigned as the meta for another table. We can describe
+them as analogue to super classes in other object-oriented languages. An even
+better analogy is that meta tables act as a proxy of the target table.</p>
+<p>You can easily assign a metatable to another table using the <code>setmetatable</code>:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=metatable-1><a style=outline:none;text-decoration:none;color:inherit href=#metatable-1> 1</a>
+</span><span class=lnt id=metatable-2><a style=outline:none;text-decoration:none;color:inherit href=#metatable-2> 2</a>
+</span><span class=lnt id=metatable-3><a style=outline:none;text-decoration:none;color:inherit href=#metatable-3> 3</a>
+</span><span class=lnt id=metatable-4><a style=outline:none;text-decoration:none;color:inherit href=#metatable-4> 4</a>
+</span><span class=lnt id=metatable-5><a style=outline:none;text-decoration:none;color:inherit href=#metatable-5> 5</a>
+</span><span class=lnt id=metatable-6><a style=outline:none;text-decoration:none;color:inherit href=#metatable-6> 6</a>
+</span><span class=lnt id=metatable-7><a style=outline:none;text-decoration:none;color:inherit href=#metatable-7> 7</a>
+</span><span class=lnt id=metatable-8><a style=outline:none;text-decoration:none;color:inherit href=#metatable-8> 8</a>
+</span><span class=lnt id=metatable-9><a style=outline:none;text-decoration:none;color:inherit href=#metatable-9> 9</a>
+</span><span class=lnt id=metatable-10><a style=outline:none;text-decoration:none;color:inherit href=#metatable-10>10</a>
+</span><span class=lnt id=metatable-11><a style=outline:none;text-decoration:none;color:inherit href=#metatable-11>11</a>
+</span><span class=lnt id=metatable-12><a style=outline:none;text-decoration:none;color:inherit href=#metatable-12>12</a>
+</span><span class=lnt id=metatable-13><a style=outline:none;text-decoration:none;color:inherit href=#metatable-13>13</a>
+</span><span class=lnt id=metatable-14><a style=outline:none;text-decoration:none;color:inherit href=#metatable-14>14</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>meta</span> <span class=o>=</span> <span class=p>{}</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{}</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>getmetatable</span><span class=p>(</span><span class=n>meta</span><span class=p>))</span> <span class=c1>-- nil</span>
+<span class=n>print</span><span class=p>(</span><span class=n>getmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>))</span> <span class=c1>-- nil</span>
+
+<span class=n>setmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>,</span> <span class=n>meta</span><span class=p>)</span> <span class=c1>-- set meta as the metatable of waldo</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>getmetatable</span><span class=p>(</span><span class=n>meta</span><span class=p>))</span> <span class=c1>-- nil</span>
+<span class=n>print</span><span class=p>(</span><span class=n>getmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>))</span> <span class=c1>-- table: 0x...</span>
+<span class=n>print</span><span class=p>(</span><span class=n>getmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>)</span> <span class=o>==</span> <span class=n>meta</span><span class=p>)</span> <span class=c1>-- true</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Neat! Both <code>setmetatable</code> and <code>getmetatable</code> are standard library functions to
+CRUD tables' metatables. You can use both tables in the previous example
+as usual, given the metatable has no metamethods. A metatable without
+metamethods is an ordinary table. It does not change the behavior of other
+tables in any way. Thus metatables need at least one metamethod to do something
+useful.</p>
+<h3 id=metamethods>Metamethods</h3>
+<p>A metamethod is a value - usually a function or table - assigned to reserved
+key names on a metatable. The runtime looks them up when executing a certain
+operation on a table. They all start with two underscore characters <code>__</code>, so
+they&rsquo;re easy to spot.</p>
+<p>A good example of a metamethod is the <code>__index</code>. The default behavior of a table
+is to return <code>nil</code> if a requested key is not set:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=table-index-1><a style=outline:none;text-decoration:none;color:inherit href=#table-index-1>1</a>
+</span><span class=lnt id=table-index-2><a style=outline:none;text-decoration:none;color:inherit href=#table-index-2>2</a>
+</span><span class=lnt id=table-index-3><a style=outline:none;text-decoration:none;color:inherit href=#table-index-3>3</a>
+</span><span class=lnt id=table-index-4><a style=outline:none;text-decoration:none;color:inherit href=#table-index-4>4</a>
+</span><span class=lnt id=table-index-5><a style=outline:none;text-decoration:none;color:inherit href=#table-index-5>5</a>
+</span><span class=lnt id=table-index-6><a style=outline:none;text-decoration:none;color:inherit href=#table-index-6>6</a>
+</span><span class=lnt id=table-index-7><a style=outline:none;text-decoration:none;color:inherit href=#table-index-7>7</a>
+</span><span class=lnt id=table-index-8><a style=outline:none;text-decoration:none;color:inherit href=#table-index-8>8</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=n>foo</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo.foo</span><span class=p>)</span> <span class=c1>-- 1</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo.bar</span><span class=p>)</span> <span class=c1>-- nil</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>The runtime flow is:</p>
+<div class=mermaid id=id-1></div>
+<p>When an index is not found on the target table, it falls back to its metatable&rsquo;s
+<code>__index</code> metamethod. If present, Lua uses it to return a value instead of
+<code>nil</code>. That means you can create a custom logic for unknown index retrieval:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=table-meta-index-1><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-1> 1</a>
+</span><span class=lnt id=table-meta-index-2><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-2> 2</a>
+</span><span class=lnt id=table-meta-index-3><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-3> 3</a>
+</span><span class=lnt id=table-meta-index-4><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-4> 4</a>
+</span><span class=lnt id=table-meta-index-5><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-5> 5</a>
+</span><span class=lnt id=table-meta-index-6><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-6> 6</a>
+</span><span class=lnt id=table-meta-index-7><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-7> 7</a>
+</span><span class=lnt id=table-meta-index-8><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-8> 8</a>
+</span><span class=lnt id=table-meta-index-9><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-9> 9</a>
+</span><span class=lnt id=table-meta-index-10><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-10>10</a>
+</span><span class=lnt id=table-meta-index-11><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-11>11</a>
+</span><span class=lnt id=table-meta-index-12><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-12>12</a>
+</span><span class=lnt id=table-meta-index-13><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-13>13</a>
+</span><span class=lnt id=table-meta-index-14><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-14>14</a>
+</span><span class=lnt id=table-meta-index-15><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-15>15</a>
+</span><span class=lnt id=table-meta-index-16><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-16>16</a>
+</span><span class=lnt id=table-meta-index-17><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-17>17</a>
+</span><span class=lnt id=table-meta-index-18><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-18>18</a>
+</span><span class=lnt id=table-meta-index-19><a style=outline:none;text-decoration:none;color:inherit href=#table-meta-index-19>19</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>meta</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=n>bar</span> <span class=o>=</span> <span class=mi>2</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>meta.__index</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>tbl</span><span class=p>,</span> <span class=n>key</span><span class=p>)</span>
+  <span class=kr>return</span> <span class=n>meta</span><span class=p>[</span><span class=n>key</span><span class=p>]</span> <span class=ow>or</span> <span class=s2>&#34;unset&#34;</span>
+<span class=kr>end</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=n>foo</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>setmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>,</span> <span class=n>meta</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo.foo</span><span class=p>)</span> <span class=c1>-- 1</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo.bar</span><span class=p>)</span> <span class=c1>-- 2</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo.qux</span><span class=p>)</span> <span class=c1>-- unset</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>What Lua tries to do in this case is:</p>
+<div class=mermaid id=id-2></div>
+<p>The flow above is by no means authoritative, as I left out a few more nuances to
+this logic to keep it simple.<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> It does cover the most common use
+cases though, so let&rsquo;s keep it that way.</p>
+<div class="details admonition note open">
+<div class="details-summary admonition-title">
+<i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+</div>
+<div class=details-content>
+<div class=admonition-content>I&rsquo;ve written <code>__index(tbl,key)</code> instead of <code>__index(table,key)</code> to prevent
+confusing the <code>waldo</code> table instance (or any metatable looked up on this
+loop) with the standard library <code>table</code> global object.</div>
+</div>
+</div>
+<h2 id=use-cases>Use cases</h2>
+<p>Here&rsquo;s some simple use cases to get used to how metatables work.</p>
+<h3 id=default-values>Default values</h3>
+<p>As the <code>__index</code> meta method can be a table, it may serve default values. This
+makes it dead simple to prevent checking/hard-coding alternative values
+everywhere:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=default-values-1><a style=outline:none;text-decoration:none;color:inherit href=#default-values-1> 1</a>
+</span><span class=lnt id=default-values-2><a style=outline:none;text-decoration:none;color:inherit href=#default-values-2> 2</a>
+</span><span class=lnt id=default-values-3><a style=outline:none;text-decoration:none;color:inherit href=#default-values-3> 3</a>
+</span><span class=lnt id=default-values-4><a style=outline:none;text-decoration:none;color:inherit href=#default-values-4> 4</a>
+</span><span class=lnt id=default-values-5><a style=outline:none;text-decoration:none;color:inherit href=#default-values-5> 5</a>
+</span><span class=lnt id=default-values-6><a style=outline:none;text-decoration:none;color:inherit href=#default-values-6> 6</a>
+</span><span class=lnt id=default-values-7><a style=outline:none;text-decoration:none;color:inherit href=#default-values-7> 7</a>
+</span><span class=lnt id=default-values-8><a style=outline:none;text-decoration:none;color:inherit href=#default-values-8> 8</a>
+</span><span class=lnt id=default-values-9><a style=outline:none;text-decoration:none;color:inherit href=#default-values-9> 9</a>
+</span><span class=lnt id=default-values-10><a style=outline:none;text-decoration:none;color:inherit href=#default-values-10>10</a>
+</span><span class=lnt id=default-values-11><a style=outline:none;text-decoration:none;color:inherit href=#default-values-11>11</a>
+</span><span class=lnt id=default-values-12><a style=outline:none;text-decoration:none;color:inherit href=#default-values-12>12</a>
+</span><span class=lnt id=default-values-13><a style=outline:none;text-decoration:none;color:inherit href=#default-values-13>13</a>
+</span><span class=lnt id=default-values-14><a style=outline:none;text-decoration:none;color:inherit href=#default-values-14>14</a>
+</span><span class=lnt id=default-values-15><a style=outline:none;text-decoration:none;color:inherit href=#default-values-15>15</a>
+</span><span class=lnt id=default-values-16><a style=outline:none;text-decoration:none;color:inherit href=#default-values-16>16</a>
+</span><span class=lnt id=default-values-17><a style=outline:none;text-decoration:none;color:inherit href=#default-values-17>17</a>
+</span><span class=lnt id=default-values-18><a style=outline:none;text-decoration:none;color:inherit href=#default-values-18>18</a>
+</span><span class=lnt id=default-values-19><a style=outline:none;text-decoration:none;color:inherit href=#default-values-19>19</a>
+</span><span class=lnt id=default-values-20><a style=outline:none;text-decoration:none;color:inherit href=#default-values-20>20</a>
+</span><span class=lnt id=default-values-21><a style=outline:none;text-decoration:none;color:inherit href=#default-values-21>21</a>
+</span><span class=lnt id=default-values-22><a style=outline:none;text-decoration:none;color:inherit href=#default-values-22>22</a>
+</span><span class=lnt id=default-values-23><a style=outline:none;text-decoration:none;color:inherit href=#default-values-23>23</a>
+</span><span class=lnt id=default-values-24><a style=outline:none;text-decoration:none;color:inherit href=#default-values-24>24</a>
+</span><span class=lnt id=default-values-25><a style=outline:none;text-decoration:none;color:inherit href=#default-values-25>25</a>
+</span><span class=lnt id=default-values-26><a style=outline:none;text-decoration:none;color:inherit href=#default-values-26>26</a>
+</span><span class=lnt id=default-values-27><a style=outline:none;text-decoration:none;color:inherit href=#default-values-27>27</a>
+</span><span class=lnt id=default-values-28><a style=outline:none;text-decoration:none;color:inherit href=#default-values-28>28</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>defaults</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=kc>true</span>
+<span class=p>}</span>
+
+<span class=n>defaults.__index</span> <span class=o>=</span> <span class=n>defaults</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{}</span>
+
+<span class=n>setmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>,</span> <span class=n>defaults</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>])</span> <span class=c1>-- true</span>
+
+<span class=kr>for</span> <span class=n>key</span><span class=p>,</span><span class=n>value</span> <span class=kr>in</span> <span class=n>pairs</span><span class=p>(</span><span class=n>waldo</span><span class=p>)</span> <span class=kr>do</span>
+  <span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%s: %s&#34;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>))</span>
+<span class=kr>end</span>
+<span class=c1>-- no output</span>
+
+<span class=n>waldo.bar</span> <span class=o>=</span> <span class=kc>false</span>
+
+<span class=kr>for</span> <span class=n>key</span><span class=p>,</span><span class=n>value</span> <span class=kr>in</span> <span class=n>pairs</span><span class=p>(</span><span class=n>waldo</span><span class=p>)</span> <span class=kr>do</span>
+  <span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%s =&gt; %s&#34;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>))</span>
+<span class=kr>end</span>
+<span class=c1>-- output:</span>
+<span class=c1>-- bar =&gt; false</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>])</span> <span class=c1>-- false</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id=fallback-values>Fallback values</h3>
+<p>Like the default values case, you can use a function as the <code>__index</code> metamethod
+to return a fallback value. This works for any key, not only those set on the
+metatable. This allows you to use many fallback tables, or always return an
+specific value type. This again contributes to a DRY code:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=fallback-values-1><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-1> 1</a>
+</span><span class=lnt id=fallback-values-2><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-2> 2</a>
+</span><span class=lnt id=fallback-values-3><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-3> 3</a>
+</span><span class=lnt id=fallback-values-4><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-4> 4</a>
+</span><span class=lnt id=fallback-values-5><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-5> 5</a>
+</span><span class=lnt id=fallback-values-6><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-6> 6</a>
+</span><span class=lnt id=fallback-values-7><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-7> 7</a>
+</span><span class=lnt id=fallback-values-8><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-8> 8</a>
+</span><span class=lnt id=fallback-values-9><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-9> 9</a>
+</span><span class=lnt id=fallback-values-10><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-10>10</a>
+</span><span class=lnt id=fallback-values-11><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-11>11</a>
+</span><span class=lnt id=fallback-values-12><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-12>12</a>
+</span><span class=lnt id=fallback-values-13><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-13>13</a>
+</span><span class=lnt id=fallback-values-14><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-14>14</a>
+</span><span class=lnt id=fallback-values-15><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-15>15</a>
+</span><span class=lnt id=fallback-values-16><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-16>16</a>
+</span><span class=lnt id=fallback-values-17><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-17>17</a>
+</span><span class=lnt id=fallback-values-18><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-18>18</a>
+</span><span class=lnt id=fallback-values-19><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-19>19</a>
+</span><span class=lnt id=fallback-values-20><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-20>20</a>
+</span><span class=lnt id=fallback-values-21><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-21>21</a>
+</span><span class=lnt id=fallback-values-22><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-22>22</a>
+</span><span class=lnt id=fallback-values-23><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-23>23</a>
+</span><span class=lnt id=fallback-values-24><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-24>24</a>
+</span><span class=lnt id=fallback-values-25><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-25>25</a>
+</span><span class=lnt id=fallback-values-26><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-26>26</a>
+</span><span class=lnt id=fallback-values-27><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-27>27</a>
+</span><span class=lnt id=fallback-values-28><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-28>28</a>
+</span><span class=lnt id=fallback-values-29><a style=outline:none;text-decoration:none;color:inherit href=#fallback-values-29>29</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>systemDefaults</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=p>[</span><span class=s2>&#34;foo&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;1&#34;</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>systemDefaults.__index</span> <span class=o>=</span> <span class=n>systemDefaults</span>
+
+<span class=kd>local</span> <span class=n>userDefaults</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=p>[</span><span class=s2>&#34;foo&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;x&#34;</span><span class=p>,</span>
+  <span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;2&#34;</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>userDefaults.__index</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>_</span><span class=p>,</span> <span class=n>key</span><span class=p>)</span>
+  <span class=kr>return</span> <span class=n>userDefaults</span><span class=p>[</span><span class=n>key</span><span class=p>]</span> <span class=ow>or</span> <span class=s2>&#34;&#34;</span>
+<span class=kr>end</span>
+
+<span class=n>setmetatable</span><span class=p>(</span><span class=n>userDefaults</span><span class=p>,</span> <span class=n>systemDefaults</span><span class=p>)</span>
+
+<span class=kd>local</span> <span class=n>waldo</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=p>[</span><span class=s2>&#34;baz&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;3&#34;</span><span class=p>,</span>
+<span class=p>}</span>
+
+<span class=n>setmetatable</span><span class=p>(</span><span class=n>waldo</span><span class=p>,</span> <span class=n>userDefaults</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;foo&#34;</span><span class=p>])</span> <span class=c1>-- x</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;bar&#34;</span><span class=p>])</span> <span class=c1>-- 2</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;baz&#34;</span><span class=p>])</span> <span class=c1>-- 3</span>
+<span class=n>print</span><span class=p>(</span><span class=n>waldo</span><span class=p>[</span><span class=s2>&#34;qux&#34;</span><span class=p>])</span> <span class=c1>-- (an empty string)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id=queue>Queue</h3>
+<p>The metatable <code>__index</code> together with the colon operator allows the
+implementation of methods. These resemble object-oriented methods thanks to
+Lua&rsquo;s syntactic sugar. You can then create a model-controller pattern between a
+table and its metatable:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt id=queue-1><a style=outline:none;text-decoration:none;color:inherit href=#queue-1> 1</a>
+</span><span class=lnt id=queue-2><a style=outline:none;text-decoration:none;color:inherit href=#queue-2> 2</a>
+</span><span class=lnt id=queue-3><a style=outline:none;text-decoration:none;color:inherit href=#queue-3> 3</a>
+</span><span class=lnt id=queue-4><a style=outline:none;text-decoration:none;color:inherit href=#queue-4> 4</a>
+</span><span class=lnt id=queue-5><a style=outline:none;text-decoration:none;color:inherit href=#queue-5> 5</a>
+</span><span class=lnt id=queue-6><a style=outline:none;text-decoration:none;color:inherit href=#queue-6> 6</a>
+</span><span class=lnt id=queue-7><a style=outline:none;text-decoration:none;color:inherit href=#queue-7> 7</a>
+</span><span class=lnt id=queue-8><a style=outline:none;text-decoration:none;color:inherit href=#queue-8> 8</a>
+</span><span class=lnt id=queue-9><a style=outline:none;text-decoration:none;color:inherit href=#queue-9> 9</a>
+</span><span class=lnt id=queue-10><a style=outline:none;text-decoration:none;color:inherit href=#queue-10>10</a>
+</span><span class=lnt id=queue-11><a style=outline:none;text-decoration:none;color:inherit href=#queue-11>11</a>
+</span><span class=lnt id=queue-12><a style=outline:none;text-decoration:none;color:inherit href=#queue-12>12</a>
+</span><span class=lnt id=queue-13><a style=outline:none;text-decoration:none;color:inherit href=#queue-13>13</a>
+</span><span class=lnt id=queue-14><a style=outline:none;text-decoration:none;color:inherit href=#queue-14>14</a>
+</span><span class=lnt id=queue-15><a style=outline:none;text-decoration:none;color:inherit href=#queue-15>15</a>
+</span><span class=lnt id=queue-16><a style=outline:none;text-decoration:none;color:inherit href=#queue-16>16</a>
+</span><span class=lnt id=queue-17><a style=outline:none;text-decoration:none;color:inherit href=#queue-17>17</a>
+</span><span class=lnt id=queue-18><a style=outline:none;text-decoration:none;color:inherit href=#queue-18>18</a>
+</span><span class=lnt id=queue-19><a style=outline:none;text-decoration:none;color:inherit href=#queue-19>19</a>
+</span><span class=lnt id=queue-20><a style=outline:none;text-decoration:none;color:inherit href=#queue-20>20</a>
+</span><span class=lnt id=queue-21><a style=outline:none;text-decoration:none;color:inherit href=#queue-21>21</a>
+</span><span class=lnt id=queue-22><a style=outline:none;text-decoration:none;color:inherit href=#queue-22>22</a>
+</span><span class=lnt id=queue-23><a style=outline:none;text-decoration:none;color:inherit href=#queue-23>23</a>
+</span><span class=lnt id=queue-24><a style=outline:none;text-decoration:none;color:inherit href=#queue-24>24</a>
+</span><span class=lnt id=queue-25><a style=outline:none;text-decoration:none;color:inherit href=#queue-25>25</a>
+</span><span class=lnt id=queue-26><a style=outline:none;text-decoration:none;color:inherit href=#queue-26>26</a>
+</span><span class=lnt id=queue-27><a style=outline:none;text-decoration:none;color:inherit href=#queue-27>27</a>
+</span><span class=lnt id=queue-28><a style=outline:none;text-decoration:none;color:inherit href=#queue-28>28</a>
+</span><span class=lnt id=queue-29><a style=outline:none;text-decoration:none;color:inherit href=#queue-29>29</a>
+</span><span class=lnt id=queue-30><a style=outline:none;text-decoration:none;color:inherit href=#queue-30>30</a>
+</span><span class=lnt id=queue-31><a style=outline:none;text-decoration:none;color:inherit href=#queue-31>31</a>
+</span><span class=lnt id=queue-32><a style=outline:none;text-decoration:none;color:inherit href=#queue-32>32</a>
+</span><span class=lnt id=queue-33><a style=outline:none;text-decoration:none;color:inherit href=#queue-33>33</a>
+</span><span class=lnt id=queue-34><a style=outline:none;text-decoration:none;color:inherit href=#queue-34>34</a>
+</span><span class=lnt id=queue-35><a style=outline:none;text-decoration:none;color:inherit href=#queue-35>35</a>
+</span><span class=lnt id=queue-36><a style=outline:none;text-decoration:none;color:inherit href=#queue-36>36</a>
+</span><span class=lnt id=queue-37><a style=outline:none;text-decoration:none;color:inherit href=#queue-37>37</a>
+</span><span class=lnt id=queue-38><a style=outline:none;text-decoration:none;color:inherit href=#queue-38>38</a>
+</span><span class=lnt id=queue-39><a style=outline:none;text-decoration:none;color:inherit href=#queue-39>39</a>
+</span><span class=lnt id=queue-40><a style=outline:none;text-decoration:none;color:inherit href=#queue-40>40</a>
+</span><span class=lnt id=queue-41><a style=outline:none;text-decoration:none;color:inherit href=#queue-41>41</a>
+</span><span class=lnt id=queue-42><a style=outline:none;text-decoration:none;color:inherit href=#queue-42>42</a>
+</span><span class=lnt id=queue-43><a style=outline:none;text-decoration:none;color:inherit href=#queue-43>43</a>
+</span><span class=lnt id=queue-44><a style=outline:none;text-decoration:none;color:inherit href=#queue-44>44</a>
+</span><span class=lnt id=queue-45><a style=outline:none;text-decoration:none;color:inherit href=#queue-45>45</a>
+</span><span class=lnt id=queue-46><a style=outline:none;text-decoration:none;color:inherit href=#queue-46>46</a>
+</span><span class=lnt id=queue-47><a style=outline:none;text-decoration:none;color:inherit href=#queue-47>47</a>
+</span><span class=lnt id=queue-48><a style=outline:none;text-decoration:none;color:inherit href=#queue-48>48</a>
+</span><span class=lnt id=queue-49><a style=outline:none;text-decoration:none;color:inherit href=#queue-49>49</a>
+</span><span class=lnt id=queue-50><a style=outline:none;text-decoration:none;color:inherit href=#queue-50>50</a>
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=cp>#!/usr/bin/env lua</span>
+
+<span class=kd>local</span> <span class=n>Queue</span> <span class=o>=</span> <span class=p>{}</span>
+
+<span class=n>Queue.__index</span> <span class=o>=</span> <span class=n>Queue</span>
+
+<span class=kr>function</span> <span class=nc>Queue</span><span class=p>.</span><span class=nf>new</span><span class=p>(</span><span class=n>target</span><span class=p>)</span>
+  <span class=kd>local</span> <span class=n>target</span> <span class=o>=</span> <span class=n>target</span> <span class=ow>or</span> <span class=p>{}</span>
+  <span class=n>setmetatable</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>Queue</span><span class=p>)</span>
+  <span class=kr>return</span> <span class=n>target</span>
+<span class=kr>end</span>
+
+<span class=kr>function</span> <span class=nc>Queue</span><span class=p>:</span><span class=nf>push</span><span class=p>(</span><span class=n>value</span><span class=p>)</span>
+  <span class=n>table.insert</span><span class=p>(</span><span class=n>self</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+<span class=kr>end</span>
+
+<span class=kr>function</span> <span class=nc>Queue</span><span class=p>:</span><span class=nf>pop</span><span class=p>()</span>
+  <span class=kr>return</span> <span class=n>table.remove</span><span class=p>(</span><span class=n>self</span><span class=p>,</span> <span class=mi>1</span><span class=p>)</span>
+<span class=kr>end</span>
+
+<span class=kr>function</span> <span class=nc>Queue</span><span class=p>:</span><span class=nf>length</span><span class=p>()</span>
+  <span class=kr>return</span> <span class=o>#</span><span class=n>self</span>
+<span class=kr>end</span>
+
+<span class=kd>local</span> <span class=n>jobs</span> <span class=o>=</span> <span class=n>Queue.new</span><span class=p>()</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>length</span><span class=p>())</span> <span class=c1>-- 0</span>
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>pop</span><span class=p>())</span> <span class=c1>-- nil</span>
+
+<span class=n>jobs</span><span class=p>:</span><span class=n>push</span><span class=p>(</span><span class=s2>&#34;foo&#34;</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>length</span><span class=p>())</span> <span class=c1>-- 1</span>
+
+<span class=n>jobs</span><span class=p>:</span><span class=n>push</span><span class=p>(</span><span class=s2>&#34;bar&#34;</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>length</span><span class=p>())</span> <span class=c1>-- 2</span>
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>pop</span><span class=p>())</span> <span class=c1>-- foo</span>
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>length</span><span class=p>())</span> <span class=c1>-- 1</span>
+
+<span class=n>jobs</span><span class=p>:</span><span class=n>push</span><span class=p>(</span><span class=s2>&#34;qux&#34;</span><span class=p>)</span>
+
+<span class=n>print</span><span class=p>(</span><span class=n>jobs</span><span class=p>:</span><span class=n>length</span><span class=p>())</span> <span class=c1>-- 2</span>
+
+<span class=c1>-- jobs is still a plain table</span>
+<span class=kr>for</span> <span class=n>key</span><span class=p>,</span><span class=n>value</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>jobs</span><span class=p>)</span> <span class=kr>do</span>
+  <span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%s: %s&#34;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>))</span>
+<span class=kr>end</span>
+<span class=c1>-- output</span>
+<span class=c1>-- 1: bar</span>
+<span class=c1>-- 2: qux</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Beautiful. I&rsquo;ll dive into the colon operator on a separate post later on.</p>
+<div class="details admonition note open">
+<div class="details-summary admonition-title">
+<i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+</div>
+<div class=details-content>
+<div class=admonition-content><p>The example above is a rather naive implementation to keep it simple. It doesn&rsquo;t
+prevent direct CRUD operations, non-numerical or out-of-order keys.</p>
+<p>Another reason is that Lua by design is extensible. That means it doesn&rsquo;t
+provide as many ways to lock down tables as it offers to extend them. That
+doesn&rsquo;t mean you can&rsquo;t make things harder to tamper. You can set the <code>__newindex</code>
+and <code>__index</code> functions to block assignment and retrieval. In this case, both
+<code>push</code> and <code>pull</code> methods must use rawset and rawget to bypass them.</p>
+<p>If you have a strong need to enforce data integrity then you should consider
+using an userdata value. These are defined using the C API.</p>
+</div>
+</div>
+</div>
+<h2 id=conclusion>Conclusion</h2>
+<p>I&rsquo;ve only scratched the surface of Lua&rsquo;s metatables.
+There&rsquo;s <a href=https://www.lua.org/manual/5.4/manual.html#2.4 target=_blank rel="noopener noreffer">dozens of supported metamethods</a>.
+Yet the indexing ones are more than enough to show the power of this mechanism.
+They are the main drive that makes Lua excellent to extend and prototype fast.
+This alone explains why the gaming industry has a wide use for Lua.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p>The <a href=https://www.lua.org/manual/5.4/manual.html#2.4 target=_blank rel="noopener noreffer">documentation</a> states that any value that can
+resolve the <code>__index</code> metamethod works. This means userdata (C objects) can also
+act as a metatable.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section></div><div class=post-footer id=post-footer>
+<div class=post-info>
+<div class=post-info-line>
+<div class=post-info-mod>
+<span>Updated on 2022-01-02</span>
+</div>
+<div class=post-info-license></div>
+</div>
+<div class=post-info-line>
+<div class=post-info-md></div>
+<div class=post-info-share>
+<span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction" data-hashtags=lua><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-hashtag=lua><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="Share on Linkedin" data-sharer=linkedin data-url=https://artero.dev/amp/posts/lua-metatables-introduction/><i class="fab fa-linkedin fa-fw"></i></a><a href=javascript:void(0); title="Share on Pinterest" data-sharer=pinterest data-url=https://artero.dev/amp/posts/lua-metatables-introduction/><i class="fab fa-pinterest fa-fw"></i></a><a href=javascript:void(0); title="Share on Tumblr" data-sharer=tumblr data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction" data-tags=lua><i class="fab fa-tumblr fa-fw"></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="Share on Reddit" data-sharer=reddit data-url=https://artero.dev/amp/posts/lua-metatables-introduction/><i class="fab fa-reddit fa-fw"></i></a><a href=javascript:void(0); title="Share on Instapaper" data-sharer=instapaper data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction" data-description><i data-svg-src=/lib/simple-icons/icons/instapaper.min.svg></i></a><a href=javascript:void(0); title="Share on Pocket" data-sharer=pocket data-url=https://artero.dev/amp/posts/lua-metatables-introduction/><i class="fab fa-get-pocket fa-fw"></i></a><a href=javascript:void(0); title="Share on Digg" data-sharer=digg data-url=https://artero.dev/amp/posts/lua-metatables-introduction/><i class="fab fa-digg fa-fw"></i></a><a href=javascript:void(0); title="Share on StumbleUpon" data-sharer=stumbleupon data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction"><i class="fab fa-stumbleupon fa-fw"></i></a><a href=javascript:void(0); title="Share on Flipboard" data-sharer=flipboard data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction"><i class="fab fa-flipboard fa-fw"></i></a><a href=javascript:void(0); title="Share on Blogger" data-sharer=blogger data-url=https://artero.dev/amp/posts/lua-metatables-introduction/ data-title="Lua metatables introduction" data-description><i class="fab fa-blogger fa-fw"></i></a></span>
+</div>
+</div>
+</div>
+<div class=post-info-more>
+<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/lua/amp/>lua</a></section>
+<section>
+<span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/amp/>Home</a></span>
+</section>
+</div>
+<div class=post-nav></div>
+</div>
+<div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></article></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.91.2">Hugo</a> | Theme - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+</div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2021 - 2022</span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-sa/4.0/ target=_blank>CC BY-SA 4.0</a></span></div>
+</div>
+</footer></div>
+<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top">
+<i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments">
+<i class="fas fa-comment fa-fw"></i>
+</a>
+</div><link rel=stylesheet href=/lib/katex/katex.min.01a9044cb72aeb889854b4c442d03cc67db5dcfff848a5bba3c8df88e1ad3a04278cbda7603d1c97981d6759794e673f60aac6a54f53139bbdd044d4dfc2e475.css integrity="sha512-AakETLcq64iYVLTEQtA8xn213P/4SKW7o8jfiOGtOgQnjL2nYD0cl5gdZ1l5Tmc/YKrGpU9TE5u90ETU38LkdQ=="><link rel=stylesheet href=/lib/katex/copy-tex.min.cfee09198e00011c7d33435e1b23862f95b6827c243de4038963ca714516395c4f88715df65f4fd10a8a69988fbfed1b5a2aff27d588004581b91af98fc65a58.css integrity="sha512-z+4JGY4AARx9M0NeGyOGL5W2gnwkPeQDiWPKcUUWOVxPiHFd9l9P0QqKaZiPv+0bWir/J9WIAEWBuRr5j8ZaWA=="><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.2d0f7b71a99aaff94e9624ff32a8dc42ce645a0cba433fdc091cf34735027efd1fa2db024c2f591d768f426255f17bbf3d500b7c967b0437b3979956dffa81c6.css integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg=="><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.e9c0c2a48f70798908fc0c6e65ba47b80e8cd3961f0580a2fee3a84434d3af807a674e9447b49523af87a6a80642a32887c031eb5e1ded2af091bcd8e4bcd935.js integrity="sha512-6cDCpI9weYkI/AxuZbpHuA6M05YfBYCi/uOoRDTTr4B6Z06UR7SVI6+HpqgGQqMoh8Ax614d7SrwkbzY5LzZNQ=="></script><script type=text/javascript src=/lib/autocomplete/autocomplete.min.95377e01eea2e97083a9e6b4ae56c55a423a5b0cb7e6a298f06c004bbc318ff9a88e6687caa4c1c869aa278c33aae29bdb234b2cd85ae80acf7ad76b7ad61862.js integrity="sha512-lTd+Ae6i6XCDqea0rlbFWkI6Wwy35qKY8GwAS7wxj/mojmaHyqTByGmqJ4wzquKb2yNLLNha6ArPetdretYYYg=="></script><script type=text/javascript src=/lib/lunr/lunr.min.1e225d911c92cd786251c5f65707976a2cbcc9e636d767a9fe3e75cd1ff3e483c25f86543b169fea7689ff47502ffda5f992fe07d8a7feee274fc40967fde68a.js integrity="sha512-HiJdkRySzXhiUcX2VweXaiy8yeY212ep/j51zR/z5IPCX4ZUOxaf6naJ/0dQL/2l+ZL+B9in/u4nT8QJZ/3mig=="></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.4e60f014b860dd4038646d046f8308c93d4ed4c6fe3b0c399051b4b87a97b1d6f2673f4372f61084aa4680d91a98023a876946199ab65fc7ed389bc5fd78d352.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg=="></script><script type=text/javascript src=/lib/clipboard/clipboard.min.843586ca1f88cb832bf401cecd43f6f98d2254f9ff070c716a84a57848c7fe2d68e0455317fb21d3f0354b28a2f0f58e69efae3ebf93fca1f0ca7a1e6d2b8087.js integrity="sha512-hDWGyh+Iy4Mr9AHOzUP2+Y0iVPn/BwxxaoSleEjH/i1o4EVTF/sh0/A1Syii8PWOae+uPr+T/KHwynoebSuAhw=="></script><script type=text/javascript src=/lib/sharer/sharer.min.c4c86aeb36b41ca1e3aad5e04e9297a121178682f01c799a25844b78c742d98fe914b37de07ce1f1ce0812385a2272654d39db5d80c9df7658de91e4a1987f26.js integrity="sha512-xMhq6za0HKHjqtXgTpKXoSEXhoLwHHmaJYRLeMdC2Y/pFLN94Hzh8c4IEjhaInJlTTnbXYDJ33ZY3pHkoZh/Jg=="></script><script type=text/javascript src=/lib/katex/katex.min.da4f96fb738686d777c219c6b77dde93fa00d4cfdaa81e8c8abf9621c0ab4ae202db20fa8935fa22e3dfe6ad681091904f4ea399ae4ae9c6bb5ea6f8bbb52ba3.js integrity="sha512-2k+W+3OGhtd3whnGt33ek/oA1M/aqB6Mir+WIcCrSuIC2yD6iTX6IuPf5q1oEJGQT06jma5K6ca7Xqb4u7Urow=="></script><script type=text/javascript src=/lib/katex/auto-render.min.1a2706adb2c15c987691b17e0d80feb025b984f6afa0e7d500a48e13bfaa8180a05537307befc3e0b5de812f4955363bda8bdce549e0e059a5fa2d6e0f7b8ec9.js integrity="sha512-GicGrbLBXJh2kbF+DYD+sCW5hPavoOfVAKSOE7+qgYCgVTcwe+/D4LXegS9JVTY72ovc5Ung4Fml+i1uD3uOyQ=="></script><script type=text/javascript src=/lib/katex/copy-tex.min.0c94f619ff73a2094558dbb180570c677ce2f516bd18f0f1a70f7ff24c90e9c8e2f9239a2e5575038f48b6ce7778b66519f6f85a3c110a9b4451d363bba5b183.js integrity="sha512-DJT2Gf9zoglFWNuxgFcMZ3zi9Ra9GPDxpw9/8kyQ6cji+SOaLlV1A49Its53eLZlGfb4WjwRCptEUdNju6Wxgw=="></script><script type=text/javascript src=/lib/katex/mhchem.min.078b12bb78ac618a5abab7d2b665ec875c0bef5b3cc4a159c8d8c20ae507c3c7de0a1f519691b4df1f3e6b77a016267556e0a88fae3adc8635f159eb0c16cab8.js integrity="sha512-B4sSu3isYYpaurfStmXsh1wL71s8xKFZyNjCCuUHw8feCh9RlpG03x8+a3egFiZ1VuCoj6463IY18VnrDBbKuA=="></script><script type=text/javascript src=/lib/cookieconsent/cookieconsent.min.c975ea3858dd8c7347d46343fb510ed236efbde6c0069cc6283eba7639d47e22a560c1391c6314247a0269e1380f93d31b662c4897fa770ab2514bd0bd2d2f68.js integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA=="></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:80},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"💬 comments",lightTheme:"github-light",repo:"wwmoraes/site"}},cookieconsent:{content:{dismiss:"Got it!",link:"Learn more",message:"This website uses Cookies to improve your experience."},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},search:{highlightTag:"em",lunrIndexURL:"/index.json",maxResultLength:10,noResultsFound:"No results found",snippetLength:30,type:"lunr"}}</script><script type=text/javascript src=/js/theme.min.69ac882c686e101963f9cd3dc6167cee800004e4e9f40dae6f6fbeb3b03fb81ead782f98cc6e6eeec42b70a1b7047c7902e8f0ba3171660e2c2dc59d62965c7a.js integrity="sha512-aayILGhuEBlj+c09xhZ87oAABOTp9A2ub2++s7A/uB6teC+YzG5u7sQrcKG3BHx5AujwujFxZg4sLcWdYpZceg=="></script></body>
+</html>
