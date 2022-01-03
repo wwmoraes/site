@@ -65,7 +65,7 @@ other = "en_US"
 other = "Search"
 
 [searchPlaceholder]
-other = "Search titles or contents..."
+other = "Search..."
 
 [clear]
 other = "Clear"
@@ -139,10 +139,10 @@ other = "Read More"
 
 # === 404.html ===
 [pageNotFound]
-other = "Page not found"
+other = "Oops"
 
 [pageNotFoundText]
-other = "The page you're looking for doesn't exist. Sorry."
+other = "Sorry, I haven't figured out yet how to automate content."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
