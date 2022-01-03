@@ -4,6 +4,7 @@
   },
   "html.format.templating": true,
   "cSpell.words": [
+    "errorf",
     "metaindex",
     "metamethod",
     "metamethods",
@@ -11,6 +12,7 @@
     "Metatables",
     "metavalue",
     "newindex",
-    "userdata"
+    "userdata",
+    "warnf"
   ]
 }

@@ -6,7 +6,44 @@
     {
       "label": "start",
       "type": "shell",
-      "command": "hugo server -p 8888"
+      "command": "hugo",
+      "args": [
+        "server",
+        "-p",
+        "8888"
+      ],
+      "isBackground": true,
+      "detail": "Build, serve pages and watches for changes (development mode)",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+        "revealProblems": "onProblem"
+      },
+      "problemMatcher": {
+        "owner": "hugo",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(WARN|ERROR)\\s+\\d{4}/\\d{2}/\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}\\s+(.*)$",
+          "severity": 1,
+          "message": 2
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Start building .* …|Change detected, rebuilding .*\\.$",
+          "endsPattern": "^(?:Built in|Total in) \\d+ ms$"
+        }
+      }
+    },
+    {
+      "label": "build",
+      "detail": "generates the production static files",
+      "type": "shell",
+      "command": "hugo"
     }
   ]
 }
