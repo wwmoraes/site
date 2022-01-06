@@ -274,7 +274,7 @@ seo:
 analytics:
   enable: true
   google:
-    id: UA-32133268-2
+    id: G-9SJTZ340TJ
     anonymizeIP: true
   fathom:
     id: ''
