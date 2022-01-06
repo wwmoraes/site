@@ -1,6 +1,7 @@
 baseURL: https://artero.dev
 title: William Artero
 theme: LoveIt
+
 outputs:
   home:
   - HTML
@@ -27,15 +28,16 @@ outputs:
 
 author:
   name: William Artero
-  image: profile.png
   email: william@artero.dev
 
 pygmentsUseClasses: false
 pygmentsCodeFences: true
+
 sitemap:
   changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
+
 permalinks:
   # posts: ":year/:month/:filename"
   posts: "posts/:filename"

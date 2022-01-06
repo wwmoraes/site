@@ -62,8 +62,7 @@ home:
   rss: 10
   profile:
     enable: true
-    gravatarEmail: ''
-    avatarURL: /profile.png
+    gravatarEmail: william@artero.dev
     title: William Artero
     subtitle: automating a way out of tasks since 2010
     typeit: false
