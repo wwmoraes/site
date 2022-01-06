@@ -37,13 +37,23 @@
           "beginsPattern": "^Start building .* …|Change detected, rebuilding .*\\.$",
           "endsPattern": "^(?:Built in|Total in) \\d+ ms$"
         }
+      },
+      "options": {
+        "statusbar": {
+          "label": "$(rocket)"
+        }
       }
     },
     {
       "label": "build",
       "detail": "generates the production static files",
       "type": "shell",
-      "command": "hugo"
+      "command": "hugo",
+      "options": {
+        "statusbar": {
+          "label": "$(tools)"
+        }
+      }
     }
   ]
 }
