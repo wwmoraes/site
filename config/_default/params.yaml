@@ -10,7 +10,7 @@ keywords:
 - blog
 - engineer
 images:
-- logo.png
+- /icons/logo.png
 app:
   title: Artero
   noFavicon: false
@@ -35,7 +35,7 @@ header:
   desktopMode: fixed
   mobileMode: auto  # fixed|normal|auto
   title:
-    logo: logo.png
+    logo: /icons/logo.png
     name: ""
     pre: ""
     post: ""
