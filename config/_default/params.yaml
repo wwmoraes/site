@@ -273,9 +273,9 @@ seo:
   image: ''
   thumbnailUrl: ''
 analytics:
-  enable: false
+  enable: true
   google:
-    id: ''
+    id: UA-32133268-2
     anonymizeIP: true
   fathom:
     id: ''
