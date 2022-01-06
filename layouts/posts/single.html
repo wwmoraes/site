@@ -2,6 +2,13 @@
 
 {{- define "content" -}}
 {{- $params := .Scratch.Get "params" -}}
+{{- if eq hugo.Environment "production" -}}
+{{- $isDraft := eq $params.Draft true -}}
+{{- $todos := len (findRE `\b(TODO|FIXME)\b` .Content) -}}
+{{- if and (not $isDraft) (gt $todos 0) -}}
+{{- errorf "Non-draft page %s has %d pending to-dos" .Page.File.TranslationBaseName $todos -}}
+{{- end -}}
+{{- end -}}
 
 {{- $toc := $params.toc -}}
 {{- if eq $toc true -}}
