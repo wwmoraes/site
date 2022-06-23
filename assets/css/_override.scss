@@ -51,15 +51,15 @@ $selection-color-dark: theme-get("highlight", 900);
 
 // ========== Header ========== //
 // Height of the header
-$header-height: 3.5rem !default;
+$header-height: 3.5rem;
 
 // Color of the header background
 $header-background-color: theme-get("text", 50);
 $header-background-color-dark: theme-get("muted", 600);
 
 // Font style of the header title
-$header-title-font-family: $global-font-family !default;
-$header-title-font-size: 1.5rem !default;
+$header-title-font-family: $global-font-family;
+$header-title-font-size: 1.5rem;
 
 // Color of the hover header item
 $header-hover-color: #161209;
@@ -72,8 +72,8 @@ $search-background-color-dark: #363636;
 
 // ========== Single Content ========== //
 // Font size of the TOC
-$toc-title-font-size: 1.2rem !default;
-$toc-content-font-size: 1rem !default;
+$toc-title-font-size: 1.2rem;
+$toc-content-font-size: 1rem;
 
 // Color of the single link
 $single-link-color: darken(theme-get("primary", 500), 30%);
@@ -84,16 +84,16 @@ $single-link-hover-color: darken(theme-get("complement", 500), 30%);
 $single-link-hover-color-dark: theme-get("complement", 500);
 
 // Color of the table background
-$table-background-color: #fff !default;
-$table-background-color-dark: #272c34 !default;
+$table-background-color: #fff;
+$table-background-color-dark: #272c34;
 
 // Color of the table thead
-$table-thead-color: #ededed !default;
-$table-thead-color-dark: #20252b !default;
+$table-thead-color: #ededed;
+$table-thead-color-dark: #20252b;
 
 // Color of the blockquote
-$blockquote-color: #6bd6fd !default;
-$blockquote-color-dark: #59c5ec !default;
+$blockquote-color: #6bd6fd;
+$blockquote-color-dark: #59c5ec;
 // ========== Single Content ========== //
 
 // ========== Pagination ========== //
@@ -108,18 +108,18 @@ $pagination-link-hover-color-dark: theme-get("primary", 500);
 
 // ========== Code ========== //
 // Color of the code
-$code-color: #E74C3C !default;
-$code-color-dark: #E5BF78 !default;
+$code-color: #E74C3C;
+$code-color-dark: #E5BF78;
 
 // Color of the code background
-$code-background-color: #f5f5f5 !default;
-$code-background-color-dark: #272C34 !default;
+$code-background-color: #f5f5f5;
+$code-background-color-dark: #272C34;
 
-$code-info-color: #9c9c9c !default;
-$code-info-color-dark: #b1b0b0 !default;
+$code-info-color: #9c9c9c;
+$code-info-color-dark: #b1b0b0;
 
 // Font size of the code
-$code-font-size: .875rem !default;
+$code-font-size: .875rem;
 
 // Font family of the code
 $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace, $global-font-family;
