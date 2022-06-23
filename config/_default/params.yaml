@@ -282,7 +282,7 @@ analytics:
 cookieconsent:
   enable: true
   content:
-    message: 'This website uses Cookies to improve your experience.'
+    message: 'This website uses cookies to store your preferences.'
     dismiss: 'Got it!'
     link: 'Learn more'
 cdn:

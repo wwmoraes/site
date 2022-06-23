@@ -1,0 +1,30 @@
+@import "_mixin/_link";
+
+#header-desktop .header-wrapper {
+  padding: 0 2rem 0 2rem;
+}
+
+.single {
+  .post-meta {
+    @include link(false, false);
+  }
+}
+
+.home[posts] {
+  .summary {
+    border-bottom-style: dotted !important;
+
+    .content {
+      @include link(true, true);
+    }
+
+    .post-footer {
+      .post-tags {
+        max-width: 100%;
+        @include link(false, false);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {}

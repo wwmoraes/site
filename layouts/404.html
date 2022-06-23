@@ -4,21 +4,21 @@
 
 {{- define "content" -}}
 <div class="page" id="content-404">
-  <h1 id="error-emoji"></h1>
+  <h1 id="error-emoji"><noscript>🤷</noscript></h1>
   <p class="error-text">
     {{- T "pageNotFoundText" -}}
     <br />
     <a href="javascript:void(0);" title="{{ T `back` }}" onclick="window.history.back();">
       <i class="fas fa-history fa-fw"></i>
     </a>
-    <a href="{{ '/' | relURL }}" title="{{ T `home` }}">
+    <a href="{{ .Site.BaseURL }}" title="{{ T `home` }}">
       <i class="fas fa-home fa-fw"></i>
     </a>
   </p>
 </div>
 <script type="text/javascript">
   (function () {
-    var emojiArray = ['😅', '🤷'];
+    var emojiArray = ['😅', '🤷', '😥', '🧐', '🤔'];
     document.getElementById('error-emoji').appendChild(document.createTextNode(emojiArray[Math.floor(Math.random() * emojiArray.length)]));
   })();
 </script>

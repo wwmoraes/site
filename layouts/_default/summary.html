@@ -32,7 +32,7 @@
     </span> */}}
 
     {{- with .Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format -}}
-    &nbsp;<span class="post-publish">
+    <span class="post-publish">
       {{- printf `<time datetime="%v">%v</time>` . . | dict "Date" | T "publishedOnDate" | safeHTML -}}
     </span>
     {{- end -}}
@@ -60,15 +60,14 @@
 
   {{- /* Footer */ -}}
   <div class="post-footer">
-    <a href="{{ .RelPermalink }}">{{ T "readMore" }}</a>
     {{- with .Params.tags -}}
+    {{- $tags := slice -}}
+    {{- range . -}}
+    {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+    {{- $tags = $tags | append (printf `<a href="%v"><i class="fas fa-hashtag"></i>%v</a>` $tag.RelPermalink $tag.Title) -}}
+    {{- end -}}
     <div class="post-tags">
-      <i class="fas fa-tags fa-fw"></i>&nbsp;
-      {{- range $index, $value := . -}}
-      {{- if gt $index 0 }},&nbsp;{{ end -}}
-      {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-      <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
-      {{- end -}}
+      {{- delimit $tags "&nbsp;" -}}
     </div>
     {{- end -}}
   </div>

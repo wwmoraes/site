@@ -1,6 +1,7 @@
 baseURL: https://artero.dev
 title: William Artero
 theme: LoveIt
+defaultContentLanguage: en
 
 outputs:
   home:

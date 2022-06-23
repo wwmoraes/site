@@ -54,11 +54,11 @@
 
 {{- /* normalize.css */ -}}
 {{- $source := $cdn.normalizeCSS | default "lib/normalize/normalize.min.css" -}}
-{{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
+{{- $style := dict "Source" $source "Fingerprint" $fingerprint "Attr" "media=screen" -}}
 {{- partial "plugin/style.html" $style -}}
 
 {{- /* style.min.css */ -}}
-{{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint -}}
+{{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint "Attr" "media=screen" -}}
 {{- $options := dict "targetPath" "css/style.min.css" "enableSourceMap" true -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
