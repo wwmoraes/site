@@ -43,10 +43,14 @@
 <link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
 {{- end -}}
 
-{{/*
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+<link rel="dns-prefetch" href="https://www.gravatar.com" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-*/}}
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Regular.woff2" as="font"
+  type="font/woff2" crossorigin />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Bold.woff2" as="font"
+  type="font/woff2" crossorigin />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-VF.woff2" as="font"
+  type="font/woff2" crossorigin />
 
 {{- /* normalize.css */ -}}
 {{- $source := $cdn.normalizeCSS | default "lib/normalize/normalize.min.css" -}}
