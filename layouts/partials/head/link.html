@@ -65,12 +65,12 @@
 
 {{- /* Font Awesome */ -}}
 {{- $source := $cdn.fontawesomeFreeCSS | default "lib/fontawesome-free/all.min.css" -}}
-{{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
+{{- $style := dict "Source" $source "Fingerprint" $fingerprint "Async" true "Attr" "media='screen'" -}}
 {{- partial "plugin/style.html" $style -}}
 
 {{- /* Animate.css */ -}}
 {{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}
-{{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
+{{- $style := dict "Source" $source "Fingerprint" $fingerprint "Async" true "Attr" "media='screen'" -}}
 {{- partial "plugin/style.html" $style -}}
 
 {{ $customCSS := resources.Get "css/custom.css" }}
