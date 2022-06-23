@@ -6,18 +6,15 @@ defaultContentLanguage: en
 outputs:
   home:
   - HTML
-  - AMP
   - RSS
   - JSON
   page:
   - HTML
-  - AMP
   section:
   - HTML
   - RSS
   taxonomy:
   - HTML
-  - AMP
   ## congo
   term:
   - HTML
