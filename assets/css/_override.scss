@@ -125,80 +125,153 @@ $code-font-size: .875rem;
 $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace, $global-font-family;
 
 $code-highlight-color-map-dark: (
-  /* Parentheses */ 'p': #D4D4D4,
-  /* Keyword */ 'k': #569CD6,
-  /* KeywordConstant */ 'kc': #569CD6,
-  /* KeywordDeclaration */ 'kd': #569CD6,
-  /* KeywordReserved */ 'kr': #569CD6,
-  /* KeywordNamespace */ 'kn': #4EC9B0,
-  /* KeywordPseudo */ 'kp': #569cd6,
-  /* KeywordType */ 'kt': #4EC9B0,
-  /* Operator */ 'o': #D4D4D4,
-  /* OperatorWord */ 'ow': #d371e3,
-  /* NameConstant */ 'no': #4FC1FF,
-  /* NameFunction */ 'nf': #DCDCAA,
-  /* NameOther */ 'nx': #DCDCAA,
-  /* NameClass */ 'nc': #4EC9B0,
-  /* NameBuiltin */ 'nb': #9CDCFE,
-  /* LiteralString */ 's': #ce9178,
-  /* LiteralStringAffix */ 'sa': #ce9178,
-  /* LiteralStringBacktick */ 'sb': #ce9178,
-  /* LiteralStringChar */ 'sc': #ce9178,
-  /* LiteralStringDelimiter */ 'dl': #ce9178,
-  /* LiteralStringDoc */ 'sd': #ce9178,
-  /* LiteralStringDouble */ 's2': #ce9178,
-  /* LiteralStringEscape */ 'se': #ce9178,
-  /* LiteralStringHeredoc */ 'sh': #ce9178,
-  /* LiteralStringInterpol */ 'si': #ce9178,
-  /* LiteralStringOther */ 'sx': #ce9178,
-  /* LiteralStringRegex */ 'sr': #ce9178,
-  /* LiteralStringSingle */ 's1': #ce9178,
-  /* LiteralStringSymbol */ 'ss': #ce9178,
-  /* Literal */ 'l': #b5cea8,
-  /* LiteralDate */ 'ld': #b5cea8,
-  /* LiteralNumber */ 'm': #b5cea8,
-  /* LiteralNumberBin */ 'mb': #b5cea8,
-  /* LiteralNumberFloat */ 'mf': #b5cea8,
-  /* LiteralNumberHex */ 'mh': #b5cea8,
-  /* LiteralNumberInteger */ 'mi': #b5cea8,
-  /* LiteralNumberIntegerLong */ 'il': #b5cea8,
-  /* LiteralNumberOct */ 'mo': #b5cea8,
-  /* Comment */ 'c': #608B4E,
-  /* CommentHashbang */ 'ch': #608B4E,
-  /* CommentMultiline */ 'cm': #608B4E,
-  /* CommentSingle */ 'c1': #608B4E,
-  /* CommentSpecial */ 'cs': #608B4E,
-  /* CommentPreproc */ 'cp': #608B4E,
-  /* CommentPreprocFile */ 'cpf': #608B4E,
+  /* Parentheses */
+  'p': #D4D4D4,
+  /* Keyword */
+  'k': #569CD6,
+  /* KeywordConstant */
+  'kc': #569CD6,
+  /* KeywordDeclaration */
+  'kd': #569CD6,
+  /* KeywordReserved */
+  'kr': #569CD6,
+  /* KeywordNamespace */
+  'kn': #4EC9B0,
+  /* KeywordPseudo */
+  'kp': #569cd6,
+  /* KeywordType */
+  'kt': #4EC9B0,
+  /* Operator */
+  'o': #D4D4D4,
+  /* OperatorWord */
+  'ow': #d371e3,
+  /* NameConstant */
+  'no': #4FC1FF,
+  /* NameFunction */
+  'nf': #DCDCAA,
+  /* NameOther */
+  'nx': #DCDCAA,
+  /* NameClass */
+  'nc': #4EC9B0,
+  /* NameBuiltin */
+  'nb': #9CDCFE,
+  /* LiteralString */
+  's': #ce9178,
+  /* LiteralStringAffix */
+  'sa': #ce9178,
+  /* LiteralStringBacktick */
+  'sb': #ce9178,
+  /* LiteralStringChar */
+  'sc': #ce9178,
+  /* LiteralStringDelimiter */
+  'dl': #ce9178,
+  /* LiteralStringDoc */
+  'sd': #ce9178,
+  /* LiteralStringDouble */
+  's2': #ce9178,
+  /* LiteralStringEscape */
+  'se': #ce9178,
+  /* LiteralStringHeredoc */
+  'sh': #ce9178,
+  /* LiteralStringInterpol */
+  'si': #ce9178,
+  /* LiteralStringOther */
+  'sx': #ce9178,
+  /* LiteralStringRegex */
+  'sr': #ce9178,
+  /* LiteralStringSingle */
+  's1': #ce9178,
+  /* LiteralStringSymbol */
+  'ss': #ce9178,
+  /* Literal */
+  'l': #b5cea8,
+  /* LiteralDate */
+  'ld': #b5cea8,
+  /* LiteralNumber */
+  'm': #b5cea8,
+  /* LiteralNumberBin */
+  'mb': #b5cea8,
+  /* LiteralNumberFloat */
+  'mf': #b5cea8,
+  /* LiteralNumberHex */
+  'mh': #b5cea8,
+  /* LiteralNumberInteger */
+  'mi': #b5cea8,
+  /* LiteralNumberIntegerLong */
+  'il': #b5cea8,
+  /* LiteralNumberOct */
+  'mo': #b5cea8,
+  /* Comment */
+  'c': #608B4E,
+  /* CommentHashbang */
+  'ch': #608B4E,
+  /* CommentMultiline */
+  'cm': #608B4E,
+  /* CommentSingle */
+  'c1': #608B4E,
+  /* CommentSpecial */
+  'cs': #608B4E,
+  /* CommentPreproc */
+  'cp': #608B4E,
+  /* CommentPreprocFile */
+  'cpf': #608B4E,
 
-  /* NameBuiltinPseudo */ 'bp': #4EC9B0,
-  /* Name */ 'n': #9CDCFE,
-  /* NameAttribute */ 'na': #4EC9B0,
-  /* NameDecorator */ 'nd': #D9E577,
-  /* NameEntity */ 'ni': #9cdcfe,
-  /* NameException */ 'ne': #9cdcfe,
-  /* NameFunctionMagic */ 'fm': #9CDCFE,
-  /* NameLabel */ 'nl': #9cdcfe,
-  /* NameNamespace */ 'nn': #9cdcfe,
-  /* NameProperty */ 'py': #4EC9B0,
-  /* NameTag */ 'nt': #9cdcfe,
-  /* NameVariable */ 'nv': #9cdcfe,
-  /* NameVariableClass */ 'vc': #9cdcfe,
-  /* NameVariableGlobal */ 'vg': #9cdcfe,
-  /* NameVariableInstance */ 'vi': #9cdcfe,
-  /* NameVariableMagic */ 'vm': #9cdcfe,
+  /* NameBuiltinPseudo */
+  'bp': #4EC9B0,
+  /* Name */
+  'n': #9CDCFE,
+  /* NameAttribute */
+  'na': #4EC9B0,
+  /* NameDecorator */
+  'nd': #D9E577,
+  /* NameEntity */
+  'ni': #9cdcfe,
+  /* NameException */
+  'ne': #9cdcfe,
+  /* NameFunctionMagic */
+  'fm': #9CDCFE,
+  /* NameLabel */
+  'nl': #9cdcfe,
+  /* NameNamespace */
+  'nn': #9cdcfe,
+  /* NameProperty */
+  'py': #4EC9B0,
+  /* NameTag */
+  'nt': #9cdcfe,
+  /* NameVariable */
+  'nv': #9cdcfe,
+  /* NameVariableClass */
+  'vc': #9cdcfe,
+  /* NameVariableGlobal */
+  'vg': #9cdcfe,
+  /* NameVariableInstance */
+  'vi': #9cdcfe,
+  /* NameVariableMagic */
+  'vm': #9cdcfe,
 
-  /* Generic */ 'g': #f16372,
-  /* GenericDeleted */ 'gd': #f16372,
-  /* GenericEmph */ 'ge': #f16372,
-  /* GenericError */ 'gr': #f16372,
-  /* GenericHeading */ 'gh': #f16372,
-  /* GenericInserted */ 'gi': #f16372,
-  /* GenericOutput */ 'go': #f16372,
-  /* GenericPrompt */ 'gp': #f16372,
-  /* GenericStrong */ 'gs': #f16372,
-  /* GenericSubheading */ 'gu': #f16372,
-  /* GenericTraceback */ 'gt': #f16372,
-  /* TextWhitespace */ 'w': #D4D4D4,
+  /* Generic */
+  'g': #f16372,
+  /* GenericDeleted */
+  'gd': #f16372,
+  /* GenericEmph */
+  'ge': #f16372,
+  /* GenericError */
+  'gr': #f16372,
+  /* GenericHeading */
+  'gh': #f16372,
+  /* GenericInserted */
+  'gi': #f16372,
+  /* GenericOutput */
+  'go': #f16372,
+  /* GenericPrompt */
+  'gp': #f16372,
+  /* GenericStrong */
+  'gs': #f16372,
+  /* GenericSubheading */
+  'gu': #f16372,
+  /* GenericTraceback */
+  'gt': #f16372,
+  /* TextWhitespace */
+  'w': #D4D4D4,
 );
 // ========== Code ========== //
