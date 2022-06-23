@@ -1,3 +1,5 @@
+@import "theme.scss";
+
 // ==============================
 // Variables
 // ==============================
@@ -11,42 +13,42 @@ $global-font-weight: 400;
 $global-line-height: 1.5rem;
 
 // Color of the background
-$global-background-color: #DDE3E8;
-$global-background-color-dark: #343542;
+$global-background-color: theme-get("text", 100);
+$global-background-color-dark: theme-get("background", 600);
 
 // Color of the text
-$global-font-color: #343542;
-$global-font-color-dark: #DDE3E8;
+$global-font-color: theme-get("background", 800);
+$global-font-color-dark: theme-get("text", 200);
 
 // Color of the secondary text
-$global-font-secondary-color: #1e1e25;
-$global-font-secondary-color-dark: #8C8A93;
+$global-font-secondary-color: theme-get("background", 700);
+$global-font-secondary-color-dark: theme-get("text", 300);
 
 // Color of the link
-$global-link-color: #343542;
-$global-link-color-dark: #DDE3E8;
+$global-link-color: theme-get("highlight", 900);
+$global-link-color-dark: theme-get("highlight", 50);
 
 // Color of the hover link
-$global-link-hover-color: #2d96bd !default;
-$global-link-hover-color-dark: #fff !default;
+$global-link-hover-color: theme-get("primary", 900);
+$global-link-hover-color-dark: theme-get("primary", 500);
 
 // Color of the border
-$global-border-color: #f0f0f0 !default;
-$global-border-color-dark: #363636 !default;
+$global-border-color: theme-get("background", 900);
+$global-border-color-dark: theme-get("text", 50);
 // ========== Global ========== //
 
 // ========== Scrollbar ========== //
 // Color of the scrollbar
-$scrollbar-color: #87878d !default;
+$scrollbar-color: #87878d;
 
 // Color of the hover scrollbar
-$scrollbar-hover-color: #a9a9b3 !default;
+$scrollbar-hover-color: #a9a9b3;
 // ========== Scrollbar ========== //
 
 // ========== Selection ========== //
 // Color of the selected text
-$selection-color: rgba(53, 166, 247, 0.25) !default;
-$selection-color-dark: rgba(50, 112, 194, 0.4) !default;
+$selection-color: theme-get("highlight", 100);
+$selection-color-dark: theme-get("highlight", 900);
 // ========== Selection ========== //
 
 // ========== Header ========== //
@@ -54,20 +56,20 @@ $selection-color-dark: rgba(50, 112, 194, 0.4) !default;
 $header-height: 3.5rem !default;
 
 // Color of the header background
-$header-background-color: #f8f8f8 !default;
-$header-background-color-dark: #252627 !default;
+$header-background-color: theme-get("text", 50);
+$header-background-color-dark: theme-get("muted", 600);
 
 // Font style of the header title
 $header-title-font-family: $global-font-family !default;
 $header-title-font-size: 1.5rem !default;
 
 // Color of the hover header item
-$header-hover-color: #161209 !default;
-$header-hover-color-dark: #fff !default;
+$header-hover-color: #161209;
+$header-hover-color-dark: #fff;
 
 // Color of the search background
-$search-background-color: #e9e9e9 !default;
-$search-background-color-dark: #363636 !default;
+$search-background-color: #e9e9e9;
+$search-background-color-dark: #363636;
 // ========== Header ========== //
 
 // ========== Single Content ========== //
@@ -76,12 +78,12 @@ $toc-title-font-size: 1.2rem !default;
 $toc-content-font-size: 1rem !default;
 
 // Color of the single link
-$single-link-color: #2d96bd !default;
-$single-link-color-dark: #55bde2 !default;
+$single-link-color: darken(theme-get("primary", 500), 30%);
+$single-link-color-dark: theme-get("primary", 500);
 
 // Color of the hover single link
-$single-link-hover-color: #ef3982 !default;
-$single-link-hover-color-dark: #bdebfc !default;
+$single-link-hover-color: darken(theme-get("complement", 500), 30%);
+$single-link-hover-color-dark: theme-get("complement", 500);
 
 // Color of the table background
 $table-background-color: #fff !default;
@@ -98,12 +100,12 @@ $blockquote-color-dark: #59c5ec !default;
 
 // ========== Pagination ========== //
 // Color of the link in pagination
-$pagination-link-color: #2d96bd !default;
-$pagination-link-color-dark: #a9a9b3 !default;
+$pagination-link-color: darken(theme-get("primary", 500), 30%);
+$pagination-link-color-dark: theme-get("primary", 500);
 
 // Color of the hover link in pagination
-$pagination-link-hover-color: #000 !default;
-$pagination-link-hover-color-dark: #fff !default;
+$pagination-link-hover-color: darken(theme-get("primary", 500), 30%);
+$pagination-link-hover-color-dark: theme-get("primary", 500);
 // ========== Pagination ========== //
 
 // ========== Code ========== //

@@ -1,18 +1,34 @@
 {
   "[markdown]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
   },
-  "html.format.templating": true,
   "cSpell.words": [
+    "changefreq",
     "errorf",
+    "goldmark",
+    "htmlproofer",
+    "linkify",
+    "loveit",
     "metaindex",
     "metamethod",
     "metamethods",
     "metatable",
     "Metatables",
     "metavalue",
+    "monokai",
     "newindex",
+    "preinstall",
+    "pygments",
+    "segmentit",
     "userdata",
     "warnf"
-  ]
+  ],
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/pages.yml"
+  ],
+  "html.format.templating": true
 }
