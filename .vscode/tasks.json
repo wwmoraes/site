@@ -1,81 +1,79 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "version": "2.0.0",
   "tasks": [
     {
-      "label": "start",
-      "type": "shell",
-      "command": "hugo",
       "args": [
         "server",
         "-p",
         "8888"
       ],
-      "isBackground": true,
+      "command": "hugo",
       "detail": "Build, serve pages and watches for changes (development mode)",
-      "presentation": {
-        "echo": false,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
-        "revealProblems": "onProblem"
-      },
-      "problemMatcher": {
-        "owner": "hugo",
-        "fileLocation": "absolute",
-        "pattern": {
-          "regexp": "^(WARN|ERROR)\\s+\\d{4}/\\d{2}/\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}\\s+(.*)$",
-          "severity": 1,
-          "message": 2
-        },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": "^Start building .* …|Change detected, rebuilding .*\\.$",
-          "endsPattern": "^(?:Built in|Total in) \\d+ ms$"
-        }
-      },
+      "isBackground": true,
+      "label": "start",
       "options": {
         "statusbar": {
           "label": "$(rocket)"
         }
-      }
+      },
+      "presentation": {
+        "clear": true,
+        "close": true,
+        "echo": false,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "showReuseMessage": false
+      },
+      "problemMatcher": {
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Start building .* \u2026|Change detected, rebuilding .*\\.$",
+          "endsPattern": "^(?:Built in|Total in) \\d+ ms$"
+        },
+        "fileLocation": "absolute",
+        "owner": "hugo",
+        "pattern": {
+          "message": 2,
+          "regexp": "^(WARN|ERROR)\\s+\\d{4}/\\d{2}/\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}\\s+(.*)$",
+          "severity": 1
+        }
+      },
+      "type": "shell"
     },
     {
-      "label": "launch",
-      "detail": "opens the local server home on the default browser",
-      "type": "shell",
-      "command": "open",
       "args": [
         "http://localhost:8888"
       ],
-      "presentation": {
-        "echo": false,
-        "reveal": "never",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true
-      },
+      "command": "open",
+      "detail": "opens the local server home on the default browser",
+      "label": "launch",
       "options": {
         "statusbar": {
           "label": "$(globe)"
         }
-      }
+      },
+      "presentation": {
+        "clear": true,
+        "echo": false,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "never",
+        "showReuseMessage": false
+      },
+      "type": "shell"
     },
     {
-      "label": "build",
-      "detail": "generates the production static files",
-      "type": "shell",
       "command": "hugo",
+      "detail": "generates the production static files",
+      "label": "build",
       "options": {
         "statusbar": {
           "label": "$(tools)"
         }
-      }
+      },
+      "type": "shell"
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

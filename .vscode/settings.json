@@ -2,8 +2,8 @@
   "[markdown]": {
     "editor.quickSuggestions": {
       "comments": "on",
-      "strings": "on",
-      "other": "on"
+      "other": "on",
+      "strings": "on"
     }
   },
   "cSpell.words": [
@@ -11,6 +11,7 @@
     "errorf",
     "goldmark",
     "htmlproofer",
+    "lastmod",
     "linkify",
     "loveit",
     "metaindex",
@@ -21,6 +22,7 @@
     "metavalue",
     "monokai",
     "newindex",
+    "nolint",
     "preinstall",
     "pygments",
     "segmentit",
@@ -30,5 +32,16 @@
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/pages.yml"
   ],
-  "html.format.templating": true
+  "html.format.templating": true,
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file"
+    }
+  ],
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "content/**/*.md"
+  ]
 }

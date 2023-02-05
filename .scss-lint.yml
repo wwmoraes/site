@@ -1,0 +1,15 @@
+linters:
+  UrlFormat: # garbage, we use CDNs
+    enabled: false
+
+  IdSelector: # why tho
+    enabled: false
+
+  SelectorDepth: # beggars can't be choosers
+    enabled: false
+
+  ImportPath: # ditto
+    enabled: false
+
+  StringQuotes:
+    style: double_quotes
