@@ -42,13 +42,15 @@ header:
     typeit: false
 footer:
   enable: true
-  custom: ""
+  custom: influenced by ☕️, 🍺 and 🎸
   hugo: true
   copyright: true
-  author: false
+  author: true
   since: 2021
   license: >-
     <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+    &amp;
+    <a rel="license external nofollow noopener noferrer" href="https://raw.githubusercontent.com/wwmoraes/site/master/LICENSE" target="_blank">MIT</a>
 
 section:
   paginate: 20

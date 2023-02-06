@@ -1,4 +1,4 @@
-@import "theme.scss";
+@import "_theme";
 
 // ==============================
 // Variables
@@ -108,12 +108,13 @@ $pagination-link-hover-color-dark: theme-get("primary", 500);
 
 // ========== Code ========== //
 // Color of the code
-$code-color: #E74C3C;
-$code-color-dark: #E5BF78;
+$code-color: darken(#e74c3c, 5%);
+$code-color-dark: #e5bf78;
 
 // Color of the code background
 $code-background-color: #f5f5f5;
-$code-background-color-dark: #272C34;
+// $code-background-color-dark: #272c34;
+$code-background-color-dark: #1e1e1e;
 
 $code-info-color: #9c9c9c;
 $code-info-color-dark: #b1b0b0;
@@ -124,37 +125,187 @@ $code-font-size: .875rem;
 // Font family of the code
 $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace, $global-font-family;
 
+$code-highlight-color-comment: #a0a1a8;
+$code-highlight-color-map: (
+  /* Parentheses */
+  'p': #a9a9b3,
+  /* Keyword */
+  'k': #b501a9,
+  /* KeywordConstant */
+  'kc': #b501a9,
+  /* KeywordDeclaration */
+  'kd': #b501a9,
+  /* KeywordNamespace */
+  'kn': #b501a9,
+  /* KeywordPseudo */
+  'kp': #b501a9,
+  /* KeywordReserved */
+  'kr': #b501a9,
+  /* KeywordType */
+  'kt': #b501a9,
+  /* Name */
+  'n': #333,
+  /* NameAttribute */
+  'na': #2b77fa,
+  /* NameBuiltin */
+  'nb': #f74840,
+  /* NameBuiltinPseudo */
+  'bp': #f74840,
+  /* NameClass */
+  'nc': #cb8100,
+  /* NameConstant */
+  'no': #2b77fa,
+  /* NameDecorator */
+  'nd': #0086c1,
+  /* NameEntity */
+  'ni': #2b77fa,
+  /* NameException */
+  'ne': #2b77fa,
+  /* NameFunction */
+  'nf': #2b77fa,
+  /* NameFunctionMagic */
+  'fm': #1ccad6,
+  /* NameLabel */
+  'nl': #2b77fa,
+  /* NameNamespace */
+  'nn': #2b77fa,
+  /* NameOther */
+  'nx': #333,
+  /* NameProperty */
+  'py': #2b77fa,
+  /* NameTag */
+  'nt': #2b77fa,
+  /* NameVariable */
+  'nv': #2b77fa,
+  /* NameVariableClass */
+  'vc': #2b77fa,
+  /* NameVariableGlobal */
+  'vg': #2b77fa,
+  /* NameVariableInstance */
+  'vi': #2b77fa,
+  /* NameVariableMagic */
+  'vm': #2b77fa,
+  /* Literal */
+  'l': #2aa198,
+  /* LiteralDate */
+  'ld': #2aa198,
+  /* LiteralString */
+  's': #24a443,
+  /* LiteralStringAffix */
+  'sa': #24a443,
+  /* LiteralStringBacktick */
+  'sb': #24a443,
+  /* LiteralStringChar */
+  'sc': #24a443,
+  /* LiteralStringDelimiter */
+  'dl': #24a443,
+  /* LiteralStringDoc */
+  'sd': #24a443,
+  /* LiteralStringDouble */
+  's2': #24a443,
+  /* LiteralStringEscape */
+  'se': #24a443,
+  /* LiteralStringHeredoc */
+  'sh': #24a443,
+  /* LiteralStringInterpol */
+  'si': #24a443,
+  /* LiteralStringOther */
+  'sx': #24a443,
+  /* LiteralStringRegex */
+  'sr': #24a443,
+  /* LiteralStringSingle */
+  's1': #24a443,
+  /* LiteralStringSymbol */
+  'ss': #24a443,
+  /* LiteralNumber */
+  'm': #e2893c,
+  /* LiteralNumberBin */
+  'mb': #e2893c,
+  /* LiteralNumberFloat */
+  'mf': #e2893c,
+  /* LiteralNumberHex */
+  'mh': #e2893c,
+  /* LiteralNumberInteger */
+  'mi': #e2893c,
+  /* LiteralNumberIntegerLong */
+  'il': #e2893c,
+  /* LiteralNumberOct */
+  'mo': #e2893c,
+  /* Operator */
+  'o': #f19b04,
+  /* OperatorWord */
+  'ow': #b501a9,
+  /* Comment */
+  'c': darken($code-highlight-color-comment, 20%),
+  /* CommentHashbang */
+  'ch': darken($code-highlight-color-comment, 20%),
+  /* CommentMultiline */
+  'cm': darken($code-highlight-color-comment, 20%),
+  /* CommentSingle */
+  'c1': darken($code-highlight-color-comment, 20%),
+  /* CommentSpecial */
+  'cs': darken($code-highlight-color-comment, 20%),
+  /* CommentPreproc */
+  'cp': darken($code-highlight-color-comment, 20%),
+  /* CommentPreprocFile */
+  'cpf': darken($code-highlight-color-comment, 20%),
+  /* Generic */
+  'g': #e72d40,
+  /* GenericDeleted */
+  'gd': #e72d40,
+  /* GenericEmph */
+  'ge': #e72d40,
+  /* GenericError */
+  'gr': #e72d40,
+  /* GenericHeading */
+  'gh': #e72d40,
+  /* GenericInserted */
+  'gi': #e72d40,
+  /* GenericOutput */
+  'go': #e72d40,
+  /* GenericPrompt */
+  'gp': #e72d40,
+  /* GenericStrong */
+  'gs': #e72d40,
+  /* GenericSubheading */
+  'gu': #e72d40,
+  /* GenericTraceback */
+  'gt': #e72d40,
+  /* TextWhitespace */
+  'w': #bbb,
+);
+
 $code-highlight-color-map-dark: (
   /* Parentheses */
-  'p': #D4D4D4,
+  'p': #d4d4d4,
   /* Keyword */
-  'k': #569CD6,
+  'k': #569cd6,
   /* KeywordConstant */
-  'kc': #569CD6,
+  'kc': #569cd6,
   /* KeywordDeclaration */
-  'kd': #569CD6,
+  'kd': #569cd6,
   /* KeywordReserved */
-  'kr': #569CD6,
+  'kr': #569cd6,
   /* KeywordNamespace */
-  'kn': #4EC9B0,
+  'kn': #4ec9b0,
   /* KeywordPseudo */
   'kp': #569cd6,
   /* KeywordType */
-  'kt': #4EC9B0,
+  'kt': #4ec9b0,
   /* Operator */
-  'o': #D4D4D4,
+  'o': #d4d4d4,
   /* OperatorWord */
   'ow': #d371e3,
   /* NameConstant */
-  'no': #4FC1FF,
+  'no': #4fc1ff,
   /* NameFunction */
-  'nf': #DCDCAA,
+  'nf': #dcdcaa,
   /* NameOther */
-  'nx': #DCDCAA,
+  'nx': #dcdcaa,
   /* NameClass */
-  'nc': #4EC9B0,
+  'nc': #4ec9b0,
   /* NameBuiltin */
-  'nb': #9CDCFE,
+  'nb': #9cdcfe,
   /* LiteralString */
   's': #ce9178,
   /* LiteralStringAffix */
@@ -202,40 +353,40 @@ $code-highlight-color-map-dark: (
   /* LiteralNumberOct */
   'mo': #b5cea8,
   /* Comment */
-  'c': #608B4E,
+  'c': #608b4e,
   /* CommentHashbang */
-  'ch': #608B4E,
+  'ch': #608b4e,
   /* CommentMultiline */
-  'cm': #608B4E,
+  'cm': #608b4e,
   /* CommentSingle */
-  'c1': #608B4E,
+  'c1': #608b4e,
   /* CommentSpecial */
-  'cs': #608B4E,
+  'cs': #608b4e,
   /* CommentPreproc */
-  'cp': #608B4E,
+  'cp': #608b4e,
   /* CommentPreprocFile */
-  'cpf': #608B4E,
+  'cpf': #608b4e,
 
   /* NameBuiltinPseudo */
-  'bp': #4EC9B0,
+  'bp': #4ec9b0,
   /* Name */
-  'n': #9CDCFE,
+  'n': #9cdcfe,
   /* NameAttribute */
-  'na': #4EC9B0,
+  'na': #4ec9b0,
   /* NameDecorator */
-  'nd': #D9E577,
+  'nd': #d9e577,
   /* NameEntity */
   'ni': #9cdcfe,
   /* NameException */
   'ne': #9cdcfe,
   /* NameFunctionMagic */
-  'fm': #9CDCFE,
+  'fm': #9cdcfe,
   /* NameLabel */
   'nl': #9cdcfe,
   /* NameNamespace */
   'nn': #9cdcfe,
   /* NameProperty */
-  'py': #4EC9B0,
+  'py': #4ec9b0,
   /* NameTag */
   'nt': #9cdcfe,
   /* NameVariable */
@@ -272,6 +423,6 @@ $code-highlight-color-map-dark: (
   /* GenericTraceback */
   'gt': #f16372,
   /* TextWhitespace */
-  'w': #D4D4D4,
+  'w': #d4d4d4,
 );
 // ========== Code ========== //
