@@ -7,3 +7,12 @@ start-prod:
 build:
 	@rm -rf public
 	@hugo
+
+hook-install:
+	@pre-commit install
+
+hook-update:
+	@pre-commit autoupdate
+
+check:
+	@pre-commit run --all-files
