@@ -9,7 +9,7 @@ categories:
 - career
 tags:
 - DevOps
-subtitle: why filtering keywords matter to attract the desired jobs
+description: why filtering keywords matter to attract the desired jobs
 ---
 
 A search for the term DevOps on LinkedIn will yield hundreds of thousands of posts and hundreds of jobs. The market for so-called DevOps engineers is plentiful and has been for over a decade now. Why would someone want to dissociate themselves from it? Seems illogical, I know.

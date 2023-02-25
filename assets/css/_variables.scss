@@ -1,0 +1,24 @@
+@import "utilities";
+
+$admonition-type-color-map: (
+  abstract: #767b91,
+  bug: #d7341f,
+  danger: #c3200b,
+  edit: #2cbdff,
+  example: #4780d7,
+  failure: #ff7a65,
+  info: #79b2ff,
+  note: #5a8c8f,
+  question: #bd9e5f,
+  quote: #a8adc3,
+  success: #52f187,
+  tip: #00972d,
+  warning: #fef032,
+);
+$code-font-family: fira code vf, fira code, fira mono, source code pro, menlo, consolas, monaco, monospace;
+$dark-color: theme-get("background", 600);
+$darkest-color: theme-get("background", 800);
+$font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif;
+$light-color: theme-get("text", 500);
+$lightest-color: theme-get("text", 50);
+$primary-color: theme-get("primary", 500);

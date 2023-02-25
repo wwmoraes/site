@@ -13,3 +13,10 @@ linters:
 
   StringQuotes:
     style: double_quotes
+
+  PropertySpelling:
+    extra_properties:
+    - gap
+
+  VendorPrefix:
+    enabled: false # TODO add bourbon, re-enable and fix code <https://github.com/thoughtbot/bourbon>

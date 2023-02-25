@@ -1,0 +1,54 @@
+{{- define "main" -}}
+<article>
+  {{- if .Content -}}
+  <h1>{{- .Title -}}</h1>
+  {{- with .Description -}}
+  <blockquote>
+    <p>{{- . -}}</p>
+  </blockquote>
+  {{- end -}}
+  {{- end -}}
+  {{- if .Site.RegularPages -}}
+  <h2 id="posts">
+    <a href="#posts">§</a>
+    Posts 📝
+  </h2>
+  <ul class="posts-list">
+    {{- range last 3 (where .Paginator.Pages "Type" "posts") -}}
+    <li class="posts-list-item">
+      <a class="posts-list-item-title" href="{{- .Permalink -}}">{{- .Title -}}</a>
+      <span class="posts-list-item-description">
+        {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
+        {{- .PublishDate.Format "Jan 2, 2006" -}}
+        <span class="posts-list-item-separator">|</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
+        {{ printf "%d min read" .ReadingTime }}
+        {{- with .Params.categories -}}
+        <span class="posts-list-item-separator">|</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}
+        {{- range . -}}
+        {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
+        <a class="tag" href="{{- .Permalink -}}">{{- .Title -}}</a>
+        {{- end -}}
+        {{- end -}}
+        {{- end -}}
+        {{- with .Params.tags -}}
+        <span class="posts-list-item-separator">|</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "tag") -}}
+        {{- range . -}}
+        {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
+        <a class="tag" href="{{- .Permalink -}}">{{- .Title -}}</a>
+        {{- end -}}
+        {{- end -}}
+        {{- end -}}
+      </span>
+    </li>
+    {{- end -}}
+  </ul>
+  {{- partial "pagination.html" . -}}
+  {{- end -}}
+  {{- if .Content -}}
+  {{- .Content | safeHTML -}}
+  {{- end -}}
+</article>
+{{- end -}}

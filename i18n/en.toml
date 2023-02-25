@@ -176,6 +176,9 @@ other = "Danger"
 [bug]
 other = "Bug"
 
+[edit]
+other = "Edit"
+
 [example]
 other = "Example"
 

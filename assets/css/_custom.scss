@@ -1,83 +1,440 @@
-@import "_mixin/_link";
+@import "utilities";
 
-#header-desktop .header-wrapper {
-  padding: 0 2rem;
+// ========== Global ========== //
+$global-font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif;
+$global-font-size: 16px;
+$global-font-weight: 400;
+$global-line-height: 1.5rem;
+
+// Color of the background
+$global-background-color: theme-get("text", 100);
+$global-background-color-dark: theme-get("background", 600);
+
+// Color of the text
+$global-font-color: theme-get("background", 800);
+$global-font-color-dark: theme-get("text", 200);
+
+// Color of the secondary text
+$global-font-secondary-color: theme-get("background", 700);
+$global-font-secondary-color-dark: theme-get("text", 300);
+
+// Color of the link
+$global-link-color: theme-get("highlight", 900);
+$global-link-color-dark: theme-get("highlight", 50);
+
+// Color of the hover link
+$global-link-hover-color: theme-get("primary", 900);
+$global-link-hover-color-dark: theme-get("primary", 500);
+
+// Color of the border
+$global-border-color: theme-get("background", 900);
+$global-border-color-dark: theme-get("text", 50);
+
+// ========== Global ========== //
+// ========== Single Content ========== //
+// Font size of the TOC
+$toc-title-font-size: 1.2rem;
+$toc-content-font-size: 1rem;
+
+// Color of the single link
+$single-link-color: darken(theme-get("primary", 500), 30%);
+$single-link-color-dark: theme-get("primary", 500);
+
+// Color of the hover single link
+$single-link-hover-color: darken(theme-get("complement", 500), 30%);
+$single-link-hover-color-dark: theme-get("complement", 500);
+
+// Color of the table background
+$table-background-color: #fff;
+$table-background-color-dark: #272c34;
+
+// Color of the table thead
+$table-thead-color: #ededed;
+$table-thead-color-dark: #20252b;
+
+// Color of the blockquote
+$blockquote-color: #6bd6fd;
+$blockquote-color-dark: #59c5ec;
+
+// ========== Single Content ========== //
+// ========== Code ========== //
+// Color of the code
+$code-color: darken(#e74c3c, 5%);
+$code-color-dark: #e5bf78;
+
+// Color of the code background
+$code-background-color: #f5f5f5;
+$code-background-color-dark: #1e1e1e;
+$code-info-color: #9c9c9c;
+$code-info-color-dark: #b1b0b0;
+
+// Font size of the code
+$code-font-size: .875rem;
+
+// Font family of the code
+$code-font-family: fira mono, source code pro, menlo, consolas, monaco, monospace, $global-font-family;
+$code-highlight-color-comment: #a0a1a8;
+$code-highlight-color-map: (
+  /* Parentheses */
+  'p': #a9a9b3,
+  /* Keyword */
+  'k': #b501a9,
+  /* KeywordConstant */
+  'kc': #b501a9,
+  /* KeywordDeclaration */
+  'kd': #b501a9,
+  /* KeywordNamespace */
+  'kn': #b501a9,
+  /* KeywordPseudo */
+  'kp': #b501a9,
+  /* KeywordReserved */
+  'kr': #b501a9,
+  /* KeywordType */
+  'kt': #b501a9,
+  /* Name */
+  'n': #333,
+  /* NameAttribute */
+  'na': #2b77fa,
+  /* NameBuiltin */
+  'nb': #f74840,
+  /* NameBuiltinPseudo */
+  'bp': #f74840,
+  /* NameClass */
+  'nc': #cb8100,
+  /* NameConstant */
+  'no': #2b77fa,
+  /* NameDecorator */
+  'nd': #0086c1,
+  /* NameEntity */
+  'ni': #2b77fa,
+  /* NameException */
+  'ne': #2b77fa,
+  /* NameFunction */
+  'nf': #2b77fa,
+  /* NameFunctionMagic */
+  'fm': #1ccad6,
+  /* NameLabel */
+  'nl': #2b77fa,
+  /* NameNamespace */
+  'nn': #2b77fa,
+  /* NameOther */
+  'nx': #333,
+  /* NameProperty */
+  'py': #2b77fa,
+  /* NameTag */
+  'nt': #2b77fa,
+  /* NameVariable */
+  'nv': #2b77fa,
+  /* NameVariableClass */
+  'vc': #2b77fa,
+  /* NameVariableGlobal */
+  'vg': #2b77fa,
+  /* NameVariableInstance */
+  'vi': #2b77fa,
+  /* NameVariableMagic */
+  'vm': #2b77fa,
+  /* Literal */
+  'l': #2aa198,
+  /* LiteralDate */
+  'ld': #2aa198,
+  /* LiteralString */
+  's': #24a443,
+  /* LiteralStringAffix */
+  'sa': #24a443,
+  /* LiteralStringBacktick */
+  'sb': #24a443,
+  /* LiteralStringChar */
+  'sc': #24a443,
+  /* LiteralStringDelimiter */
+  'dl': #24a443,
+  /* LiteralStringDoc */
+  'sd': #24a443,
+  /* LiteralStringDouble */
+  's2': #24a443,
+  /* LiteralStringEscape */
+  'se': #24a443,
+  /* LiteralStringHeredoc */
+  'sh': #24a443,
+  /* LiteralStringInterpol */
+  'si': #24a443,
+  /* LiteralStringOther */
+  'sx': #24a443,
+  /* LiteralStringRegex */
+  'sr': #24a443,
+  /* LiteralStringSingle */
+  's1': #24a443,
+  /* LiteralStringSymbol */
+  'ss': #24a443,
+  /* LiteralNumber */
+  'm': #e2893c,
+  /* LiteralNumberBin */
+  'mb': #e2893c,
+  /* LiteralNumberFloat */
+  'mf': #e2893c,
+  /* LiteralNumberHex */
+  'mh': #e2893c,
+  /* LiteralNumberInteger */
+  'mi': #e2893c,
+  /* LiteralNumberIntegerLong */
+  'il': #e2893c,
+  /* LiteralNumberOct */
+  'mo': #e2893c,
+  /* Operator */
+  'o': #f19b04,
+  /* OperatorWord */
+  'ow': #b501a9,
+  /* Comment */
+  'c': darken($code-highlight-color-comment, 20%),
+  /* CommentHashbang */
+  'ch': darken($code-highlight-color-comment, 20%),
+  /* CommentMultiline */
+  'cm': darken($code-highlight-color-comment, 20%),
+  /* CommentSingle */
+  'c1': darken($code-highlight-color-comment, 20%),
+  /* CommentSpecial */
+  'cs': darken($code-highlight-color-comment, 20%),
+  /* CommentPreproc */
+  'cp': darken($code-highlight-color-comment, 20%),
+  /* CommentPreprocFile */
+  'cpf': darken($code-highlight-color-comment, 20%),
+  /* Generic */
+  'g': #e72d40,
+  /* GenericDeleted */
+  'gd': #e72d40,
+  /* GenericEmph */
+  'ge': #e72d40,
+  /* GenericError */
+  'gr': #e72d40,
+  /* GenericHeading */
+  'gh': #e72d40,
+  /* GenericInserted */
+  'gi': #e72d40,
+  /* GenericOutput */
+  'go': #e72d40,
+  /* GenericPrompt */
+  'gp': #e72d40,
+  /* GenericStrong */
+  'gs': #e72d40,
+  /* GenericSubheading */
+  'gu': #e72d40,
+  /* GenericTraceback */
+  'gt': #e72d40,
+  /* TextWhitespace */
+  'w': #bbb,
+);
+$code-highlight-color-map-dark: (
+  /* Parentheses */
+  'p': #d4d4d4,
+  /* Keyword */
+  'k': #569cd6,
+  /* KeywordConstant */
+  'kc': #569cd6,
+  /* KeywordDeclaration */
+  'kd': #569cd6,
+  /* KeywordReserved */
+  'kr': #569cd6,
+  /* KeywordNamespace */
+  'kn': #4ec9b0,
+  /* KeywordPseudo */
+  'kp': #569cd6,
+  /* KeywordType */
+  'kt': #4ec9b0,
+  /* Operator */
+  'o': #d4d4d4,
+  /* OperatorWord */
+  'ow': #d371e3,
+  /* NameConstant */
+  'no': #4fc1ff,
+  /* NameFunction */
+  'nf': #dcdcaa,
+  /* NameOther */
+  'nx': #dcdcaa,
+  /* NameClass */
+  'nc': #4ec9b0,
+  /* NameBuiltin */
+  'nb': #9cdcfe,
+  /* LiteralString */
+  's': #ce9178,
+  /* LiteralStringAffix */
+  'sa': #ce9178,
+  /* LiteralStringBacktick */
+  'sb': #ce9178,
+  /* LiteralStringChar */
+  'sc': #ce9178,
+  /* LiteralStringDelimiter */
+  'dl': #ce9178,
+  /* LiteralStringDoc */
+  'sd': #ce9178,
+  /* LiteralStringDouble */
+  's2': #ce9178,
+  /* LiteralStringEscape */
+  'se': #ce9178,
+  /* LiteralStringHeredoc */
+  'sh': #ce9178,
+  /* LiteralStringInterpol */
+  'si': #ce9178,
+  /* LiteralStringOther */
+  'sx': #ce9178,
+  /* LiteralStringRegex */
+  'sr': #ce9178,
+  /* LiteralStringSingle */
+  's1': #ce9178,
+  /* LiteralStringSymbol */
+  'ss': #ce9178,
+  /* Literal */
+  'l': #b5cea8,
+  /* LiteralDate */
+  'ld': #b5cea8,
+  /* LiteralNumber */
+  'm': #b5cea8,
+  /* LiteralNumberBin */
+  'mb': #b5cea8,
+  /* LiteralNumberFloat */
+  'mf': #b5cea8,
+  /* LiteralNumberHex */
+  'mh': #b5cea8,
+  /* LiteralNumberInteger */
+  'mi': #b5cea8,
+  /* LiteralNumberIntegerLong */
+  'il': #b5cea8,
+  /* LiteralNumberOct */
+  'mo': #b5cea8,
+  /* Comment */
+  'c': #608b4e,
+  /* CommentHashbang */
+  'ch': #608b4e,
+  /* CommentMultiline */
+  'cm': #608b4e,
+  /* CommentSingle */
+  'c1': #608b4e,
+  /* CommentSpecial */
+  'cs': #608b4e,
+  /* CommentPreproc */
+  'cp': #608b4e,
+  /* CommentPreprocFile */
+  'cpf': #608b4e,
+
+  /* NameBuiltinPseudo */
+  'bp': #4ec9b0,
+  /* Name */
+  'n': #9cdcfe,
+  /* NameAttribute */
+  'na': #4ec9b0,
+  /* NameDecorator */
+  'nd': #d9e577,
+  /* NameEntity */
+  'ni': #9cdcfe,
+  /* NameException */
+  'ne': #9cdcfe,
+  /* NameFunctionMagic */
+  'fm': #9cdcfe,
+  /* NameLabel */
+  'nl': #9cdcfe,
+  /* NameNamespace */
+  'nn': #9cdcfe,
+  /* NameProperty */
+  'py': #4ec9b0,
+  /* NameTag */
+  'nt': #9cdcfe,
+  /* NameVariable */
+  'nv': #9cdcfe,
+  /* NameVariableClass */
+  'vc': #9cdcfe,
+  /* NameVariableGlobal */
+  'vg': #9cdcfe,
+  /* NameVariableInstance */
+  'vi': #9cdcfe,
+  /* NameVariableMagic */
+  'vm': #9cdcfe,
+
+  /* Generic */
+  'g': #f16372,
+  /* GenericDeleted */
+  'gd': #f16372,
+  /* GenericEmph */
+  'ge': #f16372,
+  /* GenericError */
+  'gr': #f16372,
+  /* GenericHeading */
+  'gh': #f16372,
+  /* GenericInserted */
+  'gi': #f16372,
+  /* GenericOutput */
+  'go': #f16372,
+  /* GenericPrompt */
+  'gp': #f16372,
+  /* GenericStrong */
+  'gs': #f16372,
+  /* GenericSubheading */
+  'gu': #f16372,
+  /* GenericTraceback */
+  'gt': #f16372,
+  /* TextWhitespace */
+  'w': #d4d4d4,
+);
+
+// ========== Code ========== //
+$max-length: 12000px; // TODO remove this hack
+
+@import "compatibility";
+@import "link";
+@import "code";
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Regular.woff2") format("woff2"), url("woff/FiraCode-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.single {
-  .post-meta {
-    @include link(false, false);
-    margin: .5rem 0 1rem;
+@font-face {
+  font-family: "Fira Code";
+  src: url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Bold.woff2") format("woff2"), url("woff/FiraCode-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code VF";
+  src: url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-VF.woff2") format("woff2-variations"), url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff/FiraCode-VF.woff") format("woff-variations");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.highlight .chroma {
+  .lntable {
+    max-width: 100%;
+    table-layout: fixed;
+    width: 100%;
   }
 
-  .post-footer {
-    .post-info {
-      .post-info-line {
-        flex-direction: column;
-      }
+  .lntd:first-child {
+    padding-right: 1em;
+    width: 1.6rem;
+
+    .chroma {
+      width: 1.6rem;
     }
   }
-}
 
-.home[posts] {
-  .summary {
-    border-bottom-style: dotted; // test without !important
-
-    .content {
-      @include link(true, true);
-    }
-
-    .post-footer .post-tags {
-      @include link(false, false);
-      max-width: 100%;
-    }
+  .lntd:last-child pre {
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: scroll;
   }
 }
 
-#content-404 {
-  transform: none;
-  -webkit-transform: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  font-size: 1.2rem;
-  min-height: 70vh;
-}
+//// Small devices (portrait tablets and large phones)
+// @media only screen and (min-width: 600px) {}
 
-footer {
-  min-height: 2rem;
-  height: fit-content;
-  padding: 0.25rem;
-  width: auto;
-}
+//// Medium devices (landscape tablets)
+// @media only screen and (min-width: 768px) {}
 
-/* Small devices (portrait tablets and large phones) */
-@media only screen and (min-width: 600px) {
-  #content-404 {
-    font-size: 1.8rem;
-  }
+//// Large devices (big tablets and portable screens)
+// @media only screen and (min-width: 992px) {}
 
-  footer {
-    padding: 0.25rem;
-    width: auto;
-  }
-}
-
-/* Medium devices (landscape tablets) */
-@media only screen and (min-width: 768px) {
-  .single {
-    .post-footer {
-      .post-info {
-        .post-info-line {
-          flex-direction: row;
-        }
-      }
-    }
-  }
-}
-
-/* Large devices (big tablets and portable screens) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (desktops) */
-@media only screen and (min-width: 1200px) {}
+//// Extra large devices (desktops)
+// @media only screen and (min-width: 1200px) {}

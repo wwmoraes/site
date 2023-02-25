@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{- .Site.LanguageCode | default "en-us" -}}">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {{- if .IsHome -}}
+      {{- .Site.Title -}}
+      {{- else -}}
+      {{- printf "%s %s %s" .Title .Site.Params.title_separator .Site.Title -}}
+      {{- end -}}
+    </title>
+    <link rel="shortcut icon" href="{{- .Site.Params.favicon | default "/favicon.ico" -}}" />
+    {{- hugo.Generator -}}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{- .Site.Params.author | default "John Doe" -}}" />
+    <meta name="description"
+      content="{{- if .IsHome -}}{{- .Site.Params.description -}}{{- else -}}{{- .Description -}}{{- end -}}" />
+    {{/* TODO move CSP hosts logic to a go-template dict */}}
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; child-src https://giscus.app; script-src https://giscus.app {{ with .Site.Params.goatcounter }}{{ if .code }}{{ .src }}{{ end }}{{ end }}; img-src 'self' {{ with .Site.Params.goatcounter }}{{ if .code }}https://{{ .code }}.{{ .host }}{{ end }}{{ end }}; font-src https://cdn.jsdelivr.net" />
+    <link rel="canonical" href="{{- .Permalink -}}" />
+    {{- $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{- $style.RelPermalink -}}" />
+
+    {{- template "_internal/twitter_cards.html" . -}}
+    {{- template "_internal/opengraph.html" . -}}
+  </head>
+
+  <body>
+    <input type="checkbox" id="app-header" class="toggle" />
+    <label for="app-header" class="toggle"><span /></label>
+    <header class="app-header">
+      <span>
+        <a href="{{- .Site.BaseURL -}}">
+          <img class="app-header-avatar" src="{{- .Site.Params.avatar | default "avatar.jpg" | relURL -}}"
+            alt="{{- .Site.Params.author | default "John Doe" -}}" />
+        </a>
+        <span class="app-header-title">{{- .Site.Title -}}</span>
+        <p>
+          {{- .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." -}}
+        </p>
+      </span>
+      <span>
+        {{- with site.Menus.main -}}
+        <nav class="app-header-menu">
+          {{- range $key, $item := . -}}
+          {{- if ne $key 0 -}}
+          {{- $.Site.Params.menu_item_separator | default " - " | safeHTML -}}
+          {{- end -}}
+          <a class="app-header-menu-item" href="{{- $item.URL -}}">{{- $item.Name -}}</a>
+          {{- end -}}
+        </nav>
+        {{- end -}}
+        {{- with site.Menus.sub -}}
+        <nav class="app-header-menu">
+          {{- range $key, $item := . -}}
+          {{- if ne $key 0 -}}
+          {{- $.Site.Params.menu_item_separator | default " - " | safeHTML -}}
+          {{- end -}}
+          <a class="app-header-menu-item" href="{{- $item.URL -}}">{{- $item.Name -}}</a>
+          {{- end -}}
+        </nav>
+        {{- end -}}
+      </span>
+      {{- with .Site.Params.social -}}
+      <div class="app-header-social">
+        {{- range . -}}
+        <a href="{{- .url -}}" target="_blank" rel="noreferrer noopener me">
+          {{- partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) -}}
+        </a>
+        {{- end -}}
+      </div>
+      {{- end -}}
+    </header>
+    <main class="app-container">
+      {{- block "main" . -}}
+      {{- .Content -}}
+      {{- end -}}
+    </main>
+    {{- partialCached "goatcounter" . .Site.Params.goatcounter -}}
+  </body>
+
+</html>

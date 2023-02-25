@@ -1,0 +1,107 @@
+.post-title {
+  color: $lightest-color;
+  margin: 0 0 .25em;
+}
+
+.post-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 .5em;
+}
+
+.post-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2em;
+
+  >.icon,
+  >svg {
+    margin-right: .4em;
+    vertical-align: middle;
+  }
+}
+
+.post-content {
+  >pre,
+  .highlight {
+    margin: 1em 0;
+  }
+
+  >pre,
+  .highlight>pre,
+  .highlight>div {
+    border-left: .4em solid rgba($primary-color, .8);
+    padding: 0;
+  }
+
+  blockquote {
+    background: $darkest-color;
+    border-left: .4em solid rgba($primary-color, .8);
+    margin: 1em 0;
+    padding: .5em 1em;
+
+    p {
+      margin: .5em 0;
+    }
+  }
+
+  // wrap that allows images to keep their original size on smaller screens
+  >.img {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  // force scale images directly in the post body to prevent breaking the layout
+  >img,
+  >svg {
+    max-width: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &:target {
+    animation: hh 1s ease;
+  }
+}
+
+.post {
+  .giscus {
+    padding-top: 1rem;
+  }
+}
+
+.post-footer {
+  clear: both;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 940px) {
+  .post-footer {
+    nav {
+      flex-direction: row;
+    }
+  }
+}
+
+@keyframes hh {
+  from {
+    background: $primary-color;
+  }
+
+  to {
+    background: unset;
+  }
+}

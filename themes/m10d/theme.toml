@@ -1,0 +1,15 @@
+name = "m10d"
+license = "MIT"
+licenselink = "https://github.com/wwmoraes/hugo-theme-m10d/blob/master/LICENSE.md"
+description = "A minimalistic theme based on vaga's m10c"
+homepage = "https://github.com/wwmoraes/hugo-theme-m10d"
+tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
+features = [
+  "minimalistic blog",
+  "social icons",
+  "editable colors"
+]
+
+[author]
+  name = "William Artero"
+  homepage = "https://artero.dev"

@@ -1,0 +1,15 @@
+.tag {
+  background-color: $darkest-color;
+  border-radius: .2em;
+  display: inline-block;
+  font-size: .9em;
+  margin-right: .2em;
+  padding: 0 .6em;
+  transition: color .35s, background .35s;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba($darkest-color, .3);
+    transition: color .25s, background .05s;
+  }
+}

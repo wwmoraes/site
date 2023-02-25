@@ -29,19 +29,26 @@
     "userdata",
     "warnf"
   ],
+  "css.format.enable": false,
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/pages.yml"
   ],
-  "html.format.templating": true,
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "content/**/*.md"
+  ],
   "grammarly.selectors": [
     {
       "language": "markdown",
       "scheme": "file"
     }
   ],
-  "grammarly.files.include": [
-    "**/readme.md",
-    "**/README.md",
-    "content/**/*.md"
-  ]
+  "html.format.templating": true,
+  "less.format.enable": false,
+  "scss.format.enable": false,
+  "search.exclude": {
+    "**/public": true,
+    "**/tmp": true
+  }
 }

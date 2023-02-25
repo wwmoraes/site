@@ -1,0 +1,17 @@
+extends: stylelint-config-standard-scss
+ignoreFiles:
+- "tmp/**"
+- "**/*.css"
+rules:
+  color-function-notation: legacy
+  selector-no-vendor-prefix:
+  - true
+  - ignoreSelectors:
+    - "/-moz-.*/"
+    - "/-ms-.*/"
+    - "/-webkit-.*/"
+  property-no-vendor-prefix:
+  - true
+  - ignoreSelectors:
+    - "/-moz-.*/"
+  "scss/no-global-function-names": false

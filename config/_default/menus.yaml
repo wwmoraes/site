@@ -1,18 +1,18 @@
-main: []
-# - name: Posts
-#   pageRef: posts
+# main:
+# - name: Projects
+#   pageRef: projects
 #   weight: 10
-# - name: Categories
-#   pageRef: categories
-#   weight: 20
-# - name: Tags
-#   pageRef: tags
-#   weight: 30
+# - name: About
+#   pageRef: about
+#   weight: 90
 
-footer: []
-# - name: Categories
-#   pageRef: categories
-#   weight: 20
-# - name: Tags
-#   pageRef: tags
-#   weight: 30
+sub:
+- name: Posts
+  pageRef: posts
+  weight: 10
+- name: Categories
+  pageRef: categories
+  weight: 20
+- name: Tags
+  pageRef: tags
+  weight: 30

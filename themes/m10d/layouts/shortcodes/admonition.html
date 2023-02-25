@@ -1,0 +1,35 @@
+{{- $inner := .Inner | .Page.RenderString -}}
+
+{{- $iconMap := dict "note" "edit-2" -}}
+{{- $iconMap  = dict "abstract" "list" | merge $iconMap -}}
+{{- $iconMap  = dict "info" "info" | merge $iconMap -}}
+{{- $iconMap  = dict "tip" "zap" | merge $iconMap -}}
+{{- $iconMap  = dict "success" "check-circle" | merge $iconMap -}}
+{{- $iconMap  = dict "question" "help-circle" | merge $iconMap -}}
+{{- $iconMap  = dict "warning" "alert-triangle" | merge $iconMap -}}
+{{- $iconMap  = dict "failure" "x-circle" | merge $iconMap -}}
+{{- $iconMap  = dict "danger" "alert-octagon" | merge $iconMap -}}
+{{- $iconMap  = dict "bug" "meh" | merge $iconMap -}}
+{{- $iconMap  = dict "example" "file-text" | merge $iconMap -}}
+{{- $iconMap  = dict "quote" "message-circle" | merge $iconMap -}}
+{{- $iconMap  = dict "edit" "edit" | merge $iconMap -}}
+
+{{- $type := "" -}}
+{{- $title := "" -}}
+{{- if .IsNamedParams -}}
+{{- $type = .Get "type" | default "note" -}}
+{{- $title = .Get "title" | default (T $type) -}}
+{{- else -}}
+{{- $type = .Get 0 | default "note" -}}
+{{- $title = .Get 1 | default (T $type) -}}
+{{- end -}}
+
+<div class="admonition {{ $type }}">
+  <div class="title">
+    {{- partial "icon.html" (dict "ctx" $ "name" (index $iconMap $type | default (index $iconMap "note"))) }}
+    {{ $title -}}
+  </div>
+  <div class="content">
+    {{- $inner -}}
+  </div>
+</div>

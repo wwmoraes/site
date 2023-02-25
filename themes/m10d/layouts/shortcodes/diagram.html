@@ -1,0 +1,19 @@
+{{- $src := "" -}}
+
+{{- if .IsNamedParams -}}
+{{- $src = .Get "src" | default "" -}}
+{{- else -}}
+{{- $src = .Get 0 | default "" -}}
+{{- end -}}
+
+{{- with (.Page.Resources.Get $src) -}}
+{{- if and (eq .MediaType.MainType "image") (eq .MediaType.SubType "svg") -}}
+<div class="img">
+  {{- .Content | safeHTML -}}
+</div>
+{{- else -}}
+{{- errorf "diagram '%s' is not an SVG file" $src -}}
+{{- end -}}
+{{- else -}}
+{{- errorf "SVG '%s' not found" $src -}}
+{{- end -}}

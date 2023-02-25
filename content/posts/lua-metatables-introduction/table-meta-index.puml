@@ -1,0 +1,35 @@
+@startuml table-meta-index
+skinparam BackgroundColor transparent
+|#SteelBlue|c| code
+split
+-[hidden]->
+start
+:waldo.key<
+split again
+|#RoyalBlue|t| table
+-[hidden]->
+(A)
+end split
+if (is key set?) then (yes)
+  :value/
+else (no)
+  if (is metatable set?) then (no)
+    :nil/
+  else (yes)
+    |#LightSkyBlue|m| metatable
+    if (is __index set?) then (no)
+      :nil/
+    else (yes)
+      if (type(__index)) then (table)
+      (A)
+      else (function)
+        :__index(tbl,key)/
+      endif
+    endif
+  endif
+endif
+|t|
+:return>
+|c|
+stop
+@enduml

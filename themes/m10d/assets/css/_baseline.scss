@@ -1,0 +1,78 @@
+html {
+  line-height: 1.6;
+}
+
+body {
+  background: $dark-color;
+  color: $light-color;
+  font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $lightest-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color .35s;
+
+  &:hover {
+    color: $lightest-color;
+  }
+}
+
+// Browsers seem to use a smaller default font-size with monospaced code
+// blocks (like 80% of the size of normal text) and that looks pretty bad with
+// small inline code-blocks in the middle of normal text (mainly because of
+// the very noticeable difference in x-height). This CSS corrects that problem.
+code {
+  color: rgba($light-color, 80%);
+  font-family: $code-font-family;
+  font-size: 1em;
+
+  // Fixes iOS font sizing anomaly
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+pre {
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0;
+  overflow: auto;
+
+  // A larger monospaced block of text (that isn't mixed with normal text)
+  // generally looks heavier than normal text with the same font size. For this
+  // reason using a smaller monospaced font size makes sense in this situation.
+  code {
+    font-size: .8em;
+  }
+}
+
+table {
+  display: block;
+  max-width: 100vw;
+  overflow-x: auto;
+}
+
+::selection {
+  background: rgba($light-color, .25);
+}
+
+::-moz-selection {
+  background: rgba($light-color, .25);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

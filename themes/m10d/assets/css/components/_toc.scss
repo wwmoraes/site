@@ -1,0 +1,52 @@
+.toc {
+  display: block;
+  background-color: $darkest-color;
+  margin-top: 1em;
+  padding: 1em;
+
+  >header {
+    >* {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // stylelint-disable-next-line selector-id-pattern
+  nav#TableOfContents {
+    ul {
+      list-style-type: '§ ';
+      margin-block: 0;
+      padding-block: 0;
+
+      li::marker {
+        color: $light-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  /* clear floats on non-textual elements to avoid styling issues such as
+   * out-of-place borders
+   */
+  & ~ div {
+    clear: both;
+  }
+}
+
+//// Small devices (portrait tablets and large phones)
+@media only screen and (min-width: 600px) {
+  .toc {
+    float: right;
+    clear: both;
+    margin: 0 0 1em 1em;
+  }
+}
+
+//// Medium devices (landscape tablets)
+// @media only screen and (min-width: 768px) {}
+
+//// Large devices (big tablets and portable screens)
+// @media only screen and (min-width: 992px) {}
+
+//// Extra large devices (desktops)
+// @media only screen and (min-width: 1200px) {}

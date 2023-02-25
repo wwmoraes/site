@@ -1,11 +1,12 @@
 baseURL: https://artero.dev
 title: William Artero
-theme: LoveIt
+theme: m10d
 defaultContentLanguage: en
 enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
 removePathAccents: true
+paginate: 10
 
 frontmatter:
   date:

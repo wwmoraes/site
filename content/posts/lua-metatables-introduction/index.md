@@ -1,6 +1,6 @@
 ---
 title: Lua metatables introduction
-subtitle: what are they and how do they work?
+description: what are they and how do they work?
 date: 2022-01-02T14:21:06+01:00
 resources:
 - name: featured-image
@@ -43,20 +43,21 @@ common programming languages.
 
 ### Metatables
 
-Metatables are tables assigned as the meta for another table. We can describe
-them as analogue to super classes in other object-oriented languages. An even
-better analogy is that meta tables act as a proxy of the target table.
+Metatables are tables assigned as a sort of controller for another table. We
+can describe them as a class akin to how classes work in other object-oriented
+languages. Another analogy is that meta tables act as a proxy of the target
+table.
 
-You can easily assign a metatable to another table using the `setmetatable`:
+You can assign a metatable to another table using the `setmetatable`:
 
 {{< source "metatable.lua" >}}
 
 Neat! Both `setmetatable` and `getmetatable` are standard library functions to
-CRUD tables' metatables. You can use both tables in the previous example
-as usual, given the metatable has no metamethods. A metatable without
-metamethods is an ordinary table. It does not change the behavior of other
-tables in any way. Thus metatables need at least one metamethod to do something
-useful.
+either apply or remove a metatable from another table, respectively. You can
+use both tables in the previous example as usual, given the metatable has no
+metamethods. A metatable without metamethods is an ordinary table. It does not
+change the behavior of other tables in any way. Thus metatables need at least
+one metamethod to do something useful.
 
 ### Metamethods
 
@@ -72,7 +73,7 @@ is to return `nil` if a requested key is not set:
 
 The runtime flow is:
 
-{{< source table-index.mmd >}}
+{{< diagram "table-index.svg" >}}
 
 When an index is not found on the target table, it falls back to its metatable's
 `__index` metamethod. If present, Lua uses it to return a value instead of
@@ -82,7 +83,7 @@ When an index is not found on the target table, it falls back to its metatable's
 
 What Lua tries to do in this case is:
 
-{{< source table-meta-index.mmd >}}
+{{< diagram "table-meta-index.svg" >}}
 
 The flow above is by no means authoritative, as I left out a few more nuances to
 this logic to keep it simple.[^metaindex] It does cover the most common use
@@ -151,6 +152,10 @@ There's [dozens of supported metamethods][docs-meta].
 Yet the indexing ones are more than enough to show the power of this mechanism.
 They are the main drive that makes Lua excellent to extend and prototype fast.
 This alone explains why the gaming industry has a wide use for Lua.
+
+{{< admonition edit >}}
+Updated diagrams, as I don't use Mermaid anymore. In fact, I used it only in this blog while using PlantUML and Mingrammer's diagrams everywhere else. Now they're all consistent.
+{{< /admonition >}}
 
 [spoons]: https://github.com/wwmoraes/spoons
 [docs-meta]: https://www.lua.org/manual/5.4/manual.html#2.4

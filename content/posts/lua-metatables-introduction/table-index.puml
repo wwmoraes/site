@@ -1,0 +1,19 @@
+@startuml table-index
+skinparam BackgroundColor transparent
+|#SteelBlue|c| code
+start
+:waldo.key<
+|#RoyalBlue|t| table
+if (is key set?) then (yes)
+  :value/
+else (no)
+  if (is metatable set?) then (no)
+    :nil/
+  else (yes)
+    :magic|
+  endif
+endif
+:return>
+|c|
+stop
+@enduml

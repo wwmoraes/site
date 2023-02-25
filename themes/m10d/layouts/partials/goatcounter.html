@@ -1,0 +1,14 @@
+{{ $qs := slice "p" ((urls.Parse .Permalink).Path) "t" (.Title | urlquery) }}
+{{- with site.Params.goatcounter -}}
+{{- if .code -}}
+{{- $host := .host | default "goatcounter.com" -}}
+{{- $src := .src | default "//gc.zgo.at/count.js" -}}
+{{- $integrity := .integrity | default "" -}}
+<script data-goatcounter="https://{{- .code -}}.{{- $host -}}/count" src="{{- $src -}}" crossorigin="anonymous"
+  {{ with $integrity -}}integrity="{{- . -}}" {{- end }} async>
+  </script>
+<noscript>
+  <img class="counter" src="https://{{- .code -}}.{{- $host -}}/count?{{- (querify $qs) | safeURL -}}" />
+</noscript>
+{{- end -}}
+{{- end -}}

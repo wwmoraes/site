@@ -3,6 +3,7 @@
     {
       "args": [
         "server",
+        "--cleanDestinationDir",
         "-p",
         "8888"
       ],

@@ -1,0 +1,66 @@
+{{ define "main" }}
+<article class="post" itemscope>
+  {{- template "_internal/schema.html" . -}}
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <h2 class="post-subtitle">{{ .Description }}</h2>
+    {{- if ne .Type "page" }}
+    <div class="post-meta">
+      {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
+      {{- .PublishDate.Format "Jan 2, 2006" -}}
+      <span class="posts-list-item-separator">|</span>
+      {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
+      {{- printf "%d min read" .ReadingTime -}}
+      {{- with .Params.categories -}}
+      <span class="posts-list-item-separator">|</span>
+      {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}
+      {{- range . -}}
+      {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
+      <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- end -}}
+      {{- end -}}
+      {{- end -}}
+      {{- with .Params.tags -}}
+      <span class="posts-list-item-separator">|</span>
+      {{- partial "icon.html" (dict "ctx" $ "name" "tag") -}}
+      {{- range . -}}
+      {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
+      <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- end -}}
+      {{- end -}}
+      {{- end -}}
+    </div>
+    {{- end }}
+  </header>
+  <div class="post-content">
+    {{- partial "toc" . -}}
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    <nav>
+      {{- with .PrevInSection -}}
+      <a href="{{ .RelPermalink }}" class="prev" rel="prev" title="{{ .Title }}">
+        {{- partial "icon.html" (dict "ctx" $ "name" "chevron-left") }}
+        {{ .Title | emojify }}
+      </a>
+      {{- end -}}
+      {{- with .NextInSection -}}
+      <a href="{{ .RelPermalink }}" class="next" rel="next" title="{{ .Title }}">
+        {{ .Title | emojify }}
+        {{- partial "icon.html" (dict "ctx" $ "name" "chevron-right") }}
+      </a>
+      {{- end -}}
+    </nav>
+    {{- with .Site.Params.giscus -}}
+    <script src="https://giscus.app/client.js" data-repo="{{- .repo -}}" data-repo-id="{{- .repo_id -}}"
+      data-category="{{- .category -}}" data-category-id="{{- .category_id -}}" data-mapping="{{- .mapping -}}"
+      data-strict="{{- .strict -}}" data-reactions-enabled="{{- .reactions_enabled -}}"
+      data-emit-metadata="{{- .emit_metadata -}}" data-input-position="{{- .position -}}" data-theme="{{- .theme -}}"
+      data-lang="{{- .lang -}}" data-loading="{{- .loading -}}" crossorigin="anonymous" async>
+      </script>
+    <noscript>Please enable JavaScript to view and make comments.</noscript>
+    {{- end -}}
+  </footer>
+</article>
+{{ end }}

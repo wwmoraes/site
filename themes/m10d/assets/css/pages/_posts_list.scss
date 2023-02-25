@@ -1,0 +1,61 @@
+.posts-list {
+  padding: 0;
+}
+
+.posts-list-item {
+  list-style: none;
+  padding: .4em 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px dashed rgba($lightest-color, .3);
+  }
+
+  .posts-list-item-title {
+    display: block;
+    margin-bottom: .5em;
+  }
+
+  .posts-list-item-subtitle {
+    display: block;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .5em;
+  }
+}
+
+.posts-list-item-description {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .8em;
+  gap: .2em;
+
+  >.icon {
+    margin-right: .4em;
+  }
+}
+
+.posts-list-item-separator {
+  flex-basis: 100%;
+  height: 0;
+  margin: 0 .4em;
+  visibility: hidden;
+}
+
+//// Small devices (portrait tablets and large phones)
+@media only screen and (min-width: 600px) {
+  .posts-list-item-separator {
+    flex-basis: unset;
+    height: unset;
+    visibility: visible;
+  }
+}
+
+//// Medium devices (landscape tablets)
+// @media only screen and (min-width: 768px) {}
+
+//// Large devices (big tablets and portable screens)
+// @media only screen and (min-width: 992px) {}
+
+//// Extra large devices (desktops)
+// @media only screen and (min-width: 1200px) {}

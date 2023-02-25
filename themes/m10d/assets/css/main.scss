@@ -1,0 +1,30 @@
+@layer reset,
+framework,
+components,
+custom;
+
+// import variables early on
+@import "variables";
+@import "defaults";
+
+@layer reset {
+  @import "reset";
+  @import "normalize";
+}
+
+@layer framework {
+  @import "baseline";
+}
+
+@layer components {
+  @import "pages";
+  @import "components";
+}
+
+// The "theme" and "custom" layers use empty imports so theme users can
+// set preferences or extend it. Both imports can be overridden by creating
+// a file <HUGO_PROJECT>/assets/css/_<name>.scss
+
+@layer custom {
+  @import "custom";
+}
