@@ -40,3 +40,6 @@ metrics:
 		-v ${PWD}/tmp/goatcounter/db:/goatcounter/db \
 		-p 8080:8080 \
 		baethon/goatcounter
+
+index:
+	@op run --env-file=.markscribe.env -- markscribe -write content/_index.md content/_index.md.tmpl
