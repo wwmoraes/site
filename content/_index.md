@@ -5,7 +5,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## What am I working on 👨‍💻
 
-- [wwmoraes/site](https://github.com/wwmoraes/site) - my personal website (5 days ago)
+- [wwmoraes/site](https://github.com/wwmoraes/site) - my personal website (6 days ago)
 - [wwmoraes/dotfiles](https://github.com/wwmoraes/dotfiles) - Cross-platform dotfiles with batteries (1 month ago)
 - [wwmoraes/homebrew-tap](https://github.com/wwmoraes/homebrew-tap) - formulae and casks for Homebrew (3 months ago)
 - [wwmoraes/siever](https://github.com/wwmoraes/siever) - RFC5804-compliant ManageSieve client in pure Go (5 months ago)
@@ -50,7 +50,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## Gists I wrote 📓
 
-- [](https://gist.github.com/3288859d4b466f530706aa556347de9f) (2 months ago)
+- [](https://gist.github.com/3288859d4b466f530706aa556347de9f) (3 months ago)
 - [repository template](https://gist.github.com/75dc66767a9f487c8235c5423027f69c) (2 years ago)
 - [Interview](https://gist.github.com/b2ac3c3d92414f5d57d3a0b567c78065) (2 years ago)
 - [[root bluestacks] #bluestacks #android](https://gist.github.com/d5714685ebbe6fa5087f6bab489fa365) (2 years ago)
