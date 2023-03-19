@@ -7,12 +7,10 @@ resources:
   src: featured-image.png
 categories:
 - coding
-- smth
 tags:
 - lua
 - automation
 - gaming
-- smth
 ---
 
 If you ever used Lua, then you heard about its tables and the metatable feature.
