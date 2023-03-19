@@ -1,0 +1,15 @@
+{{- define "head" -}}
+{{- with .Page.Params.Target -}}
+<meta http-equiv="refresh" content="0; url={{ . }}" />
+{{- end -}}
+{{- end -}}
+{{ define "main" }}
+<article class="post" itemscope>
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

@@ -54,3 +54,4 @@ sitemap:
 
 permalinks:
   posts: "posts/:filename"
+  redirects: "/:filename"
