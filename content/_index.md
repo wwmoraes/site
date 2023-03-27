@@ -31,7 +31,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## Latest releases I have contributed to 🔭
 
-- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) ([v0.4.0](https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.4.0), 5 days ago) - Terraform Azure DevOps provider
+- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) ([v0.4.0](https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.4.0), 6 days ago) - Terraform Azure DevOps provider
 - [Azure/azure-cli](https://github.com/Azure/azure-cli) ([azure-cli-2.46.0](https://github.com/Azure/azure-cli/releases/tag/azure-cli-2.46.0), 2 weeks ago) - Azure Command-Line Interface
 - [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) ([v0.3.0](https://github.com/wwmoraes/kubegraph/releases/tag/v0.3.0), 2 years ago) - Kubernetes resource graph generator
 
