@@ -6,6 +6,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 ## What am I working on 👨‍💻
 
 - [wwmoraes/site](https://github.com/wwmoraes/site) - my personal website (1 week ago)
+- [wwmoraes/pvpgn-server-docker](https://github.com/wwmoraes/pvpgn-server-docker) - PvPGN-PRO server on Docker https://github.com/pvpgn/pvpgn-server (1 month ago)
 - [wwmoraes/dotfiles](https://github.com/wwmoraes/dotfiles) - Cross-platform dotfiles with batteries (2 months ago)
 - [wwmoraes/homebrew-tap](https://github.com/wwmoraes/homebrew-tap) - formulae and casks for Homebrew (3 months ago)
 - [wwmoraes/siever](https://github.com/wwmoraes/siever) - RFC5804-compliant ManageSieve client in pure Go (5 months ago)
@@ -14,7 +15,6 @@ description: I'm William, a software and platform engineer that automates-all-th
 - [wwmoraes/docker-engine-plugins](https://github.com/wwmoraes/docker-engine-plugins) - Docker Engine plugins (6 months ago)
 - [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) - Terraform Azure DevOps provider (7 months ago)
 - [wwmoraes/userscripts](https://github.com/wwmoraes/userscripts) - Userscripts and libraries to ease life (9 months ago)
-- [Azure/azure-cli](https://github.com/Azure/azure-cli) - Azure Command-Line Interface (1 year ago)
 
 ## My pet projects 🌱
 
