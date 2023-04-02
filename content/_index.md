@@ -5,7 +5,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## What am I working on 👨‍💻
 
-- [wwmoraes/site](https://github.com/wwmoraes/site) - my personal website (1 week ago)
+- [wwmoraes/site](https://github.com/wwmoraes/site) - my personal website (2 weeks ago)
 - [wwmoraes/pvpgn-server-docker](https://github.com/wwmoraes/pvpgn-server-docker) - PvPGN-PRO server on Docker https://github.com/pvpgn/pvpgn-server (1 month ago)
 - [wwmoraes/dotfiles](https://github.com/wwmoraes/dotfiles) - Cross-platform dotfiles with batteries (2 months ago)
 - [wwmoraes/homebrew-tap](https://github.com/wwmoraes/homebrew-tap) - formulae and casks for Homebrew (3 months ago)
@@ -13,7 +13,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 - [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) - Kubernetes resource graph generator (5 months ago)
 - [wwmoraes/maker-snippets](https://github.com/wwmoraes/maker-snippets) - Maker repository with common GNU Make snippets (6 months ago)
 - [wwmoraes/docker-engine-plugins](https://github.com/wwmoraes/docker-engine-plugins) - Docker Engine plugins (6 months ago)
-- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) - Terraform Azure DevOps provider (7 months ago)
+- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) - Terraform Azure DevOps provider (8 months ago)
 - [wwmoraes/userscripts](https://github.com/wwmoraes/userscripts) - Userscripts and libraries to ease life (9 months ago)
 
 ## My pet projects 🌱
@@ -36,7 +36,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## My recent Pull Requests 🔨
 
-- [[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set](https://github.com/Azure/azure-cli/pull/26013) on [Azure/azure-cli](https://github.com/Azure/azure-cli) (1 day ago)
+- [[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set](https://github.com/Azure/azure-cli/pull/26013) on [Azure/azure-cli](https://github.com/Azure/azure-cli) (2 days ago)
 - [chore: added CII badge; replaced SonarCloud with Code Climate ones](https://github.com/wwmoraes/kubegraph/pull/205) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (5 months ago)
 - [ci: fix grype cache path due to runner context limitations](https://github.com/wwmoraes/kubegraph/pull/189) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
 - [ci: updated PR template](https://github.com/wwmoraes/kubegraph/pull/188) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
@@ -57,7 +57,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## Recent starred projects in GitHub ⭐
 
-- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (2 days ago)
+- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (3 days ago)
 - [tefkah/zotero-night](https://github.com/tefkah/zotero-night) - Night theme for Zotero UI and PDF (2 months ago)
 - [yattee/yattee](https://github.com/yattee/yattee) - Privacy oriented video player for iOS, tvOS and macOS (3 months ago)
 - [TeamPiped/Piped](https://github.com/TeamPiped/Piped) - An alternative privacy-friendly YouTube frontend which is efficient by design. (3 months ago)
