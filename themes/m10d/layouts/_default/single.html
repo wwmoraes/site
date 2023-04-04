@@ -52,15 +52,7 @@
       </a>
       {{- end -}}
     </nav>
-    {{- with .Site.Params.giscus -}}
-    <script src="https://giscus.app/client.js" data-repo="{{- .repo -}}" data-repo-id="{{- .repo_id -}}"
-      data-category="{{- .category -}}" data-category-id="{{- .category_id -}}" data-mapping="{{- .mapping -}}"
-      data-strict="{{- .strict -}}" data-reactions-enabled="{{- .reactions_enabled -}}"
-      data-emit-metadata="{{- .emit_metadata -}}" data-input-position="{{- .position -}}" data-theme="{{- .theme -}}"
-      data-lang="{{- .lang -}}" data-loading="{{- .loading -}}" crossorigin="anonymous" async>
-      </script>
-    <noscript>Please enable JavaScript to view and make comments.</noscript>
-    {{- end -}}
+    {{- partial "comments" . -}}
   </footer>
 </article>
 {{ end }}
