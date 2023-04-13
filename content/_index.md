@@ -57,7 +57,7 @@ description: I'm William, a software and platform engineer that automates-all-th
 
 ## Recent starred projects in GitHub ⭐
 
-- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (1 week ago)
+- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (2 weeks ago)
 - [tefkah/zotero-night](https://github.com/tefkah/zotero-night) - Night theme for Zotero UI and PDF (3 months ago)
 - [yattee/yattee](https://github.com/yattee/yattee) - Privacy oriented video player for iOS, tvOS and macOS (3 months ago)
 - [TeamPiped/Piped](https://github.com/TeamPiped/Piped) - An alternative privacy-friendly YouTube frontend which is efficient by design. (3 months ago)
