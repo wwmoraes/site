@@ -37,13 +37,13 @@ description: I'm William, a software and platform engineer that automates-all-th
 ## My recent Pull Requests 🔨
 
 - [fix: added initial giscus custom theme to match site bg color](https://github.com/wwmoraes/site/pull/2) on [wwmoraes/site](https://github.com/wwmoraes/site) (1 week ago)
-- [[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set](https://github.com/Azure/azure-cli/pull/26013) on [Azure/azure-cli](https://github.com/Azure/azure-cli) (1 week ago)
+- [[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set](https://github.com/Azure/azure-cli/pull/26013) on [Azure/azure-cli](https://github.com/Azure/azure-cli) (2 weeks ago)
 - [chore: added CII badge; replaced SonarCloud with Code Climate ones](https://github.com/wwmoraes/kubegraph/pull/205) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (6 months ago)
 - [ci: fix grype cache path due to runner context limitations](https://github.com/wwmoraes/kubegraph/pull/189) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
 - [ci: updated PR template](https://github.com/wwmoraes/kubegraph/pull/188) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
-- [WIP: refactor/adapters](https://github.com/wwmoraes/kubegraph/pull/180) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
-- [chore: updated build tags](https://github.com/wwmoraes/kubegraph/pull/179) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
-- [fix: icons target dependencies](https://github.com/wwmoraes/kubegraph/pull/178) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (7 months ago)
+- [WIP: refactor/adapters](https://github.com/wwmoraes/kubegraph/pull/180) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (8 months ago)
+- [chore: updated build tags](https://github.com/wwmoraes/kubegraph/pull/179) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (8 months ago)
+- [fix: icons target dependencies](https://github.com/wwmoraes/kubegraph/pull/178) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (8 months ago)
 - [added syft &#43; grype](https://github.com/wwmoraes/kubegraph/pull/177) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (8 months ago)
 - [ci: added grype settings and cache](https://github.com/wwmoraes/kubegraph/pull/169) on [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) (8 months ago)
 
@@ -65,5 +65,5 @@ description: I'm William, a software and platform engineer that automates-all-th
 - [ivaaaan/smug](https://github.com/ivaaaan/smug) - Session manager and task runner for tmux. Start your development environment within one command. (4 months ago)
 - [sol/hpack](https://github.com/sol/hpack) - hpack: A modern format for Haskell packages (4 months ago)
 - [compiler-explorer/compiler-explorer](https://github.com/compiler-explorer/compiler-explorer) - Run compilers interactively from your web browser and interact with the assembly (5 months ago)
-- [MechanicalDragon0687/ndsForwarder](https://github.com/MechanicalDragon0687/ndsForwarder) - Generate and Install NDS Forwarders (5 months ago)
-- [LumaTeam/Luma3DS](https://github.com/LumaTeam/Luma3DS) - Noob-proof (N)3DS &#34;Custom Firmware&#34; (5 months ago)
+- [MechanicalDragon0687/ndsForwarder](https://github.com/MechanicalDragon0687/ndsForwarder) - Generate and Install NDS Forwarders (6 months ago)
+- [LumaTeam/Luma3DS](https://github.com/LumaTeam/Luma3DS) - Noob-proof (N)3DS &#34;Custom Firmware&#34; (6 months ago)
