@@ -1,0 +1,37 @@
+{{- $index := dict -}}
+{{- $index = merge $index (dict "version" "https://jsonfeed.org/version/1") -}}
+{{- $index = merge $index (dict "title" .Site.Title) -}}
+{{- $index = merge $index (dict "home_page_url" .Site.BaseURL) -}}
+{{- with .OutputFormats.Get "feed" }}
+{{- $index = merge $index (dict "feed_url" .Permalink) -}}
+{{- end }}
+{{- $index = merge $index (dict "description" .Site.Params.description | default .Site.Title) -}}
+{{- $index = merge $index (dict "icon" (.Site.Params.favicon | default "/favicon.ico")) -}}
+{{- with .Site.LanguageCode -}}
+  {{- $index = merge $index (dict "language" .) -}}
+{{- end -}}
+{{- $items := dict -}}
+{{- range where .Site.RegularPages "Type" "posts" | first (.Site.Params.home.rss | default 10) -}}
+  {{- $item := dict -}}
+  {{- $item = merge $item (dict "id" (partial "function/tag-uri" .)) -}}
+  {{- $item = merge $item (dict "url" .Page.Permalink) -}}
+  {{- $item = merge $item (dict "title" .Page.Title) -}}
+  {{- $content := .Page.Description -}}
+  {{- if .Site.Params.rssFullText -}}
+    {{- $content = .Page.Content -}}
+  {{- else -}}
+    {{- with .Page.Summary -}}
+      {{- $content = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $item = merge $item (dict "content_html" $content) -}}
+  {{- $item = merge $item (dict "summary" .Page.Summary) -}}
+  {{- $item = merge $item (dict "date_published" .Page.PublishDate) -}}
+  {{- $item = merge $item (dict "date_modified" .Page.Lastmod) -}}
+  {{- with .Page.Params.tags -}}
+    {{- $item = merge $item (dict "tags" .) -}}
+  {{- end -}}
+  {{- $items = merge $items $item -}}
+{{- end -}}
+{{- $index = merge $index (dict "items" $items) -}}
+{{- $index | jsonify -}}

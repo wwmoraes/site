@@ -11,6 +11,9 @@
       {{- end -}}
     </title>
     <link rel="shortcut icon" href="{{- .Site.Params.favicon | default "/favicon.ico" -}}" />
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end -}}
     {{ hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="{{- .Site.Params.author | default "John Doe" -}}" />

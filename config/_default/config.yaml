@@ -23,22 +23,17 @@ outputs:
   home:
   - HTML
   - RSS
-  - JSON
+  - ATOM
+  - FEED
   page:
   - HTML
   section:
   - HTML
-  - RSS
-  taxonomy:
-  - HTML
-  ## congo
   term:
   - HTML
   - RSS
-  ## LoveIt
-  taxonomyTerm:
-  - HTML
-  - RSS
+  - ATOM
+  - FEED
 
 author:
   name: William Artero
