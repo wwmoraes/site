@@ -1,3 +1,4 @@
+{{- if not (eq .Params.toc false) -}}
 {{- with .TableOfContents -}}
 <aside class="toc">
   <header>
@@ -5,4 +6,5 @@
   </header>
   {{ . }}
 </aside>
+{{- end -}}
 {{- end -}}
