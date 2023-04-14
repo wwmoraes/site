@@ -1,5 +1,5 @@
 {{- with .Site.Params.giscus -}}
-{{- $.Scratch.Set "giscus_theme" (or .theme "custom") -}}
+{{- $.Scratch.Set "giscus_theme" (.theme | default "custom") -}}
 {{- if eq ($.Scratch.Get "giscus_theme") "custom" -}}
 {{- $customTheme := resources.Get "css/giscus.scss" | resources.ExecuteAsTemplate "css/giscus.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
 {{- $theme := $customTheme.RelPermalink -}}
