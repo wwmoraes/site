@@ -10,8 +10,8 @@
 {{- with .Site.LanguageCode -}}
   {{- $index = merge $index (dict "language" .) -}}
 {{- end -}}
-{{- $items := dict -}}
-{{- range where .Site.RegularPages "Type" "posts" | first (.Site.Params.home.rss | default 10) -}}
+{{- $items := slice -}}
+{{- range where .Site.RegularPages "Type" "in" site.Params.mainSections | first (.Site.Params.home.rss | default 10) -}}
   {{- $item := dict -}}
   {{- $item = merge $item (dict "id" (partial "function/tag-uri" .)) -}}
   {{- $item = merge $item (dict "url" .Page.Permalink) -}}
@@ -31,7 +31,7 @@
   {{- with .Page.Params.tags -}}
     {{- $item = merge $item (dict "tags" .) -}}
   {{- end -}}
-  {{- $items = merge $items $item -}}
+  {{- $items = $items | append $item -}}
 {{- end -}}
 {{- $index = merge $index (dict "items" $items) -}}
 {{- $index | jsonify -}}

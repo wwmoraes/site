@@ -3,6 +3,9 @@ author: William Artero
 avatar: /images/avatar.jpg
 favicon: /icons/favicon.ico
 
+mainSections:
+- posts
+
 menu_item_separator: " | "
 social:
 - icon: github
