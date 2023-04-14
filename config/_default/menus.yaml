@@ -1,12 +1,4 @@
-# main:
-# - name: Projects
-#   pageRef: projects
-#   weight: 10
-# - name: About
-#   pageRef: about
-#   weight: 90
-
-sub:
+main:
 - name: Posts
   pageRef: posts
   weight: 10
@@ -16,3 +8,11 @@ sub:
 - name: Tags
   pageRef: tags
   weight: 30
+
+sub:
+- name: Now
+  pageRef: now
+  weight: 10
+- name: About
+  pageRef: about
+  weight: 90
