@@ -1,6 +1,8 @@
 ---
 title: Hi there 👋
 description: I'm William, a software and platform engineer that automates-all-the-things
+images:
+- /images/featured.png
 ---
 
 ## What am I working on 👨‍💻
