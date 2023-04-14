@@ -1,5 +1,6 @@
 {{- define "head" -}}
 {{- with .Page.Params.Target -}}
+<meta name="robots" content="noindex" />
 <meta http-equiv="refresh" content="0; url={{ . }}" />
 {{- end -}}
 {{- end -}}
