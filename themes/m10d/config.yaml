@@ -4,6 +4,7 @@ module:
     min: 0.55.0
 
 params:
+  rssFullText: true
   title_separator: //
   goatcounter:
     host: goatcounter.com
