@@ -50,8 +50,8 @@
       {{- end }}
       <guid isPermaLink="false">{{ partial "function/tag-uri" . }}</guid>
       <description>
-        {{- printf "<![CDATA[" | safeHTML -}}
-        {{- $content := .Page.Description -}}
+        {{ printf "<![CDATA[" | safeHTML }}
+        {{ $content := .Page.Description -}}
         {{- if .Site.Params.rssFullText -}}
           {{- $content = .Page.Content -}}
         {{- else -}}
@@ -59,8 +59,8 @@
             {{- $content = . -}}
           {{- end -}}
         {{- end -}}
-        {{- $content -}}
-        {{- printf "]]>" | safeHTML -}}
+        {{- $content }}
+        {{ printf "]]>" | safeHTML }}
       </description>
     </item>
     {{- end }}
