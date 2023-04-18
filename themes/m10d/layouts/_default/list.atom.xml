@@ -34,7 +34,6 @@
     </summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        {{- printf "<![CDATA[" | safeHTML -}}
         {{- $content := .Page.Description -}}
         {{- if .Site.Params.rssFullText -}}
           {{- $content = .Page.Content -}}
@@ -44,7 +43,6 @@
           {{- end -}}
         {{- end -}}
         {{- $content -}}
-        {{- printf "]]>" | safeHTML -}}
       </div>
     </content>
     <author>
