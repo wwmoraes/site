@@ -50,3 +50,10 @@ sitemap:
 permalinks:
   posts: "posts/:filename"
   redirects: "/:filename"
+
+module:
+  mounts:
+  - source: content
+    target: content
+    excludeFiles:
+    - '*.tmpl'
