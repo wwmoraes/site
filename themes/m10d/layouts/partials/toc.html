@@ -1,4 +1,4 @@
-{{- if not (eq .Params.toc false) -}}
+{{- if not (eq (.Param "table-of-contents") false) -}}
 {{- with .TableOfContents -}}
 <aside class="toc">
   <header>

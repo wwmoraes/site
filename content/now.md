@@ -2,7 +2,7 @@
 title: Now
 images:
 - /images/featured.png
-toc: false
+table-of-contents: false
 ---
 
 ## Career

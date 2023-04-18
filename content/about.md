@@ -2,7 +2,7 @@
 title: About
 resources:
 - featured.png
-toc: false
+table-of-contents: false
 ---
 
 ## Hello there 👋
