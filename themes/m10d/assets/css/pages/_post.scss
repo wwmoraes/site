@@ -58,16 +58,25 @@
   >svg {
     max-width: 100%;
   }
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &:target {
-    animation: hh 1s ease;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &::before {
+      content: "§ ";
+      color: $primary-color;
+      text-decoration: none;
+      transition: color .35s;
+    }
+
+    &:hover {
+      &::before {
+        color: $lightest-color;
+      }
+    }
   }
 }
 

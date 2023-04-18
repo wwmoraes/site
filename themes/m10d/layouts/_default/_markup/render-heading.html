@@ -1,3 +1,5 @@
-<h{{- .Level }} id="{{- .Anchor -}}">
-  <a href="#{{- .Anchor -}}">§</a> {{ .Text -}}
-</h{{- .Level -}}>
+<a href="#{{- .Anchor -}}">
+  <h{{- .Level }} id="{{- .Anchor -}}">
+    {{- .Text -}}
+  </h{{- .Level -}}>
+</a>
