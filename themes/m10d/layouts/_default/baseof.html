@@ -20,6 +20,7 @@
     <meta name="description"
       content="{{- if .IsHome -}}{{- .Site.Params.description -}}{{- else -}}{{- .Description -}}{{- end -}}" />
     {{ partial "content-security-policy" $ }}
+    {{ partial "head/seo" . }}
     <link rel="canonical" href="{{- .Permalink -}}" />
     {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{- $style.RelPermalink -}}" />

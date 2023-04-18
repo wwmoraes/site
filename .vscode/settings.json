@@ -10,6 +10,7 @@
     "alertmanager",
     "bookalike",
     "changefreq",
+    "emojify",
     "errorf",
     "gocolly",
     "goldmark",
