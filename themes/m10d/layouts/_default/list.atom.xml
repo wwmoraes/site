@@ -42,7 +42,7 @@
             {{- $content = . -}}
           {{- end -}}
         {{- end -}}
-        {{- $content -}}
+        {{- $content | safeHTML -}}
       </div>
     </content>
     <author>
