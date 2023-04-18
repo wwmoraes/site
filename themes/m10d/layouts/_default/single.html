@@ -38,6 +38,7 @@
   </div>
 
   <footer class="post-footer">
+    {{- if in site.Params.mainSections .Type -}}
     <nav>
       {{- with .PrevInSection -}}
       <a href="{{ .RelPermalink }}" class="prev" rel="prev" title="{{ .Title }}">
@@ -52,6 +53,7 @@
       </a>
       {{- end -}}
     </nav>
+    {{- end -}}
     {{- partial "comments" . -}}
   </footer>
 </article>
