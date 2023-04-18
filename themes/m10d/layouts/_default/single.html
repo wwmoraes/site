@@ -3,7 +3,9 @@
   {{- template "_internal/schema.html" . -}}
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
-    <h2 class="post-subtitle">{{ .Description }}</h2>
+    {{ with .Description -}}
+    <h2 class="post-subtitle">{{- . -}}</h2>
+    {{- end }}
     {{- if ne .Type "page" }}
     <div class="post-meta">
       {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
