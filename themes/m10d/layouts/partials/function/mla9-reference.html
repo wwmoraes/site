@@ -1,0 +1,21 @@
+{{- $authorNames := slice -}}
+{{- range .author -}}
+{{/*  {{- $name := replaceRE "^([^,]+), ([A-Z]).*$" "$2. $1" .name -}} */}}
+{{- $name := replaceRE "^([A-Za-z]).*?([^ ]*)$" "$1. $2" .name -}}
+{{- $authorNames = $authorNames | append $name -}}
+{{- end -}}
+
+{{- $author := slice -}}
+{{- with first (sub (len $authorNames) 1) $authorNames -}}
+{{- $author = $author | append (delimit . ", ") -}}
+{{- end -}}
+{{- $author = $author | append (last 1 $authorNames) -}}
+{{- $author = delimit $author " and " -}}
+
+{{- $title := .name -}}
+{{- $city := .locationCreated.address.addressRegion | default "Unknown city" -}}
+{{- $country := .locationCreated.address.addressCountry | default "Unknown country" -}}
+{{- $publisher := .publisher.name | default "Unknown publisher" -}}
+{{- $year := (time (.datePublished | default "1970-01-01T00:00:00Z")).Year -}}
+
+{{- return (printf "%s. <span class=\"title\">%s</span>. %s, %04d." $author $title $publisher $year | safeHTML) -}}

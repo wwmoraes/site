@@ -1,0 +1,8 @@
+{{- $shelf := (.Get 0) -}}
+{{ with (index $.Site.Data.goodreads $shelf) }}
+<ul class="goodreads {{ $shelf }}">
+  {{ range . }}
+  <li>{{ partial "function/mla9-reference" . }}</li>
+  {{ end }}
+</ul>
+{{ end }}

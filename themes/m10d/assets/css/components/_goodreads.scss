@@ -1,0 +1,25 @@
+.goodreads {
+  list-style-type: '📘 ';
+
+  .title {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  > li:not(:first-child) {
+  margin-top: 1em;
+    line-height: 2em;
+  }
+
+  &.currently-reading {
+    list-style-type: '📖 ';
+  }
+
+  &.to-read {
+    list-style-type: '📙 ';
+  }
+
+  &.read {
+    list-style-type: '📚 ';
+  }
+}

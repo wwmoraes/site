@@ -43,3 +43,8 @@ metrics:
 
 index:
 	@op run --env-file=.markscribe.env -- markscribe -write content/_index.md content/_index.md.tmpl
+
+books:
+	go run ./... update goodreads --list 138333248-william --shelf currently-reading
+	go run ./... update goodreads --list 138333248-william --shelf read
+	go run ./... update goodreads --list 138333248-william --shelf to-read
