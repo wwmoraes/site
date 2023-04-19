@@ -28,6 +28,7 @@ params:
     - https://archive.org
     - https://*.archive.org
     font:
+    - "'self'"
     - https://cdn.jsdelivr.net
 
 mediaTypes:
