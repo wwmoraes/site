@@ -1,5 +1,7 @@
 DIAGRAMS_SOURCES = $(shell find content -type f -iname "*.puml")
 DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
+GOODREADS_LIST = 138333248-william
+GOODREADS_SHELVES = currently-reading read to-read
 
 start:
 	@exec hugo server -p 8888
@@ -44,7 +46,9 @@ metrics:
 index:
 	@op run --env-file=.markscribe.env -- markscribe -write content/_index.md content/_index.md.tmpl
 
-books:
-	go run ./... update goodreads --list 138333248-william --shelf currently-reading
-	go run ./... update goodreads --list 138333248-william --shelf read
-	go run ./... update goodreads --list 138333248-william --shelf to-read
+books: $(addprefix data/goodreads/,${GOODREADS_SHELVES})
+
+.PRECIOUS: data/goodreads/%
+.PHONY: data/goodreads/%
+data/goodreads/%:
+	@echo go run ./... update goodreads --list ${GOODREADS_LIST} --shelf $*
