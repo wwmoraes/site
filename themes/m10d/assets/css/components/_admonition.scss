@@ -20,6 +20,7 @@ $admonition-fallback-color: #6f8cb2 !default;
   margin: 1rem 0;
   background-color: #{$admonition-fallback-color}1a;
   border-left: .25rem solid #{$admonition-fallback-color};
+  width: 100%;
 
   .title {
     padding: .25rem .75rem;
