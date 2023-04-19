@@ -103,7 +103,7 @@ label.toggle {
     top: .25em;
   }
 
-  @media (min-width: 940px) {
+  @media (min-width: 992px) {
     .#{$id} {
       left: 0;
       min-height: 100vh;
