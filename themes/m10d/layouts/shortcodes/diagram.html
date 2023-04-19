@@ -12,8 +12,10 @@
   {{- .Content | safeHTML -}}
 </div>
 {{- else -}}
-{{- errorf "diagram '%s' is not an SVG file" $src -}}
+<div class="img">
+  <img src="{{ . }}" />
+</div>
 {{- end -}}
 {{- else -}}
-{{- errorf "SVG '%s' not found" $src -}}
+{{- errorf "diagram file '%s' not found" $src -}}
 {{- end -}}

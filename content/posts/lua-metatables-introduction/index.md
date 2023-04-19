@@ -71,7 +71,7 @@ is to return `nil` if a requested key is not set:
 
 The runtime flow is:
 
-{{< diagram "table-index.svg" >}}
+{{< diagram "table-index.png" >}}
 
 When an index is not found on the target table, it falls back to its metatable's
 `__index` metamethod. If present, Lua uses it to return a value instead of
@@ -81,7 +81,7 @@ When an index is not found on the target table, it falls back to its metatable's
 
 What Lua tries to do in this case is:
 
-{{< diagram "table-meta-index.svg" >}}
+{{< diagram "table-meta-index.png" >}}
 
 The flow above is by no means authoritative, as I left out a few more nuances to
 this logic to keep it simple.[^metaindex] It does cover the most common use
@@ -153,6 +153,10 @@ This alone explains why the gaming industry has a wide use for Lua.
 
 {{< admonition edit >}}
 Updated diagrams, as I don't use Mermaid anymore. In fact, I used it only in this blog while using PlantUML and Mingrammer's diagrams everywhere else. Now they're all consistent.
+{{< /admonition >}}
+
+{{< admonition edit >}}
+Changed diagrams again, this time switching them to png instead of SVG. Size-wise they're small and fare better when embedded in feeds like RSS and ATOM.
 {{< /admonition >}}
 
 [spoons]: https://github.com/wwmoraes/spoons

@@ -1,3 +1,6 @@
+DIAGRAMS_SOURCES = $(shell find content -type f -iname "*.puml")
+DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
+
 start:
 	@exec hugo server -p 8888
 
@@ -20,14 +23,8 @@ check:
 clean:
 	${RM} -r public
 
-DIAGRAMS_SOURCES = $(shell find content -type f -iname "*.puml")
-DIAGRAMS_TARGETS = $(patsubst %.puml,%.svg,${DIAGRAMS_SOURCES})
-
 diagrams: ${DIAGRAMS_TARGETS}
 
-.PRECIOUS: %.svg
-%.svg: %.puml
-	plantuml -tsvg -darkmode -theme reddress-darkblue $<
 
 metrics:
 	@mkdir -p tmp/goatcounter/db
@@ -40,6 +37,9 @@ metrics:
 		-v ${PWD}/tmp/goatcounter/db:/goatcounter/db \
 		-p 8080:8080 \
 		baethon/goatcounter
+.PRECIOUS: %.png
+%.png: %.puml
+	plantuml -tpng -darkmode -theme reddress-darkblue $<
 
 index:
 	@op run --env-file=.markscribe.env -- markscribe -write content/_index.md content/_index.md.tmpl
