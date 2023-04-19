@@ -29,13 +29,6 @@
       }
     }
   }
-
-  /* clear floats on non-textual elements to avoid styling issues such as
-   * out-of-place borders
-   */
-  & ~ div {
-    clear: both;
-  }
 }
 
 //// Small devices (portrait tablets and large phones)
