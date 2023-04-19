@@ -1,3 +1,10 @@
+{{- if not hugo.IsProduction -}}
+
+User-agent: *
+Disallow: /
+
+{{- else -}}
+
 User-agent: *
 
 Disallow: /icons/
@@ -62,3 +69,4 @@ User-agent: ZoominfoBot
 Disallow: /
 
 Sitemap: {{ "/sitemap.xml" | absLangURL }}
+{{- end -}}
