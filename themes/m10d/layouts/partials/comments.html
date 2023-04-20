@@ -2,8 +2,8 @@
 {{- $.Scratch.Set "giscus_theme" (.theme | default "custom") -}}
 {{- if eq ($.Scratch.Get "giscus_theme") "custom" -}}
 {{- $customTheme := resources.Get "css/giscus.scss" | resources.ExecuteAsTemplate "css/giscus.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
-{{- $theme := $customTheme.RelPermalink -}}
-{{- $.Scratch.Set "giscus_theme" $customTheme.RelPermalink -}}
+{{- $theme := $customTheme.Permalink -}}
+{{- $.Scratch.Set "giscus_theme" $customTheme.Permalink -}}
 {{- end -}}
 <script src="https://giscus.app/client.js" data-repo="{{- .repo -}}" data-repo-id="{{- .repo_id -}}"
   data-category="{{- .category -}}" data-category-id="{{- .category_id -}}" data-mapping="{{- .mapping -}}"
