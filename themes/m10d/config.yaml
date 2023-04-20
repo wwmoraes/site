@@ -13,23 +13,31 @@ params:
   csp:
     enabled: true
     default:
-    - "'self'"
+    - "'none'"
     base:
     - "'self'"
+    connect:
+    - "'self'"
+    font:
+    - "'self'"
+    - https://cdn.jsdelivr.net
+    form:
+    - "'self'"
+    ancestors:
+    - "'none'"
     frame:
     - https://giscus.app
-    script:
-    - https://giscus.app
-    - https://gc.zgo.at/count.v3.js
     img:
     - "'self'"
     - https://i.gr-assets.com
     - https://covers.openlibrary.org
     - https://archive.org
     - https://*.archive.org
-    font:
+    script:
+    - https://giscus.app
+    - https://gc.zgo.at/count.v3.js
+    style:
     - "'self'"
-    - https://cdn.jsdelivr.net
 
 mediaTypes:
   application/rss+xml:

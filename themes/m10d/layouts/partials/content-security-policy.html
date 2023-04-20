@@ -9,10 +9,14 @@
 {{- $policies := slice -}}
 {{- $policies = $policies | append (delimit (slice "default-src" | append .default) " ") -}}
 {{- $policies = $policies | append (delimit (slice "base-uri" | append .base) " ") -}}
-{{- $policies = $policies | append (delimit (slice "frame-src" | append .frame) " ") -}}
-{{- $policies = $policies | append (delimit (slice "script-src" | append .script) " ") -}}
-{{- $policies = $policies | append (delimit (slice "img-src" | append $img) " ") -}}
+{{- $policies = $policies | append (delimit (slice "connect-src" | append .connect) " ") -}}
 {{- $policies = $policies | append (delimit (slice "font-src" | append .font) " ") -}}
+{{- $policies = $policies | append (delimit (slice "form-action" | append .form) " ") -}}
+{{- $policies = $policies | append (delimit (slice "frame-ancestors" | append .ancestors) " ") -}}
+{{- $policies = $policies | append (delimit (slice "frame-src" | append .frame) " ") -}}
+{{- $policies = $policies | append (delimit (slice "img-src" | append $img) " ") -}}
+{{- $policies = $policies | append (delimit (slice "script-src" | append .script) " ") -}}
+{{- $policies = $policies | append (delimit (slice "style-src" | append .style) " ") -}}
 {{- $policies = delimit $policies "; " -}}
 <meta http-equiv="Content-Security-Policy" content="{{- $policies | safeHTMLAttr -}}" />
 {{- end }}
