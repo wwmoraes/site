@@ -1,0 +1,11 @@
+/*.rss.xml
+  Content-Type: application/rss+xml
+  X-Robots-Tag: nosnippet
+
+/*.atom.xml
+  Content-Type: application/atom+xml
+  X-Robots-Tag: nosnippet
+
+/*.feed.json
+  Content-Type: application/feed+json
+  X-Robots-Tag: nosnippet

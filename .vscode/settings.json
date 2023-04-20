@@ -60,5 +60,8 @@
   "search.exclude": {
     "**/public": true,
     "**/tmp": true
+  },
+  "files.associations": {
+    "**/_headers": "plaintext"
   }
 }
