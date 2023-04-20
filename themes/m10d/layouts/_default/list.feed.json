@@ -6,7 +6,7 @@
 {{- $index = merge $index (dict "feed_url" .Permalink) -}}
 {{- end }}
 {{- $index = merge $index (dict "description" .Site.Params.description | default .Site.Title) -}}
-{{- $index = merge $index (dict "icon" (.Site.Params.favicon | default "/favicon.ico")) -}}
+{{- $index = merge $index (dict "icon" (.Site.Params.feed.icon | default "/favicon.ico")) -}}
 {{- with .Site.LanguageCode -}}
   {{- $index = merge $index (dict "language" .) -}}
 {{- end -}}

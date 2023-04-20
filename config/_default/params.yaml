@@ -31,6 +31,12 @@ giscus:
 goatcounter:
   code: artero
 
+feed:
+  # should be a 1:1 ratio file for small presentation
+  icon: /icons/android-chrome-512x512.png
+  # should be a 2:1 ratio file
+  logo: /icons/android-chrome-512x512.png
+
 ## powerline
 # since: 2021
 # licenses:

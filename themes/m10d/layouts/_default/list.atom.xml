@@ -14,6 +14,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{- $.Site.Title -}}</title>
   <subtitle>{{- .Site.Params.description | default .Site.Title -}}</subtitle>
+  {{ with .Site.Params.feed.icon -}}
+  <icon>{{- $.Site.BaseURL -}}{{- . -}}</icon>
+  {{- end }}
+  {{ with .Site.Params.feed.logo -}}
+  <logo>{{- $.Site.BaseURL -}}{{- . -}}</logo>
+  {{- end }}
   {{ with .OutputFormats.Get "atom" -}}
   <link href="{{- .Permalink -}}" rel="self" />
   {{- end }}

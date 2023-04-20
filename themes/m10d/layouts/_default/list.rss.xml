@@ -13,11 +13,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>{{- .Site.Title -}}</title>
-    <link>{{ .Permalink }}</link>
+    <description>{{- .Site.Params.description | default .Site.Title -}}</description>
+    {{- $permalink := .Permalink }}
+    {{ with .Site.Params.feed.logo -}}
+    <image>
+      <url>{{- $.Site.BaseURL -}}{{- . -}}</url>
+      <title>{{- $.Site.Title -}}</title>
+      <link>{{- $permalink -}}</link>
+    </image>
+    {{- end }}
+    <link>{{- $permalink -}}</link>
     {{ with .OutputFormats.Get "rss" -}}
     <atom:link href="{{- .Permalink -}}" rel="self" type="application/rss+xml" />
     {{- end }}
-    <description>{{- .Site.Params.description | default .Site.Title -}}</description>
     <generator>Hugo -- gohugo.io</generator>
     {{ with .Site.LanguageCode -}}
     <language>{{- . -}}</language>
