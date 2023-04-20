@@ -20,7 +20,7 @@ giscus:
   repo_id: R_kgDOGhhRmQ
   category: Comments
   category_id: DIC_kwDOGhhRmc4CUcmu
-  mapping: pathname
+  mapping: title
   strict: 0
   reactions_enabled: 1
   emit_metadata: 0
