@@ -34,7 +34,7 @@ toc: false
 
 ## Latest releases I have contributed to 🔭
 
-- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) ([v0.4.0](https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.4.0), 4 weeks ago) - Terraform Azure DevOps provider
+- [microsoft/terraform-provider-azuredevops](https://github.com/microsoft/terraform-provider-azuredevops) ([v0.4.0](https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.4.0), 1 month ago) - Terraform Azure DevOps provider
 - [wwmoraes/kubegraph](https://github.com/wwmoraes/kubegraph) ([v0.3.0](https://github.com/wwmoraes/kubegraph/releases/tag/v0.3.0), 2 years ago) - Kubernetes resource graph generator
 
 ## My recent Pull Requests 🔨
@@ -60,8 +60,8 @@ toc: false
 
 ## Recent starred projects in GitHub ⭐
 
-- [gocolly/colly](https://github.com/gocolly/colly) - Elegant Scraper and Crawler Framework for Golang (4 days ago)
-- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (2 weeks ago)
+- [gocolly/colly](https://github.com/gocolly/colly) - Elegant Scraper and Crawler Framework for Golang (5 days ago)
+- [haskell/stylish-haskell](https://github.com/haskell/stylish-haskell) - Haskell code prettifier (3 weeks ago)
 - [tefkah/zotero-night](https://github.com/tefkah/zotero-night) - Night theme for Zotero UI and PDF (3 months ago)
 - [yattee/yattee](https://github.com/yattee/yattee) - Privacy oriented video player for iOS, tvOS and macOS (4 months ago)
 - [TeamPiped/Piped](https://github.com/TeamPiped/Piped) - An alternative privacy-friendly YouTube frontend which is efficient by design. (4 months ago)
