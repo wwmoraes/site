@@ -10,23 +10,19 @@
       {{- printf "%s %s %s" .Title .Site.Params.title_separator .Site.Title -}}
       {{- end -}}
     </title>
-    <link rel="shortcut icon" href="{{- .Site.Params.favicon | default "/favicon.ico" -}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ partial "head/seo" . }}
+    {{ partial "head/icons" . }}
+    {{ partial "content-security-policy" $ }}
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
-    {{ hugo.Generator }}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="{{- .Site.Params.author | default "John Doe" -}}" />
-    <meta name="description"
-      content="{{- if .IsHome -}}{{- .Site.Params.description -}}{{- else -}}{{- .Description -}}{{- end -}}" />
-    {{ partial "content-security-policy" $ }}
-    {{ partial "head/seo" . }}
-    <link rel="canonical" href="{{- .Permalink -}}" />
-    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{- $style.RelPermalink -}}" />
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
+    {{ hugo.Generator }}
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{- $style.RelPermalink -}}" />
     {{ block "head" . -}}{{- end }}
   </head>
 

@@ -1,6 +1,6 @@
 {
-  "background_color": "#343542",
-  "description": "Projects and thoughts from a NoOps engineer automating a way out of tasks since 2010",
+  "background_color": "#3d5a80",
+  "description": "automating a way out of tasks since 2010",
   "display": "standalone",
   "icons": [
     {
@@ -20,7 +20,7 @@
       "type": "image/png"
     }
   ],
-  "id": "dev.artero.site",
+  "id": "site.artero.dev",
   "lang": "en",
   "name": "William Artero",
   "scope": "/",

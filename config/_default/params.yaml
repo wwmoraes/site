@@ -1,7 +1,6 @@
 description: automating a way out of tasks since 2010
 author: William Artero
 avatar: /images/avatar.jpg
-favicon: /favicon.ico
 
 mainSections:
 - posts
@@ -57,7 +56,7 @@ feed:
 #   title: Artero
 #   noFavicon: false
 #   manifest: /manifest.json
-#   svgFavicon: /icons/logo.svg
+#   svgFavicon: /images/logo.svg
 #   # Android browser theme color
 #   themeColor: "#2CBDFF"
 #   # Safari mask icon color
