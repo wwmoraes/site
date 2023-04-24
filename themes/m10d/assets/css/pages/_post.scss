@@ -78,6 +78,28 @@
       }
     }
   }
+
+  table {
+    border-collapse: collapse;
+
+    thead {
+      background-color: lighten($darkest-color, 4);
+    }
+
+    tbody {
+      background-color: lighten($darkest-color, 8);
+    }
+
+    th, td {
+      border: 1px solid;
+      padding: 1ex;
+      border-color: darken($darkest-color, 12);
+    }
+
+    tr:nth-child(even) {
+      background-color: lighten($darkest-color, 12);
+    }
+  }
 }
 
 .post {
