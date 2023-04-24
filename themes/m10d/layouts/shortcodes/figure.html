@@ -1,0 +1,13 @@
+{{- $caption := "" -}}
+{{- if .IsNamedParams -}}
+{{- $caption = .Get "caption" | default "" -}}
+{{- else -}}
+{{- $caption = .Get 0 | default "" -}}
+{{- end -}}
+
+<figure>
+  {{- .Inner | markdownify -}}
+  {{- with $caption -}}
+  <figcaption>{{- $caption | markdownify -}}</figcaption>
+  {{- end -}}
+</figure>

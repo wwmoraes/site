@@ -67,6 +67,15 @@ table {
   overflow-x: auto;
 }
 
+figure {
+  display: inline-block;
+  margin: 0;
+
+  > table {
+    display: inline-block;
+  }
+}
+
 ::selection {
   background: rgba($light-color, .25);
 }
