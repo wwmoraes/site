@@ -54,10 +54,11 @@
         {{- $content | safeHTML -}}
       </div>
     </content>
-    <author>
-      <name>{{ $.Site.Author.name }}</name>
-      <email>{{ $.Site.Author.email }}</email>
-    </author>
   </entry>
   {{- end }}
+  <author>
+    <name>{{ $.Site.Author.name }}</name>
+    <email>{{ $.Site.Author.email }}</email>
+    <uri>{{- $.Site.BaseURL -}}</uri>
+  </author>
 </feed>
