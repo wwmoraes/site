@@ -1,2 +1,3 @@
+baseURL: https://staging.site-82a.pages.dev
 buildDrafts: true
 buildFuture: true
