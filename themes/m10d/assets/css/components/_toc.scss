@@ -3,6 +3,7 @@
   background-color: $darkest-color;
   margin-top: 1em;
   padding: 1em;
+  box-shadow: 0 0 1rem 0.2rem rgba($darkest-color, 80%);
 
   >header {
     >* {
