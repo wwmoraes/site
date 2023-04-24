@@ -7,6 +7,8 @@ enableEmoji: true
 enableRobotsTXT: true
 removePathAccents: true
 paginate: 10
+copyright: >-
+  Copyright %d William Artero. Some rights reserved.
 
 frontmatter:
   date:

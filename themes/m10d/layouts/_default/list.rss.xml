@@ -39,7 +39,7 @@
     </webMaster>
     {{- end }}
     {{ with .Site.Copyright -}}
-    <copyright>{{- . -}}</copyright>
+    <copyright>{{- printf . now.Year | safeHTML -}}</copyright>
     {{- end }}
     {{ if not .Date.IsZero -}}
     <lastBuildDate>

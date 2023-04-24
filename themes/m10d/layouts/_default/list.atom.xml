@@ -14,6 +14,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{- $.Site.Title -}}</title>
   <subtitle>{{- .Site.Params.description | default .Site.Title -}}</subtitle>
+  {{ with .Site.Copyright -}}
+  <rights>{{- printf . now.Year | safeHTML -}}</rights>
+  {{- end }}
   {{ with .Site.Params.feed.icon -}}
   <icon>{{- $.Site.BaseURL -}}{{- . -}}</icon>
   {{- end }}

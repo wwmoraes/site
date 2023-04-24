@@ -59,4 +59,13 @@
     {{- partial "comments" . -}}
   </footer>
 </article>
+<hr />
+<footer>
+  <p>
+    All opinions here are my own, based on my experiences. Take anything I say with a grain of salt.
+  </p>
+  {{- with .Site.Copyright -}}
+  <p class="copyright">{{- printf . now.Year | safeHTML -}}</p>
+  {{- end -}}
+</footer>
 {{ end }}
