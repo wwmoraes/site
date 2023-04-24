@@ -15,4 +15,4 @@ Check out what I'm up to right [now](/now). You can also follow my [RSS](/index.
 
 ## Hiring
 
-Do you have a project for me? [Hit me up](https://cal.com/artero) for a quick chat.
+Did you like my profile? Do you have a good challenge for me? Perhaps you want to get some insights into something? Feel free to [schedule a half-hour call](https://cal.com/artero) for us to chat.
