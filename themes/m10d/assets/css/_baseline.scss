@@ -76,6 +76,10 @@ figure {
   }
 }
 
+blockquote {
+  display: flex;
+}
+
 ::selection {
   background: rgba($light-color, .25);
 }
