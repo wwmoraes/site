@@ -9,25 +9,27 @@
     {{- if ne .Type "page" }}
     <div class="post-meta">
       {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
+      &nbsp;
       {{- .PublishDate.Format "Jan 2, 2006" -}}
-      <span class="posts-list-item-separator">|</span>
+      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
       {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
+      &nbsp;
       {{- printf "%d min read" .ReadingTime -}}
       {{- with .Params.categories -}}
-      <span class="posts-list-item-separator">|</span>
+      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
       {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}
       {{- range . -}}
       {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
-      <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{- end -}}
       {{- end -}}
       {{- end -}}
       {{- with .Params.tags -}}
-      <span class="posts-list-item-separator">|</span>
+      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
       {{- partial "icon.html" (dict "ctx" $ "name" "tag") -}}
       {{- range . -}}
       {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
-      <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{- end -}}
       {{- end -}}
       {{- end -}}
