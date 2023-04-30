@@ -1,6 +1,9 @@
 {{ define "main" }}
-<article>
+<article class="list">
   <h1>{{ .Title }}</h1>
+  {{ with .Description -}}
+  <blockquote>{{- . -}}</blockquote>
+  {{- end }}
   <ul class="posts-list">
     {{ range where .Paginator.Pages "Type" "!=" "page" }}
     <li class="posts-list-item">

@@ -5,6 +5,10 @@ date: 2022-01-02T14:21:06+01:00
 resources:
 - name: featured-image
   src: featured-image.png
+  title: Lua? Metatables?
+  params:
+    copyright: Image by William Artero
+    background: "#1e1e1e"
 categories:
 - coding
 tags:

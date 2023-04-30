@@ -1,3 +1,13 @@
+.app-container {
+  .list, .terms {
+    padding: 2rem;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 .posts-list {
   padding: 0;
 }

@@ -26,6 +26,8 @@
     "image": {
       "@type": "ImageObject",
       "url": "{{ .Permalink | safeHTMLAttr }}",
+      "caption": {{ .Title }},
+      {{ with .Params.copyright -}}"copyrightNotice": "{{- . -}}",{{- end }}
       "width": {{ .Width }},
       "height": {{ .Height }}
     },
@@ -78,6 +80,8 @@
           {
             "@type": "ImageObject",
             "url": "{{ .Permalink | safeHTMLAttr }}",
+            "caption": {{ .Title }},
+            {{ with .Params.copyright -}}"copyrightNotice": "{{- . -}}",{{- end }}
             "width": {{ .Width }},
             "height": {{ .Height }}
           }
@@ -115,6 +119,8 @@
       ,"logo": {
         "@type": "ImageObject",
         "url": "{{ .Permalink | safeHTMLAttr }}",
+        "caption": {{ .Title }},
+        {{ with .Params.copyright -}}"copyrightNotice": "{{- . -}}",{{- end }}
         "width": {{ .Width }},
         "height": {{ .Height }}
       }
@@ -156,6 +162,8 @@
             {
               "@type": "ImageObject",
               "url": "{{ .Permalink | safeHTMLAttr }}",
+              "caption": {{ .Title }},
+              {{ with .Params.copyright -}}"copyrightNotice": "{{- . -}}",{{- end }}
               "width": {{ .Width }},
               "height": {{ .Height }}
             }
@@ -192,6 +200,8 @@
         ,"logo": {
           "@type": "ImageObject",
           "url": "{{ .Permalink | safeHTMLAttr }}",
+          "caption": {{ .Title }},
+          {{ with .Params.copyright -}}"copyrightNotice": "{{- . -}}",{{- end }}
           "width": {{ .Width }},
           "height": {{ .Height }}
         }

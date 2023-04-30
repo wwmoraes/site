@@ -1,40 +1,55 @@
 {{ define "main" }}
-<article class="post" itemscope>
+<article class="single" itemscope>
   {{- template "_internal/schema.html" . -}}
   <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
-    {{ with .Description -}}
-    <h2 class="post-subtitle">{{- . -}}</h2>
+    {{ with .Resources.GetMatch "featured-image" -}}
+    {{- $title := .Title | default "" -}}
+    {{- $bgColor := .Params.background | default "transparent" -}}
+    {{- $source := .Params.source | default "" -}}
+    <figure class="featured-image" style="background-color: {{- $bgColor -}};">
+      <img src="{{- .Permalink -}}" title="{{- $title -}}" />
+      {{- with $source -}}
+      <figcaption>
+        <a href="{{- $source -}}">{{- $title -}}</a>
+      </figcaption>
+      {{- end }}
+    </figure>
     {{- end }}
-    {{- if ne .Type "page" }}
-    <div class="post-meta">
-      {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
-      &nbsp;
-      {{- .PublishDate.Format "Jan 2, 2006" -}}
-      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
-      {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
-      &nbsp;
-      {{- printf "%d min read" .ReadingTime -}}
-      {{- with .Params.categories -}}
-      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
-      {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}
-      {{- range . -}}
-      {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
-      &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{- end -}}
-      {{- end -}}
-      {{- end -}}
-      {{- with .Params.tags -}}
-      <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
-      {{- partial "icon.html" (dict "ctx" $ "name" "tag") -}}
-      {{- range . -}}
-      {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
-      &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{- end -}}
-      {{- end -}}
-      {{- end -}}
+    <div class="post-header-content">
+      <h1 class="post-title">{{ .Title }}</h1>
+      {{ with .Description -}}
+      <h2 class="post-subtitle">{{- . -}}</h2>
+      {{- end }}
+      {{- if ne .Type "page" }}
+      <div class="post-meta">
+        {{- partial "icon.html" (dict "ctx" $ "name" "calendar") -}}
+        &nbsp;
+        {{- .PublishDate.Format "Jan 2, 2006" -}}
+        <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
+        &nbsp;
+        {{- printf "%d min read" .ReadingTime -}}
+        {{- with .Params.categories -}}
+        <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}
+        {{- range . -}}
+        {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
+        &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end -}}
+        {{- end -}}
+        {{- end -}}
+        {{- with .Params.tags -}}
+        <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
+        {{- partial "icon.html" (dict "ctx" $ "name" "tag") -}}
+        {{- range . -}}
+        {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
+        &nbsp;<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end -}}
+        {{- end -}}
+        {{- end -}}
+      </div>
+      {{- end }}
     </div>
-    {{- end }}
   </header>
   <div class="post-content">
     {{- partial "toc" . -}}

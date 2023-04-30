@@ -38,6 +38,7 @@ params:
     - https://gc.zgo.at/count.v3.js
     style:
     - "'self'"
+    - "'unsafe-inline'"
 
 mediaTypes:
   application/rss+xml:

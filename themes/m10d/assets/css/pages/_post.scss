@@ -1,3 +1,28 @@
+.post-header {
+  .post-header-content {
+    padding: 2rem 2rem 0;
+  }
+}
+
+.featured-image {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  > img {
+    height: auto;
+    max-height: 600px;
+    max-width: 1200px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  figcaption {
+    padding: 0.5ex;
+  }
+}
+
 .post-title {
   color: $lightest-color;
   margin: 0 0 .25em;
@@ -23,6 +48,8 @@
 }
 
 .post-content {
+  padding: 0 2rem;
+
   >pre,
   .highlight {
     margin: 1em 0;
@@ -99,9 +126,18 @@
       background-color: lighten($darkest-color, 12);
     }
   }
+
 }
 
-.post {
+.single {
+  .content {
+    padding: 2rem;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+
   .giscus {
     padding-top: 1rem;
   }
@@ -109,6 +145,7 @@
 
 .post-footer {
   clear: both;
+  padding: 0 2rem;
 
   nav {
     display: flex;
