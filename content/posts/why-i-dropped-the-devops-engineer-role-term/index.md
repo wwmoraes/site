@@ -1,45 +1,66 @@
 ---
+title: Are you a DevOps engineer?
+description: how a way of working became a catch-all role
 date: 2023-02-04T20:31:45+01:00
 draft: true
 resources:
 - name: featured-image
-  src: featured-image.png
-title: Why I dropped the DevOps Engineer role term
+  src: devops.jpg
+  title: Image by storyset on Freepik
+  params:
+    copyright: Image by storyset on Freepik
+    background: "#fff"
+    source: https://www.freepik.com/free-vector/scrum-method-concept-illustration_28902402.htm
 categories:
 - Opinion
 tags:
 - Career
 - DevOps
-description: why filtering keywords matter to attract the desired jobs
 ---
 
-A search for the term DevOps on LinkedIn will yield hundreds of thousands of posts and hundreds of jobs. The market for so-called DevOps engineers is plentiful and has been for over a decade now. Why would someone want to dissociate themselves from it? Seems illogical, I know.
+A search for the term DevOps on LinkedIn will yield countless posts and hundreds of jobs. The market for DevOps engineers is plentiful and has been for at least a decade now. Everyone wants to join the hype and either call themselves DevOps engineers or add the DevOps keyword in their CVs for that extra oomph. Is that the right thing to do?
 
 <!--more-->
 
 ## Prologue
 
-I've removed most of the DevOps references from my profile and curriculum vitae since mid-2022. I used to describe myself as a DevOps engineer or looking forward to contributing to the business as one. The reason is simple: the market overloads and marginalizes the term. Recruiters and managers associate it with practices and solutions I don't agree with.
+I had DevOps references across my LinkedIn profile and curriculum vitae up until mid-2022. My description depicted me as a DevOps engineer looking to contribute to automation. Not anymore. The reason is simple: the market overloads and marginalizes the term. Recruiters and managers generally associate it with distorted practices and solutions I don't agree with.
 
-Let's touch on my understanding of what DevOps is, and what being a DevOps engineer means. Then I'll share my personal experience working as a DevOps engineer, and why I'm moving away from such a designation. This will help you understand where my opinion comes from, and form your own.
+## What is DevOps
 
-## DevOps
+I won't preach to you about the term. My understanding is that DevOps means a body of knowledge and best practices to close the gap between development and operations. It includes the reuse of tools and the art of automation to glue processes together. How to glue is up to the engineer and business, and this acts as a double-edged sword.
 
-### Definition
+This definition is intentionally vague. Bodies of knowledge and processes' best practices are so. This allows great flexibility when applying them. You can still reap great results granted you preserve the main tenets. If you know agile you'll also recognize the same concept from its manifesto here. It allows small iterations over the processes to further improve them.
 
-TODO
+## Automation
 
-The definitions above are vague, and that's intentional. Bodies of knowledge and processes' best practices are so. This allows great flexibility when applying them. You can still reap great results granted you preserve the main tenets. To me, this is a subset of the agile movement embedded into the DevOps concepts. It allows small iterations over the processes to further improve them.
+We deem a system or process as automated when it requires minimal to no human intervention to make decisions. Note that this differs from _automatic_, which means a process that acts involuntarily. A car wash is automatic; a home light that turns itself on before dawn is automation.
 
-### Role
+The degree and scope of automation can vary between a small, atomic process and a bigger collection. An integration pipeline in a source code repository does not mean automation as per see. Let's say it has a step to run a lint tool and check the code. Now, regardless of the lint output, the merge requires a human to approve and execute it.
 
-TODO
+In such a scenario the linting is _automatic_, and the integration itself is manual. We'd have an _automated_ integration if the pipeline checked the lint output and automatically merged the changes. And before the four-eyes-principle priests start throwing rocks, mind you that this is a simplistic and rather unpractical example. We didn't mention testing or checking the author, nor doing any other more sophisticated checks.
+
+## The DevOps role
+
+If DevOps is knowledge and best practices, then the role means people that follow those right? Yes, and it does. The catch is how broad the term is: as mentioned before, it acts as a double-edged sword here. It's not clear what's the set of hard skills and technologies a DevOps must know; instead, each company/industry has its wishlist printed on a DevOps-themed page.
 
 ### Expectation
 
-TODO
+As a software engineer joining a position that mentions DevOps and automations, I expect a company looking for ways to, well, _automate_. That means investment into connecting disparate solutions and data sources in a way that certain decisions do not require human intervention.
+
+Those automations in turn would allow improving their processes, or free up time to focus on other processes. Maintenance and operations here would translate business rule changes into new or different decisions the automation has to make.
 
 ### Reality
+
+What happens when you focus on gluing together dozens of solutions, each tackling a specific problem domain? You risk losing touch with how the problem can be best solved, and forget about how the big picture performs. Flagship solutions become the target, not the means to an end.
+
+This means classic system administrators and operators are at home: this kind of specialized professional knows the in and out of specific solutions or vendor suites in the market. They can - and trust me, they will - get you onboard on all sort of tools.
+
+Such is the reality of DevOps positions. Most of the time they require low to no programming languages, listing scripting ones such as Bash, PowerShell and Python. Then focus on dozens of branded solutions you must have years of experience. Those are constantly misused and work on top of terrible integrations, which you have to provide support until the next migration exodus happens.
+
+The day-to-day of DevOps engineers then becomes to both maintain scripts on pipelines, sort out integration problems between solutions and worst of all, act as the operators when it comes to problems. As all those integrations are black boxes, the users won't know a thing on how to solve them. Then the snowball begins.
+
+### TODO
 
 Such flexible definition leads to different interpretations throughout the industry. This translates into distinct practical implementations between segments and companies, which is fine. Even with some nuances, common patterns became synonymous with DevOps along the way. Teams responsible for DevOps commonly:
 
@@ -78,7 +99,7 @@ IaC -> SourceControl
 @enduml
 ```
 
-## Alternatives
+## Other roles
 
 TODO
 
@@ -91,5 +112,9 @@ TODO
 TODO
 
 ### Software Engineer
+
+TODO
+
+## The dream
 
 TODO
