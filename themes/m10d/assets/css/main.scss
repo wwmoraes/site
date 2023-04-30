@@ -3,6 +3,9 @@ framework,
 components,
 custom;
 
+// import mixins before any variables to ensure purity
+@import "mixins";
+
 // import variables early on
 @import "variables";
 @import "defaults";

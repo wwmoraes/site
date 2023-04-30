@@ -1,0 +1,25 @@
+@mixin toggler($id) {
+  input[type=checkbox]##{$id} {
+    display: none;
+  }
+
+  @content(".#{$id}", "input[type=checkbox]##{$id}:checked ~ .#{$id}");
+}
+
+@mixin toggler-chevron($id) {
+  label[for=#{$id}] {
+    &::before {
+      content: '\2304';
+      display: block;
+      font-size: 3em;
+      line-height: 1em;
+      margin: 0.1em 0 -0.5em;
+    }
+  }
+
+  input[type=checkbox]##{$id}:checked ~ label[for=#{$id}] {
+    &::before {
+      content: '\2303';
+    }
+  }
+}
