@@ -30,6 +30,39 @@
       }
     }
   }
+
+  @include toggler-chevron(toc-content);
+
+  @include toggler(toc-content) using ($hidden, $visible) {
+    #{$hidden} {
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .2s ease-in-out;
+    }
+
+    #{$visible} {
+      max-height: 9999px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      label[for="toc-content"] {
+        display: none;
+      }
+
+      #{$hidden} {
+        max-height: 9999px;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  label[for="toc-content"] {
+    float: right;
+  }
 }
 
 //// Small devices (portrait tablets and large phones)
@@ -48,4 +81,16 @@
 // @media only screen and (min-width: 992px) {}
 
 //// Extra large devices (desktops)
-// @media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  label[for="toc-content"] {
+    display: none;
+  }
+
+  @include toggler(toc-content) using ($hidden, $visible) {
+    #{$hidden} {
+      max-height: 9999px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
