@@ -2,6 +2,10 @@
 title: "Lua Methods"
 date: 2021-12-26T18:57:01+01:00
 draft: true
+categories:
+- Code
+tags:
+- Lua
 description: ""
 ---
 Tables also sport some

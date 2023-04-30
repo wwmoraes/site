@@ -2,10 +2,12 @@
 title: automation is not just a word
 date: 2022-01-06T10:55:06+01:00
 draft: true
+categories:
+- Opinion
 tags:
 - DevOps
 - SRE
-- Soft skills
+- Soft Skills
 ---
 
 After over a decade working in the IT industry I still occasionally hear an

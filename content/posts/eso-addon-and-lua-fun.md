@@ -4,17 +4,16 @@ description: LOL
 date: 2021-12-13T09:38:13+01:00
 draft: true
 categories:
-- gaming
-- scripting
+- Code
 tags:
-- lua
+- Lua
 ---
 
 ## Prologue: My moon cycle
 
 {{< admonition type=note >}}
 you can [skip ahead]({{< relref "#saved-variables-proxy" >}}) to the technical
-stuff if storytelling is not your thing 😄
+content if storytelling is not your thing 😄
 {{< /admonition >}}
 
 I've had no real use for Lua in the past, despite my ~~frustrated~~ attempts.

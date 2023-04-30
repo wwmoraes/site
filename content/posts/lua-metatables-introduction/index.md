@@ -10,11 +10,9 @@ resources:
     copyright: Image by William Artero
     background: "#1e1e1e"
 categories:
-- coding
+- Code
 tags:
-- lua
-- automation
-- gaming
+- Lua
 ---
 
 If you ever used Lua, then you heard about its tables and the metatable feature.

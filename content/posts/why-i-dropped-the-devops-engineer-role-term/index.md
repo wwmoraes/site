@@ -6,8 +6,9 @@ resources:
   src: featured-image.png
 title: Why I dropped the DevOps Engineer role term
 categories:
-- career
+- Opinion
 tags:
+- Career
 - DevOps
 description: why filtering keywords matter to attract the desired jobs
 ---
