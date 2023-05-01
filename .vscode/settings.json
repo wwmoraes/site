@@ -7,6 +7,7 @@
     }
   },
   "cSpell.words": [
+    "airsoft",
     "alertmanager",
     "bookalike",
     "changefreq",
@@ -19,6 +20,7 @@
     "gregjones",
     "htmlproofer",
     "httpcache",
+    "jsonify",
     "lastmod",
     "leveldbcache",
     "linkify",

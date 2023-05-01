@@ -1,0 +1,50 @@
+{{- $root := dict -}}
+
+{{- $root = merge $root (dict "@context" "http://schema.org") -}}
+{{- $root = merge $root (dict "@type" "BlogPosting") -}}
+{{- $root = merge $root (dict "@id" .Permalink) -}}
+{{- $root = merge $root (dict "headline" .Title) -}}
+{{- $root = merge $root (dict "inLanguage" .Site.LanguageCode) -}}
+{{- $root = merge $root (dict "genre" .Type) -}}
+{{- $root = merge $root (dict "wordcount" .WordCount) -}}
+{{- $root = merge $root (dict "url" .Permalink) -}}
+{{- $root = merge $root (dict "description" (.Description | default .Site.Params.description)) -}}
+
+{{- $webPage := partial "function/schema/webPage.html" . -}}
+{{- $root = merge $root (dict "mainEntityOfPage" $webPage) -}}
+
+{{- $images := slice -}}
+{{- with .Resources.GetMatch "featured-image-preview" -}}
+{{- $images = $images | append (partial "function/schema/imageObject.html" .) -}}
+{{- end -}}
+{{- with .Resources.GetMatch "featured-image" -}}
+{{- $images = $images | append (partial "function/schema/imageObject.html" .) -}}
+{{- end -}}
+
+{{- if $images -}}
+{{- $root = merge $root (dict "image" $images) -}}
+{{- end -}}
+
+{{- with .Params.tags -}}
+{{- $root = merge $root (dict "keywords" (delimit . ", ")) -}}
+{{- end -}}
+
+{{- if not .PublishDate.IsZero }}
+{{- $root = merge $root (dict "datePublished" (.PublishDate.Format "2006-01-02T15:04:05-07:00")) -}}
+{{- else if not .Date.IsZero }}
+{{- $root = merge $root (dict "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")) -}}
+{{- end }}
+
+{{- with .Lastmod }}
+{{- $root = merge $root (dict "dateModified" (.Format "2006-01-02T15:04:05-07:00")) -}}
+{{- end }}
+
+{{- with .Site.Copyright }}
+{{- $root = merge $root (dict "license" (printf . now.Year)) -}}
+{{- end }}
+
+{{- $author := partial "function/schema/person.html" .Site.Author -}}
+{{- $root = merge $root (dict "publisher" $author) -}}
+{{- $root = merge $root (dict "author" $author) -}}
+
+{{- return $root -}}

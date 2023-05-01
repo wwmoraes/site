@@ -1,0 +1,7 @@
+{{- $root := dict -}}
+{{- $root = merge $root (dict "@type" "Person") -}}
+{{- $root = merge $root (dict "familyName" .familyname) -}}
+{{- $root = merge $root (dict "givenName" .givenname) -}}
+{{- $root = merge $root (dict "name" .displayname) -}}
+{{- $root = merge $root (dict "email" .email) -}}
+{{- return $root -}}

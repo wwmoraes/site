@@ -1,0 +1,22 @@
+{{- $root := dict -}}
+
+{{- $root = merge $root (dict "@type" "ImageObject") -}}
+{{- $root = merge $root (dict "height" .Height) -}}
+{{- $root = merge $root (dict "url" .Permalink) -}}
+{{- $root = merge $root (dict "width" .Width) -}}
+
+{{- with .Exif -}}
+{{- with .Tags -}}
+{{- with .ImageDescription -}}
+{{- $root = merge $root (dict "caption" .) -}}
+{{- end -}}
+{{- with .Copyright -}}
+{{- $root = merge $root (dict "copyrightNotice" .) -}}
+{{- end -}}
+{{- with .ImageUniqueID -}}
+{{- $root = merge $root (dict "acquireLicensePage" .) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- return $root -}}
