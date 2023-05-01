@@ -7,8 +7,10 @@ A Hugo minimalistic theme for bloggers. Forked from the simple m10c by @vaga.
 Main features:
 
 - Fully responsive
-- Twitter Cards, Open Graph, Disqus and Google Analytics supported (see Hugo docs)
-- Customizable colors
+- Twitter Cards and Open Graph supported (see Hugo docs)
+- Custom comments system: Giscus
+- Custom analytics system: GoatCounter
+- Customizable colors (through SCSS)
 - Customizable picture and description
 - Customizable menu on sidebar
 - Customizable social media links on sidebar
