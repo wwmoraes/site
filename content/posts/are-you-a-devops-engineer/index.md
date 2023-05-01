@@ -6,11 +6,6 @@ draft: true
 resources:
 - name: featured-image
   src: devops.jpg
-  title: Image by storyset on Freepik
-  params:
-    copyright: Image by storyset on Freepik
-    background: "#fff"
-    source: https://www.freepik.com/free-vector/scrum-method-concept-illustration_28902402.htm
 categories:
 - Opinion
 tags:

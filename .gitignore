@@ -2,6 +2,9 @@ public/
 resources/
 .hugo_build.lock
 
+*.jpg.json
+*.png.json
+
 # General
 .DS_Store
 .AppleDouble

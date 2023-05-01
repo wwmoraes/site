@@ -3,6 +3,12 @@ module:
     extended: true
     min: 0.55.0
 
+imaging:
+  exif:
+    disableDate: true
+    disableLatLong: true
+    includeFields: "Copyright|ImageUniqueID|ImageDescription|Make"
+
 params:
   rssFullText: true
   title_separator: //
@@ -50,6 +56,7 @@ mediaTypes:
   application/feed+json:
     suffixes:
       - feed.json
+
 outputFormats:
   RSS:
     mediaType: application/rss+xml
