@@ -1,0 +1,32 @@
+{
+  "facebook": {
+    "icon": "facebook",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/%s"
+  },
+  "github": {
+    "icon": "github",
+    "title": "GitHub",
+    "url": "https://github.com/%s"
+  },
+  "instagram": {
+    "icon": "instagram",
+    "title": "Instagram",
+    "url": "https://instagram.com/%s"
+  },
+  "linkedin": {
+    "icon": "linkedin",
+    "title": "LinkedIn",
+    "url": "https://linkedin.com/in/%s"
+  },
+  "twitter": {
+    "icon": "twitter",
+    "title": "Twitter",
+    "url": "https://twitter.com/%s"
+  },
+  "youtube": {
+    "icon": "youtube",
+    "title": "YouTube",
+    "url": "https://www.youtube.com/@%s"
+  }
+}

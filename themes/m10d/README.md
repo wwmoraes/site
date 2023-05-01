@@ -42,54 +42,39 @@ theme = "m10d"
 
 In your `config.toml` file, define the following variables in `params`:
 
-- `author`: Name of the author
 - `description`: Short description of the author
-- `avatar`: Path of file containing the author avatar image
-- `menu_item_separator`: Separator between each menu item. HTML allowed (default: " - ")
-- `favicon`: Absolute path of your favicon.ico file (default: "/favicon.ico")
+- `menu_item_separator`: Separator between each menu item. HTML allowed
+(default " // ")
 
 To add a menu item, add the following lines in `menu`:
 
-```
+```toml
 [[menu.main]]
   identifier = "tags"
   name = "Tags"
   url = "/tags/"
 ```
 
-[Read Hugo documentations](https://gohugo.io/content-management/menus/#readout) for more informations about menu
+[Read Hugo documentations](https://gohugo.io/content-management/menus/#readout)
+for more informations about menu
 
-To add a social link, add the following lines in `params`:
+To add a social link, use the `author.social` native setting by adding the
+following lines in your config:
 
+```toml
+[[author.social]]
+  github = "wwmoraes"
+  linkedin = "wwmoraes"
 ```
-[[params.social]]
-  icon = "github"
-  name = "My Github"
-  url = "https://github.com/vaga"
-```
-
-To change theme colors, add the following lines in `params`:
-
-```
-[params.style]
-  darkestColor = "#d35050"
-  darkColor = "#212121"
-  lightColor = "#f5e3e0"
-  lightestColor = "#f5f5f5"
-  primaryColor = "#ffffff"
-```
-
-If you want the above theme colors, you can see the [exampleSite/config.toml](/exampleSite/config.toml) file.
 
 ### Styling
 
-To override styles using scss, add a file called `_extra.scss` to `[path]/assets/css/`
+To change theme colors, create the `assets/css/_variables.scss` file and
+override any of the values from `themes/m10d/assets/css/_default.scss` as you
+see fit.
 
-**Note:** Hugo releases come in two versions, `hugo` and `hugo_extended`. You need `hugo_extended` to automatically compile your scss.
-
-## License
-
-This theme is released under the [**MIT**](/LICENSE.md) License.
+**Note:** Hugo releases come in two versions, `hugo` and `hugo_extended`. You
+need `hugo_extended` to automatically compile your scss.
 
 ## Acknowledgements
 
