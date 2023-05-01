@@ -11,7 +11,7 @@
   {{- $index = merge $index (dict "language" .) -}}
 {{- end -}}
 {{- $author := dict -}}
-{{- $author = merge $author (dict "name" $.Site.Author.name) -}}
+{{- $author = merge $author (dict "name" $.Site.Author.displayname) -}}
 {{- $author = merge $author (dict "url" $.Site.BaseURL) -}}
 {{- $author = merge $author (dict "avatar" (.Site.Params.feed.icon | default "/favicon.ico")) -}}
 {{- $index = merge $index (dict "authors" (slice $author)) -}}

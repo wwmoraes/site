@@ -1,11 +1,10 @@
 description: automating a way out of tasks since 2010
-author: William Artero
-avatar: /images/avatar.jpg
 
 mainSections:
 - posts
 
 menu_item_separator: " | "
+# TODO remove social and use native object
 social:
 - icon: github
   name: Github

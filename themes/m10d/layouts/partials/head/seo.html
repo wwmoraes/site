@@ -1,5 +1,5 @@
 <link rel="canonical" href="{{- .Permalink -}}" />
-{{- with .Site.Params.author }}
+{{- with .Site.Author.displayname }}
 <meta name="author" content="{{- . -}}" />
 {{- end }}
 <meta name="description" content="{{- .Description | default .Site.Params.description -}}" />

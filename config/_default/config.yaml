@@ -37,9 +37,19 @@ outputs:
   - ATOM
   - FEED
 
+# https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30
 author:
-  name: William Artero
+  displayName: William Artero
   email: webmaster@artero.dev
+  givenName: William
+  familyName: Artero
+  thumbnail: images/avatar.jpg
+  image: images/avatar.jpg
+  shortBio: automating a way out of tasks since 2010
+  longBio: TODO
+  social:
+    github: wwmoraes
+    linkedin: wwmoraes
 
 pygmentsUseClasses: false
 pygmentsCodeFences: true

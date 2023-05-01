@@ -3,17 +3,27 @@
   {{- template "_internal/schema.html" . -}}
   <header class="post-header">
     {{ with .Resources.GetMatch "featured-image" -}}
-    {{- $title := .Title | default "" -}}
-    {{- $bgColor := .Params.background | default "transparent" -}}
-    {{- $source := .Params.source | default "" -}}
+    {{- $permalink := .Permalink -}}
+    {{- $title := .Title -}}
+    {{- with .Exif -}}
+    {{- with .Tags -}}
+    {{- $title = .ImageDescription | default (.Copyright | default $title) -}}
+    {{- $bgColor := .Make | default "transparent" -}}
+    {{- $source := .ImageUniqueID | default "" -}}
     <figure class="featured-image" style="background-color: {{- $bgColor -}};">
-      <img src="{{- .Permalink -}}" title="{{- $title -}}" />
-      {{- with $source -}}
+      <img src="{{- $permalink -}}" title="{{- $title -}}" />
+      {{ with $title -}}
       <figcaption>
+        {{ with $source -}}
         <a href="{{- $source -}}">{{- $title -}}</a>
+        {{- else -}}
+        {{- $title -}}
+        {{- end }}
       </figcaption>
       {{- end }}
     </figure>
+    {{- end -}}
+    {{- end -}}
     {{- end }}
     <div class="post-header-content">
       <h1 class="post-title">{{ .Title }}</h1>

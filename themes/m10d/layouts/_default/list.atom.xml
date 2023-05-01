@@ -57,7 +57,7 @@
   </entry>
   {{- end }}
   <author>
-    <name>{{ $.Site.Author.name }}</name>
+    <name>{{ $.Site.Author.displayname }}</name>
     <email>{{ $.Site.Author.email }}</email>
     <uri>{{- $.Site.BaseURL -}}</uri>
   </author>

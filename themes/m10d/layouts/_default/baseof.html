@@ -32,8 +32,12 @@
     <header class="app-header">
       <span>
         <a href="/">
-          <img class="app-header-avatar" src="{{- .Site.Params.avatar | default "avatar.jpg" | relURL -}}"
-            alt="{{- .Site.Params.author | default "John Doe" -}}" width="64" height="64" />
+          {{- $image := resources.Get .Site.Author.image -}}
+          {{- if not $image -}}
+          {{- $image = resources.Get "images/placeholders/avatar.jpg" -}}
+          {{- end -}}
+          <img class="app-header-avatar" src="{{- $image.Permalink -}}" alt="{{- .Site.Author.displayname -}}"
+            width="64" height="64" />
         </a>
         <span class="app-header-title">{{- .Site.Title -}}</span>
         <p>
