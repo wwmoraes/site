@@ -4,6 +4,7 @@
       "args": [
         "server",
         "--cleanDestinationDir",
+        "--gc",
         "-p",
         "8888"
       ],
