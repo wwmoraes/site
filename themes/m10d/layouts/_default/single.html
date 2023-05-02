@@ -5,11 +5,15 @@
     {{ with .Resources.GetMatch "featured-image" -}}
     {{- $permalink := .Permalink -}}
     {{- $title := .Title -}}
-    {{- with .Exif -}}
-    {{- with .Tags -}}
+    {{- $bgColor := "transparent" -}}
+    {{- $source := "" -}}
+    {{- with (.Exif | default (dict)) -}}
+    {{- with (.Tags | default (dict)) -}}
     {{- $title = .ImageDescription | default (.Copyright | default $title) -}}
-    {{- $bgColor := .Make | default "transparent" -}}
-    {{- $source := .ImageUniqueID | default "" -}}
+    {{- $bgColor = .Make | default $bgColor -}}
+    {{- $source = .ImageUniqueID | default $source -}}
+    {{- end -}}
+    {{- end -}}
     <figure class="featured-image" style="background-color: {{- $bgColor -}};">
       <img src="{{- $permalink -}}" title="{{- $title -}}" />
       {{ with $title -}}
@@ -22,8 +26,6 @@
       </figcaption>
       {{- end }}
     </figure>
-    {{- end -}}
-    {{- end -}}
     {{- end }}
     <div class="post-header-content">
       <h1 class="post-title">{{ .Title }}</h1>
