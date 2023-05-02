@@ -1,13 +1,11 @@
-DIAGRAMS_SOURCES = $(shell find content -type f -iname "*.puml")
+DIAGRAMS_SOURCES = $(shell find content -type f -name "*.puml")
 DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
 GOODREADS_LIST = 138333248-william
 GOODREADS_SHELVES = currently-reading read to-read
+
 IMAGES = $(wildcard archetypes/*/*.jpg)
-IMAGES += $(wildcard archetypes/*/*.png)
 IMAGES += $(wildcard assets/images/*.jpg)
-IMAGES += $(wildcard assets/images/*.png)
 IMAGES += $(wildcard content/posts/*/*.jpg)
-IMAGES += $(wildcard content/posts/*/*.png)
 
 start:
 	@hugo server -p 8888
@@ -16,7 +14,7 @@ start-prod:
 	@hugo server -e production
 
 build:
-	@rm -rf public
+	@${RM} -r public
 	@hugo --gc --cleanDestinationDir
 
 hook-install:
@@ -64,7 +62,6 @@ exif-show: ${IMAGES}
 		${IMAGE};echo "---";)
 
 %.jpg: %.jpg.json ; ${buildExif}
-%.png: %.png.json ; ${buildExif}
 
 define buildExif
 $(info adjusting EXIF of $@)
