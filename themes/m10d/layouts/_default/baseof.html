@@ -71,7 +71,7 @@
         {{- range $name, $network := . -}}
         {{- $username := index $.Site.Author.social $name -}}
         {{- if $username -}}
-        <a href="{{- printf $network.url $username -}}" target="_blank" rel="noreferrer noopener me"
+        <a href="{{- printf $network.url $username -}}" target="_blank" rel="noreferrer noopener nofollow external me"
           title="{{- $network.title -}}">
           {{- partial "icon.html" (dict "ctx" $ "name" $network.icon "title" $network.title) -}}
         </a>
