@@ -15,15 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - name: checkout
+        uses: actions/checkout@master
 
-      - uses: ./.github/actions/site-update
+      - name: site data update
+        uses: ./.github/actions/site-update
         env:
-          GITHUB_TOKEN: ${{ secrets.SCRIBE_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOODREADS_LIST: 138333248-william
           GOODREADS_SHELVES: currently-reading,read,to-read
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: updated site data"
           branch: master
