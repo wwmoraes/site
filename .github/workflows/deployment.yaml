@@ -1,0 +1,19 @@
+name: Deployment
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+    - name: Await CF Pages
+      uses: WalshyDev/cf-pages-await@v1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_TOKEN }}
+        accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        project: ${{ vars.CLOUDFLARE_PROJECT }}
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        commitHash: ${{ github.sha }}
