@@ -1,0 +1,23 @@
+{{- $hours := (now.Sub .).Hours -}}
+{{- $moment := "" -}}
+
+{{- if gt $hours 8760 -}}
+{{- $duration := int (math.Floor (div $hours 8760)) -}}
+{{- $moment = T "yearsAgo" $duration -}}
+{{- else if gt $hours 720 -}}
+{{- $duration := int (math.Floor (div $hours 720)) -}}
+{{- $moment = T "monthsAgo" $duration -}}
+{{- else if gt $hours 168 -}}
+{{- $duration := int (math.Floor (div $hours 168)) -}}
+{{- $moment = T "weeksAgo" $duration -}}
+{{- else if gt $hours 24 -}}
+{{- $duration := int (math.Floor (div $hours 24)) -}}
+{{- $moment = T "daysAgo" $duration -}}
+{{- else if gt $hours 1 -}}
+{{- $duration := int (math.Floor $hours) -}}
+{{- $moment = T "hoursAgo" $duration -}}
+{{- else -}}
+{{- $moment = "a few moments ago" -}}
+{{- end -}}
+
+{{- return $moment -}}

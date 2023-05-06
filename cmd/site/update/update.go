@@ -2,6 +2,7 @@ package update
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/wwmoraes/site/cmd/site/update/github"
 	"github.com/wwmoraes/site/cmd/site/update/goodreads"
 )
 
@@ -11,6 +12,7 @@ func New() *cobra.Command {
 		Short: "static data update commands",
 	}
 
+	cmd.AddCommand(github.New())
 	cmd.AddCommand(goodreads.New())
 
 	return cmd

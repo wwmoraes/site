@@ -1,9 +1,9 @@
-name: Update Index
+name: Update Data
 
 on:
   push:
     paths:
-      - content/_index.md.tmpl
+      - cmd/*
   schedule:
     - cron: "0 0 */1 * *"
 
@@ -17,17 +17,16 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: muesli/readme-scribe@master
+      - uses: ./.github/actions/site-update
         env:
           GITHUB_TOKEN: ${{ secrets.SCRIBE_GITHUB_TOKEN }}
-        with:
-          template: content/_index.md.tmpl
-          writeTo: content/_index.md
+          GOODREADS_LIST: 138333248-william
+          GOODREADS_SHELVES: currently-reading,read,to-read
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: updated README.md"
+          commit_message: "chore: updated site data"
           branch: master
-          commit_user_name: readme-scribe 🤖
+          commit_user_name: site-update 🤖
           commit_user_email: actions@github.com
-          commit_author: readme-scribe 🤖 <actions@github.com>
+          commit_author: site-update 🤖 <actions@github.com>

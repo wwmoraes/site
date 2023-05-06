@@ -1,7 +1,7 @@
 DIAGRAMS_SOURCES = $(shell find content -type f -name "*.puml")
 DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
 GOODREADS_LIST = 138333248-william
-GOODREADS_SHELVES = currently-reading read to-read
+GOODREADS_SHELVES = currently-reading,read,to-read
 
 IMAGES = $(wildcard archetypes/*/*.jpg)
 IMAGES += $(wildcard assets/images/*.jpg)
@@ -35,15 +35,11 @@ diagrams: ${DIAGRAMS_TARGETS}
 %.png: %.puml
 	plantuml -tpng -darkmode -theme reddress-darkblue $<
 
-index:
-	@op run --env-file=.markscribe.env -- markscribe -write content/_index.md content/_index.md.tmpl
+github:
+	@op run --env-file=.env -- go run ./... update github
 
-books: $(addprefix data/goodreads/,${GOODREADS_SHELVES})
-
-.PRECIOUS: data/goodreads/%
-.PHONY: data/goodreads/%
-data/goodreads/%:
-	@echo go run ./... update goodreads --list ${GOODREADS_LIST} --shelf $*
+books:
+	@go run ./... update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
 
 ## EXIF tags management
 ## https://exiftool.org/examples.html

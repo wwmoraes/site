@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/gocolly/colly/v2"
@@ -39,7 +40,7 @@ func New() *cobra.Command {
 
 	flags := cmd.Flags()
 	flags.String("list", "", "Goodreads list name")
-	flags.String("shelf", "", "Goodreads shelf name")
+	flags.String("shelves", "", "Goodreads shelf names (comma-separated)")
 
 	return cmd
 }
@@ -53,30 +54,16 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("List name must be provided")
 	}
 
-	shelf, err := cmd.Flags().GetString("shelf")
+	rawShelves, err := cmd.Flags().GetString("shelves")
 	if err != nil {
 		return err
 	}
-	if len(shelf) <= 0 {
-		return fmt.Errorf("Shelf name must be provided")
+
+	shelves := strings.Split(rawShelves, ",")
+
+	if len(shelves) <= 0 {
+		return fmt.Errorf("at least one shelf name must be provided")
 	}
-
-	return fetch(list, shelf)
-}
-
-func fetch(list, shelf string) error {
-	cache, err := leveldbcache.New("tmp/update-cache")
-	if err != nil {
-		log.Println(err)
-		return err
-	}
-
-	collector := colly.NewCollector(
-		colly.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"),
-	)
-	transport := httpcache.NewTransport(cache)
-	client := transport.Client()
-	collector.WithTransport(transport)
 
 	path := "data/goodreads"
 	err = os.MkdirAll(path, 0750)
@@ -84,6 +71,47 @@ func fetch(list, shelf string) error {
 		log.Println(err)
 		return err
 	}
+
+	cache, err := leveldbcache.New("tmp/update-cache")
+	if err != nil {
+		log.Println(err)
+		return err
+	}
+
+	var wg sync.WaitGroup
+	var errors []error
+	for _, shelf := range shelves {
+		wg.Add(1)
+		go func(shelf string) {
+			defer wg.Done()
+
+			err = fetch(cache, path, list, shelf)
+			if err != nil {
+				errors = append(errors, fmt.Errorf("failed to fetch shelf %s data: %w", shelf, err))
+			}
+		}(shelf)
+	}
+	wg.Wait()
+
+	if len(errors) > 0 {
+		var sb strings.Builder
+		sb.WriteString("failed to fetch shelves:\n")
+		for _, err := range errors {
+			sb.WriteString(fmt.Sprintf("%s\n", err.Error()))
+		}
+		return fmt.Errorf(sb.String())
+	}
+
+	return nil
+}
+
+func fetch(cache *leveldbcache.Cache, path, list, shelf string) error {
+	collector := colly.NewCollector(
+		colly.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"),
+	)
+	transport := httpcache.NewTransport(cache)
+	client := transport.Client()
+	collector.WithTransport(transport)
 
 	books := []*schema.Book{}
 

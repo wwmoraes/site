@@ -3,6 +3,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781491983645",
     "@type": "Book",
+    "name": "Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services",
     "author": [
       {
         "@context": "https://schema.org",
@@ -10,20 +11,20 @@
         "name": "Brendan Burns"
       }
     ],
-    "datePublished": "2018-03-05T00:00:00Z",
-    "isbn": "9781491983645",
-    "name": "Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1494624519l/34691716._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "O'Reilly Media"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1494624519l/34691716._SX50_.jpg"
+    "datePublished": "2018-03-05T00:00:00Z",
+    "isbn": "9781491983645"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781593272838",
     "@type": "Book",
+    "name": "Learn You a Haskell for Great Good!: A Beginner's Guide",
     "author": [
       {
         "@context": "https://schema.org",
@@ -31,25 +32,25 @@
         "name": "Miran Lipovača"
       }
     ],
-    "datePublished": "2012-01-01T00:00:00Z",
-    "isbn": "9781593272838",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "San Francisco, CA"
     },
-    "name": "Learn You a Haskell for Great Good!: A Beginner's Guide",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "No Starch Press"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg"
+    "datePublished": "2012-01-01T00:00:00Z",
+    "isbn": "9781593272838"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780134494166",
     "@type": "Book",
+    "name": "Clean Architecture",
     "author": [
       {
         "@context": "https://schema.org",
@@ -57,20 +58,20 @@
         "name": "Robert C. Martin"
       }
     ],
-    "datePublished": "2017-09-10T00:00:00Z",
-    "isbn": "9780134494166",
-    "name": "Clean Architecture",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471680093l/18043011._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pearson"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471680093l/18043011._SX50_.jpg"
+    "datePublished": "2017-09-10T00:00:00Z",
+    "isbn": "9780134494166"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780714843377",
     "@type": "Book",
+    "name": "It's Not How Good You Are, It's How Good You Want To Be",
     "author": [
       {
         "@context": "https://schema.org",
@@ -78,14 +79,13 @@
         "name": "Paul Arden"
       }
     ],
-    "datePublished": "2003-06-01T00:00:00Z",
-    "isbn": "9780714843377",
-    "name": "It's Not How Good You Are, It's How Good You Want To Be",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441506303l/114737._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Phaidon Press"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441506303l/114737._SX50_.jpg"
+    "datePublished": "2003-06-01T00:00:00Z",
+    "isbn": "9780714843377"
   }
 ]

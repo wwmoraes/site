@@ -3,6 +3,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780201633610",
     "@type": "Book",
+    "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
     "author": [
       {
         "@context": "https://schema.org",
@@ -25,20 +26,20 @@
         "name": "Ralph Johnson"
       }
     ],
-    "datePublished": "1995-01-15T00:00:00Z",
-    "isbn": "9780201633610",
-    "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348027904l/85009._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley Professional"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348027904l/85009._SX50_.jpg"
+    "datePublished": "1995-01-15T00:00:00Z",
+    "isbn": "9780201633610"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780596514983",
     "@type": "Book",
+    "name": "Real World Haskell",
     "author": [
       {
         "@context": "https://schema.org",
@@ -56,24 +57,23 @@
         "name": "Don Stewart"
       }
     ],
-    "datePublished": "2008-12-01T00:00:00Z",
-    "isbn": "9780596514983",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
+      "name": "Sebastopol, California, USA",
       "address": {
         "addressCountry": "USA",
         "addressLocality": "Sebastopol",
         "addressRegion": "California"
-      },
-      "name": "Sebastopol, California, USA"
+      }
     },
-    "name": "Real World Haskell",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "O'Reilly Media"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg"
+    "datePublished": "2008-12-01T00:00:00Z",
+    "isbn": "9780596514983"
   }
 ]

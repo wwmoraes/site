@@ -1,0 +1,49 @@
+name: site-update
+description: generates Go Hugo data files from multiple online sources
+author: William Artero
+branding:
+  icon: activity
+  color: blue
+runs:
+  using: composite
+  steps:
+    - name: setup golang
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ env.GOLANG_VERSION }}
+
+    - name: set golang environment variables
+      uses: wwmoraes/actions/golang/env@master
+
+    - name: cache modules
+      uses: pat-s/always-upload-cache@v3.0.11
+      with:
+        path: ${GOMODCACHE}
+        key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+          ${{ runner.os }}-modules-
+
+    - name: download dependencies
+      run: go mod download
+      shell: bash
+
+    - name: cache build
+      uses: pat-s/always-upload-cache@v3.0.11
+      with:
+        path: ${GOCACHE}
+        key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+          ${{ runner.os }}-build-
+
+    - name: build CLI
+      uses: wwmoraes/actions/golang/build@master
+
+    - name: update GitHub data
+      run: ./site update github
+      shell: bash
+
+    - name: update Goodreads data
+      run: ./site update --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+      shell: bash

@@ -1,0 +1,15 @@
+{{- with $.Site.Data.github.recents.contributions -}}
+<ul>
+  {{- range $_, $repository := . -}}
+  <li>
+    <a href="{{- .Repository.URL -}}" title="{{- .Repository.NameWithOwner -}}">
+      {{- .Repository.NameWithOwner -}}
+    </a>
+    {{- print "&nbsp;-&nbsp;" | safeHTML -}}
+    {{- .Repository.Description -}}
+    {{- print "&nbsp;" | safeHTML -}}
+    ({{- partial "moment" (time .OccurredAt) -}})
+  </li>
+  {{- end -}}
+</ul>
+{{- end -}}

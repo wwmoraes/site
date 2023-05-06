@@ -1,0 +1,17 @@
+{{- with $.Site.Data.github.recents.releases -}}
+<ul>
+  {{- range $_, $repository := . -}}
+  <li>
+    <a href="{{- .Repository.URL -}}" title="{{- .Repository.NameWithOwner -}}">
+      {{- .Repository.NameWithOwner -}}
+    </a>
+    {{- print "&nbsp;(" | safeHTML -}}
+    <a href="{{- .URL -}}">{{- .TagName -}}</a>
+    {{- print ",&nbsp;" | safeHTML -}}
+    {{- partial "moment" (time .PublishedAt) -}}
+    {{- print ")&nbsp;-&nbsp;" | safeHTML -}}
+    {{- .Repository.Description -}}
+  </li>
+  {{- end -}}
+</ul>
+{{- end -}}

@@ -1,0 +1,92 @@
+[
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-04-21T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/pvpgn-server-docker",
+      "URL": "https://github.com/wwmoraes/pvpgn-server-docker",
+      "Description": "PvPGN-PRO server on Docker",
+      "Stargazers": 12
+    },
+    "OccurredAt": "2023-02-26T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries",
+      "Stargazers": 9
+    },
+    "OccurredAt": "2023-01-22T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/homebrew-tap",
+      "URL": "https://github.com/wwmoraes/homebrew-tap",
+      "Description": "formulae and casks for Homebrew",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2022-12-12T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/siever",
+      "URL": "https://github.com/wwmoraes/siever",
+      "Description": "RFC5804-compliant ManageSieve client in pure Go",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2022-10-09T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/kubegraph",
+      "URL": "https://github.com/wwmoraes/kubegraph",
+      "Description": "Kubernetes resource graph generator",
+      "Stargazers": 10
+    },
+    "OccurredAt": "2022-10-08T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/maker-snippets",
+      "URL": "https://github.com/wwmoraes/maker-snippets",
+      "Description": "Maker repository with common GNU Make snippets",
+      "Stargazers": 1
+    },
+    "OccurredAt": "2022-09-27T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/docker-engine-plugins",
+      "URL": "https://github.com/wwmoraes/docker-engine-plugins",
+      "Description": "Docker Engine plugins",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2022-09-11T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "microsoft/terraform-provider-azuredevops",
+      "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
+      "Description": "Terraform Azure DevOps provider",
+      "Stargazers": 293
+    },
+    "OccurredAt": "2022-08-05T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/userscripts",
+      "URL": "https://github.com/wwmoraes/userscripts",
+      "Description": "Userscripts and libraries to ease life",
+      "Stargazers": 2
+    },
+    "OccurredAt": "2022-06-26T07:00:00Z"
+  }
+]

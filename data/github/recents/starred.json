@@ -1,0 +1,72 @@
+[
+  {
+    "NameWithOwner": "gocolly/colly",
+    "URL": "https://github.com/gocolly/colly",
+    "Description": "Elegant Scraper and Crawler Framework for Golang",
+    "Stargazers": 19484,
+    "StarredAt": "2023-04-15T13:21:05Z"
+  },
+  {
+    "NameWithOwner": "haskell/stylish-haskell",
+    "URL": "https://github.com/haskell/stylish-haskell",
+    "Description": "Haskell code prettifier",
+    "Stargazers": 932,
+    "StarredAt": "2023-03-30T14:36:03Z"
+  },
+  {
+    "NameWithOwner": "tefkah/zotero-night",
+    "URL": "https://github.com/tefkah/zotero-night",
+    "Description": "Night theme for Zotero UI and PDF",
+    "Stargazers": 1268,
+    "StarredAt": "2023-01-08T17:09:34Z"
+  },
+  {
+    "NameWithOwner": "yattee/yattee",
+    "URL": "https://github.com/yattee/yattee",
+    "Description": "Privacy oriented video player for iOS, tvOS and macOS",
+    "Stargazers": 1271,
+    "StarredAt": "2022-12-20T20:24:01Z"
+  },
+  {
+    "NameWithOwner": "TeamPiped/Piped",
+    "URL": "https://github.com/TeamPiped/Piped",
+    "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
+    "Stargazers": 4329,
+    "StarredAt": "2022-12-20T20:23:53Z"
+  },
+  {
+    "NameWithOwner": "jdberry/tag",
+    "URL": "https://github.com/jdberry/tag",
+    "Description": "A command line tool to manipulate tags on Mac OS X files, and to query for files with those tags.",
+    "Stargazers": 1334,
+    "StarredAt": "2022-12-11T23:34:03Z"
+  },
+  {
+    "NameWithOwner": "ivaaaan/smug",
+    "URL": "https://github.com/ivaaaan/smug",
+    "Description": "Session manager and task runner for tmux. Start your development environment within one command.",
+    "Stargazers": 503,
+    "StarredAt": "2022-12-05T22:50:00Z"
+  },
+  {
+    "NameWithOwner": "sol/hpack",
+    "URL": "https://github.com/sol/hpack",
+    "Description": "hpack: A modern format for Haskell packages",
+    "Stargazers": 565,
+    "StarredAt": "2022-11-22T17:46:18Z"
+  },
+  {
+    "NameWithOwner": "compiler-explorer/compiler-explorer",
+    "URL": "https://github.com/compiler-explorer/compiler-explorer",
+    "Description": "Run compilers interactively from your web browser and interact with the assembly",
+    "Stargazers": 13129,
+    "StarredAt": "2022-11-13T19:29:56Z"
+  },
+  {
+    "NameWithOwner": "MechanicalDragon0687/ndsForwarder",
+    "URL": "https://github.com/MechanicalDragon0687/ndsForwarder",
+    "Description": "Generate and Install NDS Forwarders",
+    "Stargazers": 96,
+    "StarredAt": "2022-10-16T23:00:43Z"
+  }
+]

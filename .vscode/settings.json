@@ -13,6 +13,7 @@
     "changefreq",
     "emojify",
     "errorf",
+    "githubv",
     "gocolly",
     "goldmark",
     "goodreads",
@@ -37,9 +38,12 @@
     "openlibrary",
     "preinstall",
     "pygments",
+    "recents",
     "segmentit",
+    "shurcoo",
     "userdata",
-    "warnf"
+    "warnf",
+    "whitespaces"
   ],
   "css.format.enable": false,
   "github-actions.workflows.pinned.workflows": [

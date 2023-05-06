@@ -1,0 +1,38 @@
+[
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "URL": "https://github.com/wwmoraes/site/pull/2",
+    "Title": "fix: added initial giscus custom theme to match site bg color",
+    "State": "MERGED",
+    "CreatedAt": "2023-04-04T10:24:27Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "Azure/azure-cli",
+      "URL": "https://github.com/Azure/azure-cli",
+      "Description": "Azure Command-Line Interface",
+      "Stargazers": 3552
+    },
+    "URL": "https://github.com/Azure/azure-cli/pull/26013",
+    "Title": "[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set",
+    "State": "OPEN",
+    "CreatedAt": "2023-03-31T13:09:12Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/kubegraph",
+      "URL": "https://github.com/wwmoraes/kubegraph",
+      "Description": "Kubernetes resource graph generator",
+      "Stargazers": 10
+    },
+    "URL": "https://github.com/wwmoraes/kubegraph/pull/205",
+    "Title": "chore: added CII badge; replaced SonarCloud with Code Climate ones",
+    "State": "MERGED",
+    "CreatedAt": "2022-10-08T16:58:24Z"
+  }
+]

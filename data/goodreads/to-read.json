@@ -3,6 +3,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781492029502",
     "@type": "Book",
+    "name": "The Site Reliability Workbook: Practical Ways to Implement SRE",
     "author": [
       {
         "@context": "https://schema.org",
@@ -15,20 +16,20 @@
         "name": "David K. Rensin"
       }
     ],
-    "datePublished": "2018-08-04T00:00:00Z",
-    "isbn": "9781492029502",
-    "name": "The Site Reliability Workbook: Practical Ways to Implement SRE",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532993759l/39687146._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "O'Reilly Media"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532993759l/39687146._SX50_.jpg"
+    "datePublished": "2018-08-04T00:00:00Z",
+    "isbn": "9781492029502"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781491929124",
     "@type": "Book",
+    "name": "Site Reliability Engineering: How Google Runs Production Systems",
     "author": [
       {
         "@context": "https://schema.org",
@@ -51,20 +52,20 @@
         "name": "Niall Richard Murphy"
       }
     ],
-    "datePublished": "2016-01-01T00:00:00Z",
-    "isbn": "9781491929124",
-    "name": "Site Reliability Engineering: How Google Runs Production Systems",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "O'Reilly Media, Inc."
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg"
+    "datePublished": "2016-01-01T00:00:00Z",
+    "isbn": "9781491929124"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780132350884",
     "@type": "Book",
+    "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
     "author": [
       {
         "@context": "https://schema.org",
@@ -72,20 +73,20 @@
         "name": "Robert C. Martin"
       }
     ],
-    "datePublished": "2008-07-01T00:00:00Z",
-    "isbn": "9780132350884",
-    "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Prentice Hall"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293._SX50_.jpg"
+    "datePublished": "2008-07-01T00:00:00Z",
+    "isbn": "9780132350884"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780262046305",
     "@type": "Book",
+    "name": "Introduction to Algorithms",
     "author": [
       {
         "@context": "https://schema.org",
@@ -108,20 +109,20 @@
         "name": "Clifford Stein"
       }
     ],
-    "datePublished": "2022-01-01T00:00:00Z",
-    "isbn": "9780262046305",
-    "name": "Introduction to Algorithms",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635860502l/58064696._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "MIT Press"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635860502l/58064696._SX50_.jpg"
+    "datePublished": "2022-01-01T00:00:00Z",
+    "isbn": "9780262046305"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321200686",
     "@type": "Book",
+    "name": "Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions",
     "author": [
       {
         "@context": "https://schema.org",
@@ -134,20 +135,20 @@
         "name": "Bobby Woolf"
       }
     ],
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9780321200686",
-    "name": "Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347390905l/85012._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Programming Simplicity, LLC"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347390905l/85012._SX50_.jpg"
+    "datePublished": "2011-01-01T00:00:00Z",
+    "isbn": "9780321200686"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780201835953",
     "@type": "Book",
+    "name": "The Mythical Man-Month: Essays on Software Engineering",
     "author": [
       {
         "@context": "https://schema.org",
@@ -155,25 +156,25 @@
         "name": "Frederick P. Brooks"
       }
     ],
-    "datePublished": "1995-01-01T00:00:00Z",
-    "isbn": "9780201835953",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348430512l/13629._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Reading, Mass"
     },
-    "name": "The Mythical Man-Month: Essays on Software Engineering",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley Professional"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348430512l/13629._SX50_.jpg"
+    "datePublished": "1995-01-01T00:00:00Z",
+    "isbn": "9780201835953"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780988262591",
     "@type": "Book",
+    "name": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
     "author": [
       {
         "@context": "https://schema.org",
@@ -191,25 +192,25 @@
         "name": "George Spafford"
       }
     ],
-    "datePublished": "2013-01-01T00:00:00Z",
-    "isbn": "9780988262591",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Portland, Or"
     },
-    "name": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "IT Revolution Press"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg"
+    "datePublished": "2013-01-01T00:00:00Z",
+    "isbn": "9780988262591"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780137081073",
     "@type": "Book",
+    "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
     "author": [
       {
         "@context": "https://schema.org",
@@ -217,25 +218,25 @@
         "name": "Robert C. Martin"
       }
     ],
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9780137081073",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Upper Saddle River, NJ"
     },
-    "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Prentice Hall"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg"
+    "datePublished": "2011-01-01T00:00:00Z",
+    "isbn": "9780137081073"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780136915713",
     "@type": "Book",
+    "name": "Clean Craftsmanship: Disciplines, Standards, and Ethics",
     "author": [
       {
         "@context": "https://schema.org",
@@ -243,25 +244,25 @@
         "name": "Robert C. Martin"
       }
     ],
-    "datePublished": "2021-01-01T00:00:00Z",
-    "isbn": "9780136915713",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636153031l/56631473._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Boston"
     },
-    "name": "Clean Craftsmanship: Disciplines, Standards, and Ethics",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley Professional  Pearson Educational US"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636153031l/56631473._SX50_.jpg"
+    "datePublished": "2021-01-01T00:00:00Z",
+    "isbn": "9780136915713"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780452284234",
     "@type": "Book",
+    "name": "1984",
     "author": [
       {
         "@context": "https://schema.org",
@@ -269,25 +270,25 @@
         "name": "George Orwell"
       }
     ],
-    "datePublished": "2003-01-01T00:00:00Z",
-    "isbn": "9780452284234",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657781256l/61439040._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "New York"
     },
-    "name": "1984",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Plume"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657781256l/61439040._SX50_.jpg"
+    "datePublished": "2003-01-01T00:00:00Z",
+    "isbn": "9780452284234"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780544272996",
     "@type": "Book",
+    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #1)",
     "author": [
       {
         "@context": "https://schema.org",
@@ -300,20 +301,20 @@
         "name": "Randall Munroe"
       }
     ],
-    "datePublished": "2014-01-01T00:00:00Z",
-    "isbn": "9780544272996",
-    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #1)",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451351509l/21413662._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Houghton Mifflin Harcourt"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451351509l/21413662._SX50_.jpg"
+    "datePublished": "2014-01-01T00:00:00Z",
+    "isbn": "9780544272996"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780525537113",
     "@type": "Book",
+    "name": "What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #2)",
     "author": [
       {
         "@context": "https://schema.org",
@@ -321,20 +322,20 @@
         "name": "Randall Munroe"
       }
     ],
-    "datePublished": "2022-09-13T00:00:00Z",
-    "isbn": "9780525537113",
-    "name": "What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #2)",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1643644004l/60190659._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Riverhead Books"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1643644004l/60190659._SX50_.jpg"
+    "datePublished": "2022-09-13T00:00:00Z",
+    "isbn": "9780525537113"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780525537090",
     "@type": "Book",
+    "name": "How To: Absurd Scientific Advice for Common Real-World Problems",
     "author": [
       {
         "@context": "https://schema.org",
@@ -342,14 +343,20 @@
         "name": "Randall Munroe"
       }
     ],
-    "isbn": "9780525537090",
-    "name": "How To: Absurd Scientific Advice for Common Real-World Problems",
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550145086l/43852758._SX50_.jpg"
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550145086l/43852758._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Riverhead Books"
+    },
+    "datePublished": "2019-01-01T00:00:00Z",
+    "isbn": "9780525537090"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781451648539",
     "@type": "Book",
+    "name": "Steve Jobs",
     "author": [
       {
         "@context": "https://schema.org",
@@ -357,20 +364,20 @@
         "name": "Walter Isaacson"
       }
     ],
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9781451648539",
-    "name": "Steve Jobs",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Simon & Schuster"
+      "name": "Simon \u0026 Schuster"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg"
+    "datePublished": "2011-01-01T00:00:00Z",
+    "isbn": "9781451648539"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780787968052",
     "@type": "Book",
+    "name": "Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business",
     "author": [
       {
         "@context": "https://schema.org",
@@ -378,20 +385,20 @@
         "name": "Patrick Lencioni"
       }
     ],
-    "datePublished": "2004-03-04T00:00:00Z",
-    "isbn": "9780787968052",
-    "name": "Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Jossey-Bass"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg"
+    "datePublished": "2004-03-04T00:00:00Z",
+    "isbn": "9780787968052"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321127426",
     "@type": "Book",
+    "name": "Patterns of Enterprise Application Architecture",
     "author": [
       {
         "@context": "https://schema.org",
@@ -399,25 +406,25 @@
         "name": "Martin Fowler"
       }
     ],
-    "datePublished": "2003-01-01T00:00:00Z",
-    "isbn": "9780321127426",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Boston"
     },
-    "name": "Patterns of Enterprise Application Architecture",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg"
+    "datePublished": "2003-01-01T00:00:00Z",
+    "isbn": "9780321127426"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781491978863",
     "@type": "Book",
+    "name": "Seeking SRE: Conversations About Running Production Systems at Scale",
     "author": [
       {
         "@context": "https://schema.org",
@@ -425,20 +432,20 @@
         "name": "David N. Blank-Edelman"
       }
     ],
-    "datePublished": "2018-09-17T00:00:00Z",
-    "isbn": "9781491978863",
-    "name": "Sre in Practice",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503317453l/35355005._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "O'Reilly Media"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503317453l/35355005._SX50_.jpg"
+    "datePublished": "2018-09-17T00:00:00Z",
+    "isbn": "9781491978863"
   },
   {
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780471606956",
     "@type": "Book",
+    "name": "Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects",
     "author": [
       {
         "@context": "https://schema.org",
@@ -446,19 +453,94 @@
         "name": "Douglas C. Schmidt"
       }
     ],
-    "datePublished": "2000-01-01T00:00:00Z",
-    "isbn": "9780471606956",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348611783l/85030._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
       "name": "Chichester [England]"
     },
-    "name": "Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Wiley"
     },
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348611783l/85030._SX50_.jpg"
+    "datePublished": "2000-01-01T00:00:00Z",
+    "isbn": "9780471606956"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "The Elements of Style",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "William Strunk Jr."
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1429764791l/18882267._SY75_.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781492043454",
+    "@type": "Book",
+    "name": "Fundamentals of Software Architecture: An Engineering Approach",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mark Richards"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Neal Ford"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1580813753l/44144493._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media"
+    },
+    "datePublished": "2020-02-11T00:00:00Z",
+    "isbn": "9781492043454"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781492086895",
+    "@type": "Book",
+    "name": "Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Neal Ford"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mark Richards"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pramod Sadalage"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zhamak Dehghani"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1629825122l/58153482._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Incorporated"
+    },
+    "datePublished": "2021-01-01T00:00:00Z",
+    "isbn": "9781492086895"
   }
 ]

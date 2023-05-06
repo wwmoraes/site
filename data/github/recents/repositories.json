@@ -1,0 +1,62 @@
+[
+  {
+    "NameWithOwner": "wwmoraes/homebrew-tap",
+    "URL": "https://github.com/wwmoraes/homebrew-tap",
+    "Description": "formulae and casks for Homebrew",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/siever",
+    "URL": "https://github.com/wwmoraes/siever",
+    "Description": "RFC5804-compliant ManageSieve client in pure Go",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/maker-snippets",
+    "URL": "https://github.com/wwmoraes/maker-snippets",
+    "Description": "Maker repository with common GNU Make snippets",
+    "Stargazers": 1
+  },
+  {
+    "NameWithOwner": "wwmoraes/docker-engine-plugins",
+    "URL": "https://github.com/wwmoraes/docker-engine-plugins",
+    "Description": "Docker Engine plugins",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/cadvisor",
+    "URL": "https://github.com/wwmoraes/cadvisor",
+    "Description": "multi-platform cAdvisor container, because the world doesn't run on amd64 only",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/minit",
+    "URL": "https://github.com/wwmoraes/minit",
+    "Description": "minimal subreaper for containers",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/eso-addons",
+    "URL": "https://github.com/wwmoraes/eso-addons",
+    "Description": "Elder Scrolls Online addons",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/site",
+    "URL": "https://github.com/wwmoraes/site",
+    "Description": "my personal website",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/spoons",
+    "URL": "https://github.com/wwmoraes/spoons",
+    "Description": "Hammerspoon Spoons plugins",
+    "Stargazers": 0
+  },
+  {
+    "NameWithOwner": "wwmoraes/dotctl",
+    "URL": "https://github.com/wwmoraes/dotctl",
+    "Description": "cross-system customization using dot files",
+    "Stargazers": 0
+  }
+]

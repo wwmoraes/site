@@ -1,0 +1,15 @@
+{{- with $.Site.Data.github.recents.starred -}}
+<ul>
+  {{- range $_, $repository := . -}}
+  <li>
+    <a href="{{- .URL -}}" title="{{- .NameWithOwner -}}">
+      {{- .NameWithOwner -}}
+    </a>
+    {{- print "&nbsp;-&nbsp;" | safeHTML -}}
+    {{- .Description -}}
+    {{- print "&nbsp;" | safeHTML -}}
+    ({{- partial "moment" (time .StarredAt) -}})
+  </li>
+  {{- end -}}
+</ul>
+{{- end -}}
