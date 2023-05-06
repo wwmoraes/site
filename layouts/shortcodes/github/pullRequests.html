@@ -2,11 +2,12 @@
 <ul>
   {{- range $_, $repository := . -}}
   <li>
-    <a href="{{- .URL -}}" title="{{- .Title -}}">
+    <a href="{{- .URL -}}" title="{{- .Title -}}" rel="noreferrer noopener nofollow external">
       {{- .Title | markdownify -}}
     </a>
     {{- print "&nbsp;on&nbsp;" | safeHTML -}}
-    <a href="{{- .Repository.URL -}}" title="{{- .Repository.NameWithOwner -}}">
+    <a href="{{- .Repository.URL -}}" title="{{- .Repository.NameWithOwner -}}"
+      rel="noreferrer noopener nofollow external">
       {{- .Repository.NameWithOwner -}}
     </a>
     ({{- partial "moment" (time .CreatedAt) -}})

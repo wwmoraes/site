@@ -2,7 +2,7 @@
 <ul>
   {{- range $_, $repository := . -}}
   <li>
-    <a href="{{- .URL -}}" title="{{- .NameWithOwner -}}">
+    <a href="{{- .URL -}}" title="{{- .NameWithOwner -}}" rel="noreferrer noopener nofollow external">
       {{- .NameWithOwner -}}
     </a>
     {{- print "&nbsp;-&nbsp;" | safeHTML -}}

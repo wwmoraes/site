@@ -2,7 +2,7 @@
 <ul>
   {{- range $_, $repository := . -}}
   <li>
-    <a href="{{- .URL -}}" title="{{- .Description -}}">
+    <a href="{{- .URL -}}" title="{{- .Description -}}" rel="noreferrer noopener nofollow external">
       {{- .Description -}}
     </a>
     {{- print "&nbsp;" | safeHTML -}}
