@@ -39,6 +39,8 @@ runs:
 
     - name: build CLI
       uses: wwmoraes/actions/golang/build@master
+      env:
+        GOLANG_FLAGS: -race -mod=readonly
 
     - name: update GitHub data
       run: ./site update github
