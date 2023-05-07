@@ -48,8 +48,6 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	var data interface{}
-
 	var wg sync.WaitGroup
 	var errors []error
 
@@ -58,7 +56,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentContributions(cmd.Context(), count)
+		data, err := handler.GetRecentContributions(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -76,7 +74,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentRepositories(cmd.Context(), count)
+		data, err := handler.GetRecentRepositories(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -94,7 +92,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentReleases(cmd.Context(), count)
+		data, err := handler.GetRecentReleases(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -112,7 +110,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentPullRequests(cmd.Context(), count)
+		data, err := handler.GetRecentPullRequests(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -130,7 +128,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentStars(cmd.Context(), count)
+		data, err := handler.GetRecentStars(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -148,7 +146,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentGists(cmd.Context(), count)
+		data, err := handler.GetRecentGists(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return
@@ -166,7 +164,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	go func() {
 		defer wg.Done()
 
-		data, err = handler.GetRecentSponsors(cmd.Context(), count)
+		data, err := handler.GetRecentSponsors(cmd.Context(), count)
 		if err != nil {
 			errors = append(errors, err)
 			return

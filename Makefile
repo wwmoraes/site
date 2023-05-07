@@ -36,7 +36,7 @@ diagrams: ${DIAGRAMS_TARGETS}
 	plantuml -tpng -darkmode -theme reddress-darkblue $<
 
 github:
-	@op run --env-file=.env -- go run ./... update github
+	@op run --env-file=.env -- go run -race ./... update github
 
 books:
 	@go run ./... update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
