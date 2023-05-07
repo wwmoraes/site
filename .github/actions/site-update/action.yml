@@ -47,5 +47,5 @@ runs:
       shell: bash
 
     - name: update Goodreads data
-      run: ./site update --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+      run: ./site update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
       shell: bash
