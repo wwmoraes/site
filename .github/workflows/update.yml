@@ -6,12 +6,14 @@ on:
       - cmd/*
   schedule:
     - cron: "0 0 */1 * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  scribe:
+  update:
+    name: Update
     runs-on: ubuntu-latest
 
     steps:
