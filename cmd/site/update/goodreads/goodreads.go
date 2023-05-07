@@ -85,7 +85,7 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 		go func(shelf string) {
 			defer wg.Done()
 
-			err = fetch(cache, path, list, shelf)
+			err := fetch(cache, path, list, shelf)
 			if err != nil {
 				errors = append(errors, fmt.Errorf("failed to fetch shelf %s data: %w", shelf, err))
 			}

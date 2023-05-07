@@ -39,7 +39,7 @@ github:
 	@op run --env-file=.env -- go run -race ./... update github
 
 books:
-	@go run ./... update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+	@go run -race ./... update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
 
 ## EXIF tags management
 ## https://exiftool.org/examples.html
