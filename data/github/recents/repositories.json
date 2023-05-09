@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/cis1940",
+    "URL": "https://github.com/wwmoraes/cis1940",
+    "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/homebrew-tap",
     "URL": "https://github.com/wwmoraes/homebrew-tap",
     "Description": "formulae and casks for Homebrew",
@@ -51,12 +57,6 @@
     "NameWithOwner": "wwmoraes/spoons",
     "URL": "https://github.com/wwmoraes/spoons",
     "Description": "Hammerspoon Spoons plugins",
-    "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/dotctl",
-    "URL": "https://github.com/wwmoraes/dotctl",
-    "Description": "cross-system customization using dot files",
     "Stargazers": 0
   }
 ]

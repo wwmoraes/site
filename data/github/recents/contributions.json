@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/cis1940",
+      "URL": "https://github.com/wwmoraes/cis1940",
+      "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-05-08T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website",
@@ -64,19 +73,10 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/docker-engine-plugins",
-      "URL": "https://github.com/wwmoraes/docker-engine-plugins",
-      "Description": "Docker Engine plugins",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2022-09-11T07:00:00Z"
-  },
-  {
-    "Repository": {
       "NameWithOwner": "microsoft/terraform-provider-azuredevops",
       "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
       "Description": "Terraform Azure DevOps provider",
-      "Stargazers": 293
+      "Stargazers": 294
     },
     "OccurredAt": "2022-08-05T07:00:00Z"
   },
