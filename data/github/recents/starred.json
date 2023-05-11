@@ -10,35 +10,35 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19513,
+    "Stargazers": 19525,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
     "NameWithOwner": "haskell/stylish-haskell",
     "URL": "https://github.com/haskell/stylish-haskell",
     "Description": "Haskell code prettifier",
-    "Stargazers": 933,
+    "Stargazers": 931,
     "StarredAt": "2023-03-30T14:36:03Z"
   },
   {
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1278,
+    "Stargazers": 1280,
     "StarredAt": "2023-01-08T17:09:34Z"
   },
   {
     "NameWithOwner": "yattee/yattee",
     "URL": "https://github.com/yattee/yattee",
     "Description": "Privacy oriented video player for iOS, tvOS and macOS",
-    "Stargazers": 1282,
+    "Stargazers": 1283,
     "StarredAt": "2022-12-20T20:24:01Z"
   },
   {
     "NameWithOwner": "TeamPiped/Piped",
     "URL": "https://github.com/TeamPiped/Piped",
     "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
-    "Stargazers": 4356,
+    "Stargazers": 4367,
     "StarredAt": "2022-12-20T20:23:53Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "compiler-explorer/compiler-explorer",
     "URL": "https://github.com/compiler-explorer/compiler-explorer",
     "Description": "Run compilers interactively from your web browser and interact with the assembly",
-    "Stargazers": 13152,
+    "Stargazers": 13154,
     "StarredAt": "2022-11-13T19:29:56Z"
   }
 ]
