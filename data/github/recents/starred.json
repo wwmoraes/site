@@ -10,7 +10,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19554,
+    "Stargazers": 19557,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -24,7 +24,7 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1289,
+    "Stargazers": 1291,
     "StarredAt": "2023-01-08T17:09:34Z"
   },
   {
@@ -38,7 +38,7 @@
     "NameWithOwner": "TeamPiped/Piped",
     "URL": "https://github.com/TeamPiped/Piped",
     "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
-    "Stargazers": 4438,
+    "Stargazers": 4463,
     "StarredAt": "2022-12-20T20:23:53Z"
   },
   {
@@ -52,7 +52,7 @@
     "NameWithOwner": "ivaaaan/smug",
     "URL": "https://github.com/ivaaaan/smug",
     "Description": "Session manager and task runner for tmux. Start your development environment within one command.",
-    "Stargazers": 505,
+    "Stargazers": 504,
     "StarredAt": "2022-12-05T22:50:00Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "compiler-explorer/compiler-explorer",
     "URL": "https://github.com/compiler-explorer/compiler-explorer",
     "Description": "Run compilers interactively from your web browser and interact with the assembly",
-    "Stargazers": 13163,
+    "Stargazers": 13166,
     "StarredAt": "2022-11-13T19:29:56Z"
   }
 ]
