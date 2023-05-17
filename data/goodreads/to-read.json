@@ -542,5 +542,127 @@
     },
     "datePublished": "2021-01-01T00:00:00Z",
     "isbn": "9781492086895"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "The Book of Monads: Master the theory and practice of monads, applied to solve real world problems",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alejandro Serrano Mena"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1540627328l/42449863._SY75_.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/0785342213355",
+    "@type": "Book",
+    "name": "Refactoring to Patterns",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Kerievsky"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347966206l/85041._SX50_.jpg",
+    "isbn": "0785342213355"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321601919",
+    "@type": "Book",
+    "name": "Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jez Humble"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Farley"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347640457l/8686650._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley Professional"
+    },
+    "datePublished": "2010-01-01T00:00:00Z",
+    "isbn": "9780321601919"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321712943",
+    "@type": "Book",
+    "name": "Domain-Specific Languages (Addison-Wesley Signature Series",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347810217l/8082269._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Upper Saddle River, NJ"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2011-01-01T00:00:00Z",
+    "isbn": "9780321712943"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321336385",
+    "@type": "Book",
+    "name": "Continuous Integration: Improving Software Quality and Reducing Risk",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paul M. Duvall"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paul Duvall"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Steve Matyas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Glover"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372043941l/1311542._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Upper Saddle River, NJ"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2007-01-01T00:00:00Z",
+    "isbn": "9780321336385"
   }
 ]
