@@ -7,7 +7,7 @@ imaging:
   exif:
     disableDate: true
     disableLatLong: true
-    includeFields: "Copyright|ImageUniqueID|ImageDescription|Make"
+    includeFields: "Artist|Copyright|ImageUniqueID|ImageDescription|Make"
 
 params:
   rssFullText: true

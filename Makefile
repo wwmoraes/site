@@ -54,6 +54,7 @@ exif-show: ${IMAGES}
 		-Copyright \
 		-ImageUniqueID \
 		-ImageDescription \
+		-Artist \
 		-Make \
 		${IMAGE};echo "---";)
 

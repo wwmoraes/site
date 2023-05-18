@@ -5,17 +5,34 @@
 {{- $root = merge $root (dict "url" .Permalink) -}}
 {{- $root = merge $root (dict "width" .Width) -}}
 
+{{- $caption := .Title -}}
+
 {{- with .Exif -}}
 {{- with .Tags -}}
-{{- with .ImageDescription -}}
-{{- $root = merge $root (dict "caption" .) -}}
+
+{{- $caption = .ImageDescription | default $caption -}}
+{{- $root = merge $root (dict "caption" $caption) -}}
+
+{{- $copyright := .Copyright | default site.Copyright -}}
+{{- $root = merge $root (dict "copyrightNotice" $copyright) -}}
+{{- $root = merge $root (dict "license" $copyright) -}}
+
+{{- $credits := .Artist | default $copyright -}}
+{{- $root = merge $root (dict "creditText" $credits) -}}
+
+{{- $licenseURL := .ImageUniqueID | default site.BaseURL -}}
+{{- $root = merge $root (dict "acquireLicensePage" $licenseURL) -}}
+
+{{- $author := dict -}}
+{{- if and .Artist .ImageUniqueID -}}
+{{- $author = merge $author (dict "displayname" (.Artist | default "")) -}}
+{{- $author = merge $author (dict "url" (.ImageUniqueID | default "")) -}}
+{{- $author = partial "function/schema/person.html" $author -}}
+{{- else -}}
+{{- $author = partial "function/schema/person.html" site.Author -}}
 {{- end -}}
-{{- with .Copyright -}}
-{{- $root = merge $root (dict "copyrightNotice" .) -}}
-{{- end -}}
-{{- with .ImageUniqueID -}}
-{{- $root = merge $root (dict "acquireLicensePage" .) -}}
-{{- end -}}
+{{- $root = merge $root (dict "creator" $author) -}}
+
 {{- end -}}
 {{- end -}}
 
