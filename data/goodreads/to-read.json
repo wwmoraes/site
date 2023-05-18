@@ -664,5 +664,26 @@
     },
     "datePublished": "2007-01-01T00:00:00Z",
     "isbn": "9780321336385"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780521663502",
+    "@type": "Book",
+    "name": "Purely Functional Data Structures",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chris Okasaki"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388210737l/594288._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cambridge University Press"
+    },
+    "datePublished": "1999-01-01T00:00:00Z",
+    "isbn": "9780521663502"
   }
 ]
