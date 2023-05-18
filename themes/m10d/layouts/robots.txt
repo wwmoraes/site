@@ -11,6 +11,23 @@ Disallow: /icons/
 Disallow: /images/
 Disallow: /css/
 
+# Google annoys us about feeds not being canonical when using sitemaps
+User-agent: Googlebot
+{{- $files := slice "index.rss.xml" "index.atom.xml" "index.feed.json" }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $file }}
+{{- end }}
+{{- range $taxonomy, $terms := site.Taxonomies }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $taxonomy $file }}
+{{- end }}
+{{- range $term, $_ := $terms }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $taxonomy $term $file }}
+{{- end }}
+{{- end }}
+{{- end }}
+
 User-agent: MJ12bot
 Disallow: /
 
