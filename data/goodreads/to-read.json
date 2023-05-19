@@ -576,7 +576,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321601919",
     "@type": "Book",
-    "name": "Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation",
+    "name": "CONTINUOUS DELIVERY",
     "author": [
       {
         "@context": "https://schema.org",

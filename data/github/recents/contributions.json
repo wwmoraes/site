@@ -1,21 +1,21 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-05-18T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/cis1940",
       "URL": "https://github.com/wwmoraes/cis1940",
       "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
       "Stargazers": 0
     },
     "OccurredAt": "2023-05-08T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-05-07T07:00:00Z"
   },
   {
     "Repository": {
