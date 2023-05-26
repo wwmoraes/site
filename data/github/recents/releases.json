@@ -1,6 +1,18 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "qnikst/HaskellNet",
+      "URL": "https://github.com/qnikst/HaskellNet",
+      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
+      "Stargazers": 81
+    },
+    "Name": "",
+    "TagName": "v0.6.0.2",
+    "PublishedAt": "2023-01-05T09:31:19Z",
+    "URL": "https://github.com/qnikst/HaskellNet/releases/tag/v0.6.0.2"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "microsoft/terraform-provider-azuredevops",
       "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
       "Description": "Terraform Azure DevOps provider",

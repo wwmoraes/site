@@ -1,6 +1,30 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "qnikst/HaskellNet",
+      "URL": "https://github.com/qnikst/HaskellNet",
+      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
+      "Stargazers": 81
+    },
+    "URL": "https://github.com/qnikst/HaskellNet/pull/94",
+    "Title": "fix: use std lookup where needed",
+    "State": "MERGED",
+    "CreatedAt": "2023-05-25T16:33:27Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "qnikst/HaskellNet",
+      "URL": "https://github.com/qnikst/HaskellNet",
+      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
+      "Stargazers": 81
+    },
+    "URL": "https://github.com/qnikst/HaskellNet/pull/93",
+    "Title": "[WIP] fix: fetchHeaderFields and -Not",
+    "State": "MERGED",
+    "CreatedAt": "2023-05-25T13:48:01Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website",
@@ -16,7 +40,7 @@
       "NameWithOwner": "Azure/azure-cli",
       "URL": "https://github.com/Azure/azure-cli",
       "Description": "Azure Command-Line Interface",
-      "Stargazers": 3573
+      "Stargazers": 3574
     },
     "URL": "https://github.com/Azure/azure-cli/pull/26013",
     "Title": "[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set",
@@ -94,29 +118,5 @@
     "Title": "fix: icons target dependencies",
     "State": "MERGED",
     "CreatedAt": "2022-08-17T09:09:02Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/kubegraph",
-      "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
-    },
-    "URL": "https://github.com/wwmoraes/kubegraph/pull/177",
-    "Title": "added syft + grype",
-    "State": "MERGED",
-    "CreatedAt": "2022-08-07T12:16:24Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/kubegraph",
-      "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
-    },
-    "URL": "https://github.com/wwmoraes/kubegraph/pull/169",
-    "Title": "ci: added grype settings and cache",
-    "State": "MERGED",
-    "CreatedAt": "2022-08-07T11:28:44Z"
   }
 ]
