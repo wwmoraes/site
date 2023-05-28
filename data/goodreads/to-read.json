@@ -685,5 +685,19 @@
     },
     "datePublished": "1999-01-01T00:00:00Z",
     "isbn": "9780521663502"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "Learning eBPF",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Liz Rice"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1678857203l/123247910._SX50_.jpg"
   }
 ]
