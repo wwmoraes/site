@@ -15,13 +15,13 @@
 
 {{- $copyright := .Copyright | default site.Copyright -}}
 {{- $root = merge $root (dict "copyrightNotice" $copyright) -}}
-{{- $root = merge $root (dict "license" $copyright) -}}
 
 {{- $credits := .Artist | default $copyright -}}
 {{- $root = merge $root (dict "creditText" $credits) -}}
 
 {{- $licenseURL := .ImageUniqueID | default site.BaseURL -}}
 {{- $root = merge $root (dict "acquireLicensePage" $licenseURL) -}}
+{{- $root = merge $root (dict "license" $licenseURL) -}}
 
 {{- $author := dict -}}
 {{- if and .Artist .ImageUniqueID -}}
