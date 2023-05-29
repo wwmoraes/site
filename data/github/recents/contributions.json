@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/imapfilter",
+      "URL": "https://github.com/wwmoraes/imapfilter",
+      "Description": "IMAP message filtering and actions for humans, in pure Haskell",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-05-26T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
       "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
@@ -52,15 +61,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2022-12-12T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/siever",
-      "URL": "https://github.com/wwmoraes/siever",
-      "Description": "RFC5804-compliant ManageSieve client in pure Go",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2022-10-09T07:00:00Z"
   },
   {
     "Repository": {

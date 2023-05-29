@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/imapfilter",
+    "URL": "https://github.com/wwmoraes/imapfilter",
+    "Description": "IMAP message filtering and actions for humans, in pure Haskell",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/cis1940",
     "URL": "https://github.com/wwmoraes/cis1940",
     "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
@@ -51,12 +57,6 @@
     "NameWithOwner": "wwmoraes/site",
     "URL": "https://github.com/wwmoraes/site",
     "Description": "my personal website",
-    "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/spoons",
-    "URL": "https://github.com/wwmoraes/spoons",
-    "Description": "Hammerspoon Spoons plugins",
     "Stargazers": 0
   }
 ]
