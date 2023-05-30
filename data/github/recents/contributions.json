@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-05-29T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/imapfilter",
       "URL": "https://github.com/wwmoraes/imapfilter",
       "Description": "IMAP message filtering and actions for humans, in pure Haskell",
@@ -16,15 +25,6 @@
       "Stargazers": 81
     },
     "OccurredAt": "2023-05-25T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-05-18T07:00:00Z"
   },
   {
     "Repository": {
