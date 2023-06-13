@@ -1,5 +1,12 @@
 [
   {
+    "NameWithOwner": "nzbget-ng/nzbget",
+    "URL": "https://github.com/nzbget-ng/nzbget",
+    "Description": "Efficient Usenet Downloader",
+    "Stargazers": 210,
+    "StarredAt": "2023-06-12T21:52:38Z"
+  },
+  {
     "NameWithOwner": "boppreh/steamgrid",
     "URL": "https://github.com/boppreh/steamgrid",
     "Description": "Downloads images to fill your Steam grid view",
@@ -17,7 +24,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19717,
+    "Stargazers": 19728,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -31,21 +38,21 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1367,
+    "Stargazers": 1370,
     "StarredAt": "2023-01-08T17:09:34Z"
   },
   {
     "NameWithOwner": "yattee/yattee",
     "URL": "https://github.com/yattee/yattee",
     "Description": "Privacy oriented video player for iOS, tvOS and macOS",
-    "Stargazers": 1364,
+    "Stargazers": 1369,
     "StarredAt": "2022-12-20T20:24:01Z"
   },
   {
     "NameWithOwner": "TeamPiped/Piped",
     "URL": "https://github.com/TeamPiped/Piped",
     "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
-    "Stargazers": 4626,
+    "Stargazers": 4632,
     "StarredAt": "2022-12-20T20:23:53Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "Session manager and task runner for tmux. Start your development environment within one command.",
     "Stargazers": 509,
     "StarredAt": "2022-12-05T22:50:00Z"
-  },
-  {
-    "NameWithOwner": "sol/hpack",
-    "URL": "https://github.com/sol/hpack",
-    "Description": "hpack: A modern format for Haskell packages",
-    "Stargazers": 574,
-    "StarredAt": "2022-11-22T17:46:18Z"
   }
 ]
