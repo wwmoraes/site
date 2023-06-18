@@ -288,7 +288,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780544272996",
     "@type": "Book",
-    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #1)",
+    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
     "author": [
       {
         "@context": "https://schema.org",
