@@ -17,7 +17,7 @@
     "NameWithOwner": "boppreh/steamgrid",
     "URL": "https://github.com/boppreh/steamgrid",
     "Description": "Downloads images to fill your Steam grid view",
-    "Stargazers": 573,
+    "Stargazers": 575,
     "StarredAt": "2023-05-29T23:13:16Z"
   },
   {
@@ -31,7 +31,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19790,
+    "Stargazers": 19797,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -45,28 +45,28 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1398,
+    "Stargazers": 1402,
     "StarredAt": "2023-01-08T17:09:34Z"
   },
   {
     "NameWithOwner": "yattee/yattee",
     "URL": "https://github.com/yattee/yattee",
     "Description": "Privacy oriented video player for iOS, tvOS and macOS",
-    "Stargazers": 1391,
+    "Stargazers": 1393,
     "StarredAt": "2022-12-20T20:24:01Z"
   },
   {
     "NameWithOwner": "TeamPiped/Piped",
     "URL": "https://github.com/TeamPiped/Piped",
     "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
-    "Stargazers": 4698,
+    "Stargazers": 4702,
     "StarredAt": "2022-12-20T20:23:53Z"
   },
   {
     "NameWithOwner": "jdberry/tag",
     "URL": "https://github.com/jdberry/tag",
     "Description": "A command line tool to manipulate tags on Mac OS X files, and to query for files with those tags.",
-    "Stargazers": 1339,
+    "Stargazers": 1340,
     "StarredAt": "2022-12-11T23:34:03Z"
   }
 ]
