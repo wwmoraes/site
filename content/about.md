@@ -11,7 +11,7 @@ I'm William, a software engineer passionate about automation. I constantly code 
 
 Snarky by nature, described as cheeky and lively by peers. I tend to share my opinions and thoughts freely with teammates and stakeholders. Beating around the bush wastes time, and that's our most precious resource.
 
-Check out what I'm up to right [now](/now). You can also follow my [RSS](/index.rss.xml)/[ATOM](/index.atom.xml)/[JSON](/index.feed.json) feeds for updates.
+Check out what I'm up to right [now](/now). You can also follow my [RSS](/index.rss.xml)/[JSON](/index.feed.json) feeds for updates.
 
 ## Hiring
 
