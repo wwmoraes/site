@@ -51,7 +51,7 @@
             {{- $content = . -}}
           {{- end -}}
         {{- end -}}
-        {{- $content | safeHTML -}}
+        {{- $content | htmlUnescape | safeHTML -}}
       </div>
     </content>
   </entry>
