@@ -12,7 +12,7 @@ tags:
 - DevOps
 ---
 
-A search for the term DevOps on LinkedIn will yield countless posts and hundreds of jobs. The market for DevOps engineers is plentiful and has been for at least a decade now. Everyone wants to join the hype and either call themselves DevOps engineers or add the DevOps keyword in their CVs for that extra oomph. Is that the right thing to do?
+A search for the term DevOps on LinkedIn will yield countless posts and hundreds of jobs. The market for DevOps engineers is plentiful and has been for at least a decade now. Everyone wants to join the hype and either calls themselves DevOps engineers or adds the DevOps keyword in their CVs for that extra oomph. Is that the right thing to do?
 
 {{< figure "Perhaps?" >}}
 ![http://reactiongifs.com/?p=24986](http://www.reactiongifs.com/r/dsori.gif)
@@ -36,7 +36,7 @@ This definition is intentionally vague. Bodies of knowledge and processes' best 
 
 ## Automation
 
-We deem a system or process as automated when it requires minimal to no human intervention to make decisions. Note that this differs from *automatic*, which means a process that acts involuntarily. A car wash is automatic; a home light that turns itself on 30 minutes before dawn is automated.
+We deem a system or process as automated when it requires minimal to no human intervention to make decisions. Note that this differs from *automatic*, which means a process that acts involuntarily. A car wash is automatic; a home light that turns itself off 30 minutes before dawn is automated.
 
 The degree and scope of automation can vary between a small, atomic process and a bigger flow. An integration pipeline in a source code repository does not mean automation as per see. Let's say it has a step to run a lint tool and check the code. Regardless of the lint output, the merge requires a human to approve and execute it.
 
@@ -44,31 +44,31 @@ The degree and scope of automation can vary between a small, atomic process and 
 
 In such a scenario the linting is *automatic*, and the integration itself is manual. We'd have an *automated* integration if a merge happened after a successful lint run with no issues found.
 
-Before the four-eyes-principle priests start throwing rocks at me, mind you that this is a simplistic example to illustrate my argument. Certainly we'd need testing, checking the author against an authorized group and other more sophisticated checks like security and secret scanning to securely automate such flow.
+Before the four-eyes-principle priests start throwing rocks at me, mind you that this is a simplistic example to illustrate my argument. Certainly, we'd need testing, checking the author against an authorized group and other more sophisticated checks like security and secret scanning to securely automate such flow.
 
 ![http://reactiongifs.com/?p=24159](http://www.reactiongifs.com/r/jj.gif)
 
 ## The DevOps role
 
-If DevOps is knowledge and best practices, then the role means people that follow those, as you'd expect. The catch is how broad the term is: again, it acts as a double-edged sword here. It's not clear what's the exact set soft and hard skills nor the technologies a DevOps must know; instead, each company/industry has its wishlist printed on a DevOps-themed page.
+If DevOps is knowledge and best practices, then the role means people that follow those, as you'd expect. The catch is how broad the term is: again, it acts as a double-edged sword here. It's not clear what's the exact set of soft and hard skills nor the technologies a DevOps must know; instead, each company/industry has its wishlist printed on a DevOps-themed page.
 
-Aside from the technology stack, which is arguably subjective, one expects the required soft and hard skills to remain. For instance, the need for an engineer with programming and architecture experience should be consistent. Its not.
+Aside from the technology stack, which is arguably subjective, one expects the required soft and hard skills to remain. For instance, the need for an engineer with programming and architecture experience should be consistent. It's not.
 
 ![http://reactiongifs.com/?p=21184](http://www.reactiongifs.com/r/W28tx6T.gif)
 
 ### Expectation
 
-As a software engineer joining a position that mentions DevOps and automations, I expect a company looking for ways to, well, *automate*. That means investment into proper architecture and software development to handle certain domains within the business. This also leads to connecting those solutions in a way that certain decisions do not require human intervention.
+As a software engineer joining a position that mentions DevOps and automation, I expect a company looking for ways to, well, *automate*. That means investment into proper architecture and software development to handle certain domains within the business. This also leads to connecting those solutions in a way that certain decisions do not require human intervention.
 
 Those automations in turn would allow improving processes, or free up time to focus on other processes. Maintenance and operations then would derive from business rule changes and fine-tuning decisions the automation has to make.
 
-Is there margin for over-engineering here? Yes, there's always. The point is to solve a problem *without* creating another (dozen) one(s). And trust me, a pipeline that calls another pipeline that uses a CLI to trigger an API to do Odin knows what is *far* from the word stable, let alone testable. Yet some people prefer to deal with shell script quote shenanigans than to code in a properly typed and structured language. Beats me why.
+Is there a margin for over-engineering here? Yes, there's always. The point is to solve a problem *without* creating another (dozen) one(s). And trust me, a pipeline that calls another pipeline that uses a CLI to trigger an API to do Odin knows what is *far* from the word stable, let alone testable. Yet some people prefer to deal with shell script quote shenanigans than to code in a properly typed and structured language. Beats me why.
 
 ![http://reactiongifs.com/?p=18567](http://www.reactiongifs.com/r/but-why.gif)
 
 ### Reality
 
-What happens when you focus on gluing together dozens of scripts, CLIs and raw HTTP calls together? You risk to lose the why and numb yourself on how to best tackle the problem. You may even forget about how the big picture performs. Flagship solutions become the target, not the means to an end.
+What happens when you focus on gluing together dozens of scripts, CLIs and raw HTTP calls together? You risk losing the why and numb yourself on how to best tackle the problem. You may even forget about how the big picture performs. Flagship solutions become the target, not the means to an end.
 
 This means classic system administrators and operators are at home: this kind of specialized professional knows the in and out of specific solutions or vendor suites in the market. They can - and trust me, they will - get you onboard on all sorts of tools.
 
@@ -80,15 +80,15 @@ The day-to-day of DevOps engineers then becomes the maintenance of *magic* scrip
 
 ![http://reactiongifs.com/?p=24900](http://www.reactiongifs.com/r/idwt.gif)
 
-Granted, when done right, glueing tools can give awesome results. Kubernetes is a successful example of this. The difference of such project vs an average pipeline solution is simple: Kubernetes offer an extensive abstraction API layer on top of all the tools it uses. It smooths over differences between options so you don't have to. It also rely on a strongly typed and compiled language to provide both the coding security and functional testing needed.
+Granted, when done right, gluing tools can give awesome results. Kubernetes is a successful example of this. The difference between such a project and an average pipeline solution is simple: Kubernetes offers an extensive abstraction API layer on top of all the tools it uses. It smooths over differences between options so you don't have to. It also relies on a strongly typed and compiled language to provide both the coding security and functional testing needed.
 
-Don't get me wrong about vendored solutions. They deliver good value when you use them right and to its fullest. I have yet to see a company fully use all features of Jira, such as components, instead of relying on tags or external spreadsheets to sync up.
+Don't get me wrong about vendor solutions. They deliver good value when you use them right and to their fullest. I have yet to see a company fully use all features of Jira, such as components, instead of relying on tags or external spreadsheets to sync up.
 
 ![http://reactiongifs.com/?p=22317](http://www.reactiongifs.com/r/emb1.gif)
 
 ## What about SRE?
 
-Although part of the market uses both roles interchangeably, they differ in key areas. Some good sources for in-depth understanding are the Google books about the topic. They are [available online for free](https://sre.google/books/).  You can get a paperback or ebook copy on most stores as well. I'll briefly touch the points I feel the most important.
+Although part of the market uses both roles interchangeably, they differ in key areas. Some good sources for in-depth understanding are the books by Google about the topic. They are [available online for free](https://sre.google/books/).  You can get a paperback or ebook copy in most stores as well. I'll briefly touch on the points I feel are the most important.
 
 ### A superset
 
@@ -123,7 +123,7 @@ This to me is the biggest difference. Organizations often organize DevOps teams 
 
 ![https://tenor.com/en-GB/view/i-mean-yolo-right-you-only-live-once-right-you-got-to-go-for-it-you-have-to-risk-it-debby-ryan-gif-15835808](https://media.tenor.com/YXnqEtz2FCsAAAAC/i-mean-yolo-right-you-only-live-once-right.gif)
 
-A sharp reader will notice that all those patterns still have the classic operations team in direct contact with the developers, regardless of who wears the DevOps badge. If you want to know more about good and bad patterns then a I recommend the outstanding Team Topologies book, by Matthew Skelton.
+A sharp reader will notice that all those patterns still have the classic operations team in direct contact with the developers, regardless of who wears the DevOps badge. If you want to know more about good and bad patterns then I recommend the outstanding Team Topologies book, by Matthew Skelton.
 
 In the SRE model, the operations team works in complete isolation from the developers. They focus on maintaining the infrastructure and underlying solutions that shoulder the business. The SRE team then is an extension and interface that intakes solutions from the development teams and run them on top of it. Do they accept anything that's thrown at them? **No, and here lies the biggest difference.**
 
@@ -133,27 +133,27 @@ In the SRE model, the operations team works in complete isolation from the devel
 
 They treat each solution as a black box that needs to run; it doesn't matter what or how it does each of them does its job, as long as it can pull its weight. It also enables the SRE team to reduce outages and problems on their own, without either the development or operations teams unless strictly needed.
 
-This means they focus in the thin layer of glue needed to run and the entire catalog of services under their watch on top of the company's infrastructure. Automations to run, observe and recover faulty services automatically, falling back to alerts and incident management, are then put in place by them to keep the business running.
+This means they focus on the thin layer of glue needed to run and the entire catalog of services under their watch on top of the company's infrastructure. Automation to run, observe and recover faulty services automatically, falling back to alerts and incident management, are then put in place by them to keep the business running.
 
 ![https://tenor.com/en-GB/view/talk-about-credibility-michael-che-saturday-night-live-credible-validity-gif-16232625](https://media.tenor.com/ZxezqP2XjnQAAAAC/talk-about-credibility-michael-che.gif)
 
 ### Fail fast, recover faster
 
-Reliability is subjective. Most people consider the rate of failure as the sole indicator of it. What people forget to consider is who perceives a failure. If a customer never sees your solution down then it seems like a 100% uptime. How to make such illusion possible is the real magic here.
+Reliability is subjective. Most people consider the rate of failure as the sole indicator of it. What people forget to consider is who perceives failure. If a customer never sees your solution down then it seems like a 100% uptime. How to make such an illusion possible is the real magic here.
 
-For SREs, failure is inevitable. Taking hours to nurse a system back to health isn't. A system that takes a short time to recover gives the development team the confidence to increase the pace which they deliver changes, which reduces the size of size of each delivery, making them easier to test and fix.
+For SREs, failure is inevitable. Taking hours to nurse a system back to health isn't. A system that takes a short time to recover gives the development team the confidence to increase the pace at which they deliver changes, which reduces the size of each delivery, making them easier to test and fix.
 
-![https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210](https://media.tenor.com/UKcht54-7dgAAAAC/so-pure-rare.gif)
+![https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210]
 
-In comparison the DevOps lacks the authority and autonomy of the SRE to assert quality and deny low standards solutions. That means all checks and validations must run in the so-called *CI/CD pipelines*. A single project build and push may take dozens of minutes due to the level of hoops and repeated checks done each time.
+In comparison, DevOps lacks the authority and autonomy of the SRE to assert quality and deny low standards solutions. That means all checks and validations must run in the so-called *CI/CD pipelines*. A single project build and push may take dozens of minutes due to the level of hoops and repeated checks made each time.
 
-Its needless to mention all the trampoline gymnastics needed to trigger protected pipelines and whatnots, then poll their status to proceed. The end result? Teams stack changes to do a big-bang release to reduce the wait time.
+It's needless to mention all the trampoline gymnastics needed to trigger protected pipelines and whatnot, then poll their status to proceed. The end result? Teams stack changes to do a big-bang release to reduce the wait time.
 
 ![https://tenor.com/en-GB/view/enter-dev-developer-commit-git-gif-21009539](https://media.tenor.com/M0na3YR-rTcAAAAd/enter-dev.gif)
 
 ## And platform engineering?
 
-If done wrong, its the same as the system administrators 2.0. Check the [operation is not the job](#operation-is-not-the-job) above. Otherwise they are the precursor of SRE.
+If done wrong, it's the same as the system administrators 2.0. Check the [operation is not the job](#operation-is-not-the-job) above. Otherwise, they are the precursor of SRE.
 
 ![https://tenor.com/en-GB/view/same-different-but-still-gif-18224441](https://media.tenor.com/BRckVcpUYlUAAAAC/same-different.gif)
 
@@ -167,15 +167,15 @@ As far as I've seen, DevOps and platform teams tend to offer the same set of sol
 
 ![https://tenor.com/en-GB/view/burn-in-hell-elmo-fire-flame-gif-8764555](https://media.tenor.com/X1UBzspDL3kAAAAC/burn-in-hell-elmo.gif)
 
-On top of that, big companies may try to *empower* the product teams by delegating to them their own infrastructure management (see again [operation is not the job](#operation-is-not-the-job)). While the business believes this is automation and best practices, developers lose considerable time to learn, maintain and troubleshoot the custom solutions they need to handle.
+On top of that, big companies may try to *empower* the product teams by delegating to them their infrastructure management (see again [operation is not the job](#operation-is-not-the-job)). While the business believes this is automation and best practices, developers lose considerable time to learn, maintain and troubleshoot the custom solutions they need to handle.
 
-The platform team then has to deal with a surge of developers asking for help to troubleshoot the black box they call platform, and it snowballs. Ultimately they will create a support team to block those, following the ITIL practices. They may also document everything in their own terms to justify rejecting any requests for help.
+The platform team then has to deal with a surge of developers asking for help to troubleshoot the black box they call the platform, and it snowballs. Ultimately they will create a support team to block those, following the ITIL practices. They may also document everything on their terms to justify rejecting any requests for help.
 
 ![https://tenor.com/en-GB/view/the-it-crowd-moss-the-it-crowd-the-it-crowd-fire-moss-the-it-crowd-fire-richard-ayoade-gif-15210949](https://media.tenor.com/PRN-EHOCuHwAAAAd/the-it-crowd-moss-the-it-crowd.gif)
 
 ## Aftermath
 
-Misuse of the DevOps term and its partial implementation leads to a poor developer experience. Managers think process automation works fine, while the reality is that developers struggle to figure out how to consume the solutions provided. Troubleshooting becomes a drag. Operations then soars up, scaling proportionally with the engineering area size.
+Misuse of the DevOps term and its partial implementation leads to a poor developer experience. Managers think process automation works fine, while the reality is that developers struggle to figure out how to consume the solutions provided. Troubleshooting becomes a drag. Operations then soar up, scaling proportionally with the engineering area size.
 
 Flimsy integrations add up to that. Due to what I consider a misinterpretation of agility, managers may see a proper integration as something that doesn't deliver value to the external customer and is not worth the investment. This means a quick win using a convoluted and error-prone script running on a hidden pipeline sounds better than a properly designed and engineered solution.
 
@@ -183,10 +183,10 @@ Flimsy integrations add up to that. Due to what I consider a misinterpretation o
 
 Both problems lead to the Fear, Uncertainty and Doubt (FUD) syndrome: any change to the underlying resources faces high resistance within the developer team as they see the DevOps solutions as a disconnected black box. DevOps engineers conversely resist introducing any changes due to the fragile dependencies and hard-to-test pipelines and scripts.
 
-In the end, this kind of DevOps initiative becomes what it sought to destroy: a stale, maintenance-ridden platform solution that is slow and resistant to evolution. We need to break the misconceptions, before its too late.
+In the end, this kind of DevOps initiative becomes what it sought to destroy: a stale, maintenance-ridden platform solution that is slow and resistant to evolution. We need to break the misconceptions before it's too late.
 
 ![https://tenor.com/en-GB/view/send-help-help-help-me-help-me-im-poor-bad-situation-gif-15097358](https://media.tenor.com/oUI0zMDbavcAAAAC/send-help-help.gif)
 
-I love the practice and what it can bring to the development cycle. I also love to automate a process the right way, without shoehorning some Bash or Python around. Hence my profile changes.
+I love the practice and what it can bring to the development cycle. I also love to automate a process the right way, without shoehorning some Bash or Python around. Hence why I changed my profile.
 
 What about you? Do you have a vastly different experience when it comes to DevOps? Or perhaps you don't fully agree with something here? Please let me know in the comments, I'd love to further discuss about it.
