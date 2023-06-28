@@ -18,10 +18,10 @@
       "Description": "Terraform Azure DevOps provider",
       "Stargazers": 307
     },
-    "Name": "v0.5.0",
-    "TagName": "v0.5.0",
-    "PublishedAt": "2023-04-27T03:43:46Z",
-    "URL": "https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.5.0"
+    "Name": "v0.6.0",
+    "TagName": "v0.6.0",
+    "PublishedAt": "2023-06-27T07:23:05Z",
+    "URL": "https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.6.0"
   },
   {
     "Repository": {
