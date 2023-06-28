@@ -114,16 +114,16 @@ Sure, at the end of the day, a business actor still needs to click something som
 
 This to me is the biggest difference. Organizations often organize DevOps teams in anti-pattern topology. Some are:
 
-- independent DevOps team - bridges development and operations teams, a sort of DevOps-as-a-Service (DaaS)
-- "We all are DevOps engineers"/"DevOps is not needed" - developers either handle some superficial operations and offload the rest to the operations team, or outright switch to IaaS/SaaS/DaaS solutions
-- DevOps tooling team - a development team creates tools to interface the operations team's way of working and solutions. The other developers then rely on those
-- System Administrator 2.0 ™️ - the operations team either hires DevOps engineers or adopts solutions related to DevOps
+- **independent DevOps team** - bridges development and operations teams, a sort of DevOps-as-a-Service (DaaS)
+- **"We all are DevOps engineers"/"DevOps is not needed"** - developers either handle some superficial operations and offload the rest to the operations team, or outright switch to IaaS/SaaS/DaaS solutions
+- **DevOps tooling team** - a development team creates tools to interface the operations team's way of working and solutions. The other developers then rely on those
+- **System Administrator 2.0** ™️ - the operations team either hires DevOps engineers or adopts solutions related to DevOps
 - Ops as a Dev subset - there's no operations team; the development reserves time to do all operations
-- System Administrator 3.0 ™️ - same as the 2.0 + now they call themselves SRE
+- **System Administrator 3.0** ™️ - same as the 2.0 + now they call themselves SRE
 
 ![https://tenor.com/en-GB/view/i-mean-yolo-right-you-only-live-once-right-you-got-to-go-for-it-you-have-to-risk-it-debby-ryan-gif-15835808](https://media.tenor.com/YXnqEtz2FCsAAAAC/i-mean-yolo-right-you-only-live-once-right.gif)
 
-A sharp reader will notice that all those patterns still have the classic operations team in direct contact with the developers, regardless of who wears the DevOps badge. If you want to know more about good and bad patterns then I recommend the outstanding Team Topologies book, by Matthew Skelton.
+A sharp reader will notice that all those patterns still have the classic operations team in direct contact with the developers, regardless of who wears the DevOps badge. If you want to know more about good and bad patterns then I recommend the outstanding [Team Topologies book by Matthew Skelton](https://teamtopologies.com/book).
 
 In the SRE model, the operations team works in complete isolation from the developers. They focus on maintaining the infrastructure and underlying solutions that shoulder the business. The SRE team then is an extension and interface that intakes solutions from the development teams and run them on top of it. Do they accept anything that's thrown at them? **No, and here lies the biggest difference.**
 
@@ -190,3 +190,11 @@ In the end, this kind of DevOps initiative becomes what it sought to destroy: a 
 I love the practice and what it can bring to the development cycle. I also love to automate a process the right way, without shoehorning some Bash or Python around. Hence why I changed my profile.
 
 What about you? Do you have a vastly different experience when it comes to DevOps? Or perhaps you don't fully agree with something here? Please let me know in the comments, I'd love to further discuss about it.
+
+{{< admonition edit "Edit 1" >}}
+
+- Typo fixes
+- better formatting for some lengthy lists
+- added a link to the Team Topologies book page.
+
+{{< /admonition >}}
