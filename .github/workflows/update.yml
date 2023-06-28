@@ -5,7 +5,7 @@ on:
     paths:
       - cmd/*
   schedule:
-    - cron: "0 0 */1 * *"
+    - cron: "0 8 */1 * *"
   workflow_dispatch:
 
 permissions:
