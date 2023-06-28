@@ -56,7 +56,7 @@
       {{ with $.Site.Author.email -}}
       <author>{{- . -}}{{- with $.Site.Author.displayname }} ({{- . -}}){{- end -}}</author>
       {{- end }}
-      <guid isPermaLink="false">{{ partial "function/tag-uri" . }}</guid>
+      <guid>{{ .Page.Permalink }}</guid>
       <description>
         {{ printf "<![CDATA[" | safeHTML }}
         {{ $content := .Page.Description -}}
