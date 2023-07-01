@@ -143,11 +143,11 @@ Reliability is subjective. Most people consider the rate of failure as the sole 
 
 For SREs, failure is inevitable. Taking hours to nurse a system back to health isn't. A system that takes a short time to recover gives the development team the confidence to increase the pace at which they deliver changes, which reduces the size of each delivery, making them easier to test and fix.
 
-![https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210]
+![https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210](https://media.tenor.com/UKcht54-7dgAAAAC/so-pure-rare.gif)
 
 In comparison, DevOps lacks the authority and autonomy of the SRE to assert quality and deny low standards solutions. That means all checks and validations must run in the so-called *CI/CD pipelines*. A single project build and push may take dozens of minutes due to the level of hoops and repeated checks made each time.
 
-It's needless to mention all the trampoline gymnastics needed to trigger protected pipelines and whatnot, then poll their status to proceed. The end result? Teams stack changes to do a big-bang release to reduce the wait time.
+It's needless to mention all the trampoline gymnastics needed to trigger protected pipelines and whatnot, then poll their status to proceed. The result? Teams stack changes to do a big-bang release to reduce the wait time.
 
 ![https://tenor.com/en-GB/view/enter-dev-developer-commit-git-gif-21009539](https://media.tenor.com/M0na3YR-rTcAAAAd/enter-dev.gif)
 
