@@ -5,9 +5,7 @@ images:
 table-of-contents: false
 ---
 
-## Career
-
-### In progress
+## Tasks
 
 - [ ] refactor my Gmail filters from Google Apps Script to generic IMAP
 - [ ] automate post sharing to LinkedIn/DevTo/Twitter
@@ -15,16 +13,14 @@ table-of-contents: false
 - [x] learn Haskell and pure functional programming
 - [x] do the CIS 194 course homework
 
-## Books
-
-### Reading
+## Reading
 
 {{< goodreads "currently-reading" >}}
 
-### Read
+## Read
 
 {{< goodreads "read" >}}
 
-### Want to read
+## Want to read
 
 {{< goodreads "to-read" >}}
