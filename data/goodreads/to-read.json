@@ -730,5 +730,26 @@
     },
     "datePublished": "2019-01-01T00:00:00Z",
     "isbn": "9781942788829"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781098100131",
+    "@type": "Book",
+    "name": "Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vladik Khononov"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635258056l/57573212._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Incorporated"
+    },
+    "datePublished": "2021-01-01T00:00:00Z",
+    "isbn": "9781098100131"
   }
 ]
