@@ -1,5 +1,12 @@
 [
   {
+    "NameWithOwner": "utdemir/ghc-musl",
+    "URL": "https://github.com/utdemir/ghc-musl",
+    "Description": "Docker image with GHC+musl for static executables",
+    "Stargazers": 137,
+    "StarredAt": "2023-07-13T15:54:12Z"
+  },
+  {
     "NameWithOwner": "stefantalpalaru/deluge-default-trackers",
     "URL": "https://github.com/stefantalpalaru/deluge-default-trackers",
     "Description": "Deluge plugin for adding default trackers to all the new torrents",
@@ -31,7 +38,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19926,
+    "Stargazers": 19939,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -45,28 +52,21 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1449,
+    "Stargazers": 1453,
     "StarredAt": "2023-01-08T17:09:34Z"
   },
   {
     "NameWithOwner": "yattee/yattee",
     "URL": "https://github.com/yattee/yattee",
     "Description": "Privacy oriented video player for iOS, tvOS and macOS",
-    "Stargazers": 1493,
+    "Stargazers": 1495,
     "StarredAt": "2022-12-20T20:24:01Z"
   },
   {
     "NameWithOwner": "TeamPiped/Piped",
     "URL": "https://github.com/TeamPiped/Piped",
     "Description": "An alternative privacy-friendly YouTube frontend which is efficient by design.",
-    "Stargazers": 4877,
+    "Stargazers": 4883,
     "StarredAt": "2022-12-20T20:23:53Z"
-  },
-  {
-    "NameWithOwner": "jdberry/tag",
-    "URL": "https://github.com/jdberry/tag",
-    "Description": "A command line tool to manipulate tags on Mac OS X files, and to query for files with those tags.",
-    "Stargazers": 1344,
-    "StarredAt": "2022-12-11T23:34:03Z"
   }
 ]
