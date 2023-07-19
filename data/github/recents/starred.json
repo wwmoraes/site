@@ -31,7 +31,7 @@
     "NameWithOwner": "nzbget-ng/nzbget",
     "URL": "https://github.com/nzbget-ng/nzbget",
     "Description": "Efficient Usenet Downloader",
-    "Stargazers": 222,
+    "Stargazers": 223,
     "StarredAt": "2023-06-12T21:52:38Z"
   },
   {
@@ -52,7 +52,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19970,
+    "Stargazers": 19974,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1468,
+    "Stargazers": 1469,
     "StarredAt": "2023-01-08T17:09:34Z"
   }
 ]
