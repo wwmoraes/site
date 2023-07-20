@@ -3,7 +3,7 @@
     "NameWithOwner": "RickDB/PlexAniSync",
     "URL": "https://github.com/RickDB/PlexAniSync",
     "Description": "Sync Plex anime library to AniList",
-    "Stargazers": 212,
+    "Stargazers": 213,
     "StarredAt": "2023-07-17T23:10:12Z"
   },
   {
@@ -24,7 +24,7 @@
     "NameWithOwner": "stefantalpalaru/deluge-default-trackers",
     "URL": "https://github.com/stefantalpalaru/deluge-default-trackers",
     "Description": "Deluge plugin for adding default trackers to all the new torrents",
-    "Stargazers": 127,
+    "Stargazers": 129,
     "StarredAt": "2023-06-15T09:50:24Z"
   },
   {
@@ -52,7 +52,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 19974,
+    "Stargazers": 19982,
     "StarredAt": "2023-04-15T13:21:05Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "tefkah/zotero-night",
     "URL": "https://github.com/tefkah/zotero-night",
     "Description": "Night theme for Zotero UI and PDF",
-    "Stargazers": 1469,
+    "Stargazers": 1471,
     "StarredAt": "2023-01-08T17:09:34Z"
   }
 ]
