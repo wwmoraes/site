@@ -85,7 +85,7 @@
       "NameWithOwner": "microsoft/terraform-provider-azuredevops",
       "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
       "Description": "Terraform Azure DevOps provider",
-      "Stargazers": 310
+      "Stargazers": 311
     },
     "OccurredAt": "2022-08-05T07:00:00Z"
   }
