@@ -1,5 +1,12 @@
 [
   {
+    "NameWithOwner": "cross-seed/cross-seed",
+    "URL": "https://github.com/cross-seed/cross-seed",
+    "Description": "Fully-automatic cross-seeding with Torznab",
+    "Stargazers": 460,
+    "StarredAt": "2023-07-23T14:55:14Z"
+  },
+  {
     "NameWithOwner": "r3labs/diff",
     "URL": "https://github.com/r3labs/diff",
     "Description": "A library for diffing golang structures",
@@ -10,7 +17,7 @@
     "NameWithOwner": "RickDB/PlexAniSync",
     "URL": "https://github.com/RickDB/PlexAniSync",
     "Description": "Sync Plex anime library to AniList",
-    "Stargazers": 213,
+    "Stargazers": 214,
     "StarredAt": "2023-07-17T23:10:12Z"
   },
   {
@@ -24,7 +31,7 @@
     "NameWithOwner": "utdemir/ghc-musl",
     "URL": "https://github.com/utdemir/ghc-musl",
     "Description": "Docker image with GHC+musl for static executables",
-    "Stargazers": 137,
+    "Stargazers": 136,
     "StarredAt": "2023-07-13T15:54:12Z"
   },
   {
@@ -59,14 +66,7 @@
     "NameWithOwner": "gocolly/colly",
     "URL": "https://github.com/gocolly/colly",
     "Description": "Elegant Scraper and Crawler Framework for Golang",
-    "Stargazers": 20002,
+    "Stargazers": 20009,
     "StarredAt": "2023-04-15T13:21:05Z"
-  },
-  {
-    "NameWithOwner": "haskell/stylish-haskell",
-    "URL": "https://github.com/haskell/stylish-haskell",
-    "Description": "Haskell code prettifier",
-    "Stargazers": 945,
-    "StarredAt": "2023-03-30T14:36:03Z"
   }
 ]
