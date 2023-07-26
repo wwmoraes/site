@@ -1,9 +1,23 @@
 [
   {
+    "NameWithOwner": "ZeroQI/Hama.bundle",
+    "URL": "https://github.com/ZeroQI/Hama.bundle",
+    "Description": "Plex HTTP Anidb Metadata Agent (HAMA)",
+    "Stargazers": 1113,
+    "StarredAt": "2023-07-25T16:32:21Z"
+  },
+  {
+    "NameWithOwner": "ZeroQI/Absolute-Series-Scanner",
+    "URL": "https://github.com/ZeroQI/Absolute-Series-Scanner",
+    "Description": "Seasons, absolute mode, Subfolders...",
+    "Stargazers": 905,
+    "StarredAt": "2023-07-25T16:32:18Z"
+  },
+  {
     "NameWithOwner": "LeDragoX/Win-Debloat-Tools",
     "URL": "https://github.com/LeDragoX/Win-Debloat-Tools",
     "Description": "These scripts will Customize, Debloat and Improve Privacy/Performance and System Responsiveness on Windows 10+.",
-    "Stargazers": 2844,
+    "Stargazers": 2847,
     "StarredAt": "2023-07-24T15:55:18Z"
   },
   {
@@ -54,19 +68,5 @@
     "Description": "Efficient Usenet Downloader",
     "Stargazers": 226,
     "StarredAt": "2023-06-12T21:52:38Z"
-  },
-  {
-    "NameWithOwner": "boppreh/steamgrid",
-    "URL": "https://github.com/boppreh/steamgrid",
-    "Description": "Downloads images to fill your Steam grid view",
-    "Stargazers": 582,
-    "StarredAt": "2023-05-29T23:13:16Z"
-  },
-  {
-    "NameWithOwner": "WalshyDev/cf-pages-await",
-    "URL": "https://github.com/WalshyDev/cf-pages-await",
-    "Description": "Wait for your Cloudflare Pages builds to finish!",
-    "Stargazers": 54,
-    "StarredAt": "2023-05-06T15:41:55Z"
   }
 ]
