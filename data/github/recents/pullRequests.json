@@ -4,7 +4,7 @@
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
       "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 82
+      "Stargazers": 83
     },
     "URL": "https://github.com/qnikst/HaskellNet/pull/94",
     "Title": "fix: use std lookup where needed",
@@ -16,7 +16,7 @@
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
       "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 82
+      "Stargazers": 83
     },
     "URL": "https://github.com/qnikst/HaskellNet/pull/93",
     "Title": "[WIP] fix: fetchHeaderFields and -Not",
@@ -40,7 +40,7 @@
       "NameWithOwner": "Azure/azure-cli",
       "URL": "https://github.com/Azure/azure-cli",
       "Description": "Azure Command-Line Interface",
-      "Stargazers": 3648
+      "Stargazers": 3649
     },
     "URL": "https://github.com/Azure/azure-cli/pull/26013",
     "Title": "[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set",
