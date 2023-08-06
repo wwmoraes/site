@@ -13,18 +13,6 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "microsoft/terraform-provider-azuredevops",
-      "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
-      "Description": "Terraform Azure DevOps provider",
-      "Stargazers": 313
-    },
-    "Name": "v0.7.0",
-    "TagName": "v0.7.0",
-    "PublishedAt": "2023-07-20T07:59:31Z",
-    "URL": "https://github.com/microsoft/terraform-provider-azuredevops/releases/tag/v0.7.0"
-  },
-  {
-    "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
       "Description": "Kubernetes resource graph generator",
