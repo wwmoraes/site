@@ -82,11 +82,11 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "microsoft/terraform-provider-azuredevops",
-      "URL": "https://github.com/microsoft/terraform-provider-azuredevops",
-      "Description": "Terraform Azure DevOps provider",
-      "Stargazers": 313
+      "NameWithOwner": "wwmoraes/maker-snippets",
+      "URL": "https://github.com/wwmoraes/maker-snippets",
+      "Description": "Maker repository with common GNU Make snippets",
+      "Stargazers": 1
     },
-    "OccurredAt": "2022-08-05T07:00:00Z"
+    "OccurredAt": "2022-09-27T07:00:00Z"
   }
 ]
