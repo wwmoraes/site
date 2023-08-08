@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/anilistarr",
+      "URL": "https://github.com/wwmoraes/anilistarr",
+      "Description": "anilist custom list provider for sonarr/radarr",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-08-02T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website",
@@ -22,7 +31,7 @@
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
       "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 83
+      "Stargazers": 84
     },
     "OccurredAt": "2023-05-25T07:00:00Z"
   },
@@ -79,14 +88,5 @@
       "Stargazers": 10
     },
     "OccurredAt": "2022-10-08T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/maker-snippets",
-      "URL": "https://github.com/wwmoraes/maker-snippets",
-      "Description": "Maker repository with common GNU Make snippets",
-      "Stargazers": 1
-    },
-    "OccurredAt": "2022-09-27T07:00:00Z"
   }
 ]

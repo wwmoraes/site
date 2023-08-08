@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/anilistarr",
+    "URL": "https://github.com/wwmoraes/anilistarr",
+    "Description": "anilist custom list provider for sonarr/radarr",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/imapfilter",
     "URL": "https://github.com/wwmoraes/imapfilter",
     "Description": "IMAP message filtering and actions for humans, in pure Haskell",
@@ -51,12 +57,6 @@
     "NameWithOwner": "wwmoraes/eso-addons",
     "URL": "https://github.com/wwmoraes/eso-addons",
     "Description": "Elder Scrolls Online addons",
-    "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/site",
-    "URL": "https://github.com/wwmoraes/site",
-    "Description": "my personal website",
     "Stargazers": 0
   }
 ]
