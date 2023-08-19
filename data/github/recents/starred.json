@@ -1,72 +1,72 @@
 [
   {
-    "NameWithOwner": "cosmtrek/air",
-    "URL": "https://github.com/cosmtrek/air",
-    "Description": "☁️ Live reload for Go apps",
-    "Stargazers": 11246,
-    "StarredAt": "2023-07-27T15:06:19Z"
+    "NameWithOwner": "openobserve/openobserve",
+    "URL": "https://github.com/openobserve/openobserve",
+    "Description": "🚀 10x easier, 🚀 140x lower storage cost, 🚀 high performance,  🚀 petabyte scale - Elasticsearch/Splunk/Datadog alternative for 🚀 (logs, metrics, traces).",
+    "Stargazers": 6146,
+    "StarredAt": "2023-08-19T00:23:42Z"
   },
   {
-    "NameWithOwner": "ZeroQI/Hama.bundle",
-    "URL": "https://github.com/ZeroQI/Hama.bundle",
-    "Description": "Plex HTTP Anidb Metadata Agent (HAMA)",
-    "Stargazers": 1116,
-    "StarredAt": "2023-07-25T16:32:21Z"
+    "NameWithOwner": "pwoelfle/synology-cli",
+    "URL": "https://github.com/pwoelfle/synology-cli",
+    "Description": "Access your Synology using Command Line Interface",
+    "Stargazers": 11,
+    "StarredAt": "2023-08-19T00:23:22Z"
   },
   {
-    "NameWithOwner": "ZeroQI/Absolute-Series-Scanner",
-    "URL": "https://github.com/ZeroQI/Absolute-Series-Scanner",
-    "Description": "Seasons, absolute mode, Subfolders...",
-    "Stargazers": 908,
-    "StarredAt": "2023-07-25T16:32:18Z"
+    "NameWithOwner": "mcuadros/ofelia",
+    "URL": "https://github.com/mcuadros/ofelia",
+    "Description": "A docker job scheduler (aka. crontab for docker)",
+    "Stargazers": 2489,
+    "StarredAt": "2023-08-19T00:21:30Z"
   },
   {
-    "NameWithOwner": "LeDragoX/Win-Debloat-Tools",
-    "URL": "https://github.com/LeDragoX/Win-Debloat-Tools",
-    "Description": "These scripts will Customize, Debloat and Improve Privacy/Performance and System Responsiveness on Windows 10+.",
-    "Stargazers": 2943,
-    "StarredAt": "2023-07-24T15:55:18Z"
+    "NameWithOwner": "felangel/mason",
+    "URL": "https://github.com/felangel/mason",
+    "Description": "Tools which allow developers to create and consume reusable templates called bricks.",
+    "Stargazers": 795,
+    "StarredAt": "2023-08-19T00:18:37Z"
   },
   {
-    "NameWithOwner": "cross-seed/cross-seed",
-    "URL": "https://github.com/cross-seed/cross-seed",
-    "Description": "Fully-automatic cross-seeding with Torznab",
-    "Stargazers": 484,
-    "StarredAt": "2023-07-23T14:55:14Z"
+    "NameWithOwner": "jetpack-io/typeid",
+    "URL": "https://github.com/jetpack-io/typeid",
+    "Description": "Type-safe, K-sortable, globally unique identifier inspired by Stripe IDs",
+    "Stargazers": 2304,
+    "StarredAt": "2023-08-19T00:18:24Z"
   },
   {
-    "NameWithOwner": "r3labs/diff",
-    "URL": "https://github.com/r3labs/diff",
-    "Description": "A library for diffing golang structures",
-    "Stargazers": 766,
-    "StarredAt": "2023-07-21T07:21:19Z"
+    "NameWithOwner": "uber-go/automaxprocs",
+    "URL": "https://github.com/uber-go/automaxprocs",
+    "Description": "Automatically set GOMAXPROCS to match Linux container CPU quota.",
+    "Stargazers": 3025,
+    "StarredAt": "2023-08-19T00:18:12Z"
   },
   {
-    "NameWithOwner": "RickDB/PlexAniSync",
-    "URL": "https://github.com/RickDB/PlexAniSync",
-    "Description": "Sync Plex anime library to AniList",
-    "Stargazers": 224,
-    "StarredAt": "2023-07-17T23:10:12Z"
+    "NameWithOwner": "npryce/adr-tools",
+    "URL": "https://github.com/npryce/adr-tools",
+    "Description": "Command-line tools for working with Architecture Decision Records",
+    "Stargazers": 4034,
+    "StarredAt": "2023-08-19T00:17:57Z"
   },
   {
-    "NameWithOwner": "JvSomeren/tautulli-watched-sync",
-    "URL": "https://github.com/JvSomeren/tautulli-watched-sync",
-    "Description": "Use this script to make Tautulli for plex synchronize watched TV Shows to Trakt.tv and movies to Letterboxd",
-    "Stargazers": 20,
-    "StarredAt": "2023-07-17T22:36:41Z"
+    "NameWithOwner": "goadesign/model",
+    "URL": "https://github.com/goadesign/model",
+    "Description": "Create your software architecture models and diagrams in Go.",
+    "Stargazers": 222,
+    "StarredAt": "2023-08-19T00:17:44Z"
   },
   {
-    "NameWithOwner": "utdemir/ghc-musl",
-    "URL": "https://github.com/utdemir/ghc-musl",
-    "Description": "Docker image with GHC+musl for static executables",
-    "Stargazers": 136,
-    "StarredAt": "2023-07-13T15:54:12Z"
+    "NameWithOwner": "goadesign/clue",
+    "URL": "https://github.com/goadesign/clue",
+    "Description": "Microservice instrumentation",
+    "Stargazers": 46,
+    "StarredAt": "2023-08-19T00:17:21Z"
   },
   {
-    "NameWithOwner": "stefantalpalaru/deluge-default-trackers",
-    "URL": "https://github.com/stefantalpalaru/deluge-default-trackers",
-    "Description": "Deluge plugin for adding default trackers to all the new torrents",
-    "Stargazers": 128,
-    "StarredAt": "2023-06-15T09:50:24Z"
+    "NameWithOwner": "slok/sloth",
+    "URL": "https://github.com/slok/sloth",
+    "Description": "🦥 Easy and simple Prometheus SLO (service level objectives) generator",
+    "Stargazers": 1733,
+    "StarredAt": "2023-08-19T00:16:36Z"
   }
 ]
