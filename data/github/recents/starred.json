@@ -1,72 +1,72 @@
 [
   {
-    "NameWithOwner": "openobserve/openobserve",
-    "URL": "https://github.com/openobserve/openobserve",
-    "Description": "🚀 10x easier, 🚀 140x lower storage cost, 🚀 high performance,  🚀 petabyte scale - Elasticsearch/Splunk/Datadog alternative for 🚀 (logs, metrics, traces).",
-    "Stargazers": 6146,
-    "StarredAt": "2023-08-19T00:23:42Z"
+    "NameWithOwner": "terraform-docs/terraform-docs",
+    "URL": "https://github.com/terraform-docs/terraform-docs",
+    "Description": "Generate documentation from Terraform modules in various output formats",
+    "Stargazers": 3643,
+    "StarredAt": "2023-08-20T01:07:48Z"
   },
   {
-    "NameWithOwner": "pwoelfle/synology-cli",
-    "URL": "https://github.com/pwoelfle/synology-cli",
-    "Description": "Access your Synology using Command Line Interface",
-    "Stargazers": 11,
-    "StarredAt": "2023-08-19T00:23:22Z"
+    "NameWithOwner": "opnsense/core",
+    "URL": "https://github.com/opnsense/core",
+    "Description": "OPNsense GUI, API and systems backend",
+    "Stargazers": 2569,
+    "StarredAt": "2023-08-20T00:59:37Z"
   },
   {
-    "NameWithOwner": "mcuadros/ofelia",
-    "URL": "https://github.com/mcuadros/ofelia",
-    "Description": "A docker job scheduler (aka. crontab for docker)",
-    "Stargazers": 2489,
-    "StarredAt": "2023-08-19T00:21:30Z"
+    "NameWithOwner": "infracost/infracost",
+    "URL": "https://github.com/infracost/infracost",
+    "Description": "Cloud cost estimates for Terraform in pull requests💰📉 Love your cloud bill!",
+    "Stargazers": 9432,
+    "StarredAt": "2023-08-20T00:56:17Z"
   },
   {
-    "NameWithOwner": "felangel/mason",
-    "URL": "https://github.com/felangel/mason",
-    "Description": "Tools which allow developers to create and consume reusable templates called bricks.",
-    "Stargazers": 795,
-    "StarredAt": "2023-08-19T00:18:37Z"
+    "NameWithOwner": "kiali/kiali",
+    "URL": "https://github.com/kiali/kiali",
+    "Description": "Kiali project, observability for the Istio service mesh",
+    "Stargazers": 3179,
+    "StarredAt": "2023-08-20T00:38:15Z"
   },
   {
-    "NameWithOwner": "jetpack-io/typeid",
-    "URL": "https://github.com/jetpack-io/typeid",
-    "Description": "Type-safe, K-sortable, globally unique identifier inspired by Stripe IDs",
-    "Stargazers": 2304,
-    "StarredAt": "2023-08-19T00:18:24Z"
+    "NameWithOwner": "gocd/gocd",
+    "URL": "https://github.com/gocd/gocd",
+    "Description": "Main repository for GoCD - Continuous Delivery server",
+    "Stargazers": 6879,
+    "StarredAt": "2023-08-20T00:36:55Z"
   },
   {
-    "NameWithOwner": "uber-go/automaxprocs",
-    "URL": "https://github.com/uber-go/automaxprocs",
-    "Description": "Automatically set GOMAXPROCS to match Linux container CPU quota.",
-    "Stargazers": 3025,
-    "StarredAt": "2023-08-19T00:18:12Z"
+    "NameWithOwner": "PipedreamHQ/pipedream",
+    "URL": "https://github.com/PipedreamHQ/pipedream",
+    "Description": "Connect APIs, remarkably fast.  Free for developers.",
+    "Stargazers": 6970,
+    "StarredAt": "2023-08-20T00:27:08Z"
   },
   {
-    "NameWithOwner": "npryce/adr-tools",
-    "URL": "https://github.com/npryce/adr-tools",
-    "Description": "Command-line tools for working with Architecture Decision Records",
-    "Stargazers": 4034,
-    "StarredAt": "2023-08-19T00:17:57Z"
+    "NameWithOwner": "acassen/keepalived",
+    "URL": "https://github.com/acassen/keepalived",
+    "Description": "Keepalived",
+    "Stargazers": 3564,
+    "StarredAt": "2023-08-20T00:26:28Z"
   },
   {
-    "NameWithOwner": "goadesign/model",
-    "URL": "https://github.com/goadesign/model",
-    "Description": "Create your software architecture models and diagrams in Go.",
-    "Stargazers": 222,
-    "StarredAt": "2023-08-19T00:17:44Z"
+    "NameWithOwner": "okteto/okteto",
+    "URL": "https://github.com/okteto/okteto",
+    "Description": "Develop your applications directly in your Kubernetes Cluster",
+    "Stargazers": 2999,
+    "StarredAt": "2023-08-20T00:25:41Z"
   },
   {
-    "NameWithOwner": "goadesign/clue",
-    "URL": "https://github.com/goadesign/clue",
-    "Description": "Microservice instrumentation",
-    "Stargazers": 46,
-    "StarredAt": "2023-08-19T00:17:21Z"
+    "NameWithOwner": "Azure/draft",
+    "URL": "https://github.com/Azure/draft",
+    "Description": "A day 0 tool for getting your app on k8s fast",
+    "Stargazers": 375,
+    "StarredAt": "2023-08-20T00:25:07Z"
   },
   {
-    "NameWithOwner": "slok/sloth",
-    "URL": "https://github.com/slok/sloth",
-    "Description": "🦥 Easy and simple Prometheus SLO (service level objectives) generator",
-    "Stargazers": 1733,
-    "StarredAt": "2023-08-19T00:16:36Z"
+    "NameWithOwner": "garden-io/garden",
+    "URL": "https://github.com/garden-io/garden",
+    "Description": "Automation for Kubernetes development and testing. Spin up production-like environments for development, testing, and CI on demand. Use the same configuration and workflows at every step of the process. Speed up your builds and test runs via shared result caching",
+    "Stargazers": 2904,
+    "StarredAt": "2023-08-20T00:24:59Z"
   }
 ]
