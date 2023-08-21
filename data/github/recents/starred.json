@@ -1,72 +1,72 @@
 [
   {
-    "NameWithOwner": "terraform-docs/terraform-docs",
-    "URL": "https://github.com/terraform-docs/terraform-docs",
-    "Description": "Generate documentation from Terraform modules in various output formats",
-    "Stargazers": 3643,
-    "StarredAt": "2023-08-20T01:07:48Z"
+    "NameWithOwner": "PlayCover/PlayCover",
+    "URL": "https://github.com/PlayCover/PlayCover",
+    "Description": "Community fork of PlayCover",
+    "Stargazers": 5483,
+    "StarredAt": "2023-08-20T13:30:12Z"
   },
   {
-    "NameWithOwner": "opnsense/core",
-    "URL": "https://github.com/opnsense/core",
-    "Description": "OPNsense GUI, API and systems backend",
-    "Stargazers": 2569,
-    "StarredAt": "2023-08-20T00:59:37Z"
+    "NameWithOwner": "octobox/octobox",
+    "URL": "https://github.com/octobox/octobox",
+    "Description": "📮Untangle your GitHub Notifications",
+    "Stargazers": 4258,
+    "StarredAt": "2023-08-20T13:18:29Z"
   },
   {
-    "NameWithOwner": "infracost/infracost",
-    "URL": "https://github.com/infracost/infracost",
-    "Description": "Cloud cost estimates for Terraform in pull requests💰📉 Love your cloud bill!",
-    "Stargazers": 9432,
-    "StarredAt": "2023-08-20T00:56:17Z"
+    "NameWithOwner": "Universal-Team/Universal-Updater",
+    "URL": "https://github.com/Universal-Team/Universal-Updater",
+    "Description": "An easy to use app for installing and updating 3DS homebrew",
+    "Stargazers": 716,
+    "StarredAt": "2023-08-20T13:04:04Z"
   },
   {
-    "NameWithOwner": "kiali/kiali",
-    "URL": "https://github.com/kiali/kiali",
-    "Description": "Kiali project, observability for the Istio service mesh",
-    "Stargazers": 3179,
-    "StarredAt": "2023-08-20T00:38:15Z"
+    "NameWithOwner": "terrastruct/d2",
+    "URL": "https://github.com/terrastruct/d2",
+    "Description": "D2 is a modern diagram scripting language that turns text to diagrams.",
+    "Stargazers": 14042,
+    "StarredAt": "2023-08-20T12:57:25Z"
   },
   {
-    "NameWithOwner": "gocd/gocd",
-    "URL": "https://github.com/gocd/gocd",
-    "Description": "Main repository for GoCD - Continuous Delivery server",
-    "Stargazers": 6879,
-    "StarredAt": "2023-08-20T00:36:55Z"
+    "NameWithOwner": "trunk-io/trunk-action",
+    "URL": "https://github.com/trunk-io/trunk-action",
+    "Description": "Trunk.io GitHub Action",
+    "Stargazers": 197,
+    "StarredAt": "2023-08-20T12:49:22Z"
   },
   {
-    "NameWithOwner": "PipedreamHQ/pipedream",
-    "URL": "https://github.com/PipedreamHQ/pipedream",
-    "Description": "Connect APIs, remarkably fast.  Free for developers.",
-    "Stargazers": 6970,
-    "StarredAt": "2023-08-20T00:27:08Z"
+    "NameWithOwner": "project-zot/zot",
+    "URL": "https://github.com/project-zot/zot",
+    "Description": "zot - A production-ready vendor-neutral OCI-native container image registry (purely based on OCI Distribution Specification)",
+    "Stargazers": 453,
+    "StarredAt": "2023-08-20T12:36:18Z"
   },
   {
-    "NameWithOwner": "acassen/keepalived",
-    "URL": "https://github.com/acassen/keepalived",
-    "Description": "Keepalived",
-    "Stargazers": 3564,
-    "StarredAt": "2023-08-20T00:26:28Z"
+    "NameWithOwner": "run-x/opta",
+    "URL": "https://github.com/run-x/opta",
+    "Description": "The next generation of Infrastructure-as-Code. Work with high-level constructs instead of getting lost in low-level cloud configuration.",
+    "Stargazers": 948,
+    "StarredAt": "2023-08-20T12:18:52Z"
   },
   {
-    "NameWithOwner": "okteto/okteto",
-    "URL": "https://github.com/okteto/okteto",
-    "Description": "Develop your applications directly in your Kubernetes Cluster",
-    "Stargazers": 2999,
-    "StarredAt": "2023-08-20T00:25:41Z"
+    "NameWithOwner": "permitio/opal",
+    "URL": "https://github.com/permitio/opal",
+    "Description": "Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...)",
+    "Stargazers": 1772,
+    "StarredAt": "2023-08-20T12:16:13Z"
   },
   {
-    "NameWithOwner": "Azure/draft",
-    "URL": "https://github.com/Azure/draft",
-    "Description": "A day 0 tool for getting your app on k8s fast",
-    "Stargazers": 375,
-    "StarredAt": "2023-08-20T00:25:07Z"
+    "NameWithOwner": "returntocorp/semgrep",
+    "URL": "https://github.com/returntocorp/semgrep",
+    "Description": "Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.",
+    "Stargazers": 8583,
+    "StarredAt": "2023-08-20T12:15:13Z"
   },
   {
-    "NameWithOwner": "garden-io/garden",
-    "URL": "https://github.com/garden-io/garden",
-    "Description": "Automation for Kubernetes development and testing. Spin up production-like environments for development, testing, and CI on demand. Use the same configuration and workflows at every step of the process. Speed up your builds and test runs via shared result caching",
-    "Stargazers": 2904,
-    "StarredAt": "2023-08-20T00:24:59Z"
+    "NameWithOwner": "structurizr/lite",
+    "URL": "https://github.com/structurizr/lite",
+    "Description": "Structurizr Lite",
+    "Stargazers": 107,
+    "StarredAt": "2023-08-20T11:55:54Z"
   }
 ]
