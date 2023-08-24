@@ -16,8 +16,16 @@ tags:
 - TODO
 ---
 
-<!-- TODO summary -->
+<!-- TODO intro story/situation -->
 
 <!--more-->
 
-<!-- TODO content -->
+<!-- TODO elaborate argument/case -->
+
+<!-- TODO defend argument/case -->
+
+<!-- TODO offer solution -->
+
+<!-- TODO wrap up -->
+
+<!-- TODO link back to story/situation -->
