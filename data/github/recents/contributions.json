@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-08-24T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr",
@@ -15,16 +24,7 @@
       "Description": "DRY github actions collection",
       "Stargazers": 0
     },
-    "OccurredAt": "2023-08-23T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-07-07T07:00:00Z"
+    "OccurredAt": "2023-08-24T07:00:00Z"
   },
   {
     "Repository": {
