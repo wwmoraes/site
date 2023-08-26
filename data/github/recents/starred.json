@@ -10,7 +10,7 @@
     "NameWithOwner": "PlayCover/PlayCover",
     "URL": "https://github.com/PlayCover/PlayCover",
     "Description": "Community fork of PlayCover",
-    "Stargazers": 5520,
+    "Stargazers": 5532,
     "StarredAt": "2023-08-20T13:30:12Z"
   },
   {
@@ -24,14 +24,14 @@
     "NameWithOwner": "Universal-Team/Universal-Updater",
     "URL": "https://github.com/Universal-Team/Universal-Updater",
     "Description": "An easy to use app for installing and updating 3DS homebrew",
-    "Stargazers": 716,
+    "Stargazers": 719,
     "StarredAt": "2023-08-20T13:04:04Z"
   },
   {
     "NameWithOwner": "terrastruct/d2",
     "URL": "https://github.com/terrastruct/d2",
     "Description": "D2 is a modern diagram scripting language that turns text to diagrams.",
-    "Stargazers": 14072,
+    "Stargazers": 14076,
     "StarredAt": "2023-08-20T12:57:25Z"
   },
   {
@@ -45,7 +45,7 @@
     "NameWithOwner": "project-zot/zot",
     "URL": "https://github.com/project-zot/zot",
     "Description": "zot - A production-ready vendor-neutral OCI-native container image registry (purely based on OCI Distribution Specification)",
-    "Stargazers": 457,
+    "Stargazers": 458,
     "StarredAt": "2023-08-20T12:36:18Z"
   },
   {
@@ -59,14 +59,14 @@
     "NameWithOwner": "permitio/opal",
     "URL": "https://github.com/permitio/opal",
     "Description": "Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...)",
-    "Stargazers": 1777,
+    "Stargazers": 1778,
     "StarredAt": "2023-08-20T12:16:13Z"
   },
   {
     "NameWithOwner": "returntocorp/semgrep",
     "URL": "https://github.com/returntocorp/semgrep",
     "Description": "Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.",
-    "Stargazers": 8603,
+    "Stargazers": 8607,
     "StarredAt": "2023-08-20T12:15:13Z"
   }
 ]
