@@ -17,14 +17,14 @@
     "NameWithOwner": "PlayCover/PlayCover",
     "URL": "https://github.com/PlayCover/PlayCover",
     "Description": "Community fork of PlayCover",
-    "Stargazers": 5539,
+    "Stargazers": 5558,
     "StarredAt": "2023-08-20T13:30:12Z"
   },
   {
     "NameWithOwner": "octobox/octobox",
     "URL": "https://github.com/octobox/octobox",
     "Description": "📮Untangle your GitHub Notifications",
-    "Stargazers": 4260,
+    "Stargazers": 4259,
     "StarredAt": "2023-08-20T13:18:29Z"
   },
   {
@@ -38,7 +38,7 @@
     "NameWithOwner": "terrastruct/d2",
     "URL": "https://github.com/terrastruct/d2",
     "Description": "D2 is a modern diagram scripting language that turns text to diagrams.",
-    "Stargazers": 14085,
+    "Stargazers": 14088,
     "StarredAt": "2023-08-20T12:57:25Z"
   },
   {
@@ -52,7 +52,7 @@
     "NameWithOwner": "project-zot/zot",
     "URL": "https://github.com/project-zot/zot",
     "Description": "zot - A production-ready vendor-neutral OCI-native container image registry (purely based on OCI Distribution Specification)",
-    "Stargazers": 463,
+    "Stargazers": 465,
     "StarredAt": "2023-08-20T12:36:18Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "permitio/opal",
     "URL": "https://github.com/permitio/opal",
     "Description": "Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...)",
-    "Stargazers": 1778,
+    "Stargazers": 1780,
     "StarredAt": "2023-08-20T12:16:13Z"
   }
 ]

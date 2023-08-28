@@ -55,5 +55,31 @@
     },
     "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9781449335946"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321125217",
+    "@type": "Book",
+    "name": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eric Evans"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287493789l/179133._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Boston"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2004-01-01T00:00:00Z",
+    "isbn": "9780321125217"
   }
 ]
