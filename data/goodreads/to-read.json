@@ -98,6 +98,21 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/0785342657883",
+    "@type": "Book",
+    "name": "Programming Pearls",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jon L. Bentley"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385191091l/52084._SX50_.jpg",
+    "isbn": "0785342657883"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321278654",
     "@type": "Book",
     "name": "Extreme Programming Explained: Embrace Change",
@@ -429,6 +444,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780262140874",
+    "@type": "Book",
+    "name": "The Elements of Computing Systems: Building a Modern Computer from First Principles",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Noam Nisan"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shimon Schocken"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387737217l/910789._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The MIT Press"
+    },
+    "datePublished": "2005-01-01T00:00:00Z",
+    "isbn": "9780262140874"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780262046305",
     "@type": "Book",
     "name": "Introduction to Algorithms",
@@ -462,6 +503,27 @@
     },
     "datePublished": "2022-01-01T00:00:00Z",
     "isbn": "9780262046305"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781680502398",
+    "@type": "Book",
+    "name": "Release It!: Design and Deploy Production-Ready Software",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael T. Nygard"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490801157l/34695798._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pragmatic Bookshelf"
+    },
+    "datePublished": "2018-01-18T00:00:00Z",
+    "isbn": "9781680502398"
   },
   {
     "@context": "https://schema.org",
@@ -699,88 +761,5 @@
     },
     "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9780988262591"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780544272996",
-    "@type": "Book",
-    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Randall Munroe"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Randall Munroe"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451351509l/21413662._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Houghton Mifflin Harcourt"
-    },
-    "datePublished": "2014-01-01T00:00:00Z",
-    "isbn": "9780544272996"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781942788003",
-    "@type": "Book",
-    "name": "The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Kim"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473461230l/26083308._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IT Revolution Press, LLC"
-    },
-    "datePublished": "2016-01-01T00:00:00Z",
-    "isbn": "9781942788003"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781491929124",
-    "@type": "Book",
-    "name": "Site Reliability Engineering: How Google Runs Production Systems",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Betsy Beyer"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris (Computer engineer) Jones"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jennifer Petoff"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Niall Richard Murphy"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Inc."
-    },
-    "datePublished": "2016-01-01T00:00:00Z",
-    "isbn": "9781491929124"
   }
 ]
