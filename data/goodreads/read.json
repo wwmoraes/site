@@ -9,35 +9,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Bryan O'Sullivan"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "John Goerzen"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Don Stewart"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Sebastopol, California, USA",
-      "address": {
-        "addressCountry": "USA",
-        "addressLocality": "Sebastopol",
-        "addressRegion": "California"
-      }
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2008-12-01T00:00:00Z",
     "isbn": "9780596514983"
   },
   {
@@ -53,12 +27,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1494624519l/34691716._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2018-03-05T00:00:00Z",
     "isbn": "9781491983645"
   },
   {
