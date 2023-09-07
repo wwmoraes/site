@@ -9,9 +9,35 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Andy Hunt"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dave Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Hunt"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Reading, Mass"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2000-01-01T00:00:00Z",
     "isbn": "9780201616224"
   },
   {
@@ -582,6 +608,37 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780471332800",
+    "@type": "Book",
+    "name": "Domain-Specific Application Frameworks: Frameworks Experience by Industry",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohamed Fayad"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ralph E. Ph. D. Johnson"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1190693451l/1945525._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "John Wiley"
+    },
+    "datePublished": "2000-01-01T00:00:00Z",
+    "isbn": "9780471332800"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780132350884",
     "@type": "Book",
     "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
@@ -655,6 +712,27 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780804795098",
+    "@type": "Book",
+    "name": "The Burnout Society",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Byung-Chul Han"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1448470013l/25490360._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Stanford Briefs"
+    },
+    "datePublished": "2015-08-12T00:00:00Z",
+    "isbn": "9780804795098"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780137081073",
     "@type": "Book",
     "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
@@ -678,62 +756,5 @@
     },
     "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780137081073"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781451648539",
-    "@type": "Book",
-    "name": "Steve Jobs",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Walter Isaacson"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Simon \u0026 Schuster"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9781451648539"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780988262591",
-    "@type": "Book",
-    "name": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Kim"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kevin Behr"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "George Spafford"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Portland, Or"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IT Revolution Press"
-    },
-    "datePublished": "2013-01-01T00:00:00Z",
-    "isbn": "9780988262591"
   }
 ]
