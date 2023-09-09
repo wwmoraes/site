@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries",
+      "Stargazers": 8
+    },
+    "OccurredAt": "2023-09-08T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr",
@@ -70,15 +79,6 @@
       "Stargazers": 14
     },
     "OccurredAt": "2023-02-26T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries",
-      "Stargazers": 8
-    },
-    "OccurredAt": "2023-01-22T08:00:00Z"
   },
   {
     "Repository": {
