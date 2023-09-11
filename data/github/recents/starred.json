@@ -3,14 +3,14 @@
     "NameWithOwner": "1pkg/gopium",
     "URL": "https://github.com/1pkg/gopium",
     "Description": "Gopium 🌺: Smart Go Structures Optimizer and Manager",
-    "Stargazers": 195,
+    "Stargazers": 196,
     "StarredAt": "2023-09-01T11:51:10Z"
   },
   {
     "NameWithOwner": "open-metadata/OpenMetadata",
     "URL": "https://github.com/open-metadata/OpenMetadata",
     "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2812,
+    "Stargazers": 2816,
     "StarredAt": "2023-08-31T22:28:06Z"
   },
   {
@@ -24,7 +24,7 @@
     "NameWithOwner": "grafeas/grafeas",
     "URL": "https://github.com/grafeas/grafeas",
     "Description": "Artifact Metadata API",
-    "Stargazers": 1461,
+    "Stargazers": 1463,
     "StarredAt": "2023-08-31T22:25:54Z"
   },
   {
@@ -45,7 +45,7 @@
     "NameWithOwner": "PlayCover/PlayCover",
     "URL": "https://github.com/PlayCover/PlayCover",
     "Description": "Community fork of PlayCover",
-    "Stargazers": 5667,
+    "Stargazers": 5678,
     "StarredAt": "2023-08-20T13:30:12Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "terrastruct/d2",
     "URL": "https://github.com/terrastruct/d2",
     "Description": "D2 is a modern diagram scripting language that turns text to diagrams.",
-    "Stargazers": 14156,
+    "Stargazers": 14159,
     "StarredAt": "2023-08-20T12:57:25Z"
   }
 ]

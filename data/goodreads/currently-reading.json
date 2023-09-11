@@ -58,28 +58,23 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321125217",
+    "@id": "https://openlibrary.org/isbn/9781098118730",
     "@type": "Book",
-    "name": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "name": "The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change",
     "author": [
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Eric Evans"
+        "name": "Tanya Reilly"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287493789l/179133._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Boston"
-    },
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661205628l/61058107._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Addison-Wesley"
+      "name": "O'Reilly Media, Incorporated"
     },
-    "datePublished": "2004-01-01T00:00:00Z",
-    "isbn": "9780321125217"
+    "datePublished": "2022-01-01T00:00:00Z",
+    "isbn": "9781098118730"
   }
 ]
