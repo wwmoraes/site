@@ -40,7 +40,7 @@
       "NameWithOwner": "Azure/azure-cli",
       "URL": "https://github.com/Azure/azure-cli",
       "Description": "Azure Command-Line Interface",
-      "Stargazers": 3684
+      "Stargazers": 3683
     },
     "URL": "https://github.com/Azure/azure-cli/pull/26013",
     "Title": "[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set",
