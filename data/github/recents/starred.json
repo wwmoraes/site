@@ -1,9 +1,16 @@
 [
   {
+    "NameWithOwner": "marouni/adr",
+    "URL": "https://github.com/marouni/adr",
+    "Description": "A minimalist command line tool written in Go to work with Architecture Decision Records",
+    "Stargazers": 96,
+    "StarredAt": "2023-09-14T09:13:20Z"
+  },
+  {
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2486,
+    "Stargazers": 2489,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
@@ -17,7 +24,7 @@
     "NameWithOwner": "open-metadata/OpenMetadata",
     "URL": "https://github.com/open-metadata/OpenMetadata",
     "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2828,
+    "Stargazers": 2832,
     "StarredAt": "2023-08-31T22:28:06Z"
   },
   {
@@ -52,7 +59,7 @@
     "NameWithOwner": "PlayCover/PlayCover",
     "URL": "https://github.com/PlayCover/PlayCover",
     "Description": "Community fork of PlayCover",
-    "Stargazers": 5701,
+    "Stargazers": 5708,
     "StarredAt": "2023-08-20T13:30:12Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "📮Untangle your GitHub Notifications",
     "Stargazers": 4260,
     "StarredAt": "2023-08-20T13:18:29Z"
-  },
-  {
-    "NameWithOwner": "Universal-Team/Universal-Updater",
-    "URL": "https://github.com/Universal-Team/Universal-Updater",
-    "Description": "An easy to use app for installing and updating 3DS homebrew",
-    "Stargazers": 722,
-    "StarredAt": "2023-08-20T13:04:04Z"
   }
 ]
