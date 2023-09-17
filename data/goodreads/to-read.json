@@ -639,6 +639,21 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9785965177189",
+    "@type": "Book",
+    "name": "Making Things Happen: Mastering Project Management",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Scott Berkun"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834790l/2335148._SX50_.jpg",
+    "isbn": "9785965177189"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780132350884",
     "@type": "Book",
     "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
@@ -730,31 +745,5 @@
     },
     "datePublished": "2015-08-12T00:00:00Z",
     "isbn": "9780804795098"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780137081073",
-    "@type": "Book",
-    "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Robert C. Martin"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9780137081073"
   }
 ]
