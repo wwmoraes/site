@@ -1,25 +1,23 @@
 .goodreads {
-  list-style-type: '📘 ';
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1ex;
+  padding: 0;
 
-  .title {
-    font-weight: bold;
-    font-style: italic;
+  li {
+    display: flex;
+    gap: 1em;
+
+    > img {
+      min-width: 50px;
+      min-height: 62px;
+      width: 50px;
+      height: 62px;
+    }
   }
 
   > li:not(:first-child) {
-  margin-top: 1em;
-    line-height: 2em;
-  }
-
-  &.currently-reading {
-    list-style-type: '📖 ';
-  }
-
-  &.to-read {
-    list-style-type: '📙 ';
-  }
-
-  &.read {
-    list-style-type: '📚 ';
+    margin-top: 1em;
   }
 }
