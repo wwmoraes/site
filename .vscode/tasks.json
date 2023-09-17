@@ -30,7 +30,7 @@
       "problemMatcher": {
         "background": {
           "activeOnStart": true,
-          "beginsPattern": "^Start building .* \u2026|Change detected, rebuilding .*\\.$",
+          "beginsPattern": "^Start building .* …|Change detected, rebuilding .*\\.$",
           "endsPattern": "^(?:Built in|Total in) \\d+ ms$"
         },
         "fileLocation": "absolute",
@@ -44,11 +44,8 @@
       "type": "shell"
     },
     {
-      "args": [
-        "http://localhost:8888"
-      ],
-      "command": "open",
-      "detail": "opens the local server home on the default browser",
+      "command": "${command:preview.open}",
+      "detail": "opens the local server within a VSCode preview tab",
       "label": "launch",
       "options": {
         "statusbar": {
@@ -62,8 +59,7 @@
         "panel": "shared",
         "reveal": "never",
         "showReuseMessage": false
-      },
-      "type": "shell"
+      }
     },
     {
       "command": "hugo",
