@@ -675,6 +675,47 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781405825092",
+    "@type": "Book",
+    "name": "Structured Computer Organization / Modern Operating Systems (2nd International Edition) / C Programming Language (2nd International Edition) / C Programming Language (2nd Revised Edition)",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew S. Tanenbaum"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1677796467l/4551828._SX50_.jpg",
+    "isbn": "9781405825092"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781430219484",
+    "@type": "Book",
+    "name": "Coders at Work: Reflections on the Craft of Programming",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Peter Seibel"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349026758l/6713575._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York, USA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Apress"
+    },
+    "datePublished": "2009-01-01T00:00:00Z",
+    "isbn": "9781430219484"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321712943",
     "@type": "Book",
     "name": "Domain-Specific Languages (Addison-Wesley Signature Series",
@@ -698,52 +739,5 @@
     },
     "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780321712943"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321601919",
-    "@type": "Book",
-    "name": "CONTINUOUS DELIVERY",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jez Humble"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "David Farley"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347640457l/8686650._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional"
-    },
-    "datePublished": "2010-01-01T00:00:00Z",
-    "isbn": "9780321601919"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780804795098",
-    "@type": "Book",
-    "name": "The Burnout Society",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Byung-Chul Han"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1448470013l/25490360._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Stanford Briefs"
-    },
-    "datePublished": "2015-08-12T00:00:00Z",
-    "isbn": "9780804795098"
   }
 ]
