@@ -1,30 +1,37 @@
 [
   {
+    "NameWithOwner": "slater1/BrowseRouter",
+    "URL": "https://github.com/slater1/BrowseRouter",
+    "Description": "In Windows, launch a different browser depending on the url",
+    "Stargazers": 81,
+    "StarredAt": "2023-09-25T19:23:31Z"
+  },
+  {
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 2967,
+    "Stargazers": 2968,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 18865,
+    "Stargazers": 18889,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
     "NameWithOwner": "marouni/adr",
     "URL": "https://github.com/marouni/adr",
     "Description": "A minimalist command line tool written in Go to work with Architecture Decision Records",
-    "Stargazers": 96,
+    "Stargazers": 97,
     "StarredAt": "2023-09-14T09:13:20Z"
   },
   {
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2513,
+    "Stargazers": 2516,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
@@ -38,7 +45,7 @@
     "NameWithOwner": "open-metadata/OpenMetadata",
     "URL": "https://github.com/open-metadata/OpenMetadata",
     "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2862,
+    "Stargazers": 2863,
     "StarredAt": "2023-08-31T22:28:06Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "Merge coverprofile results from multiple go cover runs",
     "Stargazers": 203,
     "StarredAt": "2023-08-26T15:52:01Z"
-  },
-  {
-    "NameWithOwner": "Quiq/webauthn_proxy",
-    "URL": "https://github.com/Quiq/webauthn_proxy",
-    "Description": "Proxy for enforcing webauthn authentication, written in Go",
-    "Stargazers": 102,
-    "StarredAt": "2023-08-21T23:33:04Z"
   }
 ]
