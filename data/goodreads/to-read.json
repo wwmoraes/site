@@ -493,6 +493,41 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Clifford Stein"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thomas H."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Leiserson"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Charles E."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ronald L."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Stein"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Clifford"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Clifford Stein"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635860502l/58064696._SX50_.jpg",
