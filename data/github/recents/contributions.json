@@ -1,21 +1,21 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries",
+      "Stargazers": 8
+    },
+    "OccurredAt": "2023-09-28T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website",
       "Stargazers": 0
     },
     "OccurredAt": "2023-09-17T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries",
-      "Stargazers": 8
-    },
-    "OccurredAt": "2023-09-11T07:00:00Z"
   },
   {
     "Repository": {
