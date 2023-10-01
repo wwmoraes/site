@@ -35,6 +35,7 @@ params:
     - https://giscus.app
     img:
     - "'self'"
+    - https://*.site-82a.pages.dev
     - https://i.gr-assets.com
     - https://covers.openlibrary.org
     - https://archive.org
