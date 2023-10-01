@@ -470,7 +470,7 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262046305",
+    "@id": "https://openlibrary.org/isbn/9780262033848",
     "@type": "Book",
     "name": "Introduction to Algorithms",
     "author": [
@@ -530,14 +530,24 @@
         "name": "Clifford Stein"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635860502l/58064696._SX50_.jpg",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390459484l/6752187._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Cambridge, MA, USA",
+      "address": {
+        "addressCountry": "USA",
+        "addressLocality": "Cambridge",
+        "addressRegion": "MA"
+      }
+    },
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "MIT Press"
+      "name": "The MIT Press"
     },
-    "datePublished": "2022-01-01T00:00:00Z",
-    "isbn": "9780262046305"
+    "datePublished": "2009-01-01T00:00:00Z",
+    "isbn": "9780262033848"
   },
   {
     "@context": "https://schema.org",
