@@ -446,7 +446,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780262140874",
     "@type": "Book",
-    "name": "The Elements of Computing Systems: Building a Modern Computer from First Principles",
+    "name": "The Elements Of Computing Systems: Building A Modern Computer From First Principles",
     "author": [
       {
         "@context": "https://schema.org",
