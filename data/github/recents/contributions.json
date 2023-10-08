@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/go-rwfs",
+      "URL": "https://github.com/wwmoraes/go-rwfs",
+      "Description": "Golang read-write filesystem interfaces",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-10-07T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries",
@@ -70,15 +79,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-05-08T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/pvpgn-server-docker",
-      "URL": "https://github.com/wwmoraes/pvpgn-server-docker",
-      "Description": "PvPGN-PRO server on Docker",
-      "Stargazers": 14
-    },
-    "OccurredAt": "2023-02-26T08:00:00Z"
   },
   {
     "Repository": {

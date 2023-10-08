@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/go-rwfs",
+    "URL": "https://github.com/wwmoraes/go-rwfs",
+    "Description": "Golang read-write filesystem interfaces",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/interview",
     "URL": "https://github.com/wwmoraes/interview",
     "Description": "PDF forms with IT questions for both sides of the interview",
@@ -51,12 +57,6 @@
     "NameWithOwner": "wwmoraes/cadvisor",
     "URL": "https://github.com/wwmoraes/cadvisor",
     "Description": "multi-platform cAdvisor container, because the world doesn't run on amd64 only",
-    "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/minit",
-    "URL": "https://github.com/wwmoraes/minit",
-    "Description": "minimal subreaper for containers",
     "Stargazers": 0
   }
 ]
