@@ -10,9 +10,12 @@ main:
   weight: 30
 
 sub:
+- name: Tech Radar
+  pageRef: radar
+  weight: 70
 - name: Now
   pageRef: now
-  weight: 10
+  weight: 80
 - name: About
   pageRef: about
   weight: 90

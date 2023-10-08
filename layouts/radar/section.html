@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{- $sections := slice "techniques" "languages" "platforms" "tools" -}}
+{{- $tiers := slice "adopt" "trial" "assess" "hold" -}}
+{{- range $section := $sections -}}
+{{- range $tier := $tiers -}}
+{{- $.Scratch.Set (printf "%s %s" $section $tier) slice -}}
+{{- end -}}
+{{- end -}}
+{{ range (where .Site.Pages "Type" "eq" "radar") -}}
+{{- if not .IsSection -}}
+{{- $.Scratch.Add (printf "%s %s" .Params.radarSection .Params.radarTier) . -}}
+{{- end }}
+{{- end }}
+<article class="single" itemscope>
+  <div class="content radar">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+    {{ .Content }}
+    {{- with (.Page.Resources.Get "radar.svg") -}}
+    {{- if and (eq .MediaType.MainType "image") (eq .MediaType.SubType "svg") -}}
+    <div class="img">
+      {{- .Content | safeHTML -}}
+    </div>
+    {{- end -}}
+    {{- end -}}
+    <div class="sections">
+      {{- range $section := $sections -}}
+      <section>
+        <h2>{{ $section | title }}</h2>
+        <iframe class="radar view" src="radar.svg#{{ $section }}"></iframe>
+        {{- range $tier := $tiers -}}
+        <h3>{{ $tier | title }}</h3>
+        <ol>
+          {{- range ($.Scratch.Get (printf "%s %s" $section $tier)) -}}
+          <li value="{{ .Params.radarIndex }}">
+            {{- if not .Draft }}<a href="{{ .RelPermalink }}">{{- end -}}
+              {{- .Title -}}
+              {{- if .Draft -}}&nbsp;<sup>WIP</sup>{{- end -}}
+              {{- if not .Draft }}</a>{{- end -}}
+          </li>
+          {{- end -}}
+        </ol>
+        {{- end -}}
+      </section>
+      {{- end -}}
+    </div>
+  </div>
+</article>
+{{ end }}

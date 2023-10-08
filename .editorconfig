@@ -6,26 +6,29 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[*.go]
+indent_style = tab
+
+[*.html]
+insert_final_newline = false
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.mk]
+indent_style = tab
+
+[.git*]
+indent_style = tab
+
 [.vscode/*.{json,code-snippets}]
 insert_final_newline = false
 
 [data/**/*.json]
 insert_final_newline = false
 
-[*.md]
-trim_trailing_whitespace = false
+[go.{mod,work}]
+indent_style = tab
 
 [Makefile]
-indent_style = tab
-
-[*.mk]
-indent_style = tab
-
-[*.go]
-indent_style = tab
-
-[go.mod]
-indent_style = tab
-
-[.git*]
 indent_style = tab

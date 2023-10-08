@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="800"
+  height="800" style="background-color: #2a2b38">
+  <title>William Artero personal tech radar</title>
+  <style>
+    text {
+      stroke: #0c0d1a;
+      font-weight: normal;
+      font-size: 10px;
+      font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif;
+    }
+
+    a[href="#"] {
+      cursor: not-allowed;
+    }
+
+    .primary {
+      stroke: #5eefff;
+    }
+
+    #blip {
+      stroke: transparent;
+    }
+
+    .adopt {
+      fill: #52f187;
+    }
+
+    .trial {
+      fill: #fef032;
+    }
+
+    .assess {
+      fill: #ffa630;
+    }
+
+    .hold {
+      fill: #c3200b;
+    }
+
+    .watermark {
+      font-size: 18px;
+      fill: #b5bbc0;
+      stroke: none;
+      opacity: 0.5;
+    }
+
+    .title {
+      font-size: 36px;
+      fill: #b5bbc0;
+      stroke: none;
+    }
+  </style>
+  <defs>
+    <circle id="blip" r="10" class="blip" />
+    <text id="ring0" class="watermark" alignment-baseline="middle" text-anchor="middle">Adopt</text>
+    <text id="ring1" class="watermark" alignment-baseline="middle" text-anchor="middle">Trial</text>
+    <text id="ring2" class="watermark" alignment-baseline="middle" text-anchor="middle">Assess</text>
+    <text id="ring3" class="watermark" alignment-baseline="middle" text-anchor="middle">Hold</text>
+  </defs>
+  <view id="techniques" viewBox="0 0 500 500" />
+  <view id="languages" viewBox="500 0 500 500" />
+  <view id="platforms" viewBox="0 500 500 500" />
+  <view id="tools" viewBox="500 500 500 500" />
+  <!-- target layers and dividers -->
+  <g>
+    <circle cx="500" cy="500" r="250" fill="transparent" class="primary" />
+    <circle cx="500" cy="500" r="350" fill="transparent" class="primary" />
+    <circle cx="500" cy="500" r="430" fill="transparent" class="primary" />
+    <circle cx="500" cy="500" r="500" fill="transparent" class="primary" />
+    <path d="M 0,500 L 1000,500" class="primary" />
+    <path d="M 500,0 L 500,1000" class="primary" />
+  </g>
+  <!-- techniques labels -->
+  <g>
+    <text class="title" x="15" y="15" alignment-baseline="hanging" text-anchor="start">Techniques</text>
+    <use href="#ring3" x="35" y="485" />
+    <use href="#ring2" x="110" y="485" />
+    <use href="#ring1" x="200" y="485" />
+    <use href="#ring0" x="375" y="485" />
+  </g>
+  <!-- languages labels -->
+  <g>
+    <text class="title" x="985" y="15" alignment-baseline="hanging" text-anchor="end">Languages</text>
+    <use href="#ring3" x="965" y="485" />
+    <use href="#ring2" x="890" y="485" />
+    <use href="#ring1" x="800" y="485" />
+    <use href="#ring0" x="625" y="485" />
+  </g>
+  <!-- platforms labels -->
+  <g>
+    <text class="title" x="15" y="985" alignment-baseline="baseline" text-anchor="start">Platforms</text>
+    <use href="#ring3" x="35" y="515" />
+    <use href="#ring2" x="110" y="515" />
+    <use href="#ring1" x="200" y="515" />
+    <use href="#ring0" x="375" y="515" />
+  </g>
+  <!-- tools labels -->
+  <g>
+    <text class="title" x="985" y="985" alignment-baseline="baseline" text-anchor="end">Tools</text>
+    <use href="#ring3" x="965" y="515" />
+    <use href="#ring2" x="890" y="515" />
+    <use href="#ring1" x="800" y="515" />
+    <use href="#ring0" x="625" y="515" />
+  </g>
+  <!-- generated blips -->
+  <g>
+    <g transform="translate(-242 -120)">
+      <a href="/radar/architecture-decision-records" target="_parent">
+        <title>Architecture Decision Records (ADRs)</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          1
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-113 439)">
+      <a href="#" target="_parent">
+        <title>Azure Pipelines</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          2
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-281 169)">
+      <a href="#" target="_parent">
+        <title>Backstage</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          3
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-300 -335)">
+      <a href="/radar/cloud-architect" target="_parent">
+        <title>Cloud Solution Architect</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          4
+        </text>
+      </a>
+    </g>
+    <g transform="translate(46 177)">
+      <a href="#" target="_parent">
+        <title>Container Structure Test</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          5
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-243 -379)">
+      <a href="#" target="_parent">
+        <title>Database Stored Procedures</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          6
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-444 -71)">
+      <a href="/radar/devops-engineer" target="_parent">
+        <title>DevOps Engineer</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          7
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-59 -28)">
+      <a href="#" target="_parent">
+        <title>Domain-Driven Design (DDD)</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          8
+        </text>
+      </a>
+    </g>
+    <g transform="translate(247 377)">
+      <a href="#" target="_parent">
+        <title>draw.io</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          9
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-332 -44)">
+      <a href="#" target="_parent">
+        <title>Functional Paradigm</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          10
+        </text>
+      </a>
+    </g>
+    <g transform="translate(186 90)">
+      <a href="#" target="_parent">
+        <title>GitHub Actions</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          11
+        </text>
+      </a>
+    </g>
+    <g transform="translate(46 -177)">
+      <a href="#" target="_parent">
+        <title>Golang</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          12
+        </text>
+      </a>
+    </g>
+    <g transform="translate(295 -146)">
+      <a href="#" target="_parent">
+        <title>Haskell</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          13
+        </text>
+      </a>
+    </g>
+    <g transform="translate(234 -395)">
+      <a href="#" target="_parent">
+        <title>Java/JVM</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          14
+        </text>
+      </a>
+    </g>
+    <g transform="translate(303 147)">
+      <a href="#" target="_parent">
+        <title>Kube-bench</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          15
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-128 20)">
+      <a href="#" target="_parent">
+        <title>Kubernetes</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          16
+        </text>
+      </a>
+    </g>
+    <g transform="translate(50 447)">
+      <a href="#" target="_parent">
+        <title>Mermaid diagrams</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          17
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-305 209)">
+      <a href="#" target="_parent">
+        <title>OpenMetadata</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          18
+        </text>
+      </a>
+    </g>
+    <g transform="translate(163 332)">
+      <a href="#" target="_parent">
+        <title>Podman</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          19
+        </text>
+      </a>
+    </g>
+    <g transform="translate(211 -304)">
+      <a href="#" target="_parent">
+        <title>Rust</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          22
+        </text>
+      </a>
+    </g>
+    <g transform="translate(339 -296)">
+      <a href="/radar/scala" target="_parent">
+        <title>Scala</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          23
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-20 -83)">
+      <a href="#" target="_parent">
+        <title>Site Reliability Engineer (SRE)</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          24
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-214 -327)">
+      <a href="#" target="_parent">
+        <title>Staff Software Engineer</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          25
+        </text>
+      </a>
+    </g>
+  </g>
+</svg>

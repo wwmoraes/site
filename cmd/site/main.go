@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/wwmoraes/site/cmd/site/radar"
 	"github.com/wwmoraes/site/cmd/site/update"
 )
 
@@ -15,6 +16,7 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.AddCommand(radar.New())
 	rootCmd.AddCommand(update.New())
 }
 

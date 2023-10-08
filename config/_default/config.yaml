@@ -68,7 +68,7 @@ module:
   - source: content
     target: content
     excludeFiles:
-    - '*.md.tmpl'
+    - '**/*.tmpl'
     - '**/*.iuml'
     - '**/*.puml'
     - '**/*.png.json'

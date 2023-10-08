@@ -41,9 +41,23 @@ repos:
     - stylelint-config-standard@30.0.1
     - stylelint-config-standard-scss@7.0.1
     args: [-f, compact]
+- repo: local
+  hooks:
+  - id: update-radar
+    name: Update radar
+    entry: go run -race ./cmd/site/... radar update
+    language: system
+    pass_filenames: false
+    files: |
+      (?x)^(
+          content/radar/(?!_index).*\.md|
+          content/radar/radar.svg.tmpl
+      )$
 ci:
   autofix_commit_msg: "style: pre-commit automatic fixes"
   autofix_prs: true
   autoupdate_commit_msg: "chore: pre-commit automatic update"
   autoupdate_schedule: weekly
   submodules: false
+  skip:
+  - update-radar

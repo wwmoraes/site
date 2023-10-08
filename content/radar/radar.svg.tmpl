@@ -1,0 +1,126 @@
+{{- $viewBox := mul .Radius 2 -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{ $viewBox }} {{ $viewBox }}" width="{{ .Size }}"
+  height="{{ .Size }}" style="background-color: #2a2b38">
+  <title>William Artero personal tech radar</title>
+  <style>
+    text {
+      stroke: #0c0d1a;
+      font-weight: normal;
+      font-size: 10px;
+      font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif;
+    }
+
+    a[href="#"] {
+      cursor: not-allowed;
+    }
+
+    .primary {
+      stroke: #5eefff;
+    }
+
+    #blip {
+      stroke: transparent;
+    }
+
+    .adopt {
+      fill: #52f187;
+    }
+
+    .trial {
+      fill: #fef032;
+    }
+
+    .assess {
+      fill: #ffa630;
+    }
+
+    .hold {
+      fill: #c3200b;
+    }
+
+    .watermark {
+      font-size: 18px;
+      fill: #b5bbc0;
+      stroke: none;
+      opacity: 0.5;
+    }
+
+    .title {
+      font-size: 36px;
+      fill: #b5bbc0;
+      stroke: none;
+    }
+  </style>
+  <defs>
+    <circle id="blip" r="10" class="blip" />
+    <text id="ring0" class="watermark" alignment-baseline="middle" text-anchor="middle">Adopt</text>
+    <text id="ring1" class="watermark" alignment-baseline="middle" text-anchor="middle">Trial</text>
+    <text id="ring2" class="watermark" alignment-baseline="middle" text-anchor="middle">Assess</text>
+    <text id="ring3" class="watermark" alignment-baseline="middle" text-anchor="middle">Hold</text>
+  </defs>
+  <view id="techniques" viewBox="0 0 {{ .Radius }} {{ .Radius }}" />
+  <view id="languages" viewBox="{{ .Radius }} 0 {{ .Radius }} {{ .Radius }}" />
+  <view id="platforms" viewBox="0 {{ .Radius }} {{ .Radius }} {{ .Radius }}" />
+  <view id="tools" viewBox="{{ .Radius }} {{ .Radius }} {{ .Radius }} {{ .Radius }}" />
+  <!-- target layers and dividers -->
+  <g>
+    <circle cx="{{ .Radius }}" cy="{{ .Radius }}" r="{{ div .Radius 2 }}" fill="transparent" class="primary" />
+    <circle cx="{{ .Radius }}" cy="{{ .Radius }}" r="{{ div (mul .Radius 70) 100 }}" fill="transparent" class="primary" />
+    <circle cx="{{ .Radius }}" cy="{{ .Radius }}" r="{{ div (mul .Radius 86) 100 }}" fill="transparent" class="primary" />
+    <circle cx="{{ .Radius }}" cy="{{ .Radius }}" r="{{ .Radius }}" fill="transparent" class="primary" />
+    <path d="M 0,{{ .Radius }} L {{ $viewBox }},{{ .Radius }}" class="primary" />
+    <path d="M {{ .Radius }},0 L {{ .Radius }},{{ $viewBox }}" class="primary" />
+  </g>
+  <!-- techniques labels -->
+  <g>
+    <text class="title" x="15" y="15" alignment-baseline="hanging" text-anchor="start">Techniques</text>
+    <use href="#ring3" x="35" y="485" />
+    <use href="#ring2" x="110" y="485" />
+    <use href="#ring1" x="200" y="485" />
+    <use href="#ring0" x="375" y="485" />
+  </g>
+  <!-- languages labels -->
+  <g>
+    <text class="title" x="985" y="15" alignment-baseline="hanging" text-anchor="end">Languages</text>
+    <use href="#ring3" x="965" y="485" />
+    <use href="#ring2" x="890" y="485" />
+    <use href="#ring1" x="800" y="485" />
+    <use href="#ring0" x="625" y="485" />
+  </g>
+  <!-- platforms labels -->
+  <g>
+    <text class="title" x="15" y="985" alignment-baseline="baseline" text-anchor="start">Platforms</text>
+    <use href="#ring3" x="35" y="515" />
+    <use href="#ring2" x="110" y="515" />
+    <use href="#ring1" x="200" y="515" />
+    <use href="#ring0" x="375" y="515" />
+  </g>
+  <!-- tools labels -->
+  <g>
+    <text class="title" x="985" y="985" alignment-baseline="baseline" text-anchor="end">Tools</text>
+    <use href="#ring3" x="965" y="515" />
+    <use href="#ring2" x="890" y="515" />
+    <use href="#ring1" x="800" y="515" />
+    <use href="#ring0" x="625" y="515" />
+  </g>
+  <!-- generated blips -->
+  <g>
+    {{- range .Blips }}
+    <g transform="translate({{ .Page.FrontMatter.radarX }} {{ .Page.FrontMatter.radarY }})">
+      {{- $href := .RelPermalink }}
+      {{- if .Page.FrontMatter.draft }}
+      {{- $href = "#" }}
+      {{- end }}
+      <a href="{{ $href }}" target="_parent">
+        <title>
+          {{- .Page.FrontMatter.title -}}
+        </title>
+        <use href="#blip" class="{{ .Page.FrontMatter.radarTier }}" x="{{ $.Radius }}" y="{{ $.Radius }}" />
+        <text x="{{ $.Radius }}" y="{{ $.Radius }}" alignment-baseline="middle" text-anchor="middle">
+          {{ .Page.FrontMatter.radarIndex }}
+        </text>
+      </a>
+    </g>
+    {{- end }}
+  </g>
+</svg>

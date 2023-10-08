@@ -15,6 +15,7 @@ start-prod:
 
 build:
 	@${RM} -r public
+	@go run -race ./cmd/site/... radar update
 	@hugo --gc --cleanDestinationDir
 
 hook-install:
@@ -73,3 +74,9 @@ define exifTemplate
 	"Make": "#fff"
 }
 endef
+
+.PHONY: radar
+radar: content/radar/radar.svg
+
+content/radar/radar.svg: content/radar/radar.svg.tmpl $(wildcard content/radar/*.md)
+	@go run -race ./cmd/site/... radar update

@@ -34,5 +34,21 @@
       "{{< source \"${1:filename}\" \"${2:lang}\" \"${3:options}\" >}}",
     ],
     "description": "embeds a source code file"
+  },
+  "Blip": {
+    "scope": "markdown",
+    "prefix": "blip",
+    "body": [
+      "---",
+      "description: lorem ipsum",
+      "radarSection: ${2|techniques,languages,platforms,tools|}",
+      "radarTier: ${3|adopt,trial,assess,hold|}",
+      "table-of-contents: false",
+      "title: ${1:title}",
+      "draft: true",
+      "---",
+      "",
+      "TODO justification",
+    ]
   }
 }
