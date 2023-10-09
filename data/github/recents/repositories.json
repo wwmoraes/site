@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/plex-delete",
+    "URL": "https://github.com/wwmoraes/plex-delete",
+    "Description": "belminf/plex-delete as a container",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/go-rwfs",
     "URL": "https://github.com/wwmoraes/go-rwfs",
     "Description": "Golang read-write filesystem interfaces",
@@ -51,12 +57,6 @@
     "NameWithOwner": "wwmoraes/docker-engine-plugins",
     "URL": "https://github.com/wwmoraes/docker-engine-plugins",
     "Description": "Docker Engine plugins",
-    "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/cadvisor",
-    "URL": "https://github.com/wwmoraes/cadvisor",
-    "Description": "multi-platform cAdvisor container, because the world doesn't run on amd64 only",
     "Stargazers": 0
   }
 ]

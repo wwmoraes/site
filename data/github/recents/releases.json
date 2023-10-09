@@ -13,18 +13,6 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/kubegraph",
-      "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
-    },
-    "Name": "v0.3.0",
-    "TagName": "v0.3.0",
-    "PublishedAt": "2020-11-15T16:18:00Z",
-    "URL": "https://github.com/wwmoraes/kubegraph/releases/tag/v0.3.0"
-  },
-  {
-    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr",
