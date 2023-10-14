@@ -1,21 +1,21 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries",
+      "Stargazers": 8
+    },
+    "OccurredAt": "2023-10-13T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/go-rwfs",
       "URL": "https://github.com/wwmoraes/go-rwfs",
       "Description": "Golang read-write filesystem interfaces",
       "Stargazers": 0
     },
     "OccurredAt": "2023-10-07T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries",
-      "Stargazers": 8
-    },
-    "OccurredAt": "2023-10-06T07:00:00Z"
   },
   {
     "Repository": {
