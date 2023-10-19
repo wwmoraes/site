@@ -6,7 +6,16 @@
       "Description": "Cross-platform dotfiles with batteries",
       "Stargazers": 8
     },
-    "OccurredAt": "2023-10-13T07:00:00Z"
+    "OccurredAt": "2023-10-19T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/spoons",
+      "URL": "https://github.com/wwmoraes/spoons",
+      "Description": "Hammerspoon Spoons plugins",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-10-18T07:00:00Z"
   },
   {
     "Repository": {
@@ -61,15 +70,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-05-26T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "qnikst/HaskellNet",
-      "URL": "https://github.com/qnikst/HaskellNet",
-      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 83
-    },
-    "OccurredAt": "2023-05-25T07:00:00Z"
   },
   {
     "Repository": {
