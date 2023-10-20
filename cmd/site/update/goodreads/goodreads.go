@@ -4,32 +4,27 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
-	"path/filepath"
 	"regexp"
 	"strings"
 	"sync"
-	"time"
 
 	"github.com/gocolly/colly/v2"
 	"github.com/gregjones/httpcache"
 	"github.com/gregjones/httpcache/leveldbcache"
 	"github.com/spf13/cobra"
+	"github.com/wwmoraes/go-rwfs"
 	"github.com/wwmoraes/site/pkg/openlibrary"
 	"github.com/wwmoraes/site/pkg/schema"
 )
 
-var whitespaces *regexp.Regexp
+const (
+	dataPath  = "data/goodreads"
+	cachePath = "tmp/books-fetch-cache"
+)
 
-func init() {
-	var err error
-
-	whitespaces, err = regexp.Compile("[ ]+")
-
-	if err != nil {
-		panic(err)
-	}
-}
+var whitespaces = regexp.MustCompile("[ ]+")
 
 func New() *cobra.Command {
 	cmd := &cobra.Command{
@@ -40,7 +35,7 @@ func New() *cobra.Command {
 
 	flags := cmd.Flags()
 	flags.String("list", "", "Goodreads list name")
-	flags.String("shelves", "", "Goodreads shelf names (comma-separated)")
+	flags.StringSlice("shelves", []string{}, "Goodreads shelf names (comma-separated)")
 
 	return cmd
 }
@@ -50,179 +45,173 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
+
 	if len(list) <= 0 {
-		return fmt.Errorf("List name must be provided")
+		return fmt.Errorf("List name must be set")
 	}
 
-	rawShelves, err := cmd.Flags().GetString("shelves")
+	shelves, err := cmd.Flags().GetStringSlice("shelves")
 	if err != nil {
 		return err
 	}
-
-	shelves := strings.Split(rawShelves, ",")
 
 	if len(shelves) <= 0 {
-		return fmt.Errorf("at least one shelf name must be provided")
+		return fmt.Errorf("at least one shelf name must be set")
 	}
 
-	path := "data/goodreads"
-	err = os.MkdirAll(path, 0750)
+	err = os.MkdirAll(dataPath, 0o750)
 	if err != nil {
-		log.Println(err)
 		return err
 	}
 
-	cache, err := leveldbcache.New("tmp/update-cache")
+	err = os.MkdirAll(cachePath, 0o750)
 	if err != nil {
-		log.Println(err)
 		return err
 	}
 
-	var wg sync.WaitGroup
-	var errors []error
-	for _, shelf := range shelves {
-		wg.Add(1)
-		go func(shelf string) {
-			defer wg.Done()
-
-			err := fetch(cache, path, list, shelf)
-			if err != nil {
-				errors = append(errors, fmt.Errorf("failed to fetch shelf %s data: %w", shelf, err))
-			}
-		}(shelf)
+	cache, err := leveldbcache.New(cachePath)
+	if err != nil {
+		return err
 	}
-	wg.Wait()
 
-	if len(errors) > 0 {
-		var sb strings.Builder
-		sb.WriteString("failed to fetch shelves:\n")
-		for _, err := range errors {
-			sb.WriteString(fmt.Sprintf("%s\n", err.Error()))
-		}
-		return fmt.Errorf(sb.String())
+	fsys := rwfs.OSDirFS(dataPath)
+
+	errors := fetchShelves(cache, fsys, list, shelves)
+
+	failed := false
+
+	var fail sync.Once
+
+	for err := range errors {
+		fail.Do(func() {
+			failed = true
+		})
+
+		log.Println(err)
+	}
+
+	if failed {
+		return fmt.Errorf("failed to fetch book shelves")
 	}
 
 	return nil
 }
 
-func fetch(cache *leveldbcache.Cache, path, list, shelf string) error {
+func fetchShelves(cache *leveldbcache.Cache, fsys rwfs.FS, list string, shelves []string) <-chan error {
+	errors := make(chan error, 2)
+
+	go func() {
+		defer close(errors)
+
+		var wg sync.WaitGroup
+
+		for _, shelf := range shelves {
+			wg.Add(1)
+
+			go func(shelf string) {
+				defer wg.Done()
+
+				err := fetch(cache, fsys, list, shelf)
+				if err != nil {
+					errors <- err
+				}
+			}(shelf)
+		}
+
+		wg.Wait()
+	}()
+
+	return errors
+}
+
+func fetch(cache *leveldbcache.Cache, fsys rwfs.FS, list, shelf string) error {
 	collector := colly.NewCollector(
-		colly.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"),
+		colly.UserAgent(
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+		),
 	)
 	transport := httpcache.NewTransport(cache)
 	client := transport.Client()
 	collector.WithTransport(transport)
 
 	books := []*schema.Book{}
+	booksInput := make(chan *schema.Book, 10)
+
+	go func() {
+		for book := range booksInput {
+			books = append(books, book)
+		}
+	}()
 
 	collector.OnHTML("table#books tr.bookalike.review", func(elem *colly.HTMLElement) {
-		isbn13 := elem.ChildText("td.field.isbn13 .value")
-		title := CleanTitle(elem.ChildText("td.field.title .value"))
-		author := strings.TrimSpace(strings.TrimSuffix(elem.ChildText("td.field.author .value"), "*"))
-
-		log.Println("collecting book", title)
-
-		book := schema.NewBook(title, isbn13)
-		book.ID = fmt.Sprintf("https://openlibrary.org/isbn/%s", isbn13)
-		book.Author = append(book.Author, schema.NewPerson(author))
-		book.ThumbnailURL = elem.ChildAttr("td.field.cover img", "src")
-
-		// enrich metadata using the Open Library information
-		// https://openlibrary.org/isbn/9780596514983.json
-		meta, err := openlibrary.GetBookData(client, isbn13)
-		if err != nil {
-			log.Println("failed to fetch metadata from Open Library:", err)
-		} else if meta == nil {
-			log.Println("book not found in Open Library:", book.Name, book.ISBN)
-		} else {
-			if book.ThumbnailURL == "" {
-				if meta.Cover != nil {
-					if meta.Cover.Large != "" {
-						book.ThumbnailURL = meta.Cover.Large
-					} else if meta.Cover.Medium != "" {
-						book.ThumbnailURL = meta.Cover.Medium
-					} else if meta.Cover.Small != "" {
-						book.ThumbnailURL = meta.Cover.Small
-					}
-				}
-			}
-
-			if meta.PublishPlaces != nil && len(meta.PublishPlaces) > 0 {
-				book.LocationCreated = schema.NewPlace(meta.PublishPlaces[0].Name)
-				parts := strings.Split(book.LocationCreated.Name, ", ")
-				if len(parts) == 3 {
-					book.LocationCreated.Address = &schema.PostalAddress{
-						AddressLocality: parts[0],
-						AddressRegion:   parts[1],
-						AddressCountry:  parts[2],
-					}
-				}
-			}
-
-			if len(meta.Publishers) > 0 {
-				book.Publisher = schema.NewOrganization(meta.Publishers[0].Name)
-			}
-
-			if len(meta.PublishDate) > 0 {
-				parsed, err := ParseDate(meta.PublishDate)
-				if err == nil {
-					book.DatePublished = parsed.UTC().Format(time.RFC3339)
-				}
-			}
-
-			book.Author = make([]*schema.Person, len(meta.Authors))
-			for index, author := range meta.Authors {
-				book.Author[index] = schema.NewPerson(author.Name)
-			}
+		if err := collectBook(elem, booksInput, client); err != nil {
+			log.Println(fmt.Errorf("failed to collect book: %w", err))
 		}
-
-		books = append(books, book)
-
-		log.Println("collected book:", book.Name)
 	})
 
 	collector.OnScraped(func(r *colly.Response) {
-		log.Println("scraped", r.Request.URL)
+		close(booksInput)
 
-		data, err := json.MarshalIndent(books, "", "  ")
-		if err != nil {
-			log.Println(err)
-			return
-		}
-
-		err = os.WriteFile(filepath.Join(path, fmt.Sprintf("%s.json", shelf)), data, 0640)
+		err := writeBooks(fsys, shelf, books)
 		if err != nil {
 			log.Println(err)
 		}
 	})
 
-	collector.OnRequest(func(r *colly.Request) {
-		log.Println("requesting", r.URL)
-	})
-
-	return collector.Visit(fmt.Sprintf("https://www.goodreads.com/review/list/%s?shelf=%s&order=d&sort=date_read", list, shelf))
+	return collector.Visit(
+		fmt.Sprintf("https://www.goodreads.com/review/list/%s?shelf=%s&order=d&sort=date_read", list, shelf),
+	)
 }
 
-func ParseDate(value string) (*time.Time, error) {
-	var result time.Time
-	var err error
+func collectBook(elem *colly.HTMLElement, books chan<- *schema.Book, client *http.Client) error {
+	isbn13 := elem.ChildText("td.field.isbn13 .value")
+	title := CleanTitle(elem.ChildText("td.field.title .value"))
+	author := strings.TrimSpace(strings.TrimSuffix(elem.ChildText("td.field.author .value"), "*"))
 
-	layouts := []string{
-		"January 2, 2006",
-		"Jan 02, 2006",
-		"2006",
-		"2006-01",
-		"January 2006",
+	log.Println("collecting book", title)
+
+	book := schema.NewBook(title, isbn13)
+	book.ID = fmt.Sprintf("https://openlibrary.org/isbn/%s", isbn13)
+	book.Author = append(book.Author, schema.NewPerson(author))
+	book.ThumbnailURL = elem.ChildAttr("td.field.cover img", "src")
+
+	// enrich metadata using the Open Library information
+	meta, err := openlibrary.GetBookData(client, isbn13)
+	if err != nil {
+		return fmt.Errorf("failed to fetch metadata from Open Library: %w", err)
 	}
 
-	for _, layout := range layouts {
-		result, err = time.Parse(layout, value)
-		if err == nil {
-			return &result, nil
-		}
+	if meta == nil {
+		return fmt.Errorf("book not found in Open Library (%s, %s)", book.Name, book.ISBN)
 	}
 
-	return nil, err
+	err = meta.AugmentBook(book)
+	if err != nil {
+		return fmt.Errorf("failed to update book metadata: %w", err)
+	}
+
+	books <- book
+
+	log.Println("collected book:", book.Name)
+
+	return nil
+}
+
+func writeBooks(fsys rwfs.FS, shelf string, books []*schema.Book) error {
+	data, err := json.MarshalIndent(books, "", "  ")
+	if err != nil {
+		return err
+	}
+
+	fd, err := fsys.OpenFile(fmt.Sprintf("%s.json", shelf), rwfs.O_WRONLY|rwfs.O_TRUNC|rwfs.O_CREATE, 0o640)
+	if err != nil {
+		return err
+	}
+	defer fd.Close()
+
+	_, err = fd.Write(data)
+
+	return err
 }
 
 func CleanTitle(title string) string {

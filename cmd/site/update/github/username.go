@@ -14,8 +14,8 @@ type viewerQuery struct {
 
 func getUsername(ctx context.Context, client *github.Client) (string, error) {
 	var viewer viewerQuery
-	err := client.Query(ctx, &viewer, nil)
 
+	err := client.Query(ctx, &viewer, nil)
 	if err != nil {
 		return "", err
 	}

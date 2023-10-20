@@ -17,18 +17,24 @@ import (
 	"github.com/wwmoraes/site/pkg/hugo"
 )
 
+const (
+	radarRadius   = 500.0
+	quadrantAngle = 90.0
+	blipRadius    = 10.0
+)
+
 type Blip struct {
 	Page         *pageparser.ContentFrontMatter
 	Filename     string
 	RelPermalink string
 }
 
-// TODO pass radar configuration (size, section zones, rim radius, etc)
 func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[Blip], error) {
+	// TODO pass radar configuration (size, section zones, rim radius, etc).
 	radarParameters, err := blip.NewRadar(blip.RadarOptions{
-		Radius:     500.0,
-		Angle:      90.0,
-		BlipRadius: 10.0,
+		Radius:     radarRadius,
+		Angle:      quadrantAngle,
+		BlipRadius: blipRadius,
 		Proportion: [4]float64{
 			50.0 / 100.0,
 			20.0 / 100.0,
@@ -50,55 +56,28 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[B
 		entries, err := fs.ReadDir(fsys, "/")
 		if err != nil {
 			blips <- errorResult[Blip](fmt.Errorf("failed to read blips directory: %w", err))
+
 			return
 		}
 
 		for index, entry := range entries {
-			if filepath.Ext(entry.Name()) != ".md" {
-				continue
-			}
-
-			if filepath.Base(entry.Name()) == "_index.md" {
+			if !blip.IsSourceFile(entry.Name()) {
 				continue
 			}
 
 			page, err := blip.Read(fsys, entry.Name())
 			if err != nil {
 				blips <- errorResult[Blip](fmt.Errorf("failed to read blip %s: %w", entry.Name(), err))
+
 				continue
 			}
 
-			title, err := hugo.GetString(&page, "title")
+			err = updateBlipPage(&page, radarParameters, index)
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to get title of blip %s: %w", entry.Name(), err))
+				blips <- errorResult[Blip](fmt.Errorf("failed to update blip %s: %w", entry.Name(), err))
+
 				continue
 			}
-
-			quadrant, err := hugo.GetString(&page, frontmatter.RadarSection)
-			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to get blip %s quadrant: %w", entry.Name(), err))
-				continue
-			}
-
-			tier, err := hugo.GetString(&page, frontmatter.RadarTier)
-			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to get blip %s tier: %w", entry.Name(), err))
-				continue
-			}
-
-			position, err := blip.CalculatePosition(radarParameters, &blip.BlipParameters{
-				Quadrant: quadrant,
-				Tier:     tier,
-				Title:    title,
-			})
-			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to calculate blip %s position: %w", entry.Name(), err))
-				continue
-			}
-
-			page.FrontMatter[frontmatter.RadarX] = position[0]
-			page.FrontMatter[frontmatter.RadarY] = position[1]
-			page.FrontMatter[frontmatter.RadarIndex] = index
 
 			slug := strings.TrimSuffix(entry.Name(), filepath.Ext(entry.Name()))
 
@@ -113,8 +92,40 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[B
 	return blips, nil
 }
 
+func updateBlipPage(page *pageparser.ContentFrontMatter, params *blip.RadarParameters, index int) error {
+	quadrant, err := hugo.GetString(page, frontmatter.RadarSection)
+	if err != nil {
+		return err
+	}
+
+	tier, err := hugo.GetString(page, frontmatter.RadarTier)
+	if err != nil {
+		return err
+	}
+
+	title, err := hugo.GetString(page, "title")
+	if err != nil {
+		return err
+	}
+
+	position, err := blip.CalculatePosition(params, &blip.BlipParameters{
+		Quadrant: quadrant,
+		Tier:     tier,
+		Title:    title,
+	})
+	if err != nil {
+		return err
+	}
+
+	page.FrontMatter[frontmatter.RadarX] = position[0]
+	page.FrontMatter[frontmatter.RadarY] = position[1]
+	page.FrontMatter[frontmatter.RadarIndex] = index
+
+	return nil
+}
+
 func (blip *Blip) WriteFile(fsys rwfs.FS) error {
-	fd, err := fsys.OpenFile(blip.Filename, os.O_TRUNC|os.O_WRONLY, 0640)
+	fd, err := fsys.OpenFile(blip.Filename, os.O_TRUNC|os.O_WRONLY, 0o640)
 	if err != nil {
 		return err
 	}

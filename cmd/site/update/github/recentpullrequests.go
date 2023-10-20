@@ -22,7 +22,7 @@ type recentPullRequestsQuery struct {
 }
 
 type PullRequest struct {
-	Repository `json:"Repository"`
+	Repository `json:"Repository"` //nolint:tagliatelle
 
 	URL       string
 	Title     string
@@ -48,6 +48,7 @@ func (handler *Handler) GetRecentPullRequests(ctx context.Context, count int) ([
 		if string(v.Node.Repository.NameWithOwner) == fmt.Sprintf("%s/%s", handler.username, handler.username) {
 			continue
 		}
+
 		if v.Node.Repository.IsPrivate {
 			continue
 		}

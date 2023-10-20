@@ -1,14 +1,15 @@
 package github
 
 import (
+	"context"
 	"encoding/json"
-	"fmt"
 	"io"
+	"log"
 	"os"
-	"path/filepath"
 	"sync"
 
 	"github.com/spf13/cobra"
+	"github.com/wwmoraes/go-rwfs"
 )
 
 type Variables map[string]interface{}
@@ -38,156 +39,53 @@ func cmdFetch(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	err = os.MkdirAll(basePath, 0750)
+	err = os.MkdirAll(basePath, 0o750)
 	if err != nil {
 		return err
 	}
+
+	fsys := rwfs.OSDirFS(basePath)
 
 	handler, err := NewHandler(cmd.Context())
 	if err != nil {
 		return err
 	}
 
-	var wg sync.WaitGroup
-	var errors []error
+	errors := handler.HandleAll(cmd.Context(), count, fsys)
 
-	// recent contributions
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentContributions(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "contributions.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent repositories
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentRepositories(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "repositories.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent releases
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentReleases(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "releases.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent pull requests
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentPullRequests(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "pullRequests.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent starred repositories
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentStars(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "starred.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent gists
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentGists(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "gists.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// recent sponsors
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-
-		data, err := handler.GetRecentSponsors(cmd.Context(), count)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-
-		err = writeFile(filepath.Join(basePath, "sponsors.json"), data)
-		if err != nil {
-			errors = append(errors, err)
-			return
-		}
-	}()
-
-	// wait all concurrent requests and aggregate the errors, if any
-	wg.Wait()
-	if len(errors) > 0 {
-		return fmt.Errorf("fetch returned %d errors: %v", len(errors), errors)
+	for err := range errors {
+		log.Println(err)
 	}
 
 	return nil
 }
 
-func writeFile(path string, res any) error {
-	fd, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0640)
+func handleFetch[T any](
+	wg *sync.WaitGroup,
+	errors chan<- error,
+	ctx context.Context,
+	fsys rwfs.FS,
+	name string,
+	count int,
+	handle func(context.Context, int) ([]T, error),
+) {
+	defer wg.Done()
+
+	data, err := handle(ctx, count)
+	if err != nil {
+		errors <- err
+
+		return
+	}
+
+	err = writeFile(fsys, name, data)
+	if err != nil {
+		errors <- err
+	}
+}
+
+func writeFile(fsys rwfs.FS, name string, res any) error {
+	fd, err := fsys.OpenFile(name, rwfs.O_WRONLY|rwfs.O_CREATE|rwfs.O_TRUNC, 0o640)
 	if err != nil {
 		return err
 	}

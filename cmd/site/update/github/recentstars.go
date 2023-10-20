@@ -29,16 +29,17 @@ type StarredRepository struct {
 
 func (handler *Handler) GetRecentStars(ctx context.Context, count int) ([]StarredRepository, error) {
 	query := recentStarsQuery{}
+	repositories := make([]StarredRepository, 0, count)
 	vars := Variables{
 		"username": github.String(handler.username),
 		"count":    github.Int(count + 1),
 	}
 
 	var after *github.String
-	repositories := make([]StarredRepository, 0, count)
 
 	for {
 		vars["after"] = after
+
 		err := handler.client.Query(ctx, &query, vars)
 		if err != nil {
 			return nil, err

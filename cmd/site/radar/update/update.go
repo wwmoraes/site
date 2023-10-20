@@ -35,7 +35,8 @@ func update(cmd *cobra.Command, args []string) error {
 	cmd.SilenceUsage = true
 
 	log.Println("retrieving blips")
-	blips, err := GetUpdatedBlips(settings.SectionFS, settings.SectionName, 2)
+
+	blips, err := GetUpdatedBlips(settings.SectionFS, settings.SectionName, 2) //nolint:gomnd
 	if err != nil {
 		return err
 	}
@@ -45,16 +46,19 @@ func update(cmd *cobra.Command, args []string) error {
 	for blip := range blips {
 		if blip.Error != nil {
 			log.Println(blip.Error)
+
 			continue
 		}
 
 		settings.TemplateData.Blips = append(settings.TemplateData.Blips, blip.Value)
 
 		wg.Add(1)
+
 		go func(blip *Blip) {
 			defer wg.Done()
 
 			log.Println("updating blip:", blip.Filename)
+
 			err := blip.WriteFile(settings.SectionFS)
 			if err != nil {
 				log.Println(err)
@@ -67,12 +71,13 @@ func update(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	fd, err := settings.SectionFS.OpenFile(settings.OutputFilename, rwfs.O_CREATE|rwfs.O_TRUNC|rwfs.O_WRONLY, 0640)
+	fd, err := settings.SectionFS.OpenFile(settings.OutputFilename, rwfs.O_CREATE|rwfs.O_TRUNC|rwfs.O_WRONLY, 0o640)
 	if err != nil {
 		return err
 	}
 
 	log.Println("generating radar")
+
 	err = generateRadar(string(templateData), fd, &settings.TemplateData)
 	if err != nil {
 		return err

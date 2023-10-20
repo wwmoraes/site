@@ -7,9 +7,18 @@ import (
 	"github.com/gohugoio/hugo/tpl/crypto"
 )
 
-type Orientation = [2]float64
-type Percentage = float64
-type Position = Orientation
+const (
+	Quadrants = 4
+	Tiers     = 4
+)
+
+var orientations = [Quadrants]Orientation{{-1, -1}, {1, -1}, {1, 1}, {-1, 1}}
+
+type (
+	Orientation = [2]float64
+	Percentage  = float64
+	Position    = Orientation
+)
 
 type RadarOptions struct {
 	// Tiers names of tiers from the innermost to the outermost
@@ -46,18 +55,14 @@ type BlipParameters struct {
 	Title    string
 }
 
-var (
-	orientations = [4]Orientation{{-1, -1}, {1, -1}, {1, 1}, {-1, 1}}
-)
-
 func NewRadar(options RadarOptions) (*RadarParameters, error) {
 	params := &RadarParameters{
 		Angle:               options.Angle,
 		BlipRadius:          options.BlipRadius,
-		QuadrantOrientation: make(map[string]Orientation, 4),
+		QuadrantOrientation: make(map[string]Orientation, Quadrants),
 		Radius:              options.Radius,
-		TierOffset:          make(map[string]float64, 4),
-		TierRadius:          make(map[string]float64, 4),
+		TierOffset:          make(map[string]float64, Tiers),
+		TierRadius:          make(map[string]float64, Tiers),
 	}
 
 	for index, name := range options.Quadrants {
@@ -65,6 +70,7 @@ func NewRadar(options RadarOptions) (*RadarParameters, error) {
 	}
 
 	offset := 0.0
+
 	for index, name := range options.Tiers {
 		size := options.Proportion[index] * options.Radius
 
@@ -81,6 +87,7 @@ func CalculatePosition(radar *RadarParameters, blip *BlipParameters) (Position, 
 	if radar == nil {
 		return Position{}, fmt.Errorf("radar parameters must not be empty")
 	}
+
 	if blip == nil {
 		return Position{}, fmt.Errorf("blip parameters must not be empty")
 	}
@@ -95,7 +102,7 @@ func CalculatePosition(radar *RadarParameters, blip *BlipParameters) (Position, 
 	sin := math.Abs(math.Sin(angle))
 
 	// adjust the offset and width of band to avoid drawing on top of boundaries
-	width := radar.TierRadius[blip.Tier] - radar.BlipRadius*2
+	width := radar.TierRadius[blip.Tier] - radar.BlipRadius*2 //nolint:gomnd
 	offset := radar.TierOffset[blip.Tier] + radar.BlipRadius
 	radius := offset + math.Mod(float64(fnv), width)
 

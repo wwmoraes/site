@@ -1,9 +1,11 @@
 package schema
 
-type URL = string
-type Text = string
-type Integer = int
-type Boolean = bool
+type (
+	URL     = string
+	Text    = string
+	Integer = int
+	Boolean = bool
+)
 
 type Identifier struct {
 	Properties *Thing

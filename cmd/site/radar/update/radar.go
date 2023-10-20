@@ -22,19 +22,3 @@ func generateRadar(templateString string, out io.Writer, values *RadarTemplate) 
 
 	return tmpl.Execute(out, values)
 }
-
-func (radar *RadarTemplate) Tier1Radius() int {
-	return radar.Radius / 2
-}
-
-func (radar *RadarTemplate) Tier2Radius() int {
-	return radar.Radius*70/100 - radar.Tier1Radius()
-}
-
-func (radar *RadarTemplate) Tier3Radius() int {
-	return radar.Radius*86/100 - radar.Tier2Radius()
-}
-
-func (radar *RadarTemplate) Tier4Radius() int {
-	return radar.Radius - radar.Tier3Radius()
-}

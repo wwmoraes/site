@@ -1,17 +1,17 @@
 package frontmatter
 
 const (
-	//// Hugo front matter
+	// Hugo front matter.
 
 	Description Key = "description"
 	Draft       Key = "draft"
 	Title       Key = "title"
 
-	//// Site front matter
+	// Site front matter.
 
 	TableOfContents Key = "table-of-contents"
 
-	//// Radar front matter
+	// Radar front matter.
 
 	RadarIndex   Key = "radarIndex"
 	RadarSection Key = "radarSection"

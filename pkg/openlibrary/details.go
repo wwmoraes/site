@@ -28,6 +28,7 @@ type Details struct {
 	Subtitle      string    `json:"subtitle,omitempty"`
 	Title         string    `json:"title,omitempty"`
 
+	//nolint:dupword
 	// Identifiers        Identifiers            `json:"identifiers"`
 	// TableOfContents    []TableOfContent       `json:"table_of_contents"`
 	// Weight             string                 `json:"weight"`
@@ -66,6 +67,7 @@ type Details struct {
 // }
 
 // type Type struct {
+//nolint:dupword
 // 	Key Key `json:"key"`
 // }
 
@@ -73,11 +75,14 @@ type Details struct {
 // 	Level int64   `json:"level"`
 // 	Label string  `json:"label"`
 // 	Title *string `json:"title,omitempty"`
+//nolint:dupword
 // 	Type  Type    `json:"type"`
 // }
 
 func GetBookDetails(client *http.Client, isbn string) (*BookDetails, error) {
-	resp, err := client.Get(fmt.Sprintf("https://openlibrary.org/api/books?bibkeys=ISBN:%s&jscmd=details&format=json", isbn))
+	resp, err := client.Get(
+		fmt.Sprintf("https://openlibrary.org/api/books?bibkeys=ISBN:%s&jscmd=details&format=json", isbn),
+	)
 	if err != nil {
 		return nil, err
 	}
@@ -89,6 +94,7 @@ func GetBookDetails(client *http.Client, isbn string) (*BookDetails, error) {
 	}
 
 	results := make(BooksDetails, 1)
+
 	err = json.Unmarshal(data, &results)
 	if err != nil {
 		return nil, err

@@ -46,6 +46,7 @@ func New() (*hugolib.HugoSites, error) {
 	provider.Set("publishDir", "public")
 
 	fs := hugofs.NewFromSourceAndDestination(hugofs.Os, hugofs.Os, provider)
+
 	configs, err := allconfig.LoadConfig(allconfig.ConfigSourceDescriptor{
 		Flags:       provider,
 		Fs:          hugofs.Os,
@@ -69,7 +70,7 @@ func New() (*hugolib.HugoSites, error) {
 }
 
 func ParsePage(pagePath string) (pageparser.ContentFrontMatter, error) {
-	fd, err := os.OpenFile(pagePath, os.O_RDONLY, 0640)
+	fd, err := os.OpenFile(pagePath, os.O_RDONLY, 0o640)
 	if err != nil {
 		return pageparser.ContentFrontMatter{}, err
 	}

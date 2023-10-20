@@ -1,0 +1,35 @@
+# cspell:disable
+issues:
+  exclude-rules:
+  # exclude OpenLibrary JSON tags as we need them to match the upstream
+  - linters:
+    - tagliatelle
+    text: 'json\(camel\):'
+    path: 'pkg/openlibrary/.*'
+linters:
+  enable-all: true
+  fast: true
+  disable:
+  - depguard # too much nitpicking and gatekeeping
+  - godox # no need; there's a VSCode extension + Sonar reports
+  # - gofumpt # false-positive on a comment!
+  - gomoddirectives # broken, reports a replace directive that doesn't exist
+  - ifshort # deprecated
+  - nosnakecase # deprecated
+  - scopelint # deprecated
+linters-settings:
+  gomnd:
+    ignored-functions:
+    - '\.Int$'
+    - '\.IntP$'
+    - '\.MkdirAll$'
+    - '\.OpenFile$'
+    - '\.WriteFile$'
+    - make
+    - strings.SplitN
+    ignored-numbers:
+    - '0o640'
+output:
+  format: colored-line-number
+run:
+  go: "1.21"

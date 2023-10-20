@@ -22,6 +22,9 @@ publish: bin/site
 
 diagrams: ${DIAGRAMS_TARGETS}
 
+.PHONY: build
+build: bin/site
+
 bin/site: $(shell ${GO} list -f '{{ range .GoFiles }}{{ printf "%s/%s\n" $$.Dir . }}{{ end }}' ./cmd/$(notdir $@)/...)
 	$(info building $@)
 	@go build -o ./$(dir $@) ./cmd/$(notdir $@)/...

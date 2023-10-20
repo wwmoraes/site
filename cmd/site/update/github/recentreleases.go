@@ -19,12 +19,12 @@ type recentReleasesQuery struct {
 					Releases qlRelease `graphql:"releases(first: 10, orderBy: {field: CREATED_AT, direction: DESC})"`
 				}
 			}
-		} `graphql:"repositoriesContributedTo(first: 100, after:$after includeUserRepositories: true, contributionTypes: COMMIT, privacy: PUBLIC)"`
+		} `graphql:"repositoriesContributedTo(first: 100, after:$after includeUserRepositories: true, contributionTypes: COMMIT, privacy: PUBLIC)"` //nolint:lll
 	} `graphql:"user(login:$username)"`
 }
 
 type RepositoryRelease struct {
-	Repository `json:"Repository"`
+	Repository `json:"Repository"` //nolint:tagliatelle
 	Release
 }
 
@@ -37,15 +37,16 @@ type Release struct {
 
 func (handler *Handler) GetRecentReleases(ctx context.Context, count int) ([]RepositoryRelease, error) {
 	query := recentReleasesQuery{}
+	repositories := make([]RepositoryRelease, 0, count)
 	vars := Variables{
 		"username": github.String(handler.username),
 	}
 
 	var after *github.String
-	repositories := make([]RepositoryRelease, 0, count)
 
 	for {
 		vars["after"] = after
+
 		err := handler.client.Query(ctx, &query, vars)
 		if err != nil {
 			return nil, err
@@ -65,12 +66,14 @@ func (handler *Handler) GetRecentReleases(ctx context.Context, count int) ([]Rep
 				if rel.IsPrerelease || rel.IsDraft {
 					continue
 				}
+
 				if v.Node.Releases.Nodes[0].TagName == "" ||
 					v.Node.Releases.Nodes[0].PublishedAt.Time.IsZero() {
 					continue
 				}
 
 				repository.Release = *v.Node.Releases.Nodes[0].Unwrap()
+
 				break
 			}
 

@@ -5,6 +5,10 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
+	"time"
+
+	"github.com/wwmoraes/site/pkg/schema"
 )
 
 type BooksData map[string]*BookData
@@ -43,6 +47,7 @@ func GetBookData(client *http.Client, isbn string) (*BookData, error) {
 	}
 
 	results := make(BooksData, 1)
+
 	err = json.Unmarshal(data, &results)
 	if err != nil {
 		return nil, err
@@ -51,4 +56,74 @@ func GetBookData(client *http.Client, isbn string) (*BookData, error) {
 	meta := results[fmt.Sprintf("ISBN:%s", isbn)]
 
 	return meta, nil
+}
+
+func (meta *BookData) AugmentBook(book *schema.Book) error {
+	if meta == nil {
+		return fmt.Errorf("book not found in Open Library (%s, %s)", book.Name, book.ISBN)
+	}
+
+	if book.ThumbnailURL == "" && meta.Cover != nil {
+		if meta.Cover.Large != "" {
+			book.ThumbnailURL = meta.Cover.Large
+		} else if meta.Cover.Medium != "" {
+			book.ThumbnailURL = meta.Cover.Medium
+		} else if meta.Cover.Small != "" {
+			book.ThumbnailURL = meta.Cover.Small
+		}
+	}
+
+	if meta.PublishPlaces != nil && len(meta.PublishPlaces) > 0 {
+		book.LocationCreated = schema.NewPlace(meta.PublishPlaces[0].Name)
+
+		parts := strings.Split(book.LocationCreated.Name, ", ")
+		if len(parts) == 3 { //nolint:gomnd
+			book.LocationCreated.Address = &schema.PostalAddress{
+				AddressLocality: parts[0],
+				AddressRegion:   parts[1],
+				AddressCountry:  parts[2],
+			}
+		}
+	}
+
+	if len(meta.Publishers) > 0 {
+		book.Publisher = schema.NewOrganization(meta.Publishers[0].Name)
+	}
+
+	if len(meta.PublishDate) > 0 {
+		parsed, err := ParseDate(meta.PublishDate)
+		if err == nil {
+			book.DatePublished = parsed.UTC().Format(time.RFC3339)
+		}
+	}
+
+	book.Author = make([]*schema.Person, len(meta.Authors))
+	for index, author := range meta.Authors {
+		book.Author[index] = schema.NewPerson(author.Name)
+	}
+
+	return nil
+}
+
+func ParseDate(value string) (*time.Time, error) {
+	var result time.Time
+
+	var err error
+
+	layouts := []string{
+		"January 2, 2006",
+		"Jan 02, 2006",
+		"2006",
+		"2006-01",
+		"January 2006",
+	}
+
+	for _, layout := range layouts {
+		result, err = time.Parse(layout, value)
+		if err == nil {
+			return &result, nil
+		}
+	}
+
+	return nil, err
 }

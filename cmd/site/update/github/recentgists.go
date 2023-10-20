@@ -36,10 +36,12 @@ func (handler *Handler) GetRecentGists(ctx context.Context, count int) ([]Gist, 
 	}
 
 	var after *github.String
+
 	gists := make([]Gist, 0, count)
 
 	for {
 		vars["after"] = after
+
 		err := handler.client.Query(ctx, &query, vars)
 		if err != nil {
 			return nil, fmt.Errorf("failed to query recent gists: %w", err)
