@@ -1,11 +1,11 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 6
+radarIndex: 17
 radarSection: techniques
 radarTier: hold
-radarX: -243
-radarY: -379
+radarX: -260
+radarY: -405
 table-of-contents: false
 title: Database Stored Procedures
 ---

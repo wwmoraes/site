@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 21
+radarIndex: 26
 radarSection: tools
-radarTier: hold
-radarX: 258
-radarY: 394
+radarTier: adopt
+radarX: 68
+radarY: 32
 table-of-contents: false
-title: draw.io
+title: GNU Make
 ---
 
 TODO justification

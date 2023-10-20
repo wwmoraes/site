@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 8
-radarSection: platforms
+radarIndex: 51
+radarSection: languages
 radarTier: trial
-radarX: -247
-radarY: 148
+radarX: 294
+radarY: -10
 table-of-contents: false
-title: Backstage
+title: TypeScript
 ---
 
 TODO justification

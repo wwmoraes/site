@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 8
+radarIndex: 20
 radarSection: platforms
-radarTier: trial
-radarX: -247
-radarY: 148
+radarTier: hold
+radarX: -386
+radarY: 250
 table-of-contents: false
-title: Backstage
+title: .NET
 ---
 
 TODO justification

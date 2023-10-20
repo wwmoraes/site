@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 8
+radarIndex: 13
 radarSection: platforms
-radarTier: trial
-radarX: -247
-radarY: 148
+radarTier: assess
+radarX: -176
+radarY: 375
 table-of-contents: false
-title: Backstage
+title: Cloudflare Pages
 ---
 
 TODO justification

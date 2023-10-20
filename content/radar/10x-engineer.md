@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 21
-radarSection: tools
+radarIndex: 0
+radarSection: techniques
 radarTier: hold
-radarX: 258
-radarY: 394
+radarX: -366
+radarY: -325
 table-of-contents: false
-title: draw.io
+title: 10x Engineer
 ---
 
 TODO justification

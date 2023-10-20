@@ -1,11 +1,11 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 25
+radarIndex: 49
 radarSection: techniques
 radarTier: assess
-radarX: -214
-radarY: -327
+radarX: -225
+radarY: -344
 table-of-contents: false
 title: Staff Software Engineer
 ---

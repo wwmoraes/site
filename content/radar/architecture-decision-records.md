@@ -1,10 +1,10 @@
 ---
 description: keep track of architecture changes as much as your code
-radarIndex: 1
+radarIndex: 4
 radarSection: techniques
 radarTier: trial
-radarX: -242
-radarY: -120
+radarX: -250
+radarY: -124
 table-of-contents: false
 title: Architecture Decision Records (ADRs)
 ---

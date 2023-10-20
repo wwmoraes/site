@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 8
-radarSection: platforms
+radarIndex: 40
+radarSection: tools
 radarTier: trial
-radarX: -247
-radarY: 148
+radarX: 253
+radarY: 107
 table-of-contents: false
-title: Backstage
+title: Pulumi
 ---
 
 TODO justification

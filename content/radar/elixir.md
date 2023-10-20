@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 44
+radarIndex: 22
 radarSection: languages
 radarTier: assess
-radarX: 220
-radarY: -318
+radarX: 250
+radarY: -294
 table-of-contents: false
-title: Rust
+title: Elixir
 ---
 
 TODO justification

@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 21
-radarSection: tools
+radarIndex: 39
+radarSection: languages
 radarTier: hold
-radarX: 258
-radarY: 394
+radarX: 402
+radarY: -266
 table-of-contents: false
-title: draw.io
+title: PowerShell
 ---
 
 TODO justification

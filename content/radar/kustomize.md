@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 21
+radarIndex: 34
 radarSection: tools
-radarTier: hold
-radarX: 258
-radarY: 394
+radarTier: adopt
+radarX: 69
+radarY: 75
 table-of-contents: false
-title: draw.io
+title: Kustomize
 ---
 
 TODO justification

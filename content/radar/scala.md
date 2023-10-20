@@ -1,10 +1,10 @@
 ---
 description: lorem ipsum
-radarIndex: 23
+radarIndex: 45
 radarSection: languages
 radarTier: hold
-radarX: 339
-radarY: -296
+radarX: 360
+radarY: -313
 table-of-contents: false
 title: Scala
 ---

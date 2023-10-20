@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 44
+radarIndex: 55
 radarSection: languages
 radarTier: assess
-radarX: 220
-radarY: -318
+radarX: 205
+radarY: -302
 table-of-contents: false
-title: Rust
+title: Zig
 ---
 
 TODO justification

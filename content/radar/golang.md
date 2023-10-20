@@ -1,11 +1,11 @@
 ---
 description: TODO
 draft: true
-radarIndex: 12
+radarIndex: 27
 radarSection: languages
 radarTier: adopt
-radarX: 46
-radarY: -177
+radarX: 16
+radarY: -61
 table-of-contents: false
 title: Golang
 ---

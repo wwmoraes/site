@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 48
+radarIndex: 54
 radarSection: techniques
 radarTier: adopt
-radarX: -20
-radarY: -112
+radarX: -181
+radarY: -51
 table-of-contents: false
-title: Site Reliability Engineer (SRE)
+title: Zero Trust Architecture
 ---
 
 TODO justification

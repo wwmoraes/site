@@ -1,11 +1,11 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 15
+radarIndex: 32
 radarSection: tools
 radarTier: trial
-radarX: 303
-radarY: 147
+radarX: 258
+radarY: 125
 table-of-contents: false
 title: Kube-bench
 ---

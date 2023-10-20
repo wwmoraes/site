@@ -104,30 +104,102 @@
   </g>
   <!-- generated blips -->
   <g>
-    <g transform="translate(-242 -120)">
-      <a href="/radar/architecture-decision-records" target="_parent">
-        <title>Architecture Decision Records (ADRs)</title>
-        <use href="#blip" class="trial" x="500" y="500" />
+    <g transform="translate(-366 -325)">
+      <a href="#" target="_parent">
+        <title>10x Engineer</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          0
+        </text>
+      </a>
+    </g>
+    <g transform="translate(40 131)">
+      <a href="#" target="_parent">
+        <title>1Password</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           1
         </text>
       </a>
     </g>
-    <g transform="translate(-113 439)">
+    <g transform="translate(346 145)">
       <a href="#" target="_parent">
-        <title>Azure Pipelines</title>
-        <use href="#blip" class="hold" x="500" y="500" />
+        <title>Ansible</title>
+        <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          2
+          3
         </text>
       </a>
     </g>
-    <g transform="translate(-281 169)">
+    <g transform="translate(-250 -124)">
+      <a href="/radar/architecture-decision-records" target="_parent">
+        <title>Architecture Decision Records (ADRs)</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          4
+        </text>
+      </a>
+    </g>
+    <g transform="translate(446 -52)">
+      <a href="#" target="_parent">
+        <title>Azure Bicep</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          5
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-362 299)">
+      <a href="/radar/azure-devops" target="_parent">
+        <title>Azure DevOps</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          6
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-121 468)">
+      <a href="/radar/azure-pipelines" target="_parent">
+        <title>Azure Pipelines</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          7
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-247 148)">
       <a href="#" target="_parent">
         <title>Backstage</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          3
+          8
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-58 -211)">
+      <a href="#" target="_parent">
+        <title>C4 Model</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          9
+        </text>
+      </a>
+    </g>
+    <g transform="translate(273 72)">
+      <a href="#" target="_parent">
+        <title>CFEngine</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          10
+        </text>
+      </a>
+    </g>
+    <g transform="translate(483 -73)">
+      <a href="#" target="_parent">
+        <title>Clojure</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          11
         </text>
       </a>
     </g>
@@ -136,178 +208,376 @@
         <title>Cloud Solution Architect</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          4
-        </text>
-      </a>
-    </g>
-    <g transform="translate(46 177)">
-      <a href="#" target="_parent">
-        <title>Container Structure Test</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          5
-        </text>
-      </a>
-    </g>
-    <g transform="translate(-243 -379)">
-      <a href="#" target="_parent">
-        <title>Database Stored Procedures</title>
-        <use href="#blip" class="hold" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          6
-        </text>
-      </a>
-    </g>
-    <g transform="translate(-444 -71)">
-      <a href="/radar/devops-engineer" target="_parent">
-        <title>DevOps Engineer</title>
-        <use href="#blip" class="hold" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          7
-        </text>
-      </a>
-    </g>
-    <g transform="translate(-59 -28)">
-      <a href="#" target="_parent">
-        <title>Domain-Driven Design (DDD)</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          8
-        </text>
-      </a>
-    </g>
-    <g transform="translate(247 377)">
-      <a href="#" target="_parent">
-        <title>draw.io</title>
-        <use href="#blip" class="hold" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          9
-        </text>
-      </a>
-    </g>
-    <g transform="translate(-332 -44)">
-      <a href="#" target="_parent">
-        <title>Functional Paradigm</title>
-        <use href="#blip" class="trial" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          10
-        </text>
-      </a>
-    </g>
-    <g transform="translate(186 90)">
-      <a href="#" target="_parent">
-        <title>GitHub Actions</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          11
-        </text>
-      </a>
-    </g>
-    <g transform="translate(46 -177)">
-      <a href="#" target="_parent">
-        <title>Golang</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
-        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           12
         </text>
       </a>
     </g>
-    <g transform="translate(295 -146)">
+    <g transform="translate(-176 375)">
       <a href="#" target="_parent">
-        <title>Haskell</title>
-        <use href="#blip" class="trial" x="500" y="500" />
+        <title>Cloudflare Pages</title>
+        <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           13
         </text>
       </a>
     </g>
-    <g transform="translate(234 -395)">
+    <g transform="translate(-308 263)">
       <a href="#" target="_parent">
-        <title>Java/JVM</title>
-        <use href="#blip" class="hold" x="500" y="500" />
+        <title>Cloudflare Workers</title>
+        <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           14
         </text>
       </a>
     </g>
-    <g transform="translate(303 147)">
+    <g transform="translate(23 90)">
       <a href="#" target="_parent">
-        <title>Kube-bench</title>
-        <use href="#blip" class="trial" x="500" y="500" />
+        <title>Container Structure Test</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           15
         </text>
       </a>
     </g>
-    <g transform="translate(-128 20)">
+    <g transform="translate(10 -385)">
       <a href="#" target="_parent">
-        <title>Kubernetes</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
+        <title>Crystal</title>
+        <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           16
         </text>
       </a>
     </g>
-    <g transform="translate(50 447)">
+    <g transform="translate(-260 -405)">
       <a href="#" target="_parent">
-        <title>Mermaid diagrams</title>
+        <title>Database Stored Procedures</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           17
         </text>
       </a>
     </g>
-    <g transform="translate(-305 209)">
-      <a href="#" target="_parent">
-        <title>OpenMetadata</title>
-        <use href="#blip" class="assess" x="500" y="500" />
+    <g transform="translate(-475 -76)">
+      <a href="/radar/devops-engineer" target="_parent">
+        <title>DevOps Engineer</title>
+        <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           18
         </text>
       </a>
     </g>
-    <g transform="translate(163 332)">
-      <a href="#" target="_parent">
-        <title>Podman</title>
-        <use href="#blip" class="assess" x="500" y="500" />
+    <g transform="translate(-203 -96)">
+      <a href="/radar/domain-driven-design" target="_parent">
+        <title>Domain-Driven Design (DDD)</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           19
         </text>
       </a>
     </g>
-    <g transform="translate(211 -304)">
+    <g transform="translate(-386 250)">
       <a href="#" target="_parent">
-        <title>Rust</title>
+        <title>.NET</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          20
+        </text>
+      </a>
+    </g>
+    <g transform="translate(258 394)">
+      <a href="#" target="_parent">
+        <title>draw.io</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          21
+        </text>
+      </a>
+    </g>
+    <g transform="translate(250 -294)">
+      <a href="#" target="_parent">
+        <title>Elixir</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           22
         </text>
       </a>
     </g>
-    <g transform="translate(339 -296)">
-      <a href="/radar/scala" target="_parent">
-        <title>Scala</title>
-        <use href="#blip" class="hold" x="500" y="500" />
+    <g transform="translate(161 -368)">
+      <a href="#" target="_parent">
+        <title>Erlang</title>
+        <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           23
         </text>
       </a>
     </g>
-    <g transform="translate(-20 -83)">
+    <g transform="translate(-263 -35)">
       <a href="#" target="_parent">
-        <title>Site Reliability Engineer (SRE)</title>
-        <use href="#blip" class="adopt" x="500" y="500" />
+        <title>Functional Paradigm</title>
+        <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           24
         </text>
       </a>
     </g>
-    <g transform="translate(-214 -327)">
+    <g transform="translate(204 99)">
+      <a href="#" target="_parent">
+        <title>GitHub Actions</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          25
+        </text>
+      </a>
+    </g>
+    <g transform="translate(68 32)">
+      <a href="#" target="_parent">
+        <title>GNU Make</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          26
+        </text>
+      </a>
+    </g>
+    <g transform="translate(16 -61)">
+      <a href="#" target="_parent">
+        <title>Golang</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          27
+        </text>
+      </a>
+    </g>
+    <g transform="translate(268 -133)">
+      <a href="#" target="_parent">
+        <title>Haskell</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          28
+        </text>
+      </a>
+    </g>
+    <g transform="translate(464 -70)">
+      <a href="#" target="_parent">
+        <title>Java</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          29
+        </text>
+      </a>
+    </g>
+    <g transform="translate(488 -17)">
+      <a href="#" target="_parent">
+        <title>JavaScript</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          30
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-81 467)">
+      <a href="#" target="_parent">
+        <title>JVM</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          31
+        </text>
+      </a>
+    </g>
+    <g transform="translate(258 125)">
+      <a href="#" target="_parent">
+        <title>Kube-bench</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          32
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-157 24)">
+      <a href="#" target="_parent">
+        <title>Kubernetes</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          33
+        </text>
+      </a>
+    </g>
+    <g transform="translate(69 75)">
+      <a href="#" target="_parent">
+        <title>Kustomize</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          34
+        </text>
+      </a>
+    </g>
+    <g transform="translate(373 -157)">
+      <a href="#" target="_parent">
+        <title>Lua</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          35
+        </text>
+      </a>
+    </g>
+    <g transform="translate(51 457)">
+      <a href="#" target="_parent">
+        <title>Mermaid diagrams</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          36
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-310 213)">
+      <a href="#" target="_parent">
+        <title>OpenMetadata</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          37
+        </text>
+      </a>
+    </g>
+    <g transform="translate(162 330)">
+      <a href="#" target="_parent">
+        <title>Podman</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          38
+        </text>
+      </a>
+    </g>
+    <g transform="translate(402 -266)">
+      <a href="#" target="_parent">
+        <title>PowerShell</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          39
+        </text>
+      </a>
+    </g>
+    <g transform="translate(253 107)">
+      <a href="#" target="_parent">
+        <title>Pulumi</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          40
+        </text>
+      </a>
+    </g>
+    <g transform="translate(252 -417)">
+      <a href="#" target="_parent">
+        <title>Ruby</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          43
+        </text>
+      </a>
+    </g>
+    <g transform="translate(220 -318)">
+      <a href="#" target="_parent">
+        <title>Rust</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          44
+        </text>
+      </a>
+    </g>
+    <g transform="translate(360 -313)">
+      <a href="/radar/scala" target="_parent">
+        <title>Scala</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          45
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-362 -299)">
+      <a href="#" target="_parent">
+        <title>Scaled Agile Framework®️ (SAFe ™️)</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          46
+        </text>
+      </a>
+    </g>
+    <g transform="translate(385 -255)">
+      <a href="#" target="_parent">
+        <title>Shell script</title>
+        <use href="#blip" class="hold" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          47
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-20 -112)">
+      <a href="#" target="_parent">
+        <title>Site Reliability Engineer (SRE)</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          48
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-225 -344)">
       <a href="#" target="_parent">
         <title>Staff Software Engineer</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          25
+          49
+        </text>
+      </a>
+    </g>
+    <g transform="translate(10 22)">
+      <a href="#" target="_parent">
+        <title>Terraform</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          50
+        </text>
+      </a>
+    </g>
+    <g transform="translate(294 -10)">
+      <a href="#" target="_parent">
+        <title>TypeScript</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          51
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-56 -356)">
+      <a href="#" target="_parent">
+        <title>Unikernel</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          52
+        </text>
+      </a>
+    </g>
+    <g transform="translate(206 -340)">
+      <a href="#" target="_parent">
+        <title>WebAssembly</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          53
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-181 -51)">
+      <a href="#" target="_parent">
+        <title>Zero Trust Architecture</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          54
+        </text>
+      </a>
+    </g>
+    <g transform="translate(205 -302)">
+      <a href="#" target="_parent">
+        <title>Zig</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          55
         </text>
       </a>
     </g>

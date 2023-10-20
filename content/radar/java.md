@@ -1,13 +1,13 @@
 ---
 description: The 90's solution to portability that needs to rest in peace
 draft: true
-radarIndex: 14
+radarIndex: 29
 radarSection: languages
 radarTier: hold
-radarX: 234
-radarY: -395
+radarX: 464
+radarY: -70
 table-of-contents: false
-title: Java/JVM
+title: Java
 ---
 
 Back in the 90's, the information technology scene was quite fragmented.

@@ -1,11 +1,11 @@
 ---
 description: TODO
 draft: true
-radarIndex: 10
+radarIndex: 24
 radarSection: techniques
 radarTier: trial
-radarX: -332
-radarY: -44
+radarX: -263
+radarY: -35
 table-of-contents: false
 title: Functional Paradigm
 ---

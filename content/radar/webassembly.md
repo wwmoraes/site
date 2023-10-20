@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 44
+radarIndex: 53
 radarSection: languages
 radarTier: assess
-radarX: 220
-radarY: -318
+radarX: 206
+radarY: -340
 table-of-contents: false
-title: Rust
+title: WebAssembly
 ---
 
 TODO justification

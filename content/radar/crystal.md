@@ -1,13 +1,15 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 44
+radarIndex: 16
 radarSection: languages
 radarTier: assess
-radarX: 220
-radarY: -318
+radarX: 10
+radarY: -385
 table-of-contents: false
-title: Rust
+title: Crystal
 ---
 
 TODO justification
+
+<https://crystal-lang.org>

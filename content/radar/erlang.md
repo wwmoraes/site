@@ -1,13 +1,13 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 44
+radarIndex: 23
 radarSection: languages
 radarTier: assess
-radarX: 220
-radarY: -318
+radarX: 161
+radarY: -368
 table-of-contents: false
-title: Rust
+title: Erlang
 ---
 
 TODO justification

@@ -1,11 +1,11 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 18
+radarIndex: 37
 radarSection: platforms
 radarTier: assess
-radarX: -305
-radarY: 209
+radarX: -310
+radarY: 213
 table-of-contents: false
 title: OpenMetadata
 ---

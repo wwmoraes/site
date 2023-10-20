@@ -1,10 +1,10 @@
 ---
 description: lorem ipsum
-radarIndex: 7
+radarIndex: 18
 radarSection: techniques
 radarTier: hold
-radarX: -444
-radarY: -71
+radarX: -475
+radarY: -76
 table-of-contents: false
 title: DevOps Engineer
 ---
