@@ -45,7 +45,7 @@ repos:
   hooks:
   - id: update-radar
     name: Update radar
-    entry: go run -race ./cmd/site/... radar update
+    entry: make radar
     language: system
     pass_filenames: false
     files: |

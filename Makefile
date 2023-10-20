@@ -1,3 +1,5 @@
+GO ?= go
+
 DIAGRAMS_SOURCES = $(shell find content -type f -name "*.puml")
 DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
 GOODREADS_LIST = 138333248-william
@@ -13,34 +15,26 @@ start:
 start-prod:
 	@hugo server -e production
 
-build:
+publish: bin/site
 	@${RM} -r public
-	@go run -race ./cmd/site/... radar update
+	@./$< radar update
 	@hugo --gc --cleanDestinationDir
 
-hook-install:
-	@pre-commit install
-
-hook-update:
-	@pre-commit autoupdate
-
-check:
-	@pre-commit run --all-files
-
-clean:
-	${RM} -r public
-
 diagrams: ${DIAGRAMS_TARGETS}
+
+bin/site: $(shell ${GO} list -f '{{ range .GoFiles }}{{ printf "%s/%s\n" $$.Dir . }}{{ end }}' ./cmd/$(notdir $@)/...)
+	$(info building $@)
+	@go build -o ./$(dir $@) ./cmd/$(notdir $@)/...
 
 .PRECIOUS: %.png
 %.png: %.puml
 	plantuml -tpng -darkmode -theme reddress-darkblue $<
 
-github:
-	@op run --env-file=.env -- go run -race ./... update github
+github: bin/site
+	@op run --env-file=.env -- ./$< update github
 
-books:
-	@go run -race ./... update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+books: bin/site
+	@./$< update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
 
 ## EXIF tags management
 ## https://exiftool.org/examples.html
@@ -78,5 +72,12 @@ endef
 .PHONY: radar
 radar: content/radar/radar.svg
 
-content/radar/radar.svg: content/radar/radar.svg.tmpl $(wildcard content/radar/*.md)
-	@go run -race ./cmd/site/... radar update
+content/radar/radar.svg: bin/site content/radar/radar.svg.tmpl $(wildcard content/radar/*.md)
+	@./$< radar update
+
+blip: QUADRANT=$(shell echo "languages\nplatforms\ntechniques\ntools" | fzf -1)
+blip: TIER=$(shell echo "adopt\ntrial\nassess\nhold" | fzf -1)
+blip: NAME=$(shell read -p "Name: " && echo $$REPLY | tr '[A-Z]' '[a-z]' | tr ' ' '-')
+blip: bin/site
+	@./$< radar blip create -q ${QUADRANT} -t ${TIER} "${NAME}"
+	@${MAKE} radar

@@ -8,8 +8,8 @@
       "name": "Radar",
       "type": "go",
       "request": "launch",
-      "mode": "auto",
-      "program": "cmd/site",
+      "mode": "debug",
+      "program": "${workspaceFolder}/cmd/site",
       "cwd": "${workspaceFolder}",
       "args": [
         "radar",
