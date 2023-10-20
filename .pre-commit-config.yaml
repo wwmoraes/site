@@ -41,6 +41,17 @@ repos:
     - stylelint-config-standard@30.0.1
     - stylelint-config-standard-scss@7.0.1
     args: [-f, compact]
+- repo: https://github.com/tekwizely/pre-commit-golang
+  rev: v1.0.0-beta.5
+  hooks:
+  - id: go-mod-tidy
+    name: go mod tidy
+  - id: go-build-repo-mod
+    name: go build
+  - id: go-test-repo-mod
+    name: go test
+  - id: golangci-lint-repo-mod
+    name: golangci-lint
 - repo: local
   hooks:
   - id: update-radar
@@ -60,4 +71,8 @@ ci:
   autoupdate_schedule: weekly
   submodules: false
   skip:
+  - go-build-repo-mod
+  - go-mod-tidy
+  - go-test-repo-mod
+  - golangci-lint-repo-mod
   - update-radar
