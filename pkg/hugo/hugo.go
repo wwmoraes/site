@@ -1,8 +1,10 @@
 package hugo
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
+	"io"
 	"io/fs"
 	"os"
 	"path"
@@ -12,6 +14,7 @@ import (
 	"github.com/gohugoio/hugo/deps"
 	"github.com/gohugoio/hugo/hugofs"
 	"github.com/gohugoio/hugo/hugolib"
+	"github.com/gohugoio/hugo/parser"
 	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/spf13/afero"
 )
@@ -150,4 +153,26 @@ func contentDir(content string) (string, error) {
 	}
 
 	return contentFile(path.Join(content, "_index.md"))
+}
+
+func ReadPage(r io.ReadCloser) (pageparser.ContentFrontMatter, error) {
+	defer r.Close()
+
+	return pageparser.ParseFrontMatterAndContent(r)
+}
+
+func WritePage(w io.WriteCloser, page *pageparser.ContentFrontMatter) error {
+	defer w.Close()
+
+	err := parser.InterfaceToFrontMatter(page.FrontMatter, page.FrontMatterFormat, w)
+	if err != nil {
+		return err
+	}
+
+	_, err = io.Copy(w, bytes.NewReader(page.Content))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

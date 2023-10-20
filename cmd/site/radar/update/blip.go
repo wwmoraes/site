@@ -5,45 +5,16 @@ import (
 	"fmt"
 	"io"
 	"io/fs"
-	"math"
 	"os"
 	"path/filepath"
 	"strings"
 
 	"github.com/gohugoio/hugo/parser"
 	"github.com/gohugoio/hugo/parser/pageparser"
-	"github.com/gohugoio/hugo/tpl/crypto"
 	"github.com/wwmoraes/go-rwfs"
+	"github.com/wwmoraes/site/internal/blip"
+	"github.com/wwmoraes/site/internal/frontmatter"
 	"github.com/wwmoraes/site/pkg/hugo"
-)
-
-const (
-	maxAngle     = 90.0
-	baseRadius   = 500.0
-	blipDiameter = 10 * 2
-)
-
-var (
-	cartesianFactors = map[string][]float64{
-		"techniques": {-1, -1},
-		"languages":  {1, -1},
-		"platforms":  {-1, 1},
-		"tools":      {1, 1},
-	}
-
-	offsetFactors = map[string]float64{
-		"adopt":  0.0,
-		"trial":  0.5,
-		"assess": 0.70,
-		"hold":   0.86,
-	}
-
-	radiusFactors = map[string]float64{
-		"adopt":  0.5,
-		"trial":  0.3,
-		"assess": 0.14,
-		"hold":   0.06,
-	}
 )
 
 type Blip struct {
@@ -53,7 +24,24 @@ type Blip struct {
 }
 
 // TODO pass radar configuration (size, section zones, rim radius, etc)
-func GetUpdatedBlips(fsys fs.FS, section string, buffer int) (<-chan *Result[Blip], error) {
+func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[Blip], error) {
+	radarParameters, err := blip.NewRadar(blip.RadarOptions{
+		Radius:     500.0,
+		Angle:      90.0,
+		BlipRadius: 10.0,
+		Proportion: [4]float64{
+			50.0 / 100.0,
+			20.0 / 100.0,
+			16.0 / 100.0,
+			14.0 / 100.0,
+		},
+		Tiers:     [4]string{"adopt", "trial", "assess", "hold"},
+		Quadrants: [4]string{"techniques", "languages", "tools", "platforms"},
+	})
+	if err != nil {
+		return nil, err
+	}
+
 	blips := make(chan *Result[Blip], buffer)
 
 	go func() {
@@ -74,19 +62,11 @@ func GetUpdatedBlips(fsys fs.FS, section string, buffer int) (<-chan *Result[Bli
 				continue
 			}
 
-			fd, err := fsys.Open(entry.Name())
+			page, err := blip.Read(fsys, entry.Name())
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to open blip %s: %w", entry.Name(), err))
+				blips <- errorResult[Blip](fmt.Errorf("failed to read blip %s: %w", entry.Name(), err))
 				continue
 			}
-			defer fd.Close()
-
-			page, err := pageparser.ParseFrontMatterAndContent(fd)
-			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to parse blip %s: %w", entry.Name(), err))
-				continue
-			}
-			fd.Close() // early close to avoid hanging descriptors during the loop
 
 			title, err := hugo.GetString(&page, "title")
 			if err != nil {
@@ -94,50 +74,38 @@ func GetUpdatedBlips(fsys fs.FS, section string, buffer int) (<-chan *Result[Bli
 				continue
 			}
 
-			radarSection, err := hugo.GetString(&page, "radarSection")
+			quadrant, err := hugo.GetString(&page, frontmatter.RadarSection)
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to get section of blip %s: %w", entry.Name(), err))
+				blips <- errorResult[Blip](fmt.Errorf("failed to get blip %s quadrant: %w", entry.Name(), err))
 				continue
 			}
 
-			radarTier, err := hugo.GetString(&page, "radarTier")
+			tier, err := hugo.GetString(&page, frontmatter.RadarTier)
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to get tier of blip %s: %w", entry.Name(), err))
+				blips <- errorResult[Blip](fmt.Errorf("failed to get blip %s tier: %w", entry.Name(), err))
 				continue
 			}
 
-			radiusFactor, ok := radiusFactors[radarTier]
-			if !ok {
-				blips <- errorResult[Blip](fmt.Errorf("unknown blip '%s' tier '%s'", entry.Name(), radarTier))
-				continue
-			}
-
-			offsetFactor, ok := offsetFactors[radarTier]
-			if !ok {
-				blips <- errorResult[Blip](fmt.Errorf("unknown blip '%s' tier '%s'", entry.Name(), radarTier))
-				continue
-			}
-
-			fnv, err := crypto.New().FNV32a(title)
+			position, err := blip.CalculatePosition(radarParameters, &blip.BlipParameters{
+				Quadrant: quadrant,
+				Tier:     tier,
+				Title:    title,
+			})
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to hash blip %s: %w", entry.Name(), err))
+				blips <- errorResult[Blip](fmt.Errorf("failed to calculate blip %s position: %w", entry.Name(), err))
 				continue
 			}
 
-			name := strings.TrimSuffix(entry.Name(), filepath.Ext(entry.Name()))
-			angle := math.Mod(float64(fnv), maxAngle)
-			radius := (baseRadius * offsetFactor) + math.Max(blipDiameter, math.Mod(float64(fnv), baseRadius*radiusFactor))
-			x := math.Max(blipDiameter, math.Round(math.Abs(math.Cos(angle))*radius)) * cartesianFactors[radarSection][0]
-			y := math.Max(blipDiameter, math.Round(math.Abs(math.Sin(angle))*radius)) * cartesianFactors[radarSection][1]
+			page.FrontMatter[frontmatter.RadarX] = position[0]
+			page.FrontMatter[frontmatter.RadarY] = position[1]
+			page.FrontMatter[frontmatter.RadarIndex] = index
 
-			page.FrontMatter["radarX"] = x
-			page.FrontMatter["radarY"] = y
-			page.FrontMatter["radarIndex"] = index
+			slug := strings.TrimSuffix(entry.Name(), filepath.Ext(entry.Name()))
 
 			blips <- okResult[Blip](&Blip{
 				Page:         &page,
 				Filename:     entry.Name(),
-				RelPermalink: fmt.Sprintf("/%s/%s", section, name),
+				RelPermalink: fmt.Sprintf("/%s/%s", section, slug),
 			})
 		}
 	}()

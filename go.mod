@@ -11,6 +11,7 @@ require (
 	github.com/spf13/cobra v1.7.0
 	github.com/wwmoraes/go-rwfs v0.0.0-00010101000000-000000000000
 	golang.org/x/oauth2 v0.8.0
+	golang.org/x/text v0.10.0
 )
 
 require (
@@ -139,7 +140,6 @@ require (
 	golang.org/x/net v0.11.0 // indirect
 	golang.org/x/sync v0.3.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
 	golang.org/x/tools v0.9.3 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/api v0.127.0 // indirect

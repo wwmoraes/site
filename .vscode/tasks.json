@@ -71,6 +71,34 @@
         }
       },
       "type": "shell"
+    },
+    {
+      "command": "go",
+      "args": [
+        "run",
+        "-race",
+        "./cmd/site/...",
+        "radar",
+        "update"
+      ],
+      "detail": "(re)generates the radar metadata and graph",
+      "label": "radar",
+      "options": {
+        "statusbar": {
+          "label": "$(target)"
+        }
+      },
+      "presentation": {
+        "clear": true,
+        "close": true,
+        "echo": false,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "showReuseMessage": false
+      },
+      "type": "shell"
     }
   ],
   "version": "2.0.0"
