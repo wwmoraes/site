@@ -17,7 +17,7 @@
         {{ .PublishDate.Format "Jan 2, 2006" }}
         <span class="posts-list-item-separator">|</span>
         {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
-        {{ printf "%d min read" .ReadingTime }}
+        {{- T "readingTime" .ReadingTime -}}
         {{- with .Params.categories -}}
         <span class="posts-list-item-separator">|</span>
         {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}

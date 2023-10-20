@@ -40,7 +40,7 @@
         <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
         {{- partial "icon.html" (dict "ctx" $ "name" "clock") -}}
         &nbsp;
-        {{- printf "%d min read" .ReadingTime -}}
+        {{- T "readingTime" .ReadingTime -}}
         {{- with .Params.categories -}}
         <span class="posts-list-item-separator">&nbsp;|&nbsp;</span>
         {{- partial "icon.html" (dict "ctx" $ "name" "folder") -}}

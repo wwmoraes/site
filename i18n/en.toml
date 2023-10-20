@@ -36,66 +36,10 @@ other = "Categories"
 other = "More"
 # === Pagination ===
 
-# === partials/header.html ===
-[selectLanguage]
-other = "Select Language"
-
-[switchTheme]
-other = "Switch Theme"
-# === partials/header.html ===
-
 # === partials/footer.html ===
 [poweredBySome]
 other = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
 # === partials/footer.html ===
-
-# === partials/comment.html ===
-[valineLang]
-other = "en"
-
-[valinePlaceholder]
-other = "Your comment ..."
-
-[facebookLanguageCode]
-other = "en_US"
-# === partials/comment.html ===
-
-# === partials/assets.html ===
-[search]
-other = "Search"
-
-[searchPlaceholder]
-other = "Search..."
-
-[clear]
-other = "Clear"
-
-[cancel]
-other = "Cancel"
-
-[noResultsFound]
-other = "No results found"
-
-[lunrLanguageCode]
-other = "en"
-
-[copyToClipboard]
-other = "Copy to clipboard"
-
-[cookieconsentMessage]
-other = "This website uses cookies to improve your experience."
-
-[cookieconsentDismiss]
-other = "Got it!"
-
-[cookieconsentLink]
-other = "Learn more"
-# === partials/assets.html ===
-
-# === partials/plugin/share.html ===
-[shareOn]
-other = "Share on"
-# === partials/plugin/share.html ===
 
 # === posts/single.html ===
 [contents]
