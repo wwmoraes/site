@@ -1,3 +1,5 @@
+root = true
+
 [*]
 indent_style = space
 indent_size = 2
@@ -6,26 +8,17 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[.vscode/*.code-snippets]
+insert_final_newline = false
+
+[*.{html,json}]
+insert_final_newline = false
+
 [*.go]
 indent_style = tab
 
-[*.html]
-insert_final_newline = false
-
-[*.md]
-trim_trailing_whitespace = false
-
 [*.mk]
 indent_style = tab
-
-[.git*]
-indent_style = tab
-
-[.vscode/*.{json,code-snippets}]
-insert_final_newline = false
-
-[data/**/*.json]
-insert_final_newline = false
 
 [go.{mod,work}]
 indent_style = tab
