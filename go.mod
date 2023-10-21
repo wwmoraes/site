@@ -3,6 +3,8 @@ module github.com/wwmoraes/site
 go 1.21.2
 
 require (
+	github.com/goccy/go-json v0.10.2
+	github.com/gocolly/colly v1.2.0
 	github.com/gocolly/colly/v2 v2.1.0
 	github.com/gohugoio/hugo v0.119.0
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
