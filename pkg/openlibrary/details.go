@@ -1,10 +1,11 @@
 package openlibrary
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
+
+	"github.com/goccy/go-json"
 )
 
 type BooksDetails map[string]*BookDetails

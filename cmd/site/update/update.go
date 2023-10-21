@@ -6,14 +6,14 @@ import (
 	"github.com/wwmoraes/site/cmd/site/update/goodreads"
 )
 
-func New() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update",
 		Short: "static data update commands",
 	}
 
-	cmd.AddCommand(github.New())
-	cmd.AddCommand(goodreads.New())
+	cmd.AddCommand(github.Command())
+	cmd.AddCommand(goodreads.Command())
 
 	return cmd
 }

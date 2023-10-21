@@ -1,7 +1,6 @@
 package goodreads
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -10,6 +9,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/goccy/go-json"
 	"github.com/gocolly/colly/v2"
 	"github.com/gregjones/httpcache"
 	"github.com/gregjones/httpcache/leveldbcache"
@@ -26,7 +26,7 @@ const (
 
 var whitespaces = regexp.MustCompile("[ ]+")
 
-func New() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "goodreads",
 		Short: "fetch Goodreads shelf data",

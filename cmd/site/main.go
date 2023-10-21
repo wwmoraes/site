@@ -18,9 +18,9 @@ func main() {
 		Example: "site",
 	}
 
-	rootCmd.AddCommand(radar.New())
-	rootCmd.AddCommand(update.New())
 	rootCmd.AddCommand(data.Command())
+	rootCmd.AddCommand(radar.Command())
+	rootCmd.AddCommand(update.Command())
 
 	err := rootCmd.Execute()
 	if err != nil {

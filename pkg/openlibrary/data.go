@@ -1,13 +1,13 @@
 package openlibrary
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
 	"strings"
 	"time"
 
+	"github.com/goccy/go-json"
 	"github.com/wwmoraes/site/pkg/schema"
 )
 

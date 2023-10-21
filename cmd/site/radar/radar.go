@@ -6,7 +6,7 @@ import (
 	"github.com/wwmoraes/site/cmd/site/radar/update"
 )
 
-func New() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "radar",
 		Short: "updates radar blips",

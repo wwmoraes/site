@@ -2,19 +2,19 @@ package github
 
 import (
 	"context"
-	"encoding/json"
 	"io"
 	"log"
 	"os"
 	"sync"
 
+	"github.com/goccy/go-json"
 	"github.com/spf13/cobra"
 	"github.com/wwmoraes/go-rwfs"
 )
 
 type Variables map[string]interface{}
 
-func New() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "github",
 		Short: "fetch GitHub user data",
