@@ -1,13 +1,15 @@
 package adapters
 
+import "context"
+
 type DataPipe struct {
 	Source DataSource
 	Store  DataStore
 	Name   string
 }
 
-func (pipe *DataPipe) Update() error {
-	data, err := pipe.Source.Fetch()
+func (pipe *DataPipe) Update(ctx context.Context) error {
+	data, err := pipe.Source.Fetch(ctx)
 	if err != nil {
 		return err
 	}

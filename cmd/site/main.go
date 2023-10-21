@@ -6,7 +6,6 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/wwmoraes/site/cmd/site/data"
 	"github.com/wwmoraes/site/cmd/site/radar"
-	"github.com/wwmoraes/site/cmd/site/update"
 )
 
 func main() {
@@ -20,7 +19,6 @@ func main() {
 
 	rootCmd.AddCommand(data.Command())
 	rootCmd.AddCommand(radar.Command())
-	rootCmd.AddCommand(update.Command())
 
 	err := rootCmd.Execute()
 	if err != nil {

@@ -1,5 +1,7 @@
 package adapters
 
+import "context"
+
 type DataSource interface {
-	Fetch() ([]byte, error)
+	Fetch(context.Context) ([]byte, error)
 }

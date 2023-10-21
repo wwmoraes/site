@@ -1,0 +1,69 @@
+[[data.sources]]
+adapter = "goodreads"
+target = "goodreads/currently-reading.json"
+[data.sources.parameters]
+list = "138333248-william"
+shelf = "currently-reading"
+
+[[data.sources]]
+adapter = "goodreads"
+target = "goodreads/read.json"
+[data.sources.parameters]
+list = "138333248-william"
+shelf = "read"
+
+[[data.sources]]
+adapter = "goodreads"
+target = "goodreads/to-read.json"
+[data.sources.parameters]
+list = "138333248-william"
+shelf = "to-read"
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/contributions.json"
+[data.sources.parameters]
+query = "contributions"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/gists.json"
+[data.sources.parameters]
+query = "gists"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/repositories.json"
+[data.sources.parameters]
+query = "repositories"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/releases.json"
+[data.sources.parameters]
+query = "releases"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/pullRequests.json"
+[data.sources.parameters]
+query = "pullRequests"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/starred.json"
+[data.sources.parameters]
+query = "stars"
+count = 10
+
+[[data.sources]]
+adapter = "github"
+target = "github/recents/sponsors.json"
+[data.sources.parameters]
+query = "sponsors"
+count = 10

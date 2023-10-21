@@ -3,11 +3,10 @@ module github.com/wwmoraes/site
 go 1.21.2
 
 require (
+	github.com/BurntSushi/toml v0.3.1
 	github.com/goccy/go-json v0.10.2
 	github.com/gocolly/colly v1.2.0
-	github.com/gocolly/colly/v2 v2.1.0
 	github.com/gohugoio/hugo v0.119.0
-	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
 	github.com/spf13/afero v1.10.0
 	github.com/spf13/cobra v1.7.0
@@ -92,7 +91,6 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
-	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/s2a-go v0.1.5 // indirect
 	github.com/google/uuid v1.3.0 // indirect
@@ -133,7 +131,6 @@ require (
 	github.com/shurcooL/graphql v0.0.0-20230722043721-ed46e5a46466 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/syndtr/goleveldb v1.0.0 // indirect
 	github.com/tdewolff/minify/v2 v2.12.7 // indirect
 	github.com/tdewolff/parse/v2 v2.6.6 // indirect
 	github.com/temoto/robotstxt v1.1.1 // indirect

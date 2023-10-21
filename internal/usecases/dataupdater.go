@@ -1,10 +1,13 @@
 package usecases
 
-import "sync"
+import (
+	"context"
+	"sync"
+)
 
 type DataUpdaters []DataHandler
 
-func (updater *DataUpdaters) ExecuteAll(buffer int) <-chan error {
+func (updater *DataUpdaters) ExecuteAll(ctx context.Context, buffer int) <-chan error {
 	errors := make(chan error, buffer)
 
 	go func() {
@@ -20,7 +23,7 @@ func (updater *DataUpdaters) ExecuteAll(buffer int) <-chan error {
 			go func(handler DataHandler) {
 				defer wg.Done()
 
-				err = handler.Update()
+				err = handler.Update(ctx)
 				if err != nil {
 					errors <- err
 				}

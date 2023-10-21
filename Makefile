@@ -2,8 +2,6 @@ GO ?= go
 
 DIAGRAMS_SOURCES = $(shell find content -type f -name "*.puml")
 DIAGRAMS_TARGETS = $(patsubst %.puml,%.png,${DIAGRAMS_SOURCES})
-GOODREADS_LIST = 138333248-william
-GOODREADS_SHELVES = currently-reading,read,to-read
 
 IMAGES = $(wildcard archetypes/*/*.jpg)
 IMAGES += $(wildcard assets/images/*.jpg)
@@ -33,11 +31,9 @@ bin/site: $(shell ${GO} list -f '{{ range .GoFiles }}{{ printf "%s/%s\n" $$.Dir 
 %.png: %.puml
 	plantuml -tpng -darkmode -theme reddress-darkblue $<
 
-github: bin/site
-	@op run --env-file=.env -- ./$< update github
-
-books: bin/site
-	@./$< update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+.PHONY: data
+data: bin/site
+	@op run --env-file=.env -- ./$< data update
 
 ## EXIF tags management
 ## https://exiftool.org/examples.html

@@ -42,10 +42,6 @@ runs:
       env:
         GOLANG_FLAGS: -race -mod=readonly
 
-    - name: update GitHub data
-      run: ./site update github
-      shell: bash
-
-    - name: update Goodreads data
-      run: ./site update goodreads --list ${GOODREADS_LIST} --shelves ${GOODREADS_SHELVES}
+    - name: update data
+      run: ./site data update
       shell: bash

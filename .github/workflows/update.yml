@@ -24,8 +24,6 @@ jobs:
         uses: ./.github/actions/site-update
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-          GOODREADS_LIST: 138333248-william
-          GOODREADS_SHELVES: currently-reading,read,to-read
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

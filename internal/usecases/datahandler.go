@@ -1,5 +1,7 @@
 package usecases
 
+import "context"
+
 type DataHandler interface {
-	Update() error
+	Update(context.Context) error
 }

@@ -1,18 +1,20 @@
-package adapters
+package drivers
 
 import (
+	"context"
+
 	"github.com/goccy/go-json"
 )
 
-type GoodreadsFetcher struct {
+type GoodreadsSource struct {
 	List  string
 	Shelf string
 }
 
-func (fetcher *GoodreadsFetcher) Fetch() ([]byte, error) {
+func (source *GoodreadsSource) Fetch(ctx context.Context) ([]byte, error) {
 	collector := goodreadsCollector{}
 
-	err := collector.Collect(fetcher.List, fetcher.Shelf)
+	err := collector.Collect(source.List, source.Shelf)
 	if err != nil {
 		return nil, err
 	}
