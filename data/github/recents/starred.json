@@ -24,14 +24,14 @@
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 2997,
+    "Stargazers": 3002,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 19735,
+    "Stargazers": 19809,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
@@ -45,7 +45,7 @@
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2570,
+    "Stargazers": 2582,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
@@ -59,14 +59,14 @@
     "NameWithOwner": "open-metadata/OpenMetadata",
     "URL": "https://github.com/open-metadata/OpenMetadata",
     "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2942,
+    "Stargazers": 2948,
     "StarredAt": "2023-08-31T22:28:06Z"
   },
   {
     "NameWithOwner": "grafeas/kritis",
     "URL": "https://github.com/grafeas/kritis",
     "Description": "Deploy-time Policy Enforcer for Kubernetes applications",
-    "Stargazers": 676,
+    "Stargazers": 677,
     "StarredAt": "2023-08-31T22:27:15Z"
   }
 ]
