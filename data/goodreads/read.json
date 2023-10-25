@@ -12,12 +12,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661205628l/61058107._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Incorporated"
-    },
-    "datePublished": "2022-01-01T00:00:00Z",
     "isbn": "9781098118730"
   },
   {
