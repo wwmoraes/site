@@ -9,9 +9,35 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Andy Hunt"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dave Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Hunt"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Reading, Mass"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2000-01-01T00:00:00Z",
     "isbn": "9780201616224"
   },
   {
