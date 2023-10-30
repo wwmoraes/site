@@ -64,6 +64,14 @@
     "xlink"
   ],
   "css.format.enable": false,
+  "files.associations": {
+    "**/_headers": "plaintext"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hugo_build.lock": true
+  },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/pages.yml"
   ],
@@ -85,16 +93,13 @@
     "**/public": true,
     "**/tmp": true
   },
-  "files.associations": {
-    "**/_headers": "plaintext"
-  },
-  "webPreview.url": "http://localhost:8888",
-  "webPreview.mediaScreenOverride": true,
   "webPreview.mediaScreen": {
-    "SM": 640,
-    "MD": 768,
+    "2XL": 1536,
     "LG": 1024,
-    "XL": 1280,
-    "2XL": 1536
-  }
+    "MD": 768,
+    "SM": 640,
+    "XL": 1280
+  },
+  "webPreview.mediaScreenOverride": true,
+  "webPreview.url": "http://localhost:8888"
 }
