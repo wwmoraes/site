@@ -3,5 +3,5 @@ package usecases
 import "context"
 
 type DataHandler interface {
-	Update(context.Context) error
+	Update(ctx context.Context) error
 }
