@@ -25,7 +25,7 @@ build: bin/site
 
 bin/site: $(shell ${GO} list -f '{{ range .GoFiles }}{{ printf "%s/%s\n" $$.Dir . }}{{ end }}' ./cmd/$(notdir $@)/...)
 	$(info building $@)
-	@go build -o ./$(dir $@) ./cmd/$(notdir $@)/...
+	@go build -race -o ./$(dir $@) ./cmd/$(notdir $@)/...
 
 .PRECIOUS: %.png
 %.png: %.puml
