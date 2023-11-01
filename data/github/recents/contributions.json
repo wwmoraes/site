@@ -6,7 +6,7 @@
       "Description": "my personal website",
       "Stargazers": 0
     },
-    "OccurredAt": "2023-10-31T07:00:00Z"
+    "OccurredAt": "2023-11-01T07:00:00Z"
   },
   {
     "Repository": {
@@ -15,7 +15,25 @@
       "Description": "Cross-platform dotfiles with batteries",
       "Stargazers": 9
     },
-    "OccurredAt": "2023-10-31T07:00:00Z"
+    "OccurredAt": "2023-11-01T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/actions",
+      "URL": "https://github.com/wwmoraes/actions",
+      "Description": "DRY github actions collection",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-11-01T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/go-rwfs",
+      "URL": "https://github.com/wwmoraes/go-rwfs",
+      "Description": "Golang read-write filesystem interfaces",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-11-01T07:00:00Z"
   },
   {
     "Repository": {
@@ -25,15 +43,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-10-18T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/go-rwfs",
-      "URL": "https://github.com/wwmoraes/go-rwfs",
-      "Description": "Golang read-write filesystem interfaces",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-10-07T07:00:00Z"
   },
   {
     "Repository": {
@@ -52,15 +61,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-08-30T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/actions",
-      "URL": "https://github.com/wwmoraes/actions",
-      "Description": "DRY github actions collection",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-08-24T07:00:00Z"
   },
   {
     "Repository": {
