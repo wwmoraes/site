@@ -1,7 +1,7 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 20
+radarIndex: 21
 radarSection: platforms
 radarTier: hold
 radarX: -386

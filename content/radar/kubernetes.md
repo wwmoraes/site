@@ -1,7 +1,7 @@
 ---
 description: Pandora's box for magic infrastructure
 draft: true
-radarIndex: 33
+radarIndex: 34
 radarSection: platforms
 radarTier: adopt
 radarX: -157

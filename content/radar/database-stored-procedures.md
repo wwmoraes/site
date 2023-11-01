@@ -1,7 +1,7 @@
 ---
 description: lorem ipsum
 draft: true
-radarIndex: 17
+radarIndex: 18
 radarSection: techniques
 radarTier: hold
 radarX: -260
