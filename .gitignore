@@ -3,6 +3,8 @@ public/
 resources/
 tmp/
 .hugo_build.lock
+go.work
+go.work.sum
 
 *.jpg.json
 *.png.json
