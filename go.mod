@@ -10,7 +10,7 @@ require (
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
 	github.com/spf13/afero v1.10.0
 	github.com/spf13/cobra v1.7.0
-	github.com/wwmoraes/go-rwfs v0.0.0-20231007180154-4389a2e1658e
+	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
 	golang.org/x/oauth2 v0.13.0
 	golang.org/x/text v0.13.0
 )

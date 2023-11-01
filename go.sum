@@ -466,8 +466,8 @@ github.com/temoto/robotstxt v1.1.1 h1:Gh8RCs8ouX3hRSxxK7B1mO5RFByQ4CmJZDwgom++Ja
 github.com/temoto/robotstxt v1.1.1/go.mod h1:+1AmkuG3IYkh1kv0d2qEB9Le88ehNO0zwOr3ujewlOo=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
 github.com/ugorji/go/codec v1.2.7/go.mod h1:WGN1fab3R1fzQlVQTkfxVtIBhWDRqOviHU95kRgeqEY=
-github.com/wwmoraes/go-rwfs v0.0.0-20231007180154-4389a2e1658e h1:IwhbeTiWoUg0n1QZ6TPL0ySFtq4Q05ZoH3CywE3bRnc=
-github.com/wwmoraes/go-rwfs v0.0.0-20231007180154-4389a2e1658e/go.mod h1:o5BuPjIPLMs0Y5iCZ9z17pet/kgi1IQ2VFGRFu/HgqM=
+github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908 h1:YWrIZ25PQJbhaV+shYvuTbglT3InMjQ8coqZI8/cxLw=
+github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908/go.mod h1:o5BuPjIPLMs0Y5iCZ9z17pet/kgi1IQ2VFGRFu/HgqM=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
