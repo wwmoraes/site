@@ -80,5 +80,6 @@ need `hugo_extended` to automatically compile your scss.
 
 ## Acknowledgements
 
-- [feather](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
-- [m10c](https://github.com/vaga/hugo-theme-m10c) - [MIT](https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md)
+- [Feather Icons](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+- [Simple Icons](https://simpleicons.org) - [CC0-1.0](https://github.com/simple-icons/simple-icons/blob/master/LICENSE.md)
+- [m10c - original template](https://github.com/vaga/hugo-theme-m10c) - [MIT](https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md)
