@@ -11,7 +11,7 @@ start:
 	@hugo server -p 8888
 
 start-prod:
-	@hugo server -e production
+	@hugo server -e production -p 8888
 
 publish: bin/site
 	@${RM} -r public
