@@ -14,8 +14,9 @@
       <a href="#posts">§</a>
       Posts 📝
     </h2>
+    {{- $paginator := .Paginate (where .RegularPagesRecursive "Type" "in" site.Params.mainSections) 3 -}}
     <ul class="posts-list">
-      {{- range last 3 (where .Paginator.Pages "Type" "posts") -}}
+      {{- range $paginator.Pages -}}
       <li class="posts-list-item">
         <a class="posts-list-item-title" href="{{- .RelPermalink -}}">{{- .Title -}}</a>
         <span class="posts-list-item-description">
