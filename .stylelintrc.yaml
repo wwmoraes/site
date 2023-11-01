@@ -15,3 +15,7 @@ rules:
   - ignoreSelectors:
     - "/-moz-.*/"
   "scss/no-global-function-names": false
+  value-keyword-case:
+  - lower
+  - ignoreKeywords:
+    - currentColor

@@ -1,13 +1,48 @@
 {
+  "codepen": {
+    "icon": "codepen",
+    "title": "CodePen",
+    "url": "https://codepen.io/%s"
+  },
+  "codesandbox": {
+    "icon": "codesandbox",
+    "title": "CodeSandbox",
+    "url": "https://codesandbox.io/u/%s"
+  },
+  "discord": {
+    "icon": "discord",
+    "title": "Discord",
+    "url": "https://discordapp.com/users/%s"
+  },
+  "dribbble": {
+    "icon": "dribbble",
+    "title": "dribbble",
+    "url": ""
+  },
   "facebook": {
     "icon": "facebook",
     "title": "Facebook",
     "url": "https://www.facebook.com/%s"
   },
+  "figma": {
+    "icon": "figma",
+    "title": "figma",
+    "url": ""
+  },
+  "framer": {
+    "icon": "framer",
+    "title": "framer",
+    "url": ""
+  },
   "github": {
     "icon": "github",
     "title": "GitHub",
     "url": "https://github.com/%s"
+  },
+  "gitlab": {
+    "icon": "gitlab",
+    "title": "gitlab",
+    "url": ""
   },
   "instagram": {
     "icon": "instagram",
@@ -19,10 +54,40 @@
     "title": "LinkedIn",
     "url": "https://linkedin.com/in/%s"
   },
+  "pocket": {
+    "icon": "pocket",
+    "title": "pocket",
+    "url": ""
+  },
+  "slack": {
+    "icon": "slack",
+    "title": "slack",
+    "url": ""
+  },
+  "telegram": {
+    "icon": "telegram",
+    "title": "Telegram",
+    "url": "https://t.me/%s"
+  },
+  "trello": {
+    "icon": "trello",
+    "title": "trello",
+    "url": ""
+  },
+  "twitch": {
+    "icon": "twitch",
+    "title": "twitch",
+    "url": ""
+  },
   "twitter": {
-    "icon": "twitter",
-    "title": "Twitter",
-    "url": "https://twitter.com/%s"
+    "icon": "x",
+    "title": "X",
+    "url": "https://x.com/%s"
+  },
+  "x": {
+    "icon": "x",
+    "title": "X",
+    "url": "https://x.com/%s"
   },
   "youtube": {
     "icon": "youtube",

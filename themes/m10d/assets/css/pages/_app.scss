@@ -34,14 +34,23 @@
 }
 
 .app-header-social {
+  --icon-size: 1.25em;
+
   align-items: center;
   color: $lightest-color;
   display: flex;
   font-size: 2em;
   justify-content: center;
+  margin: .67em 0;
 
-  a:not(:last-child) {
-    margin-right: .4em;
+  > a {
+    max-width: var(--icon-size, 1em);
+    max-height: var(--icon-size, 1em);
+    line-height: var(--icon-size, 1em);
+
+    &:not(:last-child) {
+      margin-right: .125em;
+    }
   }
 }
 

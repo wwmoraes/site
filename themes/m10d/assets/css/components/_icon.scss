@@ -1,6 +1,21 @@
 .icon {
   display: inline-block;
-  height: 1em;
-  margin-top: -.125em;
-  width: 1em;
+  height: var(--icon-size, 1em);
+  padding: .125em;
+  width: var(--icon-size, 1em);
+
+  &.feather {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    stroke: currentColor;
+  }
+
+  &.simple {
+    fill: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: currentColor;
+  }
 }

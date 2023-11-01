@@ -4,14 +4,9 @@ mainSections:
 - posts
 
 menu_item_separator: " | "
-# TODO remove social and use native object
 social:
-- icon: github
-  name: Github
-  url: https://github.com/wwmoraes
-- icon: linkedin
-  name: LinkedIn
-  url: https://linkedin.com/in/wwmoraes
+  # facebook_admin: ""
+  twitter: wwmoraes
 
 giscus:
   repo: wwmoraes/site

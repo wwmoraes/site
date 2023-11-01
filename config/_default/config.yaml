@@ -48,8 +48,11 @@ author:
   shortBio: automating a way out of tasks since 2010
   longBio: TODO
   social:
+    # discord: "116169201990893575"
     github: wwmoraes
     linkedin: wwmoraes
+    telegram: wwmoraes
+    # x: wwmoraes
 
 pygmentsUseClasses: false
 pygmentsCodeFences: true
