@@ -1,7 +1,9 @@
 ---
+_build:
+  list: true
+  render: false
 description: lorem ipsum
-draft: true
-radarIndex: 52
+radarIndex: 63
 radarSection: languages
 radarTier: trial
 radarX: 294

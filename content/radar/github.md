@@ -3,13 +3,13 @@ _build:
   list: true
   render: false
 description: lorem ipsum
-radarIndex: 10
+radarIndex: 29
 radarSection: tools
-radarTier: trial
-radarX: 273
-radarY: 72
+radarTier: adopt
+radarX: 90
+radarY: 55
 table-of-contents: false
-title: CFEngine
+title: Github
 ---
 
 TODO justification

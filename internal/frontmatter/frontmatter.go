@@ -3,8 +3,11 @@ package frontmatter
 const (
 	// Hugo front matter.
 
+	Build       Key = "_build"
 	Description Key = "description"
 	Draft       Key = "draft"
+	List        Key = "list"
+	Render      Key = "render"
 	Title       Key = "title"
 
 	// Site front matter.

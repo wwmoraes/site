@@ -1,6 +1,6 @@
 ---
 description: understand and communicate properly about complex problems
-radarIndex: 20
+radarIndex: 22
 radarSection: techniques
 radarTier: adopt
 radarX: -203

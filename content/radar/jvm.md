@@ -1,7 +1,9 @@
 ---
+_build:
+  list: true
+  render: false
 description: The 90's solution to portability that needs to rest in peace
-draft: true
-radarIndex: 32
+radarIndex: 36
 radarSection: platforms
 radarTier: hold
 radarX: -81

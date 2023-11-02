@@ -65,8 +65,12 @@ func create(cmd *cobra.Command, args []string) error {
 	page := pageparser.ContentFrontMatter{
 		Content: []byte("\nTODO justification\n"),
 		FrontMatter: map[string]any{
-			frontmatter.Description:     "lorem ipsum",
-			frontmatter.Draft:           true,
+			frontmatter.Build: map[string]any{
+				frontmatter.List:   true,
+				frontmatter.Render: false,
+			},
+			frontmatter.Description: "lorem ipsum",
+			// frontmatter.Draft:           true,
 			frontmatter.RadarSection:    section.String(),
 			frontmatter.RadarTier:       tier.String(),
 			frontmatter.TableOfContents: false,

@@ -34,10 +34,14 @@
         <ol>
           {{- range ($.Scratch.Get (printf "%s %s" $section $tier)) -}}
           <li value="{{ .Params.radarIndex }}">
-            {{- if not .Draft }}<a href="{{ .RelPermalink }}">{{- end -}}
+            {{- $isWIP := or .Draft (not .RelPermalink) -}}
+            {{- if $isWIP }}
+            {{- .Title -}}&nbsp;<sup>WIP</sup>
+            {{- else }}
+            <a href="{{ .RelPermalink }}">
               {{- .Title -}}
-              {{- if .Draft -}}&nbsp;<sup>WIP</sup>{{- end -}}
-              {{- if not .Draft }}</a>{{- end -}}
+            </a>
+            {{- end -}}
           </li>
           {{- end -}}
         </ol>

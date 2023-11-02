@@ -230,12 +230,30 @@
         </text>
       </a>
     </g>
+    <g transform="translate(13 11)">
+      <a href="#" target="_parent">
+        <title>Conftest</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          15
+        </text>
+      </a>
+    </g>
+    <g transform="translate(104 362)">
+      <a href="#" target="_parent">
+        <title>Consul</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          16
+        </text>
+      </a>
+    </g>
     <g transform="translate(23 90)">
       <a href="#" target="_parent">
         <title>Container Structure Test</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          15
+          17
         </text>
       </a>
     </g>
@@ -244,7 +262,7 @@
         <title>Crossplane</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          16
+          18
         </text>
       </a>
     </g>
@@ -253,7 +271,7 @@
         <title>Crystal</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          17
+          19
         </text>
       </a>
     </g>
@@ -262,7 +280,7 @@
         <title>Database Stored Procedures</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          18
+          20
         </text>
       </a>
     </g>
@@ -271,7 +289,7 @@
         <title>DevOps Engineer</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          19
+          21
         </text>
       </a>
     </g>
@@ -280,7 +298,7 @@
         <title>Domain-Driven Design (DDD)</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          20
+          22
         </text>
       </a>
     </g>
@@ -289,7 +307,7 @@
         <title>.NET</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          21
+          23
         </text>
       </a>
     </g>
@@ -298,7 +316,7 @@
         <title>draw.io</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          22
+          24
         </text>
       </a>
     </g>
@@ -307,7 +325,7 @@
         <title>Elixir</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          23
+          25
         </text>
       </a>
     </g>
@@ -316,7 +334,7 @@
         <title>Erlang</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          24
+          26
         </text>
       </a>
     </g>
@@ -325,7 +343,7 @@
         <title>Functional Paradigm</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          25
+          27
         </text>
       </a>
     </g>
@@ -334,7 +352,16 @@
         <title>GitHub Actions</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          26
+          28
+        </text>
+      </a>
+    </g>
+    <g transform="translate(90 55)">
+      <a href="#" target="_parent">
+        <title>Github</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          29
         </text>
       </a>
     </g>
@@ -343,7 +370,7 @@
         <title>GNU Make</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          27
+          30
         </text>
       </a>
     </g>
@@ -352,7 +379,16 @@
         <title>Golang</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          28
+          31
+        </text>
+      </a>
+    </g>
+    <g transform="translate(199 62)">
+      <a href="#" target="_parent">
+        <title>Hadolint</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          32
         </text>
       </a>
     </g>
@@ -361,7 +397,7 @@
         <title>Haskell</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          29
+          33
         </text>
       </a>
     </g>
@@ -370,7 +406,7 @@
         <title>Java</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          30
+          34
         </text>
       </a>
     </g>
@@ -379,7 +415,7 @@
         <title>JavaScript</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          31
+          35
         </text>
       </a>
     </g>
@@ -388,7 +424,16 @@
         <title>JVM</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          32
+          36
+        </text>
+      </a>
+    </g>
+    <g transform="translate(25 42)">
+      <a href="#" target="_parent">
+        <title>Kind</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          37
         </text>
       </a>
     </g>
@@ -397,7 +442,7 @@
         <title>Kube-bench</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          33
+          38
         </text>
       </a>
     </g>
@@ -406,7 +451,7 @@
         <title>Kubernetes</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          34
+          39
         </text>
       </a>
     </g>
@@ -415,7 +460,7 @@
         <title>Kustomize</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          35
+          40
         </text>
       </a>
     </g>
@@ -424,7 +469,7 @@
         <title>Lua</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          36
+          41
         </text>
       </a>
     </g>
@@ -433,7 +478,7 @@
         <title>Mermaid diagrams</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          37
+          42
         </text>
       </a>
     </g>
@@ -442,7 +487,16 @@
         <title>OpenMetadata</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          38
+          43
+        </text>
+      </a>
+    </g>
+    <g transform="translate(411 55)">
+      <a href="#" target="_parent">
+        <title>Packer</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          44
         </text>
       </a>
     </g>
@@ -451,7 +505,7 @@
         <title>Podman</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          39
+          45
         </text>
       </a>
     </g>
@@ -460,7 +514,7 @@
         <title>PowerShell</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          40
+          46
         </text>
       </a>
     </g>
@@ -469,7 +523,16 @@
         <title>Pulumi</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          41
+          47
+        </text>
+      </a>
+    </g>
+    <g transform="translate(359 51)">
+      <a href="#" target="_parent">
+        <title>Regula</title>
+        <use href="#blip" class="assess" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          50
         </text>
       </a>
     </g>
@@ -478,7 +541,7 @@
         <title>Ruby</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          44
+          51
         </text>
       </a>
     </g>
@@ -487,7 +550,7 @@
         <title>Rust</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          45
+          52
         </text>
       </a>
     </g>
@@ -496,7 +559,7 @@
         <title>Scala</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          46
+          53
         </text>
       </a>
     </g>
@@ -505,7 +568,7 @@
         <title>Scaled Agile Framework®️ (SAFe ™️)</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          47
+          54
         </text>
       </a>
     </g>
@@ -514,7 +577,16 @@
         <title>Shell script</title>
         <use href="#blip" class="hold" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          48
+          55
+        </text>
+      </a>
+    </g>
+    <g transform="translate(135 195)">
+      <a href="#" target="_parent">
+        <title>ShellCheck</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          56
         </text>
       </a>
     </g>
@@ -523,16 +595,43 @@
         <title>Site Reliability Engineer (SRE)</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          49
+          57
         </text>
       </a>
     </g>
-    <g transform="translate(-225 -344)">
+    <g transform="translate(177 217)">
+      <a href="#" target="_parent">
+        <title>Snyk</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          58
+        </text>
+      </a>
+    </g>
+    <g transform="translate(71 76)">
+      <a href="#" target="_parent">
+        <title>Sonar</title>
+        <use href="#blip" class="adopt" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          59
+        </text>
+      </a>
+    </g>
+    <g transform="translate(303 147)">
+      <a href="#" target="_parent">
+        <title>Sonobuoy</title>
+        <use href="#blip" class="trial" x="500" y="500" />
+        <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
+          60
+        </text>
+      </a>
+    </g>
+    <g transform="translate(-148 -227)">
       <a href="#" target="_parent">
         <title>Staff Software Engineer</title>
-        <use href="#blip" class="assess" x="500" y="500" />
+        <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          50
+          61
         </text>
       </a>
     </g>
@@ -541,7 +640,7 @@
         <title>Terraform</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          51
+          62
         </text>
       </a>
     </g>
@@ -550,7 +649,7 @@
         <title>TypeScript</title>
         <use href="#blip" class="trial" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          52
+          63
         </text>
       </a>
     </g>
@@ -559,7 +658,7 @@
         <title>Unikernel</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          53
+          64
         </text>
       </a>
     </g>
@@ -568,7 +667,7 @@
         <title>WebAssembly</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          54
+          65
         </text>
       </a>
     </g>
@@ -577,7 +676,7 @@
         <title>Zero Trust Architecture</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          55
+          66
         </text>
       </a>
     </g>
@@ -586,7 +685,7 @@
         <title>Zig</title>
         <use href="#blip" class="assess" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
-          56
+          67
         </text>
       </a>
     </g>

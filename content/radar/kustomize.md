@@ -1,7 +1,9 @@
 ---
+_build:
+  list: true
+  render: false
 description: lorem ipsum
-draft: true
-radarIndex: 35
+radarIndex: 40
 radarSection: tools
 radarTier: adopt
 radarX: 69

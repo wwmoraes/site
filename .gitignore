@@ -5,7 +5,7 @@ tmp/
 .hugo_build.lock
 go.work
 go.work.sum
-site
+/site
 
 *.jpg.json
 *.png.json

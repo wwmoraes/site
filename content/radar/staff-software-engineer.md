@@ -1,11 +1,13 @@
 ---
+_build:
+  list: true
+  render: false
 description: lorem ipsum
-draft: true
-radarIndex: 50
+radarIndex: 61
 radarSection: techniques
-radarTier: assess
-radarX: -225
-radarY: -344
+radarTier: trial
+radarX: -148
+radarY: -227
 table-of-contents: false
 title: Staff Software Engineer
 ---
