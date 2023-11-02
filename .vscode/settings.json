@@ -73,7 +73,8 @@
     "**/.hugo_build.lock": true
   },
   "github-actions.workflows.pinned.workflows": [
-    ".github/workflows/deployment.yaml"
+    ".github/workflows/deployment.yaml",
+    ".github/workflows/update.yml"
   ],
   "grammarly.files.include": [
     "**/readme.md",
