@@ -3,7 +3,7 @@
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16805,
+    "Stargazers": 16808,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -17,7 +17,7 @@
     "NameWithOwner": "github/semantic",
     "URL": "https://github.com/github/semantic",
     "Description": "Parsing, analyzing, and comparing source code across many languages",
-    "Stargazers": 8786,
+    "Stargazers": 8787,
     "StarredAt": "2023-09-27T22:02:00Z"
   },
   {
@@ -31,14 +31,14 @@
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 3020,
+    "Stargazers": 3023,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 20251,
+    "Stargazers": 20295,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
@@ -52,21 +52,21 @@
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2619,
+    "Stargazers": 2624,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
     "NameWithOwner": "1pkg/gopium",
     "URL": "https://github.com/1pkg/gopium",
     "Description": "Gopium 🌺: Smart Go Structures Optimizer and Manager",
-    "Stargazers": 196,
+    "Stargazers": 197,
     "StarredAt": "2023-09-01T11:51:10Z"
   },
   {
     "NameWithOwner": "open-metadata/OpenMetadata",
     "URL": "https://github.com/open-metadata/OpenMetadata",
     "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2982,
+    "Stargazers": 2983,
     "StarredAt": "2023-08-31T22:28:06Z"
   }
 ]
