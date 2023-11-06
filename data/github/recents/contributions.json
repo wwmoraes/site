@@ -6,7 +6,16 @@
       "Description": "Cross-platform dotfiles with batteries",
       "Stargazers": 9
     },
-    "OccurredAt": "2023-11-03T07:00:00Z"
+    "OccurredAt": "2023-11-06T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/stack-templates",
+      "URL": "https://github.com/wwmoraes/stack-templates",
+      "Description": "Modern templates for the Haskell Tool Stack",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-11-05T07:00:00Z"
   },
   {
     "Repository": {
@@ -52,15 +61,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-09-03T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/interview",
-      "URL": "https://github.com/wwmoraes/interview",
-      "Description": "PDF forms with IT questions for both sides of the interview",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-08-30T07:00:00Z"
   },
   {
     "Repository": {

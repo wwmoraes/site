@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/stack-templates",
+    "URL": "https://github.com/wwmoraes/stack-templates",
+    "Description": "Modern templates for the Haskell Tool Stack",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/plex-delete",
     "URL": "https://github.com/wwmoraes/plex-delete",
     "Description": "belminf/plex-delete as a container",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/wwmoraes/maker-snippets",
     "Description": "Maker repository with common GNU Make snippets",
     "Stargazers": 1
-  },
-  {
-    "NameWithOwner": "wwmoraes/docker-engine-plugins",
-    "URL": "https://github.com/wwmoraes/docker-engine-plugins",
-    "Description": "Docker Engine plugins",
-    "Stargazers": 0
   }
 ]

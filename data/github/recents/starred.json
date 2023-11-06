@@ -1,9 +1,16 @@
 [
   {
+    "NameWithOwner": "hspec/hspec",
+    "URL": "https://github.com/hspec/hspec",
+    "Description": "A Testing Framework for Haskell",
+    "Stargazers": 726,
+    "StarredAt": "2023-11-05T18:48:36Z"
+  },
+  {
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16814,
+    "Stargazers": 16825,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -17,7 +24,7 @@
     "NameWithOwner": "github/semantic",
     "URL": "https://github.com/github/semantic",
     "Description": "Parsing, analyzing, and comparing source code across many languages",
-    "Stargazers": 8787,
+    "Stargazers": 8789,
     "StarredAt": "2023-09-27T22:02:00Z"
   },
   {
@@ -31,14 +38,14 @@
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 3027,
+    "Stargazers": 3030,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 20351,
+    "Stargazers": 20378,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
@@ -52,7 +59,7 @@
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2626,
+    "Stargazers": 2628,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "Gopium 🌺: Smart Go Structures Optimizer and Manager",
     "Stargazers": 197,
     "StarredAt": "2023-09-01T11:51:10Z"
-  },
-  {
-    "NameWithOwner": "open-metadata/OpenMetadata",
-    "URL": "https://github.com/open-metadata/OpenMetadata",
-    "Description": "Open Standard for Metadata. A Single place to Discover, Collaborate and Get your data right.",
-    "Stargazers": 2985,
-    "StarredAt": "2023-08-31T22:28:06Z"
   }
 ]
