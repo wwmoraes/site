@@ -3,14 +3,14 @@
     "NameWithOwner": "hspec/hspec",
     "URL": "https://github.com/hspec/hspec",
     "Description": "A Testing Framework for Haskell",
-    "Stargazers": 726,
+    "Stargazers": 727,
     "StarredAt": "2023-11-05T18:48:36Z"
   },
   {
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16831,
+    "Stargazers": 16833,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -38,14 +38,14 @@
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 3038,
+    "Stargazers": 3040,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 20556,
+    "Stargazers": 20618,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
@@ -59,14 +59,14 @@
     "NameWithOwner": "sorayuki/obs-multi-rtmp",
     "URL": "https://github.com/sorayuki/obs-multi-rtmp",
     "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2642,
+    "Stargazers": 2647,
     "StarredAt": "2023-09-11T17:23:02Z"
   },
   {
     "NameWithOwner": "1pkg/gopium",
     "URL": "https://github.com/1pkg/gopium",
     "Description": "Gopium 🌺: Smart Go Structures Optimizer and Manager",
-    "Stargazers": 197,
+    "Stargazers": 198,
     "StarredAt": "2023-09-01T11:51:10Z"
   }
 ]
