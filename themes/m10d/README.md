@@ -57,8 +57,9 @@ To add a menu item, add the following lines in `menu`:
   url = "/tags/"
 ```
 
-[Read Hugo documentations](https://gohugo.io/content-management/menus/#readout)
-for more informations about menu
+Check the [Hugo documentation][hugo-menus] for more information about the menu.
+
+[hugo-menus]: https://gohugo.io/content-management/menus/#readout
 
 To add a social link, use the `author.social` native setting by adding the
 following lines in your config:

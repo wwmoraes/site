@@ -58,6 +58,7 @@ In practice, you may need a separate binary to change IO drivers or make all
 method/endpoint calls to cover your use cases. With that in place you can then
 run:
 
+<!-- cspell:disable -->
 ```shell
 GOCOVERDIR=coverage
 export GOCOVERDIR
@@ -66,6 +67,7 @@ go run -cover ./path/to/your/app/pkg/...
 go tool covdata textfmt -i="${GOCOVERDIR}" -o=gcov.txt
 go tool cover -func=gcov.txt
 ```
+<!-- cspell:enable -->
 
 You can optionally select specific packages to report coverage for with `-pkgs`.
 That's useful to exclude test/telemetry packages or other binary sources that

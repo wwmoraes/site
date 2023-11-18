@@ -24,7 +24,7 @@ than IT, and it predates modern society as [history tells us](https://en.wikiped
 <!-- financial automation -->
 
 can trigger people to either ranging from those that say it is just a word to
-people that want a Wallace and Grommit morning.
+people that want a Wallace and Gromit morning.
 
 {{< youtube o0JIznO-RlI >}}
 
@@ -59,7 +59,7 @@ operated by a human and has a non-negligible recurrence, impact (on it's result
 and on the team that does execute it) and relevance, not just through sugar-coated
 management components as OKRs, KPIs, or the trinity SLI/SLO/SLA.
 
-Speaking of such syntatic sugar, they are supposed to support and in some cases
+Speaking of such syntactic sugar, they are supposed to support and in some cases
 are a by-product of the SRE work - not the other way around. The adoption of SRE
 terminology starting by the result keywords rather than by its tenets, skipping
 the essence altogether, is as artificial as The Matrix itself: you get the nice

@@ -1,11 +1,71 @@
 version: "0.2"
-ignorePaths: []
+ignorePaths:
+  - .gitignore
+  - .pre-commit-config.yaml
+  - cspell.config.yaml
+  - .stylelint.yaml
+  - .vscode/*
+  - "*/robots.txt"
+  - data/*
+  - go.mod
+  - go.sum
+  - Makefile
+  - sonar-project.properties
+  - static/_headers
+  - static/_redirects
+  - static/browserconfig.xml
+  - themes/*/data/*
+  - themes/*/LICENSE
+  - themes/*/exampleSite/*
 dictionaryDefinitions: []
 dictionaries: []
 words:
-- giscus
+  - Artero
+  - Audiobook
+  - automatable
+  - automations
+  - Bironas
+  - García
+  - Geisser
+  - Gromit
+  - MTTF
+  - MTTR
+  - recents
+  - Regula
+  - rollouts
+  - runbook
+  - runbooks
+  - Rundeck
+  - Stackstorm
+  - Anilistarr
 ignoreWords:
-- hugolib
-- radarX
-- radarY
+  - pkgs
+  - metatable
+  - metatables
+  - metamethod
+  - metamethods
+  - polyline
+  - goldmark
+  - linkify
+  - monokai
+  - strikethrough
+  - codesandbox
+  - dribbble
+  - exif
+  - frontmatter
+  - fsys
+  - giscus
+  - goatcounter
+  - gohugoio
+  - goodreads
+  - Hashbang
+  - lastmod
+  - lntd
+  - nolint
+  - pageparser
+  - Preproc
+  - pygments
+  - rwfs
+  - vaga
+  - wwmoraes
 import: []

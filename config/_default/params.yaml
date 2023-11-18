@@ -10,9 +10,9 @@ social:
 
 giscus:
   repo: wwmoraes/site
-  repo_id: R_kgDOGhhRmQ
+  repo_id: R_kgDOGhhRmQ # cspell:disable-line
   category: Comments
-  category_id: DIC_kwDOGhhRmc4CUcmu
+  category_id: DIC_kwDOGhhRmc4CUcmu # cspell:disable-line
   mapping: title
   strict: 0
   reactions_enabled: 1
@@ -29,58 +29,3 @@ feed:
   icon: /icons/android-chrome-512x512.png
   # should be a 2:1 ratio file
   logo: /icons/android-chrome-512x512.png
-
-## powerline
-# since: 2021
-# licenses:
-# - name: CC BY-SA 4.0
-#   url: https://creativecommons.org/licenses/by-sa/4.0/
-# - name: MIT
-#   url: https://raw.githubusercontent.com/wwmoraes/site/master/LICENSE
-
-## LoveIt
-# gitRepo: https://github.com/wwmoraes/site
-# fingerprint: sha512
-# keywords:
-# - william
-# - artero
-# - blog
-# - engineer
-# app:
-#   title: Artero
-#   noFavicon: false
-#   manifest: /manifest.json
-#   svgFavicon: /images/logo.svg
-#   # Android browser theme color
-#   themeColor: "#2CBDFF"
-#   # Safari mask icon color
-#   iconColor: "#2CBDFF"
-#   # Windows v8-10 tile color
-#   tileColor: "#3D5A80"
-
-# social:
-#   GitHub: wwmoraes
-#   Linkedin: wwmoraes
-#   # Medium: ''
-#   # Reddit: ''
-#   # Codepen: ''
-#   # FreeCodeCamp: ''
-#   # Bitbucket: ''
-#   # Stackoverflow: ''
-#   # Hackernews: ''
-#   # Slidershare: ''
-#   # Jsfiddle: ''
-#   # Mastodon: ''
-#   # Devto: ''
-#   # Matrix: ''
-# verification:
-#   google: ''
-#   bing: ''
-#   yandex: ''
-#   pinterest: ''
-#   baidu: ''
-# analytics:
-#   enable: true
-#   google:
-#     id: G-9SJTZ340TJ
-#     anonymizeIP: true
