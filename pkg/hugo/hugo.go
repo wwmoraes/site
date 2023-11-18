@@ -9,14 +9,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/gohugoio/hugo/config"
-	"github.com/gohugoio/hugo/config/allconfig"
-	"github.com/gohugoio/hugo/deps"
-	"github.com/gohugoio/hugo/hugofs"
-	"github.com/gohugoio/hugo/hugolib"
 	"github.com/gohugoio/hugo/parser"
 	"github.com/gohugoio/hugo/parser/pageparser"
-	"github.com/spf13/afero"
 )
 
 // why not use the github.com/gohugoio/hugo/config* libs? It is a huge mess of
@@ -26,48 +20,6 @@ var (
 	KeyNotFoundError   = errors.New("key not set")
 	KeyConversionError = errors.New("failed to convert key type")
 )
-
-func New() (*hugolib.HugoSites, error) {
-	environment := "development"
-	configDir := "config"
-
-	pwd, err := os.Getwd()
-	if err != nil {
-		return nil, err
-	}
-
-	provider, _, err := config.LoadConfigFromDir(afero.NewOsFs(), configDir, environment)
-	if err != nil {
-		return nil, err
-	}
-
-	provider.Set("renderToDisk", true)
-	provider.Set("workingDir", pwd)
-	provider.Set("publishDir", "public")
-
-	fs := hugofs.NewFromSourceAndDestination(hugofs.Os, hugofs.Os, provider)
-
-	configs, err := allconfig.LoadConfig(allconfig.ConfigSourceDescriptor{
-		Flags:       provider,
-		Fs:          hugofs.Os,
-		Filename:    "config.yaml",
-		ConfigDir:   configDir,
-		Environment: environment,
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	sites, err := hugolib.NewHugoSites(deps.DepsCfg{
-		Configs: configs,
-		Fs:      fs,
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return sites, sites.Init()
-}
 
 func ParsePage(pagePath string) (pageparser.ContentFrontMatter, error) {
 	fd, err := os.OpenFile(pagePath, os.O_RDONLY, 0o640)

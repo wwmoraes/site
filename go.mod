@@ -8,7 +8,6 @@ require (
 	github.com/gocolly/colly v1.2.0
 	github.com/gohugoio/hugo v0.119.0
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
-	github.com/spf13/afero v1.10.0
 	github.com/spf13/cobra v1.7.0
 	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
 	golang.org/x/oauth2 v0.13.0
@@ -129,6 +128,7 @@ require (
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/sanity-io/litter v1.5.5 // indirect
 	github.com/shurcooL/graphql v0.0.0-20230722043721-ed46e5a46466 // indirect
+	github.com/spf13/afero v1.10.0 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tdewolff/minify/v2 v2.12.7 // indirect

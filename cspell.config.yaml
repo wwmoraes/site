@@ -39,16 +39,7 @@ words:
   - Stackstorm
   - Anilistarr
 ignoreWords:
-  - pkgs
-  - metatable
-  - metatables
-  - metamethod
-  - metamethods
-  - polyline
-  - goldmark
-  - linkify
-  - monokai
-  - strikethrough
+  - allconfig
   - codesandbox
   - dribbble
   - exif
@@ -57,15 +48,27 @@ ignoreWords:
   - giscus
   - goatcounter
   - gohugoio
+  - goldmark
   - goodreads
   - Hashbang
+  - hugofs
+  - hugolib
   - lastmod
+  - linkify
   - lntd
+  - metamethod
+  - metamethods
+  - metatable
+  - metatables
+  - monokai
   - nolint
   - pageparser
+  - pkgs
+  - polyline
   - Preproc
   - pygments
   - rwfs
+  - strikethrough
   - vaga
   - wwmoraes
 import: []
