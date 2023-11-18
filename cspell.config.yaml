@@ -56,6 +56,7 @@ ignoreWords:
   - lastmod
   - linkify
   - lntd
+  - metadecoders
   - metamethod
   - metamethods
   - metatable

@@ -3,6 +3,7 @@ package create
 import (
 	"fmt"
 	"path"
+	"strings"
 
 	"github.com/gohugoio/hugo/parser/metadecoders"
 	"github.com/gohugoio/hugo/parser/pageparser"
@@ -55,7 +56,8 @@ func create(cmd *cobra.Command, args []string) error {
 	}
 
 	name := args[0]
-	filename := name + ".md"
+	slug := strings.ReplaceAll(strings.ToLower(name), " ", "-")
+	filename := slug + ".md"
 	fsys := rwfs.OSDirFS(path.Join(contentDir, sectionName))
 
 	cmd.SilenceUsage = true
