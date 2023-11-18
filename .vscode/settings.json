@@ -76,17 +76,6 @@
     ".github/workflows/deployment.yaml",
     ".github/workflows/update.yml"
   ],
-  "grammarly.files.include": [
-    "**/readme.md",
-    "**/README.md",
-    "content/**/*.md"
-  ],
-  "grammarly.selectors": [
-    {
-      "language": "markdown",
-      "scheme": "file"
-    }
-  ],
   "html.format.templating": true,
   "less.format.enable": false,
   "scss.format.enable": false,
