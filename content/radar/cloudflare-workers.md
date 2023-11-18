@@ -3,7 +3,7 @@ _build:
   list: true
   render: false
 description: lorem ipsum
-radarIndex: 14
+radarIndex: 20
 radarSection: platforms
 radarTier: assess
 radarX: -308

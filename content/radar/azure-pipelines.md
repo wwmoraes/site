@@ -1,6 +1,6 @@
 ---
 description: YAML templates and includes everywhere
-radarIndex: 7
+radarIndex: 8
 radarSection: platforms
 radarTier: hold
 radarX: -121

@@ -20,37 +20,56 @@ ignorePaths:
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - Anilistarr
   - Artero
   - Audiobook
   - automatable
   - automations
+  - BDUF
   - Bironas
+  - Buildpacks
+  - codesandbox
+  - Conftest
+  - Crossplane
+  - dribbble
   - García
   - Geisser
+  - giscus
+  - goatcounter
+  - goldmark
+  - goodreads
   - Gromit
+  - Hadolint
+  - Kustomize
+  - MADR
+  - Mesos
+  - monokai
   - MTTF
   - MTTR
+  - Nygard
+  - polyline
+  - POSIX
+  - Pulumi
+  - pygments
   - recents
   - Regula
   - rollouts
   - runbook
   - runbooks
   - Rundeck
+  - Snyk
   - Stackstorm
-  - Anilistarr
+  - Templating
+  - Unikernel
+  - vaga
+  - wwmoraes
 ignoreWords:
   - allconfig
-  - codesandbox
-  - dribbble
   - exif
   - frontmatter
   - fsys
-  - giscus
-  - goatcounter
   - gohugoio
-  - goldmark
-  - goodreads
-  - Hashbang
+  - hashbang
   - hugofs
   - hugolib
   - lastmod
@@ -61,15 +80,10 @@ ignoreWords:
   - metamethods
   - metatable
   - metatables
-  - monokai
   - nolint
   - pageparser
   - pkgs
-  - polyline
   - Preproc
-  - pygments
   - rwfs
   - strikethrough
-  - vaga
-  - wwmoraes
 import: []

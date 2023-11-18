@@ -1,6 +1,6 @@
 ---
 description: When will Microsoft sunset it to focus on GitHub?
-radarIndex: 6
+radarIndex: 7
 radarSection: platforms
 radarTier: hold
 radarX: -362
