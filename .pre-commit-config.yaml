@@ -61,6 +61,15 @@ repos:
     name: go test
 - repo: local
   hooks:
+  - id: update-exif
+    name: Update EXIF metadata
+    entry: make exif
+    language: system
+    pass_filenames: false
+    files: |
+      (?x)^(
+        content/.*/.*\.(png|jpg)\.json
+      )$
   - id: update-radar
     name: Update radar
     entry: make radar
@@ -83,4 +92,5 @@ ci:
   - go-test-repo-mod
   - golangci-lint-repo-mod
   - my-cmd-repo-mod
+  - update-exif
   - update-radar

@@ -13,7 +13,7 @@ start:
 start-prod:
 	@hugo server -e production -p 8888
 
-publish: bin/site
+publish: bin/site exif
 	@${RM} -r public
 	@./$< radar update
 	@hugo --gc --cleanDestinationDir

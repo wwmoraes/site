@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalItems": false,
+  "additionalProperties": false,
+  "description": "image properties to set/update",
+  "properties": {
+    "Artist": {
+      "title": "Artist name",
+      "type": "string"
+    },
+    "Copyright": {
+      "title": "copyright notice",
+      "type": "string"
+    },
+    "ImageDescription": {
+      "title": "user-facing image description",
+      "type": "string"
+    },
+    "ImageUniqueID": {
+      "title": "URL to the source image or its copyright information",
+      "type": "string"
+    },
+    "Make": {
+      "title": "caption background color",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Artist"
+  ],
+  "title": "EXIF",
+  "type": "object"
+}

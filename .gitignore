@@ -7,8 +7,8 @@ go.work
 go.work.sum
 /site
 
-*.jpg.json
-*.png.json
+# *.jpg.json
+# *.png.json
 
 __debug_bin*
 
