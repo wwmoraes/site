@@ -28,6 +28,7 @@ words:
   - BDUF
   - Bironas
   - Buildpacks
+  - chezmoi
   - codesandbox
   - Conftest
   - Crossplane
@@ -58,6 +59,7 @@ words:
   - runbook
   - runbooks
   - Rundeck
+  - scriptitis
   - Snyk
   - Stackstorm
   - storyset

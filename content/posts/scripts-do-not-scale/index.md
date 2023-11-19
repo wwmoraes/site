@@ -1,5 +1,5 @@
 ---
-title: Scripts don't scale
+title: Scripts don't scale, they give you scriptitis
 description: a tale about the blind spot of enterprise-grade solutions
 date: 2023-04-21T19:09:39+02:00
 draft: true
@@ -12,67 +12,126 @@ tags:
 - Architecture
 ---
 
-Ana and Bob work at the same company, both platform engineers. Ana's focus is to enable a specific cloud offering to internal developers in a secure and compliant way; Bob's focus is at the network level, to secure the enterprise perimeter and manage the internal address space for fair usage.
-
-Ana knows the current process: she has to raise a request to Bob's team with the subnet size, billing information and an explanation if the subnet is larger than the pre-approved sizes. She also knows this is not ideal.
-
-In a morning meeting, where Ana and Bob join to discuss an improvement around the process.
-
-Picture this: you're in a discussion to solve a platform problem. It could be to allow internal users to provision a new protected resource or change a shared resource/configuration. Someone then says:
-
-> we can simply create a script and run it on a pipeline to solve this.
-
-No, we can't.
+Have you ever had to wait for an "automated" process to unblock you that took
+hours? Did this process use a pipeline and a bunch of scripts underneath to "get
+the job done"? Welcome to a new chronic disease of modern enterprises, what I
+dub the _scriptitis_.
 
 <!--more-->
 
-## Testing the waters
+## Glue language
 
-You're not alone. Loose/duck-typed languages are everywhere in the market. The April 2023 TIOBE index shows such languages in the top 50:
+The concept of script languages first appeared in the 1960's, when computers
+began to shift from the batch processing to the time sharing model. That allowed
+users to interact (gasp!) with the machine without the need to create a big-bang
+workflow and pray it'd work end-to-end.
 
-{{< figure "Source: [TIOBE Index for April 2023](https://www.tiobe.com/tiobe-index/)" >}}
-| Position | Language     | Rating |
-|----------|--------------|--------|
-| 1        | Python       | 14.51% |
-| 6        | Visual Basic | 04.40% |
-| 7        | Javascript   | 02.10% |
-| 18       | Ruby         | 00.66% |
-| 25       | Perl         | 00.44% |
-| 30       | Lua          | 00.33% |
-| 40       | PowerShell   | 00.22% |
-| 42       | Bourne Shell | 00.21% |
-| 50       | Bash         | 00.17% |
-{{< /figure >}}
+![https://tenor.com/en-GB/view/chris-pratt-andy-dwyer-omg-shocked-face-meme-gif-25585329](https://media.tenor.com/9CJaHEmyKPAAAAAC/chris-pratt-andy-dwyer.gif)
 
-Although those look like very low percentages, they are expressive. For instance, #10 Go has 1.28% and while #19 Rust has 0.63%.
+This new interactive style paved the way for small components that solve a
+specific problem to arise. Users then were able to connect or "pipe" them to
+get the result in a specific format, or send to another tool for further
+processing. Such way-of-working led to the Unix Philosophy and the GNU tools
+that are commonplace nowadays.
 
-Another perspective is the StackOverflow survey that shows figures around:
+![https://tenor.com/en-GB/view/linux-trash-linuxbad-gif-18671901](https://media.tenor.com/JFVk98vql5gAAAAd/linux-trash.gif)
 
-![Stack Overflow Survey 2023](stack-overflow-trends-all.svg)
-![Stack Overflow Survey 2023](stack-overflow-trends-slim.svg)
+The goal of script languages is to glue such components. They help connect
+disparate solutions at the last mile without an expensive or complicated code.
+The downside should be clear: they lack a stronger interfaces and data
+contracts. Changes on either solutions aren't easy to check to ensure
+compatibility, and troubleshooting script output is far from great.
+
+For such reasons, they're are also known as glue code or glue languages.
+
+## Glueing glue
+
+What happens when someone overuses glue? They end up submerging the components
+they were trying to glue and end up with a new disfigured one. This new "thing"
+then is the one that needs most maintenance or worse, glueing elsewhere.
+
+![https://tenor.com/en-GB/view/sticky-mess-glue-shove-shovel-gif-16740698](https://media.tenor.com/LxKLh3-BsoEAAAAd/sticky-mess.gif)
+
+In case my analogy didn't hammer home my point: scripts are fine as long as
+they're kept simple and small, and don't become a dependency elsewhere. They
+turn into a system of its own when they overstay their welcome. You then have
+to maintain a new shiny system written with glue instead of a strongly-typed
+and testable programming language.
+
+{{< admonition warning "Testing scripts" >}}
+There's testing solutions for scripts as well, such as BATS for Bash and Pester
+for PowerShell. They are hacks at best, and you won't see them around for any
+vanilla use case of scripts.
+
+Those tools serve for nothing but prove my point that scripts aren't meant to
+write systems. Yet you see this kind of tooling appear due to the untreated
+_scriptitis_ in the IT industry.
+{{< /admonition >}}
+
+## Drawing a line in the sand
+
+How to separate useful from harmful glue? Here's some good uses for scripts:
+
+- custom shell commands used during manual operations
+- small functions to solve minor inconveniences (Bash join anyone?)
+- wrappers of more complex commands to simplify or isolate one use case
+- throwaway prototypes and PoCs of future, properly coded solutions
+- host configuration (specially when tapping OS-specific settings)
+
+Anything beyond these use cases are at the verge of becoming its own system.
+
+### What about pipelines/CI/CD?
+
+All pipeline/automation solutions I've seen so far have an option to run scripts
+such as shells or Python. Those are fine as long as the scripts they use are the
+same the developers use locally. If your pipeline has its own scripting separate
+from the developer code then I feel sorry for you: you have an anti-pattern.
+
+Programming in a pipeline to do something that the user cannot do locally is the
+prime excuse from compliance advocates. Those solutions rely on roadblocks such
+as merge/pull requests and branch policies to enforce them. This leads to yet
+another set of anti-patterns, namely continuous isolation and CI theatre. Those
+are extensive topics I'll save for another day.
+
+The bottom line is: Pipeline's broken? Uh oh, time to switch context from the
+main solution code to troubleshoot the pipeline code. Split brain right there.
+Then you realize you need an external team to change the templates as you don't
+have the rights to update them...
+
+![https://tenor.com/en-GB/view/barney-stinson-neil-patrick-harris-himym-how-i-met-your-mother-gif-5353868](https://media.tenor.com/C45MBZAcrlwAAAAC/barney-stinson.gif)
 
 ## Script ambivalence
 
-Don't get me wrong: I love scripting languages. I use them extensively to glue repetitive tasks within my host and some small scale contexts as my lab/team environment.
+Don't get me wrong: I love scripting languages. I use them for common tasks on
+my host, home lab and my work environment. A good example is how I leverage
+chezmoi to configure my machines with all my [preference files][dotfiles] and
+secrets. It also runs dozens of scripts for the "last mile" setup.
 
-Anything beyond that becomes the DevOps-certified version of spaghetti code. Script A uses script B that uses tool C, all cleverly glued together in a pipeline. A castle of cards that no one dares to touch unless it is already broken.
+[dotfiles]: https://github.com/wwmoraes/dotfiles
 
-The problem here is that scripts don't scale. They are a loose amalgamation of weak interfaces between multiple files and command-line tools that rely on mystical or just hard-to-read functionality. Error checks, if present, are either textual or outright ignored. They are hard to maintain and extend. Dependencies on hardcoded binaries and URLs makes it harder to test, which is seldom done. Loose typing, or duck typing at best, adds yet another layer of errors to keep track of. In general, the confidence to introduce change is low.
+Anything beyond that becomes the DevOps-certified ™️ version of spaghetti code.
+Script A uses script B/tool C, all cleverly glued together in a pipeline more
+often than not. Why? Because that's what "continuous integration" is all about,
+right? A castle of cards that no one dares to touch unless until it breaks.
 
-In the past few years I've noticed a common pattern on platforms: they all rely too much on scripts. You may recognize some of those:
+![https://tenor.com/en-GB/view/right-natalie-portman-star-wars-rd_btc-gif-24051918](https://media.tenor.com/Wza_7q92YIQAAAAC/right-natalie-portman.gif)
 
-- network team manages critical policies and configurations with some Bash and PowerShell
-- governance team has their "kit" of scripts running in a manually triggered pipeline to provision a team environment
-- configuration stored as low-structured files (and I've even seen Markdown used for this as recommended by a consultant engineer from one of the Big Five companies, believe it or not…), parsed both from and to using Bash/PowerShell
-- a Bash "framework" to deal with tooling and development environment
+## Glue replacement
 
-Of all those points, the last one sounds like a legit use case. All others are outright proofs-of-concept that slipped into production somehow.
+What's the alternative then? Software engineering using a strong typed and
+preferably compiled language. Those allow developers to better provide and
+interact with distinct solution APIs. It also doubles down to create a
+decoupled internal architecture where solutions communicate based on known data
+contracts.
 
-What about containers? They further augment the problem. You either end up with:
+A clean architecture won't take more time than any thousand-line-sized script.
+The trade off is where the speed slope is: scripts are faster to create and
+slow to maintain, while a proper application is slower to create and faster
+to test and thus change.
 
-- a master script or pipeline that runs a couple of different images, which you need to configure all the environment variables and mounts to work properly + deal with permission issues
-- a bloated "job" container that has a ton of utilities installed, and thus is equivalent to the original environment used
+![https://tenor.com/en-GB/view/there-is-a-trade-off-matt-ginsberg-startalk-compromise-risk-gif-20160753](https://media.tenor.com/LlK2_K0paXgAAAAd/there-is-a-trade-off-matt-ginsberg.gif)
 
-What's the alternative then? Software engineering using a strong typed and preferably compiled language. Those allow developers to safely glue distinct APIs and test the intent effectively. A clean architecture won't take much more time than any thousand-line-sized script. The trade off is where the speed is: scripts are faster to create and slow to maintain, while a proper application is slower to create and fast to change.
-
-Companies rely on such solutions, including big corporations, to deliver critical integrations and services every day. And they struggle to keep the show on the road because of those.
+Companies that rely on such "system scripts" waste plenty of engineering
+potential. One hour of a glued pipeline execution siphons at least one engineer
+time that could've been better invested elsewhere. And even if not, it'd at
+least avoid the deadline snowball.
