@@ -3,7 +3,7 @@ _build:
   list: true
   render: false
 description: lorem ipsum
-radarIndex: 29
+radarIndex: 30
 radarSection: techniques
 radarTier: hold
 radarX: -260

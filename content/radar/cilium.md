@@ -3,13 +3,13 @@ _build:
   list: true
   render: false
 description: lorem ipsum
-radarIndex: 23
+radarIndex: 16
 radarSection: tools
 radarTier: assess
-radarX: 104
-radarY: 362
+radarX: 360
+radarY: 10
 table-of-contents: false
-title: Consul
+title: Cilium
 ---
 
 TODO justification
