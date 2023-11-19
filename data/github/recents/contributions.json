@@ -1,6 +1,24 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-11-18T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/homebrew-tap",
+      "URL": "https://github.com/wwmoraes/homebrew-tap",
+      "Description": "formulae and casks for Homebrew",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-11-18T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries",
@@ -16,15 +34,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-11-05T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-11-02T07:00:00Z"
   },
   {
     "Repository": {
@@ -79,14 +88,5 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-05-08T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/homebrew-tap",
-      "URL": "https://github.com/wwmoraes/homebrew-tap",
-      "Description": "formulae and casks for Homebrew",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2022-12-12T08:00:00Z"
   }
 ]
