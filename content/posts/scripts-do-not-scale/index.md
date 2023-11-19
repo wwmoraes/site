@@ -1,5 +1,5 @@
 ---
-title: Scripts don't scale, they give you scriptitis
+title: Scripts don't scale; they give you scriptitis
 description: a tale about the blind spot of enterprise-grade solutions
 date: 2023-04-21T19:09:39+02:00
 draft: true
@@ -15,7 +15,7 @@ tags:
 Have you ever had to wait for an "automated" process to unblock you that took
 hours? Did this process use a pipeline and a bunch of scripts underneath to "get
 the job done"? Welcome to a new chronic disease of modern enterprises, what I
-dub the _scriptitis_.
+call _scriptitis_.
 
 <!--more-->
 
@@ -37,26 +37,33 @@ that are commonplace nowadays.
 ![https://tenor.com/en-GB/view/linux-trash-linuxbad-gif-18671901](https://media.tenor.com/JFVk98vql5gAAAAd/linux-trash.gif)
 
 The goal of script languages is to glue such components. They help connect
-disparate solutions at the last mile without an expensive or complicated code.
-The downside should be clear: they lack a stronger interfaces and data
-contracts. Changes on either solutions aren't easy to check to ensure
-compatibility, and troubleshooting script output is far from great.
+tools and solutions without an expensive or complicated code. The downside
+should be clear: they lack a stronger interfaces and data contracts. Changes on
+any of the chained elements aren't easy to check to ensure compatibility, and
+troubleshooting script output is far from great.
 
 For such reasons, they're are also known as glue code or glue languages.
 
 ## Glueing glue
 
-What happens when someone overuses glue? They end up submerging the components
-they were trying to glue and end up with a new disfigured one. This new "thing"
-then is the one that needs most maintenance or worse, glueing elsewhere.
+What happens when someone overuses glue? They end up submerging the objects
+they were trying to glue and lose sight of them. When the glue dries up they
+have a new, disfigured object. This new "thing" then is the one that needs most
+maintenance or worse, glueing elsewhere.
 
 ![https://tenor.com/en-GB/view/sticky-mess-glue-shove-shovel-gif-16740698](https://media.tenor.com/LxKLh3-BsoEAAAAd/sticky-mess.gif)
 
-In case my analogy didn't hammer home my point: scripts are fine as long as
-they're kept simple and small, and don't become a dependency elsewhere. They
-turn into a system of its own when they overstay their welcome. You then have
-to maintain a new shiny system written with glue instead of a strongly-typed
-and testable programming language.
+In case my analogy didn't hammer home my point, scripts are fine as long as
+they're:
+
+- kept simple and solve one problem well
+- short and sweet (worst case: hundreds of lines of code, less than 1k)
+- do something the users can locally do without it, but is faster/easier
+- don't become a dependency of another system
+
+They turn into a system of its own when they overstay their welcome. You then
+have to maintain a new shiny system written with glue instead of a
+strongly-typed and testable programming language.
 
 {{< admonition warning "Testing scripts" >}}
 There's testing solutions for scripts as well, such as BATS for Bash and Pester
@@ -87,11 +94,14 @@ such as shells or Python. Those are fine as long as the scripts they use are the
 same the developers use locally. If your pipeline has its own scripting separate
 from the developer code then I feel sorry for you: you have an anti-pattern.
 
+![https://tenor.com/en-GB/view/30rock-comfort-feel-better-jack-donaghy-gif-12796475](https://media.tenor.com/fLhCWlXe5Q4AAAAC/30rock-comfort.gif)
+
 Programming in a pipeline to do something that the user cannot do locally is the
-prime excuse from compliance advocates. Those solutions rely on roadblocks such
-as merge/pull requests and branch policies to enforce them. This leads to yet
-another set of anti-patterns, namely continuous isolation and CI theatre. Those
-are extensive topics I'll save for another day.
+prime excuse from security advocates to do all sorts of compliance checks.
+Those solutions rely on roadblocks such as merge/pull requests and branch
+policies to enforce them at the wrong place. This leads to yet another set of
+anti-patterns, namely continuous isolation and CI theatre. Those are extensive
+topics I'll save for another day.
 
 The bottom line is: Pipeline's broken? Uh oh, time to switch context from the
 main solution code to troubleshoot the pipeline code. Split brain right there.
