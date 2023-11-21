@@ -41,6 +41,7 @@ words:
   - goldmark
   - goodreads
   - Gromit
+  - Hachyderm
   - Hadolint
   - Kustomize
   - MADR
@@ -85,6 +86,7 @@ ignoreWords:
   - metatable
   - metatables
   - nolint
+  - opengraph
   - pageparser
   - pkgs
   - Preproc

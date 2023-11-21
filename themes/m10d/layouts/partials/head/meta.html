@@ -1,0 +1,6 @@
+{{- with $.Site.Params.mastodon }}
+{{- range $_, $entry := . }}
+{{- $url := printf "https://%s/@%s" $entry.server $entry.username }}
+<link rel="me" href="{{ $url }}" />
+{{- end }}
+{{- end }}

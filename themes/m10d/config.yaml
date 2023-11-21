@@ -49,6 +49,9 @@ params:
     style:
     - "'self'"
     - "'unsafe-inline'"
+  mastodon: []
+  # - server: mastodon.social
+  #   username: m10d
 
 mediaTypes:
   application/rss+xml:
