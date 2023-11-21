@@ -1,3 +1,4 @@
+{{/* cspell:disable */}}
 {{- $index := dict -}}
 {{- $index = merge $index (dict "version" "https://jsonfeed.org/version/1") -}}
 {{- $index = merge $index (dict "title" .Site.Title) -}}
@@ -21,6 +22,9 @@
   {{- $item = merge $item (dict "id" (partial "function/tag-uri" .)) -}}
   {{- $item = merge $item (dict "url" .Page.Permalink) -}}
   {{- $item = merge $item (dict "title" .Page.Title) -}}
+  {{- with .Page.Resources.GetMatch "featured-image" }}
+    {{- $item = merge $item (dict "image" .Permalink) -}}
+  {{- end }}
   {{- $content := .Page.Description -}}
   {{- if .Site.Params.rssFullText -}}
     {{- $content = .Page.Content -}}
