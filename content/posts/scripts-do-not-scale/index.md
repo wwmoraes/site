@@ -1,15 +1,15 @@
 ---
-title: Scripts don't scale; they give you scriptitis
+categories:
+- Opinion
+date: 2023-11-20T00:24:04.867706+01:00
 description: a tale about the blind spot of enterprise-grade solutions
-date: 2023-04-21T19:09:39+02:00
 draft: true
 resources:
 - name: featured-image
   src: featured-image.jpg
-categories:
-- Opinion
 tags:
 - Architecture
+title: Scripts don't scale; they give you scriptitis
 ---
 
 Have you ever had to wait for an "automated" process to unblock you that took
@@ -38,7 +38,7 @@ that are commonplace nowadays.
 
 The goal of script languages is to glue such components. They help connect
 tools and solutions without an expensive or complicated code. The downside
-should be clear: they lack a stronger interfaces and data contracts. Changes on
+should be clear: they lack stronger interfaces and data contracts. Changes on
 any of the chained elements aren't easy to check to ensure compatibility, and
 troubleshooting script output is far from great.
 
@@ -79,9 +79,10 @@ _scriptitis_ in the IT industry.
 
 How to separate useful from harmful glue? Here's some good uses for scripts:
 
-- custom shell commands used during manual operations
+- chaining tools into custom commands used during manual operations
 - small functions to solve minor inconveniences (Bash join anyone?)
 - wrappers of more complex commands to simplify or isolate one use case
+- auto-completion definitions (decent tools even generate those for you)
 - throwaway prototypes and PoCs of future, properly coded solutions
 - host configuration (specially when tapping OS-specific settings)
 
@@ -113,16 +114,19 @@ have the rights to update them...
 ## Script ambivalence
 
 Don't get me wrong: I love scripting languages. I use them for common tasks on
-my host, home lab and my work environment. A good example is how I leverage
-chezmoi to configure my machines with all my [preference files][dotfiles] and
-secrets. It also runs dozens of scripts for the "last mile" setup.
+both personal and work environments. My teammates at some point get used to see
+_le wild Makefile_ that appears on each repository I ever touch. Another good
+example is how I use [chezmoi][chezmoi] to deploy [preference files][dotfiles]
+and run dozens scripts for the "last mile" setup on my machines.
 
+[chezmoi]: https://www.chezmoi.io
 [dotfiles]: https://github.com/wwmoraes/dotfiles
 
 Anything beyond that becomes the DevOps-certified ™️ version of spaghetti code.
-Script A uses script B/tool C, all cleverly glued together in a pipeline more
-often than not. Why? Because that's what "continuous integration" is all about,
-right? A castle of cards that no one dares to touch unless until it breaks.
+Script A uses script B/tool C, cleverly glued together in a pipeline more often
+than not. It commonly requires secrets or dependencies non-reproducible locally
+as well. Why? Because that's what "continuous integration" is all about, right?
+A castle of cards that no one dares to touch unless until it breaks.
 
 ![https://tenor.com/en-GB/view/right-natalie-portman-star-wars-rd_btc-gif-24051918](https://media.tenor.com/Wza_7q92YIQAAAAC/right-natalie-portman.gif)
 
@@ -133,6 +137,26 @@ preferably compiled language. Those allow developers to better provide and
 interact with distinct solution APIs. It also doubles down to create a
 decoupled internal architecture where solutions communicate based on known data
 contracts.
+
+A case in point is your cloud provider of preference. You'll notice that all
+services they provide to you have an API. Sure, you also have a graphical
+portal as well, which relies on the API to relay your requests. Infrastructure
+code also depends on these APIs to make the magic happen. Why don't they provide
+you "scripts" to get this done instead?
+
+{{< admonition note "cloud vendor scripts ™️" >}}
+Matter of fact cloud service vendors **do** provide you scripts to interact
+with their APIs. The big three (AWS, GCP, Azure) for instance have their
+official CLI tools written in Python. Then people go and make all sorts of
+atrocities in pipelines with it. 😰
+
+From a developer perspective, most of those CLI tools rely on generated code
+from the API specs and are as mechanical as they can get. They have tests, yet
+[simple fixes face a bumpy road and take its sweet time][azcli-fix] to get
+through due to how the test becomes the problem.
+
+[azcli-fix]: https://github.com/Azure/azure-cli/pull/26013#issuecomment-1651158706
+{{< /admonition >}}
 
 A clean architecture won't take more time than any thousand-line-sized script.
 The trade off is where the speed slope is: scripts are faster to create and
