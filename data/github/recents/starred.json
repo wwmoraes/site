@@ -1,5 +1,19 @@
 [
   {
+    "NameWithOwner": "cocogitto/cocogitto",
+    "URL": "https://github.com/cocogitto/cocogitto",
+    "Description": "The Conventional Commits toolbox",
+    "Stargazers": 516,
+    "StarredAt": "2023-11-21T00:32:31Z"
+  },
+  {
+    "NameWithOwner": "its-danny/koji",
+    "URL": "https://github.com/its-danny/koji",
+    "Description": "🦊 An interactive CLI for creating conventional commits. ",
+    "Stargazers": 75,
+    "StarredAt": "2023-11-21T00:32:27Z"
+  },
+  {
     "NameWithOwner": "hspec/hspec",
     "URL": "https://github.com/hspec/hspec",
     "Description": "A Testing Framework for Haskell",
@@ -38,14 +52,14 @@
     "NameWithOwner": "Bioruebe/UniExtract2",
     "URL": "https://github.com/Bioruebe/UniExtract2",
     "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 3059,
+    "Stargazers": 3060,
     "StarredAt": "2023-09-23T17:53:48Z"
   },
   {
     "NameWithOwner": "immich-app/immich",
     "URL": "https://github.com/immich-app/immich",
     "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 21278,
+    "Stargazers": 21365,
     "StarredAt": "2023-09-21T22:50:00Z"
   },
   {
@@ -54,19 +68,5 @@
     "Description": "A minimalist command line tool written in Go to work with Architecture Decision Records",
     "Stargazers": 99,
     "StarredAt": "2023-09-14T09:13:20Z"
-  },
-  {
-    "NameWithOwner": "sorayuki/obs-multi-rtmp",
-    "URL": "https://github.com/sorayuki/obs-multi-rtmp",
-    "Description": "OBS複数サイト同時配信プラグイン",
-    "Stargazers": 2677,
-    "StarredAt": "2023-09-11T17:23:02Z"
-  },
-  {
-    "NameWithOwner": "1pkg/gopium",
-    "URL": "https://github.com/1pkg/gopium",
-    "Description": "Gopium 🌺: Smart Go Structures Optimizer and Manager",
-    "Stargazers": 198,
-    "StarredAt": "2023-09-01T11:51:10Z"
   }
 ]
