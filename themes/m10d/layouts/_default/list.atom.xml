@@ -59,6 +59,11 @@
         {{- $content | htmlUnescape | safeHTML -}}
       </div>
     </content>
+    <author>
+      <name>{{ $.Site.Author.displayname }}</name>
+      <email>{{ $.Site.Author.email }}</email>
+      <uri>{{- $.Site.BaseURL -}}</uri>
+    </author>
   </entry>
   {{- end }}
   <author>

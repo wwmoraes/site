@@ -23,19 +23,19 @@ frontmatter:
 
 outputs:
   home:
+  - ATOM
+  - FEED
   - HTML
   - RSS
-  # - ATOM
-  - FEED
   page:
   - HTML
   section:
   - HTML
   term:
+  - ATOM
+  - FEED
   - HTML
   - RSS
-  # - ATOM
-  - FEED
 
 # https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30
 author:
@@ -58,7 +58,7 @@ pygmentsUseClasses: false
 pygmentsCodeFences: true
 
 sitemap:
-  changefreq: weekly
+  changefreq: weekly # cspell:disable-line
   filename: sitemap.xml
   priority: 0.5
 
@@ -71,8 +71,10 @@ module:
   - source: content
     target: content
     excludeFiles:
+    # cspell:disable
     - '**/*.tmpl'
     - '**/*.iuml'
     - '**/*.puml'
     - '**/*.png.json'
     - '**/*.jpg.json'
+    # cspell:enable
