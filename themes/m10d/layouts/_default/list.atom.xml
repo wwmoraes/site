@@ -1,16 +1,16 @@
 {{/* cspell:disable */}}
-{{- $pctx := . -}}
-{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
-{{- $pages := slice -}}
-{{- if or $.IsHome $.IsSection -}}
-{{- $pages = where $pctx.RegularPages "Type" "in" site.Params.mainSections -}}
-{{- else -}}
-{{- $pages = where $pctx.Pages "Type" "in" site.Params.mainSections -}}
-{{- end -}}
-{{- $limit := .Site.Config.Services.RSS.Limit -}}
-{{- if ge $limit 1 -}}
-{{- $pages = $pages | first $limit -}}
-{{- end -}}
+{{- $pctx := . }}
+{{- if .IsHome }}{{ $pctx = .Site }}{{- end }}
+{{- $pages := slice }}
+{{- if or $.IsHome $.IsSection }}
+{{- $pages = where $pctx.RegularPages "Type" "in" site.Params.mainSections }}
+{{- else }}
+{{- $pages = where $pctx.Pages "Type" "in" site.Params.mainSections }}
+{{- end }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{- $.Site.Title -}}</title>
@@ -35,38 +35,40 @@
     <email>{{ $.Site.Author.email }}</email>
     <uri>{{- $.Site.BaseURL -}}</uri>
   </author>
-  {{ range $pages -}}
+  {{- range $pages }}
   <entry>
     <title>{{ .Page.Title }}</title>
-    <link rel="alternate" type="text/html" href="{{ .Page.Permalink }}"/>
+    <link rel="alternate" type="text/html" href="{{- .Page.Permalink -}}"/>
     {{- with .Page.Resources.GetMatch "featured-image" }}
     <link rel="enclosure" type="{{- .MediaType.Type -}}" length="{{- .Content | len -}}"
         href="{{- .Permalink -}}" />
     {{- end }}
     <id>{{ partial "function/tag-uri" . }}</id>
-    <published>{{ .Page.PublishDate.Format "2006-01-02T15:04:05Z" }}</published>
-    <updated>{{ .Page.Lastmod.Format "2006-01-02T15:04:05Z" }}</updated>
+    <published>{{- .Page.PublishDate.Format "2006-01-02T15:04:05Z" -}}</published>
+    <updated>{{- .Page.Lastmod.Format "2006-01-02T15:04:05Z" -}}</updated>
     <summary>
-      {{- printf "<![CDATA[" | safeHTML -}}
+      {{- printf "<![CDATA[" | safeHTML }}
       {{ .Page.Summary | plainify | htmlUnescape }}
-      {{- printf "]]>" | safeHTML -}}
+      {{- printf "]]>" | safeHTML }}
     </summary>
     <content type="xhtml">
-      {{- $content := .Page.Description -}}
-      {{- if .Site.Params.rssFullText -}}
-        {{- $content = .Page.Content -}}
-      {{- else -}}
-        {{- with .Page.Summary -}}
-          {{- $content = . -}}
-        {{- end -}}
-      {{- end -}}
+      {{- $content := .Page.Description }}
+      {{- if .Site.Params.rssFullText }}
+        {{- $content = .Page.Content }}
+      {{- else }}
+        {{- with .Page.Summary }}
+          {{- $content = . }}
+        {{- end }}
+      {{- end }}
       <div xmlns="http://www.w3.org/1999/xhtml">
-        {{- trim $content "\n" | htmlUnescape | safeHTML -}}
+        {{- $content = $content | htmlUnescape | safeHTML }}
+        {{- $content = replace (trim ($content) "\r\n") "\n" " " }}
+        {{ replaceRE ">[ ]+" ">" $content | safeHTML }}
       </div>
     </content>
     <author>
-      <name>{{ $.Site.Author.displayname }}</name>
-      <email>{{ $.Site.Author.email }}</email>
+      <name>{{- $.Site.Author.displayname -}}</name>
+      <email>{{- $.Site.Author.email -}}</email>
       <uri>{{- $.Site.BaseURL -}}</uri>
     </author>
   </entry>
