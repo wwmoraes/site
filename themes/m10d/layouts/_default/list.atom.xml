@@ -30,6 +30,11 @@
   <link href="{{- $.Site.BaseURL -}}" />
   <id>{{ partial "function/tag-uri" . }}</id>
   <updated>{{ .Site.LastChange.Format "2006-01-02T15:04:05Z" }}</updated>
+  <author>
+    <name>{{ $.Site.Author.displayname }}</name>
+    <email>{{ $.Site.Author.email }}</email>
+    <uri>{{- $.Site.BaseURL -}}</uri>
+  </author>
   {{ range $pages -}}
   <entry>
     <title>{{ .Page.Title }}</title>
@@ -55,7 +60,7 @@
           {{- $content = . -}}
         {{- end -}}
       {{- end -}}
-      {{- trim $content "\n" -}}
+      {{- trim $content "\n" | htmlUnescape | safeHTML -}}
     </content>
     <author>
       <name>{{ $.Site.Author.displayname }}</name>
@@ -64,9 +69,4 @@
     </author>
   </entry>
   {{- end }}
-  <author>
-    <name>{{ $.Site.Author.displayname }}</name>
-    <email>{{ $.Site.Author.email }}</email>
-    <uri>{{- $.Site.BaseURL -}}</uri>
-  </author>
 </feed>
