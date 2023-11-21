@@ -1,4 +1,4 @@
-{{- $inner := .Inner | .Page.RenderString -}}
+{{- $inner := .Inner | .Page.RenderString (dict "display" "block") -}}
 
 {{- $iconMap := dict "note" "edit-2" -}}
 {{- $iconMap  = dict "abstract" "list" | merge $iconMap -}}
