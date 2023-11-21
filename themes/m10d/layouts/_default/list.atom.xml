@@ -60,7 +60,9 @@
           {{- $content = . -}}
         {{- end -}}
       {{- end -}}
-      {{- trim $content "\n" | htmlUnescape | safeHTML -}}
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{- trim $content "\n" | htmlUnescape | safeHTML -}}
+      </div>
     </content>
     <author>
       <name>{{ $.Site.Author.displayname }}</name>
