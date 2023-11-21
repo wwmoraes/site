@@ -47,17 +47,15 @@
       {{- printf "]]>" | safeHTML -}}
     </summary>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        {{- $content := .Page.Description -}}
-        {{- if .Site.Params.rssFullText -}}
-          {{- $content = .Page.Content -}}
-        {{- else -}}
-          {{- with .Page.Summary -}}
-            {{- $content = . -}}
-          {{- end -}}
+      {{- $content := .Page.Description -}}
+      {{- if .Site.Params.rssFullText -}}
+        {{- $content = .Page.Content -}}
+      {{- else -}}
+        {{- with .Page.Summary -}}
+          {{- $content = . -}}
         {{- end -}}
-        {{- $content | htmlUnescape | safeHTML -}}
-      </div>
+      {{- end -}}
+      {{- trim $content "\n" -}}
     </content>
     <author>
       <name>{{ $.Site.Author.displayname }}</name>
