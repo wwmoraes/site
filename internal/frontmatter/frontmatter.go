@@ -4,6 +4,7 @@ const (
 	// Hugo front matter.
 
 	Build       Key = "_build"
+	Date        Key = "date"
 	Description Key = "description"
 	Draft       Key = "draft"
 	List        Key = "list"

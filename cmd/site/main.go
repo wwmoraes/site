@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/wwmoraes/site/cmd/site/content"
 	"github.com/wwmoraes/site/cmd/site/data"
 	"github.com/wwmoraes/site/cmd/site/radar"
 )
@@ -17,6 +18,7 @@ func main() {
 		Example: "site",
 	}
 
+	rootCmd.AddCommand(content.Command())
 	rootCmd.AddCommand(data.Command())
 	rootCmd.AddCommand(radar.Command())
 
