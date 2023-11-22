@@ -126,7 +126,7 @@ Anything beyond that becomes the DevOps-certified ™️ version of spaghetti co
 Script A uses script B/tool C, cleverly glued together in a pipeline more often
 than not. It commonly requires secrets or dependencies non-reproducible locally
 as well. Why? Because that's what "continuous integration" is all about, right?
-A castle of cards that no one dares to touch unless until it breaks.
+A castle of cards that no one dares to touch unless it breaks.
 
 ![https://tenor.com/en-GB/view/right-natalie-portman-star-wars-rd_btc-gif-24051918](https://media.tenor.com/Wza_7q92YIQAAAAC/right-natalie-portman.gif)
 
