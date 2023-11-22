@@ -23,7 +23,7 @@ frontmatter:
 
 outputs:
   home:
-  - ATOM
+  # - ATOM
   - FEED
   - HTML
   - RSS
@@ -32,7 +32,7 @@ outputs:
   section:
   - HTML
   term:
-  - ATOM
+  # - ATOM
   - FEED
   - HTML
   - RSS
