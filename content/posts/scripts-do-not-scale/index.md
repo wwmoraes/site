@@ -3,7 +3,7 @@ categories:
 - Opinion
 date: 2023-11-20T00:24:04.867706+01:00
 description: a tale about the blind spot of enterprise-grade solutions
-draft: true
+publishDate: 2023-11-22T10:42:08.741538+01:00
 resources:
 - name: featured-image
   src: featured-image.jpg
