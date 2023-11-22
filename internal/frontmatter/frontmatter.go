@@ -1,21 +1,60 @@
 package frontmatter
 
 const (
-	// Hugo front matter.
+	// Hugo front matter predefined keys.
 
-	Build       Key = "_build"
-	Date        Key = "date"
-	Description Key = "description"
-	Draft       Key = "draft"
-	List        Key = "list"
-	Render      Key = "render"
-	Title       Key = "title"
+	Aliases       Key = "aliases"
+	Audio         Key = "audio"
+	Cascade       Key = "cascade"
+	Date          Key = "date"
+	Description   Key = "description"
+	Draft         Key = "draft"
+	ExpiryDate    Key = "expiryDate"
+	Headless      Key = "headless"
+	Images        Key = "images"
+	IsCJKLanguage Key = "isCJKLanguage"
+	Keywords      Key = "keywords"
+	Lastmod       Key = "lastmod"
+	Layout        Key = "layout"
+	LinkTitle     Key = "linkTitle"
+	Markup        Key = "markup"
+	Outputs       Key = "outputs"
+	PublishDate   Key = "publishDate"
+	Resources     Key = "resources"
+	Series        Key = "series"
+	Slug          Key = "slug"
+	Summary       Key = "summary"
+	Taxonomies    Key = "taxonomies"
+	Title         Key = "title"
+	Type          Key = "type"
+	URL           Key = "url"
+	Videos        Key = "videos"
+	Weight        Key = "weight"
 
-	// Site front matter.
+	// hidden-ish predefined keys.
+
+	Build  Key = "_build"
+	Target Key = "_target"
+
+	// target sub-keys.
+
+	Background  Key = "background"
+	Environment Key = "environment"
+	Kind        Key = "kind"
+	Lang        Key = "lang"
+	Path        Key = "path"
+
+	// build sub-keys.
+
+	List             Key = "list"
+	PublishResources Key = "publishResources"
+	Render           Key = "render"
+
+	// Site-/theme-specific keys.
 
 	TableOfContents Key = "table-of-contents"
 
-	// Radar front matter.
+	// Radar section keys.
 
 	RadarIndex   Key = "radarIndex"
 	RadarSection Key = "radarSection"
