@@ -1,16 +1,30 @@
 [
   {
+    "NameWithOwner": "alpkeskin/mosint",
+    "URL": "https://github.com/alpkeskin/mosint",
+    "Description": "An automated e-mail OSINT tool",
+    "Stargazers": 3276,
+    "StarredAt": "2023-11-22T20:30:24Z"
+  },
+  {
+    "NameWithOwner": "jivoi/awesome-osint",
+    "URL": "https://github.com/jivoi/awesome-osint",
+    "Description": ":scream: A curated list of amazingly awesome OSINT",
+    "Stargazers": 14660,
+    "StarredAt": "2023-11-22T19:10:46Z"
+  },
+  {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8305,
+    "Stargazers": 8314,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
     "NameWithOwner": "cocogitto/cocogitto",
     "URL": "https://github.com/cocogitto/cocogitto",
     "Description": "The Conventional Commits toolbox",
-    "Stargazers": 516,
+    "Stargazers": 517,
     "StarredAt": "2023-11-21T00:32:31Z"
   },
   {
@@ -31,7 +45,7 @@
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16883,
+    "Stargazers": 16882,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -54,19 +68,5 @@
     "Description": "In Windows, launch a different browser depending on the url",
     "Stargazers": 87,
     "StarredAt": "2023-09-25T19:23:31Z"
-  },
-  {
-    "NameWithOwner": "Bioruebe/UniExtract2",
-    "URL": "https://github.com/Bioruebe/UniExtract2",
-    "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
-    "Stargazers": 3061,
-    "StarredAt": "2023-09-23T17:53:48Z"
-  },
-  {
-    "NameWithOwner": "immich-app/immich",
-    "URL": "https://github.com/immich-app/immich",
-    "Description": "Self-hosted photo and video backup solution directly from your mobile phone.",
-    "Stargazers": 21429,
-    "StarredAt": "2023-09-21T22:50:00Z"
   }
 ]
