@@ -1,23 +1,30 @@
 [
   {
+    "NameWithOwner": "dsully/macos-defaults",
+    "URL": "https://github.com/dsully/macos-defaults",
+    "Description": "A tool for managing macOS defaults declaratively via YAML files.",
+    "Stargazers": 6,
+    "StarredAt": "2023-11-25T01:52:52Z"
+  },
+  {
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3279,
+    "Stargazers": 3280,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14668,
+    "Stargazers": 14680,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8324,
+    "Stargazers": 8323,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
@@ -45,7 +52,7 @@
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16888,
+    "Stargazers": 16889,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -59,14 +66,7 @@
     "NameWithOwner": "github/semantic",
     "URL": "https://github.com/github/semantic",
     "Description": "Parsing, analyzing, and comparing source code across many languages",
-    "Stargazers": 8793,
+    "Stargazers": 8791,
     "StarredAt": "2023-09-27T22:02:00Z"
-  },
-  {
-    "NameWithOwner": "slater1/BrowseRouter",
-    "URL": "https://github.com/slater1/BrowseRouter",
-    "Description": "In Windows, launch a different browser depending on the url",
-    "Stargazers": 87,
-    "StarredAt": "2023-09-25T19:23:31Z"
   }
 ]

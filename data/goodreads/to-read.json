@@ -635,31 +635,5 @@
     },
     "datePublished": "2009-01-01T00:00:00Z",
     "isbn": "9781430219484"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321712943",
-    "@type": "Book",
-    "name": "Domain-Specific Languages (Addison-Wesley Signature Series",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Martin Fowler"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347810217l/8082269._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9780321712943"
   }
 ]
