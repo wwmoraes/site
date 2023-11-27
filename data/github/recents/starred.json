@@ -1,5 +1,12 @@
 [
   {
+    "NameWithOwner": "nats-io/nats.go",
+    "URL": "https://github.com/nats-io/nats.go",
+    "Description": "Golang client for NATS, the cloud native messaging system.",
+    "Stargazers": 4883,
+    "StarredAt": "2023-11-26T13:03:30Z"
+  },
+  {
     "NameWithOwner": "dsully/macos-defaults",
     "URL": "https://github.com/dsully/macos-defaults",
     "Description": "A tool for managing macOS defaults declaratively via YAML files.",
@@ -10,21 +17,21 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3285,
+    "Stargazers": 3288,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14689,
+    "Stargazers": 14700,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8324,
+    "Stargazers": 8327,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
@@ -52,7 +59,7 @@
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16893,
+    "Stargazers": 16900,
     "StarredAt": "2023-10-31T10:49:50Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "Uses Plex's API to delete watched shows.",
     "Stargazers": 5,
     "StarredAt": "2023-10-08T16:09:13Z"
-  },
-  {
-    "NameWithOwner": "github/semantic",
-    "URL": "https://github.com/github/semantic",
-    "Description": "Parsing, analyzing, and comparing source code across many languages",
-    "Stargazers": 8792,
-    "StarredAt": "2023-09-27T22:02:00Z"
   }
 ]
