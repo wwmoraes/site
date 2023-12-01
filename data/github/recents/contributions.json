@@ -1,6 +1,15 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/stack-templates",
+      "URL": "https://github.com/wwmoraes/stack-templates",
+      "Description": "Modern templates for the Haskell Tool Stack",
+      "Stargazers": 0
+    },
+    "OccurredAt": "2023-12-01T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries",
@@ -25,15 +34,6 @@
       "Stargazers": 0
     },
     "OccurredAt": "2023-11-18T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/stack-templates",
-      "URL": "https://github.com/wwmoraes/stack-templates",
-      "Description": "Modern templates for the Haskell Tool Stack",
-      "Stargazers": 0
-    },
-    "OccurredAt": "2023-11-05T07:00:00Z"
   },
   {
     "Repository": {
