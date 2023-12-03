@@ -20,6 +20,8 @@ ignorePaths:
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - aircraft
+  - aircrafts
   - Anilistarr
   - Artero
   - Audiobook
@@ -32,6 +34,7 @@ words:
   - codesandbox
   - Conftest
   - Crossplane
+  - cyclomatic
   - dribbble
   - Freepik
   - García
