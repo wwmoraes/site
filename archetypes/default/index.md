@@ -5,7 +5,7 @@ date: {{ .Date }}
 draft: true
 resources:
 - name: featured-image
-  src: featured-image.png
+  src: featured-image.jpg
   title: Featured image placeholder
   params:
     copyright: Image by William Artero
