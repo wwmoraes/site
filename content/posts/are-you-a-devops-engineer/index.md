@@ -6,10 +6,10 @@ resources:
 - name: featured-image
   src: devops.jpg
 categories:
-- Opinion
-tags:
 - Career
+tags:
 - DevOps
+lastmod: 2023-12-01T14:53:26.025000+01:00
 ---
 
 A search for the term DevOps on LinkedIn will yield countless posts and hundreds of jobs. The market for DevOps engineers is plentiful and has been for at least a decade now. Everyone wants to join the hype and either calls themselves DevOps engineers or adds the DevOps keyword in their CVs for that extra oomph. Is that the right thing to do?

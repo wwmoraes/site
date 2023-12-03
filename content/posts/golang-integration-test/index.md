@@ -3,10 +3,11 @@ title: Instrumented testing in Golang
 description: Say goodbye to thousands of unit test lines of code
 date: 2023-08-24T18:35:53+02:00
 categories:
-- code
+- Code
 tags:
-- golang
-- test
+- Golang
+- Testing
+lastmod: 2023-12-01T14:49:39.245000+01:00
 ---
 
 Imagine you create a Golang application, run it and get a test coverage report

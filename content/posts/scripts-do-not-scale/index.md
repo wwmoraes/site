@@ -1,6 +1,6 @@
 ---
 categories:
-- Opinion
+- Architecture
 date: 2023-11-20T00:24:04.867706+01:00
 description: a tale about the blind spot of enterprise-grade solutions
 publishDate: 2023-11-22T10:42:08.741538+01:00
@@ -8,8 +8,9 @@ resources:
 - name: featured-image
   src: featured-image.jpg
 tags:
-- Architecture
+- Opinion
 title: Scripts don't scale; they give you scriptitis
+lastmod: 2023-12-01T14:52:28.302000+01:00
 ---
 
 Have you ever had to wait for an "automated" process to unblock you that took

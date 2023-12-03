@@ -3,11 +3,11 @@ title: automation is not just a word
 date: 2022-01-06T10:55:06+01:00
 draft: true
 categories:
-- Opinion
+- Architecture
 tags:
 - DevOps
 - SRE
-- Soft Skills
+lastmod: 2023-12-01T14:52:21.179000+01:00
 ---
 
 After over a decade working in the IT industry I still occasionally hear an
