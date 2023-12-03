@@ -3,14 +3,14 @@
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6921,
+    "Stargazers": 6925,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4894,
+    "Stargazers": 4896,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -24,21 +24,21 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3374,
+    "Stargazers": 3398,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14751,
+    "Stargazers": 14759,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8357,
+    "Stargazers": 8358,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "simple-icons/simple-icons",
     "URL": "https://github.com/simple-icons/simple-icons",
     "Description": "SVG icons for popular brands",
-    "Stargazers": 16937,
+    "Stargazers": 16940,
     "StarredAt": "2023-10-31T10:49:50Z"
   }
 ]
