@@ -1,11 +1,4 @@
 {
-  "[markdown]": {
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "other": "on",
-      "strings": "on"
-    }
-  },
   "css.format.enable": false,
   "files.associations": {
     "**/_headers": "plaintext"
@@ -20,6 +13,15 @@
     ".github/workflows/update.yml"
   ],
   "html.format.templating": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/*.jpg.json",
+        "**/*.png.json"
+      ],
+      "url": "./.vscode/exif.schema.json"
+    }
+  ],
   "less.format.enable": false,
   "scss.format.enable": false,
   "search.exclude": {
@@ -38,13 +40,5 @@
     "XL": 1280
   },
   "webPreview.mediaScreenOverride": true,
-  "webPreview.url": "http://localhost:8888",
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "**/*.jpg.json",
-      ],
-      "url": "./.vscode/exif.schema.json"
-    }
-  ]
+  "webPreview.url": "http://localhost:8888"
 }

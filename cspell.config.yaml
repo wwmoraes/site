@@ -2,11 +2,12 @@ version: "0.2"
 ignorePaths:
   - .gitignore
   - .pre-commit-config.yaml
-  - cspell.config.yaml
   - .stylelint.yaml
   - .vscode/*
   - "*/robots.txt"
+  - cspell.config.yaml
   - data/*
+  - frontmatter.json
   - go.mod
   - go.sum
   - Makefile
@@ -15,8 +16,8 @@ ignorePaths:
   - static/_redirects
   - static/browserconfig.xml
   - themes/*/data/*
-  - themes/*/LICENSE
   - themes/*/exampleSite/*
+  - themes/*/LICENSE
 dictionaryDefinitions: []
 dictionaries: []
 words:

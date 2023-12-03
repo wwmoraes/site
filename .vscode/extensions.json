@@ -12,6 +12,7 @@
     "davidanson.vscode-markdownlint",
     "mohsen1.prettify-json",
     "richie5um2.vscode-sort-json",
-    "travisthetechie.write-good-linter"
+    "travisthetechie.write-good-linter",
+    "eliostruyf.vscode-front-matter"
   ]
 }
