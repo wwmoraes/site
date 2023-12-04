@@ -9,7 +9,7 @@ categories:
 - Principle
 tags:
 - Analysis
-lastmod: 2023-12-03T13:10:54+01:00
+lastmod: 2023-12-04T10:29:02+01:00
 ---
 
 Software engineers use acronyms to convey certain ideas in a single word to
@@ -256,8 +256,8 @@ We'll focus on the design of the environment variables expansion rules as a
 direct requirement of an existing Golang code base.
 
 Some may consider the `EnvVar` and `EnvVarContext` interfaces "non-KISS" or an
-over-engineering. Sounds like _You Ain't Gonna Need It_ (YAGNI) instead of KISS,
-as the alternatives are arguably more complex:
+over-engineering as well. Sounds like _You Ain't Gonna Need It_ (YAGNI) instead
+of KISS, as the alternatives are arguably more complex:
 
 - **Standalone functions for each use-case**. Lengthy function names and shared
 intent. Increased maintenance as functions share part of the logic plus a
