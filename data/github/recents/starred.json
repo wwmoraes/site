@@ -1,16 +1,30 @@
 [
   {
+    "NameWithOwner": "codeclimate/test-reporter",
+    "URL": "https://github.com/codeclimate/test-reporter",
+    "Description": "Code Climate Test Reporter",
+    "Stargazers": 151,
+    "StarredAt": "2023-12-05T11:26:08Z"
+  },
+  {
+    "NameWithOwner": "reviewdog/reviewdog",
+    "URL": "https://github.com/reviewdog/reviewdog",
+    "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
+    "Stargazers": 6859,
+    "StarredAt": "2023-12-05T10:43:20Z"
+  },
+  {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6931,
+    "Stargazers": 6940,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4900,
+    "Stargazers": 4904,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -24,28 +38,28 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3420,
+    "Stargazers": 3423,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14782,
+    "Stargazers": 14795,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8364,
+    "Stargazers": 8371,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
     "NameWithOwner": "cocogitto/cocogitto",
     "URL": "https://github.com/cocogitto/cocogitto",
     "Description": "The Conventional Commits toolbox",
-    "Stargazers": 525,
+    "Stargazers": 527,
     "StarredAt": "2023-11-21T00:32:31Z"
   },
   {
@@ -54,19 +68,5 @@
     "Description": "🦊 An interactive CLI for creating conventional commits. ",
     "Stargazers": 80,
     "StarredAt": "2023-11-21T00:32:27Z"
-  },
-  {
-    "NameWithOwner": "hspec/hspec",
-    "URL": "https://github.com/hspec/hspec",
-    "Description": "A Testing Framework for Haskell",
-    "Stargazers": 728,
-    "StarredAt": "2023-11-05T18:48:36Z"
-  },
-  {
-    "NameWithOwner": "simple-icons/simple-icons",
-    "URL": "https://github.com/simple-icons/simple-icons",
-    "Description": "SVG icons for popular brands",
-    "Stargazers": 16947,
-    "StarredAt": "2023-10-31T10:49:50Z"
   }
 ]

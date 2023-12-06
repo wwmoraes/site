@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
+    "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
+    "Description": "pre-commit completions for Fish shell",
+    "Stargazers": 0
+  },
+  {
     "NameWithOwner": "wwmoraes/stack-templates",
     "URL": "https://github.com/wwmoraes/stack-templates",
     "Description": "Modern templates for the Haskell Tool Stack",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/wwmoraes/siever",
     "Description": "RFC5804-compliant ManageSieve client in pure Go",
     "Stargazers": 0
-  },
-  {
-    "NameWithOwner": "wwmoraes/maker-snippets",
-    "URL": "https://github.com/wwmoraes/maker-snippets",
-    "Description": "Maker repository with common GNU Make snippets",
-    "Stargazers": 1
   }
 ]
