@@ -40,5 +40,6 @@
     "XL": 1280
   },
   "webPreview.mediaScreenOverride": true,
-  "webPreview.url": "http://localhost:8888"
+  "webPreview.url": "http://localhost:8888",
+  "frontMatter.dashboard.openOnStart": true
 }
