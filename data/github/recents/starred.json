@@ -10,21 +10,21 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6863,
+    "Stargazers": 6867,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6945,
+    "Stargazers": 6949,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4906,
+    "Stargazers": 4907,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -38,28 +38,28 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3427,
+    "Stargazers": 3433,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14811,
+    "Stargazers": 14817,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8375,
+    "Stargazers": 8380,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
     "NameWithOwner": "cocogitto/cocogitto",
     "URL": "https://github.com/cocogitto/cocogitto",
     "Description": "The Conventional Commits toolbox",
-    "Stargazers": 528,
+    "Stargazers": 529,
     "StarredAt": "2023-11-21T00:32:31Z"
   },
   {
