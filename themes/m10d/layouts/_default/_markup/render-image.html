@@ -1,1 +1,12 @@
+{{- $image := "" }}
+{{- if hasPrefix .Destination "http" }}
+{{- $image = resources.GetRemote .Destination }}
+{{- else }}
+{{- $image = resources.Get .Destination }}
+{{- end }}
+
+{{- if and $image (eq $image.MediaType.Type "image/gif" | not) }}
+{{- partial "picture.html" (dict "image" $image "title" .Title "alt" (.PlainText | default .Title)) }}
+{{- else }}
 <img src="{{ .Destination }}" title="{{ .Title }}" alt="{{ .PlainText | default .Title }}" />
+{{- end }}

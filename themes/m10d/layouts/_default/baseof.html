@@ -43,8 +43,9 @@
           {{- if not $image -}}
           {{- $image = resources.Get "images/placeholders/avatar.jpg" -}}
           {{- end -}}
-          <img class="app-header-avatar" src="{{- $image.Permalink -}}" alt="{{- .Site.Author.displayname -}}"
-            width="64" height="64" />
+          <figure class="app-header-avatar">
+            {{- partial "picture.html" (dict "image" $image "title" .Site.Author.displayname "alt" .Site.Author.displayname) }}
+          </figure>
         </a>
         <span class="app-header-title">{{- .Site.Title -}}</span>
         <p>

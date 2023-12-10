@@ -3,7 +3,6 @@
   {{- template "_internal/schema.html" . -}}
   <header class="post-header">
     {{ with .Resources.GetMatch "featured-image" -}}
-    {{- $permalink := .Permalink -}}
     {{- $title := .Title -}}
     {{- $bgColor := "transparent" -}}
     {{- $source := "" -}}
@@ -15,7 +14,7 @@
     {{- end -}}
     {{- end -}}
     <figure class="featured-image" style="background-color: {{- $bgColor -}};">
-      <img src="{{- $permalink -}}" title="{{- $title -}}" />
+      {{- partial "picture.html" (dict "image" . "title" $title "alt" $title) }}
       {{ with $title -}}
       <figcaption>
         {{ with $source -}}
