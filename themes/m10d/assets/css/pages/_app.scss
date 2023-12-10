@@ -12,9 +12,12 @@
 }
 
 .app-header-avatar {
+  aspect-ratio: 1;
   border: .5rem solid $primary-color;
   border-radius: 100%;
+  display: inline-block;
   height: 100%;
+  line-height: 15rem;
   max-height: 15rem;
   max-width: 15rem;
   min-height: 5rem;
