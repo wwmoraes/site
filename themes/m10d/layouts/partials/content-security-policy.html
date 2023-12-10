@@ -16,6 +16,7 @@
 {{- $policies = $policies | append (delimit (slice "img-src" | append $img) " ") -}}
 {{- $policies = $policies | append (delimit (slice "script-src" | append .script) " ") -}}
 {{- $policies = $policies | append (delimit (slice "style-src" | append .style) " ") -}}
+{{- $policies = $policies | append (delimit (slice "manifest-src" | append .manifest) " ") -}}
 {{- $policies = delimit $policies "; " -}}
 <meta http-equiv="Content-Security-Policy" content="{{- $policies | safeHTMLAttr -}}" />
 {{- end }}

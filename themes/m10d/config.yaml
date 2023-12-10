@@ -19,7 +19,7 @@ params:
   csp:
     enabled: true
     default:
-    - "'none'"
+    - "'self'"
     base:
     - "'self'"
     connect:
@@ -49,6 +49,8 @@ params:
     style:
     - "'self'"
     - "'unsafe-inline'"
+    manifest:
+    - "'self'"
   mastodon: []
   # - server: mastodon.social
   #   username: m10d
