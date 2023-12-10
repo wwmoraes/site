@@ -93,3 +93,13 @@ blockquote {
     scroll-behavior: smooth;
   }
 }
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: $font-family-vf;
+  }
+
+  code {
+    font-family: $code-font-family-vf;
+  }
+}

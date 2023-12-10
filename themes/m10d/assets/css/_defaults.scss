@@ -1,8 +1,11 @@
 // cspell:disable
 
-$global-font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif !default;
-$code-font-family: fira code vf, fira code, fira mono, source code pro, menlo, consolas, monaco, monospace !default;
-$font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif !default;
+$global-font-family: "Fira Code", "Fira Mono", "Source Code Pro", menlo, monaco, "Courier New", courier, monospace !default;
+$code-font-family: "Fira Code", "Fira Mono", "Source Code Pro", menlo, monaco, "Courier New", courier, monospace !default;
+$font-family: "Fira Code", "Fira Mono", "Source Code Pro", menlo, monaco, "Courier New", courier, monospace !default;
+$global-font-family-vf: "Fira Code VF", $global-font-family;
+$code-font-family-vf: "Fira Code VF", $code-font-family;
+$font-family-vf: "Fira Code VF", $font-family;
 
 // general colors
 $dark-color: #353b43 !default;

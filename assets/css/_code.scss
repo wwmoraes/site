@@ -245,3 +245,19 @@ pre {
     }
   }
 }
+
+@supports (font-variation-settings: normal) {
+  code {
+    font-family: $code-font-family-vf;
+  }
+
+  .highlight {
+    font-family: $code-font-family-vf;
+
+    >.chroma {
+      .code-header {
+        font-family: $global-font-family-vf;
+      }
+    }
+  }
+}
