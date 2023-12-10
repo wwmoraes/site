@@ -1,5 +1,12 @@
 [
   {
+    "NameWithOwner": "openbao/openbao",
+    "URL": "https://github.com/openbao/openbao",
+    "Description": "",
+    "Stargazers": 431,
+    "StarredAt": "2023-12-09T08:50:56Z"
+  },
+  {
     "NameWithOwner": "codeclimate/test-reporter",
     "URL": "https://github.com/codeclimate/test-reporter",
     "Description": "Code Climate Test Reporter",
@@ -10,21 +17,21 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6872,
+    "Stargazers": 6875,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6954,
+    "Stargazers": 6956,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4908,
+    "Stargazers": 4912,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -38,21 +45,21 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3430,
+    "Stargazers": 3434,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14817,
+    "Stargazers": 14828,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8382,
+    "Stargazers": 8381,
     "StarredAt": "2023-11-22T01:02:56Z"
   },
   {
@@ -61,12 +68,5 @@
     "Description": "The Conventional Commits toolbox",
     "Stargazers": 530,
     "StarredAt": "2023-11-21T00:32:31Z"
-  },
-  {
-    "NameWithOwner": "its-danny/koji",
-    "URL": "https://github.com/its-danny/koji",
-    "Description": "🦊 An interactive CLI for creating conventional commits. ",
-    "Stargazers": 80,
-    "StarredAt": "2023-11-21T00:32:27Z"
   }
 ]
