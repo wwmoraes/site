@@ -152,6 +152,12 @@
   clear: both;
   padding: 0 2rem;
 
+  .end-marker {
+    background-color: $light-color;
+    color: $dark-color;
+    font-size: 1.2rem;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
