@@ -29,8 +29,6 @@ params:
     - https://cdn.jsdelivr.net
     form:
     - "'self'"
-    ancestors:
-    - "'none'"
     frame:
     - "'self'"
     - https://giscus.app

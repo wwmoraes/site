@@ -12,7 +12,6 @@
 {{- $policies = $policies | append (delimit (slice "connect-src" | append .connect) " ") -}}
 {{- $policies = $policies | append (delimit (slice "font-src" | append .font) " ") -}}
 {{- $policies = $policies | append (delimit (slice "form-action" | append .form) " ") -}}
-{{- $policies = $policies | append (delimit (slice "frame-ancestors" | append .ancestors) " ") -}}
 {{- $policies = $policies | append (delimit (slice "frame-src" | append .frame) " ") -}}
 {{- $policies = $policies | append (delimit (slice "img-src" | append $img) " ") -}}
 {{- $policies = $policies | append (delimit (slice "script-src" | append .script) " ") -}}
