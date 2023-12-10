@@ -2,6 +2,11 @@
 // set preferences or extend it. Both imports can be overridden by creating
 // a file <HUGO_PROJECT>/assets/css/_<name>.scss
 
+@layer reset,
+framework,
+components,
+custom;
+
 // import mixins before any variables to ensure purity
 @import "mixins";
 
@@ -9,10 +14,16 @@
 @import "variables";
 @import "defaults";
 
-@layer framework {
-  @import "fonts";
+@layer reset {
+  @import "reset";
+  @import "normalize";
 }
 
-@layer custom {
-  @import "custom";
+@layer framework {
+  @import "baseline";
+}
+
+@layer components {
+  @import "pages";
+  @import "components";
 }

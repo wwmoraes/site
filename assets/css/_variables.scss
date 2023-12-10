@@ -15,10 +15,10 @@ $admonition-type-color-map: (
   tip: #00972d,
   warning: #fef032,
 );
-$code-font-family: fira code vf, fira code, fira mono, source code pro, menlo, consolas, monaco, monospace;
+
+// general colors
 $dark-color: theme-get("background", 600);
 $darkest-color: theme-get("background", 800);
-$font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif;
 $light-color: theme-get("text", 500);
 $lightest-color: theme-get("text", 50);
 $primary-color: theme-get("primary", 500);

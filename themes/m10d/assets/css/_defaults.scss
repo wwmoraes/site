@@ -1,7 +1,12 @@
-$code-font-family: monospace, monospace !default;
+// cspell:disable
+
+$global-font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif !default;
+$code-font-family: fira code vf, fira code, fira mono, source code pro, menlo, consolas, monaco, monospace !default;
+$font-family: fira code, system-ui, -apple-system, blinkmacsystemfont, pingfang sc, microsoft yahei ui, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif !default;
+
+// general colors
 $dark-color: #353b43 !default;
 $darkest-color: #242930 !default;
-$font-family: sans-serif !default;
 $light-color: #afbac4 !default;
 $lightest-color: #fff !default;
 $primary-color: #57cc8a !default;

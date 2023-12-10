@@ -44,6 +44,8 @@ params:
     - http://www.reactiongifs.com
     - https://media.tenor.com
     script:
+    - "'unsafe-hashes'"
+    - "'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM='" # CSS preload
     - https://giscus.app
     - https://gc.zgo.at/count.v3.js
     style:
