@@ -1,8 +1,22 @@
-/amp / 301
-/amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 301
-/categories/coding /categories/code 301
+## gone content forwarded to the closest relevant one
 /categories/smth /categories 303
-/index.xml /index.rss.xml 301
 /redirects / 303
+/tags/automation /tags 303
 /tags/gaming /tags 303
 /tags/smth /tags 303
+/tags/test /tags 303
+/tags/test/* /tags 303
+
+## permanently moved content
+/index.xml /index.rss.xml 308
+### disabled AMP garbage
+/amp / 308
+/amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 308
+### disabled atom as its plain broken
+*/index.atom.xml :splat/index.rss.xml 308
+### categories and tags
+/categories/coding /categories/code 308
+/categories/opinion /tags/opinion 308
+/categories/opinion/* /tags/opinion/:splat 308
+/tags/architecture /categories/architecture 308
+/tags/architecture/* /categories/architecture/:splat 308
