@@ -1,3 +1,4 @@
+# cspell:disable
 extends: stylelint-config-standard-scss
 ignoreFiles:
 - "tmp/**"

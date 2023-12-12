@@ -1,101 +1,151 @@
 version: "0.2"
 ignorePaths:
-  - .gitignore
-  - .pre-commit-config.yaml
-  - .stylelint.yaml
-  - .vscode/*
-  - "*/robots.txt"
-  - cspell.config.yaml
-  - data/*
-  - frontmatter.json
-  - go.mod
-  - go.sum
-  - Makefile
-  - sonar-project.properties
-  - static/_headers
-  - static/_redirects
-  - static/browserconfig.xml
-  - themes/*/data/*
-  - themes/*/exampleSite/*
-  - themes/*/LICENSE
+- .gitignore
+- go.mod
+- go.sum
+- LICENSE
+- Makefile
+- sonar-project.properties
+- static/_headers
+- static/_redirects
+- '*.code-snippets'
+- '*.json'
+- '*.puml'
+- '*.toml'
+- '*.txt'
+- '*.xml'
+- '*.yaml'
+- '*.yml'
 dictionaryDefinitions: []
-dictionaries: []
+dictionaries:
+- bash
+- css
+- fonts
+- go
+- html
+- softwareTerms
 words:
-  - aircraft
-  - aircrafts
-  - Anilistarr
-  - Artero
-  - Audiobook
-  - automatable
-  - automations
-  - BDUF
-  - Bironas
-  - Buildpacks
-  - chezmoi
-  - codesandbox
-  - Conftest
-  - Crossplane
-  - cyclomatic
-  - dribbble
-  - emojify
-  - Freepik
-  - García
-  - Geisser
-  - giscus
-  - goatcounter
-  - goldmark
-  - goodreads
-  - Gromit
-  - Hachyderm
-  - Hadolint
-  - ITIL
-  - Kustomize
-  - MADR
-  - Mesos
-  - monokai
-  - MTTF
-  - MTTR
-  - Nygard
-  - polyline
-  - POSIX
-  - Pulumi
-  - pygments
-  - recents
-  - Regula
-  - rollouts
-  - runbook
-  - runbooks
-  - Rundeck
-  - scriptitis
-  - Snyk
-  - Stackstorm
-  - storyset
-  - Templating
-  - Unikernel
-  - vaga
-  - wwmoraes
+- aircrafts
+- Artero
+- automagically
+- automatable
+- automations
+- cyclomatic
+- gameplay
+- García
+- Geisser
+- Gromit
+- recents
+- rollouts
+- runbook
+- runbooks
+- scriptitis
+- Templating
 ignoreWords:
-  - allconfig
-  - exif
-  - frontmatter
-  - fsys
-  - gohugoio
-  - hashbang
-  - hugofs
-  - hugolib
-  - lastmod
-  - linkify
-  - lntd
-  - metadecoders
-  - metamethod
-  - metamethods
-  - metatable
-  - metatables
-  - nolint
-  - opengraph
-  - pageparser
-  - pkgs
-  - Preproc
-  - rwfs
-  - strikethrough
+- alertmanager
+- allconfig
+- Anilistarr
+- Audiobook
+- BDUF
+- Bironas
+- bookalike
+- brackethighlighter
+- Buildpacks
+- chezmoi
+- codesandbox
+- Conftest
+- Crossplane
+- dribbble
+- dupword
+- emojify
+- Errln
+- errorf
+- exif
+- familyname
+- feathericons
+- Freepik
+- frontmatter
+- fsys
+- getmetatable
+- giscus
+- githubv
+- givenname
+- goatcounter
+- goccy
+- gocolly
+- gohugoio
+- goldmark
+- gomnd
+- goodreads
+- Graphviz
+- GTIN
+- Hachyderm
+- Hadolint
+- Hammerspoon
+- hashbang
+- hugofs
+- hugolib
+- ITIL
+- Kustomize
+- lastmod
+- Librarything
+- linkify
+- lntd
+- MADR
+- markdownify
+- Mesos
+- metadecoders
+- metaindex
+- metamethod
+- metamethods
+- metatable
+- metatables
+- microdata
+- Mingrammer's
+- monokai
+- MTTF
+- MTTR
+- necolas
+- newindex
+- nolint
+- Nygard
+- ocaid
+- opengraph
+- openlibrary
+- pageparser
+- pkgs
+- polyline
+- POSIX
+- precomposed
+- Preproc
+- prettylights
+- Pulumi
+- pygments
+- rawget
+- rawset
+- Regula
+- relref
+- Rundeck
+- rwfs
+- setmetatable
+- shurcoo
+- Snyk
+- Stackstorm
+- storyset
+- strikethrough
+- stylelint
+- sublimelinter
+- Thoughtworks
+- toprint
+- tprint
+- typeof
+- Unikernel
+- urlquery
+- usecases
+- userdata
+- vaga
+- viewbox
+- warnf
+- wwmoraes
+- Zenimax
 import: []
