@@ -28,10 +28,6 @@
     "**/public": true,
     "**/tmp": true
   },
-  "sonarlint.connectedMode.project": {
-    "connectionId": "wwmoraes",
-    "projectKey": "wwmoraes_site"
-  },
   "webPreview.mediaScreen": {
     "2XL": 1536,
     "LG": 1024,
