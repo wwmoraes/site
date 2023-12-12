@@ -14,9 +14,11 @@ start-prod:
 	@hugo server -e production -p 8888
 
 publish: bin/site exif
-	@${RM} -r public
 	@./$< radar update
 	@hugo --gc --cleanDestinationDir
+
+clean:
+	@${RM} -r public
 
 diagrams: ${DIAGRAMS_TARGETS}
 
