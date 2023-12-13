@@ -12,7 +12,7 @@
 /amp / 308
 /amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 308
 ### disabled atom as its plain broken
-*/index.atom.xml :splat/index.rss.xml 308
+/*/index.atom.xml /:splat/index.rss.xml 308
 ### categories and tags
 /categories/coding/* /categories/code/:splat 308
 /categories/opinion/* /tags/opinion/:splat 308
