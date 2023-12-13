@@ -1,9 +1,16 @@
 [
   {
+    "NameWithOwner": "fpco/pid1",
+    "URL": "https://github.com/fpco/pid1",
+    "Description": "Do signal handling and orphan reaping for Unix PID1 init processes",
+    "Stargazers": 77,
+    "StarredAt": "2023-12-12T15:31:36Z"
+  },
+  {
     "NameWithOwner": "openbao/openbao",
     "URL": "https://github.com/openbao/openbao",
     "Description": "",
-    "Stargazers": 604,
+    "Stargazers": 652,
     "StarredAt": "2023-12-09T08:50:56Z"
   },
   {
@@ -17,21 +24,21 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6879,
+    "Stargazers": 6882,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6961,
+    "Stargazers": 6966,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4913,
+    "Stargazers": 4917,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -45,28 +52,21 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3443,
+    "Stargazers": 3448,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14849,
+    "Stargazers": 14864,
     "StarredAt": "2023-11-22T19:10:46Z"
   },
   {
     "NameWithOwner": "Snapchat/KeyDB",
     "URL": "https://github.com/Snapchat/KeyDB",
     "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8384,
+    "Stargazers": 8393,
     "StarredAt": "2023-11-22T01:02:56Z"
-  },
-  {
-    "NameWithOwner": "cocogitto/cocogitto",
-    "URL": "https://github.com/cocogitto/cocogitto",
-    "Description": "The Conventional Commits toolbox",
-    "Stargazers": 531,
-    "StarredAt": "2023-11-21T00:32:31Z"
   }
 ]
