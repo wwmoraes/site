@@ -1,16 +1,23 @@
 [
   {
+    "NameWithOwner": "dagger/dagger-for-github",
+    "URL": "https://github.com/dagger/dagger-for-github",
+    "Description": "GitHub Action for Dagger",
+    "Stargazers": 98,
+    "StarredAt": "2023-12-13T11:07:23Z"
+  },
+  {
     "NameWithOwner": "fpco/pid1",
     "URL": "https://github.com/fpco/pid1",
     "Description": "Do signal handling and orphan reaping for Unix PID1 init processes",
-    "Stargazers": 77,
+    "Stargazers": 78,
     "StarredAt": "2023-12-12T15:31:36Z"
   },
   {
     "NameWithOwner": "openbao/openbao",
     "URL": "https://github.com/openbao/openbao",
     "Description": "",
-    "Stargazers": 652,
+    "Stargazers": 722,
     "StarredAt": "2023-12-09T08:50:56Z"
   },
   {
@@ -24,21 +31,21 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6882,
+    "Stargazers": 6889,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6966,
+    "Stargazers": 6968,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4917,
+    "Stargazers": 4920,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
@@ -52,21 +59,14 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3448,
+    "Stargazers": 3449,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14864,
+    "Stargazers": 14877,
     "StarredAt": "2023-11-22T19:10:46Z"
-  },
-  {
-    "NameWithOwner": "Snapchat/KeyDB",
-    "URL": "https://github.com/Snapchat/KeyDB",
-    "Description": "A Multithreaded Fork of Redis",
-    "Stargazers": 8393,
-    "StarredAt": "2023-11-22T01:02:56Z"
   }
 ]
