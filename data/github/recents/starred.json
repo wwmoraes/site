@@ -16,8 +16,8 @@
   {
     "NameWithOwner": "openbao/openbao",
     "URL": "https://github.com/openbao/openbao",
-    "Description": "",
-    "Stargazers": 796,
+    "Description": "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+    "Stargazers": 833,
     "StarredAt": "2023-12-09T08:50:56Z"
   },
   {
@@ -31,14 +31,14 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6893,
+    "Stargazers": 6898,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6972,
+    "Stargazers": 6979,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
@@ -59,14 +59,14 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3452,
+    "Stargazers": 3453,
     "StarredAt": "2023-11-22T20:30:24Z"
   },
   {
     "NameWithOwner": "jivoi/awesome-osint",
     "URL": "https://github.com/jivoi/awesome-osint",
     "Description": ":scream: A curated list of amazingly awesome OSINT",
-    "Stargazers": 14885,
+    "Stargazers": 14900,
     "StarredAt": "2023-11-22T19:10:46Z"
   }
 ]
