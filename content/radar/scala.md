@@ -1,6 +1,6 @@
 ---
 description: lorem ipsum
-radarIndex: 73
+radarIndex: 77
 radarSection: languages
 radarTier: hold
 radarX: 360

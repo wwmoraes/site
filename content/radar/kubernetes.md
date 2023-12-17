@@ -3,7 +3,7 @@ _build:
   list: true
   render: false
 description: Pandora's box for magic infrastructure
-radarIndex: 55
+radarIndex: 59
 radarSection: platforms
 radarTier: adopt
 radarX: -157

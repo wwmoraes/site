@@ -1,151 +1,152 @@
 version: "0.2"
 ignorePaths:
-- .gitignore
-- go.mod
-- go.sum
-- LICENSE
-- Makefile
-- sonar-project.properties
-- static/_headers
-- static/_redirects
-- '*.code-snippets'
-- '*.json'
-- '*.puml'
-- '*.toml'
-- '*.txt'
-- '*.xml'
-- '*.yaml'
-- '*.yml'
+  - .gitignore
+  - go.mod
+  - go.sum
+  - LICENSE
+  - Makefile
+  - sonar-project.properties
+  - static/_headers
+  - static/_redirects
+  - "*.code-snippets"
+  - "*.json"
+  - "*.puml"
+  - "*.toml"
+  - "*.txt"
+  - "*.xml"
+  - "*.yaml"
+  - "*.yml"
 dictionaryDefinitions: []
 dictionaries:
-- bash
-- css
-- fonts
-- go
-- html
-- softwareTerms
+  - bash
+  - css
+  - fonts
+  - go
+  - html
+  - softwareTerms
 words:
-- aircrafts
-- Artero
-- automagically
-- automatable
-- automations
-- cyclomatic
-- gameplay
-- García
-- Geisser
-- Gromit
-- recents
-- rollouts
-- runbook
-- runbooks
-- scriptitis
-- Templating
+  - aircrafts
+  - Artero
+  - automagically
+  - automatable
+  - automations
+  - cyclomatic
+  - gameplay
+  - García
+  - Geisser
+  - Gromit
+  - ITSM
+  - recents
+  - rollouts
+  - runbook
+  - runbooks
+  - scriptitis
+  - Templating
 ignoreWords:
-- alertmanager
-- allconfig
-- Anilistarr
-- Audiobook
-- BDUF
-- Bironas
-- bookalike
-- brackethighlighter
-- Buildpacks
-- chezmoi
-- codesandbox
-- Conftest
-- Crossplane
-- dribbble
-- dupword
-- emojify
-- Errln
-- errorf
-- exif
-- familyname
-- feathericons
-- Freepik
-- frontmatter
-- fsys
-- getmetatable
-- giscus
-- githubv
-- givenname
-- goatcounter
-- goccy
-- gocolly
-- gohugoio
-- goldmark
-- gomnd
-- goodreads
-- Graphviz
-- GTIN
-- Hachyderm
-- Hadolint
-- Hammerspoon
-- hashbang
-- hugofs
-- hugolib
-- ITIL
-- Kustomize
-- lastmod
-- Librarything
-- linkify
-- lntd
-- MADR
-- markdownify
-- Mesos
-- metadecoders
-- metaindex
-- metamethod
-- metamethods
-- metatable
-- metatables
-- microdata
-- Mingrammer's
-- monokai
-- MTTF
-- MTTR
-- necolas
-- newindex
-- nolint
-- Nygard
-- ocaid
-- opengraph
-- openlibrary
-- pageparser
-- pkgs
-- polyline
-- POSIX
-- precomposed
-- Preproc
-- prettylights
-- Pulumi
-- pygments
-- rawget
-- rawset
-- Regula
-- relref
-- Rundeck
-- rwfs
-- setmetatable
-- shurcoo
-- Snyk
-- Stackstorm
-- storyset
-- strikethrough
-- stylelint
-- sublimelinter
-- Thoughtworks
-- toprint
-- tprint
-- typeof
-- Unikernel
-- urlquery
-- usecases
-- userdata
-- vaga
-- viewbox
-- warnf
-- wwmoraes
-- Zenimax
+  - alertmanager
+  - allconfig
+  - Anilistarr
+  - Audiobook
+  - BDUF
+  - Bironas
+  - bookalike
+  - brackethighlighter
+  - Buildpacks
+  - chezmoi
+  - codesandbox
+  - Conftest
+  - Crossplane
+  - dribbble
+  - dupword
+  - emojify
+  - Errln
+  - errorf
+  - exif
+  - familyname
+  - feathericons
+  - Freepik
+  - frontmatter
+  - fsys
+  - getmetatable
+  - giscus
+  - githubv
+  - givenname
+  - goatcounter
+  - goccy
+  - gocolly
+  - gohugoio
+  - goldmark
+  - gomnd
+  - goodreads
+  - Graphviz
+  - GTIN
+  - Hachyderm
+  - Hadolint
+  - Hammerspoon
+  - hashbang
+  - hugofs
+  - hugolib
+  - ITIL
+  - Kustomize
+  - lastmod
+  - Librarything
+  - linkify
+  - lntd
+  - MADR
+  - markdownify
+  - Mesos
+  - metadecoders
+  - metaindex
+  - metamethod
+  - metamethods
+  - metatable
+  - metatables
+  - microdata
+  - Mingrammer's
+  - monokai
+  - MTTF
+  - MTTR
+  - necolas
+  - newindex
+  - nolint
+  - Nygard
+  - ocaid
+  - opengraph
+  - openlibrary
+  - pageparser
+  - pkgs
+  - polyline
+  - POSIX
+  - precomposed
+  - Preproc
+  - prettylights
+  - Pulumi
+  - pygments
+  - rawget
+  - rawset
+  - Regula
+  - relref
+  - Rundeck
+  - rwfs
+  - setmetatable
+  - shurcoo
+  - Snyk
+  - Stackstorm
+  - storyset
+  - strikethrough
+  - stylelint
+  - sublimelinter
+  - Thoughtworks
+  - toprint
+  - tprint
+  - typeof
+  - Unikernel
+  - urlquery
+  - usecases
+  - userdata
+  - vaga
+  - viewbox
+  - warnf
+  - wwmoraes
+  - Zenimax
 import: []

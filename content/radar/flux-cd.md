@@ -3,13 +3,14 @@ _build:
   list: true
   render: false
 description: lorem ipsum
-radarIndex: 36
+lastmod: "2023-12-17T15:32:51+01:00"
+radarIndex: 43
 radarSection: platforms
-radarTier: hold
-radarX: -386
-radarY: 250
+radarTier: trial
+radarX: -320
+radarY: 57
 table-of-contents: false
-title: .NET
+title: Flux CD
 ---
 
 TODO justification
