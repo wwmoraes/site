@@ -144,6 +144,13 @@
     "@id": "https://openlibrary.org/isbn/9780321127426",
     "@type": "Book",
     "name": "Patterns of Enterprise Application Architecture",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
