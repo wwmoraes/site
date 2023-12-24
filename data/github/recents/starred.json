@@ -24,7 +24,7 @@
     "NameWithOwner": "openbao/openbao",
     "URL": "https://github.com/openbao/openbao",
     "Description": "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
-    "Stargazers": 1079,
+    "Stargazers": 1085,
     "StarredAt": "2023-12-09T08:50:56Z"
   },
   {
@@ -38,21 +38,21 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6912,
+    "Stargazers": 6915,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6989,
+    "Stargazers": 6995,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
     "NameWithOwner": "nats-io/nats.go",
     "URL": "https://github.com/nats-io/nats.go",
     "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4930,
+    "Stargazers": 4931,
     "StarredAt": "2023-11-26T13:03:30Z"
   },
   {
