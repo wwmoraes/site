@@ -24,7 +24,7 @@
     "NameWithOwner": "openbao/openbao",
     "URL": "https://github.com/openbao/openbao",
     "Description": "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
-    "Stargazers": 1085,
+    "Stargazers": 1086,
     "StarredAt": "2023-12-09T08:50:56Z"
   },
   {
@@ -38,14 +38,14 @@
     "NameWithOwner": "reviewdog/reviewdog",
     "URL": "https://github.com/reviewdog/reviewdog",
     "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6915,
+    "Stargazers": 6921,
     "StarredAt": "2023-12-05T10:43:20Z"
   },
   {
     "NameWithOwner": "joho/godotenv",
     "URL": "https://github.com/joho/godotenv",
     "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 6995,
+    "Stargazers": 6997,
     "StarredAt": "2023-11-27T09:47:46Z"
   },
   {
@@ -66,7 +66,7 @@
     "NameWithOwner": "alpkeskin/mosint",
     "URL": "https://github.com/alpkeskin/mosint",
     "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3476,
+    "Stargazers": 3479,
     "StarredAt": "2023-11-22T20:30:24Z"
   }
 ]
