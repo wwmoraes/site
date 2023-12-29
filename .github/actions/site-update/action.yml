@@ -39,6 +39,8 @@ runs:
 
     - name: build CLI
       uses: wwmoraes/actions/golang/build@master
+      with:
+        output-dir: ./bin/
       env:
         GOLANG_FLAGS: -race -mod=readonly
 
