@@ -45,5 +45,5 @@ runs:
         GOLANG_FLAGS: -race -mod=readonly
 
     - name: update data
-      run: ./site data update
+      run: ./bin/site data update
       shell: bash
