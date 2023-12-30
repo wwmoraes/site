@@ -1,14 +1,14 @@
 name: Update
 
 on:
-  push:
-    paths:
-      - cmd/*
-      - internal/*
-      - pkg/*
-      - .github/workflows/update.yml
-  schedule:
-    - cron: "0 8 */1 * *"
+  # push:
+  #   paths:
+  #     - cmd/*
+  #     - internal/*
+  #     - pkg/*
+  #     - .github/workflows/update.yml
+  # schedule:
+  #   - cron: "0 8 */1 * *"
   workflow_dispatch:
 
 env:
@@ -33,6 +33,7 @@ jobs:
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           commit_message: "chore: updated site data"
           branch: master
