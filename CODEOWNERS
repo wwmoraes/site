@@ -1,4 +1,5 @@
 # cspell:disable
+.devcontainer/* @wwmoraes
 .editorconfig @wwmoraes
 .frontmatter/* @wwmoraes
 .github/* @wwmoraes
