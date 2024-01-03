@@ -1,0 +1,12 @@
+# cspell:disable
+.editorconfig @wwmoraes
+.frontmatter/* @wwmoraes
+.github/* @wwmoraes
+.golangci.yaml @wwmoraes
+.make/* @wwmoraes
+.markdownlint.yaml @wwmoraes
+.scss-lint.yml @wwmoraes
+.site.toml @wwmoraes
+.stylelintrc.yaml @wwmoraes
+.vscode/* @wwmoraes
+CODEOWNERS @wwmoraes
