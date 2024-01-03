@@ -4,8 +4,6 @@
     "**/_headers": "plaintext"
   },
   "files.exclude": {
-    "**/.DS_Store": true,
-    "**/.git": true,
     "**/.hugo_build.lock": true
   },
   "github-actions.workflows.pinned.workflows": [
@@ -36,6 +34,5 @@
     "XL": 1280
   },
   "webPreview.mediaScreenOverride": true,
-  "webPreview.url": "http://localhost:8888",
-  "frontMatter.dashboard.openOnStart": true
+  "webPreview.url": "http://localhost:8888"
 }
