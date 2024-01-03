@@ -22,6 +22,7 @@ jobs:
 
     - name: Purge cache
       uses: jakejarvis/cloudflare-purge-action@master
+      if: ${{ github.ref == 'refs/heads/master' }}
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
 
