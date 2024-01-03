@@ -1,13 +1,7 @@
 version: "0.2"
 ignorePaths:
   - .gitignore
-  - go.mod
-  - go.sum
-  - LICENSE
-  - Makefile
-  - sonar-project.properties
-  - static/_headers
-  - static/_redirects
+  - .make/*.mk
   - "*.code-snippets"
   - "*.json"
   - "*.puml"
@@ -16,6 +10,13 @@ ignorePaths:
   - "*.xml"
   - "*.yaml"
   - "*.yml"
+  - go.mod
+  - go.sum
+  - LICENSE
+  - Makefile
+  - sonar-project.properties
+  - static/_headers
+  - static/_redirects
 dictionaryDefinitions: []
 dictionaries:
   - bash
