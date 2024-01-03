@@ -1,14 +1,11 @@
 name: Update
 
 on:
-  # push:
-  #   paths:
-  #     - cmd/*
-  #     - internal/*
-  #     - pkg/*
-  #     - .github/workflows/update.yml
-  # schedule:
-  #   - cron: "0 8 */1 * *"
+  push:
+    paths:
+    - .github/workflows/update.yml
+  schedule:
+    - cron: "0 8 */1 * *"
   workflow_dispatch:
   workflow_run:
     workflows: [Build]
@@ -42,6 +39,9 @@ jobs:
           name: site-binary
           path: /usr/local/bin
           allow_forks: false
+
+      - name: chmod
+        run: chmod +x /usr/local/bin/site
 
       - name: branch
         run: git checkout -b ${BRANCH_NAME}
