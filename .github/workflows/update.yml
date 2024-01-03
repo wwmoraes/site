@@ -50,6 +50,8 @@ jobs:
 
       - name: update data
         run: site data update
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

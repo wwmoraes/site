@@ -36,7 +36,7 @@ jobs:
       uses: actions/cache/restore@v3
       id: module-cache
       with:
-        path: ${GOMODCACHE}
+        path: ${{ env.GOMODCACHE }}
         key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
         restore-keys: |
           ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
@@ -50,7 +50,7 @@ jobs:
       uses: actions/cache/restore@v3
       id: build-cache
       with:
-        path: ${GOCACHE}
+        path: ${{ env.GOCACHE }}
         key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
         restore-keys: |
           ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
@@ -72,12 +72,12 @@ jobs:
     - name: save build
       uses: actions/cache/save@v3
       with:
-        path: ${GOCACHE}
+        path: ${{ env.GOCACHE }}
         key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
 
     - name: save modules
       uses: actions/cache/save@v3
       if: always()
       with:
-        path: ${GOMODCACHE}
+        path: ${{ env.GOMODCACHE }}
         key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
