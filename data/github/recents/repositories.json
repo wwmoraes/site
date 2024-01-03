@@ -2,61 +2,51 @@
   {
     "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
     "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
-    "Description": "pre-commit completions for Fish shell",
-    "Stargazers": 0
+    "Description": "pre-commit completions for Fish shell"
   },
   {
     "NameWithOwner": "wwmoraes/stack-templates",
     "URL": "https://github.com/wwmoraes/stack-templates",
-    "Description": "Modern templates for the Haskell Tool Stack",
-    "Stargazers": 0
+    "Description": "Modern templates for the Haskell Tool Stack"
   },
   {
     "NameWithOwner": "wwmoraes/plex-delete",
     "URL": "https://github.com/wwmoraes/plex-delete",
-    "Description": "belminf/plex-delete as a container",
-    "Stargazers": 0
+    "Description": "belminf/plex-delete as a container"
   },
   {
     "NameWithOwner": "wwmoraes/go-rwfs",
     "URL": "https://github.com/wwmoraes/go-rwfs",
-    "Description": "Golang read-write filesystem interfaces",
-    "Stargazers": 0
+    "Description": "Golang read-write filesystem interfaces"
   },
   {
     "NameWithOwner": "wwmoraes/interview",
     "URL": "https://github.com/wwmoraes/interview",
-    "Description": "PDF forms with IT questions for both sides of the interview",
-    "Stargazers": 0
+    "Description": "PDF forms with IT questions for both sides of the interview"
   },
   {
     "NameWithOwner": "wwmoraes/anilistarr",
     "URL": "https://github.com/wwmoraes/anilistarr",
-    "Description": "anilist custom list provider for sonarr/radarr",
-    "Stargazers": 0
+    "Description": "anilist custom list provider for sonarr/radarr"
   },
   {
     "NameWithOwner": "wwmoraes/imapfilter",
     "URL": "https://github.com/wwmoraes/imapfilter",
-    "Description": "IMAP message filtering and actions for humans, in pure Haskell",
-    "Stargazers": 0
+    "Description": "IMAP message filtering and actions for humans, in pure Haskell"
   },
   {
     "NameWithOwner": "wwmoraes/cis1940",
     "URL": "https://github.com/wwmoraes/cis1940",
-    "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
-    "Stargazers": 0
+    "Description": "CIS 194: Introduction to Haskell homework resources and solutions"
   },
   {
     "NameWithOwner": "wwmoraes/homebrew-tap",
     "URL": "https://github.com/wwmoraes/homebrew-tap",
-    "Description": "formulae and casks for Homebrew",
-    "Stargazers": 0
+    "Description": "formulae and casks for Homebrew"
   },
   {
     "NameWithOwner": "wwmoraes/siever",
     "URL": "https://github.com/wwmoraes/siever",
-    "Description": "RFC5804-compliant ManageSieve client in pure Go",
-    "Stargazers": 0
+    "Description": "RFC5804-compliant ManageSieve client in pure Go"
   }
 ]

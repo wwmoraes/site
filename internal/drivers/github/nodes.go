@@ -64,9 +64,9 @@ type qlRepository struct {
 	URL           github.String
 	Description   github.String
 	IsPrivate     github.Boolean
-	Stargazers    struct {
-		TotalCount github.Int
-	}
+	// Stargazers    struct {
+	// 	TotalCount github.Int
+	// }
 }
 
 func (ql *qlRepository) Unwrap() *Repository {
@@ -74,7 +74,7 @@ func (ql *qlRepository) Unwrap() *Repository {
 		NameWithOwner: string(ql.NameWithOwner),
 		URL:           string(ql.URL),
 		Description:   string(ql.Description),
-		Stargazers:    int(ql.Stargazers.TotalCount),
+		// Stargazers:    int(ql.Stargazers.TotalCount),
 	}
 }
 
