@@ -1,0 +1,83 @@
+name: Build
+
+on:
+  push:
+    paths:
+    - cmd/*
+    - internal/*
+    - pkg/*
+    - go.mod
+    - go.sum
+
+env:
+  GOLANG_VERSION: 1.21
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: setup golang
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ env.GOLANG_VERSION }}
+
+    - name: set golang environment variables
+      uses: wwmoraes/actions/golang/env@master
+
+    - name: restore modules
+      uses: actions/cache/restore@v3
+      id: module-cache
+      with:
+        path: ${GOMODCACHE}
+        key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+          ${{ runner.os }}-modules-
+
+    - name: download modules
+      if: steps.module-cache.outputs.cache-hit != 'true'
+      run: go mod download
+
+    - name: restore build
+      uses: actions/cache/restore@v3
+      id: build-cache
+      with:
+        path: ${GOCACHE}
+        key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+          ${{ runner.os }}-build-
+
+    - name: build
+      uses: wwmoraes/actions/golang/build@master
+      with:
+        output-dir: ./bin
+      env:
+        GOLANG_FLAGS: -race -mod=readonly
+
+    - name: deliver
+      uses: actions/upload-artifact@v3
+      with:
+        name: site-binary
+        path: bin/site
+
+    - name: save build
+      uses: actions/cache/save@v3
+      with:
+        path: ${GOCACHE}
+        key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+
+    - name: save modules
+      uses: actions/cache/save@v3
+      if: always()
+      with:
+        path: ${GOMODCACHE}
+        key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
