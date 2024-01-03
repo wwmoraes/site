@@ -61,6 +61,15 @@ repos:
     name: go test
 - repo: local
   hooks:
+  - id: update-diagrams
+    name: Update diagrams
+    entry: make diagrams
+    language: system
+    pass_filenames: false
+    files: |
+      (?x)^(
+        content/.*/.*\.puml
+      )$
   - id: update-exif
     name: Update EXIF metadata
     entry: make exif
@@ -92,5 +101,6 @@ ci:
   - go-test-repo-mod
   - golangci-lint-repo-mod
   - my-cmd-repo-mod
+  - update-diagrams
   - update-exif
   - update-radar
