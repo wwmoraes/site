@@ -53,6 +53,7 @@ ignoreWords:
   - bookalike
   - brackethighlighter
   - Buildpacks
+  - charmbracelet
   - chezmoi
   - codesandbox
   - Conftest
