@@ -1,9 +1,12 @@
 @startuml table-index
-skinparam BackgroundColor transparent
-|#SteelBlue|c| code
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/hacker/puml-theme-hacker.puml
+!theme hacker
+skinparam BackgroundColor #1f202b
+skinparam SwimlaneTitleFontColor #000000
+|c| code
 start
 :waldo.key<
-|#RoyalBlue|t| table
+|t| table
 if (is key set?) then (yes)
   :value/
 else (no)
