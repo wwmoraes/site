@@ -18,6 +18,10 @@ repos:
   - id: fix-byte-order-marker
   - id: mixed-line-ending
   - id: trailing-whitespace
+- repo: https://github.com/mrtazz/checkmake
+  rev: 0.2.2
+  hooks:
+  - id: checkmake
 - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
   rev: 2.7.3
   hooks:
