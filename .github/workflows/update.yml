@@ -54,10 +54,10 @@ jobs:
           commit_message: |-
             chore: updated site data
 
-            Signed-off-by: Github Actions <actions@github.com>
-          commit_user_name: Github Actions
-          commit_user_email: actions@github.com
-          commit_author: Github Actions <actions@github.com>
+            Signed-off-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           branch: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
           create_branch: true
           file_pattern: data
