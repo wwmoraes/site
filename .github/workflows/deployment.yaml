@@ -1,6 +1,18 @@
 name: Deployment
 
-on: push
+on:
+  push:
+    paths:
+    - .github/workflows/deployment.yaml
+    - archetypes/*
+    - assets/*
+    - config/*
+    - content/*
+    - data/*
+    - i18n/*
+    - layouts/*
+    - static/*
+    - themes/*
 
 jobs:
   deploy:
