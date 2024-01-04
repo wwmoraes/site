@@ -4,6 +4,7 @@
 .frontmatter/* @wwmoraes
 .github/* @wwmoraes
 .golangci.yaml @wwmoraes
+.kodiak.toml @wwmoraes
 .make/* @wwmoraes
 .markdownlint.yaml @wwmoraes
 .scss-lint.yml @wwmoraes
