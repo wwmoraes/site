@@ -28,8 +28,6 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - name: download artifact
         id: download-artifact
@@ -44,11 +42,6 @@ jobs:
 
       - name: chmod
         run: chmod +x /usr/local/bin/site
-
-      - name: branch
-        run: git checkout -t -b ${BRANCH_NAME}
-        env:
-          BRANCH_NAME: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: update data
         run: site data update
@@ -65,7 +58,7 @@ jobs:
           commit_user_name: Github Actions
           commit_user_email: actions@github.com
           commit_author: Github Actions <actions@github.com>
-          push_options: --set-upstream origin
+          branch: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: create pull request
         run: |-
