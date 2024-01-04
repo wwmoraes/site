@@ -24,6 +24,8 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/master' }}
+    env:
+      BRANCH_NAME: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
     steps:
 
       - name: checkout
@@ -58,11 +60,15 @@ jobs:
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          branch: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
+          branch: ${{ env.BRANCH_NAME }}
           create_branch: true
           file_pattern: data
 
       - name: create pull request
         run: |-
-          pr() { gh pr create $@ || gh pr edit $@; }
-          pr --title "chore: updated site data" --label automerge
+          MODE=edit
+          if ! gh pr view --json id ${BRANCH_NAME} > /dev/null 2>&1; then
+            MODE=create
+          fi
+
+          gh pr ${MODE} --title "chore: updated site data" --label automerge
