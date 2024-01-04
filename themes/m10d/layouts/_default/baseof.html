@@ -2,7 +2,13 @@
 <html lang="{{- .Site.LanguageCode | default "en-us" -}}">
 
   <head>
-    <meta charset="utf-8" />
+    {{ partial "head/meta" . }}
+    {{ partial "content-security-policy" . }}
+    {{ partial "head/seo" . }}
+    {{ partial "head/preload" . }}
+    {{ partial "head/icons" . }}
+    {{ partial "head/styles" . }}
+    {{ block "head" . -}}{{- end }}
     <title>
       {{- if .IsHome -}}
       {{- .Site.Title -}}
@@ -10,27 +16,6 @@
       {{- printf "%s %s %s" .Title .Site.Params.title_separator .Site.Title -}}
       {{- end -}}
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {{ partial "head/seo" . }}
-    {{ partial "head/preload" . }}
-    {{ partial "head/icons" . }}
-    {{ partial "content-security-policy" $ }}
-    {{ range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}">
-    {{ end -}}
-    {{ $prelude := resources.Get "css/prelude.scss" | resources.ExecuteAsTemplate "css/prelude.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{- $prelude.RelPermalink -}}" />
-    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="preload" href="{{- $style.RelPermalink -}}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link rel="stylesheet" href="{{- $style.RelPermalink -}}">
-    </noscript>
-    {{- partial "head/meta" $ -}}
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/schema.html" . }}
-    {{ hugo.Generator }}
-    {{ block "head" . -}}{{- end }}
   </head>
 
   <body>
