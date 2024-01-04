@@ -59,6 +59,7 @@ jobs:
           commit_user_email: actions@github.com
           commit_author: Github Actions <actions@github.com>
           branch: chore/data-update/${{ github.run_id }}-${{ github.run_attempt }}
+          create_branch: true
 
       - name: create pull request
         run: |-
