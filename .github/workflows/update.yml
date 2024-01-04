@@ -71,7 +71,7 @@ jobs:
             MODE=create
           fi
 
-          gh pr ${MODE} --title "chore: updated site data" --label automerge
+          gh pr ${MODE} -f --label automerge
         env:
           GH_TOKEN: ${{ github.token }}
           BRANCH_NAME: ${{ env.BRANCH_NAME }}
