@@ -64,5 +64,5 @@ jobs:
 
       - name: create pull request
         run: |-
-          pr() { gh pr create $* || gh pr edit $*; }
+          pr() { gh pr create $@ || gh pr edit $@; }
           pr --title "chore: updated site data" --label automerge
