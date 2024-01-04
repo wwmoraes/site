@@ -66,12 +66,11 @@ jobs:
 
       - name: create pull request
         run: |-
-          MODE=edit
           if ! gh pr view --json id ${BRANCH_NAME} > /dev/null 2>&1; then
-            MODE=create
+            gh pr create -H ${BRANCH_NAME} -B master -f --label automerge
+          else
+            gh pr edit ${BRANCH_NAME} -B master --add-label automerge
           fi
-
-          gh pr ${MODE} -f --label automerge
         env:
           GH_TOKEN: ${{ github.token }}
           BRANCH_NAME: ${{ env.BRANCH_NAME }}
