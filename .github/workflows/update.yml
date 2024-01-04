@@ -63,6 +63,7 @@ jobs:
           commit_user_name: Github Actions
           commit_user_email: actions@github.com
           commit_author: Github Actions <actions@github.com>
+          push_options: --set-upstream origin
 
       - name: create pull request
         run: |-
