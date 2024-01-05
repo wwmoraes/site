@@ -3,8 +3,7 @@
     "Repository": {
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
-      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 84
+      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols."
     },
     "URL": "https://github.com/qnikst/HaskellNet/pull/94",
     "Title": "fix: use std lookup where needed",
@@ -15,8 +14,7 @@
     "Repository": {
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
-      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols.",
-      "Stargazers": 84
+      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols."
     },
     "URL": "https://github.com/qnikst/HaskellNet/pull/93",
     "Title": "[WIP] fix: fetchHeaderFields and -Not",
@@ -27,8 +25,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website",
-      "Stargazers": 0
+      "Description": "my personal website"
     },
     "URL": "https://github.com/wwmoraes/site/pull/2",
     "Title": "fix: added initial giscus custom theme to match site bg color",
@@ -39,8 +36,7 @@
     "Repository": {
       "NameWithOwner": "Azure/azure-cli",
       "URL": "https://github.com/Azure/azure-cli",
-      "Description": "Azure Command-Line Interface",
-      "Stargazers": 3763
+      "Description": "Azure Command-Line Interface"
     },
     "URL": "https://github.com/Azure/azure-cli/pull/26013",
     "Title": "[ARM] Fix: `az bicep install`: Use CA bundle environment variables if set",
@@ -51,8 +47,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/205",
     "Title": "chore: added CII badge; replaced SonarCloud with Code Climate ones",
@@ -63,8 +58,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/189",
     "Title": "ci: fix grype cache path due to runner context limitations",
@@ -75,8 +69,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/188",
     "Title": "ci: updated PR template",
@@ -87,8 +80,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/180",
     "Title": "WIP: refactor/adapters",
@@ -99,8 +91,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/179",
     "Title": "chore: updated build tags",
@@ -111,8 +102,7 @@
     "Repository": {
       "NameWithOwner": "wwmoraes/kubegraph",
       "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator",
-      "Stargazers": 10
+      "Description": "Kubernetes resource graph generator"
     },
     "URL": "https://github.com/wwmoraes/kubegraph/pull/178",
     "Title": "fix: icons target dependencies",

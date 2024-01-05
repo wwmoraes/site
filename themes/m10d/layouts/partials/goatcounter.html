@@ -8,7 +8,8 @@
   {{ with $integrity -}}integrity="{{- . -}}" {{- end }} async>
   </script>
 <noscript>
-  <img class="counter" src="https://{{- .code -}}.{{- $host -}}/count?{{- (querify $qs) | safeURL -}}" />
+  <img class="counter" src="https://{{- .code -}}.{{- $host -}}/count?{{- (querify $qs) | safeURL -}}"
+    alt="goatcounter" />
 </noscript>
 {{- end -}}
 {{- end -}}

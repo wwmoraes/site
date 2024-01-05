@@ -1,12 +1,15 @@
 @startuml table-meta-index
-skinparam BackgroundColor transparent
-|#SteelBlue|c| code
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/hacker/puml-theme-hacker.puml
+!theme hacker
+skinparam BackgroundColor #1f202b
+skinparam SwimlaneTitleFontColor #000000
+|c| code
 split
 -[hidden]->
 start
 :waldo.key<
 split again
-|#RoyalBlue|t| table
+|t| table
 -[hidden]->
 (A)
 end split
@@ -16,7 +19,7 @@ else (no)
   if (is metatable set?) then (no)
     :nil/
   else (yes)
-    |#LightSkyBlue|m| metatable
+    |m| metatable
     if (is __index set?) then (no)
       :nil/
     else (yes)

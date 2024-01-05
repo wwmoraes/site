@@ -23,7 +23,7 @@ type Repository struct {
 	NameWithOwner string
 	URL           string
 	Description   string
-	Stargazers    int
+	// Stargazers    int
 }
 
 func (handler *Handler) GetRecentRepositories(ctx context.Context, count int) ([]Repository, error) {

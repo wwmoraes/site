@@ -1,0 +1,28 @@
+@startuml monitored-flow-2
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/hacker/puml-theme-hacker.puml
+!theme hacker
+skinparam BackgroundColor #1f202b
+skinparam SwimlaneTitleFontColor #000000
+|User|
+start
+  :request<
+  |Automation|
+  if (matches a previous decision?) then (yes)
+    :retrieve decision|
+  else
+  ->no;
+    :notify approval group>
+    |Operator|
+    :(dis)approve]
+    |Automation|
+    :store decision|
+  endif
+  if (approved?) then (no)
+    #pink:notify requester>
+    stop
+  endif
+  ->yes;
+  :execute related procedure|
+  #PaleGreen:notify requester>
+end
+@enduml

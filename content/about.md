@@ -1,8 +1,7 @@
 ---
 title: About
-resources:
-- featured.png
 table-of-contents: false
+lastmod: 2024-01-04T16:28:32+01:00
 ---
 
 ## Hello there 👋

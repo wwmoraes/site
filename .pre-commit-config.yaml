@@ -18,6 +18,13 @@ repos:
   - id: fix-byte-order-marker
   - id: mixed-line-ending
   - id: trailing-whitespace
+- repo: https://github.com/mrtazz/checkmake
+  rev: 0.2.2
+  hooks:
+  - id: checkmake
+    pass_filenames: false
+    args:
+    - Makefile
 - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
   rev: 2.7.3
   hooks:
@@ -45,23 +52,46 @@ repos:
     - stylelint-config-standard@35.0.0
     - stylelint-config-standard-scss@12.0.0
     args: [-f, compact]
+- repo: https://github.com/Lucas-C/pre-commit-hooks-lxml
+  rev: v1.1.0
+  hooks:
+  - id: forbid-html-img-without-alt-text
+  - id: html-tags-blacklist
+  - id: html-attributes-blacklist
+    args:
+    - --forbidden-attributes
+    - align,alink,background,basefont,bgcolor,border,link,text,vlink
 - repo: https://github.com/tekwizely/pre-commit-golang
   rev: v1.0.0-rc.1
   hooks:
-  - id: go-mod-tidy
+  - alias: go-mod
+    id: go-mod-tidy
     name: go mod tidy
-  - id: my-cmd-repo-mod
+  - alias: go-fumpt
+    id: my-cmd-repo-mod
     name: go fumpt
     args: [gofumpt, -l, -w, .]
-  - id: golangci-lint-repo-mod
+  - alias: go-lint
+    id: golangci-lint-repo-mod
     name: golangci-lint
-  - id: go-build-repo-mod
+  - alias: go-build
+    id: go-build-repo-mod
     name: go build
-  - id: go-test-repo-mod
+  - alias: go-test
+    id: go-test-repo-mod
     name: go test
 - repo: local
   hooks:
-  - id: update-exif
+  - id: diagrams
+    name: Update diagrams
+    entry: make diagrams
+    language: system
+    pass_filenames: false
+    files: |
+      (?x)^(
+        content/.*/.*\.puml
+      )$
+  - id: exif
     name: Update EXIF metadata
     entry: make exif
     language: system
@@ -70,7 +100,7 @@ repos:
       (?x)^(
         content/.*/.*\.(png|jpg)\.json
       )$
-  - id: update-radar
+  - id: radar
     name: Update radar
     entry: make radar
     language: system
@@ -92,5 +122,6 @@ ci:
   - go-test-repo-mod
   - golangci-lint-repo-mod
   - my-cmd-repo-mod
-  - update-exif
-  - update-radar
+  - diagrams
+  - exif
+  - radar

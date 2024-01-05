@@ -1,0 +1,22 @@
+@startuml monitored-flow-1
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/hacker/puml-theme-hacker.puml
+!theme hacker
+skinparam BackgroundColor #1f202b
+skinparam SwimlaneTitleFontColor #000000
+|User|
+start
+  :request<
+  |Automation|
+  :notify approval group>
+  |Operator|
+  :(dis)approve]
+  if (approved?) then (no)
+    |Automation|
+    #pink:notify requester>
+    stop
+  endif
+  ->yes;
+  :execute related procedure|
+  #PaleGreen:notify requester>
+end
+@enduml

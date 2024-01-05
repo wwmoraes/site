@@ -1,0 +1,10 @@
+# https://riyadhalnur.github.io/issuelabeler/
+numLabels: "100"
+excludeLabels: []
+custom:
+- location: title
+  keywords:
+  - pre-commit
+  - automatic
+  labels:
+  - automerge

@@ -1,6 +1,18 @@
 name: Deployment
 
-on: push
+on:
+  push:
+    paths:
+    - .github/workflows/deployment.yaml
+    - archetypes/*
+    - assets/*
+    - config/*
+    - content/*
+    - data/*
+    - i18n/*
+    - layouts/*
+    - static/*
+    - themes/*
 
 jobs:
   deploy:
@@ -9,6 +21,7 @@ jobs:
       contents: read
       deployments: write
     steps:
+
     - name: Await CF Pages
       uses: WalshyDev/cf-pages-await@v1
       timeout-minutes: 5
@@ -18,3 +31,11 @@ jobs:
         project: ${{ vars.CLOUDFLARE_PROJECT }}
         githubToken: ${{ secrets.GITHUB_TOKEN }}
         commitHash: ${{ github.sha }}
+
+    - name: Purge cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      if: ${{ github.ref == 'refs/heads/master' }}
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}

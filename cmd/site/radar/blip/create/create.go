@@ -5,6 +5,7 @@ import (
 	"path"
 	"strings"
 
+	"github.com/charmbracelet/huh"
 	"github.com/gohugoio/hugo/parser/metadecoders"
 	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/spf13/cobra"
@@ -16,17 +17,19 @@ import (
 )
 
 var (
+	name    string
 	section blip.Section
 	tier    blip.Tier
 )
 
 func Command() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "create",
-		Short: "create a new radar entry",
-		Long:  "generates a blank radar Markdown with the minimal metadata",
-		RunE:  create,
-		Args:  cobra.ExactArgs(1),
+		Use:     "create",
+		Short:   "create a new radar entry",
+		Long:    "generates a blank radar Markdown with the minimal metadata",
+		PreRunE: preCreate,
+		RunE:    create,
+		Args:    cobra.MaximumNArgs(1),
 	}
 
 	flags := cmd.Flags()
@@ -34,6 +37,61 @@ func Command() *cobra.Command {
 	flags.VarP(&tier, "tier", "t", "blip usage stage (adopt, assess, hold or trial)")
 
 	return cmd
+}
+
+func preCreate(cmd *cobra.Command, args []string) error {
+	if len(args) > 0 {
+		name = args[0]
+	}
+
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[blip.Section]().
+				Title("Quadrant").
+				Options(
+					huh.NewOption[blip.Section](string(blip.Languages), blip.Languages).
+						Selected(section == blip.Languages),
+					huh.NewOption[blip.Section](string(blip.Platforms), blip.Platforms).
+						Selected(section == blip.Platforms),
+					huh.NewOption[blip.Section](string(blip.Techniques), blip.Techniques).
+						Selected(section == blip.Techniques),
+					huh.NewOption[blip.Section](string(blip.Tools), blip.Tools).
+						Selected(section == blip.Tools),
+				).
+				Value(&section),
+			huh.NewSelect[blip.Tier]().
+				Title("Tier").
+				Options(
+					huh.NewOption[blip.Tier](string(blip.Adopt), blip.Adopt).
+						Selected(tier == blip.Adopt),
+					huh.NewOption[blip.Tier](string(blip.Trial), blip.Trial).
+						Selected(tier == blip.Trial),
+					huh.NewOption[blip.Tier](string(blip.Assess), blip.Assess).
+						Selected(tier == blip.Assess),
+					huh.NewOption[blip.Tier](string(blip.Hold), blip.Hold).
+						Selected(tier == blip.Hold),
+				).
+				Value(&tier),
+			huh.NewInput().Title("Name").Value(&name),
+		),
+	).Run()
+	if err != nil {
+		return err
+	}
+
+	if section.String() == "" {
+		return fmt.Errorf("section not set")
+	}
+
+	if tier.String() == "" {
+		return fmt.Errorf("tier not set")
+	}
+
+	if len(name) <= 0 {
+		return fmt.Errorf("name not set")
+	}
+
+	return nil
 }
 
 func create(cmd *cobra.Command, args []string) error {
@@ -47,15 +105,6 @@ func create(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	if section.String() == "" {
-		return fmt.Errorf("section not set")
-	}
-
-	if tier.String() == "" {
-		return fmt.Errorf("tier not set")
-	}
-
-	name := args[0]
 	slug := strings.ReplaceAll(strings.ToLower(name), " ", "-")
 	filename := slug + ".md"
 	fsys := rwfs.OSDirFS(path.Join(contentDir, sectionName))

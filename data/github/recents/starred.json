@@ -1,72 +1,62 @@
 [
   {
+    "NameWithOwner": "charmbracelet/huh",
+    "URL": "https://github.com/charmbracelet/huh",
+    "Description": "Build terminal forms and prompts 🤷🏻‍♀️",
+    "StarredAt": "2024-01-03T23:44:58Z"
+  },
+  {
+    "NameWithOwner": "yuzutech/kroki",
+    "URL": "https://github.com/yuzutech/kroki",
+    "Description": "Creates diagrams from textual descriptions!",
+    "StarredAt": "2024-01-03T21:55:36Z"
+  },
+  {
+    "NameWithOwner": "jakejarvis/cloudflare-purge-action",
+    "URL": "https://github.com/jakejarvis/cloudflare-purge-action",
+    "Description": "🗑️ GitHub Action to purge a website's cache via the Cloudflare API",
+    "StarredAt": "2024-01-03T21:53:23Z"
+  },
+  {
+    "NameWithOwner": "palantir/go-githubapp",
+    "URL": "https://github.com/palantir/go-githubapp",
+    "Description": "A simple Go framework for building GitHub Apps",
+    "StarredAt": "2024-01-03T21:48:15Z"
+  },
+  {
+    "NameWithOwner": "paradedb/paradedb",
+    "URL": "https://github.com/paradedb/paradedb",
+    "Description": "PostgreSQL for Search",
+    "StarredAt": "2024-01-03T11:45:03Z"
+  },
+  {
+    "NameWithOwner": "raystack/stencil",
+    "URL": "https://github.com/raystack/stencil",
+    "Description": "Stencil is a schema registry that provides schema management and validation dynamically, efficiently, and reliably to ensure data compatibility across applications.",
+    "StarredAt": "2024-01-03T01:51:36Z"
+  },
+  {
+    "NameWithOwner": "photoprism/photoprism",
+    "URL": "https://github.com/photoprism/photoprism",
+    "Description": "AI-Powered Photos App for the Decentralized Web 🌈💎✨",
+    "StarredAt": "2023-12-29T16:18:52Z"
+  },
+  {
     "NameWithOwner": "sschaeffner/pipxe4",
     "URL": "https://github.com/sschaeffner/pipxe4",
     "Description": "iPXE for the Raspberry Pi 4",
-    "Stargazers": 2,
     "StarredAt": "2023-12-22T14:05:40Z"
   },
   {
     "NameWithOwner": "dagger/dagger-for-github",
     "URL": "https://github.com/dagger/dagger-for-github",
     "Description": "GitHub Action for Dagger",
-    "Stargazers": 104,
     "StarredAt": "2023-12-13T11:07:23Z"
   },
   {
     "NameWithOwner": "fpco/pid1",
     "URL": "https://github.com/fpco/pid1",
     "Description": "Do signal handling and orphan reaping for Unix PID1 init processes",
-    "Stargazers": 78,
     "StarredAt": "2023-12-12T15:31:36Z"
-  },
-  {
-    "NameWithOwner": "openbao/openbao",
-    "URL": "https://github.com/openbao/openbao",
-    "Description": "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
-    "Stargazers": 1112,
-    "StarredAt": "2023-12-09T08:50:56Z"
-  },
-  {
-    "NameWithOwner": "codeclimate/test-reporter",
-    "URL": "https://github.com/codeclimate/test-reporter",
-    "Description": "Code Climate Test Reporter",
-    "Stargazers": 151,
-    "StarredAt": "2023-12-05T11:26:08Z"
-  },
-  {
-    "NameWithOwner": "reviewdog/reviewdog",
-    "URL": "https://github.com/reviewdog/reviewdog",
-    "Description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
-    "Stargazers": 6939,
-    "StarredAt": "2023-12-05T10:43:20Z"
-  },
-  {
-    "NameWithOwner": "joho/godotenv",
-    "URL": "https://github.com/joho/godotenv",
-    "Description": "A Go port of Ruby's dotenv library (Loads environment variables from .env files)",
-    "Stargazers": 7016,
-    "StarredAt": "2023-11-27T09:47:46Z"
-  },
-  {
-    "NameWithOwner": "nats-io/nats.go",
-    "URL": "https://github.com/nats-io/nats.go",
-    "Description": "Golang client for NATS, the cloud native messaging system.",
-    "Stargazers": 4931,
-    "StarredAt": "2023-11-26T13:03:30Z"
-  },
-  {
-    "NameWithOwner": "dsully/macos-defaults",
-    "URL": "https://github.com/dsully/macos-defaults",
-    "Description": "A tool for managing macOS defaults declaratively via YAML files.",
-    "Stargazers": 7,
-    "StarredAt": "2023-11-25T01:52:52Z"
-  },
-  {
-    "NameWithOwner": "alpkeskin/mosint",
-    "URL": "https://github.com/alpkeskin/mosint",
-    "Description": "An automated e-mail OSINT tool",
-    "Stargazers": 3485,
-    "StarredAt": "2023-11-22T20:30:24Z"
   }
 ]

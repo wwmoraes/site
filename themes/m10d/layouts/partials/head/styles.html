@@ -1,0 +1,8 @@
+{{ $prelude := resources.Get "css/prelude.scss" | resources.ExecuteAsTemplate "css/prelude.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+{{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+
+<link rel="stylesheet" href="{{- $prelude.RelPermalink -}}" />
+<link rel="preload" href="{{- $style.RelPermalink -}}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript>
+  <link rel="stylesheet" href="{{- $style.RelPermalink -}}" />
+</noscript>
