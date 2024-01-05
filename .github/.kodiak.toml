@@ -1,11 +1,7 @@
 version = 1
 
 [approve]
-auto_approve_usernames = [
-  "github-actions[bot]",
-  "pre-commit-ci[bot]",
-  "wwmoraes",
-]
+auto_approve_usernames = ["github-actions", "pre-commit-ci", "wwmoraes"]
 
 [merge]
 automerge_label = "automerge"
