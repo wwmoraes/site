@@ -1,8 +1,7 @@
 ---
 title: Now
-images:
-- /images/featured.png
 table-of-contents: false
+lastmod: 2024-01-04T16:29:45+01:00
 ---
 
 ## Tasks

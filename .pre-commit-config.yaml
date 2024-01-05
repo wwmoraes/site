@@ -52,6 +52,15 @@ repos:
     - stylelint-config-standard@35.0.0
     - stylelint-config-standard-scss@12.0.0
     args: [-f, compact]
+- repo: https://github.com/Lucas-C/pre-commit-hooks-lxml
+  rev: v1.1.0
+  hooks:
+  - id: forbid-html-img-without-alt-text
+  - id: html-tags-blacklist
+  - id: html-attributes-blacklist
+    args:
+    - --forbidden-attributes
+    - align,alink,background,basefont,bgcolor,border,link,text,vlink
 - repo: https://github.com/tekwizely/pre-commit-golang
   rev: v1.0.0-rc.1
   hooks:

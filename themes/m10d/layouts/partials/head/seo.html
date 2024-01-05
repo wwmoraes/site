@@ -1,8 +1,16 @@
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
 <link rel="canonical" href="{{- .Permalink -}}" />
-{{- with .Site.Author.displayname }}
-<meta name="author" content="{{- . -}}" />
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{- with $.Site.Params.mastodon }}
+{{- range $_, $entry := . }}
+{{- $url := printf "https://%s/@%s" $entry.server $entry.username }}
+<link rel="me" href="{{ $url }}" />
 {{- end }}
-<meta name="description" content="{{- .Description | default .Site.Params.description -}}" />
+{{- end }}
 <script type="application/ld+json">
   {{- if .IsHome -}}
     {{- partial "function/schema/webSite.html" . -}}

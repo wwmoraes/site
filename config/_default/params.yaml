@@ -3,6 +3,9 @@ description: automating a way out of tasks since 2010
 mainSections:
 - posts
 
+images:
+- /featured.png
+
 menu_item_separator: " | "
 social:
   # facebook_admin: ""

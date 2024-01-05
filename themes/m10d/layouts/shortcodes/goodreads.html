@@ -3,7 +3,7 @@
 <ul class="goodreads">
   {{ range . }}
   <li>
-    <img src="{{ .thumbnailUrl }}" title="{{ .name }}" />
+    <img src="{{ .thumbnailUrl }}" title="{{ .name }}" alt="{{ .name }} thumbnail" />
     <a href="https://openlibrary.org/isbn/{{ .isbn }}" rel="noreferrer noopener nofollow external">
       {{ .name }}
     </a>
