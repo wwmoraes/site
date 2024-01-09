@@ -7,6 +7,7 @@ import (
 	"github.com/wwmoraes/site/cmd/site/content"
 	"github.com/wwmoraes/site/cmd/site/data"
 	"github.com/wwmoraes/site/cmd/site/radar"
+	"github.com/wwmoraes/site/cmd/site/vcard"
 )
 
 func main() {
@@ -21,6 +22,7 @@ func main() {
 	rootCmd.AddCommand(content.Command())
 	rootCmd.AddCommand(data.Command())
 	rootCmd.AddCommand(radar.Command())
+	rootCmd.AddCommand(vcard.Command())
 
 	err := rootCmd.Execute()
 	if err != nil {

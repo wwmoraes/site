@@ -37,12 +37,14 @@ words:
   - Geisser
   - Gromit
   - ITSM
+  - ntag
   - recents
   - rollouts
   - runbook
   - runbooks
   - scriptitis
   - Templating
+  - vcard
 ignoreWords:
   - alertmanager
   - allconfig
