@@ -46,32 +46,22 @@ func preCreate(cmd *cobra.Command, args []string) error {
 
 	err := huh.NewForm(
 		huh.NewGroup(
-			huh.NewSelect[blip.Section]().
-				Title("Quadrant").
-				Options(
-					huh.NewOption[blip.Section](string(blip.Languages), blip.Languages).
-						Selected(section == blip.Languages),
-					huh.NewOption[blip.Section](string(blip.Platforms), blip.Platforms).
-						Selected(section == blip.Platforms),
-					huh.NewOption[blip.Section](string(blip.Techniques), blip.Techniques).
-						Selected(section == blip.Techniques),
-					huh.NewOption[blip.Section](string(blip.Tools), blip.Tools).
-						Selected(section == blip.Tools),
-				).
-				Value(&section),
-			huh.NewSelect[blip.Tier]().
-				Title("Tier").
-				Options(
-					huh.NewOption[blip.Tier](string(blip.Adopt), blip.Adopt).
-						Selected(tier == blip.Adopt),
-					huh.NewOption[blip.Tier](string(blip.Trial), blip.Trial).
-						Selected(tier == blip.Trial),
-					huh.NewOption[blip.Tier](string(blip.Assess), blip.Assess).
-						Selected(tier == blip.Assess),
-					huh.NewOption[blip.Tier](string(blip.Hold), blip.Hold).
-						Selected(tier == blip.Hold),
-				).
-				Value(&tier),
+			newHuhSelectEnum(
+				"Quadrant",
+				&section,
+				blip.Languages,
+				blip.Platforms,
+				blip.Techniques,
+				blip.Tools,
+			),
+			newHuhSelectEnum(
+				"Tier",
+				&tier,
+				blip.Adopt,
+				blip.Trial,
+				blip.Assess,
+				blip.Hold,
+			),
 			huh.NewInput().Title("Name").Value(&name),
 		),
 	).Run()
@@ -131,4 +121,18 @@ func create(cmd *cobra.Command, args []string) error {
 	}
 
 	return blip.Create(fsys, filename, &page)
+}
+
+type selectEnum interface {
+	comparable
+	fmt.Stringer
+}
+
+func newHuhSelectEnum[T selectEnum](title string, value *T, options ...T) *huh.Select[T] {
+	huhOptions := make([]huh.Option[T], len(options))
+	for index, option := range options {
+		huhOptions[index] = huh.NewOption[T](option.String(), option).Selected(*value == option)
+	}
+
+	return huh.NewSelect[T]().Title(title).Value(value).Options(huhOptions...)
 }

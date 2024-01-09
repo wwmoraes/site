@@ -11,8 +11,8 @@ const (
 
 type Tier string
 
-func (t *Tier) String() string {
-	return string(*t)
+func (t Tier) String() string {
+	return string(t)
 }
 
 func (t *Tier) Set(v string) error {

@@ -11,8 +11,8 @@ const (
 
 type Section string
 
-func (s *Section) String() string {
-	return string(*s)
+func (s Section) String() string {
+	return string(s)
 }
 
 func (s *Section) Set(v string) error {
@@ -26,6 +26,6 @@ func (s *Section) Set(v string) error {
 	return nil
 }
 
-func (t *Section) Type() string {
+func (s *Section) Type() string {
 	return "Section"
 }
