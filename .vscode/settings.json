@@ -5,7 +5,12 @@
     "**/_redirects": "properties"
   },
   "files.exclude": {
-    "**/.hugo_build.lock": true
+    "**/.hugo_build.lock": true,
+    ".frontmatter": true,
+    "bin": true,
+    "resources": true,
+    "LICENSE": true,
+    "README.md": true
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/deployment.yaml",
