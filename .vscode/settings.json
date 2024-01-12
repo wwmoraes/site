@@ -1,4 +1,11 @@
 {
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "other": "on",
+      "strings": "on"
+    }
+  },
   "css.format.enable": false,
   "files.associations": {
     "**/_headers": "plaintext",
@@ -6,15 +13,20 @@
   },
   "files.exclude": {
     "**/.hugo_build.lock": true,
+    "**/_gen/": true,
     ".frontmatter": true,
-    "bin": true,
-    "resources": true,
     "LICENSE": true,
-    "README.md": true
+    "README.md": true,
+    "bin": true,
+    "resources": true
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/deployment.yaml",
     ".github/workflows/update.yml"
+  ],
+  "go-template.languages": [
+    "html",
+    "json"
   ],
   "html.format.templating": true,
   "json.schemas": [
