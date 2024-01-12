@@ -31,7 +31,9 @@
         "codezombiech.gitignore",
         "JabedHossain.web-preview",
         "richie5um2.vscode-sort-json",
-        "vilicvane.sensitive-replace"
+        "vilicvane.sensitive-replace",
+        "jock.svg",
+        "jinliming2.vscode-go-template"
       ],
       "settings": {
         "go.gopath": "/go",
