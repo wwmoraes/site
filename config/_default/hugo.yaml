@@ -13,13 +13,13 @@ copyright: >-
 frontmatter:
   date:
   - :default
-  - modifyDate
   - :fileModTime
   lastmod:
   - lastmod
-  - modifyDate
+  - modified
   - :git
   - :fileModTime
+  - :default
 
 outputs:
   home:
