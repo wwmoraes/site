@@ -23,7 +23,6 @@ frontmatter:
 
 outputs:
   home:
-  # - ATOM
   - FEED
   - HTML
   - RSS
@@ -33,7 +32,6 @@ outputs:
   section:
   - HTML
   term:
-  # - ATOM
   - FEED
   - HTML
   - RSS
@@ -88,3 +86,9 @@ module:
     - '**/*.png.json'
     - '**/*.jpg.json'
     # cspell:enable
+
+imaging:
+  exif:
+    disableDate: true
+    disableLatLong: true
+    includeFields: "Artist|Copyright|ImageUniqueID|ImageDescription|Make"

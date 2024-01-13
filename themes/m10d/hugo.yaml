@@ -3,12 +3,6 @@ module:
     extended: true
     min: 0.55.0
 
-imaging:
-  exif:
-    disableDate: true
-    disableLatLong: true
-    includeFields: "Artist|Copyright|ImageUniqueID|ImageDescription|Make"
-
 params:
   rssFullText: true
   title_separator: //
@@ -58,9 +52,6 @@ mediaTypes:
   application/rss+xml:
     suffixes:
       - rss.xml
-  application/atom+xml:
-    suffixes:
-      - atom.xml
   application/feed+json:
     suffixes:
       - feed.json
@@ -68,9 +59,6 @@ mediaTypes:
 outputFormats:
   RSS:
     mediaType: application/rss+xml
-    noUgly: true
-  ATOM:
-    mediaType: application/atom+xml
     noUgly: true
   FEED:
     mediaType: application/feed+json

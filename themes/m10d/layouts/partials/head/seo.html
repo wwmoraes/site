@@ -10,7 +10,7 @@
 {{ template "_internal/schema.html" . }}
 <link rel="canonical" href="{{- .Permalink -}}" />
 {{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}" />
 {{ end -}}
 {{- with $.Site.Params.mastodon }}
 {{- range $_, $entry := . }}
