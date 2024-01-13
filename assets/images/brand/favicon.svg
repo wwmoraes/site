@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2170,-662)">
+        <g id="favicon" transform="matrix(1.2973,0,0,0.979592,-1301.57,630.653)">
+            <rect x="2676" y="32" width="37" height="49" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2676" y="32" width="37" height="49"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g id="logo" transform="matrix(0.138972,-5.92496e-16,1.11767e-14,-0.183904,2658.92,123.069)">
+                    <g>
+                        <g opacity="0.5">
+                            <path d="M256.368,228.757L213.598,385.171L346.352,479.549L389.121,323.136L256.368,228.757Z" style="fill:rgb(44,190,255);fill-rule:nonzero;"/>
+                        </g>
+                        <g opacity="0.5">
+                            <path d="M256.186,228.757L162.5,361.11L254.968,495.201L348.655,362.848L256.186,228.757Z" style="fill:rgb(44,190,255);fill-rule:nonzero;"/>
+                        </g>
+                        <g opacity="0.5">
+                            <path d="M256.183,228.757L122.88,321.085L163.91,478.715L297.213,386.387L256.183,228.757Z" style="fill:rgb(44,190,255);fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

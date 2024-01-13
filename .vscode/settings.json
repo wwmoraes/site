@@ -26,7 +26,8 @@
   ],
   "go-template.languages": [
     "html",
-    "json"
+    "json",
+    "xml"
   ],
   "html.format.templating": true,
   "json.schemas": [

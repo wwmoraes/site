@@ -1,0 +1,24 @@
+{{/* cspell:disable */}}
+
+{{- $context := or site.Params.manifest.properties dict }}
+{{- $context = merge $context (dict "name" (or $context.name site.Title "")) }}
+{{- $context = merge $context (dict "lang" (or $context.lang site.LanguageCode "")) }}
+{{- $context = merge $context (dict "description" (or $context.description site.Params.description "")) }}
+
+{{- range $context.icons }}
+{{-   with resources.Get .src }}
+{{-     $_ := .Publish }}
+{{-   else }}
+{{-     warnf "web app manifest image %s not found" .src }}
+{{-   end }}
+{{- end }}
+
+{{- $index := dict -}}
+
+{{- range $key, $value := $context }}
+{{-   with $value }}
+{{-     $index = merge $index (dict $key .) }}
+{{-   end }}
+{{- end }}
+
+{{- $index | jsonify -}}

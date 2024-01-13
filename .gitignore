@@ -1,11 +1,11 @@
-bin/
-public/
-resources/
-tmp/
+_gen
 .hugo_build.lock
+/bin/
+/public/
+/site
+/tmp/
 go.work
 go.work.sum
-/site
 
 # *.jpg.json
 # *.png.json

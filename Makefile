@@ -15,11 +15,12 @@ SITE = bin/site
 all: build
 
 .PHONY: build
-build: diagrams exif radar
-	@${HUGO} --gc
+build: diagrams exif radar favicon
+	@${HUGO} --gc --cleanDestinationDir
 
 .PHONY: clean
 clean:
+	@${RM} -r bin
 	@${RM} -r public
 
 .PHONY: test

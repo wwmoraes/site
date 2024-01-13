@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2250,-661)">
+        <g id="safari-pinned-tab" transform="matrix(0.177778,0,0,0.152381,1979.42,610.618)">
+            <rect x="1522" y="337" width="90" height="105" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="1522" y="337" width="90" height="105"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0.33804,8.07181e-33,6.9187e-33,-0.39438,1480.46,532.257)">
+                    <g transform="matrix(16.6401,3.40574e-31,3.40574e-31,-16.6401,122.88,511.24)">
+                        <use xlink:href="#_Image2" x="0" y="0.97" width="16px" height="16px"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image2" width="16px" height="16px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABb0lEQVQ4jYXSu0uWYRgG8N/3WUgHGwJragqiGoIiaikcRIjGykWI1sYIkoIiSKqtoan6A2oSw6GopaAE0aEhWoIaahNxkDIzDw3P9emTfNoFL+/7Xvfhuk8dNscBNDH3Hz/Qj33Vfyc+4h06Kv4Ietsl+IBZXIrqY6zkuYstuIl5PF0fvAszcV7ALYyl9Dm8wcPYVvA9Fa7iZIzLeIm92I0HuIMu7Mf7JPijzGcVgzFMpb8GjmEcEzgergeL8b3cCm6k3CUMhTuHX9UMfuJCbNdS7UQrQVeG9wrbww1Uwa0E52PrxGgq2dbEoSQRVXidPlv4jcnqf6ey2hNwv1K6Ym3nbyt+PFwTNyr+WTOq83EYxOnMZaRSfJ73GdzO948qsVPKHSzhBfbgsHIDyziorHEsyp/D/YMd6X0R19Gdvr9gq3KNCxi27ohqNJRpf1NW+QhP0IdPONsuoB26cU+ZzVccxVVMb6S8UTUDuLiZ019XmWEwJ61PygAAAABJRU5ErkJggg=="/>
+    </defs>
+</svg>

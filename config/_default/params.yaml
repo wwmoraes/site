@@ -1,14 +1,80 @@
+title: William Artero Software Engineer
 description: automating a way out of tasks since 2010
+
+manifest:
+  # TODO add icon generation to the manifest
+  icon:
+    base: images/favicon.svg
+    variations:
+    - size: 36x36
+      type: image/png
+    - size: 48x48
+      type: image/png
+    - size: 72x72
+      type: image/png
+    - size: 96x96
+      type: image/png
+    - size: 144x144
+      type: image/png
+    - size: 192x192
+      type: image/png
+    - size: 256x256
+      type: image/png
+    - size: 384x384
+      type: image/png
+    - size: 512x512
+      type: image/png
+    - size: 1024x1024
+      type: image/png
+  properties:
+    ###
+    ### https://www.w3.org/TR/appmanifest
+    background_color: "#2a2b38"
+    dir: ltr
+    display: minimal-ui
+    icons:
+    - sizes: 1024x1024
+      src: images/brand/application.png
+      type: image/png
+    - purpose: maskable
+      sizes: 1024x1024
+      src: images/brand/maskable.png
+      type: image/png
+    id: /
+    orientation: natural
+    scope: /
+    short_name: Artero
+    shortcuts:
+    - name: Posts
+      description: Content in chronological order
+      url: /posts
+    - name: Categories
+      description: Content grouped by categories
+      url: /categories
+    - name: Tags
+      description: Content grouped by tags
+      url: /tags
+      # icons: []
+    start_url: /
+    theme_color: "#2cbdff"
+    ### Web App Manifest - Application Information
+    ### https://www.w3.org/TR/manifest-app-info/
+    categories: [business, development, networking]
 
 mainSections:
 - posts
 
+# used by the embedded templates as a fallback
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/schema.html#L10
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/twitter_cards.html#L1
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/opengraph.html#L6
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/partials/_funcs/get-page-images.html#L4
 images:
-- /featured.png
+- images/brand/featured.png
 
 menu_item_separator: " | "
 social:
-  # facebook_admin: ""
+  facebook_admin: 100001282670160
   twitter: wwmoraes
 
 mastodon:
@@ -36,7 +102,11 @@ goatcounter:
   code: artero
 
 feed:
-  # should be a 1:1 ratio file for small presentation
-  icon: /icons/android-chrome-512x512.png
-  # should be a 2:1 ratio file
-  logo: /icons/android-chrome-512x512.png
+  json:
+    # 512 x 512
+    icon: images/brand/android-chrome.png
+    # TODO 64 x 64 JSON feed favicon
+    favicon: images/brand/favicon.png
+  rss:
+    # TODO RSS image 144x400
+    image: images/brand/thumbnail.png

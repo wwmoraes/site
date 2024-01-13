@@ -1,5 +1,12 @@
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
+
+{{- with resources.Get "images/brand/thumbnail.png" -}}
+<meta name="thumbnail" content="{{ .RelPermalink }}" />
+{{ else -}}
+{{ warnf "thumbnail.png not found" -}}
+{{ end -}}
+
 {{ template "_internal/schema.html" . }}
 <link rel="canonical" href="{{- .Permalink -}}" />
 {{ range .AlternativeOutputFormats -}}

@@ -27,6 +27,7 @@ outputs:
   - FEED
   - HTML
   - RSS
+  - webappmanifest
   page:
   - HTML
   section:
@@ -51,8 +52,9 @@ author:
   email: webmaster@artero.dev
   givenName: William
   familyName: Artero
-  thumbnail: images/avatar.jpg
-  image: images/avatar.jpg
+  # JSON feed needs a 512 x 512 image
+  thumbnail: images/avatar.jpg # TODO define size of author thumbnail
+  image: images/avatar.jpg # TODO define size of author image
   shortBio: automating a way out of tasks since 2010
   longBio: TODO
   social:

@@ -1,4 +1,21 @@
-<link rel="icon" href="/favicon.svg" />
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2cbdff" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/manifest.json" />
+{{ with resources.Get "images/brand/favicon.svg" -}}
+<link rel="icon" href="{{ .RelPermalink }}" />
+{{ else -}}
+{{ warnf "favicon.svg not found" -}}
+{{ end -}}
+
+{{ with resources.Get "images/brand/safari-pinned-tab.svg" -}}
+<link rel="mask-icon" href="{{ .RelPermalink }}" color="#2cbdff" />
+{{ else -}}
+{{ warnf "safari-pinned-tab.svg not found" -}}
+{{ end -}}
+
+{{ with resources.Get "images/brand/apple-touch-icon.png" -}}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />
+{{ else -}}
+{{ warnf "apple-touch-icon.png not found" -}}
+{{ end -}}
+
+<link rel="shortcut icon" href="/favicon.ico" />
+{{/* TODO get the web app manifest URL programmatically */}}
+<link rel="manifest" type="application/manifest+json" href="/manifest.webmanifest" />

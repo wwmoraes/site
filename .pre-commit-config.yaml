@@ -82,6 +82,12 @@ repos:
     name: go test
 - repo: local
   hooks:
+  - id: favicon
+    name: Update favicon
+    entry: make favicon
+    language: system
+    pass_filenames: false
+    files: ^assets/images/favicon\.svg$
   - id: diagrams
     name: Update diagrams
     entry: make diagrams
@@ -107,8 +113,8 @@ repos:
     pass_filenames: false
     files: |
       (?x)^(
-          content/radar/(?!_index).*\.md|
-          content/radar/radar.svg.tmpl
+        content/radar/(?!_index).*\.md|
+        content/radar/radar.svg.tmpl
       )$
 ci:
   autofix_commit_msg: "style: pre-commit automatic fixes"
