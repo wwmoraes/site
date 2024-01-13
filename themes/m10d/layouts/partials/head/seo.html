@@ -1,3 +1,9 @@
+{{/* the first entry is a fallback for the twitter and opengraph templates */}}
+{{- range site.Params.images }}
+{{-   with resources.Get . }}
+{{-     $_ := .Publish }}
+{{-   end }}
+{{- end }}
 {{- template "_internal/twitter_cards.html" . }}
 {{- template "_internal/opengraph.html" . }}
 
