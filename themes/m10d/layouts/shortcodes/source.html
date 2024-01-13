@@ -30,7 +30,7 @@ Or you can set the target language yourself the same way as with highlight:
 */}}
 {{- $sourceFilePath := path.Join .Page.File.Dir (.Get 0) -}}
 {{- if not (fileExists $sourceFilePath) -}}
-{{- warnf "source file '%s' does not exist" $sourceFilePath -}}
+{{- errorf "source file '%s' does not exist" $sourceFilePath -}}
 {{- else -}}
 {{- $sourceFileName := path.Base $sourceFilePath -}}
 {{- $sourceFileExt := path.Ext $sourceFilePath -}}

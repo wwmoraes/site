@@ -27,48 +27,71 @@ dictionaries:
   - softwareTerms
 words:
   - aircrafts
+  - alertmanager
+  - Anilistarr
   - Artero
+  - Audiobook
   - automagically
   - automatable
   - automations
-  - cyclomatic
-  - gameplay
-  - García
-  - Geisser
-  - Gromit
-  - ITSM
-  - ntag
-  - recents
-  - rollouts
-  - runbook
-  - runbooks
-  - scriptitis
-  - Templating
-  - vcard
-ignoreWords:
-  - alertmanager
-  - allconfig
-  - Anilistarr
-  - Audiobook
   - BDUF
   - Bironas
-  - bookalike
-  - brackethighlighter
   - Buildpacks
-  - charmbracelet
   - chezmoi
   - codesandbox
   - Conftest
   - Crossplane
+  - cyclomatic
   - dribbble
+  - Freepik
+  - gameplay
+  - García
+  - Geisser
+  - Graphviz
+  - Gromit
+  - Hachyderm
+  - Hadolint
+  - Hammerspoon
+  - ITIL
+  - ITSM
+  - Kustomize
+  - MADR
+  - Mesos
+  - Mingrammer's
+  - MTTF
+  - MTTR
+  - ntag
+  - Nygard
+  - POSIX
+  - Pulumi
+  - recents
+  - Regula
+  - rollouts
+  - runbook
+  - runbooks
+  - Rundeck
+  - scriptitis
+  - Snyk
+  - Stackstorm
+  - Templating
+  - Thoughtworks
+  - Unikernel
+  - vcard
+  - wwmoraes
+  - Zenimax
+ignoreWords:
+  - allconfig
+  - bookalike
+  - brackethighlighter
+  - charmbracelet
   - dupword
   - emojify
   - Errln
   - errorf
+  - erroridf
   - exif
   - familyname
   - feathericons
-  - Freepik
   - frontmatter
   - fsys
   - getmetatable
@@ -82,23 +105,15 @@ ignoreWords:
   - goldmark
   - gomnd
   - goodreads
-  - Graphviz
   - GTIN
-  - Hachyderm
-  - Hadolint
-  - Hammerspoon
   - hashbang
   - hugofs
   - hugolib
-  - ITIL
-  - Kustomize
   - lastmod
   - Librarything
   - linkify
   - lntd
-  - MADR
   - markdownify
-  - Mesos
   - metadecoders
   - metaindex
   - metamethod
@@ -106,51 +121,37 @@ ignoreWords:
   - metatable
   - metatables
   - microdata
-  - Mingrammer's
   - monokai
-  - MTTF
-  - MTTR
   - necolas
   - newindex
   - nolint
-  - Nygard
   - ocaid
   - opengraph
   - openlibrary
   - pageparser
   - pkgs
   - polyline
-  - POSIX
   - precomposed
   - Preproc
   - prettylights
-  - Pulumi
   - pygments
   - rawget
   - rawset
-  - Regula
   - relref
-  - Rundeck
   - rwfs
   - setmetatable
   - shurcoo
-  - Snyk
-  - Stackstorm
   - storyset
   - strikethrough
   - stylelint
   - sublimelinter
-  - Thoughtworks
   - toprint
   - tprint
   - typeof
-  - Unikernel
   - urlquery
   - usecases
   - userdata
   - vaga
   - viewbox
   - warnf
-  - wwmoraes
-  - Zenimax
 import: []

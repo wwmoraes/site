@@ -24,7 +24,7 @@
       <link>{{- $.Site.BaseURL -}}</link>
     </image>
     {{- else }}
-    {{- warnf "RSS image not found" }}
+    {{- erroridf "rss-image" "RSS image not found" }}
     {{- end }}
     <link>{{- $.Site.BaseURL -}}</link>
     {{ with .OutputFormats.Get "rss" -}}

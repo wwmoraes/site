@@ -13,13 +13,13 @@
 {{- with resources.Get .Site.Params.feed.json.icon -}}
 {{- $index = merge $index (dict "icon" .Permalink) -}}
 {{- else -}}
-{{- warnf "JSON feed icon not found" -}}
+{{- erroridf "json-feed-icon" "JSON feed icon not found" -}}
 {{- end -}}
 
 {{- with resources.Get .Site.Params.feed.json.favicon -}}
 {{- $index = merge $index (dict "favicon" .Permalink) -}}
 {{- else -}}
-{{- warnf "JSON feed favicon not found" -}}
+{{- erroridf "json-feed-favicon" "JSON feed favicon not found" -}}
 {{- end -}}
 
 {{- with .Site.LanguageCode -}}
@@ -33,7 +33,7 @@
 {{- with resources.Get $.Site.Author.thumbnail -}}
 {{- $author = merge $author (dict "avatar" .Permalink) -}}
 {{- else -}}
-{{- warnf "JSON feed author thumbnail not found" -}}
+{{- erroridf "author-thumbnail" "author thumbnail image not found" -}}
 {{- end -}}
 
 {{- $index = merge $index (dict "authors" (slice $author)) -}}

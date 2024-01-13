@@ -9,7 +9,7 @@
 {{-   with resources.Get .src }}
 {{-     $_ := .Publish }}
 {{-   else }}
-{{-     warnf "web app manifest image %s not found" .src }}
+{{-     erroridf "webappmanifest-icon" "web app manifest image %s not found" .src }}
 {{-   end }}
 {{- end }}
 

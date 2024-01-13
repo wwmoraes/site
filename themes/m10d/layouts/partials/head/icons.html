@@ -1,21 +1,26 @@
-{{ with resources.Get "images/brand/favicon.svg" -}}
-<link rel="icon" href="{{ .RelPermalink }}" />
+{{ with resources.Get site.Params.assets.favicons.svg -}}
+<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />
 {{ else -}}
-{{ warnf "favicon.svg not found" -}}
+{{ erroridf "favicon-svg-missing" "'%s' not found" site.Params.assets.favicons.svg -}}
 {{ end -}}
 
-{{ with resources.Get "images/brand/safari-pinned-tab.svg" -}}
+{{ with resources.Get site.Params.assets.maskIcon.svg -}}
+{{- /* TODO use parameter for the color + erroridf when unset */}}
 <link rel="mask-icon" href="{{ .RelPermalink }}" color="#2cbdff" />
 {{ else -}}
-{{ warnf "safari-pinned-tab.svg not found" -}}
+{{ erroridf "mask-icon-svg-missing" "'%s' not found" site.Params.assets.maskIcon.svg -}}
 {{ end -}}
 
-{{ with resources.Get "images/brand/apple-touch-icon.png" -}}
+{{ with resources.Get site.Params.assets.appleTouchIcon -}}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />
 {{ else -}}
-{{ warnf "apple-touch-icon.png not found" -}}
+{{ erroridf "apple-touch-icon-missing" "'%s' not found" site.Params.assets.appleTouchIcon -}}
 {{ end -}}
 
-<link rel="shortcut icon" href="/favicon.ico" />
-{{/* TODO get the web app manifest URL programmatically */}}
+{{ $favicon := (or site.Params.assets.static.favicon "static/favicon.ico") -}}
+{{ if fileExists $favicon -}}
+<link rel="shortcut icon" href="{{ $favicon | strings.TrimPrefix "static" }}" />
+{{ else -}}
+{{ erroridf "favicon-ico-missing" "'%s' not found" $favicon -}}
+{{ end -}}
 <link rel="manifest" type="application/manifest+json" href="/manifest.webmanifest" />

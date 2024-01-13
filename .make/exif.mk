@@ -2,9 +2,7 @@
 ## https://exiftool.org/examples.html
 ## https://exiftool.org/TagNames/EXIF.html
 
-IMAGES = $(wildcard archetypes/*/*.jpg)
-IMAGES += $(wildcard assets/images/*.jpg)
-IMAGES += $(wildcard content/posts/*/*.jpg)
+IMAGES = $(shell find archetypes assets content -type f -name '*.jpg' -or -name '*.png')
 
 .PHONY: exif
 exif: ${IMAGES}

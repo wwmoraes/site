@@ -104,6 +104,8 @@ repos:
     pass_filenames: false
     files: |
       (?x)^(
+        archetypes/.*/.*\.(png|jpg)\.json|
+        assets/.*/.*\.(png|jpg)\.json|
         content/.*/.*\.(png|jpg)\.json
       )$
   - id: radar
