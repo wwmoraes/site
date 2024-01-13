@@ -92,3 +92,6 @@ imaging:
     disableDate: true
     disableLatLong: true
     includeFields: "Artist|Copyright|ImageUniqueID|ImageDescription|Make"
+
+minify:
+  minifyOutput: false
