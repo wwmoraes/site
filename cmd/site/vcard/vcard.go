@@ -13,15 +13,15 @@ import (
 )
 
 var ntagBytes = map[string]int{
-	"203": 144, //nolint:gomnd
 	"210": 48,  //nolint:gomnd
 	"212": 128, //nolint:gomnd
+	"203": 144, //nolint:gomnd
 	"213": 144, //nolint:gomnd
-	"215": 504, //nolint:gomnd
-	"216": 888, //nolint:gomnd
 	"223": 144, //nolint:gomnd
 	"224": 144, //nolint:gomnd
 	"424": 256, //nolint:gomnd
+	"215": 504, //nolint:gomnd
+	"216": 888, //nolint:gomnd
 	"426": 916, //nolint:gomnd
 }
 
@@ -102,7 +102,7 @@ func vCard(cmd *cobra.Command, args []string) error {
 	finalStrLen := len(finalStr)
 
 	for name, size := range ntagBytes {
-		cmd.Printf("NTAG %s: %s\n", name, yesOrNo(finalStrLen <= size))
+		cmd.Printf("NTAG %s: %s (%d bytes)\n", name, yesOrNo(finalStrLen <= size), size)
 	}
 
 	cmd.Printf("https://artero.dev/vcard#%s", finalStr)
