@@ -2,3 +2,21 @@
 buildDrafts: true
 buildFuture: true
 buildExpired: true
+
+minify:
+  disableCSS: true
+  disableHTML: true
+  disableJS: true
+  disableJSON: true
+  disableSVG: true
+  disableXML: true
+  minifyOutput: false
+  tdewolff:
+    html:
+      keepComments: false
+      keepConditionalComments: true
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepQuotes: true
+      keepWhitespace: false
