@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/params
 title: William Artero Software Engineer
 description: automating a way out of tasks since 2010
 
@@ -75,6 +76,7 @@ images:
 menu_item_separator: " | "
 social:
   facebook_admin: 100001282670160
+  facebook_app_id: 2575122046003703
   twitter: wwmoraes
 
 mastodon:
