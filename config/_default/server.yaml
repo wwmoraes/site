@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/server
+# TODO generate the Cloudflare _headers with these values
+headers:
+- for: /**
+  values:
+    Content-Security-Policy: frame-ancestors 'none'
+    Permissions-Policy: geolocation=() camera=(), microphone=()
+    Referrer-Policy: strict-origin-when-cross-origin
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: DENY
+- for: /**.webmanifest
+  values:
+    Content-Type: application/manifest+json
+    X-Robots-Tag: nosnippet
+- for: /**.{rss,atom}.xml
+  values:
+    Content-Type: application/rss+xml
+    X-Robots-Tag: nosnippet
+- for: /**.feed.json
+  values:
+    Content-Type: application/feed+json
+    X-Robots-Tag: nosnippet
+# TODO generate the Cloudflare _redirects with these values
+redirects:
+- force: true
+  from: /categories/smth/**
+  status: 303
+  to: /categories/
