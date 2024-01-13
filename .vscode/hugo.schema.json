@@ -1,0 +1,319 @@
+{
+  "$comment": "https://gohugo.io/getting-started/configuration/",
+  "$id": "https://json.schemastore.org/hugo.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "author": {
+      "$comment": "TODO https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30"
+    },
+    "deployment": {
+      "$comment": "TODO"
+    },
+    "outputs": {
+      "$comment": "TODO"
+    },
+    "params": {
+      "$comment": "TODO",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "description": "site description used by the meta tag and PWA manifest",
+          "type": "string"
+        },
+        "manifest": {
+          "additionalProperties": false,
+          "description": "Web Application Manifest settings",
+          "properties": {
+            "icon": {
+              "additionalProperties": false,
+              "properties": {
+                "base": {
+                  "description": "resource image to generate variations of",
+                  "type": "string"
+                },
+                "variations": {
+                  "description": "alternative image formats and sizes to generate",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "format": {
+                        "$comment": "TODO",
+                        "enum": [
+                          "bmp",
+                          "gif",
+                          "jpeg",
+                          "jpg",
+                          "png",
+                          "tif",
+                          "tiff",
+                          "webp"
+                        ],
+                        "type": "string"
+                      },
+                      "size": {
+                        "$comment": "TODO",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "properties": {
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "title": {
+          "description": "site title used by the og:site_name meta tag",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "privacy": {
+      "$comment": "TODO"
+    },
+    "server": {
+      "$comment": "TODO",
+      "description": "This is only relevant when running hugo server, and it allows to set HTTP headers during development, which allows you to test out your Content Security Policy and similar.",
+      "type": "object"
+    },
+    "services": {
+      "$comment": "TODO"
+    }
+  },
+  "properties": {
+    "archetypeDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/archetypeDir"
+    },
+    "assetDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/assetDir"
+    },
+    "author": {
+      "$ref": "#/definitions/author"
+    },
+    "baseURL": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/baseURL"
+    },
+    "build": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/build"
+    },
+    "buildDrafts": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/buildDrafts"
+    },
+    "buildExpired": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/buildExpired"
+    },
+    "buildFuture": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/buildFuture"
+    },
+    "caches": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/caches"
+    },
+    "canonifyURLs": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/canonifyURLs"
+    },
+    "cascade": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/cascade"
+    },
+    "contentDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/contentDir"
+    },
+    "copyright": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/copyright"
+    },
+    "dataDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/dataDir"
+    },
+    "defaultContentLanguage": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/defaultContentLanguage"
+    },
+    "defaultContentLanguageInSubdir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/defaultContentLanguageInSubdir"
+    },
+    "deployment": {
+      "$ref": "#/definitions/deployment"
+    },
+    "disableAliases": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disableAliases"
+    },
+    "disableHugoGeneratorInject": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disableHugoGeneratorInject"
+    },
+    "disableKinds": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disableKinds"
+    },
+    "disableLanguages": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disableLanguages"
+    },
+    "disableLiveReload": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disableLiveReload"
+    },
+    "disablePathToLower": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/disablePathToLower"
+    },
+    "enableEmoji": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/enableEmoji"
+    },
+    "enableGitInfo": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/enableGitInfo"
+    },
+    "enableInlineShortcodes": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/enableInlineShortcodes"
+    },
+    "enableMissingTranslationPlaceholders": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/enableMissingTranslationPlaceholders"
+    },
+    "enableRobotsTXT": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/enableRobotsTXT"
+    },
+    "footnoteAnchorPrefix": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/footnoteAnchorPrefix"
+    },
+    "footnoteReturnLinkContents": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/footnoteReturnLinkContents"
+    },
+    "frontmatter": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/frontmatter"
+    },
+    "googleAnalytics": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/googleAnalytics"
+    },
+    "hasCJKLanguage": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/hasCJKLanguage"
+    },
+    "imaging": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/imaging"
+    },
+    "languageCode": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/languageCode"
+    },
+    "languages": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/languages"
+    },
+    "markup": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/markup"
+    },
+    "mediaTypes": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/mediaTypes"
+    },
+    "menu": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/menu",
+      "additionalProperties": true
+    },
+    "minify": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/minify"
+    },
+    "module": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/module"
+    },
+    "newContentEditor": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/newContentEditor"
+    },
+    "noChmod": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/noChmod"
+    },
+    "noTimes": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/noTimes"
+    },
+    "outputFormats": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/outputFormats"
+    },
+    "outputs": {
+      "$ref": "#/definitions/outputs"
+    },
+    "paginate": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/paginate"
+    },
+    "paginatePath": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/paginatePath"
+    },
+    "params": {
+      "$ref": "#/definitions/params"
+    },
+    "permalinks": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/permalinks"
+    },
+    "pluralizeListTitles": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/pluralizeListTitles"
+    },
+    "privacy": {
+      "$ref": "#/definitions/privacy"
+    },
+    "publishDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/publishDir"
+    },
+    "refLinksErrorLevel": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/refLinksErrorLevel"
+    },
+    "refLinksNotFoundURL": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/refLinksNotFoundURL"
+    },
+    "related": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/related"
+    },
+    "relativeURLs": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/relativeURLs"
+    },
+    "removePathAccents": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/removePathAccents"
+    },
+    "rssLimit": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/rssLimit"
+    },
+    "sectionPagesMenu": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/sectionPagesMenu"
+    },
+    "security": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/security"
+    },
+    "server": {
+      "$ref": "#/definitions/server"
+    },
+    "services": {
+      "$ref": "#/definitions/services"
+    },
+    "sitemap": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/sitemap"
+    },
+    "summaryLength": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/summaryLength"
+    },
+    "taxonomies": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/taxonomies"
+    },
+    "theme": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/theme"
+    },
+    "themesDir": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/themesDir"
+    },
+    "timeZone": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/timeZone"
+    },
+    "timeout": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/timeout"
+    },
+    "title": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/title"
+    },
+    "titleCaseStyle": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/titleCaseStyle"
+    },
+    "uglyURLs": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/uglyURLs"
+    },
+    "watch": {
+      "$ref": "https://json.schemastore.org/hugo.json#/properties/watch"
+    }
+  },
+  "title": "Hugo static site generator extended configuration",
+  "type": "object",
+  "unevaluatedProperties": false
+}

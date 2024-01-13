@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json
 baseURL: https://artero.dev
 title: William Artero
 theme: m10d

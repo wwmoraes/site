@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/markup
 highlight:
   anchorLineNos: true
   codeFences: true

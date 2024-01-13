@@ -1,2 +1,3 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json
 minify:
   minifyOutput: true

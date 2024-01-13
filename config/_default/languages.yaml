@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/languages
 en:
   weight: 1
   languageCode: en
