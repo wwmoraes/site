@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "uptech/git-ps-rs",
+    "URL": "https://github.com/uptech/git-ps-rs",
+    "Description": "Official git-ps Rust implementation - the future of git-ps",
+    "StarredAt": "2024-01-14T14:26:09Z"
+  },
+  {
     "NameWithOwner": "minio/minio",
     "URL": "https://github.com/minio/minio",
     "Description": "The Object Store for AI Data Infrastructure",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/sschaeffner/pipxe4",
     "Description": "iPXE for the Raspberry Pi 4",
     "StarredAt": "2023-12-22T14:05:40Z"
-  },
-  {
-    "NameWithOwner": "dagger/dagger-for-github",
-    "URL": "https://github.com/dagger/dagger-for-github",
-    "Description": "GitHub Action for Dagger",
-    "StarredAt": "2023-12-13T11:07:23Z"
   }
 ]
