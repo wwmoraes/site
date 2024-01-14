@@ -8,10 +8,10 @@
   },
   "css.format.enable": false,
   "files.associations": {
-    "**/_headers": "plaintext",
+    "**/_headers": "properties",
     "**/_redirects": "properties",
-    "**/layouts/**/*.webmanifest": "go-template",
     "**/layouts/**/*.json": "go-template",
+    "**/layouts/**/*.webmanifest": "go-template",
     "**/layouts/**/*.xml": "go-template"
   },
   "files.exclude": {
@@ -30,6 +30,7 @@
   "go-template.languages": [
     "html",
     "json",
+    "properties",
     "xml"
   ],
   "html.format.templating": true,
