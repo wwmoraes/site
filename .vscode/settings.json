@@ -9,7 +9,10 @@
   "css.format.enable": false,
   "files.associations": {
     "**/_headers": "plaintext",
-    "**/_redirects": "properties"
+    "**/_redirects": "properties",
+    "**/layouts/**/*.webmanifest": "go-template",
+    "**/layouts/**/*.json": "go-template",
+    "**/layouts/**/*.xml": "go-template"
   },
   "files.exclude": {
     "**/.hugo_build.lock": true,

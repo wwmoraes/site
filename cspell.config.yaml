@@ -109,6 +109,7 @@ ignoreWords:
   - hashbang
   - hugofs
   - hugolib
+  - jsonify
   - lastmod
   - Librarything
   - linkify
@@ -138,6 +139,7 @@ ignoreWords:
   - rawget
   - rawset
   - relref
+  - Remarshal
   - rwfs
   - setmetatable
   - shurcoo

@@ -1,31 +1,41 @@
-<!-- cspell:disable -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{- range (where .Data.Pages "Section" "!=" "redirects") }}
-  {{- if .Permalink }}
-  <url>
-    <loc>{{- .Permalink -}}</loc>
-    {{- if not .Lastmod.IsZero }}
-    <lastmod>{{- .Lastmod.Format "2006-01-02T15:04:05-07:00" -}}</lastmod>
-    {{- end }}
-    {{- with .Sitemap.ChangeFreq }}
-    <changefreq>{{- . -}}</changefreq>
-    {{- end }}
-    {{- if ge .Sitemap.Priority 0.0 }}
-    {{- $weeks := div (sub now.Unix .Lastmod.Unix) 604800 }}
-    {{- $priority := sub 1 (div $weeks 10.0 ) }}
-    {{- if ge .Sitemap.Priority $priority }}
-    <priority>{{- .Sitemap.Priority -}}</priority>
-    {{- else }}
-    <priority>{{- $priority -}}</priority>
-    {{- end }}
-    {{- end }}
-    {{- if .IsTranslated }}
-    {{- range .Translations }}
-    <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
-    {{- end }}
-    <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
-    {{- end }}
-  </url>
-  {{- end }}
-  {{- end }}
-</urlset>
+{{- $urlset := newScratch -}}
+{{- $urlset.Set "-xmlns" "http://www.sitemaps.org/schemas/sitemap/0.9" -}}
+{{- $urlset.Set "-xmlns:xhtml" "http://www.w3.org/1999/xhtml" -}}
+{{- $urlset.Set "url" slice -}}
+
+{{- range (where .Data.Pages "Section" "!=" "redirects") -}}
+{{-   if not .Permalink -}}
+{{-     continue -}}
+{{-   end -}}
+
+{{-   $url := newScratch -}}
+
+{{-   with .Sitemap.ChangeFreq -}}
+{{-     $url.Set "changefreq" . -}}
+{{-   end -}}
+
+{{-   if not .Lastmod.IsZero -}}
+{{-     $url.Set "lastmod" (.Lastmod.Format "2006-01-02T15:04:05-07:00") -}}
+{{-   end -}}
+
+{{-   $url.Set "loc" .Permalink -}}
+
+{{-   if ge .Sitemap.Priority 0.0 -}}
+{{-     $weeks := div (sub now.Unix .Lastmod.Unix) 604800 -}}
+{{-     $priority := sub 1 (div $weeks 10.0 ) -}}
+{{-     $url.Set "priority" (math.Max .Sitemap.Priority $priority) -}}
+{{-   end -}}
+
+{{-   if .IsTranslated -}}
+{{-     range .Translations -}}
+{{-       $url.SetInMap "xhtml:link" "-rel" "alternate" -}}
+{{-       $url.SetInMap "xhtml:link" "-hreflang" .Lang -}}
+{{-       $url.SetInMap "xhtml:link" "-href" .Permalink -}}
+{{-     end -}}
+{{-   end -}}
+
+{{-   $urlset.Add "url" $url.Values -}}
+{{- end -}}
+
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML -}}
+{{- partial "function/xmlify" (dict "urlset" $urlset.Values) | safeHTML -}}

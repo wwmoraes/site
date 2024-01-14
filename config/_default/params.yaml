@@ -112,6 +112,10 @@ feed:
   rss:
     # TODO RSS image 144x400
     image: images/brand/thumbnail.png
+    webMaster:
+      email: webmaster@artero.dev
+    managingEditor:
+      email: editorial@artero.dev
 
 assets:
   # static:
