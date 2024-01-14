@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "minio/minio",
+    "URL": "https://github.com/minio/minio",
+    "Description": "The Object Store for AI Data Infrastructure",
+    "StarredAt": "2024-01-14T01:40:54Z"
+  },
+  {
     "NameWithOwner": "charmbracelet/huh",
     "URL": "https://github.com/charmbracelet/huh",
     "Description": "Build terminal forms and prompts 🤷🏻‍♀️",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/dagger/dagger-for-github",
     "Description": "GitHub Action for Dagger",
     "StarredAt": "2023-12-13T11:07:23Z"
-  },
-  {
-    "NameWithOwner": "fpco/pid1",
-    "URL": "https://github.com/fpco/pid1",
-    "Description": "Do signal handling and orphan reaping for Unix PID1 init processes",
-    "StarredAt": "2023-12-12T15:31:36Z"
   }
 ]
