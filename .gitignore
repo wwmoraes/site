@@ -1,4 +1,5 @@
 _gen
+.env.local
 .hugo_build.lock
 /bin/
 /public/
