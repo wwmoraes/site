@@ -4,13 +4,6 @@
 {{ erroridf "favicon-svg-missing" "'%s' not found" site.Params.assets.favicons.svg -}}
 {{ end -}}
 
-{{ with resources.Get site.Params.assets.maskIcon.svg -}}
-{{- /* TODO use parameter for the color + erroridf when unset */}}
-<link rel="mask-icon" href="{{ .RelPermalink }}" color="#2cbdff" />
-{{ else -}}
-{{ erroridf "mask-icon-svg-missing" "'%s' not found" site.Params.assets.maskIcon.svg -}}
-{{ end -}}
-
 {{ with resources.Get site.Params.assets.appleTouchIcon -}}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />
 {{ else -}}

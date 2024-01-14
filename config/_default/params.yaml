@@ -123,7 +123,4 @@ assets:
   thumbnail: images/brand/thumbnail.png
   favicons:
     svg: images/brand/favicon.svg
-  maskIcon:
-    svg: images/brand/safari-pinned-tab.svg
-    color: "#2cbdff"
   appleTouchIcon: images/brand/apple-touch-icon.png
