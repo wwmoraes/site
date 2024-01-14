@@ -24,6 +24,12 @@
 {{- range .AlternativeOutputFormats }}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}" />
 {{- end }}
+
+
+{{ with .Site.Home.OutputFormats.Get "webappmanifest" -}}
+<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink }}" />
+{{ end -}}
+
 {{- with $.Site.Params.mastodon }}
 {{- range $_, $entry := . }}
 {{- $url := printf "https://%s/@%s" $entry.server $entry.username }}
