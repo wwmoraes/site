@@ -3,10 +3,13 @@
 {{ $opts := dict "targetPath" "js/styles.js" "format" "cjs" "minify" "true" -}}
 {{ $styleLoader := resources.Get "js/styles.ts" | js.Build $opts | fingerprint -}}
 
-<link rel="stylesheet" href="{{- $prelude.RelPermalink -}}" />
-<link rel="preload" href="{{- $style.RelPermalink -}}" as="style" integrity="{{ .Data.Integrity }}" />
-<script src="{{ $styleLoader.RelPermalink }}" integrity="{{ $styleLoader.Data.Integrity }}" crossorigin="anonymous"
-  async></script>
+<link rel="stylesheet" href="{{- $prelude.RelPermalink -}}"
+  {{ printf "integrity=%q" $prelude.Data.Integrity | safeHTMLAttr }} />
+<link rel="preload" href="{{- $style.RelPermalink -}}" as="style"
+  {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} />
+<script src="{{ $styleLoader.RelPermalink }}" {{ printf "integrity=%q" $styleLoader.Data.Integrity | safeHTMLAttr }}
+  crossorigin="anonymous" async></script>
 <noscript>
-  <link rel="stylesheet" href="{{- $style.RelPermalink -}}" integrity="{{ $style.Data.Integrity }}" />
+  <link rel="stylesheet" href="{{- $style.RelPermalink -}}"
+    {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} />
 </noscript>

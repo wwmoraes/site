@@ -1,7 +1,8 @@
 {{- define "head" }}
 {{- $opts := dict "targetPath" "js/vcard.js" "format" "cjs" "minify" "true" }}
 {{- with resources.Get "js/vcard.ts" | js.Build $opts | fingerprint }}
-<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" async></script>
+<script src="{{ .RelPermalink }}" {{ printf "integrity=%q" .Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"
+  async></script>
 {{- end }}
 <style type="text/css">
   #vcard .result {

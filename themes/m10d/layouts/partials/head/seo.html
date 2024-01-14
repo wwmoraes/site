@@ -21,10 +21,10 @@
 {{- $keywords := partial "function/keywords" . }}
 <meta name="keywords" content="{{ $keywords }}" />
 <link rel="canonical" href="{{- .Permalink -}}" />
-{{- range .AlternativeOutputFormats }}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type | htmlUnescape | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}" />
-{{- end }}
 
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink }}" />
+{{ end -}}
 
 {{ with .Site.Home.OutputFormats.Get "webappmanifest" -}}
 <link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink }}" />
