@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "adnanh/webhook",
+    "URL": "https://github.com/adnanh/webhook",
+    "Description": "webhook is a lightweight incoming webhook server to run shell commands",
+    "StarredAt": "2024-01-16T12:32:06Z"
+  },
+  {
     "NameWithOwner": "uptech/git-ps-rs",
     "URL": "https://github.com/uptech/git-ps-rs",
     "Description": "Official git-ps Rust implementation - the future of git-ps",
@@ -38,7 +44,7 @@
   {
     "NameWithOwner": "paradedb/paradedb",
     "URL": "https://github.com/paradedb/paradedb",
-    "Description": "PostgreSQL for Search",
+    "Description": "Postgres for Search \u0026 Analytics",
     "StarredAt": "2024-01-03T11:45:03Z"
   },
   {
@@ -52,11 +58,5 @@
     "URL": "https://github.com/photoprism/photoprism",
     "Description": "AI-Powered Photos App for the Decentralized Web 🌈💎✨",
     "StarredAt": "2023-12-29T16:18:52Z"
-  },
-  {
-    "NameWithOwner": "sschaeffner/pipxe4",
-    "URL": "https://github.com/sschaeffner/pipxe4",
-    "Description": "iPXE for the Raspberry Pi 4",
-    "StarredAt": "2023-12-22T14:05:40Z"
   }
 ]
