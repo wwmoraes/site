@@ -1,6 +1,8 @@
 _gen
 .env.local
 .hugo_build.lock
+/.styles/*
+!/.styles/config
 /bin/
 /public/
 /site

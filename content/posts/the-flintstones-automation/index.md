@@ -14,45 +14,44 @@ categories:
 - TODO
 tags:
 - TODO
-lastmod: 2023-12-17T15:06:05+01:00
+lastmod: 2024-01-28T14:25:12+01:00
 ---
 
 <!-- TODO intro story/situation -->
 
-Old cartoons are timeless. Back when I was a kid I watched The Flintstones, a
-Hanna-Barbera production produced 30 years before. The show intro has one scene
-where Fred uses a remote to turn the TV on. A bird then comes out of it, flies
-towards the TV and bickers the power on button.
+Old cartoons can become timeless. The Flintstones sports a scene where the main
+character presses a button on a remote to turn the TV on. A bird then comes out
+of it, flies towards the TV and bickers the power on button. How does that
+relate to modern automation?
 
 <!--more-->
 
-Of all romanticized elements of such utopian Stone Age, that remote scene stuck
-with me as one of the most plausible and clever ones. It also struck me as the
-perfect analogy for modern automations, more than 60 years after the show debut.
+Of all romanticized elements of such utopian ancient times, that remote scene
+stuck with me. It represents a perfect analogy for modern pseudo-automations,
+more than 60 years after the show debut.
 
 ## Classifying processes
 
 Company processes fall into two categories: unattended and monitored. The first
-one relates to workflows where the user doesn't need any sort of check or direct
-interaction with another operator. Conversely, the second one relates to the
-ones that require some form of validation of the input information.
+one represents workflows that requires no check or direct interaction with an
+operator. The second one requires some check of the input information.
 
-Unattended processes are sometimes called events. They are non-blocking and the
-business merely registers it for audit and/or side-effect actions. Monitored
-ones require a check/validation to proceed. Those more often than not require a
-human operator to give the green light.
+Unattended processes, known by some as events, denotes non-blocking happenings
+that businesses register for audit and/or side-effect actions. Conversely
+monitored ones require a check to proceed. Those require a human operator to
+review and approve them.
 
-One example of monitored process is the request for access. For compliance
-purposes such request must go through a check to ensure the user has the least
-amount of access needed to perform their work. Other examples are the request
-for peripherals or a network permission such as a new firewall rule.
+Request for access represents one sample monitored process. For compliance
+purposes the request must go through a check to ensure the user has the least
+amount of access needed to perform their work. Requests for peripherals or new
+firewall rules also apply monitoring more often than not.
 
 ## Bird flight
 
 Monitored requests need a check against a pre-established set of rules. For
 instance, engineers responsible for the servers of a cluster should not need
-access to database data. Conversely, a business user should not have privileged
-access to the underlying cluster hosts. Hence the approval needed.
+access to database data. A business user should not have privileged access to
+the underlying server hosts.
 
 {{< diagram "monitored-flow-1.png" >}}
 

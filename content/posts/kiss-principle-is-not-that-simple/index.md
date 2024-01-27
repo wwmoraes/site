@@ -9,7 +9,7 @@ categories:
 - Principle
 tags:
 - Analysis
-lastmod: 2023-12-04T10:29:02+01:00
+lastmod: 2024-01-27T17:26:25+01:00
 ---
 
 Software engineers use acronyms to convey certain ideas in a single word to
@@ -85,7 +85,7 @@ the idiom. Same goes for programming languages 😉
 Simplicity depends on the target audience and their point of view over the
 solution. Lets take for instance the Blackbirds as seen by:
 
-- **Pilots**: its simple to handle as they already know other aircrafts and the controls are at the same position.
+- **Pilots**: its simple to handle as they already know other aircraft and the controls are at the same position.
 - **Mechanic engineers**: simple to fix as the tools required are commonplace and its intuitive to access certain parts of the engine that often require repair.
 - **Aeronautical engineers**: simple design considering their domain knowledge, good schematics and well-written documentation.
 - **Farmers**: an absolute black box, the utmost complexity they've ever seen. No idea about how it works or any of that _Mach_ talk.
@@ -93,7 +93,7 @@ solution. Lets take for instance the Blackbirds as seen by:
 {{< admonition note >}}
 Before I get cancelled: please, I hold no prejudice towards farmers. I don't
 mean to say they're ignorant or misinformed. My point is that the knowledge
-related to aircrafts is specific so anyone outside that field will most
+related to aircraft is specific so anyone outside that field will most
 certainly have no more knowledge than any other casual passer-by. Unless they're
 enthusiasts about the topic.
 {{< /admonition >}}

@@ -1,0 +1,9 @@
+[default]
+binary = false
+
+[default.extend-identifiers]
+DaaS = "DaaS"
+nd = "nd"
+
+[default.extend-words]
+Skelton = "Skelton"
