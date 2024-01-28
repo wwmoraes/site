@@ -1,5 +1,29 @@
 [
   {
+    "NameWithOwner": "errata-ai/vale",
+    "URL": "https://github.com/errata-ai/vale",
+    "Description": ":pencil: A markup-aware linter for prose built with speed and extensibility in mind.",
+    "StarredAt": "2024-01-27T23:29:11Z"
+  },
+  {
+    "NameWithOwner": "crate-ci/typos",
+    "URL": "https://github.com/crate-ci/typos",
+    "Description": "Source code spell checker",
+    "StarredAt": "2024-01-27T16:59:46Z"
+  },
+  {
+    "NameWithOwner": "automation-co/husky",
+    "URL": "https://github.com/automation-co/husky",
+    "Description": "git hooks made easy",
+    "StarredAt": "2024-01-27T13:44:36Z"
+  },
+  {
+    "NameWithOwner": "git-hooks/git-hooks",
+    "URL": "https://github.com/git-hooks/git-hooks",
+    "Description": "git hooks manager",
+    "StarredAt": "2024-01-27T13:40:44Z"
+  },
+  {
     "NameWithOwner": "adnanh/webhook",
     "URL": "https://github.com/adnanh/webhook",
     "Description": "webhook is a lightweight incoming webhook server to run shell commands",
@@ -34,29 +58,5 @@
     "URL": "https://github.com/jakejarvis/cloudflare-purge-action",
     "Description": "🗑️ GitHub Action to purge a website's cache via the Cloudflare API",
     "StarredAt": "2024-01-03T21:53:23Z"
-  },
-  {
-    "NameWithOwner": "palantir/go-githubapp",
-    "URL": "https://github.com/palantir/go-githubapp",
-    "Description": "A simple Go framework for building GitHub Apps",
-    "StarredAt": "2024-01-03T21:48:15Z"
-  },
-  {
-    "NameWithOwner": "paradedb/paradedb",
-    "URL": "https://github.com/paradedb/paradedb",
-    "Description": "Postgres for Search and Analytics",
-    "StarredAt": "2024-01-03T11:45:03Z"
-  },
-  {
-    "NameWithOwner": "raystack/stencil",
-    "URL": "https://github.com/raystack/stencil",
-    "Description": "Stencil is a schema registry that provides schema management and validation dynamically, efficiently, and reliably to ensure data compatibility across applications.",
-    "StarredAt": "2024-01-03T01:51:36Z"
-  },
-  {
-    "NameWithOwner": "photoprism/photoprism",
-    "URL": "https://github.com/photoprism/photoprism",
-    "Description": "AI-Powered Photos App for the Decentralized Web 🌈💎✨",
-    "StarredAt": "2023-12-29T16:18:52Z"
   }
 ]
