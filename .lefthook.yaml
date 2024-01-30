@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=.vscode/lefthook.schema.json
+assert_lefthook_installed: true
+pre-commit:
+  piped: true
+  commands:
+    vale-sync:
+      priority: 1
+      run: vale sync
+      glob: .vale.ini
+    typos:
+      priority: 1
+      run: typos --force-exclude {staged_files}
+      exclude: .*\.(jpg|png)$
+    ## TODO check case conflict?
+    ## TODO check YAML?
+    ## TODO check TOML?
+    ## TODO check trailing whitespace?
+    checkmake:
+      priority: 1
+      run: checkmake {staged_files}
+      glob: Makefile
+    editorconfig-checker:
+      priority: 1
+      run: editorconfig-checker {staged_files}
+      exclude: .*\.(jpg|png)$
+    vale:
+      priority: 2
+      run: vale {staged_files}
+      glob: "**/*.{html,md}"
+      exclude: (\.styles)/.*
+    stylelint:
+      run: stylelint -f compact {staged_files}
+      glob: "**/*.{sass,scss}"
+    ## TODO XML/HTML lint
+    gofumpt:
+      priority: 1
+      run: gofumpt -l -w {staged_files}
+      glob: "**/*.go"
+      stage_fixed: true
+    golangci-lint:
+      priority: 1
+      run: golangci-lint run
+      glob: "**/*.go"
+    tidy:
+      priority: 40
+      run: go mod tidy
+      glob: "{**/*.go,go.mod}"
+      stage_fixed: true
+    build:
+      priority: 50
+      run: go build -race ./...
+      glob: "{**/*.go,go.mod,go.sum}"
+    test:
+      priority: 50
+      run: go test -race -failfast ./...
+      glob: "{**/*.go,go.mod,go.sum}"
+    favicon:
+      priority: 90
+      run: make favicon
+      glob: assets/images/brand/favicon.svg
+      stage_fixed: true
+    diagrams:
+      priority: 90
+      run: make diagrams
+      glob: content/**/*.puml
+      stage_fixed: true
+    exif:
+      priority: 90
+      run: make diagrams
+      glob: "{archetypes,assets,content}/**/*.{png,jpg}.json"
+      stage_fixed: true
+    radar:
+      priority: 90
+      run: make radar
+      glob: "{content/radar/*.md,content/radar/radar.svg.tmpl}"
+      stage_fixed: true
+      exclude: ^content/radar/_index\.md$
+skip_output:
+- meta
+# - summary
+# - skips

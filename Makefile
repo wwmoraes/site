@@ -29,10 +29,3 @@ test:
 
 .PHONY: publish
 publish: data build
-
-.PHONY: spell
-spell: .styles
-	@vale .
-
-.styles: .vale.ini
-	@vale sync

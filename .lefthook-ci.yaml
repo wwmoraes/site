@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lefthook.json
+pre-commit:
+  commands:
+    typos:
+      run: >-
+        {cmd}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -f=typos
+    editorconfig-checker:
+      run: >-
+        editorconfig-checker -f gcc {staged_files}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -efm="%f:%l:%c: %m"
+    vale:
+      run: >-
+        vale --output=line {staged_files}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -efm="%f:%l:%c:%m"
+    stylelint:
+      run: >-
+        {cmd}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -f=stylelint
+    golangci-lint:
+      run: >-
+        {cmd}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -f=golangci-lint
+    checkmake:
+      run: >-
+        checkmake --format='{{.FileName}}:{{.LineNumber}}:{{.Rule}}:{{.Violation}}{{ "\n" }}' {staged_files}
+        | reviewdog
+          -filter-mode=nofilter
+          -reporter=github-check
+          -fail-on-error
+          -efm="%f:%l:%m"

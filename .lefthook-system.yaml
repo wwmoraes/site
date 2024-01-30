@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lefthook.json
+pre-commit:
+  commands:
+    stylelint:
+      run: stylelint --config-basedir $(yarn global dir)/node_modules -f compact {staged_files}

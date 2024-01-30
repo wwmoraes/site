@@ -1,3 +1,8 @@
+.PHONY: blip
+blip: ${SITE}
+	@./$< radar blip create
+	@${MAKE} radar
+
 .PHONY: data
 data: ${SITE}
 	$(info updating data files)
