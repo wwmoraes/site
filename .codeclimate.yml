@@ -1,7 +1,6 @@
 version: "2"
 
 exclude_patterns:
-- .devcontainer/devcontainer.json
 - .frontmatter/*
 - .github/*
 - .make/*
