@@ -1,5 +1,17 @@
 [
   {
+    "NameWithOwner": "mrtazz/checkmake",
+    "URL": "https://github.com/mrtazz/checkmake",
+    "Description": "experimental linter/analyzer for Makefiles",
+    "StarredAt": "2024-01-29T16:33:52Z"
+  },
+  {
+    "NameWithOwner": "evilmartians/lefthook",
+    "URL": "https://github.com/evilmartians/lefthook",
+    "Description": "Fast and powerful Git hooks manager for any type of projects.",
+    "StarredAt": "2024-01-29T12:54:43Z"
+  },
+  {
     "NameWithOwner": "errata-ai/vale",
     "URL": "https://github.com/errata-ai/vale",
     "Description": ":pencil: A markup-aware linter for prose built with speed and extensibility in mind.",
@@ -46,17 +58,5 @@
     "URL": "https://github.com/charmbracelet/huh",
     "Description": "Build terminal forms and prompts 🤷🏻‍♀️",
     "StarredAt": "2024-01-03T23:44:58Z"
-  },
-  {
-    "NameWithOwner": "yuzutech/kroki",
-    "URL": "https://github.com/yuzutech/kroki",
-    "Description": "Creates diagrams from textual descriptions!",
-    "StarredAt": "2024-01-03T21:55:36Z"
-  },
-  {
-    "NameWithOwner": "jakejarvis/cloudflare-purge-action",
-    "URL": "https://github.com/jakejarvis/cloudflare-purge-action",
-    "Description": "🗑️ GitHub Action to purge a website's cache via the Cloudflare API",
-    "StarredAt": "2024-01-03T21:53:23Z"
   }
 ]
