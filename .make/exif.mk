@@ -2,7 +2,7 @@
 ## https://exiftool.org/examples.html
 ## https://exiftool.org/TagNames/EXIF.html
 
-IMAGES = $(shell find archetypes assets content -type f -name '*.jpg' -or -name '*.png')
+IMAGES = $(shell git ls-files -cmo {archetypes,assets,content}/**/*.{jpg,png})
 
 .PHONY: exif
 exif: ${IMAGES}

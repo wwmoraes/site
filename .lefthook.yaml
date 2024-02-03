@@ -56,7 +56,7 @@ pre-commit:
       stage_fixed: true
     build:
       priority: 50
-      run: go build -race ./...
+      run: make bin/site
       glob: "{**/*.go,go.mod,go.sum}"
     test:
       priority: 50
@@ -113,6 +113,10 @@ pre-push:
       glob: "**/*.go"
       stage_fixed: true
     golangci-lint: *golangci-lint
+post-checkout:
+  commands:
+    build:
+      run: make public
 skip_output:
 - meta
 # - summary

@@ -8,3 +8,6 @@ start:
 .PHONY: start-prod
 start-prod:
 	@${HUGO} server -e production -p 8888
+
+public: data ${SITE_SOURCES}
+	@${HUGO} --gc --cleanDestinationDir

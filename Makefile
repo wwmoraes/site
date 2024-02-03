@@ -8,6 +8,7 @@ MAKEFLAGS += --no-builtin-variables
 export
 
 SITE = bin/site
+SITE_SOURCES = $(shell git ls-files {assets,config,content,data,i18n,layouts,static}/* themes/*/{assets,data,i18n,layouts,static}/* themes/*/hugo.*)
 
 -include .make/*.mk
 
@@ -15,8 +16,7 @@ SITE = bin/site
 all: build
 
 .PHONY: build
-build: diagrams exif radar favicon
-	@${HUGO} --gc --cleanDestinationDir
+build: public
 
 .PHONY: clean
 clean:
@@ -26,6 +26,3 @@ clean:
 .PHONY: test
 test:
 	@${GO} test ./... | column -t
-
-.PHONY: publish
-publish: data build
