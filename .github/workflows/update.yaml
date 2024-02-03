@@ -3,7 +3,7 @@ name: Update
 on:
   push:
     paths:
-    - .github/workflows/update.yml
+    - .github/workflows/update.yaml
   schedule:
     - cron: "0 8 */1 * *"
   workflow_dispatch:

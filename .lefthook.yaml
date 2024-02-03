@@ -3,9 +3,9 @@ assert_lefthook_installed: true
 pre-commit:
   piped: true
   commands:
-    vale-sync:
+    vale-sync: &vale-sync
       priority: 1
-      run: vale sync
+      run: make .styles
       glob: .vale.ini
     typos:
       priority: 1
@@ -37,7 +37,7 @@ pre-commit:
       run: gofumpt -l -w {staged_files}
       glob: "**/*.go"
       stage_fixed: true
-    golangci-lint:
+    golangci-lint: &golangci-lint
       priority: 1
       run: golangci-lint run
       glob: "**/*.go"
@@ -75,6 +75,36 @@ pre-commit:
       glob: "{content/radar/*.md,content/radar/radar.svg.tmpl}"
       stage_fixed: true
       exclude: ^content/radar/_index\.md$
+pre-push:
+  piped: true
+  commands:
+    vale-sync: *vale-sync
+    typos:
+      priority: 1
+      run: typos --force-exclude {push_files}
+      exclude: .*\.(jpg|png)$
+    checkmake:
+      priority: 1
+      run: checkmake {push_files}
+      glob: Makefile
+    editorconfig-checker:
+      priority: 1
+      run: editorconfig-checker {push_files}
+      exclude: .*\.(jpg|png)$
+    vale:
+      priority: 2
+      run: vale {push_files}
+      glob: "**/*.{html,md}"
+      exclude: (\.styles)/.*
+    stylelint:
+      run: stylelint -f compact {push_files}
+      glob: "**/*.{sass,scss}"
+    gofumpt:
+      priority: 1
+      run: gofumpt -l -w {push_files}
+      glob: "**/*.go"
+      stage_fixed: true
+    golangci-lint: *golangci-lint
 skip_output:
 - meta
 # - summary

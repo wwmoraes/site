@@ -1,0 +1,40 @@
+name: Integration
+on:
+  push:
+    paths-ignore:
+    - .frontmatter/*
+    - .github/*
+    - .vscode/*
+    paths:
+    - .github/workflows/integration.yaml
+env:
+  GOLANG_VERSION: 1.21
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: setup golang
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ env.GOLANG_VERSION }}
+    # - name: set golang environment variables
+    #   uses: wwmoraes/actions/golang/env@master
+    - name: setup lefthook
+      run: go install github.com/evilmartians/lefthook@latest
+    - name: setup vale
+      uses: errata-ai/vale-action@v2.0.1
+      with:
+        vale_flags: sync
+    # TODO setup typos
+    # TODO setup checkmake
+    # TODO setup editorconfig-checker
+    # TODO setup node/stylelint
+    # TODO setup gofumpt
+    # TODO setup golangci-lint
+    - name: run checks
+      run: lefthook run pre-commit --all-files --no-tty

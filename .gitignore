@@ -4,10 +4,11 @@ _gen
 .hugo_build.lock
 /.styles/*
 /*lefthook-local.*
-/bin/
-/public/
+/bin
+/public
+/result
 /site
-/tmp/
+/tmp
 go.work
 go.work.sum
 
