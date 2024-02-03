@@ -4,6 +4,10 @@ prepare-commit-msg:
   commands:
     koji:
       run: koji --hook
+commit-msg:
+  commands:
+    trailers:
+      run: git interpret-trailers --trailer "sign" --trim-empty "{1}" | sponge "{1}"
 pre-commit:
   piped: true
   commands:
