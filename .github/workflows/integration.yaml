@@ -22,19 +22,11 @@ jobs:
       uses: actions/setup-go@v3
       with:
         go-version: ${{ env.GOLANG_VERSION }}
-    # - name: set golang environment variables
-    #   uses: wwmoraes/actions/golang/env@master
-    - name: setup lefthook
-      run: go install github.com/evilmartians/lefthook@latest
-    - name: setup vale
-      uses: errata-ai/vale-action@v2.0.1
-      with:
-        vale_flags: sync
-    # TODO setup typos
-    # TODO setup checkmake
-    # TODO setup editorconfig-checker
-    # TODO setup node/stylelint
-    # TODO setup gofumpt
-    # TODO setup golangci-lint
-    - name: run checks
-      run: lefthook run pre-commit --all-files --no-tty
+    - name: install nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: cache nix
+      uses: DeterminateSystems/magic-nix-cache-action@main
+    - name: check flake
+      uses: DeterminateSystems/flake-checker-action@main
+    - name: check source
+      run: nix develop -c lefthook run pre-commit --all-files --no-tty

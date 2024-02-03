@@ -1,0 +1,44 @@
+autocomplete = true
+breaking_changes = false
+emoji = true
+issues = false
+
+[[commit_types]]
+name = "feat"
+emoji = "🚀"
+description = "New functionality"
+
+[[commit_types]]
+name = "fix"
+emoji = "🐛"
+description = "Patches a bug"
+
+[[commit_types]]
+name = "docs"
+emoji = "📚"
+description = "Adds information"
+
+[[commit_types]]
+name = "style"
+emoji = "💄"
+description = "Formatting and cosmetic changes"
+
+[[commit_types]]
+name = "refactor"
+emoji = "🔨"
+description = "Changes that don't alter functionality"
+
+[[commit_types]]
+name = "test"
+emoji = "🚨"
+description = "Adds tests and validations"
+
+[[commit_types]]
+name = "ci"
+emoji = "🤖"
+description = "Pipeline configuration"
+
+[[commit_types]]
+name = "chore"
+emoji = "🧹"
+description = "Miscellaneous (tool config, etc)"
