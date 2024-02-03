@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "yuzutech/kroki-cli",
+    "URL": "https://github.com/yuzutech/kroki-cli",
+    "Description": "A Kroki CLI",
+    "StarredAt": "2024-02-02T11:11:32Z"
+  },
+  {
     "NameWithOwner": "mrtazz/checkmake",
     "URL": "https://github.com/mrtazz/checkmake",
     "Description": "experimental linter/analyzer for Makefiles",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/minio/minio",
     "Description": "The Object Store for AI Data Infrastructure",
     "StarredAt": "2024-01-14T01:40:54Z"
-  },
-  {
-    "NameWithOwner": "charmbracelet/huh",
-    "URL": "https://github.com/charmbracelet/huh",
-    "Description": "Build terminal forms and prompts 🤷🏻‍♀️",
-    "StarredAt": "2024-01-03T23:44:58Z"
   }
 ]
