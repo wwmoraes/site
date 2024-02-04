@@ -4,48 +4,24 @@ pre-commit:
     typos:
       run: >-
         {cmd}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -f=typos
+        | reviewdog -name typos -filter-mode=nofilter -reporter=github-check -fail-on-error -f=typos
     editorconfig-checker:
       run: >-
         editorconfig-checker -f gcc {staged_files}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -efm="%f:%l:%c: %m"
+        | reviewdog -name editorconfig-checker -filter-mode=nofilter -reporter=github-check -fail-on-error -efm="%f:%l:%c: %m"
     vale:
       run: >-
-        vale --output=line {staged_files}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -efm="%f:%l:%c:%m"
+        make vale-sync && vale --output=line {staged_files}
+        | reviewdog -name vale -filter-mode=nofilter -reporter=github-check -efm="%f:%l:%c:%m"
     stylelint:
       run: >-
-        {cmd}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -f=stylelint
+        stylelint --config-basedir $(yarn global dir)/node_modules -f compact {staged_files}
+        | reviewdog -name stylelint -filter-mode=nofilter -reporter=github-check -fail-on-error -f=stylelint
     golangci-lint:
       run: >-
         {cmd}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -f=golangci-lint
+        | reviewdog -name golangci-lint -filter-mode=nofilter -reporter=github-check -fail-on-error -f=golangci-lint
     checkmake:
       run: >-
         checkmake --format='{{.FileName}}:{{.LineNumber}}:{{.Rule}}:{{.Violation}}{{ "\n" }}' {staged_files}
-        | reviewdog
-          -filter-mode=nofilter
-          -reporter=github-check
-          -fail-on-error
-          -efm="%f:%l:%m"
+        | reviewdog -name checkmake -filter-mode=nofilter -reporter=github-check -fail-on-error -efm="%f:%l:%m"

@@ -15,6 +15,7 @@
     imagemagick
     lefthook
     perl536Packages.ImageExifTool
+    reviewdog
     stylelint
     typos
     vale

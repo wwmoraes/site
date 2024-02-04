@@ -5,15 +5,13 @@ on:
     - .frontmatter/*
     - .github/*
     - .vscode/*
-    paths:
-    - .github/workflows/integration.yaml
 env:
   GOLANG_VERSION: 1.21
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
@@ -28,5 +26,13 @@ jobs:
       uses: DeterminateSystems/magic-nix-cache-action@main
     - name: check flake
       uses: DeterminateSystems/flake-checker-action@main
-    - name: check source
+    - name: install environment
+      run: nix develop -c true
+    - name: configure lefthook
+      run: make lefthook
+    - name: pre-commit checks
       run: nix develop -c lefthook run pre-commit --all-files --no-tty
+      env:
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: pre-push checks
+      run: nix develop -c lefthook run pre-push --all-files --no-tty

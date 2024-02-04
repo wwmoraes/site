@@ -8,5 +8,13 @@ hooks:
 	@${RM} .git/hooks/*
 	@lefthook install
 
+.PHONY: lefthook
+lefthook: .lefthook-local.yaml
+
+ifeq (${CI},)
 .lefthook-local.yaml: .lefthook-system.yaml
-	@ln -s $< $@
+else
+.lefthook-local.yaml: .lefthook-ci.yaml
+endif
+	$(info linking $@ to $<)
+	@ln -sf $< $@

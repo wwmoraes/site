@@ -1,14 +1,19 @@
 # cspell:disable
-.devcontainer/* @wwmoraes
-.editorconfig @wwmoraes
 .frontmatter/* @wwmoraes
 .github/* @wwmoraes
+.make/* @wwmoraes
+.vscode/* @wwmoraes
+
+.codeclimate.yml @wwmoraes
+.editorconfig @wwmoraes
 .golangci.yaml @wwmoraes
 .kodiak.toml @wwmoraes
-.make/* @wwmoraes
-.markdownlint.yaml @wwmoraes
-.scss-lint.yml @wwmoraes
+.koji.toml @wwmoraes
+.lefthook*.yaml @wwmoraes
 .site.toml @wwmoraes
 .stylelintrc.yaml @wwmoraes
-.vscode/* @wwmoraes
+.vale.ini @wwmoraes
 CODEOWNERS @wwmoraes
+flake.* @wwmoraes
+frontmatter.json @wwmoraes
+shell.nix @wwmoraes

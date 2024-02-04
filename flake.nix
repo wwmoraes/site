@@ -4,7 +4,15 @@
   outputs = { self, nixpkgs, flake-utils }: flake-utils.lib.eachDefaultSystem (system:
     let pkgs = nixpkgs.legacyPackages.${system}; in
     {
-      devShells.default = import ./shell.nix { inherit pkgs; };
+      devShells = {
+        build = pkgs.mkShell {
+          packages = with pkgs; [
+            go
+          ];
+        };
+
+        default = import ./shell.nix { inherit pkgs; };
+      };
 
       # packages = rec {
       #   site = pkgs.buildGoModule {

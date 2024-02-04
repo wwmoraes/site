@@ -11,10 +11,6 @@ commit-msg:
 pre-commit:
   piped: true
   commands:
-    vale-sync:
-      priority: 1
-      run: make .styles
-      glob: .vale.ini
     typos:
       priority: 1
       run: typos --force-exclude {staged_files}
@@ -33,8 +29,8 @@ pre-commit:
       exclude: .*\.(jpg|png)$
     vale:
       priority: 2
-      run: vale {staged_files}
-      glob: "**/*.{html,md}"
+      run: make vale-sync && vale {staged_files}
+      glob: "{.vale.ini,**/*.html,**/*.md}"
       exclude: (\.styles)/.*
     stylelint:
       run: stylelint -f compact {staged_files}
