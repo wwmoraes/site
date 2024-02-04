@@ -1,14 +1,12 @@
 .PHONY: check
 check: .lefthook-local.yaml
-	@lefthook run pre-commit --all-files --force
+	@lefthook run pre-commit
+	@lefthook run pre-push
 
 .PHONY: hooks
-hooks: .git/hooks/pre-commit
-
-.git/hooks/%: $(wildcard .lefthook*.yaml)
-	$(info installing $* hook)
-	@lefthook add $*
-	@touch $@
+hooks:
+	@${RM} .git/hooks/*
+	@lefthook install
 
 .lefthook-local.yaml: .lefthook-system.yaml
 	@ln -s $< $@
