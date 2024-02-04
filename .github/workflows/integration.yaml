@@ -36,3 +36,5 @@ jobs:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: pre-push checks
       run: nix develop -c lefthook run pre-push --all-files --no-tty
+    - name: assert clean repository
+      run: test -z "$(git diff --shortstat | head -c1)"
