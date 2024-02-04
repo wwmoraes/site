@@ -1,21 +1,9 @@
 name: Deployment
 
 on:
-  # push:
-  #   paths:
-  #   - .github/workflows/deployment.yaml
-  #   - archetypes/*
-  #   - assets/*
-  #   - config/*
-  #   - content/*
-  #   - data/*
-  #   - i18n/*
-  #   - layouts/*
-  #   - static/*
-  #   - themes/*
   workflow_run:
+    branches: ['*']
     workflows: [Integration]
-    branches: [master]
     types: [completed]
 
 jobs:
