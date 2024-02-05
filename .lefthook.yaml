@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=.vscode/lefthook.schema.json
 assert_lefthook_installed: true
+prepare-commit-msg:
+  commands:
+    koji:
+      run: exec < /dev/tty && koji --hook || true
+      interactive: true
 commit-msg:
   commands:
     trailers:
