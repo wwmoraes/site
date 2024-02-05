@@ -117,7 +117,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780596004859",
     "@type": "Book",
-    "name": "Extreme Programming Pocket Guide",
+    "name": "Extreme Programming Pocket Guide: Team-Based Software Development",
     "author": [
       {
         "@context": "https://schema.org",
