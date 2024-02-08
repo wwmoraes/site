@@ -5,6 +5,11 @@ on:
     - .frontmatter/*
     - .github/*
     - .vscode/*
+  pull_request:
+    types:
+    - synchronize
+    - reopened
+    - opened
 env:
   GOLANG_VERSION: 1.21
 concurrency:
