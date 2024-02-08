@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "golift/starr",
+    "URL": "https://github.com/golift/starr",
+    "Description": "Go Library to interact with Lidarr, Prowlarr, Radarr, Readarr, and Sonarr APIs.",
+    "StarredAt": "2024-02-07T19:50:12Z"
+  },
+  {
     "NameWithOwner": "yuzutech/kroki-cli",
     "URL": "https://github.com/yuzutech/kroki-cli",
     "Description": "A Kroki CLI",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/uptech/git-ps-rs",
     "Description": "Official git-ps Rust implementation - the future of git-ps",
     "StarredAt": "2024-01-14T14:26:09Z"
-  },
-  {
-    "NameWithOwner": "minio/minio",
-    "URL": "https://github.com/minio/minio",
-    "Description": "The Object Store for AI Data Infrastructure",
-    "StarredAt": "2024-01-14T01:40:54Z"
   }
 ]

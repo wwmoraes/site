@@ -1,11 +1,19 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website"
+    },
+    "OccurredAt": "2024-02-08T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/actions",
       "URL": "https://github.com/wwmoraes/actions",
       "Description": "DRY github actions collection"
     },
-    "OccurredAt": "2024-01-27T08:00:00Z"
+    "OccurredAt": "2024-02-08T08:00:00Z"
   },
   {
     "Repository": {
@@ -14,14 +22,6 @@
       "Description": "Cross-platform dotfiles with batteries"
     },
     "OccurredAt": "2024-01-18T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website"
-    },
-    "OccurredAt": "2024-01-14T08:00:00Z"
   },
   {
     "Repository": {
