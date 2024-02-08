@@ -16,6 +16,16 @@ on:
     - synchronize
     - reopened
     - opened
+    paths-ignore:
+    - .github/workflows/build.yaml
+    - cmd/*
+    - internal/*
+    - pkg/*
+    - flake.lock
+    - flake.nix
+    - go.mod
+    - go.sum
+    - shell.nix
 env:
   GOLANG_VERSION: 1.21
 concurrency:
