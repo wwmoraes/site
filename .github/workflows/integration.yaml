@@ -10,6 +10,10 @@ on:
     - synchronize
     - reopened
     - opened
+    paths:
+    - .frontmatter/*
+    - .github/*
+    - .vscode/*
 env:
   GOLANG_VERSION: 1.21
 concurrency:
