@@ -11,6 +11,11 @@ on:
     - go.mod
     - go.sum
     - shell.nix
+  pull_request:
+    types:
+    - synchronize
+    - reopened
+    - opened
 env:
   GOLANG_VERSION: 1.21
 concurrency:
