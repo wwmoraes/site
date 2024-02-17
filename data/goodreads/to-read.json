@@ -271,6 +271,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780201741575",
+    "@type": "Book",
+    "name": "Fearless Change: Patterns for Introducing New Ideas",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mary Lynn Manns"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Linda Rising"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347579006l/261666._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2004-09-04T00:00:00Z",
+    "isbn": "9780201741575"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321146533",
     "@type": "Book",
     "name": "Test-Driven Development: By Example",
@@ -315,6 +341,37 @@
     },
     "datePublished": "1999-01-01T00:00:00Z",
     "isbn": "9780521663502"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780975568606",
+    "@type": "Book",
+    "name": "The Visible Ops Handbook: Starting ITIL in 4 Practical Steps",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kevin Behr"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gene Kim"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "George Spafford"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1176232192l/605506._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Information Technology Process Institute"
+    },
+    "datePublished": "2004-06-01T00:00:00Z",
+    "isbn": "9780975568606"
   },
   {
     "@context": "https://schema.org",
@@ -397,77 +454,5 @@
     },
     "datePublished": "1993-02-01T00:00:00Z",
     "isbn": "9781568491615"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262140874",
-    "@type": "Book",
-    "name": "The Elements Of Computing Systems: Building A Modern Computer From First Principles",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Noam Nisan"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Shimon Schocken"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387737217l/910789._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The MIT Press"
-    },
-    "datePublished": "2005-01-01T00:00:00Z",
-    "isbn": "9780262140874"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262033848",
-    "@type": "Book",
-    "name": "Introduction to Algorithms",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Thomas H. Cormen"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Charles E. Leiserson"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ronald L. Rivest"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Clifford Stein"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390459484l/6752187._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Cambridge, MA, USA",
-      "address": {
-        "addressCountry": "USA",
-        "addressLocality": "Cambridge",
-        "addressRegion": "MA"
-      }
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The MIT Press"
-    },
-    "datePublished": "2009-01-01T00:00:00Z",
-    "isbn": "9780262033848"
   }
 ]
