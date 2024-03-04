@@ -42,6 +42,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780465067107",
+    "@type": "Book",
+    "name": "The Design of Everyday Things",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Donald A. Norman"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Basic Books"
+    },
+    "datePublished": "2002-01-01T00:00:00Z",
+    "isbn": "9780465067107"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780201485677",
     "@type": "Book",
     "name": "Refactoring: Improving the Design of Existing Code",
@@ -245,6 +271,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780195024029",
+    "@type": "Book",
+    "name": "The Timeless Way of Building",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Christopher Alexander"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348093712l/106728._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Oxford University Press"
+    },
+    "datePublished": "1979-01-01T00:00:00Z",
+    "isbn": "9780195024029"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780201741575",
     "@type": "Book",
     "name": "Fearless Change: Patterns for Introducing New Ideas",
@@ -407,52 +459,5 @@
       "name": "MIT Press Ltd"
     },
     "isbn": "9780262510875"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781568491615",
-    "@type": "Book",
-    "name": "The Peter Principle",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Laurence J. Peter"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347586680l/890728._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Buccaneer Books"
-    },
-    "datePublished": "1993-02-01T00:00:00Z",
-    "isbn": "9781568491615"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262140874",
-    "@type": "Book",
-    "name": "The Elements Of Computing Systems: Building A Modern Computer From First Principles",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Noam Nisan"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Shimon Schocken"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387737217l/910789._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The MIT Press"
-    },
-    "datePublished": "2005-01-01T00:00:00Z",
-    "isbn": "9780262140874"
   }
 ]
