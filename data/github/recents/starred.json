@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "OAI/OpenAPI-Specification",
+    "URL": "https://github.com/OAI/OpenAPI-Specification",
+    "Description": "The OpenAPI Specification Repository",
+    "StarredAt": "2024-03-05T18:29:35Z"
+  },
+  {
     "NameWithOwner": "moonlight-stream/moonlight-qt",
     "URL": "https://github.com/moonlight-stream/moonlight-qt",
     "Description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/crate-ci/typos",
     "Description": "Source code spell checker",
     "StarredAt": "2024-01-27T16:59:46Z"
-  },
-  {
-    "NameWithOwner": "automation-co/husky",
-    "URL": "https://github.com/automation-co/husky",
-    "Description": "git hooks made easy",
-    "StarredAt": "2024-01-27T13:44:36Z"
   }
 ]
