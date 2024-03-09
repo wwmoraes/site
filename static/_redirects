@@ -17,3 +17,4 @@
 /categories/coding/* /categories/code/:splat 308
 /categories/opinion/* /tags/opinion/:splat 308
 /tags/architecture/* /categories/architecture/:splat 308
+/tags/career/* /categories/career/:splat 308
