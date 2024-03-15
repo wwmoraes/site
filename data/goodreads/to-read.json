@@ -178,17 +178,11 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Boston • San Francisco • New York • Toronto • Montreal London • Munich • Paris • Madrid Capetown • Sydney • Tokyo • Singapore • Mexico City"
-    },
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley"
     },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780321127426"
   },
   {
@@ -238,9 +232,8 @@
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Programming Simplicity, LLC"
+      "name": "Addison-Wesley"
     },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780321200686"
   },
   {
@@ -334,17 +327,11 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372039943l/387190._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Boston"
-    },
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Addison-Wesley"
     },
-    "datePublished": "2003-01-01T00:00:00Z",
     "isbn": "9780321146533"
   },
   {
