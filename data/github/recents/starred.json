@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "duckdb/duckdb",
+    "URL": "https://github.com/duckdb/duckdb",
+    "Description": "DuckDB is an in-process SQL OLAP Database Management System",
+    "StarredAt": "2024-03-24T11:23:58Z"
+  },
+  {
     "NameWithOwner": "SKalt/git-cc",
     "URL": "https://github.com/SKalt/git-cc",
     "Description": "a git extension to help write conventional commits",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/mrtazz/checkmake",
     "Description": "experimental linter/analyzer for Makefiles",
     "StarredAt": "2024-01-29T16:33:52Z"
-  },
-  {
-    "NameWithOwner": "evilmartians/lefthook",
-    "URL": "https://github.com/evilmartians/lefthook",
-    "Description": "Fast and powerful Git hooks manager for any type of projects.",
-    "StarredAt": "2024-01-29T12:54:43Z"
   }
 ]
