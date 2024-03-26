@@ -1,6 +1,27 @@
 [
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781098151249",
+    "@type": "Book",
+    "name": "Tidy First?: A Personal Exercise in Empirical Software Design",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kent Beck"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1688419801l/171691901._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Incorporated"
+    },
+    "datePublished": "2023-01-01T00:00:00Z",
+    "isbn": "9781098151249"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781942788829",
     "@type": "Book",
     "name": "Team Topologies: Organizing Business and Technology Teams for Fast Flow",
