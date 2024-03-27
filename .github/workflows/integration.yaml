@@ -31,12 +31,12 @@ jobs:
         go-version: ${{ env.GOLANG_VERSION }}
     - name: install nix
       uses: DeterminateSystems/nix-installer-action@main
-    - name: cache nix
-      uses: DeterminateSystems/magic-nix-cache-action@main
     - name: check flake
       uses: DeterminateSystems/flake-checker-action@main
     - name: install environment
       run: nix develop -c true
+    - name: cache nix
+      uses: DeterminateSystems/magic-nix-cache-action@main
     - name: configure lefthook
       run: make lefthook
     - name: pre-commit checks
