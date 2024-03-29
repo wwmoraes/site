@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "miladabc/gonfig",
+    "URL": "https://github.com/miladabc/gonfig",
+    "Description": "Tag based configuration loader from different providers",
+    "StarredAt": "2024-03-28T16:13:32Z"
+  },
+  {
     "NameWithOwner": "duckdb/duckdb",
     "URL": "https://github.com/duckdb/duckdb",
     "Description": "DuckDB is an in-process SQL OLAP Database Management System",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/yuzutech/kroki-cli",
     "Description": "A Kroki CLI",
     "StarredAt": "2024-02-02T11:11:32Z"
-  },
-  {
-    "NameWithOwner": "mrtazz/checkmake",
-    "URL": "https://github.com/mrtazz/checkmake",
-    "Description": "experimental linter/analyzer for Makefiles",
-    "StarredAt": "2024-01-29T16:33:52Z"
   }
 ]
