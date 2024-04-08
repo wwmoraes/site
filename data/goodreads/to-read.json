@@ -1,132 +1,184 @@
 [
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781492029502",
+    "@id": "https://openlibrary.org/isbn/9780201616224",
     "@type": "Book",
-    "name": "The Site Reliability Workbook: Practical Ways to Implement SRE",
+    "name": "The Pragmatic Programmer: From Journeyman to Master",
     "author": [
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Niall Richard Murphy"
+        "name": "Andy Hunt"
       },
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "David K. Rensin"
+        "name": "David Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dave Thomas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Hunt"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532993759l/39687146._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2018-08-04T00:00:00Z",
-    "isbn": "9781492029502"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781491929124",
-    "@type": "Book",
-    "name": "Site Reliability Engineering: How Google Runs Production Systems",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Betsy Beyer"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris (Computer engineer) Jones"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jennifer Petoff"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Niall Richard Murphy"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Inc."
-    },
-    "datePublished": "2016-01-01T00:00:00Z",
-    "isbn": "9781491929124"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780132350884",
-    "@type": "Book",
-    "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Robert C. Martin"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2008-07-01T00:00:00Z",
-    "isbn": "9780132350884"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262033848",
-    "@type": "Book",
-    "name": "Introduction to Algorithms",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Thomas H. Cormen"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Charles E. Leiserson"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ronald L. Rivest"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Clifford Stein"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390459484l/6752187._SX50_.jpg",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099._SX50_.jpg",
     "locationCreated": {
       "@context": "https://schema.org",
       "@type": "Place",
-      "name": "Cambridge, MA, USA",
-      "address": {
-        "addressCountry": "USA",
-        "addressLocality": "Cambridge",
-        "addressRegion": "MA"
-      }
+      "name": "Reading, Mass"
     },
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "The MIT Press"
+      "name": "Addison-Wesley"
     },
-    "datePublished": "2009-01-01T00:00:00Z",
-    "isbn": "9780262033848"
+    "datePublished": "2000-01-01T00:00:00Z",
+    "isbn": "9780201616224"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780465067107",
+    "@type": "Book",
+    "name": "The Design of Everyday Things",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Donald A. Norman"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Basic Books"
+    },
+    "datePublished": "2002-01-01T00:00:00Z",
+    "isbn": "9780465067107"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780201485677",
+    "@type": "Book",
+    "name": "Refactoring: Improving the Design of Existing Code",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386925632l/44936._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley Professional"
+    },
+    "datePublished": "1999-06-28T00:00:00Z",
+    "isbn": "9780201485677"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780787968052",
+    "@type": "Book",
+    "name": "Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Patrick Lencioni"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2004-03-04T00:00:00Z",
+    "isbn": "9780787968052"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780596004859",
+    "@type": "Book",
+    "name": "Extreme Programming Pocket Guide: Team-Based Software Development",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chromatic"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388635453l/67836._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Beijing"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly"
+    },
+    "datePublished": "2003-01-01T00:00:00Z",
+    "isbn": "9780596004859"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321127426",
+    "@type": "Book",
+    "name": "Patterns of Enterprise Application Architecture",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "isbn": "9780321127426"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780201895421",
+    "@type": "Book",
+    "name": "Analysis Patterns: Reusable Object Models",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372042672l/85002._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Menlo Park, Calif"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison Wesley"
+    },
+    "datePublished": "1997-01-01T00:00:00Z",
+    "isbn": "9780201895421"
   },
   {
     "@context": "https://schema.org",
@@ -152,266 +204,6 @@
       "name": "Addison-Wesley"
     },
     "isbn": "9780321200686"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780201835953",
-    "@type": "Book",
-    "name": "The Mythical Man-Month: Essays on Software Engineering",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Frederick P. Brooks"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348430512l/13629._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Reading, Mass"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional"
-    },
-    "datePublished": "1995-01-01T00:00:00Z",
-    "isbn": "9780201835953"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780988262591",
-    "@type": "Book",
-    "name": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Kim"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kevin Behr"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "George Spafford"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Portland, Or"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IT Revolution Press"
-    },
-    "datePublished": "2013-01-01T00:00:00Z",
-    "isbn": "9780988262591"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780137081073",
-    "@type": "Book",
-    "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Robert C. Martin"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9780137081073"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780136915713",
-    "@type": "Book",
-    "name": "Clean Craftsmanship: Disciplines, Standards, and Ethics",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Robert C. Martin"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636153031l/56631473._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Boston"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional  Pearson Educational US"
-    },
-    "datePublished": "2021-01-01T00:00:00Z",
-    "isbn": "9780136915713"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780544272996",
-    "@type": "Book",
-    "name": "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Randall Munroe"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451351509l/21413662._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Houghton Mifflin Harcourt"
-    },
-    "datePublished": "2014-01-01T00:00:00Z",
-    "isbn": "9780544272996"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780525537113",
-    "@type": "Book",
-    "name": "What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions (What If?, #2)",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Randall Munroe"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1643644004l/60190659._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Riverhead Books"
-    },
-    "datePublished": "2022-01-01T00:00:00Z",
-    "isbn": "9780525537113"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780525537090",
-    "@type": "Book",
-    "name": "How To: Absurd Scientific Advice for Common Real-World Problems",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Randall Munroe"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550145086l/43852758._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Riverhead Books"
-    },
-    "datePublished": "2019-01-01T00:00:00Z",
-    "isbn": "9780525537090"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781451648539",
-    "@type": "Book",
-    "name": "Steve Jobs",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Walter Isaacson"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Simon \u0026 Schuster"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
-    "isbn": "9781451648539"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780787968052",
-    "@type": "Book",
-    "name": "Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Patrick Lencioni"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Jossey-Bass"
-    },
-    "datePublished": "2004-03-04T00:00:00Z",
-    "isbn": "9780787968052"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321127426",
-    "@type": "Book",
-    "name": "Patterns of Enterprise Application Architecture",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Martin Fowler"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
-    "isbn": "9780321127426"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781491978863",
-    "@type": "Book",
-    "name": "Seeking SRE: Conversations About Running Production Systems at Scale",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "David N. Blank-Edelman"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503317453l/35355005._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2018-09-17T00:00:00Z",
-    "isbn": "9781491978863"
   },
   {
     "@context": "https://schema.org",
@@ -441,64 +233,208 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781492043454",
+    "@id": "https://openlibrary.org/isbn/9780195024029",
     "@type": "Book",
-    "name": "Fundamentals of Software Architecture: An Engineering Approach",
+    "name": "The Timeless Way of Building",
     "author": [
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Mark Richards"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Neal Ford"
+        "name": "Christopher Alexander"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1580813753l/44144493._SX50_.jpg",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348093712l/106728._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "O'Reilly Media"
+      "name": "Oxford University Press"
     },
-    "datePublished": "2020-02-11T00:00:00Z",
-    "isbn": "9781492043454"
+    "datePublished": "1979-01-01T00:00:00Z",
+    "isbn": "9780195024029"
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781492086895",
+    "@id": "https://openlibrary.org/isbn/9780201741575",
     "@type": "Book",
-    "name": "Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures",
+    "name": "Fearless Change: Patterns for Introducing New Ideas",
     "author": [
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Neal Ford"
+        "name": "Mary Lynn Manns"
       },
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Mark Richards"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Pramod Sadalage"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Zhamak Dehghani"
+        "name": "Linda Rising"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1629825122l/58153482._SX50_.jpg",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347579006l/261666._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "O'Reilly Media, Incorporated"
+      "name": "Addison-Wesley"
     },
-    "datePublished": "2021-01-01T00:00:00Z",
-    "isbn": "9781492086895"
+    "datePublished": "2004-09-04T00:00:00Z",
+    "isbn": "9780201741575"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321146533",
+    "@type": "Book",
+    "name": "Test-Driven Development: By Example",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kent Beck"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372039943l/387190._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "isbn": "9780321146533"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780521663502",
+    "@type": "Book",
+    "name": "Purely Functional Data Structures",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chris Okasaki"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388210737l/594288._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cambridge University Press"
+    },
+    "datePublished": "1999-01-01T00:00:00Z",
+    "isbn": "9780521663502"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780975568606",
+    "@type": "Book",
+    "name": "The Visible Ops Handbook: Starting ITIL in 4 Practical Steps",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kevin Behr"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gene Kim"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "George Spafford"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1176232192l/605506._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Information Technology Process Institute"
+    },
+    "datePublished": "2004-06-01T00:00:00Z",
+    "isbn": "9780975568606"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321413093",
+    "@type": "Book",
+    "name": "Implementation Patterns",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kent Beck"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347863327l/781559._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Upper Saddle River, NJ"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2008-01-01T00:00:00Z",
+    "isbn": "9780321413093"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780262510875",
+    "@type": "Book",
+    "name": "Structure and Interpretation of Computer Programs",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Harold Abelson"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gerald Jay Sussman"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Julie Sussman"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391032527l/43713._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "S. l"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MIT Press Ltd"
+    },
+    "isbn": "9780262510875"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781568491615",
+    "@type": "Book",
+    "name": "The Peter Principle",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Laurence J. Peter"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347586680l/890728._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Buccaneer Books"
+    },
+    "datePublished": "1993-02-01T00:00:00Z",
+    "isbn": "9781568491615"
   }
 ]
