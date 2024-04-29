@@ -1,15 +1,15 @@
 [
   {
+    "NameWithOwner": "muesli/beehive",
+    "URL": "https://github.com/muesli/beehive",
+    "Description": "A flexible event/agent \u0026 automation system with lots of bees 🐝",
+    "StarredAt": "2024-04-28T22:35:34Z"
+  },
+  {
     "NameWithOwner": "elastic/otel-profiling-agent",
     "URL": "https://github.com/elastic/otel-profiling-agent",
     "Description": "The production-scale datacenter profiler (C/C++, Go, Rust, Python, Java, NodeJS, PHP, Ruby, Perl, ...)",
     "StarredAt": "2024-04-19T16:53:43Z"
-  },
-  {
-    "NameWithOwner": "datahub-project/datahub",
-    "URL": "https://github.com/datahub-project/datahub",
-    "Description": "The Metadata Platform for your Data Stack",
-    "StarredAt": "2024-04-19T12:58:03Z"
   },
   {
     "NameWithOwner": "josharian/impl",
