@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/lefthook-configs",
+      "URL": "https://github.com/wwmoraes/lefthook-configs",
+      "Description": "lefthook git hooks manager configurations"
+    },
+    "OccurredAt": "2024-05-07T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -54,14 +62,6 @@
       "Description": "Golang read-write filesystem interfaces"
     },
     "OccurredAt": "2023-11-01T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/interview",
-      "URL": "https://github.com/wwmoraes/interview",
-      "Description": "PDF forms with IT questions for both sides of the interview"
-    },
-    "OccurredAt": "2023-08-30T07:00:00Z"
   },
   {
     "Repository": {

@@ -1,5 +1,10 @@
 [
   {
+    "NameWithOwner": "wwmoraes/lefthook-configs",
+    "URL": "https://github.com/wwmoraes/lefthook-configs",
+    "Description": "lefthook git hooks manager configurations"
+  },
+  {
     "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
     "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
     "Description": "pre-commit completions for Fish shell"
@@ -43,10 +48,5 @@
     "NameWithOwner": "wwmoraes/homebrew-tap",
     "URL": "https://github.com/wwmoraes/homebrew-tap",
     "Description": "formulae and casks for Homebrew"
-  },
-  {
-    "NameWithOwner": "wwmoraes/siever",
-    "URL": "https://github.com/wwmoraes/siever",
-    "Description": "RFC5804-compliant ManageSieve client in pure Go"
   }
 ]
