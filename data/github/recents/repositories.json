@@ -1,8 +1,8 @@
 [
   {
-    "NameWithOwner": "wwmoraes/lefthook-configs",
-    "URL": "https://github.com/wwmoraes/lefthook-configs",
-    "Description": "lefthook git hooks manager configurations"
+    "NameWithOwner": "wwmoraes/kaizen",
+    "URL": "https://github.com/wwmoraes/kaizen",
+    "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
   },
   {
     "NameWithOwner": "wwmoraes/fish-pre-commit-completions",

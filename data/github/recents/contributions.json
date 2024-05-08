@@ -1,19 +1,19 @@
 [
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/lefthook-configs",
-      "URL": "https://github.com/wwmoraes/lefthook-configs",
-      "Description": "lefthook git hooks manager configurations"
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
     },
     "OccurredAt": "2024-05-07T07:00:00Z"
   },
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries"
+      "NameWithOwner": "wwmoraes/kaizen",
+      "URL": "https://github.com/wwmoraes/kaizen",
+      "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
     },
-    "OccurredAt": "2024-05-01T07:00:00Z"
+    "OccurredAt": "2024-05-07T07:00:00Z"
   },
   {
     "Repository": {
