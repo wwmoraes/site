@@ -1,5 +1,17 @@
 [
   {
+    "NameWithOwner": "learnyouahaskell/learnyouahaskell.github.io",
+    "URL": "https://github.com/learnyouahaskell/learnyouahaskell.github.io",
+    "Description": "A community version of the renowned \"Learn You a Haskell\" (LYAH) tutorials collection!",
+    "StarredAt": "2024-05-10T12:48:03Z"
+  },
+  {
+    "NameWithOwner": "sdiehl/wiwinwlh",
+    "URL": "https://github.com/sdiehl/wiwinwlh",
+    "Description": "What I Wish I Knew When Learning Haskell",
+    "StarredAt": "2024-05-10T12:47:20Z"
+  },
+  {
     "NameWithOwner": "open-policy-agent/gatekeeper",
     "URL": "https://github.com/open-policy-agent/gatekeeper",
     "Description": "🐊 Gatekeeper - Policy Controller for Kubernetes",
@@ -46,17 +58,5 @@
     "URL": "https://github.com/duckdb/duckdb",
     "Description": "DuckDB is an in-process SQL OLAP Database Management System",
     "StarredAt": "2024-03-24T11:23:58Z"
-  },
-  {
-    "NameWithOwner": "SKalt/git-cc",
-    "URL": "https://github.com/SKalt/git-cc",
-    "Description": "a git extension to help write conventional commits",
-    "StarredAt": "2024-03-13T09:15:26Z"
-  },
-  {
-    "NameWithOwner": "conventionalcommit/commitlint",
-    "URL": "https://github.com/conventionalcommit/commitlint",
-    "Description": "commitlint checks if your commit messages meets the conventional commit format",
-    "StarredAt": "2024-03-13T09:15:24Z"
   }
 ]

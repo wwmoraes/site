@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/homebrew-tap",
+      "URL": "https://github.com/wwmoraes/homebrew-tap",
+      "Description": "formulae and casks for Homebrew"
+    },
+    "OccurredAt": "2024-05-11T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -46,14 +54,6 @@
       "Description": "Modern templates for the Haskell Tool Stack"
     },
     "OccurredAt": "2023-12-01T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/homebrew-tap",
-      "URL": "https://github.com/wwmoraes/homebrew-tap",
-      "Description": "formulae and casks for Homebrew"
-    },
-    "OccurredAt": "2023-11-18T08:00:00Z"
   },
   {
     "Repository": {
