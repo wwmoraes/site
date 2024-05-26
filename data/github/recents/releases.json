@@ -1,17 +1,6 @@
 [
   {
     "Repository": {
-      "NameWithOwner": "qnikst/HaskellNet",
-      "URL": "https://github.com/qnikst/HaskellNet",
-      "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols."
-    },
-    "Name": "",
-    "TagName": "v0.6.0.2",
-    "PublishedAt": "2023-01-05T09:31:19Z",
-    "URL": "https://github.com/qnikst/HaskellNet/releases/tag/v0.6.0.2"
-  },
-  {
-    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr"
