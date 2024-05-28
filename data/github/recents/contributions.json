@@ -1,19 +1,19 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
+    },
+    "OccurredAt": "2024-05-27T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/homebrew-tap",
       "URL": "https://github.com/wwmoraes/homebrew-tap",
       "Description": "formulae and casks for Homebrew"
     },
     "OccurredAt": "2024-05-11T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries"
-    },
-    "OccurredAt": "2024-05-07T07:00:00Z"
   },
   {
     "Repository": {
@@ -49,6 +49,14 @@
   },
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
+      "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
+      "Description": "pre-commit completions for Fish shell"
+    },
+    "OccurredAt": "2023-12-06T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/stack-templates",
       "URL": "https://github.com/wwmoraes/stack-templates",
       "Description": "Modern templates for the Haskell Tool Stack"
@@ -70,13 +78,5 @@
       "Description": "PDF forms with IT questions for both sides of the interview"
     },
     "OccurredAt": "2023-08-30T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/imapfilter",
-      "URL": "https://github.com/wwmoraes/imapfilter",
-      "Description": "IMAP message filtering and actions for humans, in pure Haskell"
-    },
-    "OccurredAt": "2023-05-26T07:00:00Z"
   }
 ]
