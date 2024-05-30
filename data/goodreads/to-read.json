@@ -305,6 +305,27 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780262541152",
+    "@type": "Book",
+    "name": "Out of the Crisis",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "W. Edwards Deming"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347485103l/566574._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The MIT Press"
+    },
+    "datePublished": "2000-08-11T00:00:00Z",
+    "isbn": "9780262541152"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780521663502",
     "@type": "Book",
     "name": "Purely Functional Data Structures",
@@ -357,6 +378,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780911379006",
+    "@type": "Book",
+    "name": "Quality Productivity and Competitive Position",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "W. Edwards Deming"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387737117l/638747._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Cambridge, MA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Massachusetts Institute of Technology, Center for Advanced Engineering Study"
+    },
+    "datePublished": "1982-01-01T00:00:00Z",
+    "isbn": "9780911379006"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321413093",
     "@type": "Book",
     "name": "Implementation Patterns",
@@ -380,61 +427,5 @@
     },
     "datePublished": "2008-01-01T00:00:00Z",
     "isbn": "9780321413093"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262510875",
-    "@type": "Book",
-    "name": "Structure and Interpretation of Computer Programs",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Harold Abelson"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gerald Jay Sussman"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Julie Sussman"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391032527l/43713._SY75_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "S. l"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MIT Press Ltd"
-    },
-    "isbn": "9780262510875"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781568491615",
-    "@type": "Book",
-    "name": "The Peter Principle",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Laurence J. Peter"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347586680l/890728._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Buccaneer Books"
-    },
-    "datePublished": "1993-02-01T00:00:00Z",
-    "isbn": "9781568491615"
   }
 ]
