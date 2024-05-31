@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781449335946",
     "@type": "Book",
-    "name": "Parallel and Concurrent Programming in Haskell",
+    "name": "Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming",
     "author": [
       {
         "@context": "https://schema.org",
