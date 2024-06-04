@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "asciinema/agg",
+    "URL": "https://github.com/asciinema/agg",
+    "Description": "asciinema gif generator",
+    "StarredAt": "2024-06-03T13:45:25Z"
+  },
+  {
     "NameWithOwner": "learnyouahaskell/learnyouahaskell.github.io",
     "URL": "https://github.com/learnyouahaskell/learnyouahaskell.github.io",
     "Description": "A community version of the renowned \"Learn You a Haskell\" (LYAH) tutorials collection!",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/miladabc/gonfig",
     "Description": "Tag based configuration loader from different providers",
     "StarredAt": "2024-03-28T16:13:32Z"
-  },
-  {
-    "NameWithOwner": "duckdb/duckdb",
-    "URL": "https://github.com/duckdb/duckdb",
-    "Description": "DuckDB is an in-process SQL OLAP Database Management System",
-    "StarredAt": "2024-03-24T11:23:58Z"
   }
 ]
