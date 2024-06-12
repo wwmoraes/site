@@ -285,6 +285,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780915299140",
+    "@type": "Book",
+    "name": "Toyota Production System: Beyond large-scale production",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Taiichi Ōno"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348976015l/376237._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Cambridge, Mass"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Productivity Press"
+    },
+    "datePublished": "1988-01-01T00:00:00Z",
+    "isbn": "9780915299140"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321146533",
     "@type": "Book",
     "name": "Test-Driven Development: By Example",
@@ -401,31 +427,5 @@
     },
     "datePublished": "1982-01-01T00:00:00Z",
     "isbn": "9780911379006"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321413093",
-    "@type": "Book",
-    "name": "Implementation Patterns",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kent Beck"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347863327l/781559._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
-    "datePublished": "2008-01-01T00:00:00Z",
-    "isbn": "9780321413093"
   }
 ]

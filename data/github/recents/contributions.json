@@ -5,7 +5,15 @@
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
     },
-    "OccurredAt": "2024-05-30T07:00:00Z"
+    "OccurredAt": "2024-06-12T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/spoons",
+      "URL": "https://github.com/wwmoraes/spoons",
+      "Description": "Hammerspoon Spoons plugins"
+    },
+    "OccurredAt": "2024-06-11T07:00:00Z"
   },
   {
     "Repository": {
@@ -46,14 +54,6 @@
       "Description": "DRY github actions collection"
     },
     "OccurredAt": "2024-02-08T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
-      "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
-      "Description": "pre-commit completions for Fish shell"
-    },
-    "OccurredAt": "2023-12-06T08:00:00Z"
   },
   {
     "Repository": {
