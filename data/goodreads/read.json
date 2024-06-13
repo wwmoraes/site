@@ -1,6 +1,37 @@
 [
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321278654",
+    "@type": "Book",
+    "name": "Extreme Programming Explained: Embrace Change",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kent Beck"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cynthia Andres"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386925310l/67833._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Boston, MA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2005-01-01T00:00:00Z",
+    "isbn": "9780321278654"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781098151249",
     "@type": "Book",
     "name": "Tidy First?: A Personal Exercise in Empirical Software Design",

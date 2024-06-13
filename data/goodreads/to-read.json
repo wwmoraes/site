@@ -42,6 +42,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780735619678",
+    "@type": "Book",
+    "name": "Code Complete",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Steve McConnell"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1396837641l/4845._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Redmond, Wash"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Microsoft Press"
+    },
+    "datePublished": "2004-01-01T00:00:00Z",
+    "isbn": "9780735619678"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780465067107",
     "@type": "Book",
     "name": "The Design of Everyday Things",
@@ -65,6 +91,63 @@
     },
     "datePublished": "2002-01-01T00:00:00Z",
     "isbn": "9780465067107"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780787960759",
+    "@type": "Book",
+    "name": "The Five Dysfunctions of a Team",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Patrick Lencioni"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400841022l/21343._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2002-01-01T00:00:00Z",
+    "isbn": "9780787960759"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781852521417",
+    "@type": "Book",
+    "name": "The Deming Management Method",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mary Walton"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nick Thornely"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dan Lees"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Cope FCA MP"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1168573973l/34985._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mercury Business Books"
+    },
+    "datePublished": "1992-10-01T00:00:00Z",
+    "isbn": "9781852521417"
   },
   {
     "@context": "https://schema.org",
@@ -331,101 +414,28 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780262541152",
+    "@id": "https://openlibrary.org/isbn/9781569761380",
     "@type": "Book",
-    "name": "Out of the Crisis",
+    "name": "Mapping Inner Space: Learning and Teaching Visual Mapping",
     "author": [
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "W. Edwards Deming"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347485103l/566574._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The MIT Press"
-    },
-    "datePublished": "2000-08-11T00:00:00Z",
-    "isbn": "9780262541152"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780521663502",
-    "@type": "Book",
-    "name": "Purely Functional Data Structures",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris Okasaki"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388210737l/594288._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Cambridge University Press"
-    },
-    "datePublished": "1999-01-01T00:00:00Z",
-    "isbn": "9780521663502"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780975568606",
-    "@type": "Book",
-    "name": "The Visible Ops Handbook: Starting ITIL in 4 Practical Steps",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kevin Behr"
+        "name": "Nancy Margulies"
       },
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Gene Kim"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "George Spafford"
+        "name": "Nusa Maal"
       }
     ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1176232192l/605506._SX50_.jpg",
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387750915l/427554._SX50_.jpg",
     "publisher": {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Information Technology Process Institute"
+      "name": "Zephyr Press (AZ)"
     },
-    "datePublished": "2004-06-01T00:00:00Z",
-    "isbn": "9780975568606"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780911379006",
-    "@type": "Book",
-    "name": "Quality Productivity and Competitive Position",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "W. Edwards Deming"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387737117l/638747._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Cambridge, MA"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Massachusetts Institute of Technology, Center for Advanced Engineering Study"
-    },
-    "datePublished": "1982-01-01T00:00:00Z",
-    "isbn": "9780911379006"
+    "datePublished": "2001-11-01T00:00:00Z",
+    "isbn": "9781569761380"
   }
 ]
