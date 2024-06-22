@@ -219,6 +219,27 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780131858589",
+    "@type": "Book",
+    "name": "Service-Oriented Architecture (SOA): Concepts, Technology, and Design",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thomas Erl"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372041714l/70147._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prentice Hall PTR"
+    },
+    "datePublished": "2005-08-02T00:00:00Z",
+    "isbn": "9780131858589"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321127426",
     "@type": "Book",
     "name": "Patterns of Enterprise Application Architecture",
@@ -411,31 +432,5 @@
       "name": "Addison-Wesley"
     },
     "isbn": "9780321146533"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9781569761380",
-    "@type": "Book",
-    "name": "Mapping Inner Space: Learning and Teaching Visual Mapping",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nancy Margulies"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nusa Maal"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387750915l/427554._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zephyr Press (AZ)"
-    },
-    "datePublished": "2001-11-01T00:00:00Z",
-    "isbn": "9781569761380"
   }
 ]
