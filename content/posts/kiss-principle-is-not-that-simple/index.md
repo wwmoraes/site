@@ -9,7 +9,7 @@ categories:
 - Principle
 tags:
 - Analysis
-lastmod: 2024-01-27T17:26:25+01:00
+lastmod: 2024-04-14T22:42:42+02:00
 ---
 
 Software engineers use acronyms to convey certain ideas in a single word to
@@ -101,7 +101,7 @@ enthusiasts about the topic.
 ## Less is more - sometimes
 
 A recurring interpretation among engineers is that KISS means doing less. Some
-even preach it should me the minimal necessary to make it work. While certainly
+even preach it should be the minimal necessary to make it work. While certainly
 one of Johnson's tenets was to produce minimal designs, it had to solve the
 problem as best as they could at the time. It also had to be clear and easy for
 their engineers and mechanics to understand.

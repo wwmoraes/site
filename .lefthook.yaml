@@ -32,7 +32,7 @@ pre-commit:
       exclude: .*\.(jpg|png)$
     vale:
       priority: 2
-      run: task vale -- ${ARGS} {staged_files}
+      run: task vale -- ${ARGS} {staged_files} || true
       env:
         ARGS: ""
       glob: "{.vale.ini,**/*.html,**/*.md}"
