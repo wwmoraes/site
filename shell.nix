@@ -37,26 +37,17 @@ in with pkgs; mkShell {
     hugo
     imagemagick
     lefthook
-    perl536Packages.ImageExifTool
+    perl536Packages.ImageExifTool # TODO replace with native code tool
     reviewdog
-    stylelint
+    stylelint # TODO replace with native code tool
     typos
     vale
-    yarn
+    yarn # TODO remove after replacing stylelint
   ];
-
-  # works only with nix develop --impure
-  # GOCACHE = "${builtins.getEnv "HOME"}/Library/Caches/go-build";
-  # GOMODCACHE = "${builtins.getEnv "HOME"}/go/pkg/mod";
-  # GOBIN = "${pkgs.lib.getBin pkgs.go}/bin";
 
   installPhase = ''
     source $stdenv/setup
     yarn global add stylelint-config-standard-scss
     go install github.com/yuzutech/kroki-cli/cmd/kroki@latest
   '';
-
-  # shellHook = ''
-  #   # git status
-  # '';
 }
