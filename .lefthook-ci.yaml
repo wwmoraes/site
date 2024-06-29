@@ -7,16 +7,22 @@ pre-commit:
         | reviewdog -name typos -filter-mode=nofilter -reporter=github-check -fail-on-error -f=typos
     editorconfig-checker:
       run: >-
-        editorconfig-checker -f gcc {staged_files}
+        {cmd}
         | reviewdog -name editorconfig-checker -filter-mode=nofilter -reporter=github-check -fail-on-error -efm="%f:%l:%c: %m"
+      env:
+        ARGS: -f gcc
     vale:
       run: >-
-        make vale-sync && vale --output=line {staged_files}
+        {cmd}
         | reviewdog -name vale -filter-mode=nofilter -reporter=github-check -efm="%f:%l:%c:%m"
+      env:
+        ARGS: --output=line
     stylelint:
       run: >-
-        stylelint --config-basedir $(yarn global dir)/node_modules -f compact {staged_files}
+        {cmd}
         | reviewdog -name stylelint -filter-mode=nofilter -reporter=github-check -fail-on-error -f=stylelint
+      env:
+        ARGS: --config-basedir $HOME/.config/yarn/global/node_modules
     golangci-lint:
       run: >-
         {cmd}

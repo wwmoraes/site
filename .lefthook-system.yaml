@@ -2,4 +2,7 @@
 pre-commit:
   commands:
     stylelint:
-      run: stylelint --config-basedir $(yarn global dir)/node_modules -f compact {staged_files}
+      run: >-
+        {cmd}
+      env:
+        ARGS: --config-basedir $HOME/.config/yarn/global/node_modules

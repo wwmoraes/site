@@ -26,15 +26,21 @@ pre-commit:
       glob: Taskfile.yaml
     editorconfig-checker:
       priority: 1
-      run: editorconfig-checker {staged_files}
+      run: editorconfig-checker ${ARGS} {staged_files}
+      env:
+        ARGS: ""
       exclude: .*\.(jpg|png)$
     vale:
       priority: 2
-      run: task vale -- {staged_files}
+      run: task vale -- ${ARGS} {staged_files}
+      env:
+        ARGS: ""
       glob: "{.vale.ini,**/*.html,**/*.md}"
       exclude: (\.styles)/.*
     stylelint:
-      run: stylelint -f compact {staged_files}
+      run: stylelint -f compact ${ARGS} {staged_files}
+      env:
+        ARGS: ""
       glob: "**/*.{sass,scss}"
     ## TODO XML/HTML lint
     gofumpt:
