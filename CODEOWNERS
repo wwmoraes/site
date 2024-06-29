@@ -1,7 +1,7 @@
 # cspell:disable
 .frontmatter/* @wwmoraes
 .github/* @wwmoraes
-.make/* @wwmoraes
+.task/* @wwmoraes
 .vscode/* @wwmoraes
 
 .codeclimate.yml @wwmoraes

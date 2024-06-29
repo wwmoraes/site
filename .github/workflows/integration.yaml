@@ -37,8 +37,8 @@ jobs:
       run: nix develop -c true
     - name: cache nix
       uses: DeterminateSystems/magic-nix-cache-action@main
-    - name: configure lefthook
-      run: make lefthook
+    - name: configure repository
+      run: task configure
     - name: pre-commit checks
       run: nix develop -c lefthook run pre-commit --all-files --no-tty
       env:

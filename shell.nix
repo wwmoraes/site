@@ -7,8 +7,8 @@
     editorconfig-checker
     fish
     git
-    gnumake
     go
+    go-task
     gofumpt
     golangci-lint
     hugo

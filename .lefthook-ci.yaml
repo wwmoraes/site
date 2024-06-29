@@ -21,7 +21,3 @@ pre-commit:
       run: >-
         {cmd}
         | reviewdog -name golangci-lint -filter-mode=nofilter -reporter=github-check -fail-on-error -f=golangci-lint
-    checkmake:
-      run: >-
-        checkmake --format='{{.FileName}}:{{.LineNumber}}:{{.Rule}}:{{.Violation}}{{ "\n" }}' {staged_files}
-        | reviewdog -name checkmake -filter-mode=nofilter -reporter=github-check -fail-on-error -efm="%f:%l:%m"

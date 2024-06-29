@@ -1,0 +1,302 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+dotenv:
+- .env.local
+- .env
+
+vars:
+  ## sh is nice but naturally adds latency
+  GIT_CORE_HOOKSPATH: .git/hooks # sh: git rev-parse --git-path hooks
+  GO_BUILD_TAGS: '{{ .GO_BUILD_TAGS | default "-race" }}'
+  GO: '{{ .GO | default "go" }}'
+  HUGO: '{{ .HUGO | default "hugo" }}'
+  KROKI: '{{ .KROKI | default "kroki" }}'
+  SITE: ./bin/site
+  VALE: '{{ .VALE | default "vale" }}'
+
+tasks:
+  configure:
+    desc: Configures this repository for source code contribution.
+    deps:
+    - lefthook:configure
+    run: once
+  build:
+    desc: Builds the CLI companion tool to manage the site.
+    deps:
+    - configure
+    cmd: go build {{ .GO_BUILD_TAGS }} -o {{ .SITE }} ./cmd/site/...
+    run: once
+    sources:
+    - cmd/site/**/*.go
+    - internal/**/*.go
+    - pkg/**/*.go
+    generates:
+    - '{{ .SITE | trimPrefix "./" }}'
+  clean:
+    desc: Cleans up generated artifacts.
+    ignore_error: true
+    cmds:
+    - for: [bin, public]
+      task: gnu:rm:dir:{{ .ITEM }}
+    - for: sources
+      task: gnu:rm:file:{{ .ITEM }}
+    sources:
+    - content/radar/radar.svg
+  test:
+    cmd: go test ./...
+  vale:
+    desc: Checks content for spelling errors.
+    silent: true
+    deps:
+    - vale:sync
+    cmd: >-
+      {{ .VALE }} {{ .CLI_ARGS | default "." }}
+  check:
+    desc: Run all lint tasks on the repository files.
+    silent: true
+    deps:
+    - lefthook:configure
+    cmds:
+    - lefthook run pre-commit
+    - lefthook run pre-push
+  exif:show:
+    desc: Inspects images EXIF metadata.
+    cmds:
+    - for: sources
+      task: exif:show:{{ .ITEM }}
+    method: none
+    sources:
+    - "archetypes/**/*.{jpg,png}.json"
+    - "assets/**/*.{jpg,png}.json"
+    - "content/**/*.{jpg,png}.json"
+  generate:data: &generate-data
+    aliases: [gen:data]
+    desc: Fetches upstream information and stores it as static site data.
+    deps:
+    - build
+    cmds:
+    - op run --env-file=.env.secrets -- {{ .SITE }} data update
+    run: once
+    sources:
+    - cmd/site/main.go
+    - cmd/site/data/**/*.go
+    generates:
+    - data/**/*.json
+  generate:diagrams:
+    aliases: [gen:diagrams]
+    desc: Converts source PlantUML diagrams into their PNG image versions.
+    deps:
+    - for: sources
+      task: kroki:convert:png:{{ .ITEM }}
+    sources:
+    - content/**/*.puml
+  generate:images:
+    aliases: [gen:images]
+    desc: Update images' EXIF metadata.
+    deps:
+    - for: sources
+      task: exif:update:{{ .ITEM }}
+    sources:
+    - "archetypes/**/*.{jpg,png}.json"
+    - "assets/**/*.{jpg,png}.json"
+    - "content/**/*.{jpg,png}.json"
+  generate:favicon:
+    aliases: [gen:favicon]
+    desc: Generates the old ICO from the source SVG icon.
+    cmd: >-
+      magick convert
+      -background none
+      assets/images/brand/favicon.svg
+      -gravity center
+      -extent 48x48
+      -quality 92
+      static/favicon.ico
+    sources:
+    - assets/images/brand/favicon.svg
+    generates:
+    - static/favicon.ico
+  generate:radar:
+    aliases: [gen:radar]
+    desc: Generates the technology radar graph.
+    deps:
+    - build
+    cmd: >-
+      {{ .SITE }} radar update
+    run: once
+    sources:
+    - content/radar/radar.svg.tmpl
+    - content/radar/*.md
+    generates:
+    - content/radar/radar.svg
+  generate:site:
+    aliases: [generate, gen, default]
+    desc: Builds the static site pages.
+    deps:
+    - generate:data
+    - generate:diagrams
+    - generate:favicon
+    - generate:images
+    - generate:radar
+    cmd: hugo --gc --cleanDestinationDir
+    env:
+      HUGO_ENVIRONMENT: '{{ .HUGO_ENVIRONMENT | default "development" }}'
+    run: once
+    method: checksum
+    sources:
+    - assets/**/*.*
+    - config/**/*.*
+    - content/**/*.*
+    - data/**/*.*
+    - i18n/**/*.*
+    - layouts/**/*.*
+    - static/**/*.*
+    - themes/**/*.*
+    - exclude: '**/*.{jpg,png}.json'
+    - exclude: content/.markdownlint.yaml'
+    generates:
+    - public/**/*.*
+  lefthook:configure:
+    desc: (Re)links the local lefthook overlay to either CI or system.
+    summary: >-
+      CI configuration wraps the original commands to pipe it through reviewdog.
+      This allows better integration with GitHub Actions by reporting issues in
+      a native and user-friendly format.
+    cmd: ln -sf {{ .LOCAL_SOURCE | q }} .lefthook-local.yaml
+    vars:
+      LOCAL_SOURCE: '{{ empty .CI | not | ternary ".lefthook-ci.yaml" ".lefthook-system.yaml" }}'
+    sources:
+    - .lefthook-ci.yaml
+    - .lefthook-system.yaml
+    generates:
+    - .lefthook-local.yaml
+  lefthook:install:
+    desc: Configures git hooks using lefthook.
+    deps:
+    - lefthook:configure
+    cmds:
+    - task: git:hook:clean
+    - lefthook install
+    sources:
+    - .lefthook.yaml
+    - .lefthook-local.yaml
+    generates:
+    - '{{ .GIT_CORE_HOOKSPATH }}/*'
+  git:hook:clean:
+    desc: Removes git hooks from the local repository.
+    deps:
+    - for: sources
+      task: gnu:rm:file:{{ .ITEM }}
+    sources:
+    - '{{ .GIT_CORE_HOOKSPATH }}/*'
+  site:blip:create:
+    aliases: [blip]
+    desc: Creates a new technology radar entry (a "blip").
+    deps:
+    - build
+    cmds:
+    - defer:
+        task: generate:radar
+    - >-
+      {{ .SITE }} radar blip create
+    interactive: true
+  site:update:
+    aliases: [update]
+    desc: (Re)generates declarative content such as upstream data.
+    deps:
+    - site:update:data
+  site:update:data:
+    <<: *generate-data
+    aliases: [update:data]
+    method: none
+  start: &start
+    desc: Starts a local server.
+    cmd: hugo server -e {{ .HUGO_ENVIRONMENT | q }} -p {{ .HUGO_SERVER_PORT | q }}
+    vars:
+      HUGO_ENVIRONMENT: '{{ .HUGO_ENVIRONMENT | default "development" }}'
+      HUGO_SERVER_PORT: '{{ .HUGO_SERVER_PORT | default 8888 }}'
+  start:production:
+    <<: *start
+    aliases: [start:prod]
+    desc: Starts a local production server.
+    vars:
+      HUGO_ENVIRONMENT: production
+  ### internal tasks
+  ## EXIF tags management
+  ## https://exiftool.org/examples.html
+  ## https://exiftool.org/TagNames/EXIF.html
+  exif:show:*:
+    internal: true
+    silent: true
+    label: exif:show:{{ .IMAGE }}
+    vars:
+      IMAGE: '{{ index .MATCH 0 | trimSuffix ".json" }}'
+    cmds:
+    - echo {{ .IMAGE | q }}
+    - >-
+      exiftool -s
+      -Directory
+      -FileName
+      -Copyright
+      -ImageUniqueID
+      -ImageDescription
+      -Artist
+      -Make
+      {{ .IMAGE | q }}
+    - echo "---"
+  exif:update:*:
+    internal: true
+    label: exif:update:{{ .IMAGE }}
+    vars:
+      IMAGE: '{{ index .MATCH 0 | trimSuffix ".json" }}'
+      METADATA: '{{ index .MATCH 0 }}'
+    sources:
+    - '{{ .IMAGE }}'
+    - '{{ .METADATA }}'
+    generates:
+    - '{{ .IMAGE }}'
+    cmds:
+    - exiftool -q -overwrite_original_in_place -"*=" -j={{ .METADATA | q }} {{ .IMAGE | q }}
+  gnu:rm:dir:*:
+    internal: true
+    label: gnu:rm:dir:{{ .DIRECTORY }}
+    vars:
+      DIRECTORY: '{{ index .MATCH 0 }}'
+    status:
+    - test ! -d {{ .DIRECTORY | q }}
+    cmd: rm -r {{ .DIRECTORY | q }}
+  gnu:rm:file:*:
+    internal: true
+    label: gnu:rm:file:{{ .FILE }}
+    vars:
+      FILE: '{{ index .MATCH 0 }}'
+    status:
+    - test ! -f {{ .FILE | q }}
+    cmd: rm {{ .FILE | q }}
+  kroki:convert:png:*:
+    internal: true
+    label: kroki:convert:png:{{ .INPUT }}
+    cmd: >-
+      {{ .KROKI }} convert -o {{ .OUTPUT | q }} {{ .INPUT | q }}
+    vars:
+      INPUT: '{{ index .MATCH 0 }}'
+      OUTPUT: '{{ index .MATCH 0 | trimSuffix ".puml" }}.png'
+    sources:
+    - '{{ .INPUT }}'
+    generates:
+    - '{{ .OUTPUT }}'
+  vale:sync:
+    desc: Fetches vale style configurations.
+    cmd: vale sync
+    vars:
+      VALE_CONFIG: .vale.ini
+      VALE_STYLES_DIR: '{{ .VALE_STYLES_DIR | default ".styles" }}'
+    sources:
+    - '{{ .VALE_CONFIG }}'
+    generates:
+    - '{{ .VALE_STYLES_DIR }}/.vale-config/**/*'
+    - '{{ .VALE_STYLES_DIR }}/alex/**/*'
+    - '{{ .VALE_STYLES_DIR }}/Joblint/**/*'
+    - '{{ .VALE_STYLES_DIR }}/proselint/**/*'
+    - '{{ .VALE_STYLES_DIR }}/Readability/**/*'
+    - '{{ .VALE_STYLES_DIR }}/write-good/**/*'
