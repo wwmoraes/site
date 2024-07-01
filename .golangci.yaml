@@ -8,17 +8,23 @@ issues:
     path: 'pkg/openlibrary/.*'
 linters:
   enable-all: true
-  fast: true
+  fast: true # TODO disable fast linters only
   disable:
   - depguard # too much nitpicking and gatekeeping
   - godox # no need; there's a VSCode extension + Sonar reports
   # - gofumpt # false-positive on a comment!
   - gomoddirectives # broken, reports a replace directive that doesn't exist
-  - ifshort # deprecated
-  - nosnakecase # deprecated
-  - scopelint # deprecated
+  ## deprecated
+  - execinquery
+  - gomnd
 linters-settings:
-  gomnd:
+  exhaustruct:
+    exclude:
+    - .+/cobra\.Command$
+    - .+/hugo\.Config$
+    - github\.com/wwmoraes/site/pkg/schema\..+
+    - github\.com/wwmoraes/site/pkg/functional\.Result$
+  mnd:
     ignored-functions:
     - '\.Int$'
     - '\.IntP$'
@@ -30,6 +36,12 @@ linters-settings:
     ignored-numbers:
     - '0o640'
 output:
-  format: colored-line-number
+  show-stats: true
+  sort-results: true
+  formats:
+  - format: colored-line-number
 run:
+  allow-parallel-runners: true
+  allow-serial-runners: true
+  modules-download-mode: readonly
   go: "1.22"
