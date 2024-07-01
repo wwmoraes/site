@@ -25,7 +25,7 @@ tasks:
     desc: Builds the CLI companion tool to manage the site.
     deps:
     - configure
-    cmd: go build {{ .GO_BUILD_TAGS }} -o {{ .SITE }} ./cmd/site/...
+    cmd: go build {{ .GO_BUILD_TAGS }} -o {{ .SITE }} ./cmd/site
     run: once
     sources:
     - cmd/site/**/*.go
