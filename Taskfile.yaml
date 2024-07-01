@@ -62,9 +62,14 @@ tasks:
     - lefthook run pre-push
   exif:show:
     desc: Inspects images EXIF metadata.
+    deps:
+    - build
     cmds:
-    - for: sources
-      task: exif:show:{{ .ITEM }}
+    - >-
+      {{ .SITE }} image inspect
+      'archetypes/**/*.{jpg,png}.json'
+      'assets/**/*.{jpg,png}.json'
+      'content/**/*.{jpg,png}.json'
     method: none
     sources:
     - "archetypes/**/*.{jpg,png}.json"
@@ -222,28 +227,6 @@ tasks:
     vars:
       HUGO_ENVIRONMENT: production
   ### internal tasks
-  ## EXIF tags management
-  ## https://exiftool.org/examples.html
-  ## https://exiftool.org/TagNames/EXIF.html
-  exif:show:*:
-    internal: true
-    silent: true
-    label: exif:show:{{ .IMAGE }}
-    vars:
-      IMAGE: '{{ index .MATCH 0 | trimSuffix ".json" }}'
-    cmds:
-    - echo {{ .IMAGE | q }}
-    - >-
-      exiftool -s
-      -Directory
-      -FileName
-      -Copyright
-      -ImageUniqueID
-      -ImageDescription
-      -Artist
-      -Make
-      {{ .IMAGE | q }}
-    - echo "---"
   exif:update:*:
     internal: true
     label: exif:update:{{ .IMAGE }}
@@ -256,7 +239,8 @@ tasks:
     generates:
     - '{{ .IMAGE }}'
     cmds:
-    - exiftool -q -overwrite_original_in_place -"*=" -j={{ .METADATA | q }} {{ .IMAGE | q }}
+    - >-
+      {{ .SITE }} image update {{ .IMAGE | q }}
   gnu:rm:dir:*:
     internal: true
     label: gnu:rm:dir:{{ .DIRECTORY }}

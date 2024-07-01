@@ -37,7 +37,6 @@ in with pkgs; mkShell {
     hugo
     imagemagick
     lefthook
-    perl536Packages.ImageExifTool # TODO replace with native code tool
     reviewdog
     stylelint # TODO replace with native code tool
     typos
