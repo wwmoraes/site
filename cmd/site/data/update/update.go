@@ -3,6 +3,7 @@ package update
 import (
 	"fmt"
 	"os"
+	"runtime"
 
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
@@ -51,7 +52,7 @@ func update(cmd *cobra.Command, args []string) error {
 		})
 	}
 
-	errors := updaters.ExecuteAll(cmd.Context(), 10) //nolint:gomnd
+	errors := updaters.ExecuteAll(cmd.Context(), runtime.NumCPU())
 
 	for err := range errors {
 		cmd.PrintErrln(err)
