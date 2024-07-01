@@ -36,7 +36,7 @@ func update(cmd *cobra.Command, args []string) error {
 
 	log.Println("retrieving blips")
 
-	blips, err := GetUpdatedBlips(settings.SectionFS, settings.SectionName, 2) //nolint:gomnd
+	blips, err := GetUpdatedBlips(settings.SectionFS, settings.SectionName, 2) //nolint:mnd
 	if err != nil {
 		return err
 	}

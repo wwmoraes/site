@@ -102,7 +102,7 @@ func CalculatePosition(radar *RadarParameters, blip *BlipParameters) (Position, 
 	sin := math.Abs(math.Sin(angle))
 
 	// adjust the offset and width of band to avoid drawing on top of boundaries
-	width := radar.TierRadius[blip.Tier] - radar.BlipRadius*2 //nolint:gomnd
+	width := radar.TierRadius[blip.Tier] - radar.BlipRadius*2 //nolint:mnd
 	offset := radar.TierOffset[blip.Tier] + radar.BlipRadius
 	radius := offset + math.Mod(float64(fnv), width)
 

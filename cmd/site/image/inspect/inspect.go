@@ -49,7 +49,7 @@ func inspect(cmd *cobra.Command, args []string) error {
 			cmd.Printf("%20s: %s\n", key, value)
 		}
 
-		//nolint:gomnd,mnd // 2 * 40 = 80 columns
+		//nolint:mnd // 2 * 40 = 80 columns
 		cmd.Println(strings.Repeat("- ", 40))
 	}
 

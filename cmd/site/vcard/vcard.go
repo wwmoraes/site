@@ -13,16 +13,16 @@ import (
 )
 
 var ntagBytes = map[string]int{
-	"210": 48,  //nolint:gomnd
-	"212": 128, //nolint:gomnd
-	"203": 144, //nolint:gomnd
-	"213": 144, //nolint:gomnd
-	"223": 144, //nolint:gomnd
-	"224": 144, //nolint:gomnd
-	"424": 256, //nolint:gomnd
-	"215": 504, //nolint:gomnd
-	"216": 888, //nolint:gomnd
-	"426": 916, //nolint:gomnd
+	"210": 48,  //nolint:mnd
+	"212": 128, //nolint:mnd
+	"203": 144, //nolint:mnd
+	"213": 144, //nolint:mnd
+	"223": 144, //nolint:mnd
+	"224": 144, //nolint:mnd
+	"424": 256, //nolint:mnd
+	"215": 504, //nolint:mnd
+	"216": 888, //nolint:mnd
+	"426": 916, //nolint:mnd
 }
 
 func Command() *cobra.Command {

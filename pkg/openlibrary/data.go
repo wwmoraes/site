@@ -77,7 +77,7 @@ func (meta *BookData) AugmentBook(book *schema.Book) error {
 		book.LocationCreated = schema.NewPlace(meta.PublishPlaces[0].Name)
 
 		parts := strings.Split(book.LocationCreated.Name, ", ")
-		if len(parts) == 3 { //nolint:gomnd
+		if len(parts) == 3 { //nolint:mnd
 			book.LocationCreated.Address = &schema.PostalAddress{
 				AddressLocality: parts[0],
 				AddressRegion:   parts[1],
