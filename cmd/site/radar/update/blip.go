@@ -14,6 +14,7 @@ import (
 	"github.com/wwmoraes/go-rwfs"
 	"github.com/wwmoraes/site/internal/blip"
 	"github.com/wwmoraes/site/internal/frontmatter"
+	"github.com/wwmoraes/site/pkg/functional"
 	"github.com/wwmoraes/site/pkg/hugo"
 )
 
@@ -29,7 +30,7 @@ type Blip struct {
 	RelPermalink string
 }
 
-func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[Blip], error) {
+func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *functional.Result[*Blip], error) {
 	// TODO pass radar configuration (size, section zones, rim radius, etc).
 	radarParameters, err := blip.NewRadar(blip.RadarOptions{
 		Radius:     radarRadius,
@@ -48,14 +49,14 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[B
 		return nil, err
 	}
 
-	blips := make(chan *Result[Blip], buffer)
+	blips := make(chan *functional.Result[*Blip], buffer)
 
 	go func() {
 		defer close(blips)
 
 		entries, err := fs.ReadDir(fsys, "/")
 		if err != nil {
-			blips <- errorResult[Blip](fmt.Errorf("failed to read blips directory: %w", err))
+			functional.SendError(blips, fmt.Errorf("failed to read blips directory: %w", err))
 
 			return
 		}
@@ -67,21 +68,21 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *Result[B
 
 			page, err := blip.Read(fsys, entry.Name())
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to read blip %s: %w", entry.Name(), err))
+				functional.SendError(blips, fmt.Errorf("failed to read blip %s: %w", entry.Name(), err))
 
 				continue
 			}
 
 			err = updateBlipPage(&page, radarParameters, index)
 			if err != nil {
-				blips <- errorResult[Blip](fmt.Errorf("failed to update blip %s: %w", entry.Name(), err))
+				functional.SendError(blips, fmt.Errorf("failed to update blip %s: %w", entry.Name(), err))
 
 				continue
 			}
 
 			slug := strings.TrimSuffix(entry.Name(), filepath.Ext(entry.Name()))
 
-			blips <- okResult[Blip](&Blip{
+			functional.SendValue(blips, &Blip{
 				Page:         &page,
 				Filename:     entry.Name(),
 				RelPermalink: fmt.Sprintf("/%s/%s", section, slug),
