@@ -41,7 +41,7 @@ output:
   formats:
   - format: colored-line-number
   - format: sarif
-    path: golangci-lint.sarif.json
+    path: golangci-lint.sarif
 run:
   allow-parallel-runners: true
   allow-serial-runners: true
