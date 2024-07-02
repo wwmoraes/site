@@ -11,6 +11,7 @@ _gen
 /tmp
 go.work
 go.work.sum
+*.sarif.json
 
 # *.jpg.json
 # *.png.json

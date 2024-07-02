@@ -47,3 +47,10 @@ jobs:
       run: nix develop -c lefthook run pre-push --all-files --no-tty
     - name: assert clean repository
       run: test -z "$(git diff --shortstat | head -c1)"
+    - name: upload golangci-lint SARIF
+      uses: github/codeql-action/upload-sarif@v2
+      if: ${{ hashFiles('golangci-lint.sarif.json') != '' }}
+      with:
+        sarif_file: golangci-lint.sarif.json
+        category: Continuous Integration
+        token: ${{ secrets.GITHUB_TOKEN }}

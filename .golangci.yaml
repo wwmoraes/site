@@ -40,6 +40,8 @@ output:
   sort-results: true
   formats:
   - format: colored-line-number
+  - format: sarif
+    path: golangci-lint.sarif.json
 run:
   allow-parallel-runners: true
   allow-serial-runners: true
