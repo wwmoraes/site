@@ -74,7 +74,7 @@ jobs:
     - name: cache nix
       uses: DeterminateSystems/magic-nix-cache-action@main
     - name: build
-      run: nix develop .#build -c go build -o ./bin/ ./cmd/site/...
+      run: nix develop -c go build -o ./bin/ ./cmd/site/...
     - name: deliver
       uses: actions/upload-artifact@v3
       with:
