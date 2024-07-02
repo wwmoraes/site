@@ -363,6 +363,47 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780060566104",
+    "@type": "Book",
+    "name": "Built to Last: Successful Habits of Visionary Companies (Good to Great, 2)",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "James C. Collins"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jim Collins"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jerry I. Porras"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "James C. Collins"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1412047084l/4122._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "New York"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HarperBusiness"
+    },
+    "datePublished": "2004-01-01T00:00:00Z",
+    "isbn": "9780060566104"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780201741575",
     "@type": "Book",
     "name": "Fearless Change: Patterns for Introducing New Ideas",
@@ -412,25 +453,5 @@
     },
     "datePublished": "1988-01-01T00:00:00Z",
     "isbn": "9780915299140"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780321146533",
-    "@type": "Book",
-    "name": "Test-Driven Development: By Example",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kent Beck"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372039943l/387190._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
-    "isbn": "9780321146533"
   }
 ]
