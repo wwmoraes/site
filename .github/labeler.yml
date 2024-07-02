@@ -3,12 +3,6 @@ excludeLabels: []
 custom:
 - location: title
   keywords:
-  - pre-commit
-  - automatic
-  labels:
-  - automerge
-- location: title
-  keywords:
   - "chore: updated site data"
   labels:
   - automerge
