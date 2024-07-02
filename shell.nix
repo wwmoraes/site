@@ -1,6 +1,6 @@
 {
   # pkgs ? import <nixpkgs> { }
-  pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixpkgs-23.11-darwin.tar.gz") {}
+  pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixpkgs-24.05-darwin.tar.gz") {}
 }: let
   commitlint = pkgs.buildGoModule rec {
     pname = "commitlint";
