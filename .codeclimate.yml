@@ -19,7 +19,7 @@ plugins:
     config:
       editorconfig: .editorconfig
   fixme:
-    enabled: true
+    enabled: false
     config:
       strings:
       - FIX
