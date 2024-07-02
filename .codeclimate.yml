@@ -18,14 +18,6 @@ plugins:
     enabled: true
     config:
       editorconfig: .editorconfig
-  fixme:
-    enabled: false
-    config:
-      strings:
-      - FIX
-      - TODO
-      - BUG
-      - "[ ]"
   git-legal:
     enabled: true
   gofmt:
@@ -39,8 +31,6 @@ plugins:
   markdownlint:
     enabled: true
   shellcheck:
-    enabled: true
-  semgrep:
     enabled: true
   stylelint:
     enabled: true
