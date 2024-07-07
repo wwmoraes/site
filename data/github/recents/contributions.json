@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/anilistarr",
+      "URL": "https://github.com/wwmoraes/anilistarr",
+      "Description": "anilist custom list provider for sonarr/radarr"
+    },
+    "OccurredAt": "2024-07-06T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website"
@@ -38,14 +46,6 @@
       "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
     },
     "OccurredAt": "2024-05-07T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/anilistarr",
-      "URL": "https://github.com/wwmoraes/anilistarr",
-      "Description": "anilist custom list provider for sonarr/radarr"
-    },
-    "OccurredAt": "2024-03-06T08:00:00Z"
   },
   {
     "Repository": {
