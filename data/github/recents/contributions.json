@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
+    },
+    "OccurredAt": "2024-07-09T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr"
@@ -14,14 +22,6 @@
       "Description": "my personal website"
     },
     "OccurredAt": "2024-07-03T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries"
-    },
-    "OccurredAt": "2024-06-28T07:00:00Z"
   },
   {
     "Repository": {
