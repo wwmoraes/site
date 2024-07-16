@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "direnv/direnv",
+    "URL": "https://github.com/direnv/direnv",
+    "Description": "unclutter your .profile",
+    "StarredAt": "2024-07-16T07:44:09Z"
+  },
+  {
     "NameWithOwner": "loov/goda",
     "URL": "https://github.com/loov/goda",
     "Description": "Go Dependency Analysis toolkit",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/open-policy-agent/gatekeeper",
     "Description": "🐊 Gatekeeper - Policy Controller for Kubernetes",
     "StarredAt": "2024-05-01T06:50:04Z"
-  },
-  {
-    "NameWithOwner": "bitemyapp/learnhaskell",
-    "URL": "https://github.com/bitemyapp/learnhaskell",
-    "Description": "Learn Haskell",
-    "StarredAt": "2024-05-01T06:15:17Z"
   }
 ]
