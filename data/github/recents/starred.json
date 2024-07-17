@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "denisbrodbeck/machineid",
+    "URL": "https://github.com/denisbrodbeck/machineid",
+    "Description": "Get the unique machine id of any host (without admin privileges)",
+    "StarredAt": "2024-07-16T21:01:15Z"
+  },
+  {
     "NameWithOwner": "direnv/direnv",
     "URL": "https://github.com/direnv/direnv",
     "Description": "unclutter your .profile",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/sdiehl/wiwinwlh",
     "Description": "What I Wish I Knew When Learning Haskell",
     "StarredAt": "2024-05-10T12:47:20Z"
-  },
-  {
-    "NameWithOwner": "open-policy-agent/gatekeeper",
-    "URL": "https://github.com/open-policy-agent/gatekeeper",
-    "Description": "🐊 Gatekeeper - Policy Controller for Kubernetes",
-    "StarredAt": "2024-05-01T06:50:04Z"
   }
 ]
