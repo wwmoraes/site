@@ -1,5 +1,10 @@
 [
   {
+    "NameWithOwner": "wwmoraes/gotell",
+    "URL": "https://github.com/wwmoraes/gotell",
+    "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
+  },
+  {
     "NameWithOwner": "wwmoraes/kaizen",
     "URL": "https://github.com/wwmoraes/kaizen",
     "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
@@ -43,10 +48,5 @@
     "NameWithOwner": "wwmoraes/cis1940",
     "URL": "https://github.com/wwmoraes/cis1940",
     "Description": "CIS 194: Introduction to Haskell homework resources and solutions"
-  },
-  {
-    "NameWithOwner": "wwmoraes/homebrew-tap",
-    "URL": "https://github.com/wwmoraes/homebrew-tap",
-    "Description": "formulae and casks for Homebrew"
   }
 ]
