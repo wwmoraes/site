@@ -37,10 +37,14 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    - name: setup golang
-      uses: actions/setup-go@v3
-      with:
-        go-version: ${{ env.GOLANG_VERSION }}
+    - name: install nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: cache nix
+      uses: DeterminateSystems/magic-nix-cache-action@main
+    - name: check flake
+      uses: DeterminateSystems/flake-checker-action@main
+    - name: install environment
+      run: nix develop -c true
     - name: set golang environment variables
       id: golang
       uses: wwmoraes/actions/golang/env@master
@@ -65,14 +69,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
           ${{ runner.os }}-build-
-    - name: install nix
-      uses: DeterminateSystems/nix-installer-action@main
-    - name: check flake
-      uses: DeterminateSystems/flake-checker-action@main
-    - name: install environment
-      run: nix develop -c true
-    - name: cache nix
-      uses: DeterminateSystems/magic-nix-cache-action@main
     - name: build
       run: nix develop -c go build -o ./bin/ ./cmd/site/...
     - name: deliver
