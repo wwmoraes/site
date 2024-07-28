@@ -69,7 +69,7 @@ pre-commit:
       stage_fixed: true
     exif:
       priority: 90
-      run: task generate:exif
+      run: task generate:images
       glob: "{archetypes,assets,content}/**/*.{png,jpg}.json"
       stage_fixed: true
     radar:
