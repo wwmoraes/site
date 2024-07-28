@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://github.com/wwmoraes/kaizen/raw/master/schemas/golangci.schema.json
 issues:
   exclude-rules:
   # exclude OpenLibrary JSON tags as we need them to match the upstream
