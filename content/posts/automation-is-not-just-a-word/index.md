@@ -7,7 +7,7 @@ categories:
 tags:
 - DevOps
 - SRE
-lastmod: 2023-12-01T14:52:21.179000+01:00
+lastmod: 2024-07-28T16:02:45+02:00
 ---
 
 After over a decade working in the IT industry I still occasionally hear an
@@ -255,8 +255,8 @@ Automations:
 
 ### Time-based availability
 
-![time-based availability](https://render.githubusercontent.com/render/math?math=availability%20=%20\frac{uptime}{(uptime%20%2B%20downtime)})
+{{< diagram "time-based-availability.svg" >}}
 
 ### Aggregate availability
 
-![aggregate availability](https://render.githubusercontent.com/render/math?math=availability%20=%20\frac{requests_{successful}}{requests_{total}})
+{{< diagram "aggregate-availability.svg" >}}
