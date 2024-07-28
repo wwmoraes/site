@@ -1,52 +1,52 @@
 [
   {
+    "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK",
+    "NameWithOwner": "wwmoraes/gotell",
+    "URL": "https://github.com/wwmoraes/gotell"
+  },
+  {
+    "Description": "quality-of-life tool configurations to streamline engineering work 🚀",
     "NameWithOwner": "wwmoraes/kaizen",
-    "URL": "https://github.com/wwmoraes/kaizen",
-    "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
+    "URL": "https://github.com/wwmoraes/kaizen"
   },
   {
+    "Description": "pre-commit completions for Fish shell",
     "NameWithOwner": "wwmoraes/fish-pre-commit-completions",
-    "URL": "https://github.com/wwmoraes/fish-pre-commit-completions",
-    "Description": "pre-commit completions for Fish shell"
+    "URL": "https://github.com/wwmoraes/fish-pre-commit-completions"
   },
   {
+    "Description": "Modern templates for the Haskell Tool Stack",
     "NameWithOwner": "wwmoraes/stack-templates",
-    "URL": "https://github.com/wwmoraes/stack-templates",
-    "Description": "Modern templates for the Haskell Tool Stack"
+    "URL": "https://github.com/wwmoraes/stack-templates"
   },
   {
+    "Description": "belminf/plex-delete as a container",
     "NameWithOwner": "wwmoraes/plex-delete",
-    "URL": "https://github.com/wwmoraes/plex-delete",
-    "Description": "belminf/plex-delete as a container"
+    "URL": "https://github.com/wwmoraes/plex-delete"
   },
   {
+    "Description": "Golang read-write filesystem interfaces",
     "NameWithOwner": "wwmoraes/go-rwfs",
-    "URL": "https://github.com/wwmoraes/go-rwfs",
-    "Description": "Golang read-write filesystem interfaces"
+    "URL": "https://github.com/wwmoraes/go-rwfs"
   },
   {
+    "Description": "PDF forms with IT questions for both sides of the interview",
     "NameWithOwner": "wwmoraes/interview",
-    "URL": "https://github.com/wwmoraes/interview",
-    "Description": "PDF forms with IT questions for both sides of the interview"
+    "URL": "https://github.com/wwmoraes/interview"
   },
   {
+    "Description": "anilist custom list provider for sonarr/radarr",
     "NameWithOwner": "wwmoraes/anilistarr",
-    "URL": "https://github.com/wwmoraes/anilistarr",
-    "Description": "anilist custom list provider for sonarr/radarr"
+    "URL": "https://github.com/wwmoraes/anilistarr"
   },
   {
+    "Description": "IMAP message filtering and actions for humans, in pure Haskell",
     "NameWithOwner": "wwmoraes/imapfilter",
-    "URL": "https://github.com/wwmoraes/imapfilter",
-    "Description": "IMAP message filtering and actions for humans, in pure Haskell"
+    "URL": "https://github.com/wwmoraes/imapfilter"
   },
   {
+    "Description": "CIS 194: Introduction to Haskell homework resources and solutions",
     "NameWithOwner": "wwmoraes/cis1940",
-    "URL": "https://github.com/wwmoraes/cis1940",
-    "Description": "CIS 194: Introduction to Haskell homework resources and solutions"
-  },
-  {
-    "NameWithOwner": "wwmoraes/homebrew-tap",
-    "URL": "https://github.com/wwmoraes/homebrew-tap",
-    "Description": "formulae and casks for Homebrew"
+    "URL": "https://github.com/wwmoraes/cis1940"
   }
 ]
