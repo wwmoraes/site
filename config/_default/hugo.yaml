@@ -67,7 +67,7 @@ pygmentsUseClasses: false
 pygmentsCodeFences: true
 
 sitemap:
-  changefreq: weekly # cspell:disable-line
+  changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
 
@@ -80,13 +80,11 @@ module:
   - source: content
     target: content
     excludeFiles:
-    # cspell:disable
     - '**/*.tmpl'
     - '**/*.iuml'
     - '**/*.puml'
     - '**/*.png.json'
     - '**/*.jpg.json'
-    # cspell:enable
 
 imaging:
   exif:

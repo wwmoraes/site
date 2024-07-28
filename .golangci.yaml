@@ -1,4 +1,3 @@
-# cspell:disable
 issues:
   exclude-rules:
   # exclude OpenLibrary JSON tags as we need them to match the upstream

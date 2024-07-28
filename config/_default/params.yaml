@@ -89,9 +89,9 @@ mastodon:
 
 giscus:
   repo: wwmoraes/site
-  repo_id: R_kgDOGhhRmQ # cspell:disable-line
+  repo_id: R_kgDOGhhRmQ
   category: Comments
-  category_id: DIC_kwDOGhhRmc4CUcmu # cspell:disable-line
+  category_id: DIC_kwDOGhhRmc4CUcmu
   mapping: title
   strict: 0
   reactions_enabled: 1
