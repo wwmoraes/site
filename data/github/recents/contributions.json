@@ -1,82 +1,82 @@
 [
   {
-    "OccurredAt": "2024-07-25T07:00:00Z",
     "Repository": {
-      "Description": "Cross-platform dotfiles with batteries",
       "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles"
-    }
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
+    },
+    "OccurredAt": "2024-07-28T07:00:00Z"
   },
   {
-    "OccurredAt": "2024-07-25T07:00:00Z",
     "Repository": {
-      "Description": "anilist custom list provider for sonarr/radarr",
       "NameWithOwner": "wwmoraes/anilistarr",
-      "URL": "https://github.com/wwmoraes/anilistarr"
-    }
+      "URL": "https://github.com/wwmoraes/anilistarr",
+      "Description": "anilist custom list provider for sonarr/radarr"
+    },
+    "OccurredAt": "2024-07-28T07:00:00Z"
   },
   {
-    "OccurredAt": "2024-07-25T07:00:00Z",
     "Repository": {
-      "Description": "quality-of-life tool configurations to streamline engineering work 🚀",
-      "NameWithOwner": "wwmoraes/kaizen",
-      "URL": "https://github.com/wwmoraes/kaizen"
-    }
-  },
-  {
-    "OccurredAt": "2024-07-24T07:00:00Z",
-    "Repository": {
-      "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK",
-      "NameWithOwner": "wwmoraes/gotell",
-      "URL": "https://github.com/wwmoraes/gotell"
-    }
-  },
-  {
-    "OccurredAt": "2024-07-03T07:00:00Z",
-    "Repository": {
-      "Description": "my personal website",
       "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site"
-    }
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website"
+    },
+    "OccurredAt": "2024-07-28T07:00:00Z"
   },
   {
-    "OccurredAt": "2024-06-11T07:00:00Z",
     "Repository": {
-      "Description": "Hammerspoon Spoons plugins",
+      "NameWithOwner": "wwmoraes/kaizen",
+      "URL": "https://github.com/wwmoraes/kaizen",
+      "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
+    },
+    "OccurredAt": "2024-07-25T07:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/gotell",
+      "URL": "https://github.com/wwmoraes/gotell",
+      "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
+    },
+    "OccurredAt": "2024-07-24T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/spoons",
-      "URL": "https://github.com/wwmoraes/spoons"
-    }
+      "URL": "https://github.com/wwmoraes/spoons",
+      "Description": "Hammerspoon Spoons plugins"
+    },
+    "OccurredAt": "2024-06-11T07:00:00Z"
   },
   {
-    "OccurredAt": "2024-05-11T07:00:00Z",
     "Repository": {
-      "Description": "formulae and casks for Homebrew",
       "NameWithOwner": "wwmoraes/homebrew-tap",
-      "URL": "https://github.com/wwmoraes/homebrew-tap"
-    }
+      "URL": "https://github.com/wwmoraes/homebrew-tap",
+      "Description": "formulae and casks for Homebrew"
+    },
+    "OccurredAt": "2024-05-11T07:00:00Z"
   },
   {
-    "OccurredAt": "2024-02-08T08:00:00Z",
     "Repository": {
-      "Description": "DRY github actions collection",
       "NameWithOwner": "wwmoraes/actions",
-      "URL": "https://github.com/wwmoraes/actions"
-    }
+      "URL": "https://github.com/wwmoraes/actions",
+      "Description": "DRY github actions collection"
+    },
+    "OccurredAt": "2024-02-08T08:00:00Z"
   },
   {
-    "OccurredAt": "2023-12-01T08:00:00Z",
     "Repository": {
-      "Description": "Modern templates for the Haskell Tool Stack",
       "NameWithOwner": "wwmoraes/stack-templates",
-      "URL": "https://github.com/wwmoraes/stack-templates"
-    }
+      "URL": "https://github.com/wwmoraes/stack-templates",
+      "Description": "Modern templates for the Haskell Tool Stack"
+    },
+    "OccurredAt": "2023-12-01T08:00:00Z"
   },
   {
-    "OccurredAt": "2023-11-01T07:00:00Z",
     "Repository": {
-      "Description": "Golang read-write filesystem interfaces",
       "NameWithOwner": "wwmoraes/go-rwfs",
-      "URL": "https://github.com/wwmoraes/go-rwfs"
-    }
+      "URL": "https://github.com/wwmoraes/go-rwfs",
+      "Description": "Golang read-write filesystem interfaces"
+    },
+    "OccurredAt": "2023-11-01T07:00:00Z"
   }
 ]
