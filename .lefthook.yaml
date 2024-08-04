@@ -1,14 +1,11 @@
 # yaml-language-server: $schema=.vscode/lefthook.schema.json
 assert_lefthook_installed: true
-prepare-commit-msg:
-  commands:
-    koji:
-      run: exec < /dev/tty && koji --hook || true
-      interactive: true
 commit-msg:
   commands:
+    commitlint:
+      run: grep -q "^fixup! " "{1}" || commitlint lint --message "{1}"
     trailers:
-      run: git interpret-trailers --trailer "sign" --trim-empty "{1}" | sponge "{1}"
+      run: git interpret-trailers --in-place --trailer "sign" --trim-empty "{1}"
 pre-commit:
   piped: true
   commands:

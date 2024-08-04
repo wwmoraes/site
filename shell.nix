@@ -26,6 +26,7 @@ in mkShell rec {
     gofumpt
     hugo
     imagemagick
+    kaizen.go-commitlint
     lefthook
     stylelint # TODO replace with native code tool
     typos
@@ -36,7 +37,6 @@ in mkShell rec {
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
     reviewdog
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
-    kaizen.go-commitlint
     gopls
     gotools
     ## TODO kroki
