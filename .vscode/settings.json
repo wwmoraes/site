@@ -21,7 +21,8 @@
     "LICENSE": true,
     "README.md": true,
     "bin": true,
-    "resources": true
+    "resources": true,
+    ".direnv": true
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/deployment.yaml",
@@ -57,5 +58,7 @@
     "XL": 1280
   },
   "webPreview.mediaScreenOverride": true,
-  "webPreview.url": "http://localhost:8888"
+  "webPreview.url": "http://localhost:8888",
+  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
+  "sarif-viewer.connectToGithubCodeScanning": "off"
 }

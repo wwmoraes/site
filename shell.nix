@@ -1,52 +1,55 @@
-{
-  # pkgs ? import <nixpkgs> { }
-  pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixpkgs-24.05-darwin.tar.gz") {}
-}: let
-  commitlint = pkgs.buildGoModule rec {
-    pname = "commitlint";
-    version = "0.10.1";
-
-    src = pkgs.fetchFromGitHub {
-      owner = "conventionalcommit";
-      repo = "commitlint";
-      rev = "v${version}";
-      hash = "sha256-OJCK6GEfs/pcorIcKjylBhdMt+lAzsBgBVUmdLfcJR0=";
-    };
-
-    # vendorHash = pkgs.lib.fakeHash;
-    vendorHash = "sha256-4fV75e1Wqxsib0g31+scwM4DYuOOrHpRgavCOGurjT8=";
-
-    meta = with pkgs.lib; {
-      description = "commitlint checks if your commit messages meets the conventional commit format";
-      homepage = "https://github.com/conventionalcommit/commitlint";
-      license = licenses.mit;
-      maintainers = with maintainers; [ wwmoraes ];
-    };
+let
+  nixpkgs = fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/refs/tags/24.05.tar.gz";
+    sha256 = "1lr1h35prqkd1mkmzriwlpvxcb34kmhc9dnr48gkm8hh089hifmx";
   };
-in with pkgs; mkShell {
-  packages = [
-    checkmake
-    commitlint
+  pkgs = import nixpkgs {};
+  nixpkgs-unstable = fetchTarball {
+    name = "nixos-unstable-a14c5d651cee9ed70f9cd9e83f323f1e531002db";
+    # url = "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixpkgs-unstable.tar.gz";
+    url = "https://github.com/NixOS/nixpkgs/archive/a14c5d651cee9ed70f9cd9e83f323f1e531002db.tar.gz";
+    sha256 = "1b2dwbqm5vdr7rmxbj5ngrxm7sj5r725rqy60vnlirbbwks6aahb";
+  };
+  unstable = import nixpkgs-unstable {};
+  kaizen-src = fetchTarball {
+    name = "kaizen-01fb203b0905ed33b45a562a2cb5e5b6330044a8";
+    url = "https://github.com/wwmoraes/kaizen/archive/01fb203b0905ed33b45a562a2cb5e5b6330044a8.tar.gz";
+    sha256 = "04207l8g0p94jix2brwyhky1cscnd9w6vjn5dzzpfyv71wc2g0qa";
+  };
+  kaizen = import kaizen-src { inherit pkgs; };
+  inherit (pkgs) lib mkShell;
+in mkShell {
+  packages = with pkgs; [
     editorconfig-checker
-    fish
     git
-    go
     go-task
     gofumpt
-    golangci-lint
     hugo
     imagemagick
     lefthook
-    reviewdog
     stylelint # TODO replace with native code tool
     typos
+    unstable.go
+    unstable.golangci-lint
     vale
     yarn # TODO remove after replacing stylelint
+  ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
+    reviewdog
+  ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
+    kaizen.go-commitlint
+    gopls
+    gotools
+    ## TODO kroki
   ];
 
   installPhase = ''
     source $stdenv/setup
+
+    yarn global add stylelint-config-standard
     yarn global add stylelint-config-standard-scss
+    yarn global add stylelint-scss
+    yarn global add syncpack
+
     go install github.com/yuzutech/kroki-cli/cmd/kroki@latest
   '';
 }
