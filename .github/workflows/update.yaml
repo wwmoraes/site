@@ -12,8 +12,6 @@ on:
     workflows: [Build]
     branches: [master]
     types: [completed]
-env:
-  GOLANG_VERSION: 1.21
 permissions:
   contents: write
   pull-requests: write
@@ -26,14 +24,11 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    - name: install nix
-      uses: DeterminateSystems/nix-installer-action@main
-    - name: check flake
-      uses: DeterminateSystems/flake-checker-action@main
-    - name: install environment
-      run: nix develop -c true
-    - name: cache nix
-      uses: DeterminateSystems/magic-nix-cache-action@main
+    - name: direnv nix
+      uses: JRMurr/direnv-nix-action@v4.1.0
+      with:
+        install-nix: true
+        cache-store: true
     - name: download artifact
       id: download-artifact
       uses: dawidd6/action-download-artifact@v3
@@ -47,7 +42,7 @@ jobs:
     - name: chmod
       run: chmod +x /usr/local/bin/site
     - name: update data
-      run: nix develop -c site data update
+      run: site data update
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
     - name: commit changes

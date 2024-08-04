@@ -14,8 +14,6 @@ on:
     - .frontmatter/*
     - .github/*
     - .vscode/*
-env:
-  GOLANG_VERSION: 1.21
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -25,26 +23,19 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    - name: setup golang
-      uses: actions/setup-go@v3
+    - name: direnv nix
+      uses: JRMurr/direnv-nix-action@v4.1.0
       with:
-        go-version: ${{ env.GOLANG_VERSION }}
-    - name: install nix
-      uses: DeterminateSystems/nix-installer-action@main
-    - name: check flake
-      uses: DeterminateSystems/flake-checker-action@main
-    - name: install environment
-      run: nix develop -c true
-    - name: cache nix
-      uses: DeterminateSystems/magic-nix-cache-action@main
+        install-nix: true
+        cache-store: true
     - name: configure repository
-      run: nix develop -c task configure
+      run: task configure
     - name: pre-commit checks
-      run: nix develop -c lefthook run pre-commit --all-files --no-tty
+      run: lefthook run pre-commit --all-files --no-tty
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: pre-push checks
-      run: nix develop -c lefthook run pre-push --all-files --no-tty
+      run: lefthook run pre-push --all-files --no-tty
     - name: assert clean repository
       run: test -z "$(git diff --shortstat | head -c1)"
     - name: upload golangci-lint SARIF
@@ -52,5 +43,5 @@ jobs:
       if: ${{ hashFiles('golangci-lint.sarif') != '' }}
       with:
         sarif_file: golangci-lint.sarif
-        category: Continuous Integration
+        category: golangci-lint
         token: ${{ secrets.GITHUB_TOKEN }}
