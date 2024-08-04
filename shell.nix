@@ -18,7 +18,7 @@ let
   };
   kaizen = import kaizen-src { inherit pkgs; };
   inherit (pkgs) lib mkShell;
-in mkShell {
+in mkShell rec {
   packages = with pkgs; [
     editorconfig-checker
     git
@@ -42,14 +42,20 @@ in mkShell {
     ## TODO kroki
   ];
 
-  installPhase = ''
-    source $stdenv/setup
+  offlineCache = pkgs.fetchYarnDeps {
+    yarnLock = ./yarn.lock;
+    hash = "sha256-VxsMxEMathPYRXjg82dEoeNNX8RsAmzcCBVAdMlnicQ=";
+  };
 
-    yarn global add stylelint-config-standard
-    yarn global add stylelint-config-standard-scss
-    yarn global add stylelint-scss
-    yarn global add syncpack
+  configurePhase = ''
+    runHook preConfigure
 
-    go install github.com/yuzutech/kroki-cli/cmd/kroki@latest
+    export HOME=$(mktemp -d)
+    yarn config --offline set yarn-offline-mirror ${offlineCache}
+    fixup-yarn-lock yarn.lock
+    yarn install --offline --frozen-lockfile --ignore-platform --ignore-scripts --no-progress --non-interactive
+    patchShebangs node_modules/
+
+    runHook postConfigure
   '';
 }
