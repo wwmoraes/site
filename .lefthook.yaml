@@ -43,9 +43,9 @@ pre-commit:
         ARGS: ""
       glob: "**/*.{sass,scss}"
     ## TODO XML/HTML lint
-    gofumpt:
+    fix:
       priority: 1
-      run: gofumpt -l -w {staged_files}
+      run: task fix -- {staged_files}
       glob: "**/*.go"
       stage_fixed: true
     golangci-lint:

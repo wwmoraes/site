@@ -12,12 +12,13 @@ linters:
   disable:
   - depguard # too much nitpicking and gatekeeping
   - godox # no need; there's a VSCode extension + Sonar reports
-  # - gofumpt # false-positive on a comment!
   - gomoddirectives # broken, reports a replace directive that doesn't exist
   ## deprecated
   - execinquery
   - gomnd
 linters-settings:
+  gofumpt:
+    extra-rules: true
   exhaustruct:
     exclude:
     - .+/cobra\.Command$

@@ -60,6 +60,9 @@ tasks:
     cmds:
     - lefthook run pre-commit
     - lefthook run pre-push
+  fix:
+    desc: Automatically fixes known Golang code issues.
+    cmd: golangci-lint run --fix --enable-only gci,gofumpt {{ .CLI_ARGS }}
   exif:show:
     desc: Inspects images EXIF metadata.
     deps:
