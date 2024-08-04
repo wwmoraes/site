@@ -18,8 +18,6 @@ vars:
 tasks:
   configure:
     desc: Configures this repository for source code contribution.
-    deps:
-    - lefthook:configure
     run: once
   build:
     desc: Builds the CLI companion tool to manage the site.
@@ -55,8 +53,6 @@ tasks:
   check:
     desc: Run all lint tasks on the repository files.
     silent: true
-    deps:
-    - lefthook:configure
     cmds:
     - lefthook run pre-commit
     - lefthook run pre-push
@@ -164,24 +160,8 @@ tasks:
     - exclude: content/.markdownlint.yaml'
     generates:
     - public/**/*.*
-  lefthook:configure:
-    desc: (Re)links the local lefthook overlay to either CI or system.
-    summary: >-
-      CI configuration wraps the original commands to pipe it through reviewdog.
-      This allows better integration with GitHub Actions by reporting issues in
-      a native and user-friendly format.
-    cmd: ln -sf {{ .LOCAL_SOURCE | q }} .lefthook-local.yaml
-    vars:
-      LOCAL_SOURCE: '{{ empty .CI | not | ternary ".lefthook-ci.yaml" ".lefthook-system.yaml" }}'
-    sources:
-    - .lefthook-ci.yaml
-    - .lefthook-system.yaml
-    generates:
-    - .lefthook-local.yaml
   lefthook:install:
     desc: Configures git hooks using lefthook.
-    deps:
-    - lefthook:configure
     cmds:
     - task: git:hook:clean
     - lefthook install

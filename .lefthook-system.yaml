@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=https://json.schemastore.org/lefthook.json
-pre-commit:
-  commands:
-    stylelint:
-      run: >-
-        {cmd}
-      env:
-        ARGS: --config-basedir $HOME/.config/yarn/global/node_modules

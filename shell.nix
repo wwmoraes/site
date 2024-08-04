@@ -35,7 +35,6 @@ in mkShell rec {
     vale
     yarn # TODO remove after replacing stylelint
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
-    reviewdog
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     gopls
     gotools
