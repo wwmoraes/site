@@ -13,6 +13,7 @@ categories:
 - Code
 tags:
 - Lua
+lastmod: 2024-08-10T13:31:57+02:00
 ---
 
 If you ever used Lua, then you heard about its tables and the metatable feature.
@@ -154,11 +155,15 @@ They are the main drive that makes Lua excellent to extend and prototype fast.
 This alone explains why the gaming industry has a wide use for Lua.
 
 {{< admonition edit >}}
-Updated diagrams, as I don't use Mermaid anymore. In fact, I used it only in this blog while using PlantUML and Mingrammer's diagrams everywhere else. Now they're all consistent.
+Updated diagrams, as I don't use Mermaid anymore. In fact, I used it only in
+this blog while using PlantUML and Mingrammer's diagrams everywhere else. Now
+they're all consistent.
 {{< /admonition >}}
 
 {{< admonition edit >}}
-Changed diagrams again, this time switching them to png instead of SVG. Size-wise they're small and fare better when embedded in feeds like RSS and ATOM.
+Changed diagrams again, this time switching them to png instead of SVG.
+Size-wise they're small and fare better when embedded in feeds like RSS and
+ATOM.
 {{< /admonition >}}
 
 [spoons]: https://github.com/wwmoraes/spoons

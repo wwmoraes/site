@@ -67,6 +67,7 @@ tasks:
     deps:
     - lint:editorconfig
     - lint:go
+    - lint:markdown
     - lint:styles
     - lint:typos
   exif:show:
@@ -293,6 +294,11 @@ tasks:
     - go.mod
     - go.sum
     - go.work
+  lint:markdown:
+    desc: Checks for markdown source code problems.
+    cmd: markdownlint .
+    sources:
+    - '**/*.md'
   lint:editorconfig:
     desc: Checks for common editor settings.
     cmd: editorconfig-checker

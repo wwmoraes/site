@@ -45,6 +45,9 @@
     }
   ],
   "less.format.enable": false,
+  "markdownlint.run": "onSave",
+  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
+  "sarif-viewer.connectToGithubCodeScanning": "off",
   "scss.format.enable": false,
   "search.exclude": {
     "**/public": true,
@@ -58,7 +61,5 @@
     "XL": 1280
   },
   "webPreview.mediaScreenOverride": true,
-  "webPreview.url": "http://localhost:8888",
-  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
-  "sarif-viewer.connectToGithubCodeScanning": "off"
+  "webPreview.url": "http://localhost:8888"
 }

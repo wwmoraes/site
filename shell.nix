@@ -28,6 +28,7 @@ in mkShell rec {
     imagemagick
     kaizen.go-commitlint
     lefthook
+    markdownlint-cli
     stylelint # TODO replace with native code tool
     typos
     unstable.go
