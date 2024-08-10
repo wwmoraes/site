@@ -39,6 +39,7 @@ in mkShell rec {
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     gopls
     gotools
+    kaizen.gopium
     ## TODO kroki
   ];
 
