@@ -23,6 +23,8 @@ tasks:
     desc: Builds the CLI companion tool to manage the site.
     deps:
     - configure
+    env:
+      CGO_ENABLED: 0
     cmd: go build {{ .GO_BUILD_TAGS }} -o {{ .SITE }} ./cmd/site
     run: once
     sources:
@@ -42,7 +44,9 @@ tasks:
     sources:
     - content/radar/radar.svg
   test:
-    cmd: go test ./...
+    env:
+      CGO_ENABLED: 1
+    cmd: go test -race ./...
   vale:
     desc: Checks content for spelling errors.
     silent: true

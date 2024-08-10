@@ -66,11 +66,11 @@ pre-push:
     build:
       priority: 50
       run: task build
-      glob: "{**/*.go,go.mod,go.sum}"
+      glob: "{**/*.go,go.mod,go.sum,go.work}"
     test:
       priority: 50
-      run: go test -race -failfast ./...
-      glob: "{**/*.go,go.mod,go.sum}"
+      run: task test
+      glob: "{**/*.go,go.mod,go.sum,go.work}"
     public:
       priority: 100
       run: task generate:site
