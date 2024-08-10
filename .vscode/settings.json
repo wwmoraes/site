@@ -4,7 +4,7 @@
       "comments": "on",
       "other": "on",
       "strings": "on"
-    }
+    },
   },
   "css.format.enable": false,
   "files.associations": {
@@ -17,12 +17,12 @@
   "files.exclude": {
     "**/.hugo_build.lock": true,
     "**/_gen/": true,
+    ".direnv": true,
     ".frontmatter": true,
     "LICENSE": true,
     "README.md": true,
     "bin": true,
-    "resources": true,
-    ".direnv": true
+    "resources": true
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/deployment.yaml",
