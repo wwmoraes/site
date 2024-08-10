@@ -193,6 +193,32 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780262611466",
+    "@type": "Book",
+    "name": "Sources of Power: How People Make Decisions",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gary A. Klein"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1432906221l/65229._SY75_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "USA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The MIT Press"
+    },
+    "datePublished": "1999-01-01T00:00:00Z",
+    "isbn": "9780262611466"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780596004859",
     "@type": "Book",
     "name": "Extreme Programming Pocket Guide: Team-Based Software Development",
@@ -427,31 +453,5 @@
     },
     "datePublished": "2004-09-04T00:00:00Z",
     "isbn": "9780201741575"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/9780915299140",
-    "@type": "Book",
-    "name": "Toyota Production System: Beyond large-scale production",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Taiichi Ōno"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348976015l/376237._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Cambridge, Mass"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Productivity Press"
-    },
-    "datePublished": "1988-01-01T00:00:00Z",
-    "isbn": "9780915299140"
   }
 ]
