@@ -5,8 +5,6 @@ on:
     - .github/workflows/build.yaml
     - .task/*.yaml
     - cmd/*
-    - flake.lock
-    - flake.nix
     - go.mod
     - go.sum
     - internal/*
@@ -22,8 +20,6 @@ on:
     - .github/workflows/build.yaml
     - .task/*.yaml
     - cmd/*
-    - flake.lock
-    - flake.nix
     - go.mod
     - go.sum
     - internal/*

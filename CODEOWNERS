@@ -13,6 +13,5 @@
 .stylelintrc.yaml @wwmoraes
 .vale.ini @wwmoraes
 CODEOWNERS @wwmoraes
-flake.* @wwmoraes
 frontmatter.json @wwmoraes
 shell.nix @wwmoraes
