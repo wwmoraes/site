@@ -48,8 +48,7 @@ tasks:
     silent: true
     deps:
     - vale:sync
-    cmd: >-
-      {{ .VALE }} {{ .CLI_ARGS | default "." }}
+    cmd: vale .
   check:
     desc: Run all lint tasks on the repository files.
     silent: true
@@ -59,6 +58,13 @@ tasks:
   fix:
     desc: Automatically fixes known Golang code issues.
     cmd: golangci-lint run --fix --enable-only gci,gofumpt {{ .CLI_ARGS }}
+  lint:
+    desc: Lints codebase content for any static problems.
+    deps:
+    - lint:editorconfig
+    - lint:go
+    - lint:styles
+    - lint:typos
   exif:show:
     desc: Inspects images EXIF metadata.
     deps:
@@ -267,3 +273,33 @@ tasks:
     - '{{ .VALE_STYLES_DIR }}/proselint/**/*'
     - '{{ .VALE_STYLES_DIR }}/Readability/**/*'
     - '{{ .VALE_STYLES_DIR }}/write-good/**/*'
+  lint:typos:
+    desc: Checks for typos in plain-text content.
+    cmd: typos --force-exclude
+    sources:
+    - '**.*'
+    - exclude: '**/*.ico'
+    - exclude: '**/*.jpg'
+    - exclude: '**/*.png'
+  lint:go:
+    desc: Lints golang source code files.
+    cmd: golangci-lint run
+    sources:
+    - '**/*.go'
+    - go.mod
+    - go.sum
+    - go.work
+  lint:editorconfig:
+    desc: Checks for common editor settings.
+    cmd: editorconfig-checker
+    sources:
+    - '**.*'
+    - exclude: '**/*.ico'
+    - exclude: '**/*.jpg'
+    - exclude: '**/*.png'
+  lint:styles:
+    desc: Checks cascading style sheets code.
+    cmd: stylelint -f compact assets/css/**/*.scss themes/*/assets/css/**/*.scss
+    sources:
+    - assets/css/**/*.scss
+    - themes/*/assets/css/**/*.scss

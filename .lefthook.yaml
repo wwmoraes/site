@@ -9,10 +9,10 @@ commit-msg:
 pre-commit:
   piped: true
   commands:
-    typos:
+    lint:
       priority: 1
-      run: typos --force-exclude {staged_files}
-      exclude: .*\.(jpg|png)$
+      run: task lint
+      exclude: .*\.(jpg|png|ico)$
     ## TODO check case conflict?
     ## TODO check YAML?
     ## TODO check TOML?
@@ -21,12 +21,6 @@ pre-commit:
       priority: 1
       run: task -a -j > /dev/null
       glob: Taskfile.yaml
-    editorconfig-checker:
-      priority: 1
-      run: editorconfig-checker ${ARGS} {staged_files}
-      env:
-        ARGS: ""
-      exclude: .*\.(jpg|png)$
     vale:
       priority: 2
       run: task vale -- ${ARGS} {staged_files} || true
@@ -34,21 +28,12 @@ pre-commit:
         ARGS: ""
       glob: "{.vale.ini,**/*.html,**/*.md}"
       exclude: (\.styles)/.*
-    stylelint:
-      run: stylelint -f compact ${ARGS} {staged_files}
-      env:
-        ARGS: ""
-      glob: "**/*.{sass,scss}"
     ## TODO XML/HTML lint
     fix:
       priority: 1
-      run: task fix -- {staged_files}
+      run: task fix
       glob: "**/*.go"
       stage_fixed: true
-    golangci-lint:
-      priority: 1
-      run: golangci-lint run
-      glob: "**/*.go"
     tidy:
       priority: 40
       run: go mod tidy
