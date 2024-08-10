@@ -1,0 +1,79 @@
+name: CodeQL
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - .github/workflows/codeql.yaml
+    - .task/*.yaml
+    - cmd/*
+    - go.mod
+    - go.sum
+    - internal/*
+    - pkg/*
+    - shell.nix
+    - Taskfile.yaml
+  pull_request:
+    branches:
+    - master
+    paths:
+    - .github/workflows/codeql.yaml
+    - .task/*.yaml
+    - cmd/*
+    - go.mod
+    - go.sum
+    - internal/*
+    - pkg/*
+    - shell.nix
+    - Taskfile.yaml
+  schedule:
+  - cron: 45 0 * * 5
+jobs:
+  codeql:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      security-events: write
+      packages: read
+    strategy:
+      fail-fast: false
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: direnv nix
+      uses: JRMurr/direnv-nix-action@v4.1.0
+      with:
+        install-nix: true
+        cache-store: true
+    - name: set golang environment variables
+      id: golang
+      uses: wwmoraes/actions/golang/env@master
+    - name: cache modules
+      uses: pat-s/always-upload-cache@v3
+      with:
+        path: ${GOMODCACHE}
+        key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
+          ${{ runner.os }}-modules-
+    - name: download modules
+      run: go mod download
+    - name: cache build
+      uses: pat-s/always-upload-cache@v3
+      with:
+        path: ${GOCACHE}
+        key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
+          ${{ runner.os }}-build-
+    - name: initialize
+      uses: github/codeql-action/init@v3
+      with:
+        languages: go
+        build-mode: manual
+    - name: build
+      run: task build
+    - name: analyze
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:go"
