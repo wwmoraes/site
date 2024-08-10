@@ -3,14 +3,16 @@ on:
   push:
     paths:
     - .github/workflows/build.yaml
+    - .task/*.yaml
     - cmd/*
-    - internal/*
-    - pkg/*
     - flake.lock
     - flake.nix
     - go.mod
     - go.sum
+    - internal/*
+    - pkg/*
     - shell.nix
+    - Taskfile.yaml
   pull_request:
     types:
     - synchronize
@@ -18,14 +20,16 @@ on:
     - opened
     paths-ignore:
     - .github/workflows/build.yaml
+    - .task/*.yaml
     - cmd/*
-    - internal/*
-    - pkg/*
     - flake.lock
     - flake.nix
     - go.mod
     - go.sum
+    - internal/*
+    - pkg/*
     - shell.nix
+    - Taskfile.yaml
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
