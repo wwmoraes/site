@@ -8,7 +8,9 @@ dotenv:
 vars:
   ## sh is nice but naturally adds latency
   GIT_CORE_HOOKSPATH: .git/hooks # sh: git rev-parse --git-path hooks
-  GO_BUILD_TAGS: '{{ .GO_BUILD_TAGS | default "-race" }}'
+  GOLANG_FLAGS: '{{ .GOLANG_FLAGS | default "-mod=readonly" }}'
+  LDFLAGS: -s -w
+  GO_BUILD_TAGS: '{{ .GO_BUILD_TAGS | default "-trimpath" }}'
   GO: '{{ .GO | default "go" }}'
   HUGO: '{{ .HUGO | default "hugo" }}'
   KROKI: '{{ .KROKI | default "kroki" }}'
@@ -25,7 +27,13 @@ tasks:
     - configure
     env:
       CGO_ENABLED: 0
-    cmd: go build {{ .GO_BUILD_TAGS }} -o {{ .SITE }} ./cmd/site
+    cmd: >-
+      go build
+      {{ .GOLANG_FLAGS }}
+      {{ .GO_BUILD_TAGS }}
+      -ldflags={{ .LDFLAGS | q }}
+      -o {{ .SITE }}
+      ./cmd/site
     run: once
     sources:
     - cmd/site/**/*.go
@@ -46,7 +54,7 @@ tasks:
   test:
     env:
       CGO_ENABLED: 1
-    cmd: go test -race ./...
+    cmd: go test {{ .GOLANG_FLAGS }} -race ./...
   vale:
     desc: Checks content for spelling errors.
     silent: true
