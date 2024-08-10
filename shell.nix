@@ -11,12 +11,11 @@ let
     sha256 = "1b2dwbqm5vdr7rmxbj5ngrxm7sj5r725rqy60vnlirbbwks6aahb";
   };
   unstable = import nixpkgs-unstable {};
-  kaizen-src = fetchTarball {
-    name = "kaizen-01fb203b0905ed33b45a562a2cb5e5b6330044a8";
-    url = "https://github.com/wwmoraes/kaizen/archive/01fb203b0905ed33b45a562a2cb5e5b6330044a8.tar.gz";
-    sha256 = "04207l8g0p94jix2brwyhky1cscnd9w6vjn5dzzpfyv71wc2g0qa";
-  };
-  kaizen = import kaizen-src { inherit pkgs; };
+  kaizen = import (fetchTarball {
+    name = "kaizen-8075b45edf93d8f95a00958fd3a1cc606ba3405c";
+    url = "https://github.com/wwmoraes/kaizen/archive/8075b45edf93d8f95a00958fd3a1cc606ba3405c.tar.gz";
+    sha256 = "1w6fkd5kqm2l2aij31kd9ddk84phbcir7flrbha6mxw2y4j36z09";
+  }) { inherit pkgs; };
   inherit (pkgs) lib mkShell;
 in mkShell rec {
   packages = with pkgs; [
