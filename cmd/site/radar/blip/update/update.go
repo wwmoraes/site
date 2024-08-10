@@ -66,5 +66,5 @@ func update(cmd *cobra.Command, args []string) error {
 	page.FrontMatter[frontmatter.RadarSection] = section.String()
 	page.FrontMatter[frontmatter.RadarTier] = tier.String()
 
-	return blip.Update(fsys, filename, &page)
+	return blip.Update(fsys, filename, page)
 }

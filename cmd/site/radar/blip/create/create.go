@@ -6,12 +6,11 @@ import (
 	"strings"
 
 	"github.com/charmbracelet/huh"
-	"github.com/gohugoio/hugo/parser/metadecoders"
-	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/spf13/cobra"
 	"github.com/wwmoraes/go-rwfs"
 	"github.com/wwmoraes/site/internal/blip"
 	"github.com/wwmoraes/site/internal/frontmatter"
+	"github.com/wwmoraes/site/pkg/hugolite"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
@@ -103,7 +102,7 @@ func create(cmd *cobra.Command, args []string) error {
 
 	cmd.Printf("creating blip @ %s", path.Join(contentDir, sectionName, filename))
 
-	page := pageparser.ContentFrontMatter{
+	page := &hugolite.ContentFrontMatter{
 		Content: []byte("\nTODO justification\n"),
 		FrontMatter: map[string]any{
 			frontmatter.Build: map[string]any{
@@ -117,10 +116,10 @@ func create(cmd *cobra.Command, args []string) error {
 			frontmatter.TableOfContents: false,
 			frontmatter.Title:           cases.Title(language.AmericanEnglish).String(name),
 		},
-		FrontMatterFormat: metadecoders.YAML,
+		FrontMatterFormat: hugolite.YAML,
 	}
 
-	return blip.Create(fsys, filename, &page)
+	return blip.Create(fsys, filename, page)
 }
 
 type selectEnum interface {

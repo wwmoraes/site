@@ -9,13 +9,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gohugoio/hugo/parser"
-	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/wwmoraes/go-rwfs"
 	"github.com/wwmoraes/site/internal/blip"
 	"github.com/wwmoraes/site/internal/frontmatter"
 	"github.com/wwmoraes/site/pkg/functional"
 	"github.com/wwmoraes/site/pkg/hugo"
+	"github.com/wwmoraes/site/pkg/hugolite"
 )
 
 const (
@@ -25,7 +24,7 @@ const (
 )
 
 type Blip struct {
-	Page         *pageparser.ContentFrontMatter
+	Page         *hugolite.ContentFrontMatter
 	Filename     string
 	RelPermalink string
 }
@@ -73,7 +72,7 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *function
 				continue
 			}
 
-			err = updateBlipPage(&page, radarParameters, index)
+			err = updateBlipPage(page, radarParameters, index)
 			if err != nil {
 				functional.SendError(blips, fmt.Errorf("failed to update blip %s: %w", entry.Name(), err))
 
@@ -83,7 +82,7 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *function
 			slug := strings.TrimSuffix(entry.Name(), filepath.Ext(entry.Name()))
 
 			functional.SendValue(blips, &Blip{
-				Page:         &page,
+				Page:         page,
 				Filename:     entry.Name(),
 				RelPermalink: fmt.Sprintf("/%s/%s", section, slug),
 			})
@@ -93,7 +92,7 @@ func GetUpdatedBlips(fsys rwfs.FS, section string, buffer int) (<-chan *function
 	return blips, nil
 }
 
-func updateBlipPage(page *pageparser.ContentFrontMatter, params *blip.RadarParameters, index int) error {
+func updateBlipPage(page *hugolite.ContentFrontMatter, params *blip.RadarParameters, index int) error {
 	quadrant, err := hugo.GetString(page, frontmatter.RadarSection)
 	if err != nil {
 		return err
@@ -132,7 +131,7 @@ func (blip *Blip) WriteFile(fsys rwfs.FS) error {
 	}
 	defer fd.Close()
 
-	err = parser.InterfaceToFrontMatter(blip.Page.FrontMatter, blip.Page.FrontMatterFormat, fd)
+	err = hugolite.InterfaceToFrontMatter(blip.Page.FrontMatter, blip.Page.FrontMatterFormat, fd)
 	if err != nil {
 		return err
 	}

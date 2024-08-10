@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/gohugoio/hugo/tpl/crypto"
+	"github.com/wwmoraes/site/pkg/hugolite"
 )
 
 const (
@@ -92,7 +92,7 @@ func CalculatePosition(radar *RadarParameters, blip *BlipParameters) (Position, 
 		return Position{}, fmt.Errorf("blip parameters must not be empty")
 	}
 
-	fnv, err := crypto.New().FNV32a(blip.Title)
+	fnv, err := hugolite.FNV32a(blip.Title)
 	if err != nil {
 		return Position{}, err
 	}

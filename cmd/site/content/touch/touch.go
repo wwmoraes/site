@@ -37,7 +37,7 @@ func touch(cmd *cobra.Command, args []string) error {
 
 		page.FrontMatter[frontmatter.Date] = time.Now().Local()
 
-		err = blip.Update(fsys, filename, &page)
+		err = blip.Update(fsys, filename, page)
 		if err != nil {
 			return err
 		}

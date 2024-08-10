@@ -16,6 +16,7 @@ linters:
   ## deprecated
   - execinquery
   - gomnd
+  - godot
 linters-settings:
   gofumpt:
     extra-rules: true

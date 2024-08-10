@@ -1,3 +1,11 @@
+// Package hugo contains utilities to work with hugo sites.
+//
+// why not import github.com/gohugoio/hugo? It is a huge mess of command mixed
+// with IO and configuration. Way too coupled with their CLI, making it
+// difficult to initialize the core components alone.
+//
+// Another reason is the sheer amount of dependencies that are not part of the
+// core, such as AWS, Azure and GCP SDKs for its deploy commands.
 package hugo
 
 import (
@@ -9,28 +17,24 @@ import (
 	"os"
 	"path"
 
-	"github.com/gohugoio/hugo/parser"
-	"github.com/gohugoio/hugo/parser/pageparser"
+	"github.com/wwmoraes/site/pkg/hugolite"
 )
-
-// why not use the github.com/gohugoio/hugo/config* libs? It is a huge mess of
-// command mixed with IO and configuration. Way too coupled with their CLI.
 
 var (
 	KeyNotFoundError   = errors.New("key not set")
 	KeyConversionError = errors.New("failed to convert key type")
 )
 
-func ParsePage(pagePath string) (pageparser.ContentFrontMatter, error) {
+func ParsePage(pagePath string) (*hugolite.ContentFrontMatter, error) {
 	fd, err := os.OpenFile(pagePath, os.O_RDONLY, 0o640)
 	if err != nil {
-		return pageparser.ContentFrontMatter{}, err
+		return nil, err
 	}
 
-	return pageparser.ParseFrontMatterAndContent(fd)
+	return hugolite.ParseFrontMatterAndContent(fd)
 }
 
-func GetString(matter *pageparser.ContentFrontMatter, key string) (string, error) {
+func GetString(matter *hugolite.ContentFrontMatter, key string) (string, error) {
 	v, ok := matter.FrontMatter[key]
 	if !ok {
 		return "", KeyNotFoundError
@@ -44,7 +48,7 @@ func GetString(matter *pageparser.ContentFrontMatter, key string) (string, error
 	return vv, nil
 }
 
-func GetBool(matter *pageparser.ContentFrontMatter, key string) (bool, error) {
+func GetBool(matter *hugolite.ContentFrontMatter, key string) (bool, error) {
 	v, ok := matter.FrontMatter[key]
 	if !ok {
 		return false, KeyNotFoundError
@@ -108,16 +112,16 @@ func contentDir(content string) (string, error) {
 	return contentFile(path.Join(content, "_index.md"))
 }
 
-func ReadPage(r io.ReadCloser) (pageparser.ContentFrontMatter, error) {
+func ReadPage(r io.ReadCloser) (*hugolite.ContentFrontMatter, error) {
 	defer r.Close()
 
-	return pageparser.ParseFrontMatterAndContent(r)
+	return hugolite.ParseFrontMatterAndContent(r)
 }
 
-func WritePage(w io.WriteCloser, page *pageparser.ContentFrontMatter) error {
+func WritePage(w io.WriteCloser, page *hugolite.ContentFrontMatter) error {
 	defer w.Close()
 
-	err := parser.InterfaceToFrontMatter(page.FrontMatter, page.FrontMatterFormat, w)
+	err := hugolite.InterfaceToFrontMatter(page.FrontMatter, page.FrontMatterFormat, w)
 	if err != nil {
 		return err
 	}

@@ -44,7 +44,7 @@ func publish(cmd *cobra.Command, args []string) error {
 		page.FrontMatter[frontmatter.PublishDate] = time.Now().Local()
 		delete(page.FrontMatter, frontmatter.Draft)
 
-		err = blip.Update(fsys, filename, &page)
+		err = blip.Update(fsys, filename, page)
 		if err != nil {
 			return err
 		}
