@@ -21,6 +21,8 @@ tasks:
   configure:
     desc: Configures this repository for source code contribution.
     run: once
+    deps:
+    - lefthook:install
   build:
     desc: Builds the CLI companion tool to manage the site.
     deps:
