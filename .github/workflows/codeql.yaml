@@ -47,7 +47,7 @@ jobs:
         cache-store: true
     - name: initialize
       run: >-
-        codeql database init \
+        ${CODEQL_DIST}/codeql database init \
           --source-root=$PWD \
           --extractor-include-aliases \
           --language=go \
