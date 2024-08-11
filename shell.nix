@@ -19,7 +19,6 @@ in mkShell rec {
   packages = [
     kaizen.go-commitlint
     pkgs.editorconfig-checker
-    pkgs.git
     pkgs.go-task
     pkgs.gofumpt
     pkgs.hugo
@@ -36,6 +35,7 @@ in mkShell rec {
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     kaizen.gopium
     kaizen.goutline
+    pkgs.git
     pkgs.gopls
     pkgs.gotools
     ## TODO kroki
