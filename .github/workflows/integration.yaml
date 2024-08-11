@@ -25,7 +25,7 @@ jobs:
       uses: JRMurr/direnv-nix-action@v4.1.0
       with:
         install-nix: true
-        cache-store: true
+        cache-store: false
     - name: configure repository
       run: task configure
     - name: check

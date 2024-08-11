@@ -28,7 +28,7 @@ jobs:
       uses: JRMurr/direnv-nix-action@v4.1.0
       with:
         install-nix: true
-        cache-store: true
+        cache-store: false
     - name: download artifact
       id: download-artifact
       uses: dawidd6/action-download-artifact@v3
