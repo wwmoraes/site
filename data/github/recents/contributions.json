@@ -9,6 +9,14 @@
   },
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/actions",
+      "URL": "https://github.com/wwmoraes/actions",
+      "Description": "DRY github actions collection"
+    },
+    "OccurredAt": "2024-08-10T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -54,14 +62,6 @@
       "Description": "formulae and casks for Homebrew"
     },
     "OccurredAt": "2024-05-11T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/actions",
-      "URL": "https://github.com/wwmoraes/actions",
-      "Description": "DRY github actions collection"
-    },
-    "OccurredAt": "2024-02-08T08:00:00Z"
   },
   {
     "Repository": {
