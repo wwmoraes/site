@@ -45,15 +45,15 @@ jobs:
       with:
         install-nix: true
         cache-store: true
-    - name: cache go
-      uses: wwmoraes/actions/golang/cache@master
-    - name: download modules
-      run: go mod download -x
     - name: initialize
       uses: github/codeql-action/init@v3
       with:
         languages: go
         build-mode: manual
+    - name: cache go
+      uses: wwmoraes/actions/golang/cache@master
+    - name: download modules
+      run: go mod download -x
     - name: build
       run: task build
     - name: analyze
