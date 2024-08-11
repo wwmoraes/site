@@ -3,15 +3,17 @@
 .task/* @wwmoraes
 .vscode/* @wwmoraes
 
-.codeclimate.yml @wwmoraes
 .editorconfig @wwmoraes
+.env* @wwmoraes
 .golangci.yaml @wwmoraes
 .kodiak.toml @wwmoraes
-.koji.toml @wwmoraes
 .lefthook*.yaml @wwmoraes
+.markdown* @wwmoraes
 .site.toml @wwmoraes
 .stylelintrc.yaml @wwmoraes
+.typos.toml @wwmoraes
 .vale.ini @wwmoraes
 CODEOWNERS @wwmoraes
 frontmatter.json @wwmoraes
 shell.nix @wwmoraes
+Taskfile.yaml @wwmoraes
