@@ -60,7 +60,7 @@ jobs:
         ${CODEQL_DIST}/codeql database start-tracing --db-cluster ${RUNNER_TEMP}/codeql_databases
         source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/start-tracing.sh
         task build
-        source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/end-tracing.sh
+        # source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/end-tracing.sh
     - name: analyze
       uses: github/codeql-action/analyze@v3
       with:
