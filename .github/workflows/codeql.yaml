@@ -48,7 +48,7 @@ jobs:
     - name: cache go
       uses: wwmoraes/actions/golang/cache@master
     - name: download modules
-      run: go mod download
+      run: go mod download -x
     - name: initialize
       uses: github/codeql-action/init@v3
       with:
