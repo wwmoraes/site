@@ -50,6 +50,7 @@ jobs:
       with:
         languages: go
         build-mode: manual
+        debug: true
     - name: cache go
       uses: wwmoraes/actions/golang/cache@master
     - name: download modules
