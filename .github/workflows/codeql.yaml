@@ -46,11 +46,16 @@ jobs:
         install-nix: true
         cache-store: true
     - name: initialize
-      uses: github/codeql-action/init@v3
-      with:
-        languages: go
-        build-mode: manual
-        debug: true
+      run: >-
+        codeql database init \
+          --source-root=$PWD \
+          --extractor-include-aliases \
+          --language=go \
+          --begin-tracing \
+          --build-mode=manual \
+          --calculate-language-specific-baseline \
+          --sublanguage-file-coverage \
+          --db-cluster ${RUNNER_TEMP}/codeql_databases
     - name: cache go
       uses: wwmoraes/actions/golang/cache@master
     - name: download modules
@@ -58,10 +63,27 @@ jobs:
     - name: build
       run: |-
         ${CODEQL_DIST}/codeql database start-tracing --db-cluster ${RUNNER_TEMP}/codeql_databases
+
         source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/start-tracing.sh
+
         task build
-        # source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/end-tracing.sh
-    - name: analyze
-      uses: github/codeql-action/analyze@v3
+
+        ${CODEQL_DIST}/codeql database analyze \
+          --format=sarifv2.1.0 \
+          --output=codeql.sarif \
+          --sarif-category=CodeQL \
+          --sublanguage-file-coverage \
+          ${RUNNER_TEMP}/codeql_databases/go
+
+        source ${RUNNER_TEMP}/codeql_databases/temp/tracingEnvironment/end-tracing.sh
+    # - name: analyze
+    #   uses: github/codeql-action/analyze@v3
+    #   with:
+    #     category: "/language:go"
+    - name: upload SARIF
+      uses: github/codeql-action/upload-sarif@v2
+      if: ${{ hashFiles('codeql.sarif') != '' }}
       with:
-        category: "/language:go"
+        sarif_file: codeql.sarif
+        category: CodeQL
+        token: ${{ secrets.GITHUB_TOKEN }}
