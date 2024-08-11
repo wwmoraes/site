@@ -19,10 +19,17 @@
     "**/_gen/": true,
     ".direnv": true,
     ".frontmatter": true,
+    "CODE_OF_CONDUCT.md": true,
+    "CONTRIBUTING.md": true,
     "LICENSE": true,
     "README.md": true,
+    "SECURITY.md": true,
     "bin": true,
-    "resources": true
+    "golangci-lint.sarif": true,
+    "node_modules": true,
+    "package.json": true,
+    "resources": true,
+    "yarn.lock": true
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/deployment.yaml",
