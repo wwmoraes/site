@@ -7,7 +7,7 @@ categories:
 tags:
 - Golang
 - Testing
-lastmod: 2023-12-01T14:49:39.245000+01:00
+lastmod: 2024-08-11T13:07:57+02:00
 ---
 
 Imagine you create a Golang application, run it and get a test coverage report
@@ -76,8 +76,8 @@ don't belong in a coverage report.
 
 I got an outstanding [72% coverage][coverage-sample] over my
 [anilistarr][anilistarr] project on my first try using 80 lines of code. With
-this new option, I don't need to imagine testing anymore; I can isolate my
-code as usual and get tests, dead code reports and coverage almost for free. 🖤
+this new option, I don't need to imagine testing anymore; I can isolate my code
+as usual and get tests, dead code reports and coverage with little effort. 🖤
 
 What do you think of this option provided by Golang? 😊
 

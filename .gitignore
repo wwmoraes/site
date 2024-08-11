@@ -1,8 +1,6 @@
 _gen
-!/.styles/config
 .env.local
 .hugo_build.lock
-/.styles/*
 /*lefthook-local.*
 /bin
 /public

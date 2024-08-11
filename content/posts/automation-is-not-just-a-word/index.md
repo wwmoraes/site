@@ -1,5 +1,5 @@
 ---
-title: automation is not just a word
+title: Automation is not just a word
 date: 2022-01-06T10:55:06+01:00
 draft: true
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
 - DevOps
 - SRE
-lastmod: 2024-07-28T16:02:45+02:00
+lastmod: 2024-08-11T13:29:08+02:00
 ---
 
 After over a decade working in the IT industry I still occasionally hear an
@@ -16,9 +16,10 @@ and how it relates to DevOps and SRE principles.
 
 <!--more-->
 
-Automation can be defined as a set of technologies and practices that aims to
+We can define automation as a set of technologies and practices that aims to
 reduce the need of human intervention in processes. The concept is far older
-than IT, and it predates modern society as [history tells us](https://en.wikipedia.org/wiki/Water_clock).
+than IT, and it predates modern society as [history tells
+us](https://en.wikipedia.org/wiki/Water_clock).
 
 <!-- home automation -->
 <!-- financial automation -->
@@ -45,48 +46,49 @@ comparing the team hours drained by toil, support and any sort of known tasks
 repeated throughout any given time?
 
 Google's SRE does indeed mention to take automations with a grain of salt, which
-is very specific on when and why:
+is specific on when and why:
 
 - negligent and short-sighted automation planning can have side/negative effects
 - quick win solutions can stack up as technical debt if taken as "problem solved"
 - side-loading automations to dedicated teams incur in coverage drift and thus toil
 
-Naturally some processes do not need automations. They might have a low recurrence,
-low impact and low relevance, and thus does not _need_ and automation as per se.
-And that's exactly where the true automation boundary lies in: a system/process
-becomes an automation candidate the moment it presents a reproducible workflow
-operated by a human and has a non-negligible recurrence, impact (on it's result
-and on the team that does execute it) and relevance, not just through sugar-coated
-management components as OKRs, KPIs, or the trinity SLI/SLO/SLA.
+Naturally some processes do not need automations. They might have a low
+recurrence, low impact and low relevance, and thus does not _need_ an
+automation. And that's exactly where the true automation boundary lies in: a
+system/process becomes an automation candidate the moment it presents a
+reproducible workflow operated by a human and has a non-negligible recurrence,
+impact (on it's result and on the team that does execute it) and relevance, not
+just through sugar-coated management components as OKRs, KPIs, or the trinity
+SLI/SLO/SLA.
 
-Speaking of such syntactic sugar, they are supposed to support and in some cases
-are a by-product of the SRE work - not the other way around. The adoption of SRE
-terminology starting by the result keywords rather than by its tenets, skipping
-the essence altogether, is as artificial as The Matrix itself: you get the nice
-black suit and sunglasses, while your problems are everywhere, and multiplying
-themselves, until "a hero" comes in and solves everything - manually.
+Speaking of such syntactic sugar, they support and are a by-product of the SRE
+work - not the other way around. The adoption of SRE terminology starting by the
+result keywords rather than by its tenets, skipping the essence altogether, is
+as artificial as The Matrix itself: you get the nice black suit and sunglasses,
+while your problems are everywhere, and multiplying themselves, until "a hero"
+comes in and solves everything - manually.
 
-Don't get me wrong on OKRs, KPIs and the trinity SLI/SLO/SLA: they _are_ important,
-useful and needed. The problem is how it is implemented, specially the order it
-comes, and what priorities are established in order to get those alive and kicking.
-You can have a service with 5 9s availability for the last 6 months, but then how
-many changes have been rolled out on the very same interim? Also how much
-operational hours has the team dedicated to operations related to the expected
-outcome of such service? And how high is the internal/external users + responsible
-team churn rates? 5 9's is easy on cloud nowadays; that doesn't mean the service
-has an adequate availability setup, is really reliable or even sustainable on the
-long run. Shall we check the disaster recovery measures, procedures and the
-feasibility of those?
+Don't get me wrong on OKRs, KPIs and the trinity SLI/SLO/SLA: they _are_
+important and useful. The problem is how one implements them, specially the
+order it comes and what priorities they establish to get those. Imagine you have
+a service with 5 9s availability for the last 6 months; then question it:
 
-Last but not least, automations are a step towards the nirvana state-of-art of
-operations, or rather _no operations_: autonomous systems/processes. This means
-not only tasks are executed automatically, but they also are capable of reacting
-and/or maintain state changes, thus responding to a known state accordingly.
+- volume of deployed changes in the same interim
+- operational hours the team spent related to the expected outcome
+- internal/external users + responsible team churn rates
 
-With all that said, it is clear that automation, and further on autonomous systems,
-are an intrinsic part of the SRE role and expected work. These are all related
-to a couple of tenets, which can be further explored individually given the
-context and boundaries aforementioned.
+5 9's is easy on cloud nowadays. That doesn't mean the service has an adequate
+availability setup. Neither that its reliable nor sustainable on the long run.
+Check the disaster recovery measures, procedures and the feasibility of those,
+it might surprise you.
+
+Automations are a step towards the nirvana state-of-art of operations, or rather
+_no operations_: autonomous systems/processes. This means tasks capable of
+reacting and/or maintain state changes and to act automatically.
+
+Automation and autonomous systems are an intrinsic part of the SRE role and
+their expected work. These are all related to a couple of tenets, which can be
+further explored individually given the context and boundaries mentioned so far.
 
 - availability
 - latency

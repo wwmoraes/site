@@ -1,5 +1,6 @@
 ---
 description: lorem ipsum
+lastmod: 2024-08-11T13:28:38+02:00
 radarIndex: 19
 radarSection: techniques
 radarTier: hold
@@ -9,7 +10,7 @@ table-of-contents: false
 title: Cloud Solution Architect
 ---
 
-Let's face it: cloud is someone else's computer with fancy APIs. Whether one of
+Let's face it: cloud is someone else computer with fancy APIs. Whether one of
 its canned features can solve a problem or not is best assessed by a team with
 full context over a problem. Cloud solution architects in practice are distant
 from such, ending up "enabling" features based on buzz and/or preferences.

@@ -10,7 +10,7 @@ resources:
 tags:
 - Opinion
 title: Scripts don't scale; they give you scriptitis
-lastmod: 2023-12-01T14:52:28.302000+01:00
+lastmod: 2024-08-11T13:30:17+02:00
 ---
 
 Have you ever had to wait for an "automated" process to unblock you that took
@@ -108,7 +108,7 @@ topics I'll save for another day.
 The bottom line is: Pipeline's broken? Uh oh, time to switch context from the
 main solution code to troubleshoot the pipeline code. Split brain right there.
 Then you realize you need an external team to change the templates as you don't
-have the rights to update them...
+have the rights to update them…
 
 ![https://tenor.com/en-GB/view/barney-stinson-neil-patrick-harris-himym-how-i-met-your-mother-gif-5353868](https://media.tenor.com/C45MBZAcrlwAAAAC/barney-stinson.gif)
 
@@ -116,7 +116,7 @@ have the rights to update them...
 
 Don't get me wrong: I love scripting languages. I use them for common tasks on
 both personal and work environments. My teammates at some point get used to see
-_le wild Makefile_ that appears on each repository I ever touch. Another good
+_a wild `Makefile`_ that appears on each repository I ever touch. Another good
 example is how I use [chezmoi][chezmoi] to deploy [preference files][dotfiles]
 and run dozens scripts for the "last mile" setup on my machines.
 

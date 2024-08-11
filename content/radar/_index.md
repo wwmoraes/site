@@ -6,11 +6,12 @@ resources:
 - name: radar
   src: radar/radar.svg
   title: William Artero technology radar
+lastmod: 2024-08-11T12:58:52+02:00
 ---
 
 Here's my personal technology radar. Its inspired by the [Thoughtworks one](https://www.thoughtworks.com/radar).
 
-A key difference is that the entries here are based on my personal preferences,
+A key difference is that the entries here relates to my personal preferences,
 experience and perceived value. They neither reflect the opinions of my current
 nor previous employers. Tiers and their meanings are:
 

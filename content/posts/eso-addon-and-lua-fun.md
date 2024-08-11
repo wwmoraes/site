@@ -7,6 +7,7 @@ categories:
 - Code
 tags:
 - Lua
+lastmod: 2024-08-11T13:06:48+02:00
 ---
 
 ## Prologue: My moon cycle
@@ -25,7 +26,7 @@ its limited API and library access.
 Fast-forward to 2020, and I've started looking for better ways to automate my
 workflows on MacOS. AppleScript is awesome in what it provides, however the
 language and tooling consumes a lot of time testing and troubleshooting. Even
-JXA JavaScript for Automation is way to cryptic to be used consistently.
+JXA JavaScript for Automation is way to cryptic to use consistently.
 
 Then I've found [Hammerspoon][hs], a beautiful MacOS app that exposes a ton of
 OS APIs through easy-to-use Lua objects. I'll write a bit more about it on
@@ -54,7 +55,7 @@ something both for fun, but also functional enough to justify the effort.
 
 I won't deep dive on the ESO API as that's not the focus of this post. Suffice
 to say that most of it is accessible either through global objects and events.
-Most addon interactions are done in a responsive way, by listening for
+Most addon interactions happens in a responsive way, by listening for
 server-emitted events. There's events from combat actions to bank interactions,
 inventory and even when you try to use a skill on an action slot with the wrong
 weapon equipped. Some of the more advanced addons available completely replace
@@ -73,7 +74,7 @@ TODO INSERT IMAGE
 The first thing I've missed is a set of slash commands to switch status. MMOs
 usually sport dozens of slash commands to easily change configurations, switch
 chat channels, whisper to friends and gesture. The second one was the lack of
-use for the other statuses besides online and offline. So I decided to create
+use for the other statuses besides online and offline. That led me to create
 both the missing commands, and automate status changes depending on the player
 activity:
 
@@ -91,11 +92,11 @@ that returns an empty table for you to use as you see fit. This table is then
 _automagically_ dumped into a Lua file for your addon, and you can load it back
 through the same API.
 
-These saved variables, as they are known as, can be either character-specific or
-account-wide. Most addons even provide a toggle for users to choose how they
-want to persist their settings. However, checking everywhere on your code
-whether the user wants to use character or account-wide is not efficient. That's
-a perfect use-case for metatables!
+These saved variables can be either character-specific or account-wide. Most
+addons even provide a toggle for users to choose how they want to persist their
+settings. However, checking everywhere on your code whether the user wants to
+use character or account-wide is not efficient. That's a perfect use-case for
+metatables!
 
 ## Saved variables proxy
 

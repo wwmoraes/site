@@ -3,6 +3,7 @@ _build:
   list: true
   render: false
 description: The 90's solution to portability that needs to rest in peace
+lastmod: 2024-08-11T13:01:15+02:00
 radarIndex: 54
 radarSection: languages
 radarTier: hold
@@ -17,9 +18,9 @@ Interoperability wasn't in the agenda of most operating system and solution
 vendors. The following decades also witnessed the beef about web standards -
 something that's far from over, but its far less pronounced these days.
 
-In that context, Java was born in 1995 to solve it all with the promise of
-coding once and running everywhere. Even its ominous installer tries to sell
-that to this very day.
+In that context, Java born in 1995 to solve it all with the promise of coding
+once and running everywhere. Even its ominous installer tries to sell that to
+date.
 
 Java took the market by storm: developers started learning it and graduation
 classes soon picked up the trend. Sun Microsystems, then owner of Java's rights,
@@ -33,9 +34,9 @@ embracing other technologies in its wake. For instance Microsoft evolved
 Windows' POSIX subsystem to an usable state, and in 2016 started the .NET Core
 to decouple their CLR from Windows.
 
-What's more, Linux containers changed everything. With Docker's and Apache
-Aurora's (part of Mesos) releases in 2013, followed by Kubernetes in 2014,
-containers became the new standard for portable solutions.
+What's more, Linux containers changed everything. With Docker and Apache Aurora
+(part of Mesos) releases in 2013, followed by Kubernetes in 2014, containers
+became the new standard for portable solutions.
 
 In that sense, running Java containers have the drawback that each container
 needs its own JVM tooling and auxiliary system binaries from for it to work.

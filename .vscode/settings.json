@@ -4,7 +4,7 @@
       "comments": "on",
       "other": "on",
       "strings": "on"
-    },
+    }
   },
   "css.format.enable": false,
   "files.associations": {
@@ -53,6 +53,9 @@
     "**/public": true,
     "**/tmp": true
   },
+  "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
+  "vale.enableSpellcheck": true,
+  "vale.valeCLI.config": "${workspaceFolder}/.vale.ini",
   "webPreview.mediaScreen": {
     "2XL": 1536,
     "LG": 1024,

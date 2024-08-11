@@ -9,7 +9,7 @@ categories:
 - Principle
 tags:
 - Analysis
-lastmod: 2024-08-10T13:31:12+02:00
+lastmod: 2024-08-11T13:26:03+02:00
 ---
 
 Software engineers use acronyms to convey certain ideas in a single word to
@@ -23,14 +23,14 @@ and even meaning loss. Let's talk about the _KISS_ principle.
 
 _KISS_ stands for _keep it simple stupid_. It's said that Kelly Johnson, a
 renowned aeronautical engineer from Lockheed, coined the term. Johnson is best
-known for his planes and jets key to the World War II's Allies victory.
+known for his planes and jets key to the World War II Allies victory.
 
 Kelly is also known for his management style that became norm in his lifelong
 company, Lockheed. He led an area that became known as Skunk Works, the cradle
 of all his brilliant creations. As per Ben Rich, author of Johnson's posthumous
 biography:
 
-> a concentration of a few good people... applying the simplest, most
+> a concentration of a few good people… applying the simplest, most
 > straightforward methods possible to develop and produce new products
 >
 > -- Ben Rich, describing the Skunk Works division
@@ -126,9 +126,9 @@ that still holds world records to date. As per Johnson himself:
 >
 > -- Clarence "Kelly" Johnson, about the Blackbirds design
 
-They had to invent everything from scratch. Isn't that... _non-KISS_?
+They had to invent everything from scratch. Isn't that… _non-KISS_?
 Over-engineering even? I'm sure they could solve it with some extra glue and
-regular connecting plugs instead... 🌚
+regular connecting plugs instead… 🌚
 
 Doing less can harm the comprehension of the final design, let alone deliver the
 expected results. The Blackbirds are nothing short of an engineering wonder, yet
@@ -143,8 +143,8 @@ It'd be tiresome to go through that, as the nuances of it would slip the most
 attentive eye. The excessive level of "ornaments" distracts the user and may
 lead to a loss of context.
 
-Even more so if they decided to add all sorts of "optionals" to the end product.
-A small LCD so the pilot could watch their favorite series during a 1:54h trip
+Even more so if they decided to add all sorts of extras to the end product. A
+small LCD so the pilot could watch their favorite series during a 1:54h trip
 from New York to London? Marvelous! What about a popcorn dispenser? Delicious.
 
 ## Finding the sweet spot

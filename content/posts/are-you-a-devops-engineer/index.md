@@ -9,7 +9,7 @@ categories:
 - Career
 tags:
 - DevOps
-lastmod: 2024-08-10T13:30:45+02:00
+lastmod: 2024-08-11T11:41:25+02:00
 ---
 
 A search for the term DevOps on LinkedIn will yield countless posts and
@@ -55,13 +55,13 @@ iterations over the processes to further improve them.
 We deem a system or process as automated when it requires minimal to no human
 intervention to make decisions. Note that this differs from *automatic*, which
 means a process that acts involuntarily. A car wash is automatic; a home light
-that turns itself off 30 minutes before dawn is automated.
+that turns itself off 30 minutes before dawn is automation.
 
 The degree and scope of automation can vary between a small, atomic process and
 a bigger flow. An integration pipeline in a source code repository does not mean
-automation as per see. Let's say it has a step to run a lint tool and check the
-code. Regardless of the lint output, the merge requires a human to approve and
-execute it.
+automation. Let's say it has a step to run a lint tool and check the code.
+Regardless of the lint output, the merge requires a human to approve and execute
+it.
 
 ![http://reactiongifs.com/?p=19982](http://www.reactiongifs.com/r/mgc.gif)
 
@@ -83,7 +83,7 @@ If DevOps is knowledge and best practices, then the role means people that
 follow those, as you'd expect. The catch is how broad the term is: again, it
 acts as a double-edged sword here. It's not clear what's the exact set of soft
 and hard skills nor the technologies a DevOps must know; instead, each company
-industry has its wishlist printed on a DevOps-themed page.
+industry has its preferences printed on a DevOps-themed page.
 
 Aside from the technology stack, which is arguably subjective, one expects the
 required soft and hard skills to remain. For instance, the need for an engineer
@@ -143,7 +143,7 @@ operations of the DevOps team. Then the snowball begins.
 
 Granted, when done right, gluing tools can give awesome results. Kubernetes is a
 successful example of this. The difference between such a project and an average
-pipeline solution is simple: Kubernetes offers an extensive abstraction API
+pipeline solution is that Kubernetes offers an extensive abstraction API
 layer on top of all the tools it uses. It smooths over differences between
 options so you don't have to. It also relies on a strongly typed and compiled
 language to provide both the coding security and functional testing needed.
@@ -160,10 +160,11 @@ spreadsheets to sync up.
 Although part of the market uses both roles interchangeably, they differ in key
 areas. Some good sources for in-depth understanding are the books by Google
 about the topic. They are [available online for
-free](https://sre.google/books/).  You can get a paperback or ebook copy in most
-stores as well. I'll briefly touch on the points I feel are the most important.
+free](https://sre.google/books/).  You can get a paperback or e-book copy in
+most stores as well. I'll briefly touch on the points I feel are the most
+important.
 
-### A superset
+### A super set
 
 SRE is a superset/extends DevOps. Some may say an SRE does abide by the DevOps
 practices and mindset. In other terms, SRE defines new mechanisms and
@@ -194,10 +195,10 @@ bugs. I bet it won't be a short list.
 
 ![https://tenor.com/en-GB/view/qa-gif-26507223](https://media.tenor.com/S-CxC0jhfrMAAAAC/qa.gif)
 
-Sure, at the end of the day, a business actor still needs to click something
-somewhere to keep the business running. This happens in a system specialized in
-receiving such input, the frontend - anything beyond it talks machine language.
-Clean architecture anyone?
+Naturally a business actor still needs to click something somewhere to keep the
+business running. This happens in a system specialized in receiving such input,
+the frontend - anything beyond it talks machine language. Clean architecture
+anyone?
 
 ### Operation is not the job
 
@@ -214,7 +215,7 @@ in anti-pattern topology. Some are:
   on those
 - **System Administrator 2.0** ™️ - the operations team either hires DevOps
   engineers or adopts solutions related to DevOps
-- Ops as a Dev subset - there's no operations team; the development reserves
+- `Ops` as a `Dev` subset - there's no operations team; the development reserves
   time to do all operations
 - **System Administrator 3.0** ™️ - same as the 2.0 + now they call themselves
   SRE

@@ -13,8 +13,7 @@ terms of warranties and suitability for purpose
 [create an issue][new-issue] or [report a vulnerability][new-sec-issue]
 - We request that you work with our security team and opt for
 [responsible disclosure][disclosure] using the guidelines below
-- All security related issues and pull requests you make should be tagged with
-"security" for easy identification
+- Tag with "security" all security-related issues and pull requests you make
 - Please monitor this repository and update your environment in a timely manner
 as we release patches and updates
 
@@ -34,8 +33,8 @@ a status update
 - We will release the fix and publicly disclose the issue as soon as possible,
 but want to ensure we due properly due diligence before releasing
 - Please do not publicly blog or post about the security issue until after we
-have updated the public repo so that other downstream users have an opportunity
-to patch
+have updated the public repository so that other downstream users have an
+opportunity to patch
 
 ## Contact / Misc
 

@@ -1,5 +1,6 @@
 ---
 description: When will Microsoft sunset it to focus on GitHub?
+lastmod: 2024-08-11T11:36:07+02:00
 radarIndex: 7
 radarSection: platforms
 radarTier: hold
@@ -21,6 +22,6 @@ source repository. Its the opposite of similar tools like GitHub Actions or
 GitLab where the repository has a clear listing of all pipelines and builds in
 its scope.
 
-Unfortunately the entire kit is poorly glued together, and in practice I've
-seen companies using it in parallel with JIRA, which is a better option for
+Unfortunately the entire kit is poorly glued together, and in practice I've seen
+companies using it in parallel with Atlassian Jira, which is a better option for
 project management anyway.
