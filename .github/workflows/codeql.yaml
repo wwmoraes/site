@@ -45,27 +45,10 @@ jobs:
       with:
         install-nix: true
         cache-store: true
-    - name: set golang environment variables
-      id: golang
-      uses: wwmoraes/actions/golang/env@master
-    - name: cache modules
-      uses: pat-s/always-upload-cache@v3
-      with:
-        path: ${GOMODCACHE}
-        key: ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
-        restore-keys: |
-          ${{ runner.os }}-modules-${{ hashFiles('go.sum') }}
-          ${{ runner.os }}-modules-
+    - name: cache go
+      uses: wwmoraes/actions/golang/cache@master
     - name: download modules
       run: go mod download
-    - name: cache build
-      uses: pat-s/always-upload-cache@v3
-      with:
-        path: ${GOCACHE}
-        key: ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ hashFiles('**/*.go') }}
-          ${{ runner.os }}-build-
     - name: initialize
       uses: github/codeql-action/init@v3
       with:
