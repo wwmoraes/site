@@ -1,6 +1,17 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "NixOS/nixpkgs",
+      "URL": "https://github.com/NixOS/nixpkgs",
+      "Description": "Nix Packages collection \u0026 NixOS"
+    },
+    "URL": "https://github.com/NixOS/nixpkgs/pull/334258",
+    "Title": "goutline: init at 1.0.1",
+    "State": "OPEN",
+    "CreatedAt": "2024-08-12T23:52:44Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "qnikst/HaskellNet",
       "URL": "https://github.com/qnikst/HaskellNet",
       "Description": "Haskell library which provides client support for POP3, SMTP, and IMAP protocols."
@@ -97,16 +108,5 @@
     "Title": "chore: updated build tags",
     "State": "MERGED",
     "CreatedAt": "2022-08-17T09:14:49Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/kubegraph",
-      "URL": "https://github.com/wwmoraes/kubegraph",
-      "Description": "Kubernetes resource graph generator"
-    },
-    "URL": "https://github.com/wwmoraes/kubegraph/pull/178",
-    "Title": "fix: icons target dependencies",
-    "State": "MERGED",
-    "CreatedAt": "2022-08-17T09:09:02Z"
   }
 ]
