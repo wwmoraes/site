@@ -10,9 +10,9 @@ let
     sha256 = "1b2dwbqm5vdr7rmxbj5ngrxm7sj5r725rqy60vnlirbbwks6aahb";
   }) {};
   kaizen = import (fetchTarball {
-    name = "kaizen-8075b45edf93d8f95a00958fd3a1cc606ba3405c";
-    url = "https://github.com/wwmoraes/kaizen/archive/8075b45edf93d8f95a00958fd3a1cc606ba3405c.tar.gz";
-    sha256 = "1w6fkd5kqm2l2aij31kd9ddk84phbcir7flrbha6mxw2y4j36z09";
+    name = "kaizen-d6cde304893d8c1f55789d28c35f26b6256d8f37";
+    url = "https://github.com/wwmoraes/kaizen/archive/d6cde304893d8c1f55789d28c35f26b6256d8f37.tar.gz";
+    sha256 = "1whyxwaw70b5pqj4q2k12fk51c1cs00r7vlqc9k059ddq7zmb6yy";
   }) { inherit pkgs; };
   inherit (pkgs) lib mkShell;
 in mkShell rec {
@@ -35,6 +35,7 @@ in mkShell rec {
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     kaizen.gopium
     kaizen.goutline
+    kaizen.kroki-cli
     pkgs.git
     pkgs.gopls
     pkgs.gotools
