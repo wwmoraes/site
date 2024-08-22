@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "xd009642/tarpaulin",
+    "URL": "https://github.com/xd009642/tarpaulin",
+    "Description": "A code coverage tool for Rust projects",
+    "StarredAt": "2024-08-21T16:42:22Z"
+  },
+  {
     "NameWithOwner": "EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
     "URL": "https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
     "Description": "FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/tomnomnom/gron",
     "Description": "Make JSON greppable!",
     "StarredAt": "2024-06-22T21:31:00Z"
-  },
-  {
-    "NameWithOwner": "package-url/purl-spec",
-    "URL": "https://github.com/package-url/purl-spec",
-    "Description": "A minimal specification for purl aka. a package \"mostly universal\" URL, join the discussion at https://gitter.im/package-url/Lobby  ",
-    "StarredAt": "2024-06-17T22:41:48Z"
   }
 ]
