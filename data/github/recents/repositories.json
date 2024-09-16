@@ -1,5 +1,10 @@
 [
   {
+    "NameWithOwner": "wwmoraes/nurpkgs",
+    "URL": "https://github.com/wwmoraes/nurpkgs",
+    "Description": "Nix User Repository packages"
+  },
+  {
     "NameWithOwner": "wwmoraes/gotell",
     "URL": "https://github.com/wwmoraes/gotell",
     "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
@@ -43,10 +48,5 @@
     "NameWithOwner": "wwmoraes/imapfilter",
     "URL": "https://github.com/wwmoraes/imapfilter",
     "Description": "IMAP message filtering and actions for humans, in pure Haskell"
-  },
-  {
-    "NameWithOwner": "wwmoraes/cis1940",
-    "URL": "https://github.com/wwmoraes/cis1940",
-    "Description": "CIS 194: Introduction to Haskell homework resources and solutions"
   }
 ]
