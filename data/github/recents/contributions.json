@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/kaizen",
+      "URL": "https://github.com/wwmoraes/kaizen",
+      "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
+    },
+    "OccurredAt": "2024-09-18T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -12,14 +20,6 @@
       "NameWithOwner": "wwmoraes/site",
       "URL": "https://github.com/wwmoraes/site",
       "Description": "my personal website"
-    },
-    "OccurredAt": "2024-08-16T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/kaizen",
-      "URL": "https://github.com/wwmoraes/kaizen",
-      "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
     },
     "OccurredAt": "2024-08-16T07:00:00Z"
   },
