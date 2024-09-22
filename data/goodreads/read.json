@@ -1,6 +1,31 @@
 [
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780133258622",
+    "@type": "Book",
+    "name": "The Lean Mindset: Ask the Right Questions",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mary Poppendieck"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tom Poppendieck"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400890238l/18635263._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pearson Education, Limited"
+    },
+    "isbn": "9780133258622"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321278654",
     "@type": "Book",
     "name": "Extreme Programming Explained: Embrace Change",
