@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/homebrew-tap",
+      "URL": "https://github.com/wwmoraes/homebrew-tap",
+      "Description": "formulae and casks for Homebrew"
+    },
+    "OccurredAt": "2024-09-26T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/kaizen",
       "URL": "https://github.com/wwmoraes/kaizen",
       "Description": "quality-of-life tool configurations to streamline engineering work 🚀"
@@ -54,14 +62,6 @@
       "Description": "Hammerspoon Spoons plugins"
     },
     "OccurredAt": "2024-06-11T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/homebrew-tap",
-      "URL": "https://github.com/wwmoraes/homebrew-tap",
-      "Description": "formulae and casks for Homebrew"
-    },
-    "OccurredAt": "2024-05-11T07:00:00Z"
   },
   {
     "Repository": {
