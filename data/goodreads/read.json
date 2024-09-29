@@ -1,6 +1,37 @@
 [
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781942788362",
+    "@type": "Book",
+    "name": "Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jez Humble"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicole Forsgren"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gene Kim"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1521172398l/39080433._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IT Revolution Press"
+    },
+    "datePublished": "2018-01-01T00:00:00Z",
+    "isbn": "9781942788362"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780133258622",
     "@type": "Book",
     "name": "The Lean Mindset: Ask the Right Questions",
