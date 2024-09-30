@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/anilistarr",
+      "URL": "https://github.com/wwmoraes/anilistarr",
+      "Description": "anilist custom list provider for sonarr/radarr"
+    },
+    "OccurredAt": "2024-09-29T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/homebrew-tap",
       "URL": "https://github.com/wwmoraes/homebrew-tap",
       "Description": "formulae and casks for Homebrew"
@@ -38,14 +46,6 @@
       "Description": "DRY github actions collection"
     },
     "OccurredAt": "2024-08-11T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/anilistarr",
-      "URL": "https://github.com/wwmoraes/anilistarr",
-      "Description": "anilist custom list provider for sonarr/radarr"
-    },
-    "OccurredAt": "2024-08-01T07:00:00Z"
   },
   {
     "Repository": {
