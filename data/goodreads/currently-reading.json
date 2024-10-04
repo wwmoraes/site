@@ -42,6 +42,27 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780787968052",
+    "@type": "Book",
+    "name": "Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Patrick Lencioni"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2004-03-04T00:00:00Z",
+    "isbn": "9780787968052"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781449335946",
     "@type": "Book",
     "name": "Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming",
