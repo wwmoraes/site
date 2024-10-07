@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
+    },
+    "OccurredAt": "2024-10-06T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr"
@@ -25,11 +33,11 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries"
+      "NameWithOwner": "wwmoraes/anilistarr-rs",
+      "URL": "https://github.com/wwmoraes/anilistarr-rs",
+      "Description": "anilist custom list provider for sonarr/radarr, now in Rust 🦀"
     },
-    "OccurredAt": "2024-09-10T07:00:00Z"
+    "OccurredAt": "2024-08-21T07:00:00Z"
   },
   {
     "Repository": {
@@ -54,14 +62,6 @@
       "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
     },
     "OccurredAt": "2024-07-24T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/spoons",
-      "URL": "https://github.com/wwmoraes/spoons",
-      "Description": "Hammerspoon Spoons plugins"
-    },
-    "OccurredAt": "2024-06-11T07:00:00Z"
   },
   {
     "Repository": {
