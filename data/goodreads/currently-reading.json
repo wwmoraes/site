@@ -60,5 +60,31 @@
     },
     "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9781449335946"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781847926258",
+    "@type": "Book",
+    "name": "When McKinsey Comes to Town",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Walt Bogdanich"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael Forsythe"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1665649420l/60644838._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Random House Children's Books"
+    },
+    "datePublished": "2022-01-01T00:00:00Z",
+    "isbn": "9781847926258"
   }
 ]
