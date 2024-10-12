@@ -2,8 +2,11 @@ package update
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 	"os"
 	"runtime"
+	"time"
 
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
@@ -25,10 +28,14 @@ func Command() *cobra.Command {
 }
 
 func update(cmd *cobra.Command, args []string) error {
+	log.Println("reading site config")
+
 	data, err := os.ReadFile(".site.toml")
 	if err != nil {
 		return err
 	}
+
+	log.Println("loading site config")
 
 	config, err := loadSiteConfig(string(data))
 	if err != nil {
@@ -51,6 +58,8 @@ func update(cmd *cobra.Command, args []string) error {
 			Store:  store,
 		})
 	}
+
+	http.DefaultClient.Timeout = time.Second
 
 	errors := updaters.ExecuteAll(cmd.Context(), runtime.NumCPU())
 

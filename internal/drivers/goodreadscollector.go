@@ -2,6 +2,7 @@ package drivers
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"regexp"
 	"strings"
@@ -53,16 +54,14 @@ func (goodreads *goodreadsCollector) Collect(list, shelf string) error {
 
 		meta, err := openlibrary.GetBookData(http.DefaultClient, isbn13)
 		if err != nil {
-			return
+			log.Println(err)
 		}
 
-		if meta == nil {
-			return
-		}
-
-		err = meta.AugmentBook(book)
-		if err != nil {
-			return
+		if meta != nil {
+			err = meta.AugmentBook(book)
+			if err != nil {
+				log.Println(err)
+			}
 		}
 
 		booksInput <- book
