@@ -39,6 +39,12 @@ in mkShell rec {
     pkgs.git
     pkgs.gopls
     pkgs.gotools
+    unstable.delve
+    unstable.gopls
+    unstable.golangci-lint-langserver
+    unstable.gotools
+    pkgs.markdown-oxide
+    pkgs.dockerfile-language-server-nodejs
     ## TODO kroki
   ];
 
