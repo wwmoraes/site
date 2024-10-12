@@ -6,4 +6,5 @@ DaaS = "DaaS"
 nd = "nd"
 
 [default.extend-words]
+Mena = "Mena"
 Skelton = "Skelton"
