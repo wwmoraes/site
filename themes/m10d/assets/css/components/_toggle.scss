@@ -68,6 +68,18 @@ label.toggle {
     z-index: 999;
   }
 
+  input[type=checkbox]##{$id} {
+    border: none;
+
+    &::before {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   input[type=checkbox]##{$id}.toggle:checked {
     // target container state when toggle is on
     &~.#{$id} {
