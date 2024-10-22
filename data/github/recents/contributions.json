@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/nurpkgs",
+      "URL": "https://github.com/wwmoraes/nurpkgs",
+      "Description": "Nix User Repository packages"
+    },
+    "OccurredAt": "2024-10-21T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -62,14 +70,6 @@
       "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
     },
     "OccurredAt": "2024-07-24T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/spoons",
-      "URL": "https://github.com/wwmoraes/spoons",
-      "Description": "Hammerspoon Spoons plugins"
-    },
-    "OccurredAt": "2024-06-11T07:00:00Z"
   },
   {
     "Repository": {
