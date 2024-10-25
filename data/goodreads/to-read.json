@@ -358,6 +358,73 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780321127426",
+    "@type": "Book",
+    "name": "Patterns of Enterprise Application Architecture",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martin Fowler"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "isbn": "9780321127426"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781491978863",
+    "@type": "Book",
+    "name": "Seeking SRE: Conversations About Running Production Systems at Scale",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David N. Blank-Edelman"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503317453l/35355005._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media"
+    },
+    "datePublished": "2018-09-17T00:00:00Z",
+    "isbn": "9781491978863"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780471606956",
+    "@type": "Book",
+    "name": "Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Douglas C. Schmidt"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348611783l/85030._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Chichester [England]"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wiley"
+    },
+    "datePublished": "2000-01-01T00:00:00Z",
+    "isbn": "9780471606956"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781492043454",
     "@type": "Book",
     "name": "Fundamentals of Software Architecture: An Engineering Approach",
