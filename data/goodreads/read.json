@@ -266,7 +266,7 @@
     "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781593272838",
     "@type": "Book",
-    "name": "Learn You a Haskell for Great Good",
+    "name": "Learn You a Haskell for Great Good!: A Beginner's Guide",
     "author": [
       {
         "@context": "https://schema.org",
