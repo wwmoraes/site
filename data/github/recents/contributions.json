@@ -1,19 +1,19 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/dotfiles",
+      "URL": "https://github.com/wwmoraes/dotfiles",
+      "Description": "Cross-platform dotfiles with batteries"
+    },
+    "OccurredAt": "2024-10-31T07:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/gotell",
       "URL": "https://github.com/wwmoraes/gotell",
       "Description": "an opinionated thin-wrapper over the OpenTelemetry SDK"
     },
     "OccurredAt": "2024-10-26T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/dotfiles",
-      "URL": "https://github.com/wwmoraes/dotfiles",
-      "Description": "Cross-platform dotfiles with batteries"
-    },
-    "OccurredAt": "2024-10-25T07:00:00Z"
   },
   {
     "Repository": {
