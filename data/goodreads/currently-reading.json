@@ -63,20 +63,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/",
-    "@type": "Book",
-    "name": "System Design Interview – An insider's guide",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alex Xu"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1592265780l/54109255._SY75_.jpg"
-  },
-  {
-    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781847926258",
     "@type": "Book",
     "name": "When McKinsey Comes to Town",

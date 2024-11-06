@@ -1,11 +1,11 @@
 [
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/nurpkgs",
-      "URL": "https://github.com/wwmoraes/nurpkgs",
-      "Description": "Nix User Repository packages"
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website"
     },
-    "OccurredAt": "2024-11-06T08:00:00Z"
+    "OccurredAt": "2024-11-07T08:00:00Z"
   },
   {
     "Repository": {
@@ -13,7 +13,15 @@
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
     },
-    "OccurredAt": "2024-11-04T08:00:00Z"
+    "OccurredAt": "2024-11-06T08:00:00Z"
+  },
+  {
+    "Repository": {
+      "NameWithOwner": "wwmoraes/nurpkgs",
+      "URL": "https://github.com/wwmoraes/nurpkgs",
+      "Description": "Nix User Repository packages"
+    },
+    "OccurredAt": "2024-11-06T08:00:00Z"
   },
   {
     "Repository": {
@@ -54,14 +62,6 @@
       "Description": "anilist custom list provider for sonarr/radarr, now in Rust 🦀"
     },
     "OccurredAt": "2024-08-21T07:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website"
-    },
-    "OccurredAt": "2024-08-16T07:00:00Z"
   },
   {
     "Repository": {

@@ -425,20 +425,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/",
-    "@type": "Book",
-    "name": "The Elements of Style",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "William Strunk Jr."
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1429764791l/18882267._SY75_.jpg"
-  },
-  {
-    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781492043454",
     "@type": "Book",
     "name": "Fundamentals of Software Architecture: An Engineering Approach",
@@ -498,19 +484,5 @@
     },
     "datePublished": "2021-01-01T00:00:00Z",
     "isbn": "9781492086895"
-  },
-  {
-    "@context": "https://schema.org",
-    "@id": "https://openlibrary.org/isbn/",
-    "@type": "Book",
-    "name": "The Book of Monads: Master the theory and practice of monads, applied to solve real world problems",
-    "author": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alejandro Serrano Mena"
-      }
-    ],
-    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1540627328l/42449863._SY75_.jpg"
   }
 ]
