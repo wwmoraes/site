@@ -26,7 +26,15 @@ indent_style = tab
 [.git*]
 indent_style = tab
 
+[*.scss]
+insert_final_newline = unset
+
 ## generated content
+
+[.styles/**/*.{json,yml}]
+insert_final_newline = unset
+indent_style = unset
+indent_size = unset
 
 [.frontmatter/database/*.json]
 insert_final_newline = unset
