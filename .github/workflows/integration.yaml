@@ -26,6 +26,9 @@ jobs:
       with:
         install-nix: true
         cache-store: false
+        extra_nix_config: |-
+          extra-substituters = https://wwmoraes.cachix.org
+          extra-trusted-public-keys = wwmoraes.cachix.org-1:N38Kgu19R66Jr62aX5rS466waVzT5p/Paq1g6uFFVyM=
     - name: configure repository
       run: task configure
     - name: check
