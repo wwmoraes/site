@@ -63,6 +63,21 @@
   },
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781250234001",
+    "@type": "Book",
+    "name": "Surrounded by Idiots",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thomas Erikson"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1583763517l/39101777._SX50_.jpg",
+    "isbn": "9781250234001"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9781942788362",
     "@type": "Book",
     "name": "Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations",
@@ -396,5 +411,19 @@
     },
     "datePublished": "2019-12-19T00:00:00Z",
     "isbn": "9781484251645"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "DORA: A guide to the EU digital operational resilience act",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Pattison"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706006840l/205819638._SY75_.jpg"
   }
 ]
