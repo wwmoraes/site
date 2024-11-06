@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "ccmenu/ccmenu2",
+    "URL": "https://github.com/ccmenu/ccmenu2",
+    "Description": "CCMenu is a Mac app that shows the status of builds on CI/CD servers in the menu bar.",
+    "StarredAt": "2024-11-06T22:44:20Z"
+  },
+  {
     "NameWithOwner": "genuinetools/amicontained",
     "URL": "https://github.com/genuinetools/amicontained",
     "Description": "Container introspection tool. Find out what container runtime is being used as well as features available.",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/loov/goda",
     "Description": "Go Dependency Analysis toolkit",
     "StarredAt": "2024-07-07T19:56:01Z"
-  },
-  {
-    "NameWithOwner": "golang/pkgsite",
-    "URL": "https://github.com/golang/pkgsite",
-    "Description": "[mirror] Home of the pkg.go.dev website",
-    "StarredAt": "2024-07-07T17:25:44Z"
   }
 ]

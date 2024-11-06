@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9780201633610",
+    "@type": "Book",
+    "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Erich Gamma"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Vlissides"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Richard Helm"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ralph Johnson"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ralph Johnson"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348027904l/85009._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley Professional"
+    },
+    "datePublished": "1995-01-15T00:00:00Z",
+    "isbn": "9780201633610"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781449335946",
+    "@type": "Book",
+    "name": "Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Simon Marlow"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1368811788l/17802513._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Inc, USA"
+    },
+    "datePublished": "2013-01-01T00:00:00Z",
+    "isbn": "9781449335946"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "System Design Interview – An insider's guide",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Xu"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1592265780l/54109255._SY75_.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/9781847926258",
+    "@type": "Book",
+    "name": "When McKinsey Comes to Town",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Walt Bogdanich"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael Forsythe"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1665649420l/60644838._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Random House Children's Books"
+    },
+    "datePublished": "2022-01-01T00:00:00Z",
+    "isbn": "9781847926258"
+  }
+]
