@@ -9,35 +9,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Erich Gamma"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "John Vlissides"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Richard Helm"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ralph Johnson"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ralph Johnson"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348027904l/85009._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional"
-    },
-    "datePublished": "1995-01-15T00:00:00Z",
     "isbn": "9780201633610"
   },
   {
@@ -53,12 +27,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1368811788l/17802513._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Inc, USA"
-    },
-    "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9781449335946"
   },
   {

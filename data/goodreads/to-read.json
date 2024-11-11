@@ -212,17 +212,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780137081073"
   },
   {
