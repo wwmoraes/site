@@ -73,10 +73,10 @@
   },
   {
     "Repository": {
-      "NameWithOwner": "wwmoraes/stack-templates",
-      "URL": "https://github.com/wwmoraes/stack-templates",
-      "Description": "Modern templates for the Haskell Tool Stack"
+      "NameWithOwner": "wwmoraes/spoons",
+      "URL": "https://github.com/wwmoraes/spoons",
+      "Description": "Hammerspoon Spoons plugins"
     },
-    "OccurredAt": "2023-12-01T08:00:00Z"
+    "OccurredAt": "2024-06-11T07:00:00Z"
   }
 ]
