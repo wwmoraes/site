@@ -27,6 +27,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2004-03-04T00:00:00Z",
     "isbn": "9780787968052"
   },
   {
@@ -234,9 +240,35 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Bryan O'Sullivan"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Goerzen"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Don Stewart"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Sebastopol, California, USA",
+      "address": {
+        "addressCountry": "USA",
+        "addressLocality": "Sebastopol",
+        "addressRegion": "California"
+      }
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media"
+    },
+    "datePublished": "2008-12-01T00:00:00Z",
     "isbn": "9780596514983"
   },
   {
@@ -273,17 +305,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "San Francisco, CA"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "No Starch Press"
-    },
-    "datePublished": "2012-01-01T00:00:00Z",
     "isbn": "9781593272838"
   },
   {
@@ -299,12 +320,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471680093l/18043011._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Pearson"
-    },
-    "datePublished": "2017-09-10T00:00:00Z",
     "isbn": "9780134494166"
   },
   {
@@ -320,12 +335,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441506303l/114737._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Phaidon Press"
-    },
-    "datePublished": "2003-06-01T00:00:00Z",
     "isbn": "9780714843377"
   },
   {
