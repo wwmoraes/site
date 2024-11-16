@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/anilistarr",
+      "URL": "https://github.com/wwmoraes/anilistarr",
+      "Description": "anilist custom list provider for sonarr/radarr"
+    },
+    "OccurredAt": "2024-11-15T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/dotfiles",
       "URL": "https://github.com/wwmoraes/dotfiles",
       "Description": "Cross-platform dotfiles with batteries"
@@ -22,14 +30,6 @@
       "Description": "Nix User Repository packages"
     },
     "OccurredAt": "2024-11-06T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/anilistarr",
-      "URL": "https://github.com/wwmoraes/anilistarr",
-      "Description": "anilist custom list provider for sonarr/radarr"
-    },
-    "OccurredAt": "2024-11-01T07:00:00Z"
   },
   {
     "Repository": {

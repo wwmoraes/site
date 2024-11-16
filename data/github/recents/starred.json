@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "nix-community/nurl",
+    "URL": "https://github.com/nix-community/nurl",
+    "Description": "Generate Nix fetcher calls from repository URLs [maintainer=@figsoda]",
+    "StarredAt": "2024-11-15T22:49:02Z"
+  },
+  {
     "NameWithOwner": "analysis-tools-dev/static-analysis",
     "URL": "https://github.com/analysis-tools-dev/static-analysis",
     "Description": "⚙️ A curated list of static analysis (SAST) tools and linters for all programming languages, config files, build tools, and more. The focus is on tools which improve code quality.",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/denisbrodbeck/machineid",
     "Description": "Get the unique machine id of any host (without admin privileges)",
     "StarredAt": "2024-07-16T21:01:15Z"
-  },
-  {
-    "NameWithOwner": "direnv/direnv",
-    "URL": "https://github.com/direnv/direnv",
-    "Description": "unclutter your .profile",
-    "StarredAt": "2024-07-16T07:44:09Z"
   }
 ]
