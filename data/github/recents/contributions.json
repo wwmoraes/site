@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/nurpkgs",
+      "URL": "https://github.com/wwmoraes/nurpkgs",
+      "Description": "Nix User Repository packages"
+    },
+    "OccurredAt": "2024-11-16T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/anilistarr",
       "URL": "https://github.com/wwmoraes/anilistarr",
       "Description": "anilist custom list provider for sonarr/radarr"
@@ -22,14 +30,6 @@
       "Description": "my personal website"
     },
     "OccurredAt": "2024-11-07T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/nurpkgs",
-      "URL": "https://github.com/wwmoraes/nurpkgs",
-      "Description": "Nix User Repository packages"
-    },
-    "OccurredAt": "2024-11-06T08:00:00Z"
   },
   {
     "Repository": {

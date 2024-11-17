@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "adileo/squirreldisk",
+    "URL": "https://github.com/adileo/squirreldisk",
+    "Description": "Beautiful, Cross-Platform and Super Fast Disk Usage Analysis Tool - Built With Rust 🦀",
+    "StarredAt": "2024-11-16T14:46:44Z"
+  },
+  {
     "NameWithOwner": "nix-community/nurl",
     "URL": "https://github.com/nix-community/nurl",
     "Description": "Generate Nix fetcher calls from repository URLs [maintainer=@figsoda]",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/tierpod/dmarc-report-converter",
     "Description": "Convert dmarc reports from xml to human-readable formats",
     "StarredAt": "2024-07-24T16:39:38Z"
-  },
-  {
-    "NameWithOwner": "denisbrodbeck/machineid",
-    "URL": "https://github.com/denisbrodbeck/machineid",
-    "Description": "Get the unique machine id of any host (without admin privileges)",
-    "StarredAt": "2024-07-16T21:01:15Z"
   }
 ]
