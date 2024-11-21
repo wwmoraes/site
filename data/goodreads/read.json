@@ -331,6 +331,17 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "San Francisco, CA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "No Starch Press"
+    },
+    "datePublished": "2012-01-01T00:00:00Z",
     "isbn": "9781593272838"
   },
   {
