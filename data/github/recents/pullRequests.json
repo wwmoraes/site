@@ -3,7 +3,7 @@
     "Repository": {
       "NameWithOwner": "nix-community/NUR",
       "URL": "https://github.com/nix-community/NUR",
-      "Description": "Nix User Repository: User contributed nix packages [maintainer=@Mic92]"
+      "Description": "Nix User Repository: User contributed nix packages [maintainer=@Pandapip1]"
     },
     "URL": "https://github.com/nix-community/NUR/pull/770",
     "Title": "add wwmoraes repository",
