@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "nmattia/niv",
+    "URL": "https://github.com/nmattia/niv",
+    "Description": "Easy dependency management for Nix projects",
+    "StarredAt": "2024-11-23T11:32:19Z"
+  },
+  {
     "NameWithOwner": "adileo/squirreldisk",
     "URL": "https://github.com/adileo/squirreldisk",
     "Description": "Beautiful, Cross-Platform and Super Fast Disk Usage Analysis Tool - Built With Rust 🦀",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/lazamar/nix-package-versions",
     "Description": "Search for old versions of Nix packages",
     "StarredAt": "2024-08-03T11:25:17Z"
-  },
-  {
-    "NameWithOwner": "tierpod/dmarc-report-converter",
-    "URL": "https://github.com/tierpod/dmarc-report-converter",
-    "Description": "Convert dmarc reports from xml to human-readable formats",
-    "StarredAt": "2024-07-24T16:39:38Z"
   }
 ]
