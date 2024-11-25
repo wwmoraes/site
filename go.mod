@@ -3,7 +3,7 @@ module github.com/wwmoraes/site
 go 1.22.4
 
 require (
-	github.com/BurntSushi/toml v1.3.2
+	github.com/BurntSushi/toml v1.4.0
 	github.com/adrg/frontmatter v0.2.0
 	github.com/bmatcuk/doublestar/v4 v4.6.1
 	github.com/charmbracelet/huh v0.2.3
