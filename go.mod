@@ -16,7 +16,7 @@ require (
 	github.com/gocolly/colly v1.2.0
 	github.com/shurcooL/githubv4 v0.0.0-20231126234147-1cffa1f02456
 	github.com/spf13/cast v1.6.0
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
 	golang.org/x/oauth2 v0.15.0
 	golang.org/x/text v0.17.0
