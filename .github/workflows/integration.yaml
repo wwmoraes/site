@@ -36,7 +36,7 @@ jobs:
     - name: assert clean repository
       run: test -z "$(git diff --shortstat | head -c1)"
     - name: upload golangci-lint SARIF
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       if: ${{ hashFiles('golangci-lint.sarif') != '' }}
       with:
         sarif_file: golangci-lint.sarif
