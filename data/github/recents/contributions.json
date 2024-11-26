@@ -1,6 +1,14 @@
 [
   {
     "Repository": {
+      "NameWithOwner": "wwmoraes/site",
+      "URL": "https://github.com/wwmoraes/site",
+      "Description": "my personal website"
+    },
+    "OccurredAt": "2024-11-25T08:00:00Z"
+  },
+  {
+    "Repository": {
       "NameWithOwner": "wwmoraes/nurpkgs",
       "URL": "https://github.com/wwmoraes/nurpkgs",
       "Description": "Nix User Repository packages"
@@ -22,14 +30,6 @@
       "Description": "Cross-platform dotfiles with batteries"
     },
     "OccurredAt": "2024-11-08T08:00:00Z"
-  },
-  {
-    "Repository": {
-      "NameWithOwner": "wwmoraes/site",
-      "URL": "https://github.com/wwmoraes/site",
-      "Description": "my personal website"
-    },
-    "OccurredAt": "2024-11-07T08:00:00Z"
   },
   {
     "Repository": {
