@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "go-viper/mapstructure",
+    "URL": "https://github.com/go-viper/mapstructure",
+    "Description": "Go library for decoding generic map values into native Go structures and vice versa.",
+    "StarredAt": "2024-11-28T20:04:05Z"
+  },
+  {
     "NameWithOwner": "nmattia/niv",
     "URL": "https://github.com/nmattia/niv",
     "Description": "Easy dependency management for Nix projects",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
     "Description": "FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.",
     "StarredAt": "2024-08-19T23:12:16Z"
-  },
-  {
-    "NameWithOwner": "lazamar/nix-package-versions",
-    "URL": "https://github.com/lazamar/nix-package-versions",
-    "Description": "Search for old versions of Nix packages",
-    "StarredAt": "2024-08-03T11:25:17Z"
   }
 ]
