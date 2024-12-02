@@ -41,6 +41,7 @@ tasks:
     - cmd/site/**/*.go
     - internal/**/*.go
     - pkg/**/*.go
+    - go.sum
     generates:
     - '{{ .SITE | trimPrefix "./" }}'
   clean:
