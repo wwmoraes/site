@@ -11,7 +11,7 @@ insert_final_newline = true
 [.vscode/*.{json,code-snippets}]
 insert_final_newline = false
 
-[*.{html,json}]
+[*.html]
 insert_final_newline = false
 
 [*.md]
