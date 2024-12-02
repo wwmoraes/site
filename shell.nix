@@ -1,21 +1,12 @@
 { system ? builtins.currentSystem
+, sources ? import ./nix/sources.nix
 }:
 let
-  pkgs = import (fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/refs/tags/24.05.tar.gz";
-    sha256 = "1lr1h35prqkd1mkmzriwlpvxcb34kmhc9dnr48gkm8hh089hifmx";
-  }) {
+  pkgs = import sources.nixpkgs {
     inherit system;
     config.packageOverrides = pkgs: {
-      nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-        inherit pkgs;
-      };
-      unstable = import (fetchTarball {
-        name = "nixos-unstable-a14c5d651cee9ed70f9cd9e83f323f1e531002db";
-        # url = "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixpkgs-unstable.tar.gz";
-        url = "https://github.com/NixOS/nixpkgs/archive/a14c5d651cee9ed70f9cd9e83f323f1e531002db.tar.gz";
-        sha256 = "1b2dwbqm5vdr7rmxbj5ngrxm7sj5r725rqy60vnlirbbwks6aahb";
-      }) { inherit system pkgs; };
+      nur = import sources.NUR { inherit pkgs; };
+      unstable = import sources.unstable { inherit system pkgs; };
     };
   };
   inherit (pkgs) lib mkShell;
@@ -27,10 +18,10 @@ in mkShell rec {
     pkgs.hugo
     pkgs.lefthook
     pkgs.markdownlint-cli
+    pkgs.nodejs-slim # needed for stylelint 💀
     pkgs.typos
     pkgs.unstable.go
     pkgs.unstable.golangci-lint
-    pkgs.unstable.nodejs-slim # needed for stylelint 💀
     pkgs.vale
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
@@ -40,6 +31,7 @@ in mkShell rec {
     pkgs.gotools
     pkgs.imagemagick
     pkgs.markdown-oxide
+    pkgs.niv
     pkgs.nur.repos.wwmoraes.go-commitlint
     pkgs.nur.repos.wwmoraes.gopium
     pkgs.nur.repos.wwmoraes.goutline
