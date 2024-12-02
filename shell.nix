@@ -27,12 +27,11 @@ in mkShell rec {
     pkgs.hugo
     pkgs.lefthook
     pkgs.markdownlint-cli
-    pkgs.stylelint # TODO replace with native code tool
     pkgs.typos
     pkgs.unstable.go
     pkgs.unstable.golangci-lint
+    pkgs.unstable.nodejs-slim # needed for stylelint 💀
     pkgs.vale
-    pkgs.yarn # TODO remove after replacing stylelint
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     pkgs.dockerfile-language-server-nodejs
@@ -49,12 +48,13 @@ in mkShell rec {
     pkgs.unstable.golangci-lint-langserver
     pkgs.unstable.gopls
     pkgs.unstable.gotools
+    pkgs.yarn # needed for stylelint 💀
     ## TODO kroki
   ];
 
   offlineCache = pkgs.fetchYarnDeps {
     yarnLock = ./yarn.lock;
-    hash = "sha256-VxsMxEMathPYRXjg82dEoeNNX8RsAmzcCBVAdMlnicQ=";
+    hash = "sha256-RF+sFG4eQXDSNd3dWutWgIBpdJAo/jHWd+4IVLndvOU=";
   };
 
   configurePhase = ''
