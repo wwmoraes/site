@@ -50,7 +50,7 @@ jobs:
     - name: build
       run: task build
     - name: deliver
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: site-binary
         path: bin/site
