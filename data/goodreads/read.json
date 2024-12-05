@@ -53,12 +53,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Jossey-Bass"
-    },
-    "datePublished": "2004-03-04T00:00:00Z",
     "isbn": "9780787968052"
   },
   {
@@ -331,6 +325,17 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "San Francisco, CA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "No Starch Press"
+    },
+    "datePublished": "2012-01-01T00:00:00Z",
     "isbn": "9781593272838"
   },
   {
