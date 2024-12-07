@@ -35,9 +35,30 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Betsy Beyer"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chris (Computer engineer) Jones"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jennifer Petoff"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Niall Richard Murphy"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Inc."
+    },
+    "datePublished": "2016-01-01T00:00:00Z",
     "isbn": "9781491929124"
   },
   {
@@ -168,35 +189,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Gene Kim"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kevin Behr"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "George Spafford"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Kim"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Portland, Or"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IT Revolution Press"
-    },
-    "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9780988262591"
   },
   {
