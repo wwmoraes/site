@@ -410,17 +410,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348611783l/85030._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Chichester [England]"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Wiley"
-    },
-    "datePublished": "2000-01-01T00:00:00Z",
     "isbn": "9780471606956"
   },
   {

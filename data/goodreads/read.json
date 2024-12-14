@@ -378,12 +378,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441506303l/114737._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Phaidon Press"
-    },
-    "datePublished": "2003-06-01T00:00:00Z",
     "isbn": "9780714843377"
   },
   {
@@ -395,21 +389,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Morey J. Haber"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Darran Rolls"
+        "name": "Morey J Haber"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1577256026l/48816267._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Apress"
-    },
-    "datePublished": "2019-12-19T00:00:00Z",
     "isbn": "9781484251645"
   },
   {
