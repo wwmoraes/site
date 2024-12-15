@@ -58,5 +58,10 @@
     "icon": "youtube",
     "title": "YouTube",
     "url": "https://www.youtube.com/@%s"
+  },
+  "zotero": {
+    "icon": "zotero",
+    "title": "Zotero Library",
+    "url": "https://www.zotero.org/%s/library"
   }
 }
