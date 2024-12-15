@@ -1,6 +1,20 @@
 [
   {
     "@context": "https://schema.org",
+    "@id": "https://openlibrary.org/isbn/",
+    "@type": "Book",
+    "name": "A Philosophy of Software Design",
+    "author": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Ousterhout"
+      }
+    ],
+    "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1627437742l/58648004._SX50_.jpg"
+  },
+  {
+    "@context": "https://schema.org",
     "@id": "https://openlibrary.org/isbn/9780321336385",
     "@type": "Book",
     "name": "Continuous Integration: Improving Software Quality and Reducing Risk",
@@ -27,6 +41,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2004-03-04T00:00:00Z",
     "isbn": "9780787968052"
   },
   {
@@ -234,35 +254,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Bryan O'Sullivan"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "John Goerzen"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Don Stewart"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Sebastopol, California, USA",
-      "address": {
-        "addressCountry": "USA",
-        "addressLocality": "Sebastopol",
-        "addressRegion": "California"
-      }
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2008-12-01T00:00:00Z",
     "isbn": "9780596514983"
   },
   {
@@ -299,17 +293,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "San Francisco, CA"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "No Starch Press"
-    },
-    "datePublished": "2012-01-01T00:00:00Z",
     "isbn": "9781593272838"
   },
   {
