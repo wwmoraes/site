@@ -12,7 +12,7 @@ import (
 func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "touch",
-		Short: "updates a page date",
+		Short: "updates a page lastmod date",
 		RunE:  touch,
 	}
 
@@ -35,7 +35,7 @@ func touch(cmd *cobra.Command, args []string) error {
 			return err
 		}
 
-		page.FrontMatter[frontmatter.Date] = time.Now().Local()
+		page.FrontMatter[frontmatter.Lastmod] = time.Now().Local().Truncate(time.Second)
 
 		err = blip.Update(fsys, filename, page)
 		if err != nil {
