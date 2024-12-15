@@ -3,13 +3,19 @@ version: 2
 updates:
 - package-ecosystem: github-actions
   directory: /
+  labels:
+  - automerge
   schedule:
     interval: weekly
 - package-ecosystem: gomod
   directory: /
+  labels:
+  - automerge
   schedule:
     interval: weekly
 - package-ecosystem: npm
   directory: /
+  labels:
+  - automerge
   schedule:
     interval: weekly
