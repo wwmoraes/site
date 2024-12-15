@@ -1,7 +1,7 @@
 ---
-title: About
+lastmod: 2024-12-15T18:39:10+01:00
 table-of-contents: false
-lastmod: 2024-08-10T13:19:31+02:00
+title: About
 ---
 
 ## Hello there 👋
@@ -15,11 +15,17 @@ Snarky and stoic by nature, described as cheeky by peers. I tend to share my
 opinions and thoughts freely with teammates and stakeholders. Beating around
 the bush wastes time, our most precious resource.
 
-Check out what I'm up to right [now](/now). You can also follow my
-[RSS](/index.rss.xml)/[JSON](/index.feed.json) feed for updates.
+Want to know more? Have an inside look into my personal research references and
+interests through my [Zotero web library][zot-lib]. There's a list of books and
+research topics in my [now](/now) page as well ;)
+
+You can follow this site updates through [RSS](/index.rss.xml) and
+[JSON feed](/index.feed.json).
 
 ## Hiring
 
 Did you like my profile? Do you have a good challenge for me? Perhaps you want
 to get some insights into something? Feel free to
 [schedule a half-hour call](https://cal.com/artero) for us to chat.
+
+[zot-lib]: https://www.zotero.org/wwmoraes/library
