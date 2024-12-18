@@ -348,12 +348,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Simon \u0026 Schuster"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9781451648539"
   },
   {
