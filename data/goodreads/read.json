@@ -208,9 +208,25 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Matthew Skelton"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manuel Pais"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ruth Malan"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1563409554l/44135420._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IT Revolution Press"
+    },
+    "datePublished": "2019-01-01T00:00:00Z",
     "isbn": "9781942788829"
   },
   {

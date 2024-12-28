@@ -8,21 +8,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Niall Richard Murphy"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "David K. Rensin"
+        "name": "Betsy Beyer"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532993759l/39687146._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2018-08-04T00:00:00Z",
     "isbn": "9781492029502"
   },
   {
