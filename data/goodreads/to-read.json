@@ -24,30 +24,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Betsy Beyer"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris (Computer engineer) Jones"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jennifer Petoff"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Niall Richard Murphy"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459115220l/27968891._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Inc."
-    },
-    "datePublished": "2016-01-01T00:00:00Z",
     "isbn": "9781491929124"
   },
   {
@@ -63,12 +42,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2008-07-01T00:00:00Z",
     "isbn": "9780132350884"
   },
   {
@@ -81,40 +54,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Thomas H. Cormen"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Charles E. Leiserson"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ronald L. Rivest"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Clifford Stein"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390459484l/6752187._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Cambridge, MA, USA",
-      "address": {
-        "addressCountry": "USA",
-        "addressLocality": "Cambridge",
-        "addressRegion": "MA"
-      }
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The MIT Press"
-    },
-    "datePublished": "2009-01-01T00:00:00Z",
     "isbn": "9780262033848"
   },
   {
@@ -127,19 +69,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Gregor Hohpe"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Bobby Woolf"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347390905l/85012._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
     "isbn": "9780321200686"
   },
   {
@@ -151,21 +83,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Frederick P. Brooks"
+        "name": "Frederick P. Brooks Jr."
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348430512l/13629._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Reading, Mass"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional"
-    },
-    "datePublished": "1995-01-01T00:00:00Z",
     "isbn": "9780201835953"
   },
   {
@@ -178,35 +99,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Gene Kim"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kevin Behr"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "George Spafford"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Kim"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361113128l/17255186._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Portland, Or"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IT Revolution Press"
-    },
-    "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9780988262591"
   },
   {
@@ -222,17 +117,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347470803l/10284614._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Upper Saddle River, NJ"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prentice Hall"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9780137081073"
   },
   {
@@ -248,17 +132,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636153031l/56631473._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Boston"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional  Pearson Educational US"
-    },
-    "datePublished": "2021-01-01T00:00:00Z",
     "isbn": "9780136915713"
   },
   {
@@ -274,12 +147,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451351509l/21413662._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Houghton Mifflin Harcourt"
-    },
-    "datePublished": "2014-01-01T00:00:00Z",
     "isbn": "9780544272996"
   },
   {
@@ -295,12 +162,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1643644004l/60190659._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Riverhead Books"
-    },
-    "datePublished": "2022-01-01T00:00:00Z",
     "isbn": "9780525537113"
   },
   {
@@ -316,12 +177,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550145086l/43852758._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Riverhead Books"
-    },
-    "datePublished": "2019-01-01T00:00:00Z",
     "isbn": "9780525537090"
   },
   {
@@ -337,12 +192,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511288482l/11084145._SY75_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Simon \u0026 Schuster"
-    },
-    "datePublished": "2011-01-01T00:00:00Z",
     "isbn": "9781451648539"
   },
   {
@@ -358,11 +207,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440294142l/70156._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley"
-    },
     "isbn": "9780321127426"
   },
   {
@@ -378,12 +222,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503317453l/35355005._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2018-09-17T00:00:00Z",
     "isbn": "9781491978863"
   },
   {
@@ -399,17 +237,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348611783l/85030._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Chichester [England]"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Wiley"
-    },
-    "datePublished": "2000-01-01T00:00:00Z",
     "isbn": "9780471606956"
   },
   {
@@ -436,20 +263,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Mark Richards"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Neal Ford"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1580813753l/44144493._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media"
-    },
-    "datePublished": "2020-02-11T00:00:00Z",
     "isbn": "9781492043454"
   },
   {
@@ -462,30 +278,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Neal Ford"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mark Richards"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Pramod Sadalage"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Zhamak Dehghani"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1629825122l/58153482._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "O'Reilly Media, Incorporated"
-    },
-    "datePublished": "2021-01-01T00:00:00Z",
     "isbn": "9781492086895"
   },
   {
