@@ -22,10 +22,36 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "name": "Paul M. Duvall"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
         "name": "Paul Duvall"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Steve Matyas"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Glover"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1372043941l/1311542._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Upper Saddle River, NJ"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2007-01-01T00:00:00Z",
     "isbn": "9780321336385"
   },
   {
@@ -41,6 +67,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348784131l/49040._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jossey-Bass"
+    },
+    "datePublished": "2004-03-04T00:00:00Z",
     "isbn": "9780787968052"
   },
   {
@@ -67,10 +99,26 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "name": "Jez Humble"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
         "name": "Nicole Forsgren"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gene Kim"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1520501690l/39080433._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IT Revolution Press"
+    },
+    "datePublished": "2018-01-01T00:00:00Z",
     "isbn": "9781942788362"
   },
   {
@@ -83,9 +131,19 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Mary Poppendieck"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tom Poppendieck"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400890238l/18635263._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pearson Education, Limited"
+    },
     "isbn": "9780133258622"
   },
   {
@@ -98,9 +156,25 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Kent Beck"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cynthia Andres"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386925310l/67833._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Boston, MA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
+    "datePublished": "2005-01-01T00:00:00Z",
     "isbn": "9780321278654"
   },
   {
@@ -116,6 +190,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1688419801l/171691901._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Incorporated"
+    },
+    "datePublished": "2023-01-01T00:00:00Z",
     "isbn": "9781098151249"
   },
   {
@@ -128,9 +208,25 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Matthew Skelton"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manuel Pais"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ruth Malan"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1563409554l/44135420._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IT Revolution Press"
+    },
+    "datePublished": "2019-01-01T00:00:00Z",
     "isbn": "9781942788829"
   },
   {
@@ -146,6 +242,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661205628l/61058107._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Incorporated"
+    },
+    "datePublished": "2022-01-01T00:00:00Z",
     "isbn": "9781098118730"
   },
   {
@@ -161,6 +263,11 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287493789l/179133._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Addison-Wesley"
+    },
     "isbn": "9780321125217"
   },
   {
@@ -173,9 +280,35 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Bryan O'Sullivan"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Goerzen"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Don Stewart"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834758l/3226758._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Sebastopol, California, USA",
+      "address": {
+        "addressCountry": "USA",
+        "addressLocality": "Sebastopol",
+        "addressRegion": "California"
+      }
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media"
+    },
+    "datePublished": "2008-12-01T00:00:00Z",
     "isbn": "9780596514983"
   },
   {
@@ -191,6 +324,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1494624519l/34691716._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media"
+    },
+    "datePublished": "2018-03-05T00:00:00Z",
     "isbn": "9781491983645"
   },
   {
@@ -206,6 +345,17 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753505l/9282423._SX50_.jpg",
+    "locationCreated": {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "San Francisco, CA"
+    },
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "No Starch Press"
+    },
+    "datePublished": "2012-01-01T00:00:00Z",
     "isbn": "9781593272838"
   },
   {
@@ -242,6 +392,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441506303l/114737._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Phaidon Press"
+    },
+    "datePublished": "2003-06-01T00:00:00Z",
     "isbn": "9780714843377"
   },
   {
@@ -253,10 +409,21 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Morey J Haber"
+        "name": "Morey J. Haber"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Darran Rolls"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1577256026l/48816267._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Apress"
+    },
+    "datePublished": "2019-12-19T00:00:00Z",
     "isbn": "9781484251645"
   },
   {

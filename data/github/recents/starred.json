@@ -1,5 +1,11 @@
 [
   {
+    "NameWithOwner": "system-fonts/modern-font-stacks",
+    "URL": "https://github.com/system-fonts/modern-font-stacks",
+    "Description": "System font stack CSS organized by typeface classification for every modern operating system",
+    "StarredAt": "2024-12-29T16:02:56Z"
+  },
+  {
     "NameWithOwner": "nikolaydubina/go-cover-treemap",
     "URL": "https://github.com/nikolaydubina/go-cover-treemap",
     "Description": "🎄 Go code coverage to SVG treemap",
@@ -52,11 +58,5 @@
     "URL": "https://github.com/dtolnay/thiserror",
     "Description": "derive(Error) for struct and enum error types",
     "StarredAt": "2024-08-22T15:28:55Z"
-  },
-  {
-    "NameWithOwner": "xd009642/tarpaulin",
-    "URL": "https://github.com/xd009642/tarpaulin",
-    "Description": "A code coverage tool for Rust projects",
-    "StarredAt": "2024-08-21T16:42:22Z"
   }
 ]
