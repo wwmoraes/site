@@ -327,12 +327,6 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550145086l/43852758._SX50_.jpg",
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Riverhead Books"
-    },
-    "datePublished": "2019-01-01T00:00:00Z",
     "isbn": "9780525537090"
   },
   {
