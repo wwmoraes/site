@@ -162,21 +162,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Frederick P. Brooks"
+        "name": "Frederick P. Brooks Jr."
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348430512l/13629._SX50_.jpg",
-    "locationCreated": {
-      "@context": "https://schema.org",
-      "@type": "Place",
-      "name": "Reading, Mass"
-    },
-    "publisher": {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Addison-Wesley Professional"
-    },
-    "datePublished": "1995-01-01T00:00:00Z",
     "isbn": "9780201835953"
   },
   {
