@@ -27,6 +27,12 @@
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1368811788l/17802513._SX50_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "O'Reilly Media, Inc, USA"
+    },
+    "datePublished": "2013-01-01T00:00:00Z",
     "isbn": "9781449335946"
   },
   {
@@ -53,9 +59,20 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Walt Bogdanich"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael Forsythe"
       }
     ],
     "thumbnailUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1665649420l/60644838._SY75_.jpg",
+    "publisher": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Random House Children's Books"
+    },
+    "datePublished": "2022-01-01T00:00:00Z",
     "isbn": "9781847926258"
   }
 ]
