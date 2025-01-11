@@ -3,9 +3,66 @@
 headers:
 - for: /**
   values:
-    Content-Security-Policy: frame-ancestors 'none'
-    Permissions-Policy: geolocation=(), camera=(), microphone=()
-    Referrer-Policy: strict-origin-when-cross-origin
+    Access-Control-Allow-Headers: Accept, Accept-Encoding, Content-Type
+    Access-Control-Allow-Methods: '*'
+    Access-Control-Allow-Origin: '*'
+    Access-Control-Expose-Headers: '*'
+    Access-Control-Max-Age: 600
+    Cache-Control: max-age=31536000, public
+    Content-Security-Policy: frame-ancestors 'self'
+    Cross-Origin-Embedder-Policy: credentialless
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Resource-Policy: same-site
+    Feature-Policy: >-
+      accelerometer 'https://youtube.com';
+      autoplay 'none';
+      bluetooth 'none';
+      camera 'none';
+      clipboard-write 'https://youtube.com';
+      display-capture 'none';
+      encrypted-media 'none';
+      fullscreen 'none';
+      geolocation 'none';
+      gyroscope 'https://youtube.com';
+      idle-detection 'none';
+      magnetometer 'none';
+      microphone 'none';
+      midi 'none';
+      payment 'none';
+      picture-in-picture 'https://youtube.com';
+      publickey-credentials-create 'none';
+      publickey-credentials-get 'none';
+      screen-wake-lock 'none';
+      serial 'none';
+      storage-access 'none';
+      usb 'none';
+      web-share 'https://youtube.com';
+    Permissions-Policy: >-
+      accelerometer=("https://youtube.com"),
+      autoplay=(),
+      bluetooth=(),
+      camera=(),
+      clipboard-write=("https://youtube.com"),
+      display-capture=(),
+      encrypted-media=(),
+      fullscreen=(),
+      geolocation=(),
+      gyroscope=("https://youtube.com"),
+      idle-detection=(),
+      magnetometer=(),
+      microphone=(),
+      midi=(),
+      payment=(),
+      picture-in-picture=("https://youtube.com"),
+      publickey-credentials-create=(),
+      publickey-credentials-get=(),
+      screen-wake-lock=(),
+      serial=(),
+      storage-access=(),
+      usb=(),
+      web-share=("https://youtube.com"),
+    Referrer-Policy: no-referrer
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
 - for: /**.webmanifest
