@@ -134,7 +134,7 @@ tasks:
     desc: Update images' EXIF metadata.
     deps:
     - for: sources
-      task: exif:update:{{ .ITEM }}
+      task: exif:update:{{ .ITEM | trimSuffix ".json" }}
     sources:
     - archetypes/**/*.{jpg,png}.json
     - assets/**/*.{jpg,png}.json
@@ -171,7 +171,7 @@ tasks:
     aliases: [generate, gen, default]
     desc: Builds the static site pages.
     deps:
-    - generate:data
+    # - generate:data
     - generate:diagrams
     - generate:favicon
     - generate:images
@@ -249,8 +249,8 @@ tasks:
     deps:
     - task: build
     vars:
-      IMAGE: '{{ index .MATCH 0 | trimSuffix ".json" }}'
-      METADATA: '{{ index .MATCH 0 }}'
+      IMAGE: '{{ index .MATCH 0 }}'
+      METADATA: '{{ index .MATCH 0 }}.json'
     sources:
     - '{{ .IMAGE }}'
     - '{{ .METADATA }}'
@@ -259,7 +259,7 @@ tasks:
     - '{{ .IMAGE }}'
     cmds:
     - >-
-      {{ .SITE }} image update {{ .IMAGE | q }}
+      {{ .SITE }} image update {{ .IMAGE | q }} > /dev/null
   gnu:rm:dir:*:
     internal: true
     label: gnu:rm:dir:{{ .DIRECTORY }}
