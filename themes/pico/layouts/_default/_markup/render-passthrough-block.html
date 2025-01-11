@@ -1,0 +1,8 @@
+{{- if eq "TOC" (strings.TrimSpace .Inner) }}
+<label for="TableOfContents" title="table of contents">
+  <u role="presentation">&#128209;</u>
+</label>
+{{ .Page.TableOfContents }}
+{{- else }}
+{{- warnf "unknown passthrough block: %q" .Inner }}
+{{- end }}

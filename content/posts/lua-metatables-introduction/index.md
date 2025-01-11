@@ -37,12 +37,9 @@ You can also use them as conventional arrays:
 
 {{< source "conventional-array.lua" >}}
 
-{{< admonition note >}}
-
-Lua arrays are 1-indexed, i.e. they start on index one instead of zero like some
-common programming languages.
-
-{{< /admonition >}}
+> [!note]
+> Lua arrays are 1-indexed, i.e. they start on index one instead of zero like
+> some common programming languages.
 
 ### Metatables
 
@@ -92,13 +89,10 @@ The flow above is by no means authoritative, as I left out a few more nuances to
 this logic to keep it simple.[^metaindex] It does cover the most common use
 cases though, so let's keep it that way.
 
-{{< admonition note >}}
-
-I've written `__index(tbl,key)` instead of `__index(table,key)` to prevent
-confusing the `waldo` table instance (or any metatable looked up on this
-loop) with the standard library `table` global object.
-
-{{< /admonition >}}
+> [!note]
+> I've written `__index(tbl,key)` instead of `__index(table,key)` to prevent
+> confusing the `waldo` table instance (or any metatable looked up on this loop)
+> with the standard library `table` global object.
 
 [^metaindex]: The [documentation][docs-meta] states that any value that can
 resolve the `__index` metamethod works. This means `userdata` (C objects) can
@@ -136,21 +130,18 @@ table and its metatable:
 
 Beautiful. I'll dive into the colon operator on a separate post later on.
 
-{{< admonition note >}}
-
-The example above is a rather naive implementation to keep it simple. It doesn't
-prevent direct CRUD operations, non-numerical or out-of-order keys.
-
-Another reason is that Lua by design is extensible. That means it doesn't
-provide as many ways to lock down tables as it offers to extend them. That
-doesn't mean you can't make things harder to tamper. You can set the `__newindex`
-and `__index` functions to block assignment and retrieval. In this case, both
-`push` and `pull` methods must use `rawset` and `rawget` to bypass them.
-
-If you have a strong need to enforce data integrity then you should consider
-using an `userdata` value. You can define them using the C API.
-
-{{< /admonition >}}
+> [!note]
+> The example above is a rather naive implementation to keep it simple. It doesn't
+> prevent direct CRUD operations, non-numerical or out-of-order keys.
+>
+> Another reason is that Lua by design is extensible. That means it doesn't
+> provide as many ways to lock down tables as it offers to extend them. That
+> doesn't mean you can't make things harder to tamper. You can set the `__newindex`
+> and `__index` functions to block assignment and retrieval. In this case, both
+> `push` and `pull` methods must use `rawset` and `rawget` to bypass them.
+>
+> If you have a strong need to enforce data integrity then you should consider
+> using an `userdata` value. You can define them using the C API.
 
 ## Conclusion
 
@@ -160,21 +151,15 @@ Yet the indexing ones are more than enough to show the power of this mechanism.
 They are the main drive that makes Lua excellent to extend and prototype fast.
 This alone explains why the gaming industry has a wide use for Lua.
 
-{{< admonition edit >}}
-
-Updated diagrams, as I don't use Mermaid anymore. In fact, I used it in this
-blog while using PlantUML and Mingrammer diagrams everywhere else. Now they're
-all consistent.
-
-{{< /admonition >}}
-
-{{< admonition edit >}}
-
-Changed diagrams again, this time switching them to PNG instead of SVG.
-Size-wise they're small and fare better when embedded in feeds like RSS and
-ATOM.
-
-{{< /admonition >}}
+> [!edit]-
+>
+> 1. Updated diagrams, as I don't use Mermaid anymore. In fact, I used it in this
+> blog while using PlantUML and Mingrammer diagrams everywhere else. Now they're
+> all consistent.
+>
+> 1. Changed diagrams again, this time switching them to PNG instead of SVG.
+> Size-wise they're small and fare better when embedded in feeds like RSS and
+> ATOM.
 
 [spoons]: https://github.com/wwmoraes/spoons
 [docs-meta]: https://www.lua.org/manual/5.4/manual.html#2.4

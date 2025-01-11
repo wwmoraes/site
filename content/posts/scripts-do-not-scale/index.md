@@ -66,15 +66,14 @@ They turn into a system of its own when they overstay their welcome. You then
 have to maintain a new shiny system written with glue instead of a
 strongly-typed and testable programming language.
 
-{{< admonition warning "Testing scripts" >}}
-There's testing solutions for scripts as well, such as BATS for Bash and Pester
-for PowerShell. They are hacks at best, and you won't see them around for any
-vanilla use case of scripts.
-
-Those tools serve for nothing but prove my point that scripts aren't meant to
-write systems. Yet you see this kind of tooling appear due to the untreated
-_scriptitis_ in the IT industry.
-{{< /admonition >}}
+> [!warning] testing scripts
+> There's testing solutions for scripts as well, such as BATS for Bash and Pester
+> for PowerShell. They are hacks at best, and you won't see them around for any
+> vanilla use case of scripts.
+>
+> Those tools serve for nothing but prove my point that scripts aren't meant to
+> write systems. Yet you see this kind of tooling appear due to the untreated
+> _scriptitis_ in the IT industry.
 
 ## Drawing a line in the sand
 
@@ -145,19 +144,18 @@ portal as well, which relies on the API to relay your requests. Infrastructure
 code also depends on these APIs to make the magic happen. Why don't they provide
 you "scripts" to get this done instead?
 
-{{< admonition note "cloud vendor scripts ™️" >}}
-Matter of fact cloud service vendors **do** provide you scripts to interact
-with their APIs. The big three (AWS, GCP, Azure) for instance have their
-official CLI tools written in Python. Then people go and make all sorts of
-atrocities in pipelines with it. 😰
-
-From a developer perspective, most of those CLI tools rely on generated code
-from the API specs and are as mechanical as they can get. They have tests, yet
-[simple fixes face a bumpy road and take its sweet time][azcli-fix] to get
-through due to how the test becomes the problem.
-
-[azcli-fix]: https://github.com/Azure/azure-cli/pull/26013#issuecomment-1651158706
-{{< /admonition >}}
+> [!note] cloud vendor scripts ™️
+> Matter of fact cloud service vendors **do** provide you scripts to interact
+> with their APIs. The big three (AWS, GCP, Azure) for instance have their
+> official CLI tools written in Python. Then people go and make all sorts of
+> atrocities in pipelines with it. 😰
+>
+> From a developer perspective, most of those CLI tools rely on generated code
+> from the API specs and are as mechanical as they can get. They have tests, yet
+> [simple fixes face a bumpy road and take its sweet time][azcli-fix] to get
+> through due to how the test becomes the problem.
+>
+> [azcli-fix]: https://github.com/Azure/azure-cli/pull/26013#issuecomment-1651158706
 
 A clean architecture won't take more time than any thousand-line-sized script.
 The trade off is where the speed slope is: scripts are faster to create and

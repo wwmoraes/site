@@ -1,0 +1,104 @@
+{{- $lang := .Site.LanguageCode | default "en-us" -}}
+
+<!DOCTYPE html>
+<html data-theme="dark" lang="{{- $lang -}}">
+
+<head>
+  {{ partial "head/meta" . }}
+  {{ partial "content-security-policy" . }}
+  {{ partial "head/seo" . }}
+  {{ partial "head/icons" . }}
+  {{ partial "head/styles" . }}
+  {{ block "head" . -}}{{- end }}
+  <title>
+    {{- block "title" . -}}
+    {{- if .IsHome -}}
+    {{- .Site.Title -}}
+    {{- else -}}
+    {{- .LinkTitle | default .Title }} &#150; {{ .Site.Title -}}
+    {{- end -}}
+    {{- end -}}
+  </title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <strong>{{- .Site.Title -}}</strong>
+        </li>
+      </ul>
+      {{- with site.Menus.main -}}
+      <ul>
+        {{- range $key, $item := . -}}
+        <li>
+          <a href="{{- $item.URL -}}">{{- $item.Name -}}</a>
+        </li>
+        {{- end -}}
+      </ul>
+      {{- end -}}
+    </nav>
+  </header>
+  <main>
+    <header>
+      {{- partial "breadcrumb" . }}
+      {{- $renderHeader := true }}
+      {{- /* skip everything in custom sections */ -}}
+      {{- $renderHeader = and $renderHeader (not (in site.Params.customSections .Type)) }}
+      {{- /* skip pages from main sections */ -}}
+      {{- $renderHeader = and $renderHeader (or (ne .Kind "page") (not (in site.Params.mainSections
+      .Type))) }}
+      {{- if $renderHeader }}
+      <hgroup>
+        <h1>{{ .Title | emojify }}</h1>
+        {{- $description := .Description }}
+        {{- if .IsHome }}
+        {{- $description = .Params.description }}
+        {{- end }}
+        {{- with $description }}
+        <p>{{- . -}}</p>
+        {{- end }}
+      </hgroup>
+      {{- end }}
+    </header>
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+  <footer>
+    <hr />
+    {{- with site.Menus.social }}
+    <nav aria-label="social">
+      <ul>
+        {{- range $key, $item := . }}
+        <li>
+          <a href="{{- $item.URL -}}" {{- partial "function/props" $item.Params -}}>{{- $item.Name -}}</a>
+        </li>
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}
+    {{- with site.Menus.taxonomies }}
+    <nav aria-label="taxonomies">
+      <ul>
+        {{- range $key, $item := . }}
+        <li>
+          <a href="{{- $item.URL -}}" {{- partial "function/props" $item.Params -}}>{{- $item.Name -}}</a>
+        </li>
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}
+    {{- with .Site.Copyright }}
+    <hr />
+    <p>
+      <small>
+        {{- printf . now.Year | safeHTML -}}
+      </small>
+    </p>
+    {{- end }}
+  </footer>
+  {{- partialCached "goatcounter" . .Site.Params.goatcounter -}}
+</body>
+
+</html>

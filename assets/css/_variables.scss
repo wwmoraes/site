@@ -1,24 +1,251 @@
-@import "utilities";
+:root {
+  --theme-primary-50: #5eefff;
+  --theme-primary-100: #54e5ff;
+  --theme-primary-200: #4adbff;
+  --theme-primary-300: #40d1ff;
+  --theme-primary-400: #36c7ff;
+  --theme-primary-500: #2cbdff;
+  --theme-primary-600: #22b3f5;
+  --theme-primary-700: #18a9eb;
+  --theme-primary-800: #0e9fe1;
+  --theme-primary-900: #0495d7;
+  --theme-complement-50: #ff803d;
+  --theme-complement-100: #ff7633;
+  --theme-complement-200: #ff6c29;
+  --theme-complement-300: #ff621f;
+  --theme-complement-400: #ff5815;
+  --theme-complement-500: #ff4e0b;
+  --theme-complement-600: #f54401;
+  --theme-complement-700: #eb3a00;
+  --theme-complement-800: #e13000;
+  --theme-complement-900: #d72600;
+  --theme-secondary-50: #6f8cb2;
+  --theme-secondary-100: #6582a8;
+  --theme-secondary-200: #5b789e;
+  --theme-secondary-300: #516e94;
+  --theme-secondary-400: #47648a;
+  --theme-secondary-500: #3d5a80;
+  --theme-secondary-600: #335076;
+  --theme-secondary-700: #29466c;
+  --theme-secondary-800: #1f3c62;
+  --theme-secondary-900: #153258;
+  --theme-background-50: #666774;
+  --theme-background-100: #5c5d6a;
+  --theme-background-200: #525360;
+  --theme-background-300: #484956;
+  --theme-background-400: #3e3f4c;
+  --theme-background-500: #343542;
+  --theme-background-600: #2a2b38;
+  --theme-background-700: #20212e;
+  --theme-background-800: #161724;
+  --theme-background-900: #0c0d1a;
+  --theme-text-50: #e7edf2;
+  --theme-text-100: #dde3e8;
+  --theme-text-200: #d3d9de;
+  --theme-text-300: #c9cfd4;
+  --theme-text-400: #bfc5ca;
+  --theme-text-500: #b5bbc0;
+  --theme-text-600: #abb1b6;
+  --theme-text-700: #a1a7ac;
+  --theme-text-800: #979da2;
+  --theme-text-900: #8d9398;
+  --theme-accent-50: #6ea0a3;
+  --theme-accent-100: #649699;
+  --theme-accent-200: #5a8c8f;
+  --theme-accent-300: #508285;
+  --theme-accent-400: #46787b;
+  --theme-accent-500: #3c6e71;
+  --theme-accent-600: #326467;
+  --theme-accent-700: #285a5d;
+  --theme-accent-800: #1e5053;
+  --theme-accent-900: #144649;
+  --theme-muted-50: #5f5f5f;
+  --theme-muted-100: #555;
+  --theme-muted-200: #4b4b4b;
+  --theme-muted-300: #414141;
+  --theme-muted-400: #373737;
+  --theme-muted-500: #2d2d2d;
+  --theme-muted-600: #232323;
+  --theme-muted-700: #191919;
+  --theme-muted-800: #0f0f0f;
+  --theme-muted-900: #050505;
+  --theme-highlight-50: #a8adc3;
+  --theme-highlight-100: #9ea3b9;
+  --theme-highlight-200: #9499af;
+  --theme-highlight-300: #8a8fa5;
+  --theme-highlight-400: #80859b;
+  --theme-highlight-500: #767b91;
+  --theme-highlight-600: #6c7187;
+  --theme-highlight-700: #62677d;
+  --theme-highlight-800: #585d73;
+  --theme-highlight-900: #4e5369;
+  --theme-info-50: #79b2ff;
+  --theme-info-100: #6fa8ff;
+  --theme-info-200: #659ef5;
+  --theme-info-300: #5b94eb;
+  --theme-info-400: #518ae1;
+  --theme-info-500: #4780d7;
+  --theme-info-600: #3d76cd;
+  --theme-info-700: #336cc3;
+  --theme-info-800: #2962b9;
+  --theme-info-900: #1f58af;
+  --theme-success-50: #52f187;
+  --theme-success-100: #48e77d;
+  --theme-success-200: #3edd73;
+  --theme-success-300: #34d369;
+  --theme-success-400: #2ac95f;
+  --theme-success-500: #20bf55;
+  --theme-success-600: #16b54b;
+  --theme-success-700: #0cab41;
+  --theme-success-800: #02a137;
+  --theme-success-900: #00972d;
+  --theme-warning-50: #fef032;
+  --theme-warning-100: #f4e628;
+  --theme-warning-200: #eadc1e;
+  --theme-warning-300: #e0d214;
+  --theme-warning-400: #d6c80a;
+  --theme-warning-500: #ccbe00;
+  --theme-warning-600: #c2b400;
+  --theme-warning-700: #b8aa00;
+  --theme-warning-800: #aea000;
+  --theme-warning-900: #a49600;
+  --theme-error-50: #ff7a65;
+  --theme-error-100: #ff705b;
+  --theme-error-200: #ff6651;
+  --theme-error-300: #ff5c47;
+  --theme-error-400: #f5523d;
+  --theme-error-500: #eb4833;
+  --theme-error-600: #e13e29;
+  --theme-error-700: #d7341f;
+  --theme-error-800: #cd2a15;
+  --theme-error-900: #c3200b;
+  --theme-help-50: #fff8b9;
+  --theme-help-100: #ffeeaf;
+  --theme-help-200: #ffe4a5;
+  --theme-help-300: #f9da9b;
+  --theme-help-400: #efd091;
+  --theme-help-500: #e5c687;
+  --theme-help-600: #dbbc7d;
+  --theme-help-700: #d1b273;
+  --theme-help-800: #c7a869;
+  --theme-help-900: #bd9e5f;
+  --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --pico-font-family-sans-serif: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, var(--pico-font-family-emoji); // https://modernfontstacks.com - Neo-Grotesque
+  --pico-font-family-monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace, var(--pico-font-family-emoji);
 
-$admonition-type-color-map: (
-  abstract: #767b91,
-  bug: #d7341f,
-  danger: #c3200b,
-  edit: #2cbdff,
-  example: #4780d7,
-  failure: #ff7a65,
-  info: #79b2ff,
-  note: #5a8c8f,
-  question: #bd9e5f,
-  quote: #a8adc3,
-  success: #52f187,
-  tip: #00972d,
-  warning: #fef032,
-);
+  // --pico-font-family: var(--pico-font-family-sans-serif);
+  // --pico-line-height: 1.5;
+  // --pico-font-weight: 400;
 
-// general colors
-$dark-color: theme-get("background", 600);
-$darkest-color: theme-get("background", 800);
-$light-color: theme-get("text", 500);
-$lightest-color: theme-get("text", 50);
-$primary-color: theme-get("primary", 500);
+  --pico-font-size: 120%;
+
+  // --pico-text-underline-offset: 0.1rem;
+  // --pico-border-radius: 0.25rem;
+  // --pico-border-width: 0.0625rem;
+  // --pico-outline-width: 0.125rem;
+  // --pico-transition: 0.2s ease-in-out;
+  // --pico-spacing: 1rem;
+  // --pico-typography-spacing-vertical: 1rem;
+  // --pico-block-spacing-vertical: var(--pico-spacing);
+  // --pico-block-spacing-horizontal: var(--pico-spacing);
+  // --pico-grid-column-gap: var(--pico-spacing);
+  // --pico-grid-row-gap: var(--pico-spacing);
+  // --pico-form-element-spacing-vertical: 0.75rem;
+  // --pico-form-element-spacing-horizontal: 1rem;
+  // --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  // --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+  // --pico-group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(--pico-form-element-border-color);
+  // --pico-modal-overlay-backdrop-filter: blur(0.375rem);
+  // --pico-nav-element-spacing-vertical: 1rem;
+  // --pico-nav-element-spacing-horizontal: 0.5rem;
+  // --pico-nav-link-spacing-vertical: 0.5rem;
+  // --pico-nav-link-spacing-horizontal: 0.5rem;
+  // --pico-nav-breadcrumb-divider: "\276F";
+}
+
+@mixin pico-color-scheme-dark {
+  --pico-background-color: var(--theme-background-600);
+  --pico-color: var(--theme-text-200);
+  --pico-text-selection-color: rgb(from var(--theme-text-500) r g b / 0.1875);
+  --pico-muted-color: var(--theme-text-900);
+  --pico-muted-border-color: var(--theme-text-50);
+  --pico-primary: var(--theme-primary-500);
+  --pico-primary-background: var(--theme-primary-900);
+
+  // --pico-primary-underline: rgba(1, 170, 255, 0.5);
+  // --pico-primary-hover: #79c0ff;
+  // --pico-primary-hover-background: #017fc0;
+  // --pico-primary-focus: rgba(1, 170, 255, 0.375);
+  // --pico-primary-inverse: #fff;
+  // --pico-secondary: #969eaf;
+  // --pico-secondary-background: #525f7a;
+  // --pico-secondary-underline: rgba(150, 158, 175, 0.5);
+  // --pico-secondary-hover: #b3b9c5;
+  // --pico-secondary-hover-background: #5d6b89;
+  // --pico-secondary-focus: rgba(144, 158, 190, 0.25);
+  // --pico-secondary-inverse: #fff;
+  // --pico-contrast: #dfe3eb;
+  // --pico-contrast-background: #eff1f4;
+  // --pico-contrast-underline: rgba(223, 227, 235, 0.5);
+  // --pico-contrast-hover: #fff;
+  // --pico-contrast-hover-background: #fff;
+  // --pico-contrast-focus: rgba(207, 213, 226, 0.25);
+  // --pico-contrast-inverse: #000;
+  // --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(7, 9, 12, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(7, 9, 12, 0.024), 0.0625rem 0.125rem 0.75rem rgba(7, 9, 12, 0.03), 0.1125rem 0.225rem 1.35rem rgba(7, 9, 12, 0.036), 0.2085rem 0.417rem 2.502rem rgba(7, 9, 12, 0.04302), 0.5rem 1rem 6rem rgba(7, 9, 12, 0.06), 0 0 0 0.0625rem rgba(7, 9, 12, 0.015);
+  // --pico-h1-color: #f0f1f3;
+  // --pico-h2-color: #e0e3e7;
+  // --pico-h3-color: #c2c7d0;
+  // --pico-h4-color: #b3b9c5;
+  // --pico-h5-color: #a4acba;
+  // --pico-h6-color: #8891a4;
+  // --pico-mark-background-color: #014063;
+  // --pico-mark-color: #fff;
+  // --pico-ins-color: #62af9a;
+  // --pico-del-color: #ce7e7b;
+  // --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  // --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  // --pico-table-row-stripped-background-color: rgba(111, 120, 135, 0.0375);
+  // --pico-code-background-color: #1a1f28;
+  // --pico-code-color: #8891a4;
+
+  --pico-form-element-background-color: var(--theme-background-400);
+
+  // --pico-form-element-selected-background-color: #2a3140;
+  // --pico-form-element-border-color: #2a3140;
+  // --pico-form-element-color: #e0e3e7;
+  // --pico-form-element-placeholder-color: #8891a4;
+  // --pico-form-element-active-background-color: #1a1f28;
+  // --pico-form-element-disabled-opacity: 0.5;
+  // --pico-form-element-invalid-border-color: #964a50;
+  // --pico-form-element-invalid-active-border-color: #b7403b;
+  // --pico-form-element-valid-border-color: #2a7b6f;
+  // --pico-form-element-valid-active-border-color: #16896a;
+  // --pico-switch-background-color: #333c4e;
+  // --pico-switch-color: #fff;
+  // --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  // --pico-range-border-color: #202632;
+  // --pico-range-active-border-color: #2a3140;
+  // --pico-card-background-color: #181c25;
+  // --pico-card-sectioning-background-color: #1a1f28;
+  // --pico-dropdown-background-color: #181c25;
+  // --pico-dropdown-border-color: #202632;
+  // --pico-dropdown-hover-background-color: #202632;
+  // --pico-loading-spinner-opacity: 0.5;
+  // --pico-modal-overlay-background-color: rgba(8, 9, 10, 0.75);
+  // --pico-progress-background-color: #202632;
+}
+
+[data-theme="dark"] {
+  @include pico-color-scheme-dark;
+}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  // TODO light theme
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include pico-color-scheme-dark;
+  }
+}

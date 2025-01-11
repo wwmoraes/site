@@ -1,6 +1,15 @@
-# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/params
-title: William Artero Software Engineer
-description: automating a way out of tasks since 2010
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/params
+description: helping machines and teams understand your problems
+
+# https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30
+author:
+  displayName: William Artero
+  email: contact@artero.dev
+  givenName: William
+  familyName: Artero
+  # JSON feed needs a 512 x 512 image
+  thumbnail: images/avatar.jpg # TODO define size of author thumbnail
+  image: images/avatar.jpg # TODO define size of author image
 
 manifest:
   # TODO add icon generation to the manifest
@@ -65,6 +74,9 @@ manifest:
 mainSections:
 - posts
 
+customSections:
+- radar
+
 # used by the embedded templates as a fallback
 # https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/schema.html#L10
 # https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/twitter_cards.html#L1
@@ -73,19 +85,9 @@ mainSections:
 images:
 - images/brand/featured.png
 
-menu_item_separator: " | "
 social:
   facebook_admin: 100001282670160
   facebook_app_id: 2575122046003703
-  twitter: wwmoraes
-
-mastodon:
-- server: hachyderm.io
-  title: Hachyderm
-  username: wwmoraes
-- server: mastodon.social
-  title: Social
-  username: wwmoraes
 
 giscus:
   repo: wwmoraes/site
@@ -124,3 +126,6 @@ assets:
   favicons:
     svg: images/brand/favicon.svg
   appleTouchIcon: images/brand/apple-touch-icon.png
+
+highlight:
+  wrapped: false

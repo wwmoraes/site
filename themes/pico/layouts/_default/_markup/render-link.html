@@ -1,0 +1,14 @@
+{{- $url := urls.Parse .Destination -}}
+{{- $props := dict "href" (.Destination | safeURL) -}}
+{{- with .Title -}}
+{{- $props = merge $props (dict "title" .) -}}
+{{- end -}}
+{{- if $url.IsAbs -}}
+{{- $props = merge $props (dict "rel" "noopener nofollow external" "target" "_blank") -}}
+{{- end -}}
+
+<a {{- partial "function/props" $props -}}>
+  {{- with .Text }}{{ . }}{{ end -}}
+</a>
+
+{{- /* chomp trailing newline */ -}}

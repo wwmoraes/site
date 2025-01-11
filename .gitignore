@@ -1,4 +1,3 @@
-_gen
 .env.local
 .hugo_build.lock
 /*lefthook-local.*
@@ -7,8 +6,10 @@ _gen
 /result
 /site
 /tmp
+_gen
 go.work
 go.work.sum
+hugo_stats.json
 *.sarif
 
 # *.jpg.json

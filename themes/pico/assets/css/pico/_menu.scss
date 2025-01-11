@@ -1,0 +1,92 @@
+/* menu support */
+menu details.dropdown summary:focus-visible {
+  --pico-outline-width: 0.125rem;
+}
+
+menu details.dropdown {
+  margin-bottom: 0;
+}
+
+menu details.dropdown {
+  display: inline;
+  margin: calc(var(--pico-nav-element-spacing-vertical) * -1) 0;
+}
+
+menu details.dropdown summary::after {
+  transform: rotate(0deg) translateX(0rem);
+}
+
+menu details.dropdown summary:not([role]) {
+  height: calc(1rem * var(--pico-line-height) + var(--pico-nav-link-spacing-vertical) * 2);
+  padding: calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal);
+}
+
+menu details.dropdown summary:not([role]):focus-visible {
+  box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+}
+
+:where(menu li)::before {
+  float: left;
+  content: "​";
+}
+
+menu,
+menu ul {
+  display: flex;
+}
+
+menu {
+  justify-content: space-between;
+  overflow: visible;
+}
+
+menu ol,
+menu ul {
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+menu ol:first-of-type,
+menu ul:first-of-type {
+  margin-left: calc(var(--pico-nav-element-spacing-horizontal) * -1);
+}
+
+menu ol:last-of-type,
+menu ul:last-of-type {
+  margin-right: calc(var(--pico-nav-element-spacing-horizontal) * -1);
+}
+
+menu li {
+  display: inline-block;
+  margin: 0;
+  padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+}
+
+menu li :where(a, [role=link]) {
+  display: inline-block;
+  margin: calc(var(--pico-nav-link-spacing-vertical) * -1) calc(var(--pico-nav-link-spacing-horizontal) * -1);
+  padding: var(--pico-nav-link-spacing-vertical) var(--pico-nav-link-spacing-horizontal);
+  border-radius: var(--pico-border-radius);
+}
+
+menu li :where(a, [role=link]):not(:hover) {
+  text-decoration: none;
+}
+
+menu li button,
+menu li [role=button],
+menu li [type=button],
+menu li input:not([type=checkbox], [type=radio], [type=range], [type=file]),
+menu li select {
+  height: auto;
+  margin-right: inherit;
+  margin-bottom: 0;
+  margin-left: inherit;
+  padding: calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal);
+}
+
+aside menu {
+  display: block;
+}

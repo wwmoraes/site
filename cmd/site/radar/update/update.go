@@ -21,7 +21,7 @@ func Command() *cobra.Command {
 	flags.StringP("template", "t", "radar.svg.tmpl", "filename of the SVG template within the section folder")
 	flags.StringP("output", "o", "radar.svg", "output filename of the generated SVG")
 	flags.IntP("radius", "r", 500, "SVG radius in user units (viewbox)")
-	flags.Int("size", 800, "SVG size in px (will apply to both width and height; must be <= radius * 2)")
+	flags.Int("size", 1000, "SVG size in px (will apply to both width and height; must be <= radius * 2)")
 
 	return cmd
 }

@@ -1,0 +1,32 @@
+@use "pico.css";
+@use "classless.css";
+
+@use "article";
+@use "blockquote";
+@use "details";
+@use "menu";
+@use "meter";
+@use "nav";
+@use "table";
+
+pre code {
+  min-width: fit-content;
+  width: 100%;
+}
+
+article>figure {
+  overflow-x: auto;
+  margin-inline: auto;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+
+  >img {
+    max-width: max-content;
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+object {
+  // prevents user-agent white background in dark mode
+  color-scheme: light;
+}

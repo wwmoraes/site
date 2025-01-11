@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{- with .Content }}
+<section>
+  {{ . }}
+</section>
+{{- end }}
+{{- $pages := first 10 (where .Site.RegularPages "Section" "posts") }}
+<section role="feed" aria-setsize="{{ $pages.Len }}">
+  {{- range $pages }}
+  <article>
+    <header>
+      <hgroup>
+        <h2>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{- if .Draft }}
+          <sup><u role="presentation" aria-label="draft" title="draft">&#128681;</u></sup>
+          {{- end }}
+        </h2>
+        {{- with .Description -}}
+        <p>{{- . -}}</p>
+        {{- end -}}
+      </hgroup>
+    </header>
+  </article>
+  {{- end }}
+</section>
+{{ end }}

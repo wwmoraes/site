@@ -1,13 +1,16 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json
 baseURL: https://artero.dev
 title: William Artero
-theme: m10d
+theme: pico
 defaultContentLanguage: en
 enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
 removePathAccents: true
-paginate: 10
+pagination:
+  disableAliases: true
+  pagerSize: 10
+summaryLength: 100
 copyright: >-
   Copyright %d William Artero. Some rights reserved.
 
@@ -45,25 +48,6 @@ privacy:
   youTube:
     privacyEnhanced: true
 
-# https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30
-author:
-  displayName: William Artero
-  email: contact@artero.dev
-  givenName: William
-  familyName: Artero
-  # JSON feed needs a 512 x 512 image
-  thumbnail: images/avatar.jpg # TODO define size of author thumbnail
-  image: images/avatar.jpg # TODO define size of author image
-  shortBio: automating a way out of tasks since 2010
-  longBio: TODO
-  social:
-    # discord: "116169201990893575"
-    github: wwmoraes
-    linkedin: wwmoraes
-    telegram: wwmoraes
-    # x: wwmoraes
-    # zotero: wwmoraes
-
 pygmentsUseClasses: false
 pygmentsCodeFences: true
 
@@ -91,4 +75,4 @@ imaging:
   exif:
     disableDate: true
     disableLatLong: true
-    includeFields: "Artist|Copyright|ImageUniqueID|ImageDescription|Make"
+    includeFields: "Artist|Copyright|DocumentName|ImageUniqueID|ImageDescription|UserComment"

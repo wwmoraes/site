@@ -1,5 +1,0 @@
-{{- $authority := (urls.Parse $.Site.BaseURL).Hostname -}}
-{{- $date := (.Page.PublishDate | default .Page.Date).Format "2006-01-02" -}}
-{{- $specific := .RelPermalink -}}
-{{- $fragment := (.Page.Lastmod | default .Page.PublishDate).Unix -}}
-{{- return (printf "tag:%s,%s:%s#%d" $authority $date $specific $fragment) -}}

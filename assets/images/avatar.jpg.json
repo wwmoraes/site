@@ -1,5 +1,11 @@
 {
   "Artist": "William Artero",
   "Copyright": "2023 William Artero",
-  "ImageDescription": "William Artero"
+  "DocumentName": "William Artero in Marrakesh, 2020",
+  "ImageDescription": "William Artero avatar image",
+  "UserComment": {
+    "attributes": {
+      "aria-label": "avatar"
+    }
+  }
 }

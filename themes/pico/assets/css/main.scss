@@ -1,0 +1,7 @@
+// The "theme" and "custom" layers use empty imports so theme users can
+// set preferences or extend it. Both imports can be overridden by creating
+// a file <HUGO_PROJECT>/assets/css/_<name>.scss
+
+@use "index";
+@use "variables";
+@use "custom";

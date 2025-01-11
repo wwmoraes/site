@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{- $pages := .Pages }}
+{{- $paginator := .Paginate $pages 10 }}
+<section role="feed" aria-setsize="{{ $paginator.NumberOfElements }}">
+  {{- range $paginator.Pages }}
+  <article>
+    <header>
+      <hgroup>
+        <h2>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{- if .Draft }}
+          <sup><u role="presentation" aria-label="draft" title="draft">&#128681;</u></sup>
+          {{- end }}
+        </h2>
+        {{- with .Description -}}
+        <p>{{- . -}}</p>
+        {{- end -}}
+      </hgroup>
+    </header>
+    {{- with .Summary }}
+    <p>{{- . | plainify -}}</p>
+    {{- end }}
+    {{- if .Truncated }}
+    <p>
+      <a href="{{ .RelPermalink }}">Read more...</a>
+    </p>
+    {{- end }}
+    <footer>
+      {{ partial "details" . }}
+    </footer>
+  </article>
+  {{- end }}
+</section>
+{{ partial "pagination.html" . }}
+{{- end }}

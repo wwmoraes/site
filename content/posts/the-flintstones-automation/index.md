@@ -17,8 +17,6 @@ tags:
 lastmod: 2024-01-28T14:25:12+01:00
 ---
 
-<!-- TODO intro story/situation -->
-
 Old cartoons can become timeless. The Flintstones sports a scene where the main
 character presses a button on a remote to turn the TV on. A bird then comes out
 of it, flies towards the TV and bickers the power on button. How does that
@@ -95,9 +93,3 @@ Such approach has the benefits of:
 - consistent outcomes
 - decreased time-to-solution
 - reduced pressure on operators
-
-<!-- TODO offer solution -->
-
-<!-- TODO wrap up -->
-
-<!-- TODO link back to story/situation -->

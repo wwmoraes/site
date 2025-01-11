@@ -1,0 +1,8 @@
+{{/* transforms a map into HTML attributes */}}
+{{- $keypairs := slice }}
+{{- with . }}
+  {{- range $key, $value := . }}
+    {{- $keypairs = $keypairs | append (printf "%s=%q" $key $value) }}
+  {{- end }}
+{{- end }}
+{{- return (printf " %s" (delimit $keypairs " ") | safeHTMLAttr) }}

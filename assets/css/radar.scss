@@ -1,0 +1,22 @@
+[aria-label="radar"] {
+  aspect-ratio: 1;
+  border: none;
+  display: none;
+  margin: var(--pico-spacing) auto;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+[aria-label="radar-section"] {
+  aspect-ratio: 1;
+  border: none;
+  margin: var(--pico-spacing) auto;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

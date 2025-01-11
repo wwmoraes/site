@@ -4,9 +4,12 @@ import (
 	"errors"
 	"fmt"
 	"io/fs"
+	"maps"
 	"os"
 	"path/filepath"
 	"runtime"
+	"slices"
+	"sort"
 	"strings"
 
 	"github.com/bmatcuk/doublestar/v4"
@@ -45,8 +48,11 @@ func inspect(cmd *cobra.Command, args []string) error {
 	imageTags := functional.LogErrors(getImageTags(imagePaths, bufferSize), bufferSize, logger)
 
 	for tags := range imageTags {
-		for key, value := range tags {
-			cmd.Printf("%20s: %s\n", key, value)
+		keys := slices.Collect(maps.Keys(tags))
+		sort.Strings(keys)
+
+		for _, key := range keys {
+			cmd.Printf("%20s: %s\n", key, tags[key])
 		}
 
 		//nolint:mnd // 2 * 40 = 80 columns

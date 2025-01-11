@@ -1,3 +1,16 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json
 minify:
   minifyOutput: true
+
+build:
+  noJSConfigInAssets: true
+  buildStats:
+    enable: true
+
+cascade:
+- _target:
+    path: '/internal/*'
+  _build:
+    render: never
+    list: never
+    publishResources: false

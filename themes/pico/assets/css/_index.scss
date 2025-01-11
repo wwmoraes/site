@@ -1,0 +1,246 @@
+@use "pico";
+@use "chroma";
+@use "toc";
+@use "toggle";
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// remove double-spacing
+header:has(+main),
+main:has(+footer) {
+  padding-bottom: 0;
+}
+
+header+main,
+main+footer {
+  padding-top: 0;
+}
+
+main {
+  p {
+    text-align: justify;
+  }
+}
+
+// article content decorations
+article {
+
+
+  // decorate section anchors
+  a[href^="#"][rel=section] {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &::before {
+        content: "\00A7\00A0";
+      }
+    }
+  }
+
+  // decorate external links
+  a[href][rel*=external] {
+    &::after {
+      content: "\238B";
+      display: inline-block;
+      font-size: .75em;
+      height: .75em;
+      margin-left: .15em;
+      text-decoration: none;
+      transform: scale(-1, 1);
+      vertical-align: super;
+      width: .75em;
+    }
+
+    &:hover::after {
+      text-decoration: none;
+    }
+  }
+
+  // responsive iframes (e.g. youtube shortcode)
+  >iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: var(--pico-spacing);
+  }
+
+  >header {
+
+    // tighen up header-only cards
+    &:only-child,
+    >hgroup:only-child {
+      margin-bottom: 0;
+    }
+
+    // tighen up bodyless cards
+    &:has(+footer) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &+footer {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  // center images
+  p img {
+    display: block;
+    margin: auto;
+  }
+}
+
+blockquote {
+  background-color: var(--pico-background-color);
+
+  // remove last child's margin to make the box even
+  >*:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// callout/admonition
+details[role=note] {
+  background-color: var(--pico-background-color);
+  margin: var(--pico-typography-spacing-vertical) 0;
+  padding: var(--pico-spacing);
+  border: 0.0625rem solid var(--pico-blockquote-border-color);
+  border-left: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
+
+  summary {
+    font-weight: bold;
+
+    u[role=presentation] {
+      vertical-align: text-top;
+    }
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+
+  // hide chevron for always-open details
+  &[open][aria-disabled=true] {
+    pointer-events: none;
+
+    &>summary::after {
+      display: none;
+    }
+  }
+}
+
+// center footer text
+footer>p {
+  text-align: center;
+}
+
+// icons and other graphical cues
+u[role=presentation] {
+  font-family: var(--pico-font-family-emoji);
+  text-decoration: none;
+
+  // EOT stylized horizontal rule
+  &[aria-label=end-of-transmission] {
+    font-size: 2em;
+    line-height: 1;
+    text-align: center;
+    background-color: var(--pico-color);
+    color: var(--pico-background-color);
+    width: 100%;
+    display: block;
+    margin-bottom: var(--pico-spacing);
+  }
+}
+
+
+nav,
+[role=navigation] {
+  &[aria-label=pagination] {
+    justify-content: center;
+
+    a[aria-current]:not([aria-current=false]) {
+      background-color: transparent;
+      color: inherit;
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
+
+  // site-wide groups
+  &[aria-label=taxonomies],
+  &[aria-label=social] {
+    justify-content: center;
+
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // related links
+  &[aria-label=related] {
+
+    &,
+    & ul {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      li {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 768px) {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+
+        >*:first-child {
+          text-align: left;
+        }
+
+        >*:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  // informational blocks
+  &[aria-label=details] {
+
+    // tighten up details elements
+    ul li {
+      padding-block: 0;
+    }
+
+    u[role=presentation] {
+      vertical-align: text-bottom;
+    }
+
+    &,
+    & ul {
+      flex-wrap: wrap;
+      row-gap: var(--pico-nav-element-spacing-vertical);
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.giscus {
+  .giscus-frame {
+    width: 100%;
+    border: none;
+  }
+}

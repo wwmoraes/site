@@ -1,0 +1,71 @@
+:root {
+  --pico-meter-background-color: var(--pico-contrast-background);
+  --pico-meter-optimum-color: var(--pico-form-element-valid-active-border-color);
+  --pico-meter-sub-optimum-color: #e0de56;
+  --pico-meter-sub-sub-optimum-color: var(--pico-form-element-invalid-active-border-color);
+}
+
+meter {
+  --height: calc(0.125rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
+  --transition: background-color var(--pico-transition), border-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition);
+  --box-shadow: 0 5px 5px -5px #999 inset;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: var(--pico-border-radius);
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  display: inline-block;
+  height: var(--height);
+  margin-bottom: var(--pico-spacing);
+  width: 100%;
+  overflow: hidden;
+  transition: var(--transition);
+
+  label>& {
+    margin-top: calc(var(--pico-spacing) * 0.25);
+  }
+
+  // WebKit-based browsers
+  @supports selector(::-webkit-meter-bar) {
+    &::-webkit-meter-bar {
+      background: var(--pico-meter-background-color);
+      box-shadow: var(--box-shadow);
+      height: var(--height);
+      transition: var(--transition);
+    }
+
+    &::-webkit-meter-optimum-value {
+      background: var(--pico-meter-optimum-color);
+    }
+
+    &::-webkit-meter-suboptimum-value {
+      background: var(--pico-meter-sub-optimum-color);
+    }
+
+    &::-webkit-meter-even-less-good-value {
+      background: var(--pico-meter-sub-sub-optimum-color);
+    }
+  }
+
+  // Gecko-based browsers
+  @supports selector(::-moz-meter-bar) {
+    & {
+      background: var(--pico-meter-background-color);
+      box-shadow: var(--box-shadow);
+    }
+
+    &:-moz-meter-optimum::-moz-meter-bar {
+      background: var(--pico-meter-optimum-color);
+    }
+
+    &:-moz-meter-sub-optimum::-moz-meter-bar {
+      background: var(--pico-meter-sub-optimum-color);
+    }
+
+    &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+      background: var(--pico-meter-sub-sub-optimum-color);
+    }
+  }
+}

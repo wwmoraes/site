@@ -52,11 +52,11 @@ other = "on {{ .Date }}"
 other = "about {{ .Categories }}"
 
 [wordCount]
-one = "One word"
+one = "one word"
 other = "{{ .Count }} words"
 
 [readingTime]
-one = "One minute"
+one = "a minute"
 other = "{{ .Count }} minutes"
 
 [views]
@@ -129,36 +129,3 @@ other = "Example"
 [quote]
 other = "Quote"
 # === shortcodes/admonition.html ===
-
-# === shortcodes/version.html ===
-[new]
-other = "NEW"
-
-[changed]
-other = "CHANGED"
-
-[deleted]
-other = "DELETED"
-# === shortcodes/version.html ===
-
-# === partials/moment.html ===
-[yearsAgo]
-one = "a year ago"
-other = "{{ . }} years ago"
-
-[monthsAgo]
-one = "a month ago"
-other = "{{ . }} months ago"
-
-[weeksAgo]
-one = "a week ago"
-other = "{{ . }} weeks ago"
-
-[daysAgo]
-one = "a day ago"
-other = "{{ . }} days ago"
-
-[hoursAgo]
-one = "a hour ago"
-other = "{{ . }} hours ago"
-# === partials/moment.html ===

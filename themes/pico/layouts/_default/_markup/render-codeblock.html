@@ -1,0 +1,7 @@
+{{- if site.Params.highlight.wrapped }}
+{{- (transform.HighlightCodeBlock .).Wrapped -}}
+{{- else }}
+<pre tabindex="0"><code class="chroma language-{{ .Type }}" data-lang="{{ .Type }}">
+  {{- (transform.HighlightCodeBlock .).Inner -}}
+</code></pre>
+{{- end }}

@@ -1,8 +1,26 @@
-{{- $viewBox := mul .Radius 2 -}}
+{{- $viewBox := add (mul .Radius 2) 2 -}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{ $viewBox }} {{ $viewBox }}" width="{{ .Size }}"
-  height="{{ .Size }}" style="background-color: #2a2b38">
+  height="{{ .Size }}">
   <title>William Artero personal tech radar</title>
   <style>
+    svg {
+      background-color: transparent;
+      aspect-ratio: 1;
+      width: {{ .Size }}px;
+      max-width: 100%;
+      height: auto;
+      padding: 1px;
+    }
+
+    svg:has(:target) {
+      width: {{ .Radius }}px;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
     text {
       stroke: #0c0d1a;
       font-weight: normal;

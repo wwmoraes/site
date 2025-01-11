@@ -21,9 +21,6 @@ reduce the need of human intervention in processes. The concept is far older
 than IT, and it predates modern society as [history tells
 us](https://en.wikipedia.org/wiki/Water_clock).
 
-<!-- home automation -->
-<!-- financial automation -->
-
 can trigger people to either ranging from those that say it is just a word to
 people that want a Wallace and Gromit morning.
 
@@ -220,27 +217,23 @@ Automations:
 > humans to do the work, we are feeding the machines with the blood, sweat, and
 > tears of human beings. Think The Matrix with less special effects and more
 > pissed off System Administrators."
->
-> - Joseph Bironas, Google SRE
+{source="Joseph Bironas, Google SRE"}
 
 ---
 
 > "Besides black art, there is only automation and mechanization."
->
-> - Federico García Lorca
+{source="Federico García Lorca"}
 
 ---
 
 > "Hope is not a strategy."
->
-> - Traditional SRE saying
+{source="Traditional SRE saying"}
 
 ---
 
 > "SRE hates manual operations, so we obviously try to create systems that don’t
 > require them. However, sometimes manual operations are unavoidable."
->
-> - SRE book
+{source="Site Reliability Engineering: How Google Runs Production Systems"}
 
 ## Extras
 

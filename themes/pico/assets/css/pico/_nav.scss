@@ -1,0 +1,45 @@
+:where(nav, [role=navigation]) {
+
+  // responsive lists
+  ul {
+    flex-wrap: wrap;
+  }
+
+  // responsive breadcrumb
+  &[aria-label=breadcrumb] {
+    overflow-x: auto;
+
+    ul {
+      flex-wrap: nowrap;
+
+      li {
+        // fix: breadcrumb separator on li::after uses absolute positioning
+        position: relative;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+  * Pico CSS  - responsive nav
+  * Grows vertically (mobile-first). Changes back to horizontal growth on higher
+  * resolutions.
+  *****************************************************************************/
+
+:where(menu, [role=menu]) {
+
+  &,
+  &>[role=menuitem] {
+    flex-direction: column;
+    position: relative;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}

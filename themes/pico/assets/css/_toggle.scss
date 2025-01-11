@@ -1,0 +1,137 @@
+/*******************************************************************************
+  * Pure CSS burger menu
+  * Styles a parent + checkbox to look like 3 stacked lines when unchecked and
+  * as a cross when checked. Includes animations.
+  *****************************************************************************/
+
+[data-role="burger"] {
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 10%;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 24px;
+  width: 28px;
+  padding: 0;
+  margin: 0;
+  border: 0 solid #e7edf2;
+
+  >input[type="checkbox"] {
+    height: 4px;
+    width: 28px;
+    border: none;
+    background-color: #e7edf2;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 4px 0 #161724;
+    position: relative;
+    margin-inline: 0;
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+
+    &::before,
+    &::after {
+      height: 4px;
+      width: 28px;
+      border-radius: 2px;
+      background-color: #e7edf2;
+      position: absolute;
+      content: "";
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 0 4px 0 #161724;
+    }
+
+    &:checked {
+      background-image: none;
+      background-color: transparent;
+
+      &::before {
+        box-shadow: none;
+        transform: rotate(45deg) translate(7px, 7px);
+      }
+
+      &::after {
+        box-shadow: none;
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+  * Pure CSS toggle
+  * Uses a checkbox to trigger rules and show/hide related elements.
+  *****************************************************************************/
+
+// adjust menu for toggling
+:is(menu, [role="menu"]) {
+  // anchor for children
+  position: relative;
+  // needed otherwise it grows to fit all its children
+  max-height: calc(var(--pico-line-height) * 1em + var(--pico-nav-element-spacing-vertical)*2);
+
+  >[role="menubar"] {
+    flex-direction: row;
+  }
+
+  // hide entries within menu
+  >[role="menuitem"] {
+    width: 100vw;
+    margin-left: calc(-1*var(--pico-spacing));
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    background-color: var(--pico-card-background-color);
+  }
+
+
+  // show hidden items when burger is checked
+  &:has(> label > input[type="checkbox"]:checked)>[role="menuitem"] {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  @media (min-width: 576px) {
+    >[role="menuitem"] {
+      margin-left: unset;
+      width: unset;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-height: unset;
+
+    // hide menu button
+    >label {
+      display: none;
+    }
+
+    >[role="menubar"] {
+      flex-direction: row;
+    }
+
+    // show all elements
+    >[role="menuitem"] {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+      top: unset;
+      background-color: unset;
+    }
+  }
+}
+
+/* position the menu button */
+:where(menu, [role="menu"])>label {
+  position: absolute;
+  right: 0;
+  top: var(--pico-nav-element-spacing-vertical);
+  padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+}

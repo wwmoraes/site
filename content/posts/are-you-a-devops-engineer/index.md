@@ -21,7 +21,7 @@ that extra oomph. Is that the right thing to do?
 <!--more-->
 
 {{< figure "Perhaps?" >}}
-![http://reactiongifs.com/?p=24986](http://www.reactiongifs.com/r/dsori.gif)
+![https://reactiongifs.com/?p=24986](https://www.reactiongifs.com/r/dsori.gif)
 {{< /figure >}}
 
 ## Prologue
@@ -32,7 +32,7 @@ contribute to automation. Not anymore. The reason? the market overloads and
 marginalizes the term. Recruiters and managers generally associate it with
 distorted practices and solutions I don't agree with.
 
-![http://reactiongifs.com/?p=22693](http://www.reactiongifs.com/r/wsod.gif)
+![https://reactiongifs.com/?p=22693](https://www.reactiongifs.com/r/wsod.gif)
 
 ## What is DevOps
 
@@ -42,7 +42,7 @@ operations. It includes the reuse of tools and the art of automation to glue
 processes together. How to glue is up to the engineer and business, and this
 acts as a double-edged sword.
 
-![http://reactiongifs.com/?p=10562](http://www.reactiongifs.com/wp-content/uploads/2013/06/flesh-wound.gif)
+![https://reactiongifs.com/?p=10562](https://www.reactiongifs.com/wp-content/uploads/2013/06/flesh-wound.gif)
 
 This definition is intentionally vague. Bodies of knowledge and processes' best
 practices are so. This allows great flexibility when applying them. You can
@@ -63,7 +63,7 @@ automation. Let's say it has a step to run a lint tool and check the code.
 Regardless of the lint output, the merge requires a human to approve and execute
 it.
 
-![http://reactiongifs.com/?p=19982](http://www.reactiongifs.com/r/mgc.gif)
+![https://reactiongifs.com/?p=19982](https://www.reactiongifs.com/r/mgc.gif)
 
 In such a scenario the linting is *automatic*, and the integration itself is
 manual. We'd have an *automated* integration if a merge happened after a
@@ -75,7 +75,7 @@ testing, checking the author against an authorized group and other more
 sophisticated checks like security and secret scanning to securely automate such
 flow.
 
-![http://reactiongifs.com/?p=24159](http://www.reactiongifs.com/r/jj.gif)
+![https://reactiongifs.com/?p=24159](https://www.reactiongifs.com/r/jj.gif)
 
 ## The DevOps role
 
@@ -89,7 +89,7 @@ Aside from the technology stack, which is arguably subjective, one expects the
 required soft and hard skills to remain. For instance, the need for an engineer
 with programming and architecture experience should be consistent. It's not.
 
-![http://reactiongifs.com/?p=21184](http://www.reactiongifs.com/r/W28tx6T.gif)
+![https://reactiongifs.com/?p=21184](https://www.reactiongifs.com/r/W28tx6T.gif)
 
 ### Expectation
 
@@ -110,7 +110,7 @@ Odin knows what is *far* from the word stable, let alone testable. Yet some
 people prefer to deal with shell script quote shenanigans than to code in a
 properly typed and structured language. Beats me why.
 
-![http://reactiongifs.com/?p=18567](http://www.reactiongifs.com/r/but-why.gif)
+![https://reactiongifs.com/?p=18567](https://www.reactiongifs.com/r/but-why.gif)
 
 ### Reality
 
@@ -124,7 +124,7 @@ specialized professional knows the in and out of specific solutions or vendor
 suites in the market. They can - and trust me, they will - get you onboard on
 all sorts of tools.
 
-![http://reactiongifs.com/?p=4694](http://www.reactiongifs.com/wp-content/uploads/2012/12/more.gif)
+![https://reactiongifs.com/?p=4694](https://www.reactiongifs.com/wp-content/uploads/2012/12/more.gif)
 
 Such is the reality of DevOps positions. Most of the time they require low to no
 programming languages, listing scripting ones such as Bash, PowerShell and
@@ -139,7 +139,7 @@ those integrations are black boxes operated by the DevOps engineers, the users
 won't know a thing about how to solve them. This leads to the ownership and
 operations of the DevOps team. Then the snowball begins.
 
-![http://reactiongifs.com/?p=24900](http://www.reactiongifs.com/r/idwt.gif)
+![https://reactiongifs.com/?p=24900](https://www.reactiongifs.com/r/idwt.gif)
 
 Granted, when done right, gluing tools can give awesome results. Kubernetes is a
 successful example of this. The difference between such a project and an average
@@ -153,7 +153,7 @@ them right and to their fullest. I have yet to see a company fully use all
 features of Jira, such as components, instead of relying on tags or external
 spreadsheets to sync up.
 
-![http://reactiongifs.com/?p=22317](http://www.reactiongifs.com/r/emb1.gif)
+![https://reactiongifs.com/?p=22317](https://www.reactiongifs.com/r/emb1.gif)
 
 ## What about SRE?
 
@@ -365,10 +365,8 @@ What about you? Do you have a vastly different experience when it comes to
 DevOps? Or perhaps you don't fully agree with something here? Please let me know
 in the comments, I'd love to further discuss about it.
 
-{{< admonition edit "Edit 1" >}}
-
-- Typo fixes
-- better formatting for some lengthy lists
-- added a link to the Team Topologies book page.
-
-{{< /admonition >}}
+> [!edit]
+>
+> - Typo fixes
+> - better formatting for some lengthy lists
+> - added a link to the Team Topologies book page.

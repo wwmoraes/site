@@ -1,0 +1,22 @@
+figure:has(> blockquote) {
+  margin: var(--pico-typography-spacing-vertical) 0;
+  background-color: var(--pico-background-color);
+  border-right: none;
+  border-left: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-end: none;
+
+  blockquote {
+    margin: 0;
+    border: none;
+  }
+
+  figcaption {
+    padding: var(--pico-spacing);
+
+    &:first-child {
+      background-color: hsl(from var(--pico-background-color) h s calc(l + 20) / 0.2);
+      font-weight: bold;
+    }
+  }
+}

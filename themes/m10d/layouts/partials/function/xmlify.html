@@ -1,4 +1,0 @@
-{{/* we need the JSON as Hugo's XML marshaller does not handle map arrays */}}
-{{- $xml := . | jsonify | transform.Remarshal "xml" -}}
-{{- $xml = $xml | strings.TrimPrefix "<root>" | strings.TrimSuffix "</root>" -}}
-{{- return $xml -}}

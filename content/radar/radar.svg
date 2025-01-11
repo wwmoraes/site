@@ -1,7 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="800"
-  height="800" style="background-color: #2a2b38">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1002 1002" width="1000"
+  height="1000">
   <title>William Artero personal tech radar</title>
   <style>
+    svg {
+      background-color: transparent;
+      aspect-ratio: 1;
+      width: 1000px;
+      max-width: 100%;
+      height: auto;
+      padding: 1px;
+    }
+
+    svg:has(:target) {
+      width: 500px;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
     text {
       stroke: #0c0d1a;
       font-weight: normal;
@@ -67,8 +85,8 @@
     <circle cx="500" cy="500" r="350" fill="transparent" class="primary" />
     <circle cx="500" cy="500" r="430" fill="transparent" class="primary" />
     <circle cx="500" cy="500" r="500" fill="transparent" class="primary" />
-    <path d="M 0,500 L 1000,500" class="primary" />
-    <path d="M 500,0 L 500,1000" class="primary" />
+    <path d="M 0,500 L 1002,500" class="primary" />
+    <path d="M 500,0 L 500,1002" class="primary" />
   </g>
   <!-- techniques labels -->
   <g>

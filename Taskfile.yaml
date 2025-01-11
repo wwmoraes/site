@@ -25,8 +25,6 @@ tasks:
     - lefthook:install
   build:
     desc: Builds the CLI companion tool to manage the site.
-    deps:
-    - configure
     env:
       CGO_ENABLED: 0
     cmd: >-
@@ -96,6 +94,20 @@ tasks:
     - "archetypes/**/*.{jpg,png}.json"
     - "assets/**/*.{jpg,png}.json"
     - "content/**/*.{jpg,png}.json"
+  exif:show:*:
+    label: exif:show:{{ .TARGET }}
+    summary: Inspects images EXIF metadata.
+    deps:
+    - build
+    vars:
+      TARGET: '{{ index .MATCH 0 }}'
+    cmd: >-
+      {{ .SITE }} image inspect {{ .TARGET | q }}
+    method: none
+    sources:
+    - "archetypes/**/*.{jpg,png}.json"
+    - "assets/**/*.{jpg,png}.json"
+    - "content/**/*.{jpg,png}.json"
   generate:data: &generate-data
     aliases: [gen:data]
     desc: Fetches upstream information and stores it as static site data.
@@ -124,9 +136,9 @@ tasks:
     - for: sources
       task: exif:update:{{ .ITEM }}
     sources:
-    - "archetypes/**/*.{jpg,png}.json"
-    - "assets/**/*.{jpg,png}.json"
-    - "content/**/*.{jpg,png}.json"
+    - archetypes/**/*.{jpg,png}.json
+    - assets/**/*.{jpg,png}.json
+    - content/**/*.{jpg,png}.json
   generate:favicon:
     aliases: [gen:favicon]
     desc: Generates the old ICO from the source SVG icon.
@@ -221,10 +233,10 @@ tasks:
     method: none
   start: &start
     desc: Starts a local server.
-    cmd: hugo server -e {{ .HUGO_ENVIRONMENT | q }} -p {{ .HUGO_SERVER_PORT | q }}
     vars:
       HUGO_ENVIRONMENT: '{{ .HUGO_ENVIRONMENT | default "development" }}'
       HUGO_SERVER_PORT: '{{ .HUGO_SERVER_PORT | default 8888 }}'
+    cmd: hugo server -e {{ .HUGO_ENVIRONMENT | q }} -p {{ .HUGO_SERVER_PORT | q }} {{ .CLI_ARGS }}
   start:production:
     <<: *start
     aliases: [start:prod]
@@ -233,14 +245,16 @@ tasks:
       HUGO_ENVIRONMENT: production
   ### internal tasks
   exif:update:*:
-    internal: true
     label: exif:update:{{ .IMAGE }}
+    deps:
+    - task: build
     vars:
       IMAGE: '{{ index .MATCH 0 | trimSuffix ".json" }}'
       METADATA: '{{ index .MATCH 0 }}'
     sources:
     - '{{ .IMAGE }}'
     - '{{ .METADATA }}'
+    - '{{ .SITE }}'
     generates:
     - '{{ .IMAGE }}'
     cmds:
@@ -324,3 +338,10 @@ tasks:
     sources:
     - assets/css/**/*.scss
     - themes/*/assets/css/**/*.scss
+  generate:vcard:
+    deps:
+    - build
+    vars:
+      VCARD: '{{ .VCARD | default (env "VCARD") }}'
+    cmd: >-
+      {{ .SITE }} vcard {{ .CLI_ARGS }} {{ .VCARD }}

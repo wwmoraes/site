@@ -13,14 +13,8 @@ const gunzip = async (bits: (ArrayBuffer | ArrayBufferView) | string | Blob): Pr
     .then(d => d.value)
     .then(ab2str);
 
-// const node = (tag: string, text: string): HTMLElement => {
-//   const node = document.createElement(tag);
-//   node.appendChild(document.createTextNode(text));
-//   return node;
-// };
-
 const result = (success: boolean): void =>
-  document.querySelector("#vcard")?.classList.add(success ? "success" : "failure");
+  (document.querySelector("[role=status]") as HTMLElement).dataset.status = (success ? "success" : "failure");
 
 const downloadBlob = (blob: Blob, name: string): void => {
   const link = document.createElement("a");

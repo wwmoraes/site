@@ -1,0 +1,11 @@
+table {
+  table-layout: fixed;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+article>table {
+  display: block;
+  margin-inline: auto;
+  max-width: max-content;
+}

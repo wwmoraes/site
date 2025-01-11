@@ -1,4 +1,5 @@
-# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/markup
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/markup
+
 highlight:
   anchorLineNos: true
   codeFences: true
@@ -14,6 +15,7 @@ highlight:
 
 goldmark:
   extensions:
+    _merge: deep
     definitionList: true
     footnote: true
     linkify: true
@@ -23,12 +25,12 @@ goldmark:
     typographer: true
   parser:
     attribute:
-      block: false
-      title: false
+      block: true
+      title: true
     autoHeadingID: true
     autoHeadingIDType: github
   renderer:
-    unsafe: true
+    unsafe: false
     hardWraps: false
     xhtml: false
 

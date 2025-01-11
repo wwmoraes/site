@@ -13,31 +13,30 @@ let
 in mkShell rec {
   packages = [
     pkgs.editorconfig-checker
-    pkgs.go-task
-    pkgs.gofumpt
-    pkgs.hugo
+    pkgs.git
+    pkgs.git-lfs
     pkgs.lefthook
     pkgs.markdownlint-cli
     pkgs.nodejs-slim # needed for stylelint 💀
+    pkgs.nur.repos.wwmoraes.go-commitlint
     pkgs.typos
+    pkgs.unstable.dart-sass
     pkgs.unstable.go
+    pkgs.unstable.go-task
     pkgs.unstable.golangci-lint
+    pkgs.unstable.hugo
     pkgs.vale
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     pkgs.dockerfile-language-server-nodejs
-    pkgs.git
-    pkgs.gopls
-    pkgs.gotools
+    # pkgs.gofumpt
     pkgs.imagemagick
     pkgs.markdown-oxide
     pkgs.niv
-    pkgs.nur.repos.wwmoraes.go-commitlint
     pkgs.nur.repos.wwmoraes.gopium
     pkgs.nur.repos.wwmoraes.goutline
     pkgs.nur.repos.wwmoraes.kroki-cli
     pkgs.unstable.delve
-    pkgs.unstable.golangci-lint-langserver
     pkgs.unstable.gopls
     pkgs.unstable.gotools
     pkgs.yarn # needed for stylelint 💀

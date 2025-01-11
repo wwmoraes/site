@@ -3,10 +3,22 @@ title: Technology Radar
 description: Technologies that I personally work with and believe in
 table-of-contents: false
 resources:
-- name: radar
-  src: radar/radar.svg
-  title: William Artero technology radar
+- src: radar/radar.svg
 lastmod: 2024-08-11T12:58:52+02:00
+params:
+  radar:
+    title: William Artero technology radar
+    alt: technology radar
+  sections:
+  - techniques
+  - languages
+  - platforms
+  - tools
+  tiers:
+  - adopt
+  - trial
+  - assess
+  - hold
 ---
 
 Here's my personal technology radar. Its inspired by the [Thoughtworks one](https://www.thoughtworks.com/radar).

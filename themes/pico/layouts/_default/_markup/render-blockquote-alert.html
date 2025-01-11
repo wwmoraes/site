@@ -1,0 +1,11 @@
+<details role="note" {{- if ne .AlertSign "-" }} open{{- end -}} {{- if eq .AlertSign "" }} aria-disabled="true" {{- end
+  -}}>
+  <summary>
+    <u role="presentation">
+      {{- transform.Emojify (index site.Params.alerts.icons .AlertType | default (index site.Params.alerts.icons
+      site.Params.alerts.default | default "&#12336;")) -}}
+    </u>
+    {{ or .AlertTitle (i18n .AlertType) (title .AlertType) }}
+  </summary>
+  {{ .Text }}
+</details>

@@ -14,6 +14,9 @@ insert_final_newline = true
 [*.html]
 insert_final_newline = false
 
+[**/layouts/**/*.html]
+insert_final_newline = true
+
 [*.md]
 trim_trailing_whitespace = false
 
@@ -29,7 +32,7 @@ indent_style = tab
 [*.scss]
 insert_final_newline = unset
 
-## generated content
+## generated/external content
 
 [.styles/**/*.{json,yml}]
 insert_final_newline = unset
@@ -41,3 +44,8 @@ insert_final_newline = unset
 
 [data/**/*.json]
 insert_final_newline = unset
+
+[themes/pico/assets/css/pico/*]
+insert_final_newline = unset
+indent_style = unset
+indent_size = unset

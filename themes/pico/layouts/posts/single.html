@@ -1,0 +1,55 @@
+{{ define "main" }}
+<article>
+  <header>
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description -}}
+      <h2>{{- . -}}</h2>
+      {{- end }}
+    </hgroup>
+    {{ partial "details" . }}
+  </header>
+  {{- partial "toc" . -}}
+  {{ .Content }}
+  <footer>
+    <u role="presentation" aria-label="end-of-transmission">&#9220;</u>
+    {{- with .GitInfo }}
+    {{- if $.File }}
+    {{- $filepath := $.File.Path }}
+    <p>Revision <a href="https://github.com/wwmoraes/site/blob/{{ .Hash }}/content/{{ $filepath }}" rel="code-repository noreferrer noopener nofollow external" target="_blank" title="{{ .Subject }}">{{ .AbbreviatedHash }}</a> - {{ .Subject }}</p>
+    <hr />
+    {{- end }}
+    {{- end }}
+    <p>
+      All opinions here are my own, based on my experiences. Take anything I say with a grain of salt.
+    </p>
+    <p>
+      The content is neither endorsed nor promoted by anyone else unless explicitly mentioned.
+    </p>
+    {{- if in site.Params.mainSections .Type -}}
+    <hr />
+    <nav aria-label="related">
+      <ul>
+        <li>
+          {{- with .PrevInSection -}}
+          <a href="{{ .RelPermalink }}" rel="prev" title="{{ .Title }}">
+            <u role="presentation">&#11013;</u>
+            {{ .LinkTitle | emojify }}
+          </a>
+          {{- end -}}
+        </li>
+        <li>
+          {{- with .NextInSection -}}
+          <a href="{{ .RelPermalink }}" rel="next" title="{{ .Title }}">
+            {{ .LinkTitle | emojify }}
+            <u role="presentation">&#10145;</u>
+          </a>
+          {{- end -}}
+        </li>
+      </ul>
+    </nav>
+    {{- end -}}
+    {{- partial "comments" . -}}
+  </footer>
+</article>
+{{ end }}

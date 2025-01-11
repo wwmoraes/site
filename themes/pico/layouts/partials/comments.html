@@ -1,0 +1,19 @@
+{{- if in .Site.Params.mainSections .Type }}
+{{-   with .Site.Params.giscus }}
+{{-     $.Scratch.Set "giscus_theme" (.theme | default "custom") }}
+{{-     if eq ($.Scratch.Get "giscus_theme") "custom" }}
+{{-       $customTheme := resources.Get "css/giscus.scss" | resources.ExecuteAsTemplate "css/giscus.scss" . | toCSS (dict "transpiler"
+"dartsass") | resources.Minify | resources.Fingerprint }}
+{{-       $.Scratch.Set "giscus_theme" $customTheme.Permalink }}
+{{-     end }}
+<hr />
+<script src="https://giscus.app/client.js" data-repo="{{- .repo -}}" data-repo-id="{{- .repo_id -}}"
+  data-category="{{- .category -}}" data-category-id="{{- .category_id -}}" data-mapping="{{- .mapping -}}"
+  data-strict="{{- .strict -}}" data-reactions-enabled="{{- .reactions_enabled -}}"
+  data-emit-metadata="{{- .emit_metadata -}}" data-input-position="{{- .position -}}"
+  data-theme="{{- $.Scratch.Get "giscus_theme" -}}" data-lang="{{- .lang -}}" data-loading="{{- .loading -}}"
+  crossorigin="anonymous" async>
+  </script>
+<noscript>Please enable JavaScript to view and make comments.</noscript>
+{{-   end }}
+{{- end }}

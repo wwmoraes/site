@@ -1,0 +1,9 @@
+// responsive article
+main>article {
+  margin-inline: calc(-1*var(--pico-spacing));
+  overflow: hidden;
+
+  @media (min-width: 576px) {
+    margin-inline: unset;
+  }
+}

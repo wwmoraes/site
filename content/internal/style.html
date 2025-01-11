@@ -1,0 +1,841 @@
+---
+title: Style
+---
+<section>
+  <h1>Headings</h1>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</section>
+<hr />
+<section>
+  <h1>Heading Group</h1>
+  <hgroup>
+    <h2>Get inspired with CSS</h2>
+    <p>How to use CSS to add glam to your Website?</p>
+  </hgroup>
+</section>
+<hr />
+<section>
+  <h1>Inline text elements</h1>
+  <abbr title="Abbreviation">Abbr.</abbr>
+  <strong>Bold</strong>
+  <em>Italic</em>
+  <del>Deleted</del>
+  <ins>Inserted</ins>
+  <kbd>Ctrl + S</kbd>
+  <mark>Highlighted</mark>
+  <s>Strikethrough</s>
+  <small>Small </small>
+  <sub>Sub</sub>
+  <sup>Sup</sup>
+  <u>Underline</u>
+</section>
+<hr />
+<section>
+  <h1>Blockquote</h1>
+  <blockquote>
+    “Design is a funny word. Some people think
+    design means how it looks. But of course, if
+    you dig deeper, it's really how it works.”
+    <footer>
+      <cite>— Steve Jobs</cite>
+    </footer>
+  </blockquote>
+</section>
+<hr />
+<section>
+  <h1>Links</h1>
+  <a href="#">Primary</a>
+  <a href="#" class="secondary">Secondary</a>
+  <a href="#" class="contrast">Contrast</a>
+  <hr />
+  <a href="#">Regular link</a>
+  <a href="#" aria-current="page">Active link</a>
+  <a href="#">Regular link</a>
+</section>
+<hr />
+<section>
+  <h1>Buttons</h1>
+  <button>Button</button>
+  <button class="secondary">Secondary</button>
+  <button class="contrast">Contrast</button>
+  <button class="outline">Primary</button>
+  <button class="outline secondary">Secondary</button>
+  <button class="outline contrast">Contrast</button>
+  <hr />
+  <form>
+    <input type="submit">
+    <input type="button" value="Input">
+    <input type="reset">
+    <button disabled>Disabled</button>
+    <button class="secondary" disabled>Disabled</button>
+    <button class="contrast" disabled>Disabled</button>
+    <div role="button" tabindex="0">Div as a button</div>
+    <hr />
+    <div role="group">
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+    </div>
+  </form>
+</section>
+<hr />
+<section>
+  <h1>Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Planet</th>
+        <th scope="col">Diameter (km)</th>
+        <th scope="col">Distance to Sun (AU)</th>
+        <th scope="col">Orbit (days)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Mercury</th>
+        <td>4,880</td>
+        <td>0.39</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <th scope="row">Venus</th>
+        <td>12,104</td>
+        <td>0.72</td>
+        <td>225</td>
+      </tr>
+      <tr>
+        <th scope="row">Earth</th>
+        <td>12,742</td>
+        <td>1.00</td>
+        <td>365</td>
+      </tr>
+      <tr>
+        <th scope="row">Mars</th>
+        <td>6,779</td>
+        <td>1.52</td>
+        <td>687</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Average</th>
+        <td>9,126</td>
+        <td>0.91</td>
+        <td>341</td>
+      </tr>
+    </tfoot>
+  </table>
+  <hr />
+  <table class="striped">
+    <thead>
+      <tr>
+        <th scope="col">Planet</th>
+        <th scope="col">Diameter (km)</th>
+        <th scope="col">Distance to Sun (AU)</th>
+        <th scope="col">Orbit (days)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Mercury</th>
+        <td>4,880</td>
+        <td>0.39</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <th scope="row">Venus</th>
+        <td>12,104</td>
+        <td>0.72</td>
+        <td>225</td>
+      </tr>
+      <tr>
+        <th scope="row">Earth</th>
+        <td>12,742</td>
+        <td>1.00</td>
+        <td>365</td>
+      </tr>
+      <tr>
+        <th scope="row">Mars</th>
+        <td>6,779</td>
+        <td>1.52</td>
+        <td>687</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Average</th>
+        <td>9,126</td>
+        <td>0.91</td>
+        <td>341</td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
+<hr />
+<section>
+  <h1>Forms</h1>
+  <form>
+    <fieldset>
+      <label>
+        First name
+        <input name="first_name" placeholder="First name" autocomplete="given-name" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="Email" autocomplete="email" />
+        <small>some helper text</small>
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Subscribe" />
+  </form>
+  <hr />
+  <form>
+    <fieldset role="group">
+      <input type="email" name="email" placeholder="Enter your email" autocomplete="email" />
+      <input type="submit" value="Subscribe" />
+    </fieldset>
+    <input type="text" name="text" placeholder="Text" aria-label="Text">
+    <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email">
+    <input type="number" name="number" placeholder="Number" aria-label="Number">
+    <input type="password" name="password" placeholder="Password" aria-label="Password">
+    <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel">
+    <input type="url" name="url" placeholder="Url" aria-label="Url">
+    <input type="date" name="date" aria-label="Date">
+    <input type="datetime-local" name="datetime-local" aria-label="Datetime local">
+    <input type="month" name="month" aria-label="Month">
+    <input type="time" name="time" aria-label="Time">
+    <input type="search" name="search" placeholder="Search" aria-label="Search" />
+    <input type="color" value="#ff9500" aria-label="Color picker">
+    <input type="file">
+    <input type="text" name="text" placeholder="Disabled" aria-label="Disabled input" disabled>
+    <input type="text" name="text" value="Read-only" aria-label="Read-only input" readonly>
+    <input type="text" name="valid" value="Valid" aria-invalid="false">
+    <input type="text" name="invalid" value="Invalid" aria-invalid="true">
+    <input type="text" name="valid" value="Valid" aria-invalid="false" aria-describedby="valid-helper">
+    <small id="valid-helper">Looks good!</small>
+    <input type="text" name="invalid" value="Invalid" aria-invalid="true" aria-describedby="invalid-helper">
+    <small id="invalid-helper">
+      Please provide a valid value!
+    </small>
+    <textarea name="bio" placeholder="Write a professional short bio..." aria-label="Professional short bio">
+    </textarea>
+    <textarea name="disabled" disabled>
+      Disabled
+    </textarea>
+    <textarea name="read-only" readonly>
+      Read-only
+    </textarea>
+    <textarea name="valid" aria-invalid="false">
+      Valid
+    </textarea>
+    <textarea name="invalid" aria-invalid="true">
+      Invalid
+    </textarea>
+    <textarea name="valid" aria-invalid="false" aria-describedby="valid-helper">
+      Valid
+    </textarea>
+    <small id="valid-helper">Looks good!</small>
+    <textarea name="invalid" aria-invalid="true" aria-describedby="invalid-helper">
+      Invalid
+    </textarea>
+    <small id="invalid-helper">
+      Please provide a valid value!
+    </small>
+    <hr />
+    <select name="favorite-cuisine" aria-label="Select your favorite cuisine..." required>
+      <option selected disabled value="">
+        Select your favorite cuisine...
+      </option>
+      <option>Italian</option>
+      <option>Japanese</option>
+      <option>Indian</option>
+      <option>Thai</option>
+      <option>French</option>
+    </select>
+    <select aria-label="Select your favorite snacks..." multiple size="6">
+      <option disabled>
+        Select your favorite snacks...
+      </option>
+      <option>Cheese</option>
+      <option selected>Fruits</option>
+      <option selected>Nuts</option>
+      <option>Chocolate</option>
+      <option>Crackers</option>
+    </select>
+    <select name="meal-type" aria-label="Select a meal type..." disabled>
+      <option>Select a meal type...</option>
+      <option>...</option>
+    </select>
+    <select aria-invalid="false">
+      <option>valid</option>
+    </select>
+    <small>Great choice!</small>
+    <select required aria-invalid="true">
+      <option>invalid</option>
+    </select>
+    <small>
+      Please select your favorite pizza topping!
+    </small>
+    <hr />
+    <fieldset>
+      <legend>Language preferences:</legend>
+      <label>
+        <input type="checkbox" name="english" checked />
+        English
+      </label>
+      <label>
+        <input type="checkbox" name="french" checked />
+        French
+      </label>
+      <label>
+        <input type="checkbox" name="mandarin" />
+        Mandarin
+      </label>
+      <label>
+        <input type="checkbox" name="thai" />
+        Thai
+      </label>
+      <label aria-disabled="true">
+        <input type="checkbox" name="dothraki" disabled />
+        Dothraki
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Language preferences:</legend>
+      <input type="checkbox" id="hindi" name="hindi" checked />
+      <label htmlFor="hindi">Hindi</label>
+      <input type="checkbox" id="swahili" name="swahili" />
+      <label htmlFor="swahili">Swahili</label>
+      <input type="checkbox" id="navi" name="navi" disabled />
+      <label htmlFor="navi" aria-disabled="true">Na'vi</label>
+    </fieldset>
+    <label>
+      <label>
+        <input type="checkbox" name="valid" aria-invalid="false" />
+        Valid
+      </label>
+      <label>
+        <input type="checkbox" name="invalid" aria-invalid="true" />
+        Invalid
+      </label>
+      <fieldset>
+        <legend>Language preference:</legend>
+        <label>
+          <input type="radio" name="language" checked />
+          English
+        </label>
+        <label>
+          <input type="radio" name="language" />
+          French
+        </label>
+        <label>
+          <input type="radio" name="language" />
+          Mandarin
+        </label>
+        <label>
+          <input type="radio" name="language" />
+          Thai
+        </label>
+        <label aria-disabled="true">
+          <input type="radio" name="language" disabled />
+          Dothraki
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Second language:</legend>
+        <input type="radio" id="hindi" name="second-language" checked />
+        <label htmlFor="hindi">Hindi</label>
+        <input type="radio" id="swahili" name="second-language" />
+        <label htmlFor="swahili">Swahili</label>
+        <input type="radio" id="navi" name="second-language" disabled />
+        <label htmlFor="navi" aria-disabled="true">Na'vi</label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input type="radio" name="validation-states" aria-invalid="false" />
+          Valid
+        </label>
+        <label>
+          <input type="radio" name="validation-states" aria-invalid="true" />
+          Invalid
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input name="terms" type="checkbox" role="switch" />
+          I agree to the Terms
+        </label>
+        <label>
+          <input name="opt-in" type="checkbox" role="switch" checked />
+          Receive news and offers
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input name="publish" type="checkbox" role="switch" disabled />
+          Publish on my profile
+        </label>
+        <label>
+          <input name="change-password" type="checkbox" role="switch" checked disabled />
+          Change my password at next login
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input name="2fa" type="checkbox" role="switch" aria-invalid="false" />
+          Enable two-factor authentication
+        </label>
+        <label>
+          <input name="subscription" type="checkbox" role="switch" aria-invalid="true" />
+          Automatic subscription renewal
+        </label>
+      </fieldset>
+      <label>
+        Brightness
+        <input type="range" />
+      </label>
+      <label>
+        Contrast
+        <input type="range" value="40" />
+      </label>
+  </form>
+</section>
+<hr />
+<section>
+  <h1>Components</h1>
+  <h2>Accordion</h2>
+  <details open>
+    <summary>Accordion 1</summary>
+    <p>...</p>
+  </details>
+  <hr />
+  <details>
+    <summary>Accordion 2</summary>
+    <ul>
+      <li>...</li>
+      <li>...</li>
+    </ul>
+  </details>
+  <hr />
+  <details>
+    <summary role="button">Owls</summary>
+    <p>...</p>
+  </details>
+  <details>
+    <summary role="button" class="secondary">Secondary</summary>
+    <p>...</p>
+  </details>
+  <details>
+    <summary role="button" class="contrast">Contrast</summary>
+    <p>...</p>
+  </details>
+  <details>
+    <summary role="button" class="outline">Primary outline</summary>
+    <p>...</p>
+  </details>
+  <details>
+    <summary role="button" class="outline secondary">Secondary outline</summary>
+    <p>...</p>
+  </details>
+  <details>
+    <summary role="button" class="outline contrast">Contrast outline</summary>
+    <p>...</p>
+  </details>
+  <h2>Card</h2>
+  <article>I’m a card!</article>
+  <article>
+    <header>Header</header>
+    Body
+    <footer>Footer</footer>
+  </article>
+  <h2>Dropdown</h2>
+  <details class="dropdown">
+    <summary>Dropdown</summary>
+    <ul>
+      <li><a href="#">Solid</a></li>
+      <li><a href="#">Liquid</a></li>
+      <li><a href="#">Gas</a></li>
+      <li><a href="#">Plasma</a></li>
+    </ul>
+  </details>
+  <select name="select" aria-label="Select" required>
+    <option selected disabled value="">Select</option>
+    <option>Solid</option>
+    <option>Liquid</option>
+    <option>Gas</option>
+    <option>Plasma</option>false
+  </select>
+  <!-- Radios -->
+  <details class="dropdown">
+    <summary>
+      Select a phase of matter...
+    </summary>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="phase" value="solid" />
+          Solid
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="phase" value="liquid" />
+          Liquid
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="phase" value="gas" />
+          Gas
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="phase" value="plasma" />
+          Plasma
+        </label>
+      </li>
+    </ul>
+  </details>
+
+  <!-- Checkboxes -->
+  <details class="dropdown">
+    <summary>
+      Select phases of matter...
+    </summary>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" name="solid" />
+          Solid
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="liquid" />
+          Liquid
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="gas" />
+          Gas
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="plasma" />
+          Plasma
+        </label>
+      </li>
+    </ul>
+  </details>
+  <details class="dropdown">
+    <summary role="button">
+      Dropdown as a button
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+  <!-- Primary -->
+  <details class="dropdown">
+    <summary role="button">
+      Primary
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <!-- Secondary -->
+  <details class="dropdown">
+    <summary role="button" class="secondary">
+      Secondary
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <!-- Contrast -->
+  <details class="dropdown">
+    <summary role="button" class="contrast">
+      Contrast
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <!-- Primary outline -->
+  <details class="dropdown">
+    <summary role="button" class="outline">
+      Primary outline
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <!-- Secondary outline -->
+  <details class="dropdown">
+    <summary role="button" class="outline secondary">
+      Secondary outline
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <!-- Contrast outline -->
+  <details class="dropdown">
+    <summary role="button" class="outline contrast">
+      Contrast outline
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+  <details class="dropdown">
+    <summary aria-invalid="false">
+      Valid phase of matter: Solid
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+
+  <details class="dropdown">
+    <summary aria-invalid="true">
+      Debated classification: Plasma
+    </summary>
+    <ul>
+      ...
+    </ul>
+  </details>
+  <nav>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="secondary">Services</a></li>
+      <li>
+        <details class="dropdown">
+          <summary>
+            Account
+          </summary>
+          <ul dir="rtl">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</section>
+<hr />
+<section>
+  <h1>Group</h1>
+  <form>
+    <fieldset role="group">
+      <input name="email" type="email" placeholder="Enter your email" autocomplete="email" />
+      <input type="submit" value="Subscribe" />
+    </fieldset>
+  </form>
+  <form>
+    <fieldset role="group">
+      <input name="email" type="email" placeholder="Email" autocomplete="email" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log in" />
+    </fieldset>
+  </form>
+  <form role="search">
+    <input name="search" type="search" placeholder="Search" />
+    <input type="submit" value="Search" />
+  </form>
+  <div role="group">
+    <button>Button</button>
+    <button>Button</button>
+    <button>Button</button>
+  </div>
+  <div role="group">
+    <button aria-current="true">Active</button>
+    <button>Button</button>
+    <button>Button</button>
+  </div>
+  <div role="group">
+    <button>Button</button>
+    <button class="secondary">Button</button>
+    <button class="contrast">Button</button>
+  </div>
+</section>
+<hr />
+<section>
+  <h1>Loading</h1>
+  <article aria-busy="true"></article>
+  <span aria-busy="true">Generating your link...</span>
+  <button aria-busy="true" aria-label="Please wait…" />
+  <button aria-busy="true" aria-label="Please wait…" class="secondary" />
+  <button aria-busy="true" aria-label="Please wait…" class="contrast" />
+  <button aria-busy="true" class="outline">Please wait…</button>
+  <button aria-busy="true" class="outline secondary">Please wait…</button>
+  <button aria-busy="true" class="outline contrast">Please wait…</button>
+</section>
+<hr />
+<section>
+  <h1>Modal</h1>
+  <dialog>
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" onclick=""></button>
+        <p>
+          <strong>🗓️ Thank You for Registering!</strong>
+        </p>
+      </header>
+      <p>
+        We're excited to have you join us for our
+        upcoming event. Please arrive at the museum
+        on time to check in and get started.
+      </p>
+      <ul>
+        <li>Date: Saturday, April 15</li>
+        <li>Time: 10:00am - 12:00pm</li>
+      </ul>
+    </article>
+  </dialog>
+</section>
+<hr />
+<section>
+  <h1>Nav</h1>
+  <nav>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Products</a></li>
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="contrast">About</a></li>
+      <li><a href="#" class="contrast">Services</a></li>
+      <li><a href="#" class="contrast">Products</a></li>
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      <li><a href="#" class="secondary">...</a></li>
+    </ul>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="secondary">...</a></li>
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><button class="secondary">Products</button></li>
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      <li><strong>Acme Corp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="secondary">Services</a></li>
+      <li>
+        <details class="dropdown">
+          <summary>
+            Account
+          </summary>
+          <ul dir="rtl">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <nav aria-label="breadcrumb">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li>Design</li>
+    </ul>
+  </nav>
+</section>
+<section>
+  <h1>Progress</h1>
+  <progress value="39" max="100"></progress>
+  <progress></progress>
+</section>
+<hr />
+<section>
+  <h1>Tooltip</h1>
+  <p>Tooltip on a <a href="#" data-tooltip="Tooltip">link</a></p>
+  <p>Tooltip on <em data-tooltip="Tooltip">inline element</em></p>
+  <p><button data-tooltip="Tooltip">Tooltip on a button</button></p>
+  <button data-tooltip="Top">Top</button>
+  <button data-tooltip="Right" data-placement="right">Right</button>
+  <button data-tooltip="Bottom" data-placement="bottom">Bottom</button>
+  <button data-tooltip="Left" data-placement="left">Left</button>
+</section>
+<hr />
+<section>
+  <h1>Meter</h1>
+  <label>
+    Critical low:
+    <meter low=".25" optimum=".8" high=".75" value=".2">at 20/100</meter>
+  </label>
+  <label>
+    sub-optimal:
+    <meter low=".25" optimum=".85" high=".75" value=".5">at 50/100</meter>
+  </label>
+  <label>
+    low good:
+    <meter value=".25" low=".25"></meter>
+  </label>
+  <label>
+    high good:
+    <meter value=".8" high=".8"></meter>
+  </label>
+  <label>
+    over-optimal:
+    <meter low=".25" optimum=".15" high=".75" value=".5">at 50/100</meter>
+  </label>
+  <label>
+    Critical high:
+    <meter low=".25" optimum=".2" high=".75" value=".8">at 80/100</meter>
+  </label>
+</section>

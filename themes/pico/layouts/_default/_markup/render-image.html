@@ -1,0 +1,40 @@
+{{- $image := "" }}
+{{- $props := dict }}
+{{- $url := urls.Parse .Destination }}
+
+{{- if not $url.IsAbs }}
+  {{- $image = resources.Get .Destination }}
+  {{- with $image.Exif }}
+    {{- with .Tags }}
+      {{- with .DocumentName }}
+        {{- $props = $props | merge (dict "title" (. | plainify)) }}
+      {{- end }}
+      {{- with .ImageDescription }}
+        {{- $props = $props | merge (dict "alt" (. | plainify)) }}
+      {{- end }}
+      {{- with .UserComment | unmarshal }}
+        {{- with .attributes }}
+          {{- $props = $props | merge . }}
+        {{- end }}
+      {{- else }}
+        {{- warnf "UserComment not in JSON format" }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- /* ignore EXIF from remote images for security reasons :) */ -}}
+  {{- $image = resources.GetRemote .Destination }}
+{{- end }}
+
+{{- $props = $props | merge (dict "height" $image.Height "width" $image.Width) }}
+{{- $props = $props | merge $image.Params }}
+
+{{- with .PlainText }}
+{{- $props = $props | merge (dict "alt" .) }}
+{{- end }}
+
+{{- if and $image (eq $image.MediaType.Type "image/gif" | not) }}
+{{- partial "picture.html" (dict "image" $image "Attributes" $props) }}
+{{- else }}
+<img src="{{ .Destination }}" {{- partial "function/props" $props -}} />
+{{- end }}

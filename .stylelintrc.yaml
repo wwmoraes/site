@@ -2,8 +2,10 @@ extends: stylelint-config-standard-scss
 ignoreFiles:
 - "tmp/**"
 - "**/*.css"
+- "themes/pico/assets/css/pico/**/*"
 rules:
-  color-function-notation: legacy
+  alpha-value-notation: number
+  color-function-notation: modern
   selector-no-vendor-prefix:
   - true
   - ignoreSelectors:
@@ -19,4 +21,12 @@ rules:
   - lower
   - ignoreKeywords:
     - currentColor
+    ignoreProperties:
+    - /font-family/
   media-feature-range-notation: prefix
+  rule-empty-line-before:
+  - always
+  - except:
+    - after-single-line-comment
+    ignore:
+    - first-nested

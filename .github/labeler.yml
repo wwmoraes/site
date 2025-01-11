@@ -1,8 +1,0 @@
-# https://riyadhalnur.github.io/issuelabeler/
-excludeLabels: []
-custom:
-- location: title
-  keywords:
-  - "chore: updated site data"
-  labels:
-  - automerge

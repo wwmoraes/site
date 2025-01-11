@@ -1,22 +1,87 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/menu
 main:
-- name: Posts
-  pageRef: posts
-  weight: 10
-- name: Categories
-  pageRef: categories
-  weight: 20
-- name: Tags
-  pageRef: tags
-  weight: 30
-
-sub:
-- name: Tech Radar
-  pageRef: radar
-  weight: 70
-- name: Now
-  pageRef: now
-  weight: 80
 - name: About
   pageRef: about
+  weight: 10
+- name: Radar
+  pageRef: radar
+  weight: 20
+
+taxonomies:
+- name: Posts
+  pageRef: posts
+  weight: 70
+- name: Categories
+  pageRef: categories
+  weight: 80
+- name: Tags
+  pageRef: tags
   weight: 90
+- name: RSS
+  pageRef: index.rss.xml
+  weight: 98
+  params:
+    rel: feed
+- name: JSON
+  pageRef: index.feed.json
+  weight: 99
+  params:
+    rel: feed
+
+social:
+- name: LinkedIn
+  url: https://linkedin.com/in/wwmoraes
+  weight: 1
+  params:
+    rel: noreferrer noopener nofollow external me
+    target: _blank
+- name: GitHub
+  url: https://github.com/wwmoraes
+  weight: 2
+  params:
+    rel: noreferrer noopener nofollow external me
+    target: _blank
+- name: Zotero
+  url: https://www.zotero.org/wwmoraes/library
+  weight: 21
+  params:
+    rel: noreferrer noopener nofollow external me
+    target: _blank
+- name: Goodreads
+  url: https://www.goodreads.com/wwmoraes
+  weight: 22
+  params:
+    rel: noreferrer noopener nofollow external me
+    target: _blank
+# - name: Telegram
+#   url: https://t.me/wwmoraes
+#   weight: 13
+#   params:
+#     rel: noreferrer noopener nofollow external me
+#     target: _blank
+# - name: Hachyderm
+#   url: https://hachyderm.io/@wwmoraes
+#   weight: 11
+#   params:
+#     rel: noreferrer noopener nofollow external me
+#     target: _blank
+# - name: Mastodon
+#   url: https://mastodon.social/@wwmoraes
+#   weight: 12
+#   params:
+#     rel: noreferrer noopener nofollow external me
+#     target: _blank
+# - name: X
+#   url: https://x.com/wwmoraes
+# - name: CodePen
+#   url: https://codepen.io/wwmoraes
+# - name: CodeSandbox
+#   url: https://codesandbox.io/u/wwmoraes
+# - name: Discord
+#   url: https://discordapp.com/users/116169201990893575
+# - name: Facebook
+#   url: https://www.facebook.com/wwmoraes
+# - name: Instagram
+#   url: https://instagram.com/wwmoraes
+# - name: YouTube
+#   url: https://www.youtube.com/@wwmoraes

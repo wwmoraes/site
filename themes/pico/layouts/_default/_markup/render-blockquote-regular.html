@@ -1,0 +1,14 @@
+{{- define "blockquote" }}
+<blockquote {{- with .Attributes.url }} cite="{{ . }}" {{- end -}}>
+  {{ .Text }}
+</blockquote>
+{{- end }}
+
+{{- if .Attributes.source }}
+<figure>
+  {{ template "blockquote" . }}
+  <figcaption>&#151;<cite>{{ .Attributes.source }}</cite></figcaption>
+</figure>
+{{- else }}
+{{ template "blockquote" . }}
+{{- end }}

@@ -1,0 +1,57 @@
+{{- $image := "" }}
+{{- $props := dict }}
+{{- $url := urls.Parse . }}
+{{- if not $url.IsAbs }}
+  {{- $image = resources.Get . }}
+  {{- with $image.Exif }}
+    {{- with .Tags }}
+      {{- with .DocumentName }}
+        {{- $props = $props | merge (dict "title" (. | plainify)) }}
+      {{- end }}
+      {{- with .ImageDescription }}
+        {{- $props = $props | merge (dict "alt" (. | plainify)) }}
+      {{- end }}
+      {{- with .UserComment | unmarshal }}
+        {{- with .attributes }}
+          {{- $props = $props | merge . }}
+        {{- end }}
+      {{- else }}
+        {{- warnf "UserComment not in JSON format" }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- /* ignore EXIF from remote images for security reasons :) */ -}}
+  {{- $image = resources.GetRemote .Destination }}
+{{- end }}
+
+{{- $props = $props | merge (dict "height" $image.Height "width" $image.Width) }}
+{{- $props = $props | merge $image.Params }}
+
+<picture>
+  {{- with $image | images.Filter (images.Process "resize 300x webp lanczos") }}
+  <source media="(max-width: 300px)" srcset="{{ .RelPermalink }}" type="image/webp" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 300x png lanczos") }}
+  <source media="(max-width: 300px)" srcset="{{ .RelPermalink }}" type="image/png" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 600x webp lanczos") }}
+  <source media="(max-width: 600px)" srcset="{{ .RelPermalink }}" type="image/webp" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 600x png lanczos") }}
+  <source media="(max-width: 600px)" srcset="{{ .RelPermalink }}" type="image/png" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 900x webp lanczos") }}
+  <source media="(max-width: 900px)" srcset="{{ .RelPermalink }}" type="image/webp" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 900x png lanczos") }}
+  <source media="(max-width: 900px)" srcset="{{ .RelPermalink }}" type="image/png" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 1200x webp lanczos") }}
+  <source media="(min-width: 901px)" srcset="{{ .RelPermalink }}" type="image/webp" />
+  {{- end }}
+  {{- with $image | images.Filter (images.Process "resize 1200x png lanczos") }}
+  <source media="(min-width: 901px)" srcset="{{ .RelPermalink }}" type="image/png" />
+  {{- end }}
+  <img src="{{- $image.Permalink -}}" {{- partial "function/props" $props -}} />
+</picture>

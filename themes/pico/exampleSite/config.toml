@@ -1,0 +1,25 @@
+baseURL = "https://example.com"
+title = "Your title"
+themesDir = "../.."
+theme = "m10d"
+paginate = 8
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[params]
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

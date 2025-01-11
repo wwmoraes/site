@@ -32,8 +32,7 @@ biography:
 
 > a concentration of a few good people… applying the simplest, most
 > straightforward methods possible to develop and produce new products
->
-> -- Ben Rich, describing the Skunk Works division
+{source="Ben Rich, describing the Skunk Works division"}
 
 There's also reports on how Johnson challenged his engineering team to design
 solutions that a regular engineer would be able to fix using common tools. This
@@ -95,13 +94,12 @@ solution. Lets take for instance the Blackbirds as seen by:
 - **Farmers**: an absolute black box, the utmost complexity they've ever seen.
   No idea about how it works or any of that _Mach_ talk.
 
-{{< admonition note >}}
-Before I get cancelled: please, I hold no prejudice towards farmers. I don't
-mean to say they're ignorant or misinformed. My point is that the knowledge
-related to aircraft is specific so anyone outside that field will most
-certainly have no more knowledge than any other casual passer-by. Unless they're
-enthusiasts about the topic.
-{{< /admonition >}}
+> [!NOTE]
+> Before I get cancelled: please, I hold no prejudice towards farmers. I don't
+> mean to say they're ignorant or misinformed. My point is that the knowledge
+> related to aircraft is specific so anyone outside that field will most
+> certainly have no more knowledge than any other casual passer-by. Unless
+> they're enthusiasts about the topic.
 
 ## Less is more - sometimes
 
@@ -123,8 +121,7 @@ that still holds world records to date. As per Johnson himself:
 > structural materials, manufacturing tools and techniques, hydraulic fluid,
 > fuel tank sealants, paints, plastics, wiring, and connecting plugs. Everything
 > about the aircraft had to be invented.
->
-> -- Clarence "Kelly" Johnson, about the Blackbirds design
+{source="Clarence \"Kelly\" Johnson, about the Blackbirds design"}
 
 They had to invent everything from scratch. Isn't that… _non-KISS_?
 Over-engineering even? I'm sure they could solve it with some extra glue and
@@ -154,9 +151,8 @@ designing a solution to a problem using a set of components and tools that leads
 to a clear, ease to explain, understand and maintain end product._ That last
 part is key to debunk the association _KISS = less_.
 
-{{< admonition quote "Short and sweet" >}}
-Keep it simple to understand and stupid easy to maintain.
-{{< /admonition >}}
+> [!quote] Short and sweet
+> Keep it simple to understand and stupid easy to maintain.
 
 In coding terms, skipping to isolate a certain functionality does more harm
 than good. The fear of "increased complexity" or "excessive ornamentation"
@@ -176,13 +172,12 @@ like Haskell and Golang don't even support ternary operators as they
 
 [golang-ternary]: https://go.dev/doc/faq#Does_Go_have_a_ternary_form
 
-{{< admonition info >}}
-Languages that do not have the ternary operator may still support a stricter
-version of an if/else construct as the right-hand side value.
-
-For instance in Python and Haskell you can initialize values with an expression
-that must have both the if and else blocks returning a value.
-{{< /admonition >}}
+> [!info]
+> Languages that do not have the ternary operator may still support a stricter
+> version of an if/else construct as the right-hand side value.
+>
+> For instance in Python and Haskell you can initialize values with an expression
+> that must have both the if and else blocks returning a value.
 
 Let's do an exercise here with one of my favorite love-hate features of Bash:
 variable expansion. Do you know from the top of your head what's happening on
@@ -223,21 +218,20 @@ Golang:
 
 {{< source variables.go >}}
 
-{{< admonition warning >}}
-**Please do NOT use this code in real projects!**
-
-This is a silly example, done to port and keep parity with the Bash
-functionality. It lacks proper error handling and even uses the `panic`
-mechanism which is not recommended. There's better ways to handle configuration
-and environment variables in languages such as Golang.
-
-I personally recommend the [spf13/cobra][spf13-cobra] and its peer package
-[spf13/viper][spf13-viper] to handle environment variables, command line flags
-and configuration files seamlessly.
-
-[spf13-cobra]: http://github.com/spf13/cobra
-[spf13-viper]: http://github.com/spf13/viper
-{{< /admonition >}}
+> [!warning]
+> **Please do NOT use this code in real projects!**
+>
+> This is a silly example, done to port and keep parity with the Bash
+> functionality. It lacks proper error handling and even uses the `panic`
+> mechanism which is not recommended. There's better ways to handle configuration
+> and environment variables in languages such as Golang.
+>
+> I personally recommend the [spf13/cobra][spf13-cobra] and its peer package
+> [spf13/viper][spf13-viper] to handle environment variables, command line flags
+> and configuration files seamlessly.
+>
+> [spf13-cobra]: https://github.com/spf13/cobra
+> [spf13-viper]: https://github.com/spf13/viper
 
 I'll grant you that's way more code to get those quirk variable expansions done.
 Yet if you read the main function its much clearer what each line does. Even if
@@ -245,12 +239,11 @@ you're not familiar with Golang it should be faster to deduct what's going to
 happen without deep-diving into its implementation. That's KISS with a dash of
 DDD to finish it off.
 
-{{< admonition note >}}
-My goal here isn't to say Golang is better than Bash, nor that you should
-replace all your scripts with binaries. I used those languages as the latter has
-plenty of unreadable quirks and cryptic design choices, while the former is
-easier to produce a dual with a KISS design.
-{{< /admonition >}}
+> [!note]
+> My goal here isn't to say Golang is better than Bash, nor that you should
+> replace all your scripts with binaries. I used those languages as the latter has
+> plenty of unreadable quirks and cryptic design choices, while the former is
+> easier to produce a dual with a KISS design.
 
 ## Over-engineering
 

@@ -1,8 +1,16 @@
+{{ define "head" }}
+{{- $radar := resources.Get "css/radar.scss" | resources.ExecuteAsTemplate "css/radar.scss" . | toCSS (dict "transpiler"
+"dartsass") |
+resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{- $radar.RelPermalink -}}" {{ printf "integrity=%q" $radar.Data.Integrity | safeHTMLAttr
+  }} />
+{{- with (page.Resources.Get "radar.svg") }}
+<link rel="preload" href="{{ .RelPermalink }}" as="image" type="image/svg+xml" />
+{{- end }}
+{{ end }}
 {{ define "main" }}
-{{- $sections := slice "techniques" "languages" "platforms" "tools" -}}
-{{- $tiers := slice "adopt" "trial" "assess" "hold" -}}
-{{- range $section := $sections -}}
-{{- range $tier := $tiers -}}
+{{- range $section := page.Params.sections -}}
+{{- range $tier := page.Params.tiers -}}
 {{- $.Scratch.Set (printf "%s %s" $section $tier) slice -}}
 {{- end -}}
 {{- end -}}
@@ -11,44 +19,49 @@
 {{- $.Scratch.Add (printf "%s %s" .Params.radarSection .Params.radarTier) . -}}
 {{- end }}
 {{- end }}
-<article class="single" itemscope>
-  <div class="content radar">
-    <header class="post-header">
-      <h1 class="post-title">{{ .Title }}</h1>
-    </header>
-    {{ .Content }}
-    {{- with (.Page.Resources.Get "radar.svg") -}}
-    {{- if and (eq .MediaType.MainType "image") (eq .MediaType.SubType "svg") -}}
-    <div class="img">
-      {{- .Content | safeHTML -}}
-    </div>
-    {{- end -}}
-    {{- end -}}
-    <div class="sections">
-      {{- range $section := $sections -}}
-      <section>
-        <h2>{{ $section | title }}</h2>
-        <iframe class="radar view" src="radar.svg#{{ $section }}"></iframe>
-        {{- range $tier := $tiers -}}
-        <h3>{{ $tier | title }}</h3>
-        <ol>
-          {{- range ($.Scratch.Get (printf "%s %s" $section $tier)) -}}
-          <li value="{{ .Params.radarIndex }}">
-            {{- $isWIP := or .Draft (not .RelPermalink) -}}
-            {{- if $isWIP }}
-            {{- .Title -}}&nbsp;<sup>WIP</sup>
-            {{- else }}
-            <a href="{{ .RelPermalink }}">
-              {{- .Title -}}
-            </a>
-            {{- end -}}
-          </li>
-          {{- end -}}
-        </ol>
-        {{- end -}}
-      </section>
+<header>
+  <hgroup>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description -}}
+    <h2>{{- . -}}</h2>
+    {{- end }}
+  </hgroup>
+</header>
+{{ .Content }}
+{{- with (page.Resources.Get "radar.svg") -}}
+<object type="image/svg+xml" data="{{ .RelPermalink }}" aria-label="radar" title="{{ page.Params.radar.title }}" allow-same-origin>
+  <img src="{{ .RelPermalink }}" title="{{ page.Params.radar.title }}" alt="{{ page.Params.radar.alt }}" />
+</object>
+{{- end }}
+{{- range $section := page.Params.sections -}}
+{{- with (page.Resources.Get "radar.svg") -}}
+<object type="image/svg+xml" data="{{ .RelPermalink }}#{{ $section }}" aria-label="radar-section"
+  title="{{ page.Params.radar.title }} ({{ $section }} section)" allow-same-origin>
+  <img src="{{ .RelPermalink }}#{{ $section }}" title="{{ page.Params.radar.title }} - {{ $section }}"
+    alt="{{ page.Params.radar.alt }} ({{ $section }} section)" />
+</object>
+{{- end }}
+<details>
+  <summary role="button" class="secondary">
+    {{ $section | title }}
+  </summary>
+  {{- range $tier := page.Params.tiers -}}
+  <h4>{{ $tier | title }}</h4>
+  <ol>
+    {{- range ($.Scratch.Get (printf "%s %s" $section $tier)) -}}
+    <li value="{{ .Params.radarIndex }}">
+      {{- $isWIP := or .Draft (not .RelPermalink) -}}
+      {{- if $isWIP }}
+      {{- .Title -}}&nbsp;<sup>WIP</sup>
+      {{- else }}
+      <a href="{{ .RelPermalink }}">
+        {{- .Title -}}
+      </a>
       {{- end -}}
-    </div>
-  </div>
-</article>
+    </li>
+    {{- end -}}
+  </ol>
+  {{- end -}}
+</details>
+{{- end -}}
 {{ end }}

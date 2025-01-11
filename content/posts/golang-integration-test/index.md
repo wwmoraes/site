@@ -29,12 +29,11 @@ lead the developer to focus on technical aspects and not the real use cases of
 the code. It's also a chore to maintain when done solely for the sake of
 coverage.
 
-{{< admonition note >}}
-My exception to this standing is property testing in functional languages. Even
-more so when coupled with random data generators like the `Gen` monad from
-`Test.QuickCheck` in Haskell. They may sound like unit testing, yet they ensure
-a defined law of a type holds water with randomized input.
-{{< /admonition >}}
+> [!note]
+> My exception to this standing is property testing in functional languages. Even
+> more so when coupled with random data generators like the `Gen` monad from
+> `Test.QuickCheck` in Haskell. They may sound like unit testing, yet they ensure
+> a defined law of a type holds water with randomized input.
 
 ## Integration tests
 
@@ -83,5 +82,5 @@ What do you think of this option provided by Golang? 😊
 
 [testing]: https://pkg.go.dev/testing
 [go-test-cmd]: https://pkg.go.dev/cmd/go#hdr-Testing_functions
-[anilistarr]: http://github.com/wwmoraes/anilistarr/
+[anilistarr]: https://github.com/wwmoraes/anilistarr/
 [coverage-sample]: https://github.com/wwmoraes/anilistarr/actions/runs/5957377534/job/16159944308#step:8:61

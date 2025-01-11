@@ -1,0 +1,14 @@
+name = "pico"
+license = "MIT"
+licenselink = "https://github.com/wwmoraes/hugo-theme-pico/blob/master/LICENSE"
+description = "Elegant and lightweight theme built using Pico.CSS"
+homepage = "https://github.com/wwmoraes/hugo-theme-pico"
+tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
+features = [
+  "minimalistic blog",
+  "editable colors"
+]
+
+[author]
+  name = "William Artero"
+  homepage = "https://artero.dev"
