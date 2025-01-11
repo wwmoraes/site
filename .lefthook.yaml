@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=.vscode/lefthook.schema.json
+# yaml-language-server: $schema=.meta/schemas/lefthook.schema.json
 assert_lefthook_installed: true
 commit-msg:
   commands:

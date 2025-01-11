@@ -3,7 +3,7 @@ on:
   push:
     paths-ignore:
     - .frontmatter/*
-    - .vscode/*
+    - .meta/*
   pull_request:
     types:
     - synchronize
@@ -11,7 +11,7 @@ on:
     - opened
     paths:
     - .frontmatter/*
-    - .vscode/*
+    - .meta/*
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

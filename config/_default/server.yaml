@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/server
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/server
 # TODO generate the Cloudflare _headers with these values
 headers:
 - for: /**

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../.vscode/hugo.schema.json
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json
 buildDrafts: true
 buildFuture: true
 buildExpired: true

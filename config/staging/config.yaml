@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json
 baseURL: https://staging.artero.dev
 buildDrafts: true
 buildFuture: true

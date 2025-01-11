@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../.vscode/hugo.schema.json#/properties/menu
+# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/menu
 main:
 - name: Posts
   pageRef: posts

@@ -1,11 +1,41 @@
 {
   "$comment": "https://gohugo.io/getting-started/configuration/",
   "$id": "https://json.schemastore.org/hugo.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "definitions": {
     "author": {
-      "$comment": "TODO https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30"
+      "$comment": "TODO https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30",
+      "type":"object",
+      "properties": {
+        "givenName": {
+          "type":"string"
+        },
+        "familyName": {
+          "type":"string"
+        },
+        "displayName": {
+          "type":"string"
+        },
+        "thumbnail": {
+          "type":"string"
+        },
+        "image": {
+          "type":"string"
+        },
+        "shortBio": {
+          "type":"string"
+        },
+        "longBio": {
+          "type":"string"
+        },
+        "email": {
+          "type":"string"
+        },
+        "social": {
+          "type":"object"
+        }
+      }
     },
     "deployment": {
       "$comment": "TODO"
@@ -17,6 +47,9 @@
       "$comment": "TODO",
       "additionalProperties": false,
       "properties": {
+        "author": {
+          "$ref": "#/definitions/author"
+        },
         "description": {
           "description": "site description used by the meta tag and PWA manifest",
           "type": "string"
@@ -82,7 +115,23 @@
     "server": {
       "$comment": "TODO",
       "description": "This is only relevant when running hugo server, and it allows to set HTTP headers during development, which allows you to test out your Content Security Policy and similar.",
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "headers": {
+          "type":"array",
+          "items": {
+            "type":"object",
+            "properties": {
+              "for": {
+                "type":"string"
+              },
+              "values": {
+                "type":"object"
+              }
+            }
+          }
+        }
+      }
     },
     "services": {
       "$comment": "TODO"
