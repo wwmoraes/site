@@ -11,7 +11,7 @@
   Cross-Origin-Resource-Policy: same-site
   Feature-Policy: accelerometer 'https://youtube.com'; autoplay 'none'; bluetooth 'none'; camera 'none'; clipboard-write 'https://youtube.com'; display-capture 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'https://youtube.com'; idle-detection 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'https://youtube.com'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; storage-access 'none'; usb 'none'; web-share 'https://youtube.com';
   Permissions-Policy: accelerometer=("https://youtube.com"), autoplay=(), bluetooth=(), camera=(), clipboard-write=("https://youtube.com"), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=("https://youtube.com"), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=("https://youtube.com"), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), storage-access=(), usb=(), web-share=("https://youtube.com")
-  Referrer-Policy: no-referrer
+  Referrer-Policy: strict-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
