@@ -13,32 +13,32 @@ require (
 	github.com/dsoprea/go-jpeg-image-structure/v2 v2.0.0-20221012074422-4f3f7e934102
 	github.com/dsoprea/go-png-image-structure/v2 v2.0.0-20210512210324-29b889a6093d
 	github.com/dsoprea/go-utility/v2 v2.0.0-20221003172846-a3e1774ef349
-	github.com/gabriel-vasile/mimetype v1.4.7
-	github.com/goccy/go-json v0.10.3
+	github.com/gabriel-vasile/mimetype v1.4.8
+	github.com/goccy/go-json v0.10.4
 	github.com/gocolly/colly v1.2.0
 	github.com/shurcooL/githubv4 v0.0.0-20240727222349-48295856cce7
-	github.com/spf13/cast v1.7.0
+	github.com/spf13/cast v1.7.1
 	github.com/spf13/cobra v1.8.1
 	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
-	golang.org/x/oauth2 v0.24.0
+	golang.org/x/oauth2 v0.25.0
 	golang.org/x/text v0.21.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
-	github.com/PuerkitoBio/goquery v1.10.0 // indirect
-	github.com/andybalholm/cascadia v1.3.2 // indirect
-	github.com/antchfx/htmlquery v1.3.3 // indirect
-	github.com/antchfx/xmlquery v1.4.2 // indirect
-	github.com/antchfx/xpath v1.3.2 // indirect
+	github.com/PuerkitoBio/goquery v1.10.1 // indirect
+	github.com/andybalholm/cascadia v1.3.3 // indirect
+	github.com/antchfx/htmlquery v1.3.4 // indirect
+	github.com/antchfx/xmlquery v1.4.3 // indirect
+	github.com/antchfx/xpath v1.3.3 // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/catppuccin/go v0.2.0 // indirect
 	github.com/charmbracelet/bubbles v0.20.0 // indirect
 	github.com/charmbracelet/bubbletea v1.2.4 // indirect
 	github.com/charmbracelet/lipgloss v1.0.0 // indirect
-	github.com/charmbracelet/x/ansi v0.5.2 // indirect
-	github.com/charmbracelet/x/exp/strings v0.0.0-20241202205748-751423f3d3b8 // indirect
+	github.com/charmbracelet/x/ansi v0.6.0 // indirect
+	github.com/charmbracelet/x/exp/strings v0.0.0-20250109123447-9d5df1da7993 // indirect
 	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/dsoprea/go-iptc v0.0.0-20200610044640-bc9ca208b413 // indirect
 	github.com/dsoprea/go-logging v0.0.0-20200710184922-b02d349568dd // indirect
@@ -51,7 +51,6 @@ require (
 	github.com/golang/geo v0.0.0-20230421003525-6adc56603217 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
@@ -69,18 +68,11 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/testify v1.9.0 // indirect
 	github.com/temoto/robotstxt v1.1.2 // indirect
-	golang.org/x/net v0.31.0 // indirect
+	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
-	golang.org/x/sys v0.27.0 // indirect
+	golang.org/x/sys v0.29.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
-	google.golang.org/protobuf v1.35.2 // indirect
+	google.golang.org/protobuf v1.36.2 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-//// go get -u updates ALL direct and indirect dependencies... yet bep/overlayfs
-//// past v0.6.0 is incompatible with hugo@v0.121.x:
-//// # github.com/gohugoio/hugo/hugolib/filesystems
-//// ../../go/pkg/mod/github.com/gohugoio/hugo@v0.121.1/hugolib/filesystems/basefs.go:630:69: cannot use hugofs.LanguageDirsMerger (variable of type func(lofi []fs.FileInfo, bofi []fs.FileInfo) []fs.FileInfo) as overlayfs.DirsMerger value in struct literal
-//// ../../go/pkg/mod/github.com/gohugoio/hugo@v0.121.1/hugolib/filesystems/basefs.go:631:69: cannot use hugofs.LanguageDirsMerger (variable of type func(lofi []fs.FileInfo, bofi []fs.FileInfo) []fs.FileInfo) as overlayfs.DirsMerger value in struct literal
-// replace github.com/bep/overlayfs => github.com/bep/overlayfs v0.6.0
