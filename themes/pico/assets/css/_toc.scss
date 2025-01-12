@@ -7,6 +7,21 @@ aside:has(>nav#TableOfContents) {
     display: none;
   }
 
+  li {
+    &::before {
+      content: "\00A7\00A0";
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    >ul {
+      margin-left: var(--pico-spacing);
+    }
+  }
+
+
   @media (min-width: 768px) {
     display: block;
     float: right;
