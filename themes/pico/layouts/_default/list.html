@@ -1,10 +1,22 @@
 {{ define "main" }}
+{{- $slug := .Slug }}
+{{- if not $slug }}
+  {{- with .File }}
+    {{- $slug = .BaseFileName }}
+  {{- else }}
+    {{- $slug = hash.FNV32a .Title | string }}
+  {{- end }}
+{{- end }}
 {{- $pages := .Pages }}
 {{- $paginator := .Paginate $pages 10 }}
-<section role="feed" aria-setsize="{{ $paginator.NumberOfElements }}">
-  {{- range $paginator.Pages }}
-  <article>
-    <header>
+<section role="feed" aria-setsize="{{ $paginator.NumberOfElements }}" aria-label="{{ .Title }}" aria-busy="false">
+  {{- range $i, $page := $paginator.Pages }}
+  {{- $i = add 1 $i }}
+  {{- $labelID := printf "%s-feed-label-%d" $slug $i }}
+  {{- $descriptionID := printf "%s-feed-desc-%d" $slug $i }}
+  {{- with $page }}
+  <article aria-posinset="{{ $i }}" aria-setsize="{{ $paginator.NumberOfElements }}" aria-labelledby="{{ $labelID }}" aria-describedby="{{ $descriptionID }}" tabindex="0">
+    <header id="feed-label-{{ $i }}">
       <hgroup>
         <h2>
           <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
@@ -18,7 +30,7 @@
       </hgroup>
     </header>
     {{- with .Summary }}
-    <p>{{- . | plainify -}}</p>
+    <p id="{{ $descriptionID }}">{{- . | plainify -}}</p>
     {{- end }}
     {{- if .Truncated }}
     <p>
@@ -29,6 +41,7 @@
       {{ partial "details" . }}
     </footer>
   </article>
+  {{- end }}
   {{- end }}
 </section>
 {{ partial "pagination.html" . }}

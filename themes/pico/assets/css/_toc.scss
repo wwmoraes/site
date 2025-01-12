@@ -3,8 +3,12 @@ aside:has(>nav#TableOfContents) {
   background-color: var(--pico-background-color);
   margin: 0 0 var(--pico-spacing);
 
-  >label {
-    display: none;
+  header h1 {
+    --pico-font-weight: 700;
+    --pico-font-size: 1rem;
+    --pico-line-height: 1.25;
+    --pico-typography-spacing-top: 1.5rem;
+    --pico-color: var(--pico-h6-color);
   }
 
   li {

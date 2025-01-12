@@ -1,9 +1,8 @@
 {{- if not (eq (.Param "table-of-contents") false) -}}
 {{- with .TableOfContents -}}
 <aside>
-  <label><input type="checkbox" /></label>
   <header>
-    <h6>Contents</h6>
+    <h1>Contents</h1>
   </header>
   {{ . }}
 </aside>
