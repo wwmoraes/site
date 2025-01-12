@@ -1,3 +1,8 @@
+## permanently moved content
+/index.xml /index.rss.xml 308
+/amp / 308
+/amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 308
+
 ## gone content forwarded to the closest relevant one
 /categories/smth/* /categories 303
 /redirects/* / 303
@@ -6,13 +11,9 @@
 /tags/smth/* /tags 303
 /tags/test/* /tags 303
 
-## permanently moved content
-/index.xml /index.rss.xml 308
-### disabled AMP garbage
-/amp / 308
-/amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 308
 ### disabled atom as its plain broken
 /*/index.atom.xml /:splat/index.rss.xml 308
+
 ### categories and tags
 /categories/coding/* /categories/code/:splat 308
 /categories/opinion/* /tags/opinion/:splat 308
