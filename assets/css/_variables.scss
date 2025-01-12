@@ -132,35 +132,7 @@
   --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --pico-font-family-sans-serif: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, var(--pico-font-family-emoji); // https://modernfontstacks.com - Neo-Grotesque
   --pico-font-family-monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace, var(--pico-font-family-emoji);
-
-  // --pico-font-family: var(--pico-font-family-sans-serif);
-  // --pico-line-height: 1.5;
-  // --pico-font-weight: 400;
-
   --pico-font-size: 120%;
-
-  // --pico-text-underline-offset: 0.1rem;
-  // --pico-border-radius: 0.25rem;
-  // --pico-border-width: 0.0625rem;
-  // --pico-outline-width: 0.125rem;
-  // --pico-transition: 0.2s ease-in-out;
-  // --pico-spacing: 1rem;
-  // --pico-typography-spacing-vertical: 1rem;
-  // --pico-block-spacing-vertical: var(--pico-spacing);
-  // --pico-block-spacing-horizontal: var(--pico-spacing);
-  // --pico-grid-column-gap: var(--pico-spacing);
-  // --pico-grid-row-gap: var(--pico-spacing);
-  // --pico-form-element-spacing-vertical: 0.75rem;
-  // --pico-form-element-spacing-horizontal: 1rem;
-  // --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  // --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
-  // --pico-group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(--pico-form-element-border-color);
-  // --pico-modal-overlay-backdrop-filter: blur(0.375rem);
-  // --pico-nav-element-spacing-vertical: 1rem;
-  // --pico-nav-element-spacing-horizontal: 0.5rem;
-  // --pico-nav-link-spacing-vertical: 0.5rem;
-  // --pico-nav-link-spacing-horizontal: 0.5rem;
-  // --pico-nav-breadcrumb-divider: "\276F";
 }
 
 @mixin pico-color-scheme-dark {

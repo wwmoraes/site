@@ -33,39 +33,3 @@ aside:has(>nav#TableOfContents) {
     margin: 0 0 0 var(--pico-spacing);
   }
 }
-
-/* TODO TOC
-label[for=TableOfContents] {
-  position: fixed;
-  transform-origin: center;
-  padding: .125lh;
-  bottom: 0;
-  left: 50vw;
-  transform: translateX(-50%);
-}
-
-nav#TableOfContents {
-  position: fixed;
-  transform-origin: center;
-  bottom: 1.5lh;
-  left: 50vw;
-  transform: translateX(-50%);
-  background-color: var(--theme-background-50);
-
-  ul {
-    list-style-type: '§ ';
-    margin-block: 0;
-    padding-block: 0;
-    flex-direction: column;
-
-    li a {
-      display: block;
-      line-height: 48px;
-    }
-
-    li::marker {
-      font-weight: bold;
-    }
-  }
-}
-*/
