@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "postcss": "^8.4.49",
-    "stylelint": "^16.11.0",
+    "stylelint": "^16.13.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-scss": "^6.10.0"
