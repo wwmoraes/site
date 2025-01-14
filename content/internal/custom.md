@@ -1,5 +1,6 @@
 ---
 title: Custom
+table-of-contents: false
 ---
 
 ## Admonitions

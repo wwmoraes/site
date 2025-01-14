@@ -1,7 +1,11 @@
 aside:has(>nav#TableOfContents) {
-  padding: var(--pico-spacing);
-  background-color: var(--pico-background-color);
+  background: var(--pico-card-background-color);
   margin: 0 0 var(--pico-spacing);
+  padding: var(--pico-spacing);
+
+  article & {
+    background-color: var(--pico-background-color);
+  }
 
   header h1 {
     --pico-font-weight: 700;
