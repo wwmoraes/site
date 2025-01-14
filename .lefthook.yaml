@@ -17,7 +17,7 @@ pre-commit:
     ## TODO check YAML?
     ## TODO check TOML?
     ## TODO check trailing whitespace?
-    checktask:
+    check-task:
       priority: 1
       run: task -a -j > /dev/null
       glob: Taskfile.yaml
@@ -39,22 +39,22 @@ pre-commit:
       run: go mod tidy
       glob: "{**/*.go,go.mod}"
       stage_fixed: true
-    favicon:
+    generate-favicon:
       priority: 90
       run: task generate:favicon
       glob: assets/images/brand/favicon.svg
       stage_fixed: true
-    diagrams:
+    generate-diagrams:
       priority: 90
       run: task generate:diagrams
       glob: content/**/*.puml
       stage_fixed: true
-    exif:
+    generate-images:
       priority: 90
       run: task generate:images
       glob: "{archetypes,assets,content}/**/*.{png,jpg}.json"
       stage_fixed: true
-    radar:
+    generate-radar:
       priority: 90
       run: task generate:radar
       glob: "{content/radar/*.md,content/radar/radar.svg.tmpl}"
@@ -74,7 +74,7 @@ pre-push:
       priority: 50
       run: task test
       glob: "{**/*.go,go.mod,go.sum,go.work}"
-    public:
+    generate-site:
       priority: 100
       run: task generate:site
       glob: "{assets/*,config/*,content/*,data/*,i18n/*,layouts/*,static/*,themes/*/assets/*,themes/*/data/*,themes/*/i18n/*,themes/*/layouts/*,themes/*/static/*,themes/*/hugo.*}"
