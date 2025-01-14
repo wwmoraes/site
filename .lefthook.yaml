@@ -3,7 +3,7 @@ assert_lefthook_installed: true
 commit-msg:
   commands:
     commitlint:
-      run: grep -q "^fixup! " "{1}" || commitlint lint --message "{1}"
+      run: grep -q "^fixup! " "{1}" || cog verify --file "{1}"
     trailers:
       run: git interpret-trailers --in-place --trailer "sign" --trim-empty "{1}"
 pre-commit:
@@ -63,6 +63,9 @@ pre-commit:
 pre-push:
   piped: true
   commands:
+    lint-commits:
+      priority: 1
+      run: task lint:commits
     build:
       priority: 50
       run: task build

@@ -303,6 +303,19 @@ tasks:
     - '{{ .VALE_STYLES_DIR }}/proselint/**/*'
     - '{{ .VALE_STYLES_DIR }}/Readability/**/*'
     - '{{ .VALE_STYLES_DIR }}/write-good/**/*'
+  lint:commits:
+    vars:
+      REMOTE:
+        sh: git remote
+      LOCAL_BRANCH:
+        sh: git branch --show-current
+      REMOTE_BRANCH:
+        sh: git rev-parse --symbolic-full-name @{u} || echo -n "{{ .DEFAULT }}"
+      DEFAULT:
+        sh: >-
+          git remote set-head origin --auto;
+          git symbolic-ref refs/remotes/{{ .REMOTE }}/HEAD
+    cmd: cog check {{ .REMOTE_BRANCH }}..{{ .LOCAL_BRANCH }}
   lint:typos:
     desc: Checks for typos in plain-text content.
     cmd: typos --force-exclude

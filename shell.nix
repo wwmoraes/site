@@ -18,8 +18,8 @@ in mkShell rec {
     pkgs.lefthook
     pkgs.markdownlint-cli
     pkgs.nodejs-slim # needed for stylelint 💀
-    pkgs.nur.repos.wwmoraes.go-commitlint
     pkgs.typos
+    pkgs.unstable.cocogitto
     pkgs.unstable.dart-sass
     pkgs.unstable.go
     pkgs.unstable.go-task
