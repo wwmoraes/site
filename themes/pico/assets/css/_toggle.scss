@@ -70,68 +70,50 @@
 
 // adjust menu for toggling
 :is(menu, [role="menu"]) {
-  // anchor for children
-  position: relative;
-  // needed otherwise it grows to fit all its children
-  max-height: calc(var(--pico-line-height) * 1em + var(--pico-nav-element-spacing-vertical)*2);
-
-  >[role="menubar"] {
-    flex-direction: row;
-  }
-
-  // hide entries within menu
-  >[role="menuitem"] {
-    width: 100vw;
-    margin-left: calc(-1*var(--pico-spacing));
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+  &:has(> label > input[type="checkbox"]) {
+    // limit menu height otherwise it grows to fit all children.
+    // this allows us to avoid float, albeit it soft-locks the container size.
+    max-height: calc(var(--pico-line-height) * 1em + var(--pico-nav-element-spacing-vertical)*2);
+    // anchor for button
     position: relative;
-    background-color: var(--pico-card-background-color);
-  }
 
+    @media (min-width: 768px) {
+      max-height: unset;
+    }
+
+    // position the menu button
+    >label {
+      padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+      position: absolute;
+      right: 0;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    // hide entries
+    >[role="menuitem"] {
+      background-color: var(--pico-card-background-color);
+      opacity: 0;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+      visibility: hidden;
+
+      // always show entries in higher resolutions
+      @media (min-width: 768px) {
+        background-color: unset;
+        opacity: 1;
+        visibility: visible;
+        z-index: unset;
+      }
+    }
+  }
 
   // show hidden items when burger is checked
   &:has(> label > input[type="checkbox"]:checked)>[role="menuitem"] {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
     z-index: 9999;
   }
-
-  @media (min-width: 576px) {
-    >[role="menuitem"] {
-      margin-left: unset;
-      width: unset;
-    }
-  }
-
-  @media (min-width: 768px) {
-    max-height: unset;
-
-    // hide menu button
-    >label {
-      display: none;
-    }
-
-    >[role="menubar"] {
-      flex-direction: row;
-    }
-
-    // show all elements
-    >[role="menuitem"] {
-      visibility: visible;
-      opacity: 1;
-      display: flex;
-      top: unset;
-      background-color: unset;
-    }
-  }
-}
-
-/* position the menu button */
-:where(menu, [role="menu"])>label {
-  position: absolute;
-  right: 0;
-  top: var(--pico-nav-element-spacing-vertical);
-  padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
 }
