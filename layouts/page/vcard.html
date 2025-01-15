@@ -1,4 +1,5 @@
 {{- define "head" }}
+<meta name="robots" content="noindex" />
 {{- $vcard := resources.Get "css/vcard.scss" | resources.ExecuteAsTemplate "css/vcard.scss" . | toCSS (dict "transpiler"
 "dartsass") |
 resources.Minify | resources.Fingerprint }}
