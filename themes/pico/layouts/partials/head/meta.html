@@ -1,5 +1,9 @@
 <meta charset="utf-8" />
 
+{{- if not hugo.IsProduction }}
+<meta name="robots" content="noindex" />
+{{- end }}
+
 {{- /*
   Apple iOS settings
     * see https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/sArticles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW3
