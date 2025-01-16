@@ -74,6 +74,10 @@ manifest:
 mainSections:
 - posts
 
+unlistedSections:
+- internal
+- redirects
+
 customSections:
 - radar
 

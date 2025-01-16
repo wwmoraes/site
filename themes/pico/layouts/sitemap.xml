@@ -3,7 +3,9 @@
 {{- $urlset.Set "-xmlns:xhtml" "http://www.w3.org/1999/xhtml" -}}
 {{- $urlset.Set "url" slice -}}
 
-{{- range (where .Data.Pages "Section" "!=" "redirects") -}}
+{{- $pages := where .Data.Pages "Section" "not in" .Site.Params.unlistedSections }}
+{{- $pages = where $pages "Params.sitemap" "ne" false }}
+{{- range $pages -}}
 {{-   if not .Permalink -}}
 {{-     continue -}}
 {{-   end -}}
