@@ -45,7 +45,7 @@ in mkShell rec {
 
   offlineCache = pkgs.fetchYarnDeps {
     yarnLock = ./yarn.lock;
-    hash = "sha256-RF+sFG4eQXDSNd3dWutWgIBpdJAo/jHWd+4IVLndvOU=";
+    hash = "sha256-oThM9FDo/8M9PCAjOeK1L79Xj6LtLANYwlSCUaVrUGs=";
   };
 
   configurePhase = ''
