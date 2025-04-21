@@ -358,3 +358,49 @@ tasks:
       VCARD: '{{ .VCARD | default (env "VCARD") }}'
     cmd: >-
       {{ .SITE }} vcard {{ .CLI_ARGS }} {{ .VCARD }}
+  generate:wkd:
+    requires:
+      vars:
+      - EMAILS
+    deps:
+    - for:
+        var: EMAILS
+        split: " "
+      task: generate:wkd:{{ .ITEM }}
+  generate:wkd:*:
+    label: generate:wkd:{{ .EMAIL }}
+    requires:
+      vars:
+      - EMAIL
+    vars:
+      GNUPGHOME: '{{ .GNUPGHOME | default (expandenv "$HOME/.gnupg") }}'
+      EMAIL: '{{ index .MATCH 0 }}'
+      DOMAIN: '{{ splitList "@" .EMAIL | last }}'
+      USERID_HASH:
+        sh: >-
+          gpg2 --list-keys --with-wkd-hash {{ .EMAIL | q }}
+          | grep -A1 '<{{ .EMAIL }}>'
+          | tail -n1 | xargs | cut -d@ -f1
+    cmds:
+    - task: gnu:mkdir:static/.well-known/openpgpkey/{{ .DOMAIN }}/hu
+    - >-
+      gpg2 --no-armor --yes
+      --output static/.well-known/openpgpkey/{{ .DOMAIN }}/hu/{{ .USERID_HASH }}
+      --export-filter drop-subkey="usage =~ a || usage =~ c"
+      --export-filter keep-uid="uid =~ <{{ .EMAIL }}>"
+      --export-options export-minimal
+      --export {{ .EMAIL | q }}
+    sources:
+    - '{{ .GNUPGHOME }}/private-keys-v1.d/*.key'
+    - '{{ .GNUPGHOME }}/pubring.kbx'
+    - '{{ .GNUPGHOME }}/trustdb.gpg'
+    generates:
+    - static/.well-known/openpgpkey/{{ .DOMAIN }}/hu/{{ .USERID_HASH }}
+  gnu:mkdir:*:
+    label: gnu:mkdir:{{ .NAME }}
+    run: when_changed
+    vars:
+      NAME: '{{ index .MATCH 0 }}'
+    status:
+    - test -d {{ .NAME | q }}
+    cmd: mkdir -p {{ .NAME | q }}

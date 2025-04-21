@@ -10,6 +10,7 @@ author:
   # JSON feed needs a 512 x 512 image
   thumbnail: images/avatar.jpg # TODO define size of author thumbnail
   image: images/avatar.jpg # TODO define size of author image
+  pgpkey: https://artero.dev/.well-known/openpgpkey/artero.dev/hu/dj3498u4hyyarh35rkjfnghbjxug6b19?l=contact
 
 manifest:
   # TODO add icon generation to the manifest

@@ -49,3 +49,11 @@ insert_final_newline = unset
 insert_final_newline = unset
 indent_style = unset
 indent_size = unset
+
+## binary content
+
+[static/.well-known/openpgpkey/*/hu/*]
+end_of_line = unset
+indent_size = unset
+indent_style = unset
+insert_final_newline = unset
