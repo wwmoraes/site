@@ -5,7 +5,6 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/wwmoraes/site/cmd/site/content"
-	"github.com/wwmoraes/site/cmd/site/data"
 	"github.com/wwmoraes/site/cmd/site/image"
 	"github.com/wwmoraes/site/cmd/site/radar"
 	"github.com/wwmoraes/site/cmd/site/vcard"
@@ -21,7 +20,6 @@ func main() {
 	}
 
 	rootCmd.AddCommand(content.Command())
-	rootCmd.AddCommand(data.Command())
 	rootCmd.AddCommand(image.Command())
 	rootCmd.AddCommand(radar.Command())
 	rootCmd.AddCommand(vcard.Command())

@@ -58,20 +58,28 @@ func GetBookData(client *http.Client, isbn string) (*BookData, error) {
 	return meta, nil
 }
 
+func (meta *BookData) getThumbnailURL(current string) string {
+	if current != "" || meta.Cover == nil {
+		return current
+	}
+
+	if meta.Cover.Large != "" {
+		return meta.Cover.Large
+	} else if meta.Cover.Medium != "" {
+		return meta.Cover.Medium
+	} else if meta.Cover.Small != "" {
+		return meta.Cover.Small
+	}
+
+	return current
+}
+
 func (meta *BookData) AugmentBook(book *schema.Book) error {
 	if meta == nil {
 		return fmt.Errorf("book not found in Open Library (%s, %s)", book.Name, book.ISBN)
 	}
 
-	if book.ThumbnailURL == "" && meta.Cover != nil {
-		if meta.Cover.Large != "" {
-			book.ThumbnailURL = meta.Cover.Large
-		} else if meta.Cover.Medium != "" {
-			book.ThumbnailURL = meta.Cover.Medium
-		} else if meta.Cover.Small != "" {
-			book.ThumbnailURL = meta.Cover.Small
-		}
-	}
+	book.ThumbnailURL = meta.getThumbnailURL(book.ThumbnailURL)
 
 	if meta.PublishPlaces != nil && len(meta.PublishPlaces) > 0 {
 		book.LocationCreated = schema.NewPlace(meta.PublishPlaces[0].Name)

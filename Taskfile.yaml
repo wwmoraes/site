@@ -108,19 +108,6 @@ tasks:
     - "archetypes/**/*.{jpg,png}.json"
     - "assets/**/*.{jpg,png}.json"
     - "content/**/*.{jpg,png}.json"
-  generate:data: &generate-data
-    aliases: [gen:data]
-    desc: Fetches upstream information and stores it as static site data.
-    deps:
-    - build
-    cmds:
-    - op run --env-file=.env.secrets -- {{ .SITE }} data update
-    run: once
-    sources:
-    - cmd/site/main.go
-    - cmd/site/data/**/*.go
-    generates:
-    - data/**/*.json
   generate:diagrams:
     aliases: [gen:diagrams]
     desc: Converts source PlantUML diagrams into their PNG image versions.
@@ -171,7 +158,6 @@ tasks:
     aliases: [generate, gen, default]
     desc: Builds the static site pages.
     deps:
-    # - generate:data
     - generate:diagrams
     - generate:favicon
     - generate:images
@@ -222,15 +208,6 @@ tasks:
     - >-
       {{ .SITE }} radar blip create
     interactive: true
-  site:update:
-    aliases: [update]
-    desc: (Re)generates declarative content such as upstream data.
-    deps:
-    - site:update:data
-  site:update:data:
-    <<: *generate-data
-    aliases: [update:data]
-    method: none
   start: &start
     desc: Starts a local server.
     vars:
