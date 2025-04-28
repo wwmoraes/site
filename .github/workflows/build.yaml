@@ -32,6 +32,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      attestations: write
     steps:
     - name: checkout
       uses: actions/checkout@v4
@@ -49,6 +52,10 @@ jobs:
       run: go mod download -x
     - name: build
       run: task build
+    - name: attest binary
+      uses: actions/attest-build-provenance@v2
+      with:
+        subject-path: bin/site
     - name: deliver
       uses: actions/upload-artifact@v4
       with:
