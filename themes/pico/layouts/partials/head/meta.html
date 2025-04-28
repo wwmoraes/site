@@ -23,7 +23,9 @@
 <meta name="creator" content="{{- . -}}" />
 <meta name="publisher" content="{{- . -}}" />
 {{- end }}
-<meta name="description" content="{{- .Description | default .Site.Params.description -}}" />
+{{- with (.Description | default .Site.Params.description) }}
+<meta name="description" content="{{- . -}}" />
+{{- end }}
 {{ hugo.Generator }}
 <meta name="theme-color" content="#3d5a80" />
 <meta name="color-scheme" content="light dark" />
