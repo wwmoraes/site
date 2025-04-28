@@ -2,5 +2,7 @@
 "dartsass") |
 resources.Minify | resources.Fingerprint -}}
 
+<link rel="preload" href="{{- $style.RelPermalink -}}" as="style" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr
+  }} />
 <link rel="stylesheet" href="{{- $style.RelPermalink -}}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr
   }} />
