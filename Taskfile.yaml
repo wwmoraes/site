@@ -361,7 +361,10 @@ tasks:
     cmds:
     - task: gnu:mkdir:static/.well-known/openpgpkey/{{ .DOMAIN }}/hu
     - >-
-      gpg2 --no-armor --yes
+      gpg
+      --options /dev/null
+      --yes
+      --no-armor
       --output static/.well-known/openpgpkey/{{ .DOMAIN }}/hu/{{ .USERID_HASH }}
       --export-filter drop-subkey="usage =~ a || usage =~ c"
       --export-filter keep-uid="uid =~ <{{ .EMAIL }}>"
@@ -373,6 +376,29 @@ tasks:
     - '{{ .GNUPGHOME }}/trustdb.gpg'
     generates:
     - static/.well-known/openpgpkey/{{ .DOMAIN }}/hu/{{ .USERID_HASH }}
+  generate:pgp:
+    label: generate:pgp
+    requires:
+      vars:
+      - EMAILS
+    vars:
+      GNUPGHOME: '{{ .GNUPGHOME | default (expandenv "$HOME/.gnupg") }}'
+      EMAIL: '{{ splitList " " .EMAILS | first }}'
+      DOMAIN: '{{ splitList "@" .EMAIL | last }}'
+    cmd: >-
+      gpg
+      --options /dev/null
+      --yes
+      --armor
+      --output static/pgp.asc
+      --export-options export-minimal
+      --export {{ .EMAIL | q }}
+    sources:
+    - '{{ .GNUPGHOME }}/private-keys-v1.d/*.key'
+    - '{{ .GNUPGHOME }}/pubring.kbx'
+    - '{{ .GNUPGHOME }}/trustdb.gpg'
+    generates:
+    - static/pgp.asc
   gnu:mkdir:*:
     label: gnu:mkdir:{{ .NAME }}
     run: when_changed
