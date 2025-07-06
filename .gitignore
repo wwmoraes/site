@@ -1,19 +1,17 @@
+*.sarif
+*lefthook-local.*
 .env.local
 .hugo_build.lock
-/*lefthook-local.*
-/bin
-/public
-/result
-/site
-/tmp
 _gen
+bin
 go.work
 go.work.sum
 hugo_stats.json
-*.sarif
-
-# *.jpg.json
-# *.png.json
+node_modules
+public
+result
+site
+tmp
 
 __debug_bin*
 
