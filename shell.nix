@@ -14,7 +14,6 @@ in mkShell rec {
   packages = [
     pkgs.editorconfig-checker
     pkgs.git
-    pkgs.git-lfs
     pkgs.lefthook
     pkgs.markdownlint-cli
     pkgs.nodejs-slim # needed for stylelint 💀
@@ -29,9 +28,8 @@ in mkShell rec {
   ] ++ lib.optionals (builtins.getEnv "CI" != "") [ # CI-only
   ] ++ lib.optionals (builtins.getEnv "CI" == "") [ # local-only
     pkgs.dockerfile-language-server-nodejs
-    # pkgs.gofumpt
     pkgs.imagemagick
-    pkgs.markdown-oxide
+    pkgs.markdown-oxide # markdown LSP
     pkgs.niv
     pkgs.nur.repos.wwmoraes.gopium
     pkgs.nur.repos.wwmoraes.goutline

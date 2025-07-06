@@ -6,14 +6,19 @@ dotenv:
 - .env
 
 vars:
+  EMAILS: >-
+    william@artero.dev
+    contact@artero.dev
+    security@artero.dev
+    git@artero.dev
   ## sh is nice but naturally adds latency
   GIT_CORE_HOOKSPATH: .git/hooks # sh: git rev-parse --git-path hooks
-  GOLANG_FLAGS: '{{ .GOLANG_FLAGS | default "-mod=readonly" }}'
-  LDFLAGS: -s -w
-  GO_BUILD_TAGS: '{{ .GO_BUILD_TAGS | default "-trimpath" }}'
   GO: '{{ .GO | default "go" }}'
+  GOLANG_FLAGS: '{{ .GOLANG_FLAGS | default "-mod=readonly" }}'
+  GO_BUILD_TAGS: '{{ .GO_BUILD_TAGS | default "-trimpath" }}'
   HUGO: '{{ .HUGO | default "hugo" }}'
   KROKI: '{{ .KROKI | default "kroki" }}'
+  LDFLAGS: -s -w
   SITE: ./bin/site
   VALE: '{{ .VALE | default "vale" }}'
 
