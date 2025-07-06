@@ -331,10 +331,9 @@ tasks:
   generate:vcard:
     deps:
     - build
-    vars:
-      VCARD: '{{ .VCARD | default (env "VCARD") }}'
+    - tmp/me.vcf
     cmd: >-
-      {{ .SITE }} vcard {{ .CLI_ARGS }} {{ .VCARD }}
+      {{ .SITE }} vcard {{ .CLI_ARGS }} tmp/me.vcf
   generate:wkd:
     requires:
       vars:
@@ -407,3 +406,21 @@ tasks:
     status:
     - test -d {{ .NAME | q }}
     cmd: mkdir -p {{ .NAME | q }}
+  tmp/me.vcf:
+    vars:
+      TEMPLATE: |-
+        BEGIN:VCARD
+        VERSION:3.0
+        EMAIL:op://Personal/Me/Contact/email
+        FN:William Artero
+        KEY;PGP:https://artero.dev/pgp.asc
+        LOGO:https://artero.dev/images/brand/logo.png
+        N:Moraes Artero;William Wagner;;;
+        PHOTO:https://artero.dev/images/avatar.jpg
+        TEL:op://Personal/Me/Home/cell
+        TITLE:Software Engineer
+        URL:https://artero.dev
+        ADR;TYPE=home:;;;Den Haag;;;Netherlands
+        END:VCARD
+    cmds:
+    - echo {{ .TEMPLATE | q }} | op inject > {{ .TASK | q }}
