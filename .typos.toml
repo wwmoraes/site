@@ -3,6 +3,9 @@ binary = false
 
 [files]
 extend-exclude = [
+  "*.lock",
+  "go.mod",
+  "go.sum",
   "static/.well-known/openpgpkey/*/hu/*",
   "static/pgp.asc",
 ]
