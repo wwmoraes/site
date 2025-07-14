@@ -7,7 +7,7 @@ toolchain go1.23.4
 require (
 	github.com/BurntSushi/toml v1.5.0
 	github.com/adrg/frontmatter v0.2.0
-	github.com/bmatcuk/doublestar/v4 v4.8.1
+	github.com/bmatcuk/doublestar/v4 v4.9.0
 	github.com/charmbracelet/huh v0.7.0
 	github.com/dsoprea/go-exif/v3 v3.0.1
 	github.com/dsoprea/go-jpeg-image-structure/v2 v2.0.0-20221012074422-4f3f7e934102
