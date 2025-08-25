@@ -37,7 +37,7 @@ jobs:
       attestations: write
     steps:
     - name: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: direnv nix
       uses: JRMurr/direnv-nix-action@v4.2.0
       with:
