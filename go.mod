@@ -16,7 +16,7 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.9
 	github.com/goccy/go-json v0.10.5
 	github.com/spf13/cast v1.9.2
-	github.com/spf13/cobra v1.9.1
+	github.com/spf13/cobra v1.10.1
 	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
 	golang.org/x/text v0.27.0
 	gopkg.in/yaml.v3 v3.0.1
@@ -53,7 +53,7 @@ require (
 	github.com/muesli/termenv v0.16.0 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
-	github.com/spf13/pflag v1.0.6 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	golang.org/x/net v0.41.0 // indirect
 	golang.org/x/sync v0.16.0 // indirect
