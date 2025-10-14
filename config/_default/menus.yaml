@@ -6,7 +6,6 @@ main:
 - name: Radar
   pageRef: radar
   weight: 20
-
 taxonomies:
 - name: Posts
   pageRef: posts
@@ -27,7 +26,6 @@ taxonomies:
   weight: 99
   params:
     rel: feed
-
 social:
 - name: LinkedIn
   url: https://linkedin.com/in/wwmoraes

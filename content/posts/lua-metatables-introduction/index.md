@@ -3,16 +3,16 @@ title: Lua metatables introduction
 description: what are they and how do they work?
 date: 2022-01-02T14:21:06+01:00
 resources:
-- name: featured-image
-  src: featured-image.jpg
-  title: Lua? Metatables?
-  params:
-    copyright: Image by William Artero
-    background: "#1e1e1e"
+  - name: featured-image
+    src: featured-image.jpg
+    title: Lua? Metatables?
+    params:
+      copyright: Image by William Artero
+      background: '#1e1e1e'
 categories:
-- Code
+  - Code
 tags:
-- Lua
+  - Lua
 lastmod: 2024-08-11T13:26:40+02:00
 ---
 
@@ -94,10 +94,6 @@ cases though, so let's keep it that way.
 > confusing the `waldo` table instance (or any metatable looked up on this loop)
 > with the standard library `table` global object.
 
-[^metaindex]: The [documentation][docs-meta] states that any value that can
-resolve the `__index` metamethod works. This means `userdata` (C objects) can
-also act as a metatable.
-
 ## Use cases
 
 Here's some simple use cases to get used to how metatables work.
@@ -154,12 +150,16 @@ This alone explains why the gaming industry has a wide use for Lua.
 > [!edit]-
 >
 > 1. Updated diagrams, as I don't use Mermaid anymore. In fact, I used it in this
-> blog while using PlantUML and Mingrammer diagrams everywhere else. Now they're
-> all consistent.
+>    blog while using PlantUML and Mingrammer diagrams everywhere else. Now they're
+>    all consistent.
 >
-> 1. Changed diagrams again, this time switching them to PNG instead of SVG.
-> Size-wise they're small and fare better when embedded in feeds like RSS and
-> ATOM.
+> 2. Changed diagrams again, this time switching them to PNG instead of SVG.
+>    Size-wise they're small and fare better when embedded in feeds like RSS and
+>    ATOM.
 
-[spoons]: https://github.com/wwmoraes/spoons
+[^metaindex]: The [documentation][docs-meta] states that any value that can
+    resolve the `__index` metamethod works. This means `userdata` (C objects) can
+    also act as a metatable.
+
 [docs-meta]: https://www.lua.org/manual/5.4/manual.html#2.4
+[spoons]: https://github.com/wwmoraes/spoons

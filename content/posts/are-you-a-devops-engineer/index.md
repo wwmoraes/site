@@ -3,12 +3,12 @@ title: Are you a DevOps engineer?
 description: how a way of working became a catch-all role
 date: 2023-06-28T08:00:00+01:00
 resources:
-- name: featured-image
-  src: devops.jpg
+  - name: featured-image
+    src: devops.jpg
 categories:
-- Career
+  - Career
 tags:
-- DevOps
+  - DevOps
 lastmod: 2024-08-11T11:41:25+02:00
 ---
 
@@ -21,7 +21,7 @@ that extra oomph. Is that the right thing to do?
 <!--more-->
 
 {{< figure "Perhaps?" >}}
-![https://reactiongifs.com/?p=24986](https://www.reactiongifs.com/r/dsori.gif)
+![<https://reactiongifs.com/?p=24986>](https://www.reactiongifs.com/r/dsori.gif)
 {{< /figure >}}
 
 ## Prologue
@@ -32,7 +32,7 @@ contribute to automation. Not anymore. The reason? the market overloads and
 marginalizes the term. Recruiters and managers generally associate it with
 distorted practices and solutions I don't agree with.
 
-![https://reactiongifs.com/?p=22693](https://www.reactiongifs.com/r/wsod.gif)
+![<https://reactiongifs.com/?p=22693>](https://www.reactiongifs.com/r/wsod.gif)
 
 ## What is DevOps
 
@@ -42,7 +42,7 @@ operations. It includes the reuse of tools and the art of automation to glue
 processes together. How to glue is up to the engineer and business, and this
 acts as a double-edged sword.
 
-![https://reactiongifs.com/?p=10562](https://www.reactiongifs.com/wp-content/uploads/2013/06/flesh-wound.gif)
+![<https://reactiongifs.com/?p=10562>](https://www.reactiongifs.com/wp-content/uploads/2013/06/flesh-wound.gif)
 
 This definition is intentionally vague. Bodies of knowledge and processes' best
 practices are so. This allows great flexibility when applying them. You can
@@ -63,7 +63,7 @@ automation. Let's say it has a step to run a lint tool and check the code.
 Regardless of the lint output, the merge requires a human to approve and execute
 it.
 
-![https://reactiongifs.com/?p=19982](https://www.reactiongifs.com/r/mgc.gif)
+![<https://reactiongifs.com/?p=19982>](https://www.reactiongifs.com/r/mgc.gif)
 
 In such a scenario the linting is *automatic*, and the integration itself is
 manual. We'd have an *automated* integration if a merge happened after a
@@ -75,7 +75,7 @@ testing, checking the author against an authorized group and other more
 sophisticated checks like security and secret scanning to securely automate such
 flow.
 
-![https://reactiongifs.com/?p=24159](https://www.reactiongifs.com/r/jj.gif)
+![<https://reactiongifs.com/?p=24159>](https://www.reactiongifs.com/r/jj.gif)
 
 ## The DevOps role
 
@@ -89,7 +89,7 @@ Aside from the technology stack, which is arguably subjective, one expects the
 required soft and hard skills to remain. For instance, the need for an engineer
 with programming and architecture experience should be consistent. It's not.
 
-![https://reactiongifs.com/?p=21184](https://www.reactiongifs.com/r/W28tx6T.gif)
+![<https://reactiongifs.com/?p=21184>](https://www.reactiongifs.com/r/W28tx6T.gif)
 
 ### Expectation
 
@@ -110,7 +110,7 @@ Odin knows what is *far* from the word stable, let alone testable. Yet some
 people prefer to deal with shell script quote shenanigans than to code in a
 properly typed and structured language. Beats me why.
 
-![https://reactiongifs.com/?p=18567](https://www.reactiongifs.com/r/but-why.gif)
+![<https://reactiongifs.com/?p=18567>](https://www.reactiongifs.com/r/but-why.gif)
 
 ### Reality
 
@@ -124,7 +124,7 @@ specialized professional knows the in and out of specific solutions or vendor
 suites in the market. They can - and trust me, they will - get you onboard on
 all sorts of tools.
 
-![https://reactiongifs.com/?p=4694](https://www.reactiongifs.com/wp-content/uploads/2012/12/more.gif)
+![<https://reactiongifs.com/?p=4694>](https://www.reactiongifs.com/wp-content/uploads/2012/12/more.gif)
 
 Such is the reality of DevOps positions. Most of the time they require low to no
 programming languages, listing scripting ones such as Bash, PowerShell and
@@ -139,7 +139,7 @@ those integrations are black boxes operated by the DevOps engineers, the users
 won't know a thing about how to solve them. This leads to the ownership and
 operations of the DevOps team. Then the snowball begins.
 
-![https://reactiongifs.com/?p=24900](https://www.reactiongifs.com/r/idwt.gif)
+![<https://reactiongifs.com/?p=24900>](https://www.reactiongifs.com/r/idwt.gif)
 
 Granted, when done right, gluing tools can give awesome results. Kubernetes is a
 successful example of this. The difference between such a project and an average
@@ -153,14 +153,14 @@ them right and to their fullest. I have yet to see a company fully use all
 features of Jira, such as components, instead of relying on tags or external
 spreadsheets to sync up.
 
-![https://reactiongifs.com/?p=22317](https://www.reactiongifs.com/r/emb1.gif)
+![<https://reactiongifs.com/?p=22317>](https://www.reactiongifs.com/r/emb1.gif)
 
 ## What about SRE?
 
 Although part of the market uses both roles interchangeably, they differ in key
 areas. Some good sources for in-depth understanding are the books by Google
 about the topic. They are [available online for
-free](https://sre.google/books/).  You can get a paperback or e-book copy in
+free](https://sre.google/books/). You can get a paperback or e-book copy in
 most stores as well. I'll briefly touch on the points I feel are the most
 important.
 
@@ -182,7 +182,7 @@ messages and content statically, and fully test those. Breaking changes are then
 caught during tests to avoid rolling them out into production. Granted you're
 writing tests, that is.
 
-![https://tenor.com/en-GB/view/dev-developer-bugs-bug-qa-gif-25713242](https://media.tenor.com/CZZJVKwzRCMAAAAd/dev-developer.gif)
+![<https://tenor.com/en-GB/view/dev-developer-bugs-bug-qa-gif-25713242>](https://media.tenor.com/CZZJVKwzRCMAAAAd/dev-developer.gif)
 
 Reducing human interaction reduces uncertainty. That in turn reduces the amount
 of data transformations and validations needed to convert a human representation
@@ -193,7 +193,7 @@ If you don't believe it, ask a fellow frontend developer about the nightmares
 they have about the QA analyst feedback, and how they got the most unexpected
 bugs. I bet it won't be a short list.
 
-![https://tenor.com/en-GB/view/qa-gif-26507223](https://media.tenor.com/S-CxC0jhfrMAAAAC/qa.gif)
+![<https://tenor.com/en-GB/view/qa-gif-26507223>](https://media.tenor.com/S-CxC0jhfrMAAAAC/qa.gif)
 
 Naturally a business actor still needs to click something somewhere to keep the
 business running. This happens in a system specialized in receiving such input,
@@ -220,7 +220,7 @@ in anti-pattern topology. Some are:
 - **System Administrator 3.0** ™️ - same as the 2.0 + now they call themselves
   SRE
 
-![https://tenor.com/en-GB/view/i-mean-yolo-right-you-only-live-once-right-you-got-to-go-for-it-you-have-to-risk-it-debby-ryan-gif-15835808](https://media.tenor.com/YXnqEtz2FCsAAAAC/i-mean-yolo-right-you-only-live-once-right.gif)
+![<https://tenor.com/en-GB/view/i-mean-yolo-right-you-only-live-once-right-you-got-to-go-for-it-you-have-to-risk-it-debby-ryan-gif-15835808>](https://media.tenor.com/YXnqEtz2FCsAAAAC/i-mean-yolo-right-you-only-live-once-right.gif)
 
 A sharp reader will notice that all those patterns still have the classic
 operations team in direct contact with the developers, regardless of who wears
@@ -235,7 +235,7 @@ interface that intakes solutions from the development teams and run them on top
 of it. Do they accept anything that's thrown at them? **No, and here lies the
 biggest difference.**
 
-![https://tenor.com/en-GB/view/gandalf-the-grey-lord-of-the-rings-ian-mckellen-mines-of-moria-fellowship-of-the-ring-gif-24036179](https://media.tenor.com/EgvXcIbZLqgAAAAd/gandalf-the-grey-lord-of-the-rings.gif)
+![<https://tenor.com/en-GB/view/gandalf-the-grey-lord-of-the-rings-ian-mckellen-mines-of-moria-fellowship-of-the-ring-gif-24036179>](https://media.tenor.com/EgvXcIbZLqgAAAAd/gandalf-the-grey-lord-of-the-rings.gif)
 
 *An SRE team can autonomously deny running a solution that doesn't meet their
 quality standards.* For instance, minimal test coverage - I'm not talking about
@@ -254,7 +254,7 @@ Automation to run, observe and recover faulty services automatically, falling
 back to alerts and incident management, are then put in place by them to keep
 the business running.
 
-![https://tenor.com/en-GB/view/talk-about-credibility-michael-che-saturday-night-live-credible-validity-gif-16232625](https://media.tenor.com/ZxezqP2XjnQAAAAC/talk-about-credibility-michael-che.gif)
+![<https://tenor.com/en-GB/view/talk-about-credibility-michael-che-saturday-night-live-credible-validity-gif-16232625>](https://media.tenor.com/ZxezqP2XjnQAAAAC/talk-about-credibility-michael-che.gif)
 
 ### Fail fast, recover faster
 
@@ -268,7 +268,7 @@ isn't. A system that takes a short time to recover gives the development team
 the confidence to increase the pace at which they deliver changes, which reduces
 the size of each delivery, making them easier to test and fix.
 
-![https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210](https://media.tenor.com/UKcht54-7dgAAAAC/so-pure-rare.gif)
+![<https://tenor.com/en-GB/view/so-pure-rare-sarcasm-john-oliver-gif-9404210>](https://media.tenor.com/UKcht54-7dgAAAAC/so-pure-rare.gif)
 
 In comparison, DevOps lacks the authority and autonomy of the SRE to assert
 quality and deny low standards solutions. That means all checks and validations
@@ -280,7 +280,7 @@ It's needless to mention all the trampoline gymnastics needed to trigger
 protected pipelines and whatnot, then poll their status to proceed. The result?
 Teams stack changes to do a big-bang release to reduce the wait time.
 
-![https://tenor.com/en-GB/view/enter-dev-developer-commit-git-gif-21009539](https://media.tenor.com/M0na3YR-rTcAAAAd/enter-dev.gif)
+![<https://tenor.com/en-GB/view/enter-dev-developer-commit-git-gif-21009539>](https://media.tenor.com/M0na3YR-rTcAAAAd/enter-dev.gif)
 
 ## And platform engineering?
 
@@ -288,7 +288,7 @@ If done wrong, it's the same as the system administrators 2.0. Check the
 [operation is not the job](#operation-is-not-the-job) above. Otherwise, they are
 the precursor of SRE.
 
-![https://tenor.com/en-GB/view/same-different-but-still-gif-18224441](https://media.tenor.com/BRckVcpUYlUAAAAC/same-different.gif)
+![<https://tenor.com/en-GB/view/same-different-but-still-gif-18224441>](https://media.tenor.com/BRckVcpUYlUAAAAC/same-different.gif)
 
 ## Developer experience
 
@@ -313,7 +313,7 @@ As far as I've seen, DevOps and platform teams tend to offer the same set of sol
   operational support as it adds a considerable amount of time to troubleshoot
   when one of those moving parts fails
 
-![https://tenor.com/en-GB/view/burn-in-hell-elmo-fire-flame-gif-8764555](https://media.tenor.com/X1UBzspDL3kAAAAC/burn-in-hell-elmo.gif)
+![<https://tenor.com/en-GB/view/burn-in-hell-elmo-fire-flame-gif-8764555>](https://media.tenor.com/X1UBzspDL3kAAAAC/burn-in-hell-elmo.gif)
 
 On top of that, big companies may try to *empower* the product teams by
 delegating to them their infrastructure management (see again [operation is not
@@ -327,7 +327,7 @@ they will create a support team to block those, following the ITIL practices.
 They may also document everything on their terms to justify rejecting any
 requests for help.
 
-![https://tenor.com/en-GB/view/the-it-crowd-moss-the-it-crowd-the-it-crowd-fire-moss-the-it-crowd-fire-richard-ayoade-gif-15210949](https://media.tenor.com/PRN-EHOCuHwAAAAd/the-it-crowd-moss-the-it-crowd.gif)
+![<https://tenor.com/en-GB/view/the-it-crowd-moss-the-it-crowd-the-it-crowd-fire-moss-the-it-crowd-fire-richard-ayoade-gif-15210949>](https://media.tenor.com/PRN-EHOCuHwAAAAd/the-it-crowd-moss-the-it-crowd.gif)
 
 ## Aftermath
 
@@ -343,7 +343,7 @@ deliver value to the external customer and is not worth the investment. This
 means a quick win using a convoluted and error-prone script running on a hidden
 pipeline sounds better than a properly designed and engineered solution.
 
-![https://tenor.com/en-GB/view/srg-bülach-weighing-things-gif-13323220](https://media.tenor.com/nRder1OJlxwAAAAd/srg-bülach.gif)
+![<https://tenor.com/en-GB/view/srg-b%C3%BClach-weighing-things-gif-13323220>](https://media.tenor.com/nRder1OJlxwAAAAd/srg-b%C3%BClach.gif)
 
 Both problems lead to the Fear, Uncertainty and Doubt (FUD) syndrome: any change
 to the underlying resources faces high resistance within the developer team as
@@ -355,7 +355,7 @@ In the end, this kind of DevOps initiative becomes what it sought to destroy: a
 stale, maintenance-ridden platform solution that is slow and resistant to
 evolution. We need to break the misconceptions before it's too late.
 
-![https://tenor.com/en-GB/view/send-help-help-help-me-help-me-im-poor-bad-situation-gif-15097358](https://media.tenor.com/oUI0zMDbavcAAAAC/send-help-help.gif)
+![<https://tenor.com/en-GB/view/send-help-help-help-me-help-me-im-poor-bad-situation-gif-15097358>](https://media.tenor.com/oUI0zMDbavcAAAAC/send-help-help.gif)
 
 I love the practice and what it can bring to the development cycle. I also love
 to automate a process the right way, without shoehorning some Bash or Python

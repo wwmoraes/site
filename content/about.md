@@ -6,13 +6,13 @@ description: >-
   since 2010.
 table-of-contents: false
 resources:
-- name: avatar
-  title: Me in Marrakesh
-  src: images/avatar.jpg
-  params:
-    alt: avatar
-    width: 256
-    height: 256
+  - name: avatar
+    title: Me in Marrakesh
+    src: images/avatar.jpg
+    params:
+      alt: avatar
+      width: 256
+      height: 256
 ---
 
 {{< avatar >}}
@@ -27,7 +27,7 @@ with teams about solution boundaries and how we can deliver value with good
 throughput and quality.
 
 On the management side I like to jot down a bit of enterprise architecture to
-find out drivers, stakeholders, objectives and goals. This gives me a hollistic
+find out drivers, stakeholders, objectives and goals. This gives me a holistic
 view of what value truly means to the business and how to create bottom-up
 initiatives effectively.
 

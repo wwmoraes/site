@@ -1,14 +1,14 @@
 ---
 categories:
-- Architecture
+  - Architecture
 date: 2023-11-20T00:24:04.867706+01:00
 description: a tale about the blind spot of enterprise-grade solutions
 publishDate: 2023-11-22T10:42:08.741538+01:00
 resources:
-- name: featured-image
-  src: featured-image.jpg
+  - name: featured-image
+    src: featured-image.jpg
 tags:
-- Opinion
+  - Opinion
 title: Scripts don't scale; they give you scriptitis
 lastmod: 2024-08-11T13:30:17+02:00
 ---
@@ -27,7 +27,7 @@ began to shift from the batch processing to the time sharing model. That allowed
 users to interact (gasp!) with the machine without the need to create a big-bang
 workflow and pray it'd work end-to-end.
 
-![https://tenor.com/en-GB/view/chris-pratt-andy-dwyer-omg-shocked-face-meme-gif-25585329](https://media.tenor.com/9CJaHEmyKPAAAAAC/chris-pratt-andy-dwyer.gif)
+![<https://tenor.com/en-GB/view/chris-pratt-andy-dwyer-omg-shocked-face-meme-gif-25585329>](https://media.tenor.com/9CJaHEmyKPAAAAAC/chris-pratt-andy-dwyer.gif)
 
 This new interactive style paved the way for small components that solve a
 specific problem to arise. Users then were able to connect or "pipe" them to
@@ -35,7 +35,7 @@ get the result in a specific format, or send to another tool for further
 processing. Such way-of-working led to the Unix Philosophy and the GNU tools
 that are commonplace nowadays.
 
-![https://tenor.com/en-GB/view/linux-trash-linuxbad-gif-18671901](https://media.tenor.com/JFVk98vql5gAAAAd/linux-trash.gif)
+![<https://tenor.com/en-GB/view/linux-trash-linuxbad-gif-18671901>](https://media.tenor.com/JFVk98vql5gAAAAd/linux-trash.gif)
 
 The goal of script languages is to glue such components. They help connect
 tools and solutions without an expensive or complicated code. The downside
@@ -52,7 +52,7 @@ they were trying to glue and lose sight of them. When the glue dries up they
 have a new, disfigured object. This new "thing" then is the one that needs most
 maintenance or worse, glueing elsewhere.
 
-![https://tenor.com/en-GB/view/sticky-mess-glue-shove-shovel-gif-16740698](https://media.tenor.com/LxKLh3-BsoEAAAAd/sticky-mess.gif)
+![<https://tenor.com/en-GB/view/sticky-mess-glue-shove-shovel-gif-16740698>](https://media.tenor.com/LxKLh3-BsoEAAAAd/sticky-mess.gif)
 
 In case my analogy didn't hammer home my point, scripts are fine as long as
 they're:
@@ -95,7 +95,7 @@ such as shells or Python. Those are fine as long as the scripts they use are the
 same the developers use locally. If your pipeline has its own scripting separate
 from the developer code then I feel sorry for you: you have an anti-pattern.
 
-![https://tenor.com/en-GB/view/30rock-comfort-feel-better-jack-donaghy-gif-12796475](https://media.tenor.com/fLhCWlXe5Q4AAAAC/30rock-comfort.gif)
+![<https://tenor.com/en-GB/view/30rock-comfort-feel-better-jack-donaghy-gif-12796475>](https://media.tenor.com/fLhCWlXe5Q4AAAAC/30rock-comfort.gif)
 
 Programming in a pipeline to do something that the user cannot do locally is the
 prime excuse from security advocates to do all sorts of compliance checks.
@@ -109,18 +109,15 @@ main solution code to troubleshoot the pipeline code. Split brain right there.
 Then you realize you need an external team to change the templates as you don't
 have the rights to update them…
 
-![https://tenor.com/en-GB/view/barney-stinson-neil-patrick-harris-himym-how-i-met-your-mother-gif-5353868](https://media.tenor.com/C45MBZAcrlwAAAAC/barney-stinson.gif)
+![<https://tenor.com/en-GB/view/barney-stinson-neil-patrick-harris-himym-how-i-met-your-mother-gif-5353868>](https://media.tenor.com/C45MBZAcrlwAAAAC/barney-stinson.gif)
 
 ## Script ambivalence
 
 Don't get me wrong: I love scripting languages. I use them for common tasks on
 both personal and work environments. My teammates at some point get used to see
 _a wild `Makefile`_ that appears on each repository I ever touch. Another good
-example is how I use [chezmoi][chezmoi] to deploy [preference files][dotfiles]
+example is how I use [chezmoi] to deploy [preference files][dotfiles]
 and run dozens scripts for the "last mile" setup on my machines.
-
-[chezmoi]: https://www.chezmoi.io
-[dotfiles]: https://github.com/wwmoraes/dotfiles
 
 Anything beyond that becomes the DevOps-certified ™️ version of spaghetti code.
 Script A uses script B/tool C, cleverly glued together in a pipeline more often
@@ -128,7 +125,7 @@ than not. It commonly requires secrets or dependencies non-reproducible locally
 as well. Why? Because that's what "continuous integration" is all about, right?
 A castle of cards that no one dares to touch unless it breaks.
 
-![https://tenor.com/en-GB/view/right-natalie-portman-star-wars-rd_btc-gif-24051918](https://media.tenor.com/Wza_7q92YIQAAAAC/right-natalie-portman.gif)
+![<https://tenor.com/en-GB/view/right-natalie-portman-star-wars-rd_btc-gif-24051918>](https://media.tenor.com/Wza_7q92YIQAAAAC/right-natalie-portman.gif)
 
 ## Glue replacement
 
@@ -154,17 +151,19 @@ you "scripts" to get this done instead?
 > from the API specs and are as mechanical as they can get. They have tests, yet
 > [simple fixes face a bumpy road and take its sweet time][azcli-fix] to get
 > through due to how the test becomes the problem.
->
-> [azcli-fix]: https://github.com/Azure/azure-cli/pull/26013#issuecomment-1651158706
 
 A clean architecture won't take more time than any thousand-line-sized script.
 The trade off is where the speed slope is: scripts are faster to create and
 slow to maintain, while a proper application is slower to create and faster
 to test and thus change.
 
-![https://tenor.com/en-GB/view/there-is-a-trade-off-matt-ginsberg-startalk-compromise-risk-gif-20160753](https://media.tenor.com/LlK2_K0paXgAAAAd/there-is-a-trade-off-matt-ginsberg.gif)
+![<https://tenor.com/en-GB/view/there-is-a-trade-off-matt-ginsberg-startalk-compromise-risk-gif-20160753>](https://media.tenor.com/LlK2_K0paXgAAAAd/there-is-a-trade-off-matt-ginsberg.gif)
 
 Companies that rely on such "system scripts" waste plenty of engineering
 potential. One hour of a glued pipeline execution siphons at least one engineer
 time that could've been better invested elsewhere. And even if not, it'd at
 least avoid the deadline snowball.
+
+[azcli-fix]: https://github.com/Azure/azure-cli/pull/26013#issuecomment-1651158706
+[chezmoi]: https://www.chezmoi.io
+[dotfiles]: https://github.com/wwmoraes/dotfiles

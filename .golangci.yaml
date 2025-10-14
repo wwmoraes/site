@@ -1,52 +1,130 @@
-# yaml-language-server: $schema=https://github.com/wwmoraes/kaizen/raw/master/schemas/golangci.schema.json
-issues:
-  exclude-rules:
-  # exclude OpenLibrary JSON tags as we need them to match the upstream
-  - linters:
-    - tagliatelle
-    text: 'json\(camel\):'
-    path: 'pkg/openlibrary/.*'
-linters:
-  enable-all: true
-  fast: true # TODO disable fast linters only
-  disable:
-  - depguard # too much nitpicking and gatekeeping
-  - godox # no need; there's a VSCode extension + Sonar reports
-  - gomoddirectives # broken, reports a replace directive that doesn't exist
-  ## deprecated
-  - godot
-  ## deprecated (step 2)
-  # - execinquery
-  # - gomnd
-linters-settings:
-  gofumpt:
-    extra-rules: true
-  exhaustruct:
-    exclude:
-    - .+/cobra\.Command$
-    - .+/hugo\.Config$
-    - github\.com/wwmoraes/site/pkg/schema\..+
-    - github\.com/wwmoraes/site/pkg/functional\.Result$
-  mnd:
-    ignored-functions:
-    - '\.Int$'
-    - '\.IntP$'
-    - '\.MkdirAll$'
-    - '\.OpenFile$'
-    - '\.WriteFile$'
-    - make
-    - strings.SplitN
-    ignored-numbers:
-    - '0o640'
-output:
-  show-stats: true
-  sort-results: true
-  formats:
-  - format: colored-line-number
-  - format: sarif
-    path: golangci-lint.sarif
+# yaml-language-server: $schema=https://raw.githubusercontent.com/golangci/golangci-lint/refs/tags/v2.1.6/jsonschema/golangci.jsonschema.json
+version: "2"
 run:
+  go: "1.22"
+  modules-download-mode: readonly
   allow-parallel-runners: true
   allow-serial-runners: true
-  modules-download-mode: readonly
-  go: "1.22"
+output:
+  formats:
+    text:
+      path: stdout
+    sarif:
+      path: golangci-lint.sarif
+linters:
+  default: all
+  disable:
+  - asasalint
+  - bodyclose
+  - canonicalheader
+  - containedctx
+  - contextcheck
+  - depguard
+  - durationcheck
+  - err113
+  - errcheck
+  - errchkjson
+  - errname
+  - errorlint
+  - exhaustive
+  - exhaustruct
+  - exptostd
+  - fatcontext
+  - forbidigo
+  - forcetypeassert
+  - ginkgolinter
+  - gochecknoglobals
+  - gochecksumtype
+  - gocritic
+  - godot
+  - godox
+  - gomoddirectives
+  - gosec
+  - gosmopolitan
+  - govet
+  - iface
+  - importas
+  - intrange
+  - ireturn
+  - loggercheck
+  - makezero
+  - mirror
+  - musttag
+  - nilerr
+  - nilnesserr
+  - nilnil
+  - noctx
+  - nonamedreturns
+  - paralleltest
+  - perfsprint
+  - protogetter
+  - reassign
+  - recvcheck
+  - revive
+  - rowserrcheck
+  - sloglint
+  - spancheck
+  - sqlclosecheck
+  - staticcheck
+  - tagliatelle
+  - testifylint
+  - thelper
+  - tparallel
+  - unconvert
+  - unparam
+  - unused
+  - usetesting
+  - varnamelen
+  - wastedassign
+  - wrapcheck
+  - zerologlint
+  settings:
+    exhaustruct:
+      exclude:
+      - .+/cobra\.Command$
+      - .+/hugo\.Config$
+      - github\.com/wwmoraes/site/pkg/schema\..+
+      - github\.com/wwmoraes/site/pkg/functional\.Result$
+    mnd:
+      ignored-numbers:
+      - "0o640"
+      ignored-functions:
+      - \.Int$
+      - \.IntP$
+      - \.MkdirAll$
+      - \.OpenFile$
+      - \.WriteFile$
+      - make
+      - strings.SplitN
+  exclusions:
+    generated: lax
+    presets:
+    - comments
+    - common-false-positives
+    - legacy
+    - std-error-handling
+    rules:
+    # exclude OpenLibrary JSON tags as we need them to match the upstream
+    - linters:
+      - tagliatelle
+      path: pkg/openlibrary/.*
+      text: 'json\(camel\):'
+    paths:
+    - third_party$
+    - builtin$
+    - examples$
+formatters:
+  enable:
+  - gci
+  - gofmt
+  - gofumpt
+  - goimports
+  settings:
+    gofumpt:
+      extra-rules: true
+  exclusions:
+    generated: lax
+    paths:
+    - third_party$
+    - builtin$
+    - examples$

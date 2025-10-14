@@ -1,19 +1,19 @@
-.frontmatter/* @wwmoraes
 .github/* @wwmoraes
-.task/* @wwmoraes
+.make/* @wwmoraes
 .meta/* @wwmoraes
 
 .editorconfig @wwmoraes
 .env* @wwmoraes
 .golangci.yaml @wwmoraes
 .kodiak.toml @wwmoraes
-.lefthook*.yaml @wwmoraes
 .markdown* @wwmoraes
 .site.toml @wwmoraes
 .stylelintrc.yaml @wwmoraes
 .typos.toml @wwmoraes
 .vale.ini @wwmoraes
 CODEOWNERS @wwmoraes
-frontmatter.json @wwmoraes
+Makefile @wwmoraes
+cog.toml @wwmoraes
 shell.nix @wwmoraes
-Taskfile.yaml @wwmoraes
+treefmt.nix @wwmoraes
+yarn.nix @wwmoraes

@@ -3,12 +3,12 @@ title: KISS principle is not that simple
 description: A refresher on its origins and implications on software engineering
 date: 2023-12-03T13:10:27+01:00
 resources:
-- name: featured-image
-  src: featured-image.jpg
+  - name: featured-image
+    src: featured-image.jpg
 categories:
-- Principle
+  - Principle
 tags:
-- Analysis
+  - Analysis
 lastmod: 2024-08-11T13:26:03+02:00
 ---
 
@@ -30,9 +30,10 @@ company, Lockheed. He led an area that became known as Skunk Works, the cradle
 of all his brilliant creations. As per Ben Rich, author of Johnson's posthumous
 biography:
 
-> a concentration of a few good people… applying the simplest, most
-> straightforward methods possible to develop and produce new products
-{source="Ben Rich, describing the Skunk Works division"}
+{{< cite "Ben Rich, describing the Skunk Works division" >}}
+A concentration of a few good people… applying the simplest, most
+straightforward methods possible to develop and produce new products.
+{{< /cite >}}
 
 There's also reports on how Johnson challenged his engineering team to design
 solutions that a regular engineer would be able to fix using common tools. This
@@ -68,8 +69,6 @@ Providing the same explanation by mimicking or drawing will certainly increase
 the complexity to convey the same message. And even those two methods also need
 their own baseline as well. What a thumbs up mean to one person [may not mean
 the same to someone else][gestures].
-
-[gestures]: https://www.rd.com/article/common-hand-gestures-rude-in-other-countries/
 
 Without that common baseline, the receiving end will struggle. I may be able to
 understand around 80% of Spanish due to is similarity to Portuguese. Yet some
@@ -113,15 +112,16 @@ That didn't hold back Johnson's team to do one of the most complex projects the
 world ever saw that era. In the 1960's they released the Blackbird, an aircraft
 that still holds world records to date. As per Johnson himself:
 
-> The idea of attaining and staying at Mach 3.2 (more than three times the speed
-> of sound) over long flights was the toughest job the Skunk Works ever had and
-> the most difficult of my career.
->
-> Aircraft operating at those speeds would require development of special fuels,
-> structural materials, manufacturing tools and techniques, hydraulic fluid,
-> fuel tank sealants, paints, plastics, wiring, and connecting plugs. Everything
-> about the aircraft had to be invented.
-{source="Clarence \"Kelly\" Johnson, about the Blackbirds design"}
+{{< cite "Clarence 'Kelly' Johnson, about the Blackbirds design" >}}
+The idea of attaining and staying at Mach 3.2 (more than three times the speed
+of sound) over long flights was the toughest job the Skunk Works ever had and
+the most difficult of my career.
+
+Aircraft operating at those speeds would require development of special fuels,
+structural materials, manufacturing tools and techniques, hydraulic fluid, fuel
+tank sealants, paints, plastics, wiring, and connecting plugs. Everything about
+the aircraft had to be invented.
+{{< /cite >}}
 
 They had to invent everything from scratch. Isn't that… _non-KISS_?
 Over-engineering even? I'm sure they could solve it with some extra glue and
@@ -170,8 +170,6 @@ increase the cognitive load required to understand something. Certain languages
 like Haskell and Golang don't even support ternary operators as they
 [contribute to create complex expressions more often than not][golang-ternary].
 
-[golang-ternary]: https://go.dev/doc/faq#Does_Go_have_a_ternary_form
-
 > [!info]
 > Languages that do not have the ternary operator may still support a stricter
 > version of an if/else construct as the right-hand side value.
@@ -202,7 +200,7 @@ does then congratulations, you need some vacations. Urgently. Here's the
 reference of how the Bash variable expansions above work.
 
 | Expression      | `FOO="world"` | `FOO=""`    | `unset FOO` |
-|-----------------|---------------|-------------|-------------|
+| --------------- | ------------- | ----------- | ----------- |
 | `${FOO:-hello}` | world         | hello       | hello       |
 | `${FOO-hello}`  | world         | ""          | hello       |
 | `${FOO:=hello}` | world         | `FOO=hello` | `FOO=hello` |
@@ -229,9 +227,6 @@ Golang:
 > I personally recommend the [spf13/cobra][spf13-cobra] and its peer package
 > [spf13/viper][spf13-viper] to handle environment variables, command line flags
 > and configuration files seamlessly.
->
-> [spf13-cobra]: https://github.com/spf13/cobra
-> [spf13-viper]: https://github.com/spf13/viper
 
 I'll grant you that's way more code to get those quirk variable expansions done.
 Yet if you read the main function its much clearer what each line does. Even if
@@ -258,20 +253,20 @@ over-engineering as well. Sounds like _You Ain't Gonna Need It_ (YAGNI) instead
 of KISS, as the alternatives are arguably more complex:
 
 - **Standalone functions for each use-case**. Lengthy function names and shared
-intent. Increased maintenance as functions share part of the logic plus a
-side-effect. By separating `getEnv` from each condition logic we apply both the
-_Don't Repeat Yourself_ (DRY) and KISS principles, making it easier to
-understand and maintain each part alone.
+  intent. Increased maintenance as functions share part of the logic plus a
+  side-effect. By separating `getEnv` from each condition logic we apply both the
+  _Don't Repeat Yourself_ (DRY) and KISS principles, making it easier to
+  understand and maintain each part alone.
 
 - **inline all the logic directly in the main body**. Plain old spaghetti with
-all sorts of logic mixed up in a high cyclomatic complexity function. Also low
-to no reusability.
+  all sorts of logic mixed up in a high cyclomatic complexity function. Also low
+  to no reusability.
 
 - **write custom operators like Bash**. This is possible in functional languages
-that allow you to create operators such as `:?`. Haskell is one of those. Yet
-these operators would be specific to a single use case. There's better ways to
-functionally represent the conditionals from our example with existing
-mechanisms of the language.
+  that allow you to create operators such as `:?`. Haskell is one of those. Yet
+  these operators would be specific to a single use case. There's better ways to
+  functionally represent the conditionals from our example with existing
+  mechanisms of the language.
 
 ## Takeaway
 
@@ -280,3 +275,8 @@ result is the goal of the KISS principle. A design that focus on basic/quirky
 languages and primitive constructs is a distorted derivative of the Occam's
 Razor principle, not KISS. Be careful, its sharp edges will hurt you at some
 point.
+
+[gestures]: https://www.rd.com/article/common-hand-gestures-rude-in-other-countries/
+[golang-ternary]: https://go.dev/doc/faq#Does_Go_have_a_ternary_form
+[spf13-cobra]: https://github.com/spf13/cobra
+[spf13-viper]: https://github.com/spf13/viper

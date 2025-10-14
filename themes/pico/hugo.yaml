@@ -3,7 +3,6 @@ module:
   hugoVersion:
     extended: true
     min: 0.139.0
-
 markup:
   goldmark:
     extensions:
@@ -14,7 +13,6 @@ markup:
           - ["||", "||"]
           inline:
           - [$$, $$]
-
 params:
   alerts:
     default: note
@@ -75,15 +73,13 @@ params:
     - https://giscus.app/default.css
     manifest:
     - "'self'"
-
 mediaTypes:
   application/rss+xml:
     suffixes:
-      - rss.xml
+    - rss.xml
   application/feed+json:
     suffixes:
-      - feed.json
-
+    - feed.json
 outputFormats:
   RSS:
     mediaType: application/rss+xml

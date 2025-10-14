@@ -2,7 +2,6 @@ package update
 
 import (
 	"io/fs"
-	"log"
 	"sync"
 
 	"github.com/spf13/cobra"
@@ -34,7 +33,7 @@ func update(cmd *cobra.Command, args []string) error {
 
 	cmd.SilenceUsage = true
 
-	log.Println("retrieving blips")
+	cmd.Println("retrieving blips")
 
 	blips, err := GetUpdatedBlips(settings.SectionFS, settings.SectionName, 2) //nolint:mnd
 	if err != nil {
@@ -45,7 +44,7 @@ func update(cmd *cobra.Command, args []string) error {
 
 	for blip := range blips {
 		if blip.Error != nil {
-			log.Println(blip.Error)
+			cmd.Println(blip.Error)
 
 			continue
 		}
@@ -57,11 +56,11 @@ func update(cmd *cobra.Command, args []string) error {
 		go func(blip *Blip) {
 			defer wg.Done()
 
-			log.Println("updating blip:", blip.Filename)
+			cmd.Println("updating blip:", blip.Filename)
 
 			err := blip.WriteFile(settings.SectionFS)
 			if err != nil {
-				log.Println(err)
+				cmd.Println(err)
 			}
 		}(blip.Value)
 	}
@@ -76,7 +75,7 @@ func update(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	log.Println("generating radar")
+	cmd.Println("generating radar")
 
 	err = generateRadar(string(templateData), fd, &settings.TemplateData)
 	if err != nil {

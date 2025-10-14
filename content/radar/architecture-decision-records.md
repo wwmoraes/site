@@ -27,11 +27,11 @@ way as code.
 ADRs allows tracking historical reasoning in a clean and concise way.
 
 You can find the original template and scripts from Nygard plus variations in
-the community-driven  [ADR GitHub organization][gh-adr].
+the community-driven [ADR GitHub organization][gh-adr].
 I personally like the [MADR template][madr-template] due to its short questions
 that reminds you of important content to fill in.
 
-[michael-nygard]: https://cognitect.com/authors/MichaelNygard.html
 [adrs]: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 [gh-adr]: https://adr.github.io
 [madr-template]: https://adr.github.io/madr/#full-template
+[michael-nygard]: https://cognitect.com/authors/MichaelNygard.html

@@ -8,6 +8,9 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[{Makefile,*.mk}]
+indent_style = tab
+
 [.meta/schemas/*.schema.json]
 insert_final_newline = true
 
@@ -16,15 +19,6 @@ insert_final_newline = false
 
 [**/layouts/**/*.html]
 insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false
-
-[*.go]
-indent_style = tab
-
-[go.{mod,work}]
-indent_style = tab
 
 [.git*]
 indent_style = tab
@@ -39,9 +33,6 @@ insert_final_newline = unset
 indent_style = unset
 indent_size = unset
 
-[.frontmatter/database/*.json]
-insert_final_newline = unset
-
 [data/**/*.json]
 insert_final_newline = unset
 
@@ -53,6 +44,14 @@ indent_size = unset
 ## binary content
 
 [static/.well-known/openpgpkey/*/hu/*]
+end_of_line = unset
+indent_size = unset
+indent_style = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+## formatted by external tools (e.g. treefmt, golangci-lint, etc)
+[*.{go,md,nix,yaml,yml}]
 end_of_line = unset
 indent_size = unset
 indent_style = unset
