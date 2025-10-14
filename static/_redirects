@@ -1,3 +1,6 @@
+## ActivityPub
+/.well-known/webfinger?resource=acct:william@artero.dev https://hachyderm.io/.well-known/webfinger?resource=acct:wwmoraes@hachyderm.io 307
+
 ## permanently moved content
 /amp / 308
 /amp/posts/lua-metatables-introduction /posts/lua-metatables-introduction 308
