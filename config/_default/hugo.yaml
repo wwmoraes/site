@@ -13,7 +13,6 @@ pagination:
 summaryLength: 100
 copyright: >-
   Copyright %d William Artero. Some rights reserved.
-
 frontmatter:
   date:
   - :default
@@ -24,7 +23,6 @@ frontmatter:
   - :git
   - :fileModTime
   - :default
-
 outputs:
   home:
   - FEED
@@ -39,7 +37,6 @@ outputs:
   - FEED
   - HTML
   - RSS
-
 privacy:
   disqus:
     disable: true
@@ -47,19 +44,15 @@ privacy:
     disable: true
   youTube:
     privacyEnhanced: true
-
 pygmentsUseClasses: false
 pygmentsCodeFences: true
-
 sitemap:
   changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
-
 permalinks:
   posts: "posts/:filename"
   redirects: "/:filename"
-
 module:
   mounts:
   - source: content
@@ -70,7 +63,6 @@ module:
     - '**/*.puml'
     - '**/*.png.json'
     - '**/*.jpg.json'
-
 imaging:
   exif:
     disableDate: true

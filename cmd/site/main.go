@@ -19,6 +19,9 @@ func main() {
 		Example: "site",
 	}
 
+	rootCmd.SetOut(os.Stdout)
+	rootCmd.SetErr(os.Stderr)
+
 	rootCmd.AddCommand(content.Command())
 	rootCmd.AddCommand(image.Command())
 	rootCmd.AddCommand(radar.Command())

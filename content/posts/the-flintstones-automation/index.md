@@ -4,16 +4,16 @@ description: Lorem ipsum?
 date: 2023-12-16T14:05:30+01:00
 draft: true
 resources:
-- name: featured-image
-  src: featured-image.jpg
-  title: Featured image placeholder
-  params:
-    copyright: Image by William Artero
-    background: "#000"
+  - name: featured-image
+    src: featured-image.jpg
+    title: Featured image placeholder
+    params:
+      copyright: Image by William Artero
+      background: '#000'
 categories:
-- TODO
+  - TODO
 tags:
-- TODO
+  - TODO
 lastmod: 2024-01-28T14:25:12+01:00
 ---
 

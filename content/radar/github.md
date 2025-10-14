@@ -6,10 +6,10 @@ description: lorem ipsum
 radarIndex: 46
 radarSection: tools
 radarTier: adopt
-radarX: 90
-radarY: 55
+radarX: 108
+radarY: 129
 table-of-contents: false
-title: Github
+title: GitHub
 ---
 
 TODO justification

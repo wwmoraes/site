@@ -1,0 +1,8 @@
+PGP_WKD_HASH_william@artero.dev = 3y1xhnz6n4nz5izio6i8aonr4j1n4a85
+PGP_WKD_EMAIL_3y1xhnz6n4nz5izio6i8aonr4j1n4a85 = william@artero.dev
+PGP_WKD_HASH_contact@artero.dev = dj3498u4hyyarh35rkjfnghbjxug6b19
+PGP_WKD_EMAIL_dj3498u4hyyarh35rkjfnghbjxug6b19 = contact@artero.dev
+PGP_WKD_HASH_security@artero.dev = t5s8ztdbon8yzntexy6oz5y48etqsnbb
+PGP_WKD_EMAIL_t5s8ztdbon8yzntexy6oz5y48etqsnbb = security@artero.dev
+PGP_WKD_HASH_git@artero.dev = e5a4bxki1ktx1jncwco5nkcofedmkxod
+PGP_WKD_EMAIL_e5a4bxki1ktx1jncwco5nkcofedmkxod = git@artero.dev

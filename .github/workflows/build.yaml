@@ -3,14 +3,14 @@ on:
   push:
     paths:
     - .github/workflows/build.yaml
-    - .task/*.yaml
+    - .make/*.mk
     - cmd/*
     - go.mod
     - go.sum
     - internal/*
     - pkg/*
     - shell.nix
-    - Taskfile.yaml
+    - Makefile
   pull_request:
     types:
     - synchronize
@@ -18,14 +18,14 @@ on:
     - opened
     paths-ignore:
     - .github/workflows/build.yaml
-    - .task/*.yaml
+    - .make/*.mk
     - cmd/*
     - go.mod
     - go.sum
     - internal/*
     - pkg/*
     - shell.nix
-    - Taskfile.yaml
+    - Makefile
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -51,7 +51,7 @@ jobs:
     - name: download modules
       run: go mod download -x
     - name: build
-      run: task build
+      run: remake bin/site
     - name: attest binary
       uses: actions/attest-build-provenance@v2
       with:

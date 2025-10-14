@@ -1,6 +1,6 @@
 extends: stylelint-config-standard-scss
 ignoreFiles:
-- "tmp/**"
+- "**/tmp/**"
 - "**/*.css"
 - "themes/pico/assets/css/pico/**/*"
 rules:

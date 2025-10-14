@@ -3,10 +3,10 @@ title: Instrumented testing in Golang
 description: Say goodbye to thousands of unit test lines of code
 date: 2023-08-24T18:35:53+02:00
 categories:
-- Code
+  - Code
 tags:
-- Golang
-- Testing
+  - Golang
+  - Testing
 lastmod: 2024-08-11T13:07:57+02:00
 ---
 
@@ -19,7 +19,7 @@ workarounds. Sounds too good?
 ## Golang and tests
 
 Golang developers have outstanding support from the tooling to test their code.
-The [testing][testing] standard package and its companion [go test][go-test-cmd]
+The [testing] standard package and its companion [go test][go-test-cmd]
 command provides a solid foundation to test code. If you're up to writing unit
 test cases, that is.
 
@@ -74,13 +74,13 @@ don't belong in a coverage report.
 ## Results
 
 I got an outstanding [72% coverage][coverage-sample] over my
-[anilistarr][anilistarr] project on my first try using 80 lines of code. With
+[anilistarr] project on my first try using 80 lines of code. With
 this new option, I don't need to imagine testing anymore; I can isolate my code
 as usual and get tests, dead code reports and coverage with little effort. 🖤
 
 What do you think of this option provided by Golang? 😊
 
-[testing]: https://pkg.go.dev/testing
-[go-test-cmd]: https://pkg.go.dev/cmd/go#hdr-Testing_functions
 [anilistarr]: https://github.com/wwmoraes/anilistarr/
 [coverage-sample]: https://github.com/wwmoraes/anilistarr/actions/runs/5957377534/job/16159944308#step:8:61
+[go-test-cmd]: https://pkg.go.dev/cmd/go#hdr-Testing_functions
+[testing]: https://pkg.go.dev/testing

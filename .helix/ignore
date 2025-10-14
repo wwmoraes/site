@@ -1,3 +1,5 @@
+!.env.*
+!.styles/.gitignore
+!.styles/config/**/*
 *.jpg
 *.png
-!.env.*

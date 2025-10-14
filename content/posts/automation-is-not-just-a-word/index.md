@@ -3,10 +3,10 @@ title: Automation is not just a word
 date: 2022-01-06T10:55:06+01:00
 draft: true
 categories:
-- Architecture
+  - Architecture
 tags:
-- DevOps
-- SRE
+  - DevOps
+  - SRE
 lastmod: 2024-08-11T13:29:08+02:00
 ---
 
@@ -205,35 +205,39 @@ Automations:
 
 ## Quotes
 
-> "If a human operator needs to touch your system during normal operations, you
-> have a bug. The definition of normal changes as your systems grow."
->
-> - Carla Geisser, Google SRE
+{{< cite "Carla Geisser, Google SRE" >}}
+If a human operator needs to touch your system during normal operations, you
+have a bug. The definition of normal changes as your systems grow.
+{{< /cite >}}
 
 ---
 
-> "If we are engineering processes and solutions that are not automatable, we
-> continue having to staff humans to maintain the system. If we have to staff
-> humans to do the work, we are feeding the machines with the blood, sweat, and
-> tears of human beings. Think The Matrix with less special effects and more
-> pissed off System Administrators."
-{source="Joseph Bironas, Google SRE"}
+{{< cite "Joseph Bironas, Google SRE" >}}
+If we are engineering processes and solutions that are not automatable, we
+continue having to staff humans to maintain the system. If we have to staff
+humans to do the work, we are feeding the machines with the blood, sweat, and
+tears of human beings. Think The Matrix with less special effects and more
+pissed off System Administrators.
+{{< /cite >}}
 
 ---
 
-> "Besides black art, there is only automation and mechanization."
-{source="Federico García Lorca"}
+{{< cite "Federico García Lorca" >}}
+Besides black art, there is only automation and mechanization.
+{{< /cite >}}
 
 ---
 
-> "Hope is not a strategy."
-{source="Traditional SRE saying"}
+{{< cite "Traditional SRE saying" >}}
+Hope is not a strategy.
+{{< /cite >}}
 
 ---
 
-> "SRE hates manual operations, so we obviously try to create systems that don’t
-> require them. However, sometimes manual operations are unavoidable."
-{source="Site Reliability Engineering: How Google Runs Production Systems"}
+{{< cite "Site Reliability Engineering: How Google Runs Production Systems" >}}
+SRE hates manual operations, so we obviously try to create systems that don’t
+require them. However, sometimes manual operations are unavoidable.
+{{< /cite >}}
 
 ## Extras
 

@@ -6,34 +6,34 @@
   "definitions": {
     "author": {
       "$comment": "TODO https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30",
-      "type":"object",
+      "type": "object",
       "properties": {
         "givenName": {
-          "type":"string"
+          "type": "string"
         },
         "familyName": {
-          "type":"string"
+          "type": "string"
         },
         "displayName": {
-          "type":"string"
+          "type": "string"
         },
         "thumbnail": {
-          "type":"string"
+          "type": "string"
         },
         "image": {
-          "type":"string"
+          "type": "string"
         },
         "shortBio": {
-          "type":"string"
+          "type": "string"
         },
         "longBio": {
-          "type":"string"
+          "type": "string"
         },
         "email": {
-          "type":"string"
+          "type": "string"
         },
         "social": {
-          "type":"object"
+          "type": "object"
         }
       }
     },
@@ -118,15 +118,15 @@
       "type": "object",
       "properties": {
         "headers": {
-          "type":"array",
+          "type": "array",
           "items": {
-            "type":"object",
+            "type": "object",
             "properties": {
               "for": {
-                "type":"string"
+                "type": "string"
               },
               "values": {
-                "type":"object"
+                "type": "object"
               }
             }
           }

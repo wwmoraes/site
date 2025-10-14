@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/markup
-
 highlight:
   anchorLineNos: true
   codeFences: true
@@ -12,7 +11,6 @@ highlight:
   noClasses: false
   style: monokai
   tabWidth: 2
-
 goldmark:
   extensions:
     _merge: deep
@@ -33,7 +31,6 @@ goldmark:
     unsafe: false
     hardWraps: false
     xhtml: false
-
 tableOfContents:
   endLevel: 3
   ordered: false

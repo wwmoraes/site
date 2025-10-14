@@ -527,9 +527,9 @@
         </text>
       </a>
     </g>
-    <g transform="translate(90 55)">
+    <g transform="translate(108 129)">
       <a href="#" target="_parent">
-        <title>Github</title>
+        <title>GitHub</title>
         <use href="#blip" class="adopt" x="500" y="500" />
         <text x="500" y="500" alignment-baseline="middle" text-anchor="middle">
           46

@@ -58,22 +58,6 @@ func GetBookData(client *http.Client, isbn string) (*BookData, error) {
 	return meta, nil
 }
 
-func (meta *BookData) getThumbnailURL(current string) string {
-	if current != "" || meta.Cover == nil {
-		return current
-	}
-
-	if meta.Cover.Large != "" {
-		return meta.Cover.Large
-	} else if meta.Cover.Medium != "" {
-		return meta.Cover.Medium
-	} else if meta.Cover.Small != "" {
-		return meta.Cover.Small
-	}
-
-	return current
-}
-
 func (meta *BookData) AugmentBook(book *schema.Book) error {
 	if meta == nil {
 		return fmt.Errorf("book not found in Open Library (%s, %s)", book.Name, book.ISBN)
@@ -111,6 +95,22 @@ func (meta *BookData) AugmentBook(book *schema.Book) error {
 	}
 
 	return nil
+}
+
+func (meta *BookData) getThumbnailURL(current string) string {
+	if current != "" || meta.Cover == nil {
+		return current
+	}
+
+	if meta.Cover.Large != "" {
+		return meta.Cover.Large
+	} else if meta.Cover.Medium != "" {
+		return meta.Cover.Medium
+	} else if meta.Cover.Small != "" {
+		return meta.Cover.Small
+	}
+
+	return current
 }
 
 func ParseDate(value string) (*time.Time, error) {
