@@ -33,7 +33,7 @@ const (
 
 	// hidden-ish predefined keys.
 
-	Build  Key = "_build"
+	Build  Key = "build"
 	Target Key = "_target"
 
 	// target sub-keys.

@@ -8,7 +8,7 @@ build:
 cascade:
 - _target:
     path: '/internal/*'
-  _build:
+  build:
     render: never
     list: never
     publishResources: false

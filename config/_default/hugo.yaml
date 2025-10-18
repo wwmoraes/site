@@ -33,6 +33,8 @@ outputs:
   - HTML
   section:
   - HTML
+  taxonomy:
+  - HTML
   term:
   - FEED
   - HTML
@@ -51,8 +53,8 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 permalinks:
-  posts: "posts/:filename"
-  redirects: "/:filename"
+  posts: "posts/:contentbasename"
+  redirects: "/:contentbasename"
 module:
   mounts:
   - source: content
