@@ -73,7 +73,7 @@
   programs.jsonfmt = {
     enable = true;
     excludes = [
-      "themes/pico/layouts/_default/list.feed.json"
+      "themes/pico/layouts/list.feed.json"
     ];
   };
   programs.keep-sorted.enable = true;

@@ -1,5 +1,5 @@
 ---
-_build:
+build:
   list: true
   render: false
 description: The 90's solution to portability that needs to rest in peace

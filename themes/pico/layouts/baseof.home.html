@@ -59,6 +59,16 @@
           <a href="{{- $item.URL -}}" {{- partial "function/props" $item.Params -}}>{{- $item.Name -}}</a>
         </li>
         {{- end }}
+        {{- with (or ($.OutputFormats.Get "rss") (site.Home.OutputFormats.Get "rss")) -}}
+        <li>
+          <a href="{{- .Permalink -}}" rel="feed">RSS</a>
+        </li>
+        {{- end -}}
+        {{- with (or ($.OutputFormats.Get "feed") (site.Home.OutputFormats.Get "feed")) -}}
+        <li>
+          <a href="{{- .Permalink -}}" rel="feed">JSON Feed</a>
+        </li>
+        {{- end -}}
       </ul>
     </nav>
     {{- end }}

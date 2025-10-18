@@ -126,7 +126,7 @@
     {{- range .Blips }}
     <g transform="translate({{ .Page.FrontMatter.radarX }} {{ .Page.FrontMatter.radarY }})">
       {{- $href := .RelPermalink }}
-      {{- if or .Page.FrontMatter.draft (eq .Page.FrontMatter._build.render false) }}
+      {{- if or .Page.FrontMatter.draft (eq .Page.FrontMatter.build.render false) }}
       {{- $href = "#" }}
       {{- end }}
       <a href="{{ $href }}" target="_parent">

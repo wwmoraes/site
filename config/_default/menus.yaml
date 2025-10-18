@@ -16,16 +16,6 @@ taxonomies:
 - name: Tags
   pageRef: tags
   weight: 90
-- name: RSS
-  pageRef: index.rss.xml
-  weight: 98
-  params:
-    rel: feed
-- name: JSON
-  pageRef: index.feed.json
-  weight: 99
-  params:
-    rel: feed
 social:
 - name: LinkedIn
   url: https://linkedin.com/in/wwmoraes

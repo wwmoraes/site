@@ -1,5 +1,5 @@
 ---
-_build:
+build:
   list: true
   render: false
 description: lorem ipsum

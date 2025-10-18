@@ -4,8 +4,8 @@
 {{- $_ := .Publish }}
 {{- end }}
 {{- end }}
-{{- template "_internal/twitter_cards.html" . }}
-{{- template "_internal/opengraph.html" . }}
+{{- partial "twitter_cards.html" . }}
+{{- partial "opengraph.html" . }}
 
 {{- with site.Params.social.facebook_app_id }}
 <meta property="fb:app_id" content="{{ . }}" />
@@ -17,7 +17,7 @@
 {{- erroridf "thumbnail-image-missing" "thumbnail.png not found" }}
 {{- end }}
 
-{{- template "_internal/schema.html" . }}
+{{- partial "schema.html" . }}
 {{- $keywords := partial "function/keywords" . }}
 <meta name="keywords" content="{{ $keywords }}" />
 <link rel="canonical" href="{{- .Permalink -}}" />

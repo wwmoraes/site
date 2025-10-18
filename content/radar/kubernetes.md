@@ -1,5 +1,5 @@
 ---
-_build:
+build:
   list: true
   render: false
 description: Pandora's box for magic infrastructure
