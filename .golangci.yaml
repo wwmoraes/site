@@ -88,6 +88,7 @@ linters:
     mnd:
       ignored-numbers:
       - "0o640"
+      - "100" # used to calculate percents
       ignored-functions:
       - \.Int$
       - \.IntP$
@@ -95,6 +96,7 @@ linters:
       - \.OpenFile$
       - \.WriteFile$
       - make
+      - os.Exit
       - strings.SplitN
   exclusions:
     generated: lax

@@ -4,6 +4,7 @@ MAKEFLAGS += --jobs --max-load
 
 SHELL := $(shell which bash)
 .SHELLFLAGS := -euo pipefail -c
+.DEFAULT_GOAL := all
 
 -include .env
 -include .env.local
@@ -23,8 +24,6 @@ HUGO_SOURCES += ${EXIF_TARGETS} ${PGP_TARGETS} ${PLANTUML_TARGETS} content/radar
 
 export
 
-.SUFFIXES:
-
 #: Builds the entire project.
 all: bin/site public
 
@@ -36,30 +35,29 @@ clean:
 #: Generates site for the current branch.
 dist: dist/${HUGO_ENVIRONMENT}
 
-.PHONY: deploy
+.PHONY: deploy/%
 #: Deploys the site version for the current environment.
-deploy: dist/${HUGO_ENVIRONMENT}
-	$(info deploying '$<' to '${HUGO_ENVIRONMENT}' environment...)
+deploy/%: CLOUDFLARE_PAGES_BRANCH?=staging
+deploy/%: dist/%
+	$(info deploying '$<' to '$*' environment, Pages branch '${CLOUDFLARE_PAGES_BRANCH}'...)
 	@nix run nixpkgs#wrangler -- pages deploy $< \
 		--no-bundle \
 		--upload-source-maps \
 		--project-name '${CLOUDFLARE_PROJECT_NAME}' \
-		--branch '${GIT_BRANCH}' \
+		--branch '${CLOUDFLARE_PAGES_BRANCH}' \
 		--commit-hash '${GIT_COMMIT_HASH}' \
 		--commit-message '${GIT_COMMIT_MESSAGE}' \
 		--commit-dirty '${GIT_DIRTY}' \
 		;
 
+deploy/production: CLOUDFLARE_PAGES_BRANCH=master
+
 .PHONY: purge-cache
 purge-cache:
-ifeq (${CLOUDFLARE_API_TOKEN},)
-	$(warning no cloudflare API token set, skipping purge)
-else
-	@curl -sS 'https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE}/purge_cache' \
+	@op run --env-file=.env.secrets -- curl -X POST -sS 'https://api.cloudflare.com/client/v4/zones/$${CLOUDFLARE_ZONE_ID}/purge_cache' \
 		-H 'Content-Type: application/json' \
-		-H 'Authorization: Bearer ${CLOUDFLARE_API_TOKEN}' \
+		-H 'Authorization: Bearer $${CLOUDFLARE_API_TOKEN}' \
 		-w 'HTTP_STATUS:%{http_code}'
-endif
 
 #: Perform self-checks such as linting and formatting.
 check: vale-check

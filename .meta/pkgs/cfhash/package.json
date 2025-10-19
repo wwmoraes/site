@@ -1,0 +1,13 @@
+{
+  "name": "cfhash",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "bin": {
+    "cfhash": "index.mjs"
+  },
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "blake3-wasm": "2.1.5"
+  }
+}
