@@ -16,16 +16,18 @@ on:
     - synchronize
     - reopened
     - opened
-    paths-ignore:
+    paths:
     - .github/workflows/build.yaml
     - .make/*.mk
+    - Makefile
     - cmd/*
+    - flake.lock
+    - flake.nix
     - go.mod
     - go.sum
     - internal/*
     - pkg/*
     - shell.nix
-    - Makefile
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -37,15 +39,9 @@ jobs:
       attestations: write
     steps:
     - name: checkout
-      uses: actions/checkout@v4
-    - name: direnv nix
-      uses: JRMurr/direnv-nix-action@v4.2.0
-      with:
-        install-nix: true
-        cache-store: false
-        extra_nix_config: |-
-          extra-substituters = https://wwmoraes.cachix.org
-          extra-trusted-public-keys = wwmoraes.cachix.org-1:N38Kgu19R66Jr62aX5rS466waVzT5p/Paq1g6uFFVyM=
+      uses: actions/checkout@v5
+    - name: setup nix
+      uses: ./.github/actions/nix
     - name: cache go
       uses: wwmoraes/actions/golang/cache@master
     - name: download modules

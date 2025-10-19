@@ -7,6 +7,7 @@ in
 mkShell {
   packages =
     [
+      pkgs.cfhash
       pkgs.cocogitto
       pkgs.editorconfig-checker
       pkgs.git

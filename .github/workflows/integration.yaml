@@ -18,17 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@v4
-    - name: direnv nix
-      uses: JRMurr/direnv-nix-action@v4.2.0
+      uses: actions/checkout@v5
       with:
-        install-nix: true
-        cache-store: false
-        extra_nix_config: |-
-          extra-substituters = https://wwmoraes.cachix.org
-          extra-trusted-public-keys = wwmoraes.cachix.org-1:N38Kgu19R66Jr62aX5rS466waVzT5p/Paq1g6uFFVyM=
-    - name: configure repository
-      run: remake configure
+        fetch-tags: true
+        persist-credentials: false
+    - name: setup nix
+      uses: ./.github/actions/nix
     - name: check
       run: remake check
     - name: assert clean repository

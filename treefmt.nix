@@ -2,7 +2,8 @@
   mkFormatterModule,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     (mkFormatterModule {
       name = "stylelint";

@@ -59,6 +59,7 @@
           nur = nur.overlays.default;
           local = final: prev: {
             stylelint = final.callPackage .meta/pkgs/stylelint { };
+            cfhash = final.callPackage .meta/pkgs/cfhash { };
             inherit (self.packages.${prev.system}) update-stylelint;
           };
         };
