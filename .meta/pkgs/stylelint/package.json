@@ -1,4 +1,8 @@
 {
+  "name": "stylelint-bundled",
+  "license": "MIT",
+  "private": true,
+  "version": "16.25.0",
   "dependencies": {
     "postcss": "^8.5.3",
     "stylelint": "^16.22.0",
