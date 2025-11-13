@@ -1,8 +1,5 @@
+# yaml-language-server: $schema=https://www.schemastore.org/stylelintrc.json
 extends: stylelint-config-standard-scss
-ignoreFiles:
-- "**/tmp/**"
-- "**/*.css"
-- "themes/pico/assets/css/pico/**/*"
 rules:
   alpha-value-notation: number
   color-function-notation: modern
@@ -14,9 +11,9 @@ rules:
     - "/-webkit-.*/"
   property-no-vendor-prefix:
   - true
-  - ignoreSelectors:
-    - "/-moz-.*/"
-  "scss/no-global-function-names": false
+  - ignoreProperties:
+    - tab-size
+  "scss/no-global-function-names": null
   value-keyword-case:
   - lower
   - ignoreKeywords:

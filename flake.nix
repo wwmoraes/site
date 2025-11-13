@@ -57,6 +57,10 @@
             unstable = import unstable { inherit (prev) system; };
           };
           nur = nur.overlays.default;
+          local = final: prev: {
+            stylelint = final.callPackage .meta/pkgs/stylelint { };
+            inherit (self.packages.${prev.system}) update-stylelint;
+          };
         };
       };
 
@@ -68,11 +72,30 @@
             overlays = [
               self.overlays.unstable
               self.overlays.nur
+              self.overlays.local
             ];
             config = { };
           };
 
           devShells.default = import ./shell.nix { inherit pkgs; };
+
+          packages = {
+            update-stylelint =
+              let
+                inherit (pkgs.lib) getExe getExe';
+              in
+              pkgs.writeShellScriptBin "update-stylelint" ''
+                pushd .meta/pkgs/stylelint > /dev/null
+                ${getExe pkgs.yarn} outdated
+                ${getExe pkgs.yarn} install --mode update-lockfile
+                ${getExe' pkgs.yarn2nix "yarn2nix"} > yarn.nix
+                VERSION=$(${getExe pkgs.yarn} info --json stylelint | ${getExe pkgs.jq} -r '.data.version')
+                jq --arg VERSION $VERSION '.version = $VERSION' package.json | ${getExe' pkgs.moreutils "sponge"} package.json
+                popd > /dev/null
+              '';
+            inherit (pkgs) stylelint;
+            inherit (pkgs) cfhash;
+          };
 
           treefmt = ./treefmt.nix;
         };
