@@ -33,11 +33,16 @@
   programs.nixf-diagnose = {
     enable = true;
     excludes = [
-      "yarn.nix"
+      "**/yarn.nix"
     ];
   };
   programs.statix.enable = true;
-  programs.nixfmt.enable = true;
+  programs.nixfmt = {
+    enable = true;
+    excludes = [
+      "**/yarn.nix"
+    ];
+  };
   programs.typos = {
     enable = true;
     excludes = [
