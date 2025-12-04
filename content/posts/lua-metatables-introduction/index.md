@@ -10,7 +10,7 @@ resources:
       copyright: Image by William Artero
       background: '#1e1e1e'
 categories:
-  - Code
+  - Coding
 tags:
   - Lua
 lastmod: 2024-08-11T13:26:40+02:00

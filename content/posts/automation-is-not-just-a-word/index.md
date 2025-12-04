@@ -4,9 +4,9 @@ date: 2022-01-06T10:55:06+01:00
 draft: true
 categories:
   - Architecture
-tags:
   - DevOps
-  - SRE
+tags:
+  - Opinion
 lastmod: 2024-08-11T13:29:08+02:00
 ---
 

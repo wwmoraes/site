@@ -3,7 +3,7 @@ title: Instrumented testing in Golang
 description: Say goodbye to thousands of unit test lines of code
 date: 2023-08-24T18:35:53+02:00
 categories:
-  - Code
+  - Coding
 tags:
   - Golang
   - Testing

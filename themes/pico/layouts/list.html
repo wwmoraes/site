@@ -8,7 +8,7 @@
   {{- end }}
 {{- end }}
 {{- $pages := .Pages }}
-{{- $paginator := .Paginate $pages 10 }}
+{{- $paginator := cond (in site.Params.mainSections .Type) (.Paginate $pages 10) (.Paginate $pages.ByTitle 10) }}
 <section role="feed" aria-setsize="{{ $paginator.NumberOfElements }}" aria-label="{{ .Title }}" aria-busy="false">
   {{- range $i, $page := $paginator.Pages }}
   {{- $i = add 1 $i }}
