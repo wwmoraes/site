@@ -41,6 +41,7 @@ addons?
 anilistarr
 chezmoi
 cyclomatic
+decisis
 gameplay
 interoperate
 liveness
