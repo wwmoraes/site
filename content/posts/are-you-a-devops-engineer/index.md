@@ -6,9 +6,10 @@ resources:
   - name: featured-image
     src: devops.jpg
 categories:
-  - Career
-tags:
   - DevOps
+  - Growth
+tags:
+  - Opinion
 lastmod: 2024-08-11T11:41:25+02:00
 ---
 

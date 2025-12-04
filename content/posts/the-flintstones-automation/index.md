@@ -11,9 +11,10 @@ resources:
       copyright: Image by William Artero
       background: '#000'
 categories:
-  - TODO
+- Architecture
 tags:
-  - TODO
+- Opinion
+- Principle
 lastmod: 2024-01-28T14:25:12+01:00
 ---
 

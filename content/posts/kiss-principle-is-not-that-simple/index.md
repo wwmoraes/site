@@ -6,9 +6,10 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 categories:
-  - Principle
+  - Architecture
 tags:
-  - Analysis
+  - Opinion
+  - Principle
 lastmod: 2024-08-11T13:26:03+02:00
 ---
 
