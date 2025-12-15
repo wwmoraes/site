@@ -57,7 +57,7 @@ jobs:
       with:
         subject-path: bin/site
     - name: deliver
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: site-binary
         path: bin/site
