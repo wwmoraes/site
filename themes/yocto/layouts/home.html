@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{- $pages := where site.RegularPages "Section" "in" site.MainSections }}
+  {{- $length := $pages | len }}
+  <section role="feed" aria-setsize="{{ $length }}" aria-label="{{ .Title }}" aria-busy="false">
+  {{ range $index, $page := $pages }}
+    {{ partial "post-card" (dict "Page" $page "Index" $index "SetSize" $length) }}
+  {{ end }}
+  </section>
+{{ end }}

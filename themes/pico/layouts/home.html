@@ -4,7 +4,7 @@
   {{ . }}
 </section>
 {{- end }}
-{{- $pages := first 10 (where .Site.RegularPages "Section" "posts") }}
+{{- $pages := first 10 (where .Site.RegularPages "Section" "in" .Site.MainSections) }}
 <section role="feed" aria-setsize="{{ $pages.Len }}">
   {{- range $pages }}
   <article>

@@ -1,0 +1,7 @@
+:root {
+  --pico-nav-breadcrumb-divider: "\276F";
+}
+
+[aria-label=breadcrumb] [aria-current=page] {
+  visibility: hidden;
+}

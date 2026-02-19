@@ -1,0 +1,24 @@
+[role="status"],
+[role="status"]>[aria-label] {
+  transition: line-height .6s;
+  transition: opacity .6s;
+  opacity: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+}
+
+[role="status"][data-status="success"],
+[role="status"][data-status="failure"],
+[role="status"][data-status="success"] [aria-label="success"],
+[role="status"][data-status="failure"] [aria-label="failure"] {
+  opacity: 1;
+  line-height: unset;
+  visibility: visible;
+}
+
+@media (scripting: none) {
+  [role=status] {
+    display: none;
+  }
+}

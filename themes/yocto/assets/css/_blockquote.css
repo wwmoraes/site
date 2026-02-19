@@ -1,0 +1,32 @@
+blockquote {
+  background-color: var(--pico-blockquote-background-color);
+}
+
+blockquote > p:only-child::before,
+blockquote > p:only-child::after {
+  color: var(--theme-muted-300);
+  display: inline-block;
+  font-size: 4em;
+  line-height: 1em;
+  vertical-align: text-bottom;
+}
+
+blockquote > p:only-child::before {
+  content: "\201C";
+  margin-bottom: -1ex;
+  padding-right: 0.2ex;
+  /* margin-top: calc(var(--pico-spacing)*-1); */
+}
+
+
+blockquote > p:only-child::after {
+  content: "\201E";
+  padding-left: 0.2ex;
+  margin-top: -1em;
+  /* margin-bottom: calc(var(--pico-spacing)*-1); */
+}
+
+/* fix double-padding at the end */
+blockquote > *:last-child {
+  margin-bottom: 0;
+}

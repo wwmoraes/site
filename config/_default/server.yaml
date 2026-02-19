@@ -14,53 +14,53 @@ headers:
     Cross-Origin-Opener-Policy: same-origin
     Cross-Origin-Resource-Policy: same-site
     Feature-Policy: >-
-      accelerometer 'https://youtube.com';
+      accelerometer 'https://youtube-nocookie.com';
       autoplay 'none';
       bluetooth 'none';
       camera 'none';
-      clipboard-write 'https://youtube.com';
+      clipboard-write 'https://youtube-nocookie.com';
       display-capture 'none';
       encrypted-media 'none';
       fullscreen 'none';
       geolocation 'none';
-      gyroscope 'https://youtube.com';
+      gyroscope 'https://youtube-nocookie.com';
       idle-detection 'none';
       magnetometer 'none';
       microphone 'none';
       midi 'none';
       payment 'none';
-      picture-in-picture 'https://youtube.com';
+      picture-in-picture 'https://youtube-nocookie.com';
       publickey-credentials-create 'none';
       publickey-credentials-get 'none';
       screen-wake-lock 'none';
       serial 'none';
       storage-access 'none';
       usb 'none';
-      web-share 'https://youtube.com';
+      web-share 'https://youtube-nocookie.com';
     Permissions-Policy: >-
-      accelerometer=("https://youtube.com"),
+      accelerometer=("https://youtube-nocookie.com"),
       autoplay=(),
       bluetooth=(),
       camera=(),
-      clipboard-write=("https://youtube.com"),
+      clipboard-write=("https://youtube-nocookie.com"),
       display-capture=(),
       encrypted-media=(),
       fullscreen=(),
       geolocation=(),
-      gyroscope=("https://youtube.com"),
+      gyroscope=("https://youtube-nocookie.com"),
       idle-detection=(),
       magnetometer=(),
       microphone=(),
       midi=(),
       payment=(),
-      picture-in-picture=("https://youtube.com"),
+      picture-in-picture=("https://youtube-nocookie.com"),
       publickey-credentials-create=(),
       publickey-credentials-get=(),
       screen-wake-lock=(),
       serial=(),
       storage-access=(),
       usb=(),
-      web-share=("https://youtube.com"),
+      web-share=("https://youtube-nocookie.com"),
     Referrer-Policy: strict-origin
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     X-Content-Type-Options: nosniff

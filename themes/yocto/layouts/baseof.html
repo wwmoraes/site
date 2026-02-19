@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{- partial "head/meta" . }}
+  {{- partial "head/seo" . }}
+  {{- partialCached "head/content-security-policy" . }}
+  {{- partialCached "head/icons" . }}
+  {{- partialCached "head/styles" . }}
+  {{- partialCached "head/scripts" . }}
+  {{- block "head" . -}}{{- end -}}
+
+  <title>
+    {{- if .IsHome -}}
+    {{- site.Title -}}
+    {{- else -}}
+    {{- printf "%s %s %s" (.LinkTitle | default .Title) site.Params.titleSeparator site.Title -}}
+    {{- end -}}
+  </title>
+</head>
+<body>
+  <header class="container">
+    <menu>
+      <ul>
+        <li>
+          <h1>
+            {{- if .IsHome -}}
+            {{- site.Title -}}
+            {{- else -}}
+            <a rel="home" href="{{- site.BaseURL -}}">{{- site.Title -}}</a>
+            {{- end -}}
+          </h1>
+        </li>
+      </ul>
+      {{ partial "menu" (dict "Identifier" "main" "Page" .) }}
+    </menu>
+  </header>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="container">
+    <menu>
+      {{ partial "menu" (dict "Identifier" "footer" "Page" .) }}
+    </menu>
+    <menu>
+      {{ partial "menu" (dict "Identifier" "social" "Page" .) }}
+    </menu>
+    {{- with site.Copyright }}
+    <p><small>{{- printf . now.Year | safeHTML -}}</small></p>
+    {{- end }}
+  </footer>
+</body>
+</html>

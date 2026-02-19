@@ -1,0 +1,9 @@
+{{- $slug := .Slug }}
+{{- if not $slug }}
+  {{- with .File }}
+    {{- $slug = .BaseFileName }}
+  {{- else }}
+    {{- $slug = hash.FNV32a .Title | string }}
+  {{- end }}
+{{- end }}
+{{- return $slug }}

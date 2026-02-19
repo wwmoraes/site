@@ -1,0 +1,67 @@
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} Identifier The menu ID.
+
+@example: {{ partial "menu" (dict "identifier" "main" "page" .) }}
+*/}}
+
+{{- $page := .Page }}
+{{- $identifier := .Identifier }}
+
+{{- with index site.Menus $identifier }}
+  <ul>
+    {{- template "menu/walk" (dict "Page" $page "Entries" .) }}
+  </ul>
+{{- end }}
+
+{{- define "menu/walk" }}
+  {{- $page := .Page }}
+  {{- range .Entries }}
+    {{- $attrs := dict "href" .URL }}
+    {{- with .Params.rel }}
+    {{-   $attrs = merge $attrs (dict "rel" .) }}
+    {{- end }}
+    {{- with .Params.target }}
+    {{-   $attrs = merge $attrs (dict "target" .) }}
+    {{- end }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+    {{- else if $page.HasMenuCurrent .Menu .}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+    <li>
+      {{- with .Children }}
+      <details class="dropdown">
+        <summary>
+          <a
+            {{- range $k, $v := $attrs }}
+              {{- with $v }}
+                {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+              {{- end }}
+            {{- end -}}
+          >{{ $name }}</a>
+        </summary>
+        <ul>
+          {{- template "menu/walk" (dict "Page" $page "Entries" .) }}
+        </ul>
+      </details>
+      {{- else }}
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >{{ $name }}</a>
+      {{- end }}
+    </li>
+  {{- end }}
+{{- end }}

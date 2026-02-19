@@ -1,0 +1,35 @@
+{{- $props := dict "class" .AlertType "role" "note" -}}
+{{- $icon := transform.Emojify (index site.Params.alerts.icons .AlertType | default (index site.Params.alerts.icons site.Params.alerts.default | default "&#12336;")) -}}
+{{- $title := or .AlertTitle (i18n .AlertType) (title .AlertType) -}}
+
+{{- /* start closed only on "-" */ -}}
+{{- if ne .AlertSign "-" }}
+{{-   $props = merge $props (dict "open" "open") }}
+{{- end -}}
+
+{{- /* disable folding unless explicitly requested */ -}}
+{{- if eq .AlertSign "" }}
+<blockquote {{- partial "function/props" $props -}}>
+  <header>
+    <span role="presentation">
+      {{- $icon -}}
+    </span>
+    &nbsp;
+    {{- $title -}}
+  </header>
+  {{- .Text -}}
+</blockquote>
+{{- else }}
+<details {{- partial "function/props" $props -}}>
+  <summary>
+    <span role="presentation">
+      {{- $icon -}}
+    </span>
+    &nbsp;
+    {{- $title -}}
+  </summary>
+  {{- .Text -}}
+</details>
+{{- end -}}
+
+

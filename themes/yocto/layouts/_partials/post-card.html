@@ -1,0 +1,22 @@
+{{- $slug := .Page.Slug }}
+{{- if not $slug }}
+  {{- with .Page.File }}
+    {{- $slug = .BaseFileName }}
+  {{- else }}
+    {{- $slug = hash.FNV32a .Title | string }}
+  {{- end }}
+{{- end }}
+{{- $labelID := printf "%s-feed-label-%d" $slug .Index }}
+{{- $descriptionID := printf "%s-feed-desc-%d" $slug .Index }}
+<article aria-posinset="{{ .Index }}" aria-setsize="{{ .SetSize }}" aria-labelledby="{{ $labelID }}" aria-describedby="{{ $descriptionID }}" tabindex="0">
+  <hgroup>
+    <h2>
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+      {{- if .Page.Draft }}
+      <sup><span role="presentation" aria-label="draft" title="draft">&#128681;</span></sup>
+      {{- end }}
+    </h2>
+    {{- partial "page/metadata" .Page -}}
+  </hgroup>
+</article>
+

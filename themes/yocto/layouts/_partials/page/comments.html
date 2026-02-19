@@ -1,0 +1,33 @@
+{{- if in .Site.MainSections .Type }}
+{{-   with .Site.Params.giscus }}
+{{-   if and .repo .repo_id .category .category_id }}
+{{-     $theme := or .theme "preferred_color_scheme" }}
+{{-     if eq $theme "custom" }}
+{{-       with resources.Get "css/giscus.css" }}
+{{-         $theme = (. | minify).Permalink }}
+{{-       end }}
+{{-     end }}
+{{-     $scriptProps := dict
+          "crossorigin" "anonymous"
+          "data-category" .category
+          "data-category-id" .category_id
+          "data-emit-metadata" (.emit_metadata | default 0)
+          "data-input-position" (.position | default "top")
+          "data-lang" (.lang | default "en")
+          "data-loading" (.loading | default "lazy")
+          "data-mapping" "specific"
+          "data-reactions-enabled" (.reactions_enabled | default 1)
+          "data-repo" .repo
+          "data-repo-id" .repo_id
+          "data-strict" (.strict | default 1)
+          "data-term" page.Title
+          "data-theme" $theme
+          "src" "https://giscus.app/client.js"
+}}
+<script {{ partial "function/props" $scriptProps }} async></script>
+<noscript>Please enable JavaScript to view and make comments.</noscript>
+<hr />
+{{-     end }}
+{{-   end }}
+{{- end }}
+

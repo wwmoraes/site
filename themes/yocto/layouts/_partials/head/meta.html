@@ -1,0 +1,36 @@
+<meta charset="utf-8" />
+
+{{- if not hugo.IsProduction }}
+<meta name="robots" content="noarchive,noindex" />
+{{- end }}
+
+{{- /*
+  Apple iOS settings
+    * see https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/sArticles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW3
+    * https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+*/}}
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="apple-mobile-web-app-title" content="{{- .Site.Title -}}" />
+<meta name="apple-mobile-web-app-orientations" content="portrait-any" />
+
+{{- /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name */}}
+<meta name="application-name" content="{{- .Site.Title -}}" />
+{{- with .Site.Params.author.displayname }}
+<meta name="author" content="{{- . -}}" />
+<meta name="creator" content="{{- . -}}" />
+<meta name="publisher" content="{{- . -}}" />
+{{- end }}
+{{- with (.Description | default .Site.Params.description) }}
+<meta name="description" content="{{- . -}}" />
+{{- end }}
+{{- hugo.Generator -}}
+<meta name="theme-color" content="#3d5a80" />
+<meta name="color-scheme" content="dark light" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{- with .Site.Params.author.pgpkey -}}
+<link rel="pgpkey" type="application/pgp-keys" href="{{- . -}}" />
+{{- end -}}

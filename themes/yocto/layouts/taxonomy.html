@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <header>
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+    </hgroup>
+    {{ .Content }}
+  </header>
+  {{- $entries := .Data.Terms.Alphabetical }}
+  {{- $length := $entries | len }}
+  <section role="feed" aria-setsize="{{ $length }}" aria-label="{{ .Title }}" aria-busy="false">
+    {{ range $index, $entry := $entries }}
+      {{- $slug := $entry.Page.Slug }}
+      {{- if not $slug }}
+        {{- with $entry.Page.File }}
+          {{- $slug = .BaseFileName }}
+        {{- else }}
+          {{- $slug = hash.FNV32a .Title | string }}
+        {{- end }}
+      {{- end }}
+      {{- $labelID := printf "%s-feed-label-%d" $slug $index }}
+      {{- $descriptionID := printf "%s-feed-desc-%d" $slug $index }}
+      {{- with $entry.Page }}
+      <article aria-posinset="{{ $index }}" aria-setsize="{{ $length }}" aria-labelledby="{{ $labelID }}" aria-describedby="{{ $descriptionID }}" tabindex="0">
+        <hgroup>
+          <h2>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> ({{ $entry.Count }})
+          </h2>
+        </hgroup>
+        {{- with .Description -}}
+        <p>{{- . -}}</p>
+        {{- end -}}
+      </article>
+      {{- end }}
+    {{ end }}
+  </section>
+{{ end }}

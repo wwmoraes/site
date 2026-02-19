@@ -32,7 +32,7 @@ params:
       tip: ':bulb:'
       warning: ':warning:'
   rssFullText: true
-  title_separator: //
+  title_separator: "|"
   goatcounter:
     host: goatcounter.com
     src: 'https://gc.zgo.at/count.v3.js'

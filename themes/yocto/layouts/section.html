@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+  {{- $entries := .Pages }}
+  {{- $length := $entries | len }}
+  <section role="feed" aria-setsize="{{ $length }}" aria-label="{{ .Title }}" aria-busy="false">
+    {{ range $index, $entry := $entries }}
+      {{ partial "post-card" (dict "Page" $entry "Index" $index "SetSize" $length) }}
+    {{ end }}
+  </section>
+{{ end }}

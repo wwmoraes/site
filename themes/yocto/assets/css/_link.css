@@ -1,0 +1,22 @@
+/* decorate external links */
+a[href][rel*=external]::after {
+  content: "\238B";
+  display: inline-block;
+  font-size: .5em;
+  margin-left: .1em;
+  text-decoration: none;
+  transform: scale(-1, 1);
+  vertical-align: super;
+}
+
+a[href][rel*=external]:hover::after {
+  text-decoration: none;
+}
+
+a[aria-current="page"] {
+  pointer-events: none;
+}
+
+a[rel=section] {
+  --pico-text-decoration: none;
+}

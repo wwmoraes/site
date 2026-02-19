@@ -1,0 +1,29 @@
+:root {
+  --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --pico-font-family-monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace, var(--pico-font-family-emoji);
+  --pico-font-family-sans-serif: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, var(--pico-font-family-emoji); /* https://modernfontstacks.com - Neo-Grotesque */
+  /* --pico-font-size: 120%; */
+  --pico-nav-element-spacing-horizontal: 0.25rem;
+  --pico-nav-element-spacing-vertical: 0.25rem;
+}
+
+header :is(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: 0;
+}
+
+main > header {
+  margin-bottom: var(--pico-typography-spacing-vertical);
+}
+
+body header menu a[rel=home] {
+  --pico-color: inherit;
+  --pico-underline: inherit;
+}
+
+article > *:last-child {
+  margin-bottom: 0;
+}
+
+footer > :is(menu,[role=menu]) {
+  justify-content: space-around;
+}

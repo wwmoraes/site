@@ -1,0 +1,60 @@
+[role=note] {
+  background-color: var(--pico-blockquote-background-color);
+  margin: var(--pico-typography-spacing-vertical) 0;
+  padding: var(--pico-spacing);
+  border: 0.0625rem solid var(--pico-blockquote-border-color);
+  border-left: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
+}
+
+[role=note] :is(header, summary) {
+  font-weight: bold;
+  line-height: 1rem;
+}
+
+[role=note] :is(header, summary) span[role=presentation] {
+  vertical-align: text-top;
+  display: inline-block;
+}
+
+[role=note] > *:last-child {
+  margin-bottom: 0;
+}
+
+/* hide chevron for always-open details */
+[role=note][open][aria-disabled=true] {
+  pointer-events: auto; /* re-enables so links are clickable again */
+  cursor: default;
+}
+
+[role=note][open][aria-disabled=true] > summary {
+  cursor: default;
+}
+
+/* hide chevron for always-open details */
+[role=note][open][aria-disabled=true] > summary::after {
+  display: none;
+}
+
+details[role=note]::details-content {
+  transition: height 0.35s ease;
+}
+
+blockquote[role=note] > header {
+  margin-bottom: var(--pico-spacing);
+}
+
+[role=note].bug       { --pico-blockquote-border-color: var(--theme-success-900);    }
+[role=note].caution   { --pico-blockquote-border-color: var(--theme-warning-900);    }
+[role=note].danger    { --pico-blockquote-border-color: var(--theme-complement-100); }
+[role=note].edit      { --pico-blockquote-border-color: var(--theme-muted-700);      }
+[role=note].example   { --pico-blockquote-border-color: var(--theme-secondary-500);  }
+[role=note].failure   { --pico-blockquote-border-color: var(--theme-error-900);      }
+[role=note].important { --pico-blockquote-border-color: var(--theme-complement-500); }
+[role=note].info      { --pico-blockquote-border-color: var(--theme-info-500);       }
+[role=note].note      { --pico-blockquote-border-color: var(--theme-highlight-500);  }
+[role=note].question  { --pico-blockquote-border-color: var(--theme-accent-100);     }
+[role=note].quote     { --pico-blockquote-border-color: var(--theme-accent-600);     }
+[role=note].success   { --pico-blockquote-border-color: var(--theme-success-500);    }
+[role=note].tip       { --pico-blockquote-border-color: var(--theme-help-500);       }
+[role=note].warning   { --pico-blockquote-border-color: var(--theme-warning-100);    }

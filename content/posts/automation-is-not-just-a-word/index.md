@@ -24,7 +24,13 @@ us](https://en.wikipedia.org/wiki/Water_clock).
 can trigger people to either ranging from those that say it is just a word to
 people that want a Wallace and Gromit morning.
 
-{{< youtube o0JIznO-RlI >}}
+[](https://www.youtube.com/watch?v=o0JIznO-RlI "Wallace & Grommit Cracking Toast video")
+
+[](https://youtu.be/o0JIznO-RlI "Wallace & Grommit Cracking Toast video")
+
+[Wallace & Grommit Cracking Toast video](https://www.youtube.com/watch?v=o0JIznO-RlI "Wallace & Grommit Cracking Toast video")
+
+[Wallace & Grommit Cracking Toast video](https://youtu.be/o0JIznO-RlI "Wallace & Grommit Cracking Toast video")
 
 Some people, depending on how they read or receive the information given on
 Google's SRE book, might ask every time someone raises an automation/autonomous
@@ -205,39 +211,34 @@ Automations:
 
 ## Quotes
 
-{{< cite "Carla Geisser, Google SRE" >}}
-If a human operator needs to touch your system during normal operations, you
-have a bug. The definition of normal changes as your systems grow.
-{{< /cite >}}
+> If a human operator needs to touch your system during normal operations, you
+> have a bug. The definition of normal changes as your systems grow.
+{caption="Carla Geisser, Google SRE"}
 
 ---
 
-{{< cite "Joseph Bironas, Google SRE" >}}
-If we are engineering processes and solutions that are not automatable, we
-continue having to staff humans to maintain the system. If we have to staff
-humans to do the work, we are feeding the machines with the blood, sweat, and
-tears of human beings. Think The Matrix with less special effects and more
-pissed off System Administrators.
-{{< /cite >}}
+> If we are engineering processes and solutions that are not automatable, we
+> continue having to staff humans to maintain the system. If we have to staff
+> humans to do the work, we are feeding the machines with the blood, sweat, and
+> tears of human beings. Think The Matrix with less special effects and more
+> pissed off System Administrators.
+{caption="Joseph Bironas, Google SRE"}
 
 ---
 
-{{< cite "Federico García Lorca" >}}
-Besides black art, there is only automation and mechanization.
-{{< /cite >}}
+> Besides black art, there is only automation and mechanization.
+{caption="Federico García Lorca"}
 
 ---
 
-{{< cite "Traditional SRE saying" >}}
-Hope is not a strategy.
-{{< /cite >}}
+> Hope is not a strategy.
+{caption="Traditional SRE saying"}
 
 ---
 
-{{< cite "Site Reliability Engineering: How Google Runs Production Systems" >}}
-SRE hates manual operations, so we obviously try to create systems that don’t
-require them. However, sometimes manual operations are unavoidable.
-{{< /cite >}}
+> SRE hates manual operations, so we obviously try to create systems that don’t
+> require them. However, sometimes manual operations are unavoidable.
+{caption="Site Reliability Engineering: How Google Runs Production Systems"}
 
 ## Extras
 
@@ -254,8 +255,8 @@ require them. However, sometimes manual operations are unavoidable.
 
 ### Time-based availability
 
-{{< diagram "time-based-availability.svg" >}}
+![](time-based-availability.svg)
 
 ### Aggregate availability
 
-{{< diagram "aggregate-availability.svg" >}}
+![](aggregate-availability.svg)

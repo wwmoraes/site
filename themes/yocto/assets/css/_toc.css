@@ -1,0 +1,30 @@
+aside:has(>nav#TableOfContents) {
+  background: var(--pico-card-background-color);
+  margin: 0 0 var(--pico-spacing);
+  padding: var(--pico-spacing);
+}
+
+aside:has(>nav#TableOfContents) header h1 {
+  --pico-font-weight: 700;
+  --pico-font-size: 1rem;
+  --pico-line-height: 1.25;
+  --pico-typography-spacing-top: 1.5rem;
+  --pico-color: var(--pico-h6-color);
+}
+
+aside:has(>nav#TableOfContents) li a {
+  display: inline-block;
+}
+
+aside:has(>nav#TableOfContents) li > ul {
+  margin-left: var(--pico-spacing);
+}
+
+@media (min-width: 768px) {
+  aside:has(>nav#TableOfContents) {
+    display: block;
+    float: right;
+    clear: both;
+    margin: 0 0 0 var(--pico-spacing);
+  }
+}

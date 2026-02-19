@@ -31,10 +31,9 @@ company, Lockheed. He led an area that became known as Skunk Works, the cradle
 of all his brilliant creations. As per Ben Rich, author of Johnson's posthumous
 biography:
 
-{{< cite "Ben Rich, describing the Skunk Works division" >}}
-A concentration of a few good people… applying the simplest, most
-straightforward methods possible to develop and produce new products.
-{{< /cite >}}
+> A concentration of a few good people… applying the simplest, most
+> straightforward methods possible to develop and produce new products.
+{caption="Ben Rich, describing the Skunk Works division"}
 
 There's also reports on how Johnson challenged his engineering team to design
 solutions that a regular engineer would be able to fix using common tools. This
@@ -113,16 +112,15 @@ That didn't hold back Johnson's team to do one of the most complex projects the
 world ever saw that era. In the 1960's they released the Blackbird, an aircraft
 that still holds world records to date. As per Johnson himself:
 
-{{< cite "Clarence 'Kelly' Johnson, about the Blackbirds design" >}}
-The idea of attaining and staying at Mach 3.2 (more than three times the speed
-of sound) over long flights was the toughest job the Skunk Works ever had and
-the most difficult of my career.
-
-Aircraft operating at those speeds would require development of special fuels,
-structural materials, manufacturing tools and techniques, hydraulic fluid, fuel
-tank sealants, paints, plastics, wiring, and connecting plugs. Everything about
-the aircraft had to be invented.
-{{< /cite >}}
+> The idea of attaining and staying at Mach 3.2 (more than three times the speed
+> of sound) over long flights was the toughest job the Skunk Works ever had and
+> the most difficult of my career.
+> 
+> Aircraft operating at those speeds would require development of special fuels,
+> structural materials, manufacturing tools and techniques, hydraulic fluid, fuel
+> tank sealants, paints, plastics, wiring, and connecting plugs. Everything about
+> the aircraft had to be invented.
+{caption="Clarence 'Kelly' Johnson, about the Blackbirds design"}
 
 They had to invent everything from scratch. Isn't that… _non-KISS_?
 Over-engineering even? I'm sure they could solve it with some extra glue and
@@ -215,7 +213,8 @@ As readable as it can get. And I didn't even touch the prefix, suffix and
 replacement expansions. Now let's see how a dual of that feature would look in
 Golang:
 
-{{< source variables.go >}}
+```go {source="variables.go"}
+```
 
 > [!warning]
 > **Please do NOT use this code in real projects!**

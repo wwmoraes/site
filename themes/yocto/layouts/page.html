@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <header>
+    <hgroup>
+      {{- partial "page/breadcrumb" . }}
+    </hgroup>
+    <h1>{{ .Title }}</h1>
+    {{- partial "page/details" . -}}
+  </header>
+  {{- partial "toc" . -}}
+  {{- .Content -}}
+  <footer>
+    <span role="presentation" aria-label="end-of-transmission">&#9220;</span>
+    {{- with .GitInfo }}
+    {{- if $.File }}
+    {{- $filepath := $.File.Path }}
+    <p>Revision <a href="https://github.com/wwmoraes/site/blob/{{ .Hash }}/content/{{ $filepath }}" rel="code-repository noreferrer noopener nofollow external" target="_blank" title="{{ .Subject }}">{{ .AbbreviatedHash }}</a> - {{ .Subject }}</p>
+    <hr />
+    {{- end }}
+    {{- end }}
+    {{- if in .Site.MainSections .Type -}}
+    {{- partial "page/related" . -}}
+    <hr />
+    {{- end -}}
+    {{- partial "page/comments" . -}}
+    <p>
+      All opinions here are my own, based on my experiences. Take anything I say with a grain of salt.
+    </p>
+    <p>
+      The content is neither endorsed nor promoted by anyone else unless explicitly mentioned.
+    </p>
+  </footer>
+{{ end }}

@@ -1,0 +1,59 @@
+@media only screen and (prefers-color-scheme:light) {
+  :root:not([data-theme=dark]), :host(:not([data-theme=dark])) {
+    {{ template "light-theme-properties" . }}
+  }
+}
+
+[data-theme=light] {
+  {{ template "light-theme-properties" . }}
+}
+
+@media only screen and (prefers-color-scheme:dark) {
+  :root:not([data-theme]), :host(:not([data-theme])) {
+    {{ template "dark-theme-properties" . }}
+  }
+}
+
+[data-theme=dark] {
+  {{ template "dark-theme-properties" . }}
+}
+
+{{- define "light-theme-properties" }}
+  --pico-accordion-active-summary-color: var(--theme-dark-200);
+  --pico-accordion-open-summary-color: var(--theme-dark-200);
+  --pico-background-color: var(--theme-light-50);
+  --pico-blockquote-background-color: var(--theme-light-200);
+  --pico-blockquote-border-color: var(--theme-light-500);
+  --pico-color: var(--theme-dark-200);
+  --pico-form-element-background-color: var(--theme-light-400);
+  --pico-muted-border-color: var(--theme-dark-50);
+  --pico-muted-color: var(--theme-dark-900);
+  --pico-primary-background: var(--theme-primary-900);
+  --pico-primary-hover: var(--theme-accent-900);
+  --pico-primary-underline: var(--theme-primary-900);
+  --pico-primary: var(--theme-primary-900);
+  --pico-secondary-background: var(--theme-muted-100);
+  --pico-text-selection-color: rgb(from var(--theme-dark-500) r g b / 0.1875);
+{{- end }}
+
+{{- define "dark-theme-properties" }}
+  --pico-accordion-active-summary-color: var(--theme-light-500);
+  --pico-accordion-open-summary-color: var(--theme-light-500);
+  --pico-background-color: var(--theme-dark-600);
+  --pico-blockquote-background-color: var(--theme-muted-600);
+  --pico-blockquote-border-color: var(--theme-muted-300);
+  --pico-card-background-color: var(--theme-dark-500);
+  --pico-card-sectioning-background-color: var(--theme-dark-400);
+  --pico-color: var(--theme-light-100);
+  --pico-form-element-background-color: var(--theme-dark-400);
+  --pico-muted-border-color: var(--theme-light-50);
+  --pico-primary-background: var(--theme-primary-900);
+  --pico-primary-hover: var(--theme-accent-500);
+  --pico-primary-underline: var(--theme-primary-500);
+  --pico-primary: var(--theme-primary-500);
+  --pico-range-active-border-color: var(--theme-muted-50);
+  --pico-range-border-color: var(--theme-dark-700);
+  --pico-range-thumb-color: var(--theme-primary-500);
+  --pico-secondary-background: var(--theme-muted-200);
+  --pico-text-selection-color: rgb(from var(--theme-light-500) r g b / 0.1875);
+{{- end }}

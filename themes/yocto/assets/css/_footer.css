@@ -1,0 +1,8 @@
+:is(body, main) > footer {
+  text-align: center;
+}
+
+/* fix double-padding at the end */
+footer > *:last-child {
+  margin-bottom: 0;
+}

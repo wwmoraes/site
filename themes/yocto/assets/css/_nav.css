@@ -1,0 +1,87 @@
+/* make nav's responsive */
+:is(nav, [role=navigation]) > ul {
+  flex-wrap: wrap;
+}
+
+:is(nav, [role=navigation]) > ul > li:first-of-type > *:only-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* drop pico's breadcrumb absolute positioning */
+:is(nav, [role=navigation])[aria-label=breadcrumb] > ul > li:not(:first-child) {
+  margin-left: 0;
+}
+
+:is(nav, [role=navigation])[aria-label=breadcrumb] > ul > li:not(:last-child)::after {
+  position: relative;
+}
+
+/* post details */
+:is(nav, [role=navigation])[aria-label=details] {
+  flex-direction: column;
+}
+
+:is(nav, [role=navigation])[aria-label=details] > ul {
+  flex-direction: row-reverse;
+}
+
+:is(nav, [role=navigation])[aria-label=details] > ul > li:not(:first-of-type) {
+  padding-right: 0;
+}
+
+:is(nav, [role=navigation])[aria-label=details] > ul > li:not(:last-of-type)::before {
+  content: "⋅";
+  padding-right: var(--pico-nav-element-spacing-horizontal);
+}
+
+/* style metadata nav to split them using a small dot */
+:is(nav, [role=navigation])[aria-label=metadata] > ul > li:not(:first-of-type) {
+  padding-left: 0;
+}
+
+:is(nav, [role=navigation])[aria-label=metadata] > ul > li:not(:first-of-type)::before {
+  content: "⋅";
+  padding-right: var(--pico-nav-element-spacing-horizontal);
+}
+
+/* style taxonomy nav to separate values using commas */
+:is(nav, [role=navigation])[aria-label=taxonomies] {
+  --pico-nav-element-spacing-horizontal: 0;
+  --pico-nav-element-spacing-vertical: 0;
+  --pico-nav-link-spacing-horizontal: 0;
+  --pico-nav-link-spacing-vertical: 0;
+  justify-content: flex-start;
+}
+
+:is(nav, [role=navigation])[aria-label=taxonomies] > ul > li:not(:last-of-type)::after {
+  content: ",";
+  margin-right: 1ex;
+}
+
+
+:is(nav, [role=navigation])[aria-label=related] > ul {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+:is(nav, [role=navigation])[aria-label=related] > ul > li {
+  flex: 0 0 50%;
+}
+
+@media (min-width: 768px) {
+  :is(nav, [role=navigation])[aria-label=related] > ul {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  :is(nav, [role=navigation])[aria-label=related] > ul >*:first-child {
+    text-align: left;
+  }
+
+  :is(nav, [role=navigation])[aria-label=related] > ul >*:last-child {
+    text-align: right;
+  }
+}

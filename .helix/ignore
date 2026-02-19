@@ -3,3 +3,7 @@
 !.styles/config/**/*
 *.jpg
 *.png
+pico.css
+pico.conditional.css
+pico.classless.css
+pico.fluid.classless.css
