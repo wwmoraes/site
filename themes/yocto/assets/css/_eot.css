@@ -1,0 +1,10 @@
+[role=presentation][aria-label=end-of-transmission] {
+  font-size: 2em;
+  line-height: 1;
+  text-align: center;
+  background-color: var(--pico-color);
+  color: var(--pico-background-color);
+  width: 100%;
+  display: block;
+  margin-bottom: var(--pico-spacing);
+}

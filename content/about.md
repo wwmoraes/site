@@ -4,18 +4,9 @@ linkTitle: About
 description: >-
   A software engineer helping machines and teams understand businesses needs
   since 2010.
+layout: single
 table-of-contents: false
-resources:
-  - name: avatar
-    title: Me in Marrakesh
-    src: images/avatar.jpg
-    params:
-      alt: avatar
-      width: 256
-      height: 256
 ---
-
-{{< avatar >}}
 
 I work at companies of all sizes, from startups to corporations. Currently I'm
 leading a service-oriented architecture platform initiative at ABN AMRO Bank in

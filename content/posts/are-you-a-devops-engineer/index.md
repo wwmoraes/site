@@ -21,9 +21,7 @@ that extra oomph. Is that the right thing to do?
 
 <!--more-->
 
-{{< figure "Perhaps?" >}}
-![<https://reactiongifs.com/?p=24986>](https://www.reactiongifs.com/r/dsori.gif)
-{{< /figure >}}
+![<https://reactiongifs.com/?p=24986>](https://www.reactiongifs.com/r/dsori.gif "Perhaps?")
 
 ## Prologue
 

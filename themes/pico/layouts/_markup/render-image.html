@@ -34,7 +34,7 @@
 {{- end }}
 
 {{- if and $image (eq $image.MediaType.Type "image/gif" | not) }}
-{{- partial "picture.html" (dict "image" $image "Attributes" $props) }}
+{{- partial "picture" (dict "image" $image "Attributes" $props) }}
 {{- else }}
 <img src="{{ .Destination }}" {{- partial "function/props" $props -}} />
 {{- end }}

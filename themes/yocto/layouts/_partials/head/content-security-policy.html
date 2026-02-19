@@ -1,0 +1,28 @@
+{{- with (templates.Defer (dict "key" "csp")) }}
+{{-   with site.Params.csp -}}
+{{-     if .enabled -}}
+{{-       $img := .img -}}
+{{-       $style := .style | append (site.Store.GetSortedMapValues "csp-style-src") }}
+{{-       $script := .script | append (site.Store.GetSortedMapValues "csp-script-src") }}
+{{-       with site.Params.goatcounter }}
+{{-         if .code -}}
+{{-           $img = $img | append (printf "https://%s.%s" .code .host) -}}
+{{-         end }}
+{{-       end }}
+{{-       $policies := delimit (slice
+            (delimit (slice "default-src" | append .default) " ")
+            (delimit (slice "base-uri" | append .base) " ")
+            (delimit (slice "connect-src" | append .connect) " ")
+            (delimit (slice "font-src" | append .font) " ")
+            (delimit (slice "form-action" | append .form) " ")
+            (delimit (slice "frame-src" | append .frame) " ")
+            (delimit (slice "img-src" | append $img) " ")
+            (delimit (slice "script-src" | append $script) " ")
+            (delimit (slice "style-src" | append $style) " ")
+            (delimit (slice "manifest-src" | append .manifest) " ")
+          ) "; "
+-}}
+<meta http-equiv="Content-Security-Policy" content="{{- $policies | safeHTMLAttr -}}" />
+{{-     end }}
+{{-   end }}
+{{- end }}

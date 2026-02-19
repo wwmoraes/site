@@ -9,6 +9,7 @@
       name = "stylelint";
       package = "stylelint";
       args = [
+        "--allow-empty-input"
         "--cache"
         "--cache-location"
         "$TMPDIR/"
@@ -53,16 +54,15 @@
 
         config = lib.mkIf cfg.enable {
           settings.formatter.stylelint = {
-            options =
-              [
-                "--formatter"
-                cfg.formatter
-              ]
-              ++ lib.optionals (cfg.configFile != null) [
-                "--config"
-                cfg.configFile
-              ]
-              ++ (if (builtins.length cfg.includes) > 0 then cfg.includes else ".");
+            options = [
+              "--formatter"
+              cfg.formatter
+            ]
+            ++ lib.optionals (cfg.configFile != null) [
+              "--config"
+              cfg.configFile
+            ]
+            ++ (if (builtins.length cfg.includes) > 0 then cfg.includes else ".");
           };
         };
       }
@@ -111,9 +111,10 @@
   programs.statix.enable = true;
   programs.stylelint = {
     enable = true;
-    includes = [
-      "'**.scss'"
-    ];
+    # includes = [
+    #   "'**.css'"
+    #   "'**.scss'"
+    # ];
   };
   programs.typos = {
     enable = true;

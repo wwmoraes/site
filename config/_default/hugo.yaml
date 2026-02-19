@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json
 baseURL: https://artero.dev
 title: William Artero
-theme: pico
+theme: yocto
 defaultContentLanguage: en
 enableGitInfo: true
 enableEmoji: true
@@ -11,6 +11,8 @@ pagination:
   disableAliases: true
   pagerSize: 10
 summaryLength: 100
+mainSections:
+- posts
 copyright: >-
   Copyright %d William Artero. Some rights reserved.
 frontmatter:

@@ -1,0 +1,35 @@
+{{- with resources.Get "css/pico.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with (resources.Match "css/_*.css" | resources.Concat "css/main.css") }}
+  {{- with resources.ExecuteAsTemplate "css/main.css" $ . }}
+    {{- if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with (templates.Defer (dict "key" "chroma")) }}
+{{-   if (site.Store.Get "chroma") }}
+{{-     with resources.Get "css/chroma.css" }}
+{{-       if hugo.IsDevelopment }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{-       else }}
+{{-         with . | minify | fingerprint }}
+              <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+{{-         end }}
+{{-       end }}
+{{-     end }}
+{{-   end }}
+{{- end }}

@@ -1,0 +1,7 @@
+{{- site.Store.Set "chroma" true -}}
+{{- $options := merge site.Params.highlight .Options -}}
+{{- with (.Page.Resources.Get .Attributes.source) -}}
+{{-   highlight .Content $.Type $options -}}
+{{- else -}}
+{{-   (transform.HighlightCodeBlock . $options).Wrapped -}}
+{{- end -}}

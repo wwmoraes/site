@@ -16,16 +16,18 @@ tags:
 - TODO
 ---
 
-<!-- TODO intro story/situation -->
+<!-- TODO hook -->
 
 <!--more-->
 
-<!-- TODO elaborate argument/case -->
+<!-- TODO context/problem -->
 
-<!-- TODO defend argument/case -->
+<!-- TODO thesis -->
 
-<!-- TODO offer solution -->
+<!-- TODO reasoning -->
 
-<!-- TODO wrap up -->
+<!-- TODO counter-arguments/rebuttals -->
 
-<!-- TODO link back to story/situation -->
+<!-- TODO synthesis/link back to hook -->
+
+<!-- TODO conclusion/wrap-up -->

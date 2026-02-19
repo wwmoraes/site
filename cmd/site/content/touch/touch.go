@@ -5,7 +5,6 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/wwmoraes/go-rwfs"
-	"github.com/wwmoraes/site/internal/blip"
 	"github.com/wwmoraes/site/internal/frontmatter"
 )
 
@@ -30,14 +29,14 @@ func touch(cmd *cobra.Command, args []string) error {
 	cmd.SilenceUsage = true
 
 	for _, filename := range args {
-		page, err := blip.Read(fsys, filename)
+		page, err := frontmatter.Read(fsys, filename)
 		if err != nil {
 			return err
 		}
 
 		page.FrontMatter[frontmatter.Lastmod] = time.Now().Local().Truncate(time.Second)
 
-		err = blip.Update(fsys, filename, page)
+		err = frontmatter.Update(fsys, filename, page)
 		if err != nil {
 			return err
 		}

@@ -24,22 +24,23 @@
           <sup><u role="presentation" aria-label="draft" title="draft">&#128681;</u></sup>
           {{- end }}
         </h2>
-        {{- with .Description -}}
-        <p>{{- . -}}</p>
-        {{- end -}}
+        <nav aria-label="metadata">
+          <ul>
+            <li>
+              {{- $datetime := .Page.PublishDate.Format "2006-01-02T15:04:05-07:00" }}
+              <time datetime="{{ $datetime | safeHTMLAttr }}">
+                {{- .Page.PublishDate | time.Format ":date_long" -}}
+              </time>
+            </li>
+            <li>
+              <span>
+                {{- T "readingTime" .Page.ReadingTime -}}
+              </span>
+            </li>
+          </ul>
+        </nav>
       </hgroup>
     </header>
-    {{- with .Summary }}
-    <p id="{{ $descriptionID }}">{{- . | plainify -}}</p>
-    {{- end }}
-    {{- if .Truncated }}
-    <p>
-      <a href="{{ .RelPermalink }}">Read more...</a>
-    </p>
-    {{- end }}
-    <footer>
-      {{ partial "details" . }}
-    </footer>
   </article>
   {{- end }}
   {{- end }}

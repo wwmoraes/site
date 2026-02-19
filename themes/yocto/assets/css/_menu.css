@@ -1,0 +1,20 @@
+/* UA reset */
+:where(menu, [role=menu]) {
+  padding: 0;
+  margin: 0;
+}
+
+/* make menu's responsive */
+:where(menu, [role=menu]) > ul {
+  flex-wrap: wrap;
+}
+
+:where(menu, [role=menu]) > ul > li:first-of-type > *:only-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* aligns the last menu group to the right; mostly useful for the main header */
+:where(menu, [role=menu]) > ul + ul:last-child {
+  justify-content: end;
+}

@@ -57,7 +57,7 @@ instance, engineers responsible for the servers of a cluster should not need
 access to production database data. A business user should not have access to
 the underlying server hosts environment.
 
-{{< diagram "monitored-flow-1.png" >}}
+![](monitored-flow-1.png)
 
 That's an average approval flow, nothing fancy or new here. it works with a
 few trade-offs:
@@ -131,7 +131,7 @@ thinking; yet for being novel they don't risk fatigue. The idea is that the
 first decision made becomes the default for future ones, a _stare decisis_
 principle that allows evolving decisions as you go.
 
-{{< diagram "monitored-flow-2.png" >}}
+![](monitored-flow-2.png)
 
 Such approach has the benefits of:
 

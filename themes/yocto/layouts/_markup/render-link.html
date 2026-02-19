@@ -1,0 +1,40 @@
+{{- $url := urls.Parse .Destination -}}
+
+{{- if and (not .Text) (in (slice "www.youtube-nocookie.com" "www.youtube.com" "youtube.com" "youtu.be") $url.Hostname) -}}
+
+{{-   $id := cond (eq $url.Hostname "youtu.be") (strings.TrimPrefix "/" $url.Path) ($url.Query.Get "v") -}}
+{{-   $iframeAttributes := dict
+        "allow" "accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share"
+        "allowfullscreen" "true"
+        "credentialless" "true"
+        "loading" "lazy"
+        "referrerpolicy" "origin-when-cross-origin"
+        "src" (printf "https://www.youtube-nocookie.com/embed/%s" $id)
+        "title" (or .Title "YouTube video")
+-}}
+
+<iframe
+  {{- range $k, $v := $iframeAttributes }}
+    {{- if $v }}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+    {{- end }}
+  {{- end }}
+/></iframe>
+
+{{- else -}}
+
+{{-   $props := dict "href" (.Destination | safeURL) -}}
+{{-   with .Title -}}
+{{-     $props = merge $props (dict "title" .) -}}
+{{-   end -}}
+{{-   if $url.IsAbs -}}
+{{-     $props = merge $props (dict "rel" "noopener nofollow external" "target" "_blank") -}}
+{{-   end -}}
+
+<a {{- partial "function/props" $props -}}>
+  {{- with .Text }}{{ . }}{{ end -}}
+</a>
+
+{{- end }}
+
+{{- /* chomp trailing newline */ -}}

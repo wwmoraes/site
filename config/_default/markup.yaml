@@ -1,13 +1,7 @@
 # yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/markup
 highlight:
-  anchorLineNos: true
   codeFences: true
-  guessSyntax: true
-  hl_Lines: ""
-  lineAnchors: ""
-  lineNoStart: 1
-  lineNos: true
-  lineNumbersInTable: true
+  lineNos: false
   noClasses: false
   style: monokai
   tabWidth: 2
@@ -27,6 +21,7 @@ goldmark:
       title: true
     autoHeadingID: true
     autoHeadingIDType: github
+    wrapStandAloneImageWithinParagraph: false
   renderer:
     unsafe: false
     hardWraps: false

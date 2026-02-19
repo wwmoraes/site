@@ -1,0 +1,16 @@
+{{- $keywordEntries := slice -}}
+{{- if .IsPage }}
+  {{- with .Params.categories }}
+    {{- $keywordEntries = $keywordEntries | append (delimit . ",") }}
+  {{- end }}
+  {{- with .Params.tags }}
+    {{- $keywordEntries = $keywordEntries | append (delimit . ",") }}
+  {{- end }}
+{{- else }}
+  {{- range $plural, $terms := .Site.Taxonomies }}
+    {{- range $term, $val := $terms }}
+      {{- $keywordEntries = $keywordEntries | append $term }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- return (delimit $keywordEntries "," | lower) -}}

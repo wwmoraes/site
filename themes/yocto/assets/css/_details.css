@@ -1,0 +1,16 @@
+details summary::after {
+  /* reset pico.css */
+  background-image: unset;
+  background-position: unset;
+  background-repeat: unset;
+  background-size: unset;
+  border-inline-start: unset;
+  /* SVG-free chevron :) */
+  content: "\276F";
+  text-align: center;
+  transform: rotate(0deg);
+}
+
+details[open] > summary::after {
+  transform: rotate(90deg);
+}

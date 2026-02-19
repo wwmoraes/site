@@ -1,0 +1,15 @@
+<nav aria-label="metadata">
+  <ul>
+    <li>
+      {{- $datetime := .PublishDate.Format "2006-01-02T15:04:05-07:00" }}
+      <time datetime="{{ $datetime | safeHTMLAttr }}">
+        {{- .PublishDate | time.Format ":date_long" -}}
+      </time>
+    </li>
+    <li>
+      <span>
+        {{- T "readingTime" .ReadingTime -}}
+      </span>
+    </li>
+  </ul>
+</nav>

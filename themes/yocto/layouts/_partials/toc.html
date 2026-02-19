@@ -1,0 +1,10 @@
+{{- if not (eq (.Param "table-of-contents") false) -}}
+{{- with .TableOfContents -}}
+<aside>
+  <header>
+    <h1>Contents</h1>
+  </header>
+  {{ . }}
+</aside>
+{{- end -}}
+{{- end -}}

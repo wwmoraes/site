@@ -1,0 +1,55 @@
+/* pico's nav styles applied to menu */
+:where(menu, [role=menu]) li::before {
+  float: left;
+  content: "​";
+}
+
+:where(menu, [role=menu]),
+:where(menu, [role=menu]) ul {
+  display: flex;
+}
+
+:where(menu, [role=menu]) {
+  justify-content: space-between;
+  overflow: visible;
+}
+:where(menu, [role=menu]) ol,
+:where(menu, [role=menu]) ul {
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+:where(menu, [role=menu]) ol:first-of-type,
+:where(menu, [role=menu]) ul:first-of-type {
+  margin-left: calc(var(--pico-nav-element-spacing-horizontal) * -1);
+}
+:where(menu, [role=menu]) ol:last-of-type,
+:where(menu, [role=menu]) ul:last-of-type {
+  margin-right: calc(var(--pico-nav-element-spacing-horizontal) * -1);
+}
+:where(menu, [role=menu]) li {
+  display: inline-block;
+  margin: 0;
+  padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+}
+:where(menu, [role=menu]) li :where(a, [role=link]) {
+  display: inline-block;
+  margin: calc(var(--pico-nav-link-spacing-vertical) * -1) calc(var(--pico-nav-link-spacing-horizontal) * -1);
+  padding: var(--pico-nav-link-spacing-vertical) var(--pico-nav-link-spacing-horizontal);
+  border-radius: var(--pico-border-radius);
+}
+:where(menu, [role=menu]) li :where(a, [role=link]):not(:hover) {
+  text-decoration: none;
+}
+:where(menu, [role=menu]) li button,
+:where(menu, [role=menu]) li [role=button],
+:where(menu, [role=menu]) li [type=button],
+:where(menu, [role=menu]) li input:not([type=checkbox], [type=radio], [type=range], [type=file]),
+:where(menu, [role=menu]) li select {
+  height: auto;
+  margin-right: inherit;
+  margin-bottom: 0;
+  margin-left: inherit;
+  padding: calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal);
+}

@@ -69,13 +69,9 @@ manifest:
     ### Web App Manifest - Application Information
     ### https://www.w3.org/TR/manifest-app-info/
     categories: [business, development, networking]
-mainSections:
-- posts
 unlistedSections:
 - internal
 - redirects
-customSections:
-- radar
 # used by the embedded templates as a fallback
 # https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/schema.html#L10
 # https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/twitter_cards.html#L1
@@ -91,13 +87,6 @@ giscus:
   repo_id: R_kgDOGhhRmQ
   category: Comments
   category_id: DIC_kwDOGhhRmc4CUcmu
-  mapping: title
-  strict: 0
-  reactions_enabled: 1
-  emit_metadata: 0
-  input_position: top
-  lang: en
-  loading: lazy
 goatcounter:
   code: artero
 feed:
@@ -120,5 +109,7 @@ assets:
   favicons:
     svg: images/brand/favicon.svg
   appleTouchIcon: images/brand/apple-touch-icon.png
-highlight:
-  wrapped: false
+csp:
+  img:
+  - "'self'"
+  - https://media.tenor.com

@@ -11,7 +11,7 @@ CLIs?
 Conftest
 Crossplane
 Gists?
-[Gg]it[Hh]ub
+Grommit
 Hadolint
 Hammerspoon
 JBoss
@@ -32,6 +32,7 @@ Unikernel
 [Aa]lertmanager
 [Aa]utomagically
 [Aa]utomations?
+[Gg]it[Hh]ub
 [Gg]olang
 [Kk]ustomize
 [Mm]emoization

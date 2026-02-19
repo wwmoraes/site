@@ -7,7 +7,6 @@ import (
 	"github.com/wwmoraes/site/cmd/site/cloudflare"
 	"github.com/wwmoraes/site/cmd/site/content"
 	"github.com/wwmoraes/site/cmd/site/image"
-	"github.com/wwmoraes/site/cmd/site/radar"
 	"github.com/wwmoraes/site/cmd/site/vcard"
 )
 
@@ -26,7 +25,6 @@ func main() {
 	rootCmd.AddCommand(content.Command())
 	rootCmd.AddCommand(cloudflare.Command())
 	rootCmd.AddCommand(image.Command())
-	rootCmd.AddCommand(radar.Command())
 	rootCmd.AddCommand(vcard.Command())
 
 	err := rootCmd.Execute()

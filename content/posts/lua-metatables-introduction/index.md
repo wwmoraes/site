@@ -31,11 +31,13 @@ and value. The runtime even uses them to load packages. That means a call
 to `io["open"]()` works as the usual `io.open()`. Here's a sample of how to
 use tables:
 
-{{< source "associative-array.lua" >}}
+```lua {source="associative-array.lua"}
+```
 
 You can also use them as conventional arrays:
 
-{{< source "conventional-array.lua" >}}
+```lua {source="conventional-array.lua"}
+```
 
 > [!note]
 > Lua arrays are 1-indexed, i.e. they start on index one instead of zero like
@@ -50,7 +52,8 @@ table.
 
 You can assign a metatable to another table using the `setmetatable`:
 
-{{< source "metatable.lua" >}}
+```lua {source="metatable.lua"}
+```
 
 Neat! Both `setmetatable` and `getmetatable` are standard library functions to
 either apply or remove a metatable from another table, respectively. You can
@@ -69,21 +72,23 @@ they're easy to spot.
 A good example of a metamethod is the `__index`. The default behavior of a table
 is to return `nil` if a requested key is not set:
 
-{{< source "table-index.lua" >}}
+```lua {source="table-index.lua"}
+```
 
 The runtime flow is:
 
-{{< diagram "table-index.png" >}}
+![](table-index.png)
 
 When an index is not found on the target table, it falls back to its metatable's
 `__index` metamethod. If present, Lua uses it to return a value instead of
 `nil`. That means you can create a custom logic for unknown index retrieval:
 
-{{< source "table-meta-index.lua" >}}
+```lua {source="table-meta-index.lua"}
+```
 
 What Lua tries to do in this case is:
 
-{{< diagram "table-meta-index.png" >}}
+![](table-meta-index.png)
 
 The flow above is by no means authoritative, as I left out a few more nuances to
 this logic to keep it simple.[^metaindex] It does cover the most common use
@@ -104,7 +109,8 @@ As the `__index` meta method can be a table, it may serve default values. This
 makes it dead simple to prevent checking/hard-coding alternative values
 everywhere:
 
-{{< source "default-values.lua" >}}
+```lua {source="default-values.lua"}
+```
 
 ### Fallback values
 
@@ -113,7 +119,8 @@ to return a fallback value. This works for any key, not only those set on the
 metatable. This allows you to use many fallback tables, or always return an
 specific value type. This again contributes to a DRY code:
 
-{{< source "fallback-values.lua" >}}
+```lua {source="fallback-values.lua"}
+```
 
 ### Queue
 
@@ -122,7 +129,8 @@ implementation of methods. These resemble object-oriented methods thanks to
 Lua's syntactic sugar. You can then create a model-controller pattern between a
 table and its metatable:
 
-{{< source "queue.lua" >}}
+```lua {source="queue.lua"}
+```
 
 Beautiful. I'll dive into the colon operator on a separate post later on.
 

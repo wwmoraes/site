@@ -1,0 +1,20 @@
+<nav aria-label="related">
+  <ul>
+    <li>
+      {{- with .PrevInSection -}}
+      <a href="{{ .RelPermalink }}" rel="prev" enterkeyhint="previous" title="{{ .Title }}">
+        <span role="presentation">&larr;</span>
+        {{ .LinkTitle | emojify }}
+      </a>
+      {{- end -}}
+    </li>
+    <li>
+      {{- with .NextInSection -}}
+      <a href="{{ .RelPermalink }}" rel="next" enterkeyhint="next" title="{{ .Title }}">
+        {{ .LinkTitle | emojify }}
+        <span role="presentation">&rarr;</span>
+      </a>
+      {{- end -}}
+    </li>
+  </ul>
+</nav>

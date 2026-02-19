@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <header>
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+    </hgroup>
+    {{- with .Content }}
+    {{ . }}
+    {{- else }}
+    {{- with .Description }}
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- end }}
+  </header>
+  {{- $pages := .Pages }}
+  {{- $length := $pages | len }}
+  <nav role="feed" aria-setsize="{{ $length }}" aria-label="{{ .Title }}" aria-busy="false">
+    <ul>
+      {{- range $index, $page := $pages }}
+      {{    partial "post-card" (dict "Page" $page "Index" $index "SetSize" $length) }}
+      {{- end }}
+    </ul>
+  </nav>
+{{ end }}

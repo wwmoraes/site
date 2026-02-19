@@ -1,0 +1,14 @@
+name = "yocto"
+license = "MIT"
+licenselink = "https://github.com/wwmoraes/site/blob/master/LICENSE"
+description = "Elegant and lightweight theme built using Pico.CSS"
+homepage = "https://github.com/wwmoraes/site"
+tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
+features = [
+  "minimalistic blog",
+  "editable colors"
+]
+
+[author]
+  name = "William Artero"
+  homepage = "https://artero.dev"

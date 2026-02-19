@@ -1,0 +1,5 @@
+/* proper sizing for YouTube block iframes */
+iframe[src^="https://www.youtube-nocookie.com/embed/"] {
+  width: 100%;
+  aspect-ratio: auto 16/9;
+}

@@ -1,0 +1,67 @@
+{{- define "inline-image" -}}
+<img {{- partial "function/props" . -}} />
+{{- end -}}
+
+{{- $image := "" -}}
+{{- $props := dict "src" (.Destination | safeURL) -}}
+{{- $url := urls.Parse .Destination -}}
+{{- $isLocal := not $url.IsAbs -}}
+{{- $isSVG := false -}}
+{{- $isGIF := false -}}
+
+{{- with .PlainText -}}
+{{-   $props = $props | merge (dict "alt" .) -}}
+{{- end -}}
+
+{{- with .Title -}}
+{{-   $props = $props | merge (dict "title" .) -}}
+{{- end -}}
+
+{{- if $isLocal }}
+{{-   $image = or (.Page.Resources.Get .Destination) (resources.Get .Destination) -}}
+{{- else }}
+{{-   $image = resources.GetRemote .Destination }}
+{{- end }}
+
+{{- if $image -}}
+{{-   $isSVG = eq $image.MediaType.SubType "svg" -}}
+{{-   $isGIF = eq $image.MediaType.Type "image/gif" -}}
+{{- /* ignore EXIF from remote images for security reasons :) */ -}}
+{{-   if and $isLocal (not $isSVG) -}}
+{{-     with $image.Exif }}
+{{-       with .Tags }}
+{{-         with .DocumentName }}
+{{-           $props = $props | merge (dict "title" (. | plainify)) }}
+{{-         end }}
+{{-         with .ImageDescription }}
+{{-           $props = $props | merge (dict "alt" (. | plainify)) }}
+{{-         end }}
+{{-         with .UserComment | unmarshal }}
+{{-           with .attributes }}
+{{-             $props = $props | merge . }}
+{{-           end }}
+{{-         else }}
+{{-           warnf "UserComment not in JSON format" }}
+{{-         end }}
+{{-       end }}
+{{-     end }}
+{{-     $props = $props | merge (dict "height" $image.Height "width" $image.Width) }}
+{{-     $props = $props | merge $image.Params }}
+{{-   end -}}
+{{-   if .IsBlock -}}
+<figure>
+{{-     if $isSVG -}}
+{{-       template "inline-image" $props -}}
+{{-     else -}}
+{{-       partial "picture" (dict "image" $image "props" $props) }}
+{{-     end -}}
+{{-     with .Title -}}
+  <figcaption>{{ . }}</figcaption>
+{{-     end -}}
+</figure>
+{{-   else -}}
+{{-     template "inline-image" $props -}}
+{{-   end -}}
+{{- else -}}
+{{-   warnf "failed to get image, nothing will render for %s" .Destination -}}
+{{- end -}}

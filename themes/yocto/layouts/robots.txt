@@ -1,0 +1,91 @@
+{{- if not hugo.IsProduction -}}
+
+User-agent: *
+Disallow: /
+
+{{- else -}}
+
+User-agent: *
+
+Disallow: /icons/
+Disallow: /images/
+Disallow: /css/
+
+{{- /*
+# Google annoys us about feeds not being canonical when using sitemaps
+User-agent: Googlebot
+{{- $files := slice "index.rss.xml" "index.atom.xml" "index.feed.json" }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $file }}
+{{- end }}
+{{- range $taxonomy, $terms := site.Taxonomies }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $taxonomy $file }}
+{{- end }}
+{{- range $term, $_ := $terms }}
+{{- range $file := $files }}
+Disallow: {{ path.Join "/" $taxonomy $term $file }}
+{{- end }}
+{{- end }}
+{{- end }}
+*/}}
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Block SISTRIX
+User-agent: SISTRIX Crawler
+Disallow: /
+User-agent: sistrix
+Disallow: /
+User-agent: 007ac9
+Disallow: /
+User-agent: 007ac9 Crawler
+Disallow: /
+
+# Block Uptime robot
+User-agent: UptimeRobot/2.0
+Disallow: /
+
+# Block Ezooms Robot
+User-agent: Ezooms Robot
+Disallow: /
+
+# Block Perl LWP
+User-agent: Perl LWP
+Disallow: /
+
+# Block netEstate NE Crawler (+http://www.website-datenbank.de/)
+User-agent: netEstate NE Crawler (+http://www.website-datenbank.de/)
+Disallow: /
+
+# Block WiseGuys Robot
+User-agent: WiseGuys Robot
+Disallow: /
+
+# Block Turnitin Robot
+User-agent: Turnitin Robot
+Disallow: /
+
+# Block Heritrix
+User-agent: Heritrix
+Disallow: /
+
+# Block pricepi
+User-agent: pimonster
+Disallow: /
+
+User-agent: SurdotlyBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+Sitemap: {{ "/sitemap.xml" | absLangURL }}
+{{- end -}}

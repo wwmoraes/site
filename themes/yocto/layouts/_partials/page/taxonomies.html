@@ -1,0 +1,22 @@
+<nav aria-label="taxonomies">
+  <ul>
+    {{- with .Params.categories -}}
+    {{- range . -}}
+    {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) -}}
+    <li>
+      <a href="{{ .RelPermalink }}" rel="category">{{ .LinkTitle }}</a>
+    </li>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.tags -}}
+    {{- range . -}}
+    {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
+    <li>
+      <a href="{{ .RelPermalink }}" rel="tag">{{ .LinkTitle }}</a>
+    </li>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+  </ul>
+</nav>

@@ -1,0 +1,4 @@
+/* block images */
+main > figure {
+  margin-bottom: var(--pico-typography-spacing-vertical);
+}

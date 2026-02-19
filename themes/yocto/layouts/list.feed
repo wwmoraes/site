@@ -1,0 +1,72 @@
+{{- $index := dict -}}
+{{- $index = merge $index (dict "version" "https://jsonfeed.org/version/1.1") -}}
+{{- $index = merge $index (dict "title" .Site.Title) -}}
+{{- $index = merge $index (dict "home_page_url" .Site.BaseURL) -}}
+
+{{- with .OutputFormats.Get "feed" -}}
+{{- $index = merge $index (dict "feed_url" .Permalink) -}}
+{{- end }}
+
+{{- $index = merge $index (dict "description" .Site.Params.description | default .Site.Title) -}}
+
+{{- with resources.Get .Site.Params.feed.json.icon -}}
+{{- $index = merge $index (dict "icon" .Permalink) -}}
+{{- else -}}
+{{- erroridf "json-feed-icon" "JSON feed icon not found" -}}
+{{- end -}}
+
+{{- with resources.Get .Site.Params.feed.json.favicon -}}
+{{- $index = merge $index (dict "favicon" .Permalink) -}}
+{{- else -}}
+{{- erroridf "json-feed-favicon" "JSON feed favicon not found" -}}
+{{- end -}}
+
+{{- with .Site.LanguageCode -}}
+  {{- $index = merge $index (dict "language" .) -}}
+{{- end -}}
+
+{{- $author := dict -}}
+{{- $author = merge $author (dict "name" $.Site.Params.author.displayname) -}}
+{{- $author = merge $author (dict "url" $.Site.BaseURL) -}}
+
+{{- with resources.Get $.Site.Params.author.thumbnail -}}
+{{- $author = merge $author (dict "avatar" .Permalink) -}}
+{{- else -}}
+{{- erroridf "author-thumbnail" "author thumbnail image not found" -}}
+{{- end -}}
+
+{{- $index = merge $index (dict "authors" (slice $author)) -}}
+
+{{- $items := slice -}}
+{{- range where .Site.RegularPages "Type" "in" site.Params.mainSections | first (.Site.Params.home.rss | default 10) -}}
+  {{- $item := dict -}}
+  {{- $item = merge $item (dict "id" (partial "function/tag-uri" .)) -}}
+  {{- $item = merge $item (dict "url" .Page.Permalink) -}}
+  {{- $item = merge $item (dict "title" .Page.Title) -}}
+
+  {{- with .Page.Resources.GetMatch "featured-image" -}}
+    {{- $item = merge $item (dict "image" .Permalink) -}}
+  {{- end -}}
+
+  {{- $content := .Page.Description -}}
+  {{- if .Site.Params.rssFullText -}}
+    {{- $content = .Page.Content -}}
+  {{- else -}}
+    {{- with .Page.Summary -}}
+      {{- $content = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $item = merge $item (dict "content_html" $content) -}}
+  {{- $item = merge $item (dict "summary" .Page.Summary) -}}
+  {{- $item = merge $item (dict "date_published" .Page.PublishDate) -}}
+  {{- $item = merge $item (dict "date_modified" .Page.Lastmod) -}}
+
+  {{- with .Page.Params.tags -}}
+    {{- $item = merge $item (dict "tags" .) -}}
+  {{- end -}}
+
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- $index = merge $index (dict "items" $items) -}}
+{{- $index | jsonify -}}

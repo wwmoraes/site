@@ -53,14 +53,6 @@ const (
 	// Site-/theme-specific keys.
 
 	TableOfContents Key = "table-of-contents"
-
-	// Radar section keys.
-
-	RadarIndex   Key = "radarIndex"
-	RadarSection Key = "radarSection"
-	RadarTier    Key = "radarTier"
-	RadarX       Key = "radarX"
-	RadarY       Key = "radarY"
 )
 
 type Key = string
