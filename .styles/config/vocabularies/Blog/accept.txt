@@ -50,4 +50,5 @@ reusability
 rollouts?
 runbooks?
 scriptitis
+telecom
 vcard
