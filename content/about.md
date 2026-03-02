@@ -11,24 +11,20 @@ menus:
 table-of-contents: false
 ---
 
-I work at companies of all sizes, from startups to corporations. Currently I'm
-leading a service-oriented architecture platform initiative at ABN AMRO Bank in
-the Netherlands.
+A software engineer with a breadth of experience across distinct industries,
+ranging from heavy construction, financial services, e-commerce and telecom.
+Experience with all sizes of companies, from startups, scale-ups and big
+enterprises.
 
-My focus lies on both backend coding and system architecture, where I apply
-domain-driven design principles. Understanding contexts helps me discuss
-with teams about solution boundaries and how we can deliver value with good
-throughput and quality.
-
-On the management side I like to jot down a bit of enterprise architecture to
-find out drivers, stakeholders, objectives and goals. This gives me a holistic
-view of what value truly means to the business and how to create bottom-up
-initiatives effectively.
+I leverage domain-driven design to understand, architect, communicate and create
+solutions for your business. They all rely on test-driven development and DevOps
+practices to deliver robust, maintainable and sustainable software.
 
 Personally I'm quite snarky and stoic, described as cheeky by some peers. I
 tend to share my opinions and thoughts freely with teammates and stakeholders.
 Beating around the bush wastes time, our most precious resource.
 
-Did you like my profile? Do you have a good challenge for me? Perhaps you want
-to get some insights into something? Feel free to
-[schedule a half-hour call](https://cal.com/artero) for us to chat.
+Aside from engineering, I'm also a drummer, daddy joker and gamer. Not in that
+exact order.
+
+Feel free to [schedule](https://cal.com/artero) a chat :)
