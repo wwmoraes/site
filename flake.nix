@@ -3,7 +3,7 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/25.11";
     nur = {
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
@@ -18,7 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/treefmt-nix";
     };
-    unstable.url = "github:NixOS/nixpkgs?rev=e38c80c027d6bbdfa2a305fc08e732b9fac4928a";
+    unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   nixConfig = {
@@ -54,19 +54,26 @@
       flake = {
         overlays = {
           unstable = final: prev: {
-            unstable = import unstable { inherit (prev) system; };
+            unstable = import unstable { inherit (prev.stdenv.hostPlatform) system; };
           };
           nur = nur.overlays.default;
           local = final: prev: {
-            stylelint = final.callPackage .meta/pkgs/stylelint { };
-            cfhash = final.callPackage .meta/pkgs/cfhash { };
-            inherit (self.packages.${prev.system}) update-stylelint;
+            inherit (self.packages.${final.stdenv.hostPlatform.system})
+              purge-cache
+              stylelint
+              update-stylelint
+              ;
           };
         };
       };
 
       perSystem =
-        { pkgs, system, ... }:
+        {
+          lib,
+          pkgs,
+          system,
+          ...
+        }:
         {
           _module.args.pkgs = import nixpkgs {
             inherit system;
@@ -75,27 +82,20 @@
               self.overlays.nur
               self.overlays.local
             ];
-            config = { };
+            config = {
+              allowUnfreePredicate =
+                pkg:
+                builtins.elem (lib.getName pkg) [
+                  "1password-cli"
+                ];
+            };
           };
 
-          devShells.default = import ./shell.nix { inherit pkgs; };
+          devShells = import ./shell.nix { inherit pkgs; };
 
           packages = {
-            update-stylelint =
-              let
-                inherit (pkgs.lib) getExe getExe';
-              in
-              pkgs.writeShellScriptBin "update-stylelint" ''
-                pushd .meta/pkgs/stylelint > /dev/null
-                ${getExe pkgs.yarn} outdated
-                ${getExe pkgs.yarn} install --mode update-lockfile
-                ${getExe' pkgs.yarn2nix "yarn2nix"} > yarn.nix
-                VERSION=$(${getExe pkgs.yarn} info --json stylelint | ${getExe pkgs.jq} -r '.data.version')
-                jq --arg VERSION $VERSION '.version = $VERSION' package.json | ${getExe' pkgs.moreutils "sponge"} package.json
-                popd > /dev/null
-              '';
-            inherit (pkgs) stylelint;
-            inherit (pkgs) cfhash;
+            stylelint = pkgs.callPackage .meta/nix/packages/stylelint { };
+            update-stylelint = pkgs.callPackage .meta/nix/packages/update-stylelint { };
           };
 
           treefmt = ./treefmt.nix;

@@ -9,76 +9,116 @@ SHELL := $(shell which bash)
 -include .env
 -include .env.local
 
-define PGP_EMAILS
-$(strip
-william@artero.dev
-contact@artero.dev
-security@artero.dev
-git@artero.dev
-)
-endef
+ROOT ?= $(shell git rev-parse --show-toplevel)
 
 -include .make/*.mk
 
-HUGO_SOURCES += ${EXIF_TARGETS} ${PGP_TARGETS} ${PLANTUML_TARGETS} content/radar/radar.svg static/favicon.ico
-
 export
 
+define HUGO_SOURCES
+$(strip
+$(shell git ls-files {assets,config,content,data,i18n,layouts,static,themes}'/**/*.*')
+$(patsubst %.json,%,$(strip $(shell git ls-files {archetypes,assets,content}'/**/*.'{jpg,png}'.json')))
+$(patsubst %.puml,%.png,$(strip $(shell git ls-files 'content/**/*.puml')))
+static
+)
+endef
+
 #: Builds the entire project.
-all: bin/site public
+all: bin/site dist
+
+#: Builds the CLI companion tool to manage the site.
+bin/site:
 
 .PHONY: clean
 #: Delete all files that are normally created by building.
 clean:
-	rm -rf bin public dist resources content/radar/radar.svg
+	-@${MAKE} -C cmd/site clean
+	rm -rf dist resources
 
-#: Generates site for the current branch.
-dist: dist/${HUGO_ENVIRONMENT}
+#: Generates all environments' site assets.
+dist: dist/development dist/staging dist/production
 
-.PHONY: deploy/%
-#: Deploys the site version for the current environment.
-deploy/%: CLOUDFLARE_PAGES_BRANCH?=staging
-deploy/%: dist/%
-	$(info deploying '$<' to '$*' environment, Pages branch '${CLOUDFLARE_PAGES_BRANCH}'...)
-	@nix run nixpkgs#wrangler -- pages deploy $< \
-		--no-bundle \
-		--upload-source-maps \
-		--project-name '${CLOUDFLARE_PROJECT_NAME}' \
-		--branch '${CLOUDFLARE_PAGES_BRANCH}' \
-		--commit-hash '${GIT_COMMIT_HASH}' \
-		--commit-message '${GIT_COMMIT_MESSAGE}' \
-		--commit-dirty '${GIT_DIRTY}' \
-		;
+#: Generates development site assets.
+dist/development:
 
-deploy/production: CLOUDFLARE_PAGES_BRANCH=master
+#: Generates staging site assets.
+dist/staging:
 
-.PHONY: purge-cache
-purge-cache:
-	@op run --env-file=.env.secrets -- curl -X POST -sS 'https://api.cloudflare.com/client/v4/zones/$${CLOUDFLARE_ZONE_ID}/purge_cache' \
-		-H 'Content-Type: application/json' \
-		-H 'Authorization: Bearer $${CLOUDFLARE_API_TOKEN}' \
-		-w 'HTTP_STATUS:%{http_code}'
+#: Generates production site assets.
+dist/production:
 
 #: Perform self-checks such as linting and formatting.
-check: vale-check
-check: golang-check
-check: css-check
+check: check/prose
+check: check/go
+check: check/css
 check:
 	$(info linting editor config constraints...)
 	@editorconfig-checker
 
+.PHONY: check/css
+check/css:
+	$(info linting CSS...)
+	@stylelint --allow-empty-input --cache --formatter compact '**.css' '**.scss'
+
+.PHONY: check/git
+check/git:
+	$(info checking if commit messages follow conventions...)
+	@cog check --from-latest-tag > /dev/null
+
+.PHONY: check/go
+check/go:
+	$(info linting golang sources...)
+	@golangci-lint run
+
+.PHONY: check/prose
+check/prose: .styles
+	$(info linting prose...)
+	@vale --minAlertLevel=error content
+
+.PHONY: hooks/*
+hooks/pre-commit: check
+hooks/pre-push: all test check/git
+
 .PHONY: test
 #: Builds and runs tests.
-test: golang-test
+test:
+	go test -v ./...
 
 ## make magic, not war :)
 
-#: Builds the CLI companion tool to manage the site.
-bin/site: golang-build/bin/site
-	@touch $@
+.PRECIOUS: .styles
+.SECONDARY: .styles
+.styles: .vale.ini
+	$(info updating prose linting settings...)
+	@vale sync
 
-golang-build/bin/site: cmd/site ${GO_SOURCES} go.sum
+.PHONY: bin/%
+bin/%: cmd/%
+	@${MAKE} -C $<
+
+.PRECIOUS: content/%.png
+content/%.png: content/%.puml
+	$(info generating $@...)
+	@kroki convert -o $@ $<
 
 dist/%: ${HUGO_SOURCES}
 	$(info generating static site for environment '$*' at '$@'...)
 	@hugo --gc --cleanDestinationDir --environment '$*' --destination '$@'
+
+.PHONY: static
+#: Updates static assets.
+static:
+	@${MAKE} -C $@
+
+.PRECIOUS: %.png
+%.png: %.png.json bin/site
+	$(info updating EXIF of $@...)
+	@site image update $@ > /dev/null
+	@touch $@
+
+.PRECIOUS: %.jpg
+%.jpg: %.jpg.json bin/site
+	$(info updating EXIF of $@...)
+	@site image update $@ > /dev/null
+	@touch $@
