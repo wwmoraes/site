@@ -65,6 +65,11 @@ module:
     - '**/*.puml'
     - '**/*.png.json'
     - '**/*.jpg.json'
+  - source: static
+    target: static
+    excludeFiles:
+    - '**.mk'
+    - '**/Makefile'
 imaging:
   exif:
     disableDate: true

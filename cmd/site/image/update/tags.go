@@ -29,7 +29,9 @@ func (tags *Tags) ExifIFDBuilder() (*exif.IfdBuilder, error) {
 	}
 
 	tagIndex := exif.NewTagIndex()
-	if err := exif.LoadStandardTags(tagIndex); err != nil {
+
+	err = exif.LoadStandardTags(tagIndex)
+	if err != nil {
 		return nil, fmt.Errorf("failed to load standard tags: %v", err)
 	}
 

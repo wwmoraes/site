@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/golangci/golangci-lint/refs/tags/v2.1.6/jsonschema/golangci.jsonschema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/golangci/golangci-lint/refs/tags/v2.10.1/jsonschema/golangci.jsonschema.json
 version: "2"
 run:
   go: "1.22"
@@ -21,6 +21,7 @@ linters:
   - contextcheck
   - depguard
   - durationcheck
+  - embeddedstructfieldcheck # new on ~2.10 but broken, doesn't detect properly
   - err113
   - errcheck
   - errchkjson
@@ -77,8 +78,12 @@ linters:
   - varnamelen
   - wastedassign
   - wrapcheck
+  - wsl
   - zerologlint
   settings:
+    embeddedstructfieldcheck:
+      empty-line: true
+      forbid-mutex: true
     exhaustruct:
       exclude:
       - .+/cobra\.Command$

@@ -16,7 +16,7 @@ type BookDetails struct {
 	Preview      string  `json:"preview,omitempty"`
 	PreviewURL   string  `json:"preview_url,omitempty"`
 	ThumbnailURL string  `json:"thumbnail_url,omitempty"`
-	Details      Details `json:"details,omitempty"`
+	Details      Details `json:"details"`
 }
 
 type Details struct {

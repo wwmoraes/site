@@ -16,8 +16,8 @@ jobs:
       uses: ./.github/actions/nix
     - name: deploy to CF Pages
       run: |-
-        remake deploy
-        remake purge-cache
+        just deploy
+        just purge-cache
       env:
         CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
