@@ -1,4 +1,0 @@
-headers:
-- for: /**
-  values:
-    Cache-Control: no-store

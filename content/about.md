@@ -5,6 +5,9 @@ description: >-
   A software engineer helping machines and teams understand businesses needs
   since 2010.
 layout: single
+menus:
+  main:
+    weight: 1
 table-of-contents: false
 ---
 

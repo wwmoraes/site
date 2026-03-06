@@ -1,0 +1,13 @@
+[build]
+buildStats.enable = true
+noJSConfigInAssets = true
+
+[[cascade]]
+target.path = "/internal/*"
+[cascade.build]
+list = "never"
+publishResources = false
+render = "never"
+
+[minify]
+minifyOutput = true

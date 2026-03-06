@@ -1,0 +1,3 @@
+baseURL = "https://staging.artero.dev"
+buildDrafts = true
+buildFuture = true

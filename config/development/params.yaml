@@ -1,6 +1,0 @@
-# yaml-language-server: $schema=../../.meta/schemas/hugo.schema.json#/properties/params
-goatcounter:
-  code: ""
-  host: "localhost:8080"
-
-# giscus: null
