@@ -1,0 +1,96 @@
+[[footer]]
+name = "Posts"
+pageRef = "posts"
+weight = 110
+
+[[footer]]
+name = "Categories"
+pageRef = "categories"
+weight = 120
+
+[[footer]]
+name = "Tags"
+pageRef = "tags"
+weight = 130
+
+[[main]]
+name = "Chat"
+url = "https://cal.com/artero"
+weight = 110
+[main.params]
+rel = "noreferrer noopener nofollow external"
+target = "_blank"
+
+[[main]]
+name = "LinkedIn"
+url = "https://linkedin.com/in/wwmoraes"
+weight = 120
+[main.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+[[main]]
+name = "GitHub"
+url = "https://github.com/wwmoraes"
+weight = 130
+[main.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+[[main]]
+name = "Research"
+url = "https://www.zotero.org/wwmoraes/library"
+weight = 140
+[main.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+[[main]]
+name = "Bookshelf"
+url = "https://www.goodreads.com/wwmoraes"
+weight = 150
+[main.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+# [[social]]
+# name = "Telegram"
+# url = "https://t.me/wwmoraes"
+# [social.params]
+# rel = "noreferrer noopener nofollow external me"
+# target = "_blank"
+
+[[social]]
+name = "Hachyderm"
+url = "https://hachyderm.io/@wwmoraes"
+[social.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+[[social]]
+name = "Mastodon"
+url = "https://mastodon.social/@wwmoraes"
+[social.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+# [[social]]
+# name = "X"
+# url = "https://x.com/wwmoraes"
+# [social.params]
+# rel = "noreferrer noopener nofollow external me"
+# target = "_blank"
+
+# [[social]]
+# name = "CodePen"
+# url = "https://codepen.io/wwmoraes"
+# [social.params]
+# rel = "noreferrer noopener nofollow external me"
+# target = "_blank"
+
+# [[social]]
+# name = "CodeSandbox"
+# url = "https://codesandbox.io/u/wwmoraes"
+# [social.params]
+# rel = "noreferrer noopener nofollow external me"
+# target = "_blank"

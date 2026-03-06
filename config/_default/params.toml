@@ -1,0 +1,145 @@
+description = "helping machines and teams understand your problems"
+# used by the embedded templates as a fallback
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/schema.html#L10
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/twitter_cards.html#L1
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/opengraph.html#L6
+# https://github.com/gohugoio/hugo/blob/911bc60a7ab739885908fdfe49d1578531940909/tpl/tplimpl/embedded/templates/partials/_funcs/get-page-images.html#L4
+images = [
+  "images/brand/featured.png",
+]
+unlistedSections = [
+  "internal",
+  "redirects",
+]
+
+[assets]
+appleTouchIcon = "images/brand/apple-touch-icon.png"
+favicons.svg = "images/brand/favicon.svg"
+# static.favicon = "static/favicon2.ico"
+thumbnail = "images/brand/thumbnail.png"
+
+# https://github.com/gohugoio/hugo/blob/5c7b79cf7f00aa2651dd5f0364ee575af6715a31/resources/page/page_author.go#L20C21-L30
+[author]
+displayName = "William Artero"
+email = "contact@artero.dev"
+givenName = "William"
+familyName = "Artero"
+# JSON feed needs a 512 x 512 image
+thumbnail = "images/avatar.jpg" # TODO define size of author thumbnail
+image = "images/avatar.jpg" # TODO define size of author image
+pgpkey = "https://artero.dev/pgp.asc"
+
+[csp]
+img = [
+  "'self'",
+  "https://media.tenor.com",
+]
+
+[feed.json]
+# 512 x 512
+icon = "images/brand/android-chrome.png"
+# TODO 64 x 64 JSON feed favicon
+favicon = "images/brand/favicon.png"
+
+[feed.rss]
+# TODO RSS image 144x400
+image = "images/brand/thumbnail.png"
+webMaster.email = "webmaster@artero.dev"
+managingEditor.email = "editorial@artero.dev"
+
+[giscus]
+repo = "wwmoraes/site"
+repo_id = "R_kgDOGhhRmQ"
+category = "Comments"
+category_id = "DIC_kwDOGhhRmc4CUcmu"
+
+[goatcounter]
+code = "artero"
+
+# TODO add icon generation to the manifest
+[manifest.icon]
+base = "images/favicon.svg"
+
+[[manifest.icon.variations]]
+size = "36x36"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "48x48"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "72x72"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "96x96"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "144x144"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "192x192"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "256x256"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "384x384"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "512x512"
+type = "image/png"
+
+[[manifest.icon.variations]]
+size = "1024x1024"
+type = "image/png"
+
+# https://www.w3.org/TR/appmanifest
+[manifest.properties]
+background_color = "#2a2b38"
+# https://www.w3.org/TR/manifest-app-info/
+categories = ["business", "development", "networking"]
+dir = "ltr"
+display = "minimal-ui"
+id = "/"
+orientation = "natural"
+scope = "/"
+short_name = "Artero"
+start_url = "/"
+theme_color = "#2cbdff"
+
+[[manifest.properties.icons]]
+sizes = "1024x1024"
+src = "images/brand/application.png"
+type = "image/png"
+
+[[manifest.properties.icons]]
+purpose = "maskable"
+sizes = "1024x1024"
+src = "images/brand/maskable.png"
+type = "image/png"
+
+[[manifest.properties.shortcuts]]
+name = "Posts"
+description = "Content in chronological order"
+url = "/posts"
+
+[[manifest.properties.shortcuts]]
+name = "Categories"
+description = "Content grouped by categories"
+url = "/categories"
+
+[[manifest.properties.shortcuts]]
+name = "Tags"
+description = "Content grouped by tags"
+url = "/tags"
+
+[social]
+facebook_admin = "100001282670160"
+facebook_app_id = "2575122046003703"
