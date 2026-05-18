@@ -53,7 +53,7 @@ jobs:
     - name: build
       run: task build
     - name: attest binary
-      uses: actions/attest-build-provenance@v2
+      uses: actions/attest-build-provenance@v4
       with:
         subject-path: bin/site
     - name: deliver
