@@ -5,10 +5,10 @@
   Access-Control-Expose-Headers: *
   Access-Control-Max-Age: 600
   Cache-Control: max-age=31536000, public
-  Content-Security-Policy: frame-ancestors 'self'
   Cross-Origin-Embedder-Policy: credentialless
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-site
+  Content-Security-Policy: default-src 'self'; font-src 'self' https://cdn.jsdelivr.net; frame-src 'self' https://giscus.app https://www.youtube-nocookie.com; img-src 'self' https://media.tenor.com; script-src 'self' 'sha256-OWFb9Oz1j3nDrsfyzNDaxpvTQqOwt3Eopt59rqwVAW8=' https://giscus.app/client.js; style-src 'self' 'sha256-8JyY6ktMEuJn6o16tVZdfLsPodbcLp0XplKyAOa9Jnk=' https://giscus.app/default.css;
   Feature-Policy: accelerometer 'https://youtube.com'; autoplay 'none'; bluetooth 'none'; camera 'none'; clipboard-write 'https://youtube.com'; display-capture 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'https://youtube.com'; idle-detection 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'https://youtube.com'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; storage-access 'none'; usb 'none'; web-share 'https://youtube.com';
   Permissions-Policy: accelerometer=("https://youtube.com"), autoplay=(), bluetooth=(), camera=(), clipboard-write=("https://youtube.com"), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=("https://youtube.com"), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=("https://youtube.com"), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), storage-access=(), usb=(), web-share=("https://youtube.com")
   Referrer-Policy: strict-origin

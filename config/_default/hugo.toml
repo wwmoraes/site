@@ -1,6 +1,7 @@
 baseURL = "https://artero.dev"
 copyright = "Copyright %d William Artero. Some rights reserved."
 defaultContentLanguage = "en"
+disableLiveReload = true
 enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
@@ -110,92 +111,3 @@ priority = 0.5
 [taxonomies]
 category = "categories"
 tag = "tags"
-
-# TODO generate the Cloudflare _headers with these values
-[[server.headers]]
-for = "/**"
-[server.headers.values]
-Access-Control-Allow-Headers = "Accept, Accept-Encoding, Content-Type"
-Access-Control-Allow-Methods = "*"
-Access-Control-Allow-Origin = "*"
-Access-Control-Expose-Headers = "*"
-Access-Control-Max-Age = "600"
-Cache-Control = "max-age=31536000, public"
-Content-Security-Policy = "frame-ancestors 'self'"
-Cross-Origin-Embedder-Policy = "credentialless"
-Cross-Origin-Opener-Policy = "same-origin"
-Cross-Origin-Resource-Policy = "same-site"
-Referrer-Policy = "strict-origin"
-Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-X-Content-Type-Options = "nosniff"
-X-Frame-Options = "DENY"
-
-Feature-Policy = """
-accelerometer 'https://youtube-nocookie.com'; \
-autoplay 'none'; \
-bluetooth 'none'; \
-camera 'none'; \
-clipboard-write 'https://youtube-nocookie.com'; \
-display-capture 'none'; \
-encrypted-media 'none'; \
-fullscreen 'none'; \
-geolocation 'none'; \
-gyroscope 'https://youtube-nocookie.com'; \
-idle-detection 'none'; \
-magnetometer 'none'; \
-microphone 'none'; \
-midi 'none'; \
-payment 'none'; \
-picture-in-picture 'https://youtube-nocookie.com'; \
-publickey-credentials-create 'none'; \
-publickey-credentials-get 'none'; \
-screen-wake-lock 'none'; \
-serial 'none'; \
-storage-access 'none'; \
-usb 'none'; \
-web-share 'https://youtube-nocookie.com'; \
-"""
-
-Permissions-Policy = """
-accelerometer=("https://youtube-nocookie.com"), \
-autoplay=(), \
-bluetooth=(), \
-camera=(), \
-clipboard-write=("https://youtube-nocookie.com"), \
-display-capture=(), \
-encrypted-media=(), \
-fullscreen=(), \
-geolocation=(), \
-gyroscope=("https://youtube-nocookie.com"), \
-idle-detection=(), \
-magnetometer=(), \
-microphone=(), \
-midi=(), \
-payment=(), \
-picture-in-picture=("https://youtube-nocookie.com"), \
-publickey-credentials-create=(), \
-publickey-credentials-get=(), \
-screen-wake-lock=(), \
-serial=(), \
-storage-access=(), \
-usb=(), \
-web-share=("https://youtube-nocookie.com"), \
-"""
-
-[[server.headers]]
-for = "/**.feed.json"
-[server.headers.values]
-Content-Type = "application/feed+json"
-X-Robots-Tag = "nosnippet"
-
-[[server.headers]]
-for = "/**.rss.xml"
-[server.headers.values]
-Content-Type = "application/rss+xml"
-X-Robots-Tag = "nosnippet"
-
-[[server.headers]]
-for = "/**.webmanifest"
-[server.headers.values]
-Content-Type = "application/manifest+json"
-X-Robots-Tag = "nosnippet"

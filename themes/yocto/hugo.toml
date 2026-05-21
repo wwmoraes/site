@@ -63,46 +63,6 @@ success = ":white_check_mark:"
 tip = ":bulb:"
 warning = ":warning:"
 
-[params.csp]
-enabled = true
-base = [
-  "'self'"
-]
-connect = [
-  "'self'"
-]
-default = [
-  "'self'"
-]
-font = [
-  "'self'",
-  "https://cdn.jsdelivr.net",
-]
-form = [
-  "'self'"
-]
-frame = [
-  "'self'",
-  "https://giscus.app",
-  "https://www.youtube-nocookie.com",
-]
-img = [
-  "'self'",
-]
-manifest = [
-  "'self'"
-]
-script = [
-  "'self'",
-  "https://gc.zgo.at/count.v3.js",
-  "https://giscus.app",
-]
-style = [
-  "'self'",
-  # "'unsafe-inline'",
-  "https://giscus.app/default.css",
-]
-
 [params.goatcounter]
 host = "goatcounter.com"
 src = "https://gc.zgo.at/count.v3.js"
