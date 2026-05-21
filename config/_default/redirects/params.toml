@@ -1,0 +1,109 @@
+## ActivityPub
+[[server.redirects]]
+from = "/.well-known/webfinger?resource=acct:william@artero.dev"
+status = 307
+to = "https://hachyderm.io/.well-known/webfinger?resource=acct:wwmoraes@hachyderm.io"
+
+## permanently moved content
+[[server.redirects]]
+from = "/amp"
+status = 308
+to = "/"
+
+[[server.redirects]]
+from = "/amp/posts/lua-metatables-introduction"
+status = 308
+to = "/posts/lua-metatables-introduction"
+
+[[server.redirects]]
+from = "/index.xml"
+status = 308
+to = "/index.rss.xml"
+
+[[server.redirects]]
+from = "/now"
+status = 308
+to = "/"
+
+[[server.redirects]]
+from = "/now/"
+status = 308
+to = "/"
+
+## gone content forwarded to the closest relevant one
+[[server.redirects]]
+from = "/categories/smth/**"
+status = 303
+to = "/categories"
+
+[[server.redirects]]
+from = "/categories/todo/**"
+status = 303
+to = "/categories"
+
+[[server.redirects]]
+from = "/redirects/**"
+status = 303
+to = "/"
+
+[[server.redirects]]
+from = "/tags/automation/**"
+status = 303
+to = "/tags"
+
+[[server.redirects]]
+from = "/tags/gaming/**"
+status = 303
+to = "/tags"
+
+[[server.redirects]]
+from = "/tags/smth/**"
+status = 303
+to = "/tags"
+
+### disabled atom as its plain broken
+[[server.redirects]]
+fromRe = "/(.*)/index.atom.xml"
+status = 308
+to = "/$1/index.rss.xml"
+
+### categories and tags
+[[server.redirects]]
+fromRe = "/categories/career/(.*)"
+status = 308
+to = "/categories/growth/$1"
+
+[[server.redirects]]
+fromRe = "/categories/code/(.*)"
+status = 308
+to = "/categories/coding/$1"
+
+[[server.redirects]]
+fromRe = "/categories/principle/(.*)"
+status = 308
+to = "/tags/principle/$1"
+
+[[server.redirects]]
+fromRe = "/tags/analysis/(.*)"
+status = 308
+to = "/tags/opinions/$1"
+
+[[server.redirects]]
+fromRe = "/tags/devops/(.*)"
+status = 308
+to = "/categories/devops/$1"
+
+[[server.redirects]]
+fromRe = "/tags/opinion/(.*)"
+status = 308
+to = "/tags/opinions/$1"
+
+[[server.redirects]]
+fromRe = "/tags/sre/(.*)"
+status = 308
+to = "/tags/reliability/$1"
+
+[[server.redirects]]
+fromRe = "/tags/test/(.*)"
+status = 308
+to = "/tags/testing/$1"

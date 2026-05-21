@@ -1,0 +1,16 @@
+{{/*
+  unfortunately Hugo does not support accessing server config using .Site.Config
+  see https://discourse.gohugo.io/t/access-config-toml-values-in-themes-partial/35999
+*/ -}}
+{{ range $_, $entry := .Site.Params.server.headers -}}
+{{   replace $entry.for "**" "*" }}
+{{   range $key, $value := $entry.values -}}
+{{     if reflect.IsMap $value -}}
+{{       $value = delimit $value.values $value.separator -}}
+{{     else if eq $value false -}}
+{{       printf "  ! %s" $key }}
+{{     else -}}
+{{       printf "  %s: %s" $key $value }}
+{{     end -}}
+{{   end -}}
+{{ end -}}

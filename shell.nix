@@ -17,6 +17,7 @@ rec {
       pkgs.unstable.just
       pkgs.vale
       pkgs.wrangler
+      pkgs.remarshal
     ];
   };
 
