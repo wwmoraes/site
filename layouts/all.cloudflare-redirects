@@ -1,0 +1,14 @@
+{{/*
+  unfortunately Hugo does not support accessing server config using .Site.Config
+  see https://discourse.gohugo.io/t/access-config-toml-values-in-themes-partial/35999
+*/ -}}
+{{ range $_, $entry := .Site.Params.server.redirects -}}
+{{   if $entry.fromRe -}}
+{{     $from := replace $entry.fromRe "(.*)" "*" -}}
+{{     $to := replace $entry.to "$1" ":splat" -}}
+{{     printf "%s %s %d" $from $to $entry.status }}
+{{   else -}}
+{{     $from := replace $entry.from "**" "*" -}}
+{{     printf "%s %s %d" $from $entry.to $entry.status }}
+{{   end -}}
+{{ end -}}

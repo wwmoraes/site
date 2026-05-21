@@ -1,6 +1,6 @@
-[[headers]]
+[[server.headers]]
 for = "/**"
-[headers.values]
+[server.headers.values]
 Cache-Control = "no-cache"
 Content-Security-Policy = ""
 Feature-Policy = ""

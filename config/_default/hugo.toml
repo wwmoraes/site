@@ -64,6 +64,10 @@ endLevel = 3
 ordered = false
 startLevel = 2
 
+[mediaTypes."application/vnd.cloudflare.text+plain"]
+delimiter = ""
+suffixes = [""]
+
 [[module.mounts]]
 source = "content"
 target = "content"
@@ -83,8 +87,27 @@ excludeFiles = [
   "**/Makefile",
 ]
 
+[outputFormats.cloudflare-headers]
+baseName = "_headers"
+isPlainText = true
+mediaType = "application/vnd.cloudflare.text+plain"
+notAlternative = true
+
+[outputFormats.cloudflare-redirects]
+baseName = "_redirects"
+isPlainText = true
+mediaType = "application/vnd.cloudflare.text+plain"
+notAlternative = true
+
 [outputs]
-home = [ "feed", "html", "rss", "webappmanifest" ]
+home = [
+  "cloudflare-headers",
+  "cloudflare-redirects",
+  "feed",
+  "html",
+  "rss",
+  "webappmanifest",
+]
 page = ["html"]
 section = ["html"]
 taxonomy = ["html"]

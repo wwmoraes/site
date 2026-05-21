@@ -20,6 +20,8 @@ $(strip
 $(shell git ls-files {assets,config,content,data,i18n,layouts,static,themes}'/**/*.*')
 $(patsubst %.json,%,$(strip $(shell git ls-files {archetypes,assets,content}'/**/*.'{jpg,png}'.json')))
 $(patsubst %.d2,%.svg,$(strip $(shell git ls-files 'content/**/*.d2')))
+$(patsubst %/params.toml,%/server.toml,$(wildcard config/*/headers/params.toml))
+$(patsubst %/params.toml,%/server.toml,$(wildcard config/*/redirects/params.toml))
 static
 )
 endef
@@ -39,6 +41,10 @@ clean:
 .PHONY: content
 #: Updates generated content files.
 content: $(filter content/%,${HUGO_SOURCES})
+
+.PHONY: config
+#: Updates generated config files.
+config: $(filter config/%,${HUGO_SOURCES})
 
 #: Generates all environments' site assets.
 dist: dist/development dist/staging dist/production
