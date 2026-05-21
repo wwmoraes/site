@@ -1,0 +1,32 @@
+start.shape: oval
+user: {
+  shape: c4-person
+  request
+}
+automation: {
+  notifyApprover: notify approval group
+  notifyRequester: notify requester
+  isApproved: approved?
+  approval.shape: circle
+  execute: execute related procedure
+  operator: {
+    shape: c4-person
+    approval: (dis)approval
+
+    _.notifyApprover -> approval
+    approval -> _.approval
+  }
+
+  approval -> notifyRequester
+  notifyRequester -> _.end
+
+  approval -> isApproved
+  isApproved -> _.end: no
+
+  isApproved -> execute: yes
+  execute -> _.end
+}
+end.shape: oval
+
+start -> user.request
+user.request -> automation.notifyApprover

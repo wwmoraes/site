@@ -5,6 +5,7 @@ rec {
   default = pkgs.mkShell {
     packages = [
       pkgs.cocogitto
+      pkgs.d2
       pkgs.editorconfig-checker
       pkgs.git
       pkgs.remake
@@ -22,8 +23,6 @@ rec {
   terminal = default.overrideAttrs (
     final: prev: {
       nativeBuildInputs = [
-        pkgs.imagemagick
-        pkgs.nur.repos.wwmoraes.kroki-cli
         pkgs.unstable.gotools
         pkgs.update-stylelint
       ]
