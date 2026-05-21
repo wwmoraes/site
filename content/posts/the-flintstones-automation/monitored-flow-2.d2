@@ -1,0 +1,35 @@
+start.shape: oval
+user: {
+  shape: c4-person
+  request
+}
+automation: {
+  hasPreviousDecision: "matches a previous decision?" {shape: diamond}
+  notifyApprover: notify approval group
+  notifyRequester: notify requester
+  isApproved: approved?
+  approval.shape: circle
+  retrieve: retrieve decision
+  record: record decision
+  execute: execute related procedure
+  operator: {
+    shape: c4-person
+    approval: (dis)approval
+  }
+
+  hasPreviousDecision -> retrieve: yes
+  retrieve -> approval
+
+  hasPreviousDecision -> notifyApprover: no
+  notifyApprover -> operator.approval -> record -> approval
+
+  approval -> notifyRequester -> _.end
+
+  approval -> isApproved -> _.end: no
+
+  isApproved -> execute: yes
+  execute -> _.end
+}
+end.shape: oval
+
+start -> user.request -> automation.hasPreviousDecision

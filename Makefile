@@ -19,7 +19,7 @@ define HUGO_SOURCES
 $(strip
 $(shell git ls-files {assets,config,content,data,i18n,layouts,static,themes}'/**/*.*')
 $(patsubst %.json,%,$(strip $(shell git ls-files {archetypes,assets,content}'/**/*.'{jpg,png}'.json')))
-$(patsubst %.puml,%.png,$(strip $(shell git ls-files 'content/**/*.puml')))
+$(patsubst %.d2,%.svg,$(strip $(shell git ls-files 'content/**/*.d2')))
 static
 )
 endef
@@ -35,6 +35,10 @@ bin/site:
 clean:
 	-@${MAKE} -C cmd/site clean
 	rm -rf dist resources
+
+.PHONY: content
+#: Updates generated content files.
+content: $(filter content/%,${HUGO_SOURCES})
 
 #: Generates all environments' site assets.
 dist: dist/development dist/staging dist/production
@@ -97,10 +101,10 @@ test:
 bin/%: cmd/%
 	@${MAKE} -C $<
 
-.PRECIOUS: content/%.png
-content/%.png: content/%.puml
+.PRECIOUS: content/%.svg
+content/%.svg: content/%.d2 vars.d2
 	$(info generating $@...)
-	@kroki convert -o $@ $<
+	@cat vars.d2 $< | d2 - $@
 
 dist/%: ${HUGO_SOURCES}
 	$(info generating static site for environment '$*' at '$@'...)

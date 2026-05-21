@@ -1,0 +1,22 @@
+start.shape: oval
+waldoKey: waldo.key
+table: {
+  style.stroke-dash: 2
+  isKeySet: is key set? {shape: diamond}
+  isMetatableSet: is metatable set? {shape: diamond}
+
+  isKeySet -> _.value: yes
+  isKeySet -> isMetatableSet: no
+  isMetatableSet -> _.nil: no
+  isMetatableSet -> magic: yes
+  magic -> _.value
+}
+value.shape: parallelogram
+nil.shape: parallelogram
+end.shape: oval
+
+start -> waldoKey
+waldoKey -> table.isKeySet
+
+value -> end
+nil -> end

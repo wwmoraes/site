@@ -77,7 +77,7 @@ is to return `nil` if a requested key is not set:
 
 The runtime flow is:
 
-![](table-index.png)
+![](table-index.svg)
 
 When an index is not found on the target table, it falls back to its metatable's
 `__index` metamethod. If present, Lua uses it to return a value instead of
@@ -88,7 +88,7 @@ When an index is not found on the target table, it falls back to its metatable's
 
 What Lua tries to do in this case is:
 
-![](table-meta-index.png)
+![](table-meta-index.svg)
 
 The flow above is by no means authoritative, as I left out a few more nuances to
 this logic to keep it simple.[^metaindex] It does cover the most common use
@@ -157,13 +157,17 @@ This alone explains why the gaming industry has a wide use for Lua.
 
 > [!edit]-
 >
-> 1. Updated diagrams, as I don't use Mermaid anymore. In fact, I used it in this
->    blog while using PlantUML and Mingrammer diagrams everywhere else. Now they're
->    all consistent.
+> 1. Updated diagrams, as I don't use Mermaid anymore. In fact, I used it in
+>    this blog while using PlantUML and Mingrammer diagrams everywhere else. Now
+>    they're all consistent.
 >
 > 2. Changed diagrams again, this time switching them to PNG instead of SVG.
->    Size-wise they're small and fare better when embedded in feeds like RSS and
->    ATOM.
+>    Size-wise they're small and fare better when embedded in feeds like RSS
+>    and ATOM.
+>
+> 3. Yet another diagram change. This time I'm migrating to D2, which provides
+>    a great syntax for diagrams and a standalone CLI to generate good-looking
+>    SVGs.
 
 [^metaindex]: The [documentation][docs-meta] states that any value that can
     resolve the `__index` metamethod works. This means `userdata` (C objects) can

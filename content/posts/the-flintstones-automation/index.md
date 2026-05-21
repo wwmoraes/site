@@ -57,7 +57,7 @@ instance, engineers responsible for the servers of a cluster should not need
 access to production database data. A business user should not have access to
 the underlying server hosts environment.
 
-![](monitored-flow-1.png)
+![](monitored-flow-1.svg)
 
 That's an average approval flow, nothing fancy or new here. it works with a
 few trade-offs:
@@ -131,7 +131,7 @@ thinking; yet for being novel they don't risk fatigue. The idea is that the
 first decision made becomes the default for future ones, a _stare decisis_
 principle that allows evolving decisions as you go.
 
-![](monitored-flow-2.png)
+![](monitored-flow-2.svg)
 
 Such approach has the benefits of:
 
@@ -171,6 +171,12 @@ two extra actors.
 This also has the added benefit of enabling frictionless automation: since this
 model requires no manual action, an automated rule creation solution can handle
 those rules, such as declarative infrastructure-as-code tools.
+
+> [!edit]-
+>
+> 1. Yet another diagram change. This time I'm migrating to D2, which provides
+>    a great syntax for diagrams and a standalone CLI to generate good-looking
+>    SVGs.
 
 [^kahneman-2011]: Kahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.
 [^ousterhout-2018]: Ousterhout, John K. 2018. A Philosophy of Software Design. Second edition. Yaknyam Press.
