@@ -29,12 +29,6 @@ thumbnail = "images/avatar.jpg" # TODO define size of author thumbnail
 image = "images/avatar.jpg" # TODO define size of author image
 pgpkey = "https://artero.dev/pgp.asc"
 
-[csp]
-img = [
-  "'self'",
-  "https://media.tenor.com",
-]
-
 [feed.json]
 # 512 x 512
 icon = "images/brand/android-chrome.png"

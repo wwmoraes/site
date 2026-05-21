@@ -19,8 +19,3 @@ keepEndTags = true
 keepQuotes = true
 keepSpecialComments = true
 keepWhitespace = false
-
-[[server.headers]]
-for = "/**"
-[server.headers.values]
-Cache-Control = "no-store"

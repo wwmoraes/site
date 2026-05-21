@@ -32,14 +32,20 @@
 <link rel="me" href="{{ $url }}" />
 {{- end }}
 {{- end }}
-<script type="application/ld+json">
-  {{- if .IsHome -}}
-    {{- partial "function/schema/webSite.html" . -}}
-  {{- else if .IsPage -}}
-    {{- if in site.Params.mainSections .Type -}}
-      {{- partial "function/schema/blogPosting.html" . -}}
-    {{- else -}}
-      {{- partial "function/schema/webPage.html" . -}}
-    {{- end -}}
-  {{- end -}}
+
+{{- $ld := "{}" -}}
+{{- if .IsHome -}}
+{{-   $ld = partial "function/schema/webSite.html" . | jsonify -}}
+{{- else if .IsPage -}}
+{{-   if in site.Params.mainSections .Type -}}
+{{-     $ld = partial "function/schema/blogPosting.html" . | jsonify -}}
+{{-   else -}}
+{{-     $ld = partial "function/schema/webPage.html" . | jsonify -}}
+{{-   end -}}
+{{- end -}}
+
+{{- with resources.FromString "ld.json" $ld | fingerprint "sha256" -}}
+<script type="application/ld+json" integrity="{{- .Data.Integrity -}}">
+  {{- $ld | safeJS -}}
 </script>
+{{- end -}}

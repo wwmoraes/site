@@ -1,12 +1,10 @@
 {{- define "head" }}
 <meta name="robots" content="noindex" />
 {{-   with resources.Get "css/vcard.css" | minify | fingerprint }}
-{{-     site.Store.SetInMap  "csp-style-src" .RelPermalink (printf "'%s'" .Data.Integrity) }}
         <link rel="stylesheet" href="{{- .RelPermalink -}}" {{ printf "integrity=%q" .Data.Integrity | safeHTMLAttr }} />
 {{-   end }}
 {{-   $opts := dict "targetPath" "js/vcard.js" "format" "cjs" "minify" "true" }}
 {{-   with resources.Get "js/vcard.ts" | js.Build $opts | fingerprint }}
-{{-     site.Store.SetInMap  "csp-script-src" .RelPermalink (printf "'%s'" .Data.Integrity) }}
         <script src="{{ .RelPermalink }}" {{ printf "integrity=%q" .Data.Integrity | safeHTMLAttr }} crossorigin="anonymous" async></script>
 {{-   end }}
 {{- end }}

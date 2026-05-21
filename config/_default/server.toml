@@ -1,0 +1,96 @@
+# TODO generate the Cloudflare _headers with these values
+[[headers]]
+for = "/**"
+[headers.values]
+Access-Control-Allow-Headers = "Accept, Accept-Encoding, Content-Type"
+Access-Control-Allow-Methods = "*"
+Access-Control-Allow-Origin = "*"
+Access-Control-Expose-Headers = "*"
+Access-Control-Max-Age = "600"
+Cache-Control = "max-age=31536000, public"
+Cross-Origin-Embedder-Policy = "credentialless"
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Resource-Policy = "same-site"
+Referrer-Policy = "strict-origin"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+
+Content-Security-Policy ="""
+default-src 'self'; \
+font-src 'self' https://cdn.jsdelivr.net; \
+frame-src 'self' https://giscus.app https://www.youtube-nocookie.com; \
+img-src 'self' https://media.tenor.com; \
+script-src 'self' 'sha256-OWFb9Oz1j3nDrsfyzNDaxpvTQqOwt3Eopt59rqwVAW8=' https://giscus.app/client.js; \
+style-src 'self' 'sha256-8JyY6ktMEuJn6o16tVZdfLsPodbcLp0XplKyAOa9Jnk=' https://giscus.app/default.css; \
+"""
+
+Feature-Policy = """
+accelerometer 'https://youtube-nocookie.com'; \
+autoplay 'none'; \
+bluetooth 'none'; \
+camera 'none'; \
+clipboard-write 'https://youtube-nocookie.com'; \
+display-capture 'none'; \
+encrypted-media 'none'; \
+fullscreen 'none'; \
+geolocation 'none'; \
+gyroscope 'https://youtube-nocookie.com'; \
+idle-detection 'none'; \
+magnetometer 'none'; \
+microphone 'none'; \
+midi 'none'; \
+payment 'none'; \
+picture-in-picture 'https://youtube-nocookie.com'; \
+publickey-credentials-create 'none'; \
+publickey-credentials-get 'none'; \
+screen-wake-lock 'none'; \
+serial 'none'; \
+storage-access 'none'; \
+usb 'none'; \
+web-share 'https://youtube-nocookie.com'; \
+"""
+
+Permissions-Policy = """
+accelerometer=("https://youtube-nocookie.com"), \
+autoplay=(), \
+bluetooth=(), \
+camera=(), \
+clipboard-write=("https://youtube-nocookie.com"), \
+display-capture=(), \
+encrypted-media=(), \
+fullscreen=(), \
+geolocation=(), \
+gyroscope=("https://youtube-nocookie.com"), \
+idle-detection=(), \
+magnetometer=(), \
+microphone=(), \
+midi=(), \
+payment=(), \
+picture-in-picture=("https://youtube-nocookie.com"), \
+publickey-credentials-create=(), \
+publickey-credentials-get=(), \
+screen-wake-lock=(), \
+serial=(), \
+storage-access=(), \
+usb=(), \
+web-share=("https://youtube-nocookie.com"), \
+"""
+
+[[headers]]
+for = "/**.feed.json"
+[headers.values]
+Content-Type = "application/feed+json"
+X-Robots-Tag = "nosnippet"
+
+[[headers]]
+for = "/**.rss.xml"
+[headers.values]
+Content-Type = "application/rss+xml"
+X-Robots-Tag = "nosnippet"
+
+[[headers]]
+for = "/**.webmanifest"
+[headers.values]
+Content-Type = "application/manifest+json"
+X-Robots-Tag = "nosnippet"
