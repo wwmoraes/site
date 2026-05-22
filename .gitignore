@@ -1,7 +1,6 @@
 *.sarif
 /.env.local
 /.hugo_build.lock
-/.stylelintcache
 /_gen
 /bin
 /dist

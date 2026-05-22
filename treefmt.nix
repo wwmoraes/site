@@ -1,74 +1,8 @@
 {
-  mkFormatterModule,
   pkgs,
   ...
 }:
 {
-  imports = [
-    (mkFormatterModule {
-      name = "stylelint";
-      package = "stylelint";
-      args = [
-        "--allow-empty-input"
-        "--cache"
-        "--cache-location"
-        "$TMPDIR/"
-      ];
-      includes = pkgs.lib.mkDefault [
-        "'**.css'"
-        "'**.scss'"
-      ];
-    })
-    (
-      { config, lib, ... }:
-      let
-        cfg = config.programs.stylelint;
-      in
-      {
-        options.programs.stylelint = {
-          configFile = lib.mkOption {
-            type = with lib.types; nullOr str;
-            default = null;
-            example = ".stylelint.yaml";
-            description = "Custom config file";
-          };
-          formatter = lib.mkOption {
-            type =
-              with lib.types;
-              nullOr (
-                either str (oneOf [
-                  "compact"
-                  "github"
-                  "json"
-                  "string"
-                  "tap"
-                  "unix"
-                  "verbose"
-                ])
-              );
-            default = "compact";
-            example = "compact";
-            description = "An output formatter.";
-          };
-        };
-
-        config = lib.mkIf cfg.enable {
-          settings.formatter.stylelint = {
-            options = [
-              "--formatter"
-              cfg.formatter
-            ]
-            ++ lib.optionals (cfg.configFile != null) [
-              "--config"
-              cfg.configFile
-            ]
-            ++ (if (builtins.length cfg.includes) > 0 then cfg.includes else ".");
-          };
-        };
-      }
-    )
-  ];
-
   projectRootFile = "flake.nix";
 
   programs.jsonfmt = {
@@ -109,13 +43,6 @@
     ];
   };
   programs.statix.enable = true;
-  programs.stylelint = {
-    enable = true;
-    # includes = [
-    #   "'**.css'"
-    #   "'**.scss'"
-    # ];
-  };
   programs.typos = {
     enable = true;
     excludes = [

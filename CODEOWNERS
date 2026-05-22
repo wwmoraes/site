@@ -8,7 +8,6 @@
 .kodiak.toml @wwmoraes
 .markdown* @wwmoraes
 .site.toml @wwmoraes
-.stylelintrc.yaml @wwmoraes
 .typos.toml @wwmoraes
 .vale.ini @wwmoraes
 CODEOWNERS @wwmoraes

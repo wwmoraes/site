@@ -9,7 +9,6 @@ rec {
       pkgs.editorconfig-checker
       pkgs.git
       pkgs.remake
-      pkgs.stylelint
       pkgs.unstable.cocogitto
       pkgs.unstable.go
       pkgs.unstable.golangci-lint
@@ -25,7 +24,6 @@ rec {
     final: prev: {
       nativeBuildInputs = [
         pkgs.unstable.gotools
-        pkgs.update-stylelint
       ]
       ++ prev.nativeBuildInputs;
     }

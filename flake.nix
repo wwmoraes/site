@@ -57,12 +57,6 @@
             unstable = import unstable { inherit (prev.stdenv.hostPlatform) system; };
           };
           nur = nur.overlays.default;
-          local = final: prev: {
-            inherit (self.packages.${final.stdenv.hostPlatform.system})
-              stylelint
-              update-stylelint
-              ;
-          };
         };
       };
 
@@ -79,7 +73,6 @@
             overlays = [
               self.overlays.unstable
               self.overlays.nur
-              self.overlays.local
             ];
             config = {
               allowUnfreePredicate =
@@ -91,11 +84,6 @@
           };
 
           devShells = import ./shell.nix { inherit pkgs; };
-
-          packages = {
-            stylelint = pkgs.callPackage .meta/nix/packages/stylelint { };
-            update-stylelint = pkgs.callPackage .meta/nix/packages/update-stylelint { };
-          };
 
           treefmt = ./treefmt.nix;
         };
