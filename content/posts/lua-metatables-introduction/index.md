@@ -13,7 +13,6 @@ categories:
   - Coding
 tags:
   - Lua
-lastmod: 2024-08-11T13:26:40+02:00
 ---
 
 If you ever used Lua, then you heard about its tables and the metatable feature.

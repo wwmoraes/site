@@ -15,7 +15,6 @@ categories:
 tags:
 - Opinion
 - Principle
-lastmod: 2024-01-28T14:25:12+01:00
 ---
 
 Old cartoons are timeless gems. Hannah-Barbera's _The Flintstones_ show, set

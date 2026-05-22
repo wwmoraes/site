@@ -7,7 +7,6 @@ categories:
 tags:
   - Golang
   - Testing
-lastmod: 2024-08-11T13:07:57+02:00
 ---
 
 Imagine you create a Golang application, run it and get a test coverage report

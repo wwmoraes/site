@@ -13,10 +13,6 @@ summaryLength = 100
 theme = "yocto"
 title = "William Artero"
 
-[frontmatter]
-date = [":default", ":fileModTime"]
-lastmod = ["lastmod","modified",":git",":fileModTime",":default"]
-
 [imaging.exif]
 disableDate = true
 disableLatLong = true

@@ -10,7 +10,6 @@ categories:
 tags:
   - Opinion
   - Principle
-lastmod: 2024-08-11T13:26:03+02:00
 ---
 
 Software engineers use acronyms to convey certain ideas in a single word to

@@ -10,7 +10,6 @@ resources:
 tags:
   - Opinion
 title: Scripts don't scale; they give you scriptitis
-lastmod: 2024-08-11T13:30:17+02:00
 ---
 
 Have you ever had to wait for an "automated" process to unblock you that took

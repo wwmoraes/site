@@ -10,7 +10,6 @@ categories:
   - Growth
 tags:
   - Opinion
-lastmod: 2024-08-11T11:41:25+02:00
 ---
 
 A search for the term DevOps on LinkedIn will yield countless posts and

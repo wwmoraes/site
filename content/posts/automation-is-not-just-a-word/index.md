@@ -7,7 +7,6 @@ categories:
   - DevOps
 tags:
   - Opinion
-lastmod: 2024-08-11T13:29:08+02:00
 ---
 
 After over a decade working in the IT industry I still occasionally hear an
