@@ -1,8 +1,4 @@
 {
-  pkgs,
-  ...
-}:
-{
   projectRootFile = "flake.nix";
 
   programs.jsonfmt = {
@@ -12,24 +8,6 @@
     ];
   };
   programs.keep-sorted.enable = true;
-  programs.mdformat = {
-    enable = true;
-    excludes = [
-      "archetypes/blip.md"
-    ];
-    package = pkgs.mdformat.withPlugins (
-      ps: with ps; [
-        mdformat-footnote
-        mdformat-frontmatter
-        mdformat-gfm
-        mdformat-simple-breaks
-      ]
-    );
-    settings = {
-      number = true;
-      # wrap = 120;
-    };
-  };
   programs.nixf-diagnose = {
     enable = true;
     excludes = [
