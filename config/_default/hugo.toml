@@ -85,6 +85,8 @@ target = "static"
 excludeFiles = [
   "**/*.mk",
   "**/Makefile",
+  "*.mk",
+  "Makefile",
 ]
 
 [outputFormats.cloudflare-headers]
