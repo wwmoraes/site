@@ -9,10 +9,6 @@
       inputs.flake-parts.follows = "flake-parts";
       url = "github:nix-community/NUR";
     };
-    # sops-nix = {
-    # 	inputs.nixpkgs.follows = "nixpkgs";
-    # 	url = "github:Mic92/sops-nix";
-    # };
     systems.url = "github:nix-systems/default";
     treefmt-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,30 +31,11 @@
   };
 
   outputs =
-    inputs@{
-      self,
-      flake-parts,
-      nixpkgs,
-      nur,
-      # sops-nix,
-      systems,
-      treefmt-nix,
-      unstable,
-      ...
-    }:
-    (flake-parts.lib.mkFlake { inherit inputs; } {
+    inputs:
+    (inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        treefmt-nix.flakeModule
+        inputs.treefmt-nix.flakeModule
       ];
-
-      flake = {
-        overlays = {
-          unstable = final: prev: {
-            unstable = import unstable { inherit (prev.stdenv.hostPlatform) system; };
-          };
-          nur = nur.overlays.default;
-        };
-      };
 
       perSystem =
         {
@@ -68,11 +45,13 @@
           ...
         }:
         {
-          _module.args.pkgs = import nixpkgs {
+          _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
             overlays = [
-              self.overlays.unstable
-              self.overlays.nur
+              (final: prev: {
+                unstable = import inputs.unstable { inherit (prev.stdenv.hostPlatform) system; };
+              })
+              inputs.nur.overlays.default
             ];
             config = {
               allowUnfreePredicate =
@@ -88,6 +67,6 @@
           treefmt = ./treefmt.nix;
         };
 
-      systems = import systems;
+      systems = import inputs.systems;
     });
 }
