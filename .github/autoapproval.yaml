@@ -1,0 +1,9 @@
+from_owner:
+- dependabot-preview[bot]
+- dependabot[bot]
+- pre-commit-ci[bot]
+- wwmoraes
+
+required_labels:
+- automerge
+- dependencies
