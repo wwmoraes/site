@@ -6,7 +6,7 @@ description: >-
   since 2010.
 layout: single
 menus:
-  main:
+  social:
     weight: 1
 table-of-contents: false
 ---

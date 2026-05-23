@@ -1,3 +1,10 @@
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+[main.params]
+excludeOnSelf = true
+
 [[footer]]
 name = "Posts"
 pageRef = "posts"
@@ -14,9 +21,9 @@ pageRef = "tags"
 weight = 130
 
 [[main]]
-name = "Chat"
+name = "Call me"
 url = "https://cal.com/artero"
-weight = 110
+weight = 200
 [main.params]
 rel = "noreferrer noopener nofollow external"
 target = "_blank"
@@ -37,22 +44,6 @@ weight = 130
 rel = "noreferrer noopener nofollow external me"
 target = "_blank"
 
-[[main]]
-name = "Research"
-url = "https://www.zotero.org/wwmoraes/library"
-weight = 140
-[main.params]
-rel = "noreferrer noopener nofollow external me"
-target = "_blank"
-
-[[main]]
-name = "Bookshelf"
-url = "https://www.goodreads.com/wwmoraes"
-weight = 150
-[main.params]
-rel = "noreferrer noopener nofollow external me"
-target = "_blank"
-
 # [[social]]
 # name = "Telegram"
 # url = "https://t.me/wwmoraes"
@@ -63,6 +54,7 @@ target = "_blank"
 [[social]]
 name = "Hachyderm"
 url = "https://hachyderm.io/@wwmoraes"
+weight = 110
 [social.params]
 rel = "noreferrer noopener nofollow external me"
 target = "_blank"
@@ -70,6 +62,7 @@ target = "_blank"
 [[social]]
 name = "Mastodon"
 url = "https://mastodon.social/@wwmoraes"
+weight = 120
 [social.params]
 rel = "noreferrer noopener nofollow external me"
 target = "_blank"
@@ -94,3 +87,20 @@ target = "_blank"
 # [social.params]
 # rel = "noreferrer noopener nofollow external me"
 # target = "_blank"
+
+[[social]]
+name = "References"
+url = "https://www.zotero.org/wwmoraes/library"
+weight = 10
+[social.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
+[[social]]
+name = "Bookshelf"
+url = "https://www.goodreads.com/wwmoraes"
+weight = 20
+[social.params]
+rel = "noreferrer noopener nofollow external me"
+target = "_blank"
+
