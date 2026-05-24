@@ -3,6 +3,8 @@ on:
   workflow_run:
     workflows: [Integration]
     types: [completed]
+env:
+  DEVSHELL: default
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,12 +18,13 @@ jobs:
       uses: ./.github/actions/nix
     - name: deploy to CF Pages
       run: |-
-        just deploy
+        set -eu
+        yes | just deploy
         just purge-cache
       env:
         CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
-        CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT }}
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         GIT_BRANCH: ${{ github.ref_name }}
         GIT_COMMIT_HASH: ${{ github.sha }}

@@ -8,15 +8,20 @@ _default:
 
 # [arg("ENVIRONMENT", help="staging or production")]
 [doc("deploys this site to Cloudflare Pages")]
-deploy $ENVIRONMENT="staging":
+deploy $ENVIRONMENT="":
   #!/usr/bin/env bash
 
   source .env
 
   : "${CLOUDFLARE_PROJECT_NAME:?Cloudflare project name not set}"
 
-  : "${ASSETS_DIR:=dist/${ENVIRONMENT}}"
   : "${GIT_BRANCH:=$(git branch --show-current)}"
+  if [[ "${GIT_BRANCH}" = "master" ]]; then
+    : "${ENVIRONMENT:=production}"
+  else
+    : "${ENVIRONMENT:=staging}"
+  fi
+  : "${ASSETS_DIR:=dist/${ENVIRONMENT}}"
   : "${GIT_COMMIT_HASH:=$(git rev-parse HEAD)}"
   : "${GIT_COMMIT_MESSAGE:=$(git show -s --format='%s')}"
 
@@ -45,7 +50,7 @@ deploy $ENVIRONMENT="staging":
   case "${CONTINUE,,}" in y);; *) exit 2;; esac
 
   echo "building ${ASSETS_DIR}..."
-  remake "${ASSETS_DIR}"
+  remake --assume-old=static "${ASSETS_DIR}"
 
   echo "deploying ${ASSETS_DIR} to ${ENVIRONMENT} environment (Pages branch ${CLOUDFLARE_PAGES_BRANCH})..."
   wrangler pages deploy "${ASSETS_DIR}" \
@@ -76,8 +81,10 @@ golang-fix *FLAGS:
 purge-cache:
   #!/usr/bin/env bash
   source .env
-  # shellcheck disable=SC2046
-  eval $(op inject --in-file=.env.secrets)
+  if command -v op > /dev/null; then
+    # shellcheck disable=SC2046
+    eval $(op inject --in-file=.env.secrets)
+  fi
 
   : "${CLOUDFLARE_ZONE_ID:?Cloudflare zone ID not set}"
   : "${CLOUDFLARE_API_TOKEN:?Cloudflare API token not set}"
