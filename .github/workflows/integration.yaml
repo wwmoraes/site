@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: true
 env:
   DEVSHELL: ci
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   check:
     runs-on: ubuntu-latest
