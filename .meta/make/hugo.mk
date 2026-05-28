@@ -18,16 +18,16 @@ content: $(filter content/%,${HUGO_SOURCES})
 config: $(filter config/%,${HUGO_SOURCES})
 
 #: Generates all environments' site assets.
-dist: dist/development dist/staging dist/production
+dist: dist/development/ dist/staging/ dist/production/
 
 #: Generates development site assets.
-dist/development:
+dist/development/:
 
 #: Generates staging site assets.
-dist/staging:
+dist/staging/:
 
 #: Generates production site assets.
-dist/production:
+dist/production/:
 
 .PHONY: static
 #: Updates static assets.
@@ -56,6 +56,9 @@ content/%.svg: content/%.d2 vars.d2
 	$(info generating $@...)
 	@cat vars.d2 $< | d2 - $@
 
-dist/%: ${HUGO_SOURCES}
+dist/%/: ${HUGO_SOURCES}
 	$(info generating static site for environment '$*' at '$@'...)
 	@hugo --gc --cleanDestinationDir --environment '$*' --destination '$@'
+
+dist/%.zip: dist/%/
+	@cd $< && zip -r9 $(abspath $@) .
