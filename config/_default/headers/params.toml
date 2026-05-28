@@ -38,7 +38,7 @@ values = [
   "default-src 'self'",
   "font-src 'self' https://cdn.jsdelivr.net",
   "frame-src 'self' https://giscus.app https://www.youtube-nocookie.com",
-  "img-src 'self' https://media.tenor.com",
+  "img-src 'self'",
   "script-src 'self' 'sha256-OWFb9Oz1j3nDrsfyzNDaxpvTQqOwt3Eopt59rqwVAW8=' https://giscus.app/client.js",
   "style-src 'self' 'sha256-8JyY6ktMEuJn6o16tVZdfLsPodbcLp0XplKyAOa9Jnk=' https://giscus.app/default.css",
 ]

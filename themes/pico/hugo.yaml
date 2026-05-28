@@ -61,8 +61,6 @@ params:
     - https://covers.openlibrary.org
     - https://archive.org
     - https://*.archive.org
-    - https://www.reactiongifs.com
-    - https://media.tenor.com
     script:
     - https://giscus.app
     - https://gc.zgo.at/count.v3.js
