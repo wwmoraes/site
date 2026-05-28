@@ -19,11 +19,11 @@
 <link rel="canonical" href="{{- .Permalink -}}" />
 
 {{- range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink }}" />
+<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .RelPermalink }}" />
 {{- end -}}
 
 {{- with .Site.Home.OutputFormats.Get "webappmanifest" -}}
-<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink }}" />
+<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .RelPermalink }}" />
 {{- end -}}
 
 {{- with $.Site.Params.mastodon -}}
