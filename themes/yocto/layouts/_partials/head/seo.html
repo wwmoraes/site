@@ -10,7 +10,7 @@
 {{- with resources.Get site.Params.assets.thumbnail -}}
 <meta name="thumbnail" content="{{ .RelPermalink }}" />
 {{- else -}}
-{{- erroridf "thumbnail-image-missing" "thumbnail.png not found" }}
+{{- warnidf "thumbnail-image-missing" ".Params.assets.thumbnail not found" -}}
 {{- end -}}
 
 {{- partial "schema.html" . -}}

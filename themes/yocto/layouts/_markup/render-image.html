@@ -20,7 +20,7 @@
 {{- if $isLocal }}
 {{-   $image = or (.Page.Resources.Get .Destination) (resources.Get .Destination) -}}
 {{- else }}
-{{-   $image = resources.GetRemote .Destination }}
+{{-   $image = resources.GetRemote .Destination | resources.Copy (path.Join "images" (path.Base .Destination)) }}
 {{- end }}
 
 {{- if $image -}}
