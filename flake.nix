@@ -15,6 +15,14 @@
       url = "github:numtide/treefmt-nix";
     };
     unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    netlifier = {
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs.unstable.follows = "unstable";
+      inputs.systems.follows = "systems";
+      url = "github:wwmoraes/netlifier";
+    };
   };
 
   nixConfig = {
@@ -52,6 +60,7 @@
                 unstable = import inputs.unstable { inherit (prev.stdenv.hostPlatform) system; };
               })
               inputs.nur.overlays.default
+              inputs.netlifier.overlays.default
             ];
             config = {
               allowUnfreePredicate =

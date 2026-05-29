@@ -7,6 +7,7 @@ rec {
       pkgs.d2
       pkgs.editorconfig-checker
       pkgs.git
+      pkgs.netlifier
       pkgs.remake
       pkgs.remarshal
       pkgs.unstable.cocogitto
@@ -15,14 +16,13 @@ rec {
       pkgs.unstable.hugo
       pkgs.unstable.just
       pkgs.vale
-      pkgs.wrangler
     ];
   };
 
   ci = default.overrideAttrs (
     final: prev: {
       nativeBuildInputs = pkgs.lib.subtractLists [
-        pkgs.wrangler # no need for it during integration
+        pkgs.netlifier # no need for it during integration
       ] prev.nativeBuildInputs;
     }
   );

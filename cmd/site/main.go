@@ -4,7 +4,6 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/wwmoraes/site/cmd/site/cloudflare"
 	"github.com/wwmoraes/site/cmd/site/content"
 	"github.com/wwmoraes/site/cmd/site/image"
 	"github.com/wwmoraes/site/cmd/site/vcard"
@@ -23,7 +22,6 @@ func main() {
 	rootCmd.SetErr(os.Stderr)
 
 	rootCmd.AddCommand(content.Command())
-	rootCmd.AddCommand(cloudflare.Command())
 	rootCmd.AddCommand(image.Command())
 	rootCmd.AddCommand(vcard.Command())
 

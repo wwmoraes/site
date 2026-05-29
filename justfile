@@ -13,8 +13,6 @@ deploy $ENVIRONMENT="":
 
   source .env
 
-  : "${CLOUDFLARE_PROJECT_NAME:?Cloudflare project name not set}"
-
   : "${GIT_BRANCH:=$(git branch --show-current)}"
   if [[ "${GIT_BRANCH}" = "master" ]]; then
     : "${ENVIRONMENT:=production}"
@@ -31,20 +29,12 @@ deploy $ENVIRONMENT="":
     GIT_DIRTY='false'
   fi
 
-  if [ "${ENVIRONMENT}" == "production" ]; then
-    CLOUDFLARE_PAGES_BRANCH=master
-  else
-    CLOUDFLARE_PAGES_BRANCH=staging
-  fi
-
   echo "{{BOLD + GREEN}}Environment{{NORMAL}}: ${ENVIRONMENT}"
   echo "{{BOLD + GREEN}}Git branch{{NORMAL}}: ${GIT_BRANCH}"
   echo "{{BOLD + GREEN}}Git commit hash{{NORMAL}}: ${GIT_COMMIT_HASH}"
   echo "{{BOLD + GREEN}}Git commit message{{NORMAL}}: ${GIT_COMMIT_MESSAGE}"
   echo "{{BOLD + GREEN}}Is git in a dirty state? ${GIT_DIRTY}"
   echo "{{BOLD + GREEN}}Assets dir{{NORMAL}}: {{BLUE}}${ASSETS_DIR}{{NORMAL}}"
-  echo "{{BOLD + GREEN}}Cloudflare project name{{NORMAL}}: ${CLOUDFLARE_PROJECT_NAME}"
-  echo "{{BOLD + GREEN}}Cloudflare Pages branch{{NORMAL}}: ${CLOUDFLARE_PAGES_BRANCH}"
 
   read -t 3 -N 1 -p "Continue? [y/N] " CONTINUE; echo
   case "${CONTINUE,,}" in y);; *) exit 2;; esac
@@ -52,16 +42,8 @@ deploy $ENVIRONMENT="":
   echo "building ${ASSETS_DIR}..."
   remake --assume-old=static "${ASSETS_DIR}"
 
-  echo "deploying ${ASSETS_DIR} to ${ENVIRONMENT} environment (Pages branch ${CLOUDFLARE_PAGES_BRANCH})..."
-  wrangler pages deploy "${ASSETS_DIR}" \
-    --no-bundle \
-    --upload-source-maps \
-    --project-name "${CLOUDFLARE_PROJECT_NAME}" \
-    --branch "${CLOUDFLARE_PAGES_BRANCH}" \
-    --commit-hash "${GIT_COMMIT_HASH}" \
-    --commit-message "${GIT_COMMIT_MESSAGE}" \
-    --commit-dirty "${GIT_DIRTY}" \
-    ;
+  echo "deploying ${ASSETS_DIR} to ${ENVIRONMENT} environment..."
+  netlifier -site wwmoraes -dir "${ASSETS_DIR}"
 
 [doc("Inspects images EXIF metadata.")]
 exif-inspect:
