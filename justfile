@@ -7,7 +7,7 @@ _default:
   just --list --list-heading $'Command recipes:\n' --list-prefix ''
 
 # [arg("ENVIRONMENT", help="staging or production")]
-[doc("deploys this site to Cloudflare Pages")]
+[doc("deploys this site")]
 deploy $ENVIRONMENT="":
   #!/usr/bin/env bash
 
@@ -40,7 +40,7 @@ deploy $ENVIRONMENT="":
   case "${CONTINUE,,}" in y);; *) exit 2;; esac
 
   echo "building ${ASSETS_DIR}..."
-  remake --assume-old=static "${ASSETS_DIR}"
+  remake --assume-old=static "${ASSETS_DIR}/"
 
   echo "deploying ${ASSETS_DIR} to ${ENVIRONMENT} environment..."
   netlifier -site wwmoraes -dir "${ASSETS_DIR}"
