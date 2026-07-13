@@ -3,7 +3,6 @@ from_owner:
 - dependabot[bot]
 - pre-commit-ci[bot]
 - wwmoraes
-
 required_labels:
 - automerge
 - dependencies
