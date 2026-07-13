@@ -13,9 +13,3 @@ updates:
   - automerge
   schedule:
     interval: weekly
-- package-ecosystem: npm
-  directory: /
-  labels:
-  - automerge
-  schedule:
-    interval: weekly
