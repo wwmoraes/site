@@ -7,6 +7,7 @@ rec {
       pkgs.d2
       pkgs.editorconfig-checker
       pkgs.git
+      pkgs.moreutils
       pkgs.netlifier
       pkgs.remake
       pkgs.remarshal
