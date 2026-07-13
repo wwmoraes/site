@@ -13,7 +13,7 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.11
 	github.com/goccy/go-json v0.10.5
 	github.com/spf13/cast v1.10.0
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	github.com/wwmoraes/go-rwfs v0.0.0-20231101192853-2f37ed32d908
 	gopkg.in/yaml.v3 v3.0.1
 )
